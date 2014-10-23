@@ -1,0 +1,29 @@
+{
+  "name": "base-core",
+  "version": "1.0.0",
+  "description": "a basic interface to mapbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mapbox/base-core.git"
+  },
+  "keywords": [
+    "tape",
+    "test"
+  ],
+  "author": "Tom MacWright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/base-core/issues"
+  },
+  "homepage": "https://github.com/mapbox/base-core",
+  "devDependencies": {
+    "tape": "^3.0.1"
+  },
+  "dependencies": {
+    "xhr": "^1.17.0"
+  }
+}
