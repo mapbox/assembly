@@ -4,7 +4,7 @@
   "description": "a basic interface to mapbox",
   "main": "index.js",
   "scripts": {
-    "test": "watchify test.js -o test-bundle.js & st -nc"
+    "test": "watchify -t envify test.js -o test-bundle.js & st -nc -p 8000"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/mapbox/base-core",
   "devDependencies": {
+    "envify": "^3.0.0",
     "st": "^0.5.2",
     "tape": "^3.0.1",
     "watchify": "^2.1.0"

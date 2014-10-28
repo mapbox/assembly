@@ -11,6 +11,7 @@ BaseCore.prototype.signin = function(username, password, callback) {
       username: username.toLowerCase(),
       password: password
     },
+    withCredentials: true,
     method: 'POST'
   }, function(err, resp, body) {
     if (err) {
@@ -32,6 +33,7 @@ BaseCore.prototype.signinMFA = function(username, password, code, callback) {
       password: password,
       code: code
     },
+    withCredentials: true,
     method: 'POST'
   }, function(err, resp, body) {
     if (err) return callback(err);
