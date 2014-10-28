@@ -23,24 +23,26 @@ test('base-core#signin', function(t) {
   });
 });
 
-test('(signout)', signout);
-test('base-core#signin+MFA - fail', function(t) {
-  var bc = new BaseCore(process.env.MAPBOX_STAGING);
-  bc.signin(userMFA, pwMFA, function(err, user) {
-    t.equal(err.message, 'MFA Code Required');
-    t.end();
+if (process.env.TESTMFA) {
+  test('(signout)', signout);
+  test('base-core#signin+MFA - fail', function(t) {
+    var bc = new BaseCore(process.env.MAPBOX_STAGING);
+    bc.signin(userMFA, pwMFA, function(err, user) {
+      t.equal(err.message, 'MFA Code Required');
+      t.end();
+    });
   });
-});
 
-test('(signout)', signout);
-test('base-core#signin+MFA - succeed', function(t) {
-  var bc = new BaseCore(process.env.MAPBOX_STAGING);
-  bc.signinMFA(userMFA, pwMFA, prompt('mfa token'), function(err, user) {
-    t.equal(err, null, 'No error');
-    t.ok(user, 'User returned');
-    t.end();
+  test('(signout)', signout);
+  test('base-core#signin+MFA - succeed', function(t) {
+    var bc = new BaseCore(process.env.MAPBOX_STAGING);
+    bc.signinMFA(userMFA, pwMFA, prompt('mfa token'), function(err, user) {
+      t.equal(err, null, 'No error');
+      t.ok(user, 'User returned');
+      t.end();
+    });
   });
-});
+}
 
 test('(signout)', signout);
 test('(signin)', signin);

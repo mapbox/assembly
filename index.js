@@ -55,6 +55,8 @@ BaseCore.prototype.signout = function(callback) {
 BaseCore.prototype.getUser = function(callback) {
   xhr({
     uri: this.api + '/api/session?_=' + Date.now(),
+    method: 'GET',
+    json: true,
     withCredentials: true
   }, function(err, resp, body) {
     if (err) return callback(err);
