@@ -18,7 +18,7 @@ BaseCore.prototype.signin = function(username, password, callback) {
       if (err.statusCode === 401) { // MFA
         return callback(new Error('MFA Code Required'));
       } else {
-        return callback(err);
+        return callback(body);
       }
     }
     else callback(null, body);
@@ -36,7 +36,7 @@ BaseCore.prototype.signinMFA = function(username, password, code, callback) {
     withCredentials: true,
     method: 'POST'
   }, function(err, resp, body) {
-    if (err) return callback(err);
+    if (err) return callback(body);
     else callback(null, body);
   });
 };
@@ -47,7 +47,7 @@ BaseCore.prototype.signout = function(callback) {
     method: 'POST',
     withCredentials: true
   }, function(err, resp, body) {
-    if (err) return callback(err);
+    if (err) return callback(body);
     else callback(null, body);
   });
 };
@@ -59,7 +59,7 @@ BaseCore.prototype.getUser = function(callback) {
     json: true,
     withCredentials: true
   }, function(err, resp, body) {
-    if (err) return callback(err);
+    if (err) return callback(body);
     else callback(null, body);
   });
 };
