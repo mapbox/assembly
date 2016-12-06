@@ -57,6 +57,9 @@
 .max-1600 { max-width: 1600px; }
 .max-1000 { max-width: 1000px; }
 
+/* TODO: move grid to separate stylesheet */
+/* stylelint-disable selector-no-combinator */
+
 /**
  * Column gutter classes
  * @memberof Layout
@@ -140,6 +143,8 @@
   margin-right: 80px;
   flex: 1;
 }
+
+/* stylelint-enable selector-no-combinator */
 
 /**
  * Column classes
