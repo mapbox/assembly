@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "node scripts/process-css.js",
+    "css": "npm run lint:css && node scripts/process-css.js",
     "svgs": "node scripts/create-svg-sprite.js",
     "build": "trash dist/* && npm run css && npm run svgs",
-    "debug": "http-server"
+    "debug": "http-server",
+    "lint:css": "stylelint src/*.css",
+    "lint:js": "echo \"No JS linting yet\"",
+    "lint": "npm run lint:css && npm run lint:js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
     "pify": "^2.3.0",
     "postcss": "^5.2.6",
     "postcss-reporter": "^2.0.0",
+    "stylelint": "^7.6.0",
     "svgo": "^0.7.1",
     "svgstore": "^1.1.0",
     "trash-cli": "^1.4.0"
