@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "css": "node scripts/process-css.js",
     "svgs": "node scripts/create-svg-sprite.js",
+    "build": "trash dist/* && npm run css && npm run svgs",
     "debug": "http-server"
   },
   "repository": {
@@ -18,9 +20,15 @@
   },
   "homepage": "https://github.com/mapbox/base-core#readme",
   "dependencies": {
+    "autoprefixer": "^6.5.3",
+    "cssnano": "^3.8.1",
     "d3-queue": "^3.0.3",
     "lodash": "^4.17.2",
+    "pify": "^2.3.0",
+    "postcss": "^5.2.6",
+    "postcss-reporter": "^2.0.0",
     "svgo": "^0.7.1",
-    "svgstore": "^1.1.0"
+    "svgstore": "^1.1.0",
+    "trash-cli": "^1.4.0"
   }
 }
