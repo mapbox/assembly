@@ -1,5 +1,5 @@
 /**
- * Colors.
+ * Background colors.
  *
  * @example
  * <div class='row-20 mar-bottom-10 bg-gray'>bg-gray</div>
@@ -52,3 +52,58 @@
 .bg-lighten-25 { background-color: rgba(255,255,255,0.25); }
 .bg-lighten-50 { background-color: rgba(255,255,255,0.50); }
 .bg-lighten-75 { background-color: rgba(255,255,255,0.75); }
+
+/**
+ * Background colors.
+ *
+ * @example
+ * <div class='row-20 mar-bottom-10 txt-gray'>txt-gray</div>
+ * <div class='row-20 mar-bottom-10 txt-blue'>txt-blue</div>
+ * <div class='row-20 mar-bottom-10 txt-purple'>txt-purple</div>
+ * <div class='row-20 mar-bottom-10 txt-pink'>txt-pink</div>
+ * <div class='row-20 mar-bottom-10 txt-red'>txt-red</div>
+ * <div class='row-20 mar-bottom-10 txt-orange'>txt-orange</div>
+ * <div class='row-20 mar-bottom-10 txt-mustard'>txt-mustard</div>
+ * <div class='row-20 mar-bottom-10 txt-yellow'>txt-yellow</div>
+ * <div class='row-20 mar-bottom-10 txt-green'>txt-green</div>
+ * <div class='row-20 mar-bottom-10 txt-teal'>txt-teal</div>
+ * <div class='row-20 mar-bottom-10 txt-cyan'>txt-cyan</div>
+ * <div class='row-20 mar-bottom-10 txt-denim'>txt-denim</div>
+ * <div class='row-20 mar-bottom-10 txt-navy'>txt-navy</div>
+ * <div class='row-20 mar-bottom-10 txt-white'>txt-white</div>
+ * <div class='row-20 mar-bottom-10 txt-light'>txt-light</div>
+ * <div class='row-20 mar-bottom-10 txt-darken-5'>txt-darken-5</div>
+ * <div class='row-20 mar-bottom-10 txt-darken-25'>txt-darken-25</div>
+ * <div class='row-20 mar-bottom-10 txt-darken-50'>txt-darken-50</div>
+ * <div class='row-20 mar-bottom-10 txt-darken-75'>txt-darken-75</div>
+ * <div class='row-20 mar-bottom-10 txt-lighten-10'>txt-lighten-10</div>
+ * <div class='row-20 mar-bottom-10 txt-lighten-25'>txt-lighten-25</div>
+ * <div class='row-20 mar-bottom-10 txt-lighten-50'>txt-lighten-50</div>
+ * <div class='row-20 mar-bottom-10 txt-lighten-75'>txt-lighten-75</div>
+ */
+.txt-gray    { color: #acb4b9; }
+.txt-blue    { color: #0077cc; }
+.txt-purple  { color: #5500cc; }
+.txt-pink    { color: #cc0077; }
+.txt-red     { color: #cc0011; }
+.txt-orange  { color: #cc5500; }
+.txt-mustard { color: #ffbf16; }
+.txt-yellow  { color: #ffeb3b; }
+.txt-green   { color: #11cc00; }
+.txt-teal    { color: #3fbfbc; }
+.txt-cyan    { color: #00ccbb; }
+.txt-denim   { color: #34607f; }
+.txt-navy    { color: #223f54; }
+
+.txt-white   { color: #fff; }
+.txt-light   { color: #f2f2f2; }
+
+.txt-darken-5  { color: rgba(0,0,0,0.05); }
+.txt-darken-25 { color: rgba(0,0,0,0.25); }
+.txt-darken-50 { color: rgba(0,0,0,0.50); }
+.txt-darken-75 { color: rgba(0,0,0,0.75); }
+
+.txt-lighten-10 { color: rgba(255,255,255,0.10); }
+.txt-lighten-25 { color: rgba(255,255,255,0.25); }
+.txt-lighten-50 { color: rgba(255,255,255,0.50); }
+.txt-lighten-75 { color: rgba(255,255,255,0.75); }
