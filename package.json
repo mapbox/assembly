@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "svgs": "node scripts/svg-sprite"
+    "svgs": "node scripts/create-svg-sprite.js",
+    "debug": "http-server"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/mapbox/base-core#readme",
   "dependencies": {
     "d3-queue": "^3.0.3",
+    "lodash": "^4.17.2",
     "svgo": "^0.7.1",
     "svgstore": "^1.1.0"
   }
