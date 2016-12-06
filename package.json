@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "node scripts/process-css.js",
+    "css": "npm run lint:css && node scripts/process-css.js",
     "svgs": "node scripts/create-svg-sprite.js",
     "build": "trash dist/* && npm run css && npm run svgs",
     "debug": "http-server",
