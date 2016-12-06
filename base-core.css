@@ -102,12 +102,87 @@ table { border-collapse: collapse; border-spacing: 0; }
  * Column gutter classes
  * @memberof Layout
 */
-.cols-gutters-5 > * {
+.cols-gut-5 > .col-0,
+.cols-gut-5 > .col-1,
+.cols-gut-5 > .col-2,
+.cols-gut-5 > .col-3,
+.cols-gut-5 > .col-4,
+.cols-gut-5 > .col-5,
+.cols-gut-5 > .col-6,
+.cols-gut-5 > .col-7,
+.cols-gut-5 > .col-8,
+.cols-gut-5 > .col-9,
+.cols-gut-5 > .col-10,
+.cols-gut-5 > .col-11,
+.cols-gut-5 > .col-12 {
   margin-right: 5px;
   flex: 1;
 }
 
-.cols-gutters-10 > * {
+.cols-gut-10 > .col-0,
+.cols-gut-10 > .col-1,
+.cols-gut-10 > .col-2,
+.cols-gut-10 > .col-3,
+.cols-gut-10 > .col-4,
+.cols-gut-10 > .col-5,
+.cols-gut-10 > .col-6,
+.cols-gut-10 > .col-7,
+.cols-gut-10 > .col-8,
+.cols-gut-10 > .col-9,
+.cols-gut-10 > .col-10,
+.cols-gut-10 > .col-11,
+.cols-gut-10 > .col-12 {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.cols-gut-20 > .col-0,
+.cols-gut-20 > .col-1,
+.cols-gut-20 > .col-2,
+.cols-gut-20 > .col-3,
+.cols-gut-20 > .col-4,
+.cols-gut-20 > .col-5,
+.cols-gut-20 > .col-6,
+.cols-gut-20 > .col-7,
+.cols-gut-20 > .col-8,
+.cols-gut-20 > .col-9,
+.cols-gut-20 > .col-10,
+.cols-gut-20 > .col-11,
+.cols-gut-20 > .col-12 {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.cols-gut-40 > .col-0,
+.cols-gut-40 > .col-1,
+.cols-gut-40 > .col-2,
+.cols-gut-40 > .col-3,
+.cols-gut-40 > .col-4,
+.cols-gut-40 > .col-5,
+.cols-gut-40 > .col-6,
+.cols-gut-40 > .col-7,
+.cols-gut-40 > .col-8,
+.cols-gut-40 > .col-9,
+.cols-gut-40 > .col-10,
+.cols-gut-40 > .col-11,
+.cols-gut-40 > .col-12 {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.cols-gut-80 > .col-0,
+.cols-gut-80 > .col-1,
+.cols-gut-80 > .col-2,
+.cols-gut-80 > .col-3,
+.cols-gut-80 > .col-4,
+.cols-gut-80 > .col-5,
+.cols-gut-80 > .col-6,
+.cols-gut-80 > .col-7,
+.cols-gut-80 > .col-8,
+.cols-gut-80 > .col-9,
+.cols-gut-80 > .col-10,
+.cols-gut-80 > .col-11,
+.cols-gut-80 > .col-12 {
   margin-right: 10px;
   flex: 1;
 }
