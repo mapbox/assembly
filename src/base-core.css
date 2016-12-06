@@ -249,14 +249,9 @@ em {
  * @namespace Limiter
  * @memberof Layout
 */
-.limiter-1000 {
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.limiter-1600 {
-  width: 1600px;
+.limiter {
+  width: 83.3333%;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -295,18 +290,119 @@ em {
 .col-11 { width: 91.6666%; }
 .col-12 { width: 100.000%; }
 
-.col-2-gut-5  { margin-right: 5px; }
-.col-2-gut-10 { margin-right: 10px; }
-.col-2-gut-20 { margin-right: 20px; }
-.col-2-gut-40 { margin-right: 40px; }
-.col-2-gut-80 { margin-right: 80px; }
+/**
+ * Max width containers
+ * @namespace Max widths
+ * @memberof Layout
+*/
+.max-1600 { max-width: 1600px; }
+.max-1000 { max-width: 1000px; }
 
+/**
+ * Column gutter classes
+ * @memberof Layout
+*/
+.cols-gut-5 > .col-0,
+.cols-gut-5 > .col-1,
+.cols-gut-5 > .col-2,
+.cols-gut-5 > .col-3,
+.cols-gut-5 > .col-4,
+.cols-gut-5 > .col-5,
+.cols-gut-5 > .col-6,
+.cols-gut-5 > .col-7,
+.cols-gut-5 > .col-8,
+.cols-gut-5 > .col-9,
+.cols-gut-5 > .col-10,
+.cols-gut-5 > .col-11,
+.cols-gut-5 > .col-12 {
+  margin-right: 5px;
+  flex: 1;
+}
+
+.cols-gut-10 > .col-0,
+.cols-gut-10 > .col-1,
+.cols-gut-10 > .col-2,
+.cols-gut-10 > .col-3,
+.cols-gut-10 > .col-4,
+.cols-gut-10 > .col-5,
+.cols-gut-10 > .col-6,
+.cols-gut-10 > .col-7,
+.cols-gut-10 > .col-8,
+.cols-gut-10 > .col-9,
+.cols-gut-10 > .col-10,
+.cols-gut-10 > .col-11,
+.cols-gut-10 > .col-12 {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.cols-gut-20 > .col-0,
+.cols-gut-20 > .col-1,
+.cols-gut-20 > .col-2,
+.cols-gut-20 > .col-3,
+.cols-gut-20 > .col-4,
+.cols-gut-20 > .col-5,
+.cols-gut-20 > .col-6,
+.cols-gut-20 > .col-7,
+.cols-gut-20 > .col-8,
+.cols-gut-20 > .col-9,
+.cols-gut-20 > .col-10,
+.cols-gut-20 > .col-11,
+.cols-gut-20 > .col-12 {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.cols-gut-40 > .col-0,
+.cols-gut-40 > .col-1,
+.cols-gut-40 > .col-2,
+.cols-gut-40 > .col-3,
+.cols-gut-40 > .col-4,
+.cols-gut-40 > .col-5,
+.cols-gut-40 > .col-6,
+.cols-gut-40 > .col-7,
+.cols-gut-40 > .col-8,
+.cols-gut-40 > .col-9,
+.cols-gut-40 > .col-10,
+.cols-gut-40 > .col-11,
+.cols-gut-40 > .col-12 {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.cols-gut-80 > .col-0,
+.cols-gut-80 > .col-1,
+.cols-gut-80 > .col-2,
+.cols-gut-80 > .col-3,
+.cols-gut-80 > .col-4,
+.cols-gut-80 > .col-5,
+.cols-gut-80 > .col-6,
+.cols-gut-80 > .col-7,
+.cols-gut-80 > .col-8,
+.cols-gut-80 > .col-9,
+.cols-gut-80 > .col-10,
+.cols-gut-80 > .col-11,
+.cols-gut-80 > .col-12 {
+  margin-right: 10px;
+  flex: 1;
+}
+
+/**
+ * Column classes
+ * @namespace Cols
+ * @memberof Layout
+*/
 .col-2-gut-5:nth-child(2n+2),
 .col-2-gut-10:nth-child(2n+2),
 .col-2-gut-20:nth-child(2n+2),
 .col-2-gut-40:nth-child(2n+2),
 .col-2-gut-80:nth-child(2n+2) { margin-right: 0; }
 
+/**
+ * Column classes
+ * @namespace Cols
+ * @memberof Layout
+*/
 .col-margin-0  { margin-left: 04.1666%; }
 .col-margin-1  { margin-left: 08.3333%; }
 .col-margin-2  { margin-left: 16.6666%; }
@@ -323,6 +419,12 @@ em {
 
 /* Tablet */
 @media only screen and (max-width: 770px) {
+  .limiter {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .col-margin-tablet-0  { margin-left: 04.1666%; }
   .col-margin-tablet-1  { margin-left: 08.3333%; }
   .col-margin-tablet-2  { margin-left: 16.6666%; }

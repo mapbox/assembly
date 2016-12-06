@@ -1,0 +1,26 @@
+{
+  "name": "base-core",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "svgs": "node scripts/create-svg-sprite.js",
+    "debug": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/base-core.git"
+  },
+  "author": "Mapbox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/base-core/issues"
+  },
+  "homepage": "https://github.com/mapbox/base-core#readme",
+  "dependencies": {
+    "d3-queue": "^3.0.3",
+    "lodash": "^4.17.2",
+    "svgo": "^0.7.1",
+    "svgstore": "^1.1.0"
+  }
+}
