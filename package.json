@@ -9,8 +9,12 @@
     "build": "trash dist/* && npm run css && npm run svgs",
     "debug": "http-server",
     "lint:css": "stylelint src/*.css",
-    "lint:js": "echo \"No JS linting yet\"",
-    "lint": "npm run lint:css && npm run lint:js"
+    "lint:js": "eslint scripts",
+    "lint": "npm run lint:css && npm run lint:js",
+    "test": "npm run lint"
+  },
+  "engines": {
+    "node": ">4"
   },
   "repository": {
     "type": "git",
@@ -27,6 +31,8 @@
     "concat-with-sourcemaps": "^1.0.4",
     "cssnano": "^3.8.1",
     "d3-queue": "^3.0.3",
+    "eslint": "^3.11.1",
+    "eslint-plugin-node": "^3.0.5",
     "lodash": "^4.17.2",
     "pify": "^2.3.0",
     "postcss": "^5.2.6",

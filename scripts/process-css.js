@@ -9,7 +9,6 @@ const reporter = require('postcss-reporter');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
-const cssSrcDir = path.join(__dirname, '../src');
 const cssDist = path.join(__dirname, '../dist/base-core.css');
 
 function cssPath(name) {
