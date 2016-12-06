@@ -91,7 +91,7 @@
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
-    "selector-class-pattern": "^([a-z]+|[a-z]{3}-([a-z-]+)?([0-9]+)?(-sm|-md|-lg)?)$",
+    "selector-class-pattern": "^[a-z]+$|^[a-z]{3}-((?!md-|sm-|lg-)[a-z-]*)[0-9]*(-sm|-md|-lg)?$",
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,
