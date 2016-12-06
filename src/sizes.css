@@ -1,0 +1,64 @@
+/**
+ * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
+ *
+ * @example
+ *  <div class='wid-5'></div>
+ *  <div class='wid-10'></div>
+ *  <div class='wid-40'></div>
+ *  <div class='wid-100'></div>
+ *  <div class='wid-200'></div>
+ */
+.wid-5 { width: 5px; }
+.wid-10 { width: 10px; }
+.wid-20 { width: 20px; }
+.wid-30 { width: 30px; }
+.wid-40 { width: 40px; }
+.wid-50 { width: 50px; }
+.wid-60 { width: 60px; }
+.wid-80 { width: 80px; }
+.wid-100 { width: 100px; }
+.wid-120 { width: 120px; }
+.wid-140 { width: 140px; }
+.wid-160 { width: 160px; }
+.wid-180 { width: 180px; }
+.wid-200 { width: 200px; }
+.wid-400 { width: 400px; }
+.wid-600 { width: 600px; }
+.wid-800 { width: 800px; }
+
+/**
+ * Heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
+ *
+ * @example
+ *  <div class='row-5'></div>
+ *  <div class='row-10'></div>
+ *  <div class='row-40'></div>
+ *  <div class='row-100'></div>
+ *  <div class='row-200'></div>
+ */
+.row-5   { height: 5px; }
+.row-10  { height: 10px; }
+.row-20  { height: 20px; }
+.row-30  { height: 30px; }
+.row-40  { height: 40px; }
+.row-50  { height: 50px; }
+.row-60  { height: 60px; }
+.row-80  { height: 80px; }
+.row-100 { height: 100px; }
+.row-120 { height: 120px; }
+.row-140 { height: 140px; }
+.row-160 { height: 160px; }
+.row-180 { height: 180px; }
+.row-200 { height: 200px; }
+.row-400 { height: 400px; }
+.row-600 { height: 600px; }
+.row-800 { height: 800px; }
+
+/**
+ * Match height of browser window.
+ *
+ * @example
+ *  <div class='row-full'></div>
+ */
+
+.row-full { height: 100vh; }
