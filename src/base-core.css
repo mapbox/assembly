@@ -445,4 +445,117 @@ Zero out positioning
 .mar-left-600 { margin-left: 600px; }
 .mar-left-800 { margin-left: 800px; }
 
+/**
+ * Padding classes
+ * @namespace Padding
+ * @memberof Positioning
+*/
+
+/**
+ *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+ *
+ * @example
+ *  <div class='pad-top-5'></div>
+ *  <div class='pad-top-10'></div>
+ *  <div class='pad-top-40'></div>
+ *  <div class='pad-top-100'></div>
+ *  <div class='pad-top-200'></div>
+ */
+.pad-y-5   { padding-bottom: 5px; padding-top: 5px; }
+.pad-y-10  { padding-bottom: 10px; padding-top: 10px; }
+.pad-y-20  { padding-bottom: 20px; padding-top: 20px; }
+.pad-y-40  { padding-bottom: 40px; padding-top: 40px; }
+.pad-y-60  { padding-bottom: 60px; padding-top: 60px; }
+.pad-y-80  { padding-bottom: 80px; padding-top: 80px; }
+.pad-y-100 { padding-bottom: 100px; padding-top: 100px; }
+
+/**
+ *  Left and right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+ *
+ * @example
+ *  <div class='pad-top-5'></div>
+ *  <div class='pad-top-10'></div>
+ *  <div class='pad-top-40'></div>
+ *  <div class='pad-top-100'></div>
+ *  <div class='pad-top-200'></div>
+ */
+.pad-x-5   { padding-right: 5px; padding-left: 5px; }
+.pad-x-10  { padding-right: 10px; padding-left: 10px; }
+.pad-x-20  { padding-right: 20px; padding-left: 20px; }
+.pad-x-40  { padding-right: 40px; padding-left: 40px; }
+.pad-x-60  { padding-right: 60px; padding-left: 60px; }
+.pad-x-80  { padding-right: 80px; padding-left: 80px; }
+.pad-x-100 { padding-right: 100px; padding-left: 100px; }
+
+/**
+ * Top padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+ *
+ * @example
+ *  <div class='pad-top-5'></div>
+ *  <div class='pad-top-10'></div>
+ *  <div class='pad-top-40'></div>
+ *  <div class='pad-top-100'></div>
+ *  <div class='pad-top-200'></div>
+ */
+.pad-top-5   { padding-top: 5px; }
+.pad-top-10  { padding-top: 10px; }
+.pad-top-20  { padding-top: 20px; }
+.pad-top-40  { padding-top: 40px; }
+.pad-top-60  { padding-top: 60px; }
+.pad-top-80  { padding-top: 80px; }
+.pad-top-100 { padding-top: 100px; }
+
+/**
+ * Right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+ *
+ * @example
+ *  <div class='mar-top-5'></div>
+ *  <div class='mar-top-10'></div>
+ *  <div class='mar-top-40'></div>
+ *  <div class='mar-top-100'></div>
+ *  <div class='mar-top-200'></div>
+ */
+.pad-right-5   { padding-right: 5px; }
+.pad-right-10  { padding-right: 10px; }
+.pad-right-20  { padding-right: 20px; }
+.pad-right-40  { padding-right: 40px; }
+.pad-right-60  { padding-right: 60px; }
+.pad-right-80  { padding-right: 80px; }
+.pad-right-100 { padding-right: 100px; }
+
+/**
+ * Bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+ *
+ * @example
+ *  <div class='pad-top-5'></div>
+ *  <div class='pad-top-10'></div>
+ *  <div class='pad-top-40'></div>
+ *  <div class='pad-top-100'></div>
+ *  <div class='pad-top-200'></div>
+ */
+.pad-top-5   { padding-top: 5px; }
+.pad-top-10  { padding-top: 10px; }
+.pad-top-20  { padding-top: 20px; }
+.pad-top-40  { padding-top: 40px; }
+.pad-top-60  { padding-top: 60px; }
+.pad-top-80  { padding-top: 80px; }
+.pad-top-100 { padding-top: 100px; }
+
+/**
+ * Left padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+ *
+ * @example
+ *  <div class='pad-left-5'></div>
+ *  <div class='pad-left-10'></div>
+ *  <div class='pad-left-40'></div>
+ *  <div class='pad-left-100'></div>
+ *  <div class='pad-left-200'></div>
+ */
+.pad-left-5   { padding-left: 5px; }
+.pad-left-10  { padding-left: 10px; }
+.pad-left-20  { padding-left: 20px; }
+.pad-left-40  { padding-left: 40px; }
+.pad-left-60  { padding-left: 60px; }
+.pad-left-80  { padding-left: 80px; }
+.pad-left-100 { padding-left: 100px; }
 
