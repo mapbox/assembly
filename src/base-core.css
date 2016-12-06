@@ -41,42 +41,50 @@ table { border-collapse: collapse; border-spacing: 0; }
 ------------------------------------------------------- */
 @font-face {
   font-family:'Open Sans';
-  src:url('fonts/opensans-regular.eot');
-  src:url('fonts/opensans-regular.eot#iefix') format('embedded-opentype'),
-  url('fonts/opensans-regular.woff') format('woff');
+  src:url('../fonts/opensans-regular.eot');
+  src:url('../fonts/opensans-regular.eot#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-regular.woff') format('woff');
 }
 
 @font-face {
   font-family:'Open Sans Light';
-  src:url('fonts/opensans-light.eot');
-  src:url('fonts/opensans-light.eot#iefix') format('embedded-opentype'),
-  url('fonts/opensans-light.woff') format('woff');
+  src:url('../fonts/opensans-light.eot');
+  src:url('../fonts/opensans-light.eot#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-light.woff') format('woff');
 }
 
 @font-face {
   font-family:'Open Sans Italic';
-  src:url('fonts/opensans-italic.eot');
-  src:url('fonts/opensans-italic.eot#iefix') format('embedded-opentype'),
-  url('fonts/opensans-italic.woff') format('woff');
+  src:url('../fonts/opensans-italic.eot');
+  src:url('../fonts/opensans-italic.eot#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-italic.woff') format('woff');
 }
 
 @font-face {
   font-family:'Open Sans Bold';
-  src:url('fonts/opensans-bold.eot');
-  src:url('fonts/opensans-bold.eot#iefix') format('embedded-opentype'),
-  url('fonts/opensans-bold.woff') format('woff');
+  src:url('../fonts/opensans-bold.eot');
+  src:url('../fonts/opensans-bold.eot#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-bold.woff') format('woff');
 }
 
 @font-face {
   font-family:'Open Sans Bold Italic';
-  src:url('fonts/opensans-bolditalic.eot');
-  src:url('fonts/opensans-bolditalic.eot#iefix') format('embedded-opentype'),
-  url('fonts/opensans-bolditalic.woff') format('woff');
+  src:url('../fonts/opensans-bolditalic.eot');
+  src:url('../fonts/opensans-bolditalic.eot#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-bolditalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cabin Bold';
+  src: url('../fonts/cabin-bold-webfont.eot');
+  src: url('../fonts/cabin-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/cabin-bold-webfont.woff') format('woff');
 }
 
 /**
  * Inline elements
 */
+
 body,
 input,
 textarea {
@@ -85,6 +93,12 @@ textarea {
   font: 16px/1.25 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/**
+ * Typography
+ * @namespace type
+ * @memberof Typography
+*/
 
 h1,
 h2,
@@ -176,13 +190,50 @@ em {
 /**
  * Typography modifiers
  * @namespace type
- * @memberof Prose?
+ * @memberof Typography
 */
 
-.type-light { font-family:'Open Sans Light', sans-serif; }
+/**
+ *  Prose-styled headlines.
+ *
+ * @example
+ *  <h1 class="type-light">Headline 1 - light</h1>
+ *  <h2 class="type-light">Headline 2 - light</h2>
+ *  <h3 class="type-light">Headline 3 - light</h3>
+ *  <h1 class="type-regular">Headline 1 - regular</h1>
+ *  <h2 class="type-regular">Headline 2 - regular</h2>
+ *  <h3 class="type-regular">Headline 3 - regular</h3>
+ *  <h1 class="type-fancy">Headline 1 - fancy</h1>
+ *  <h2 class="type-fancy">Headline 2 - fancy</h2>
+ *  <h3 class="type-fancy">Headline 3 - fancy</h3>
+*/
+h1.type-light,
+h2.type-light,
+h3.type-light {
+  font-family:'Open Sans Light', sans-serif;
+}
 
-.type-regular { font-family:'Open Sans', sans-serif; }
+h1.type-regular,
+h2.type-regular,
+h3.type-regular {
+  font-family:'Open Sans', sans-serif;
+}
 
+h1.type-fancy,
+h2.type-fancy,
+h3.type-fancy {
+  font-family:'Cabin Bold', sans-serif;
+  text-transform: uppercase;
+}
+
+h1.type-fancy {
+  letter-spacing: 3px;
+}
+
+h2.type-fancy,
+h3.type-fancy {
+  letter-spacing: 2px;
+}
 
 /**
  * Prose classes
