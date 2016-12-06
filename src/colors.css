@@ -1,0 +1,54 @@
+/**
+ * Colors.
+ *
+ * @example
+ * <div class='row-20 mar-bottom-10 bg-gray'>bg-gray</div>
+ * <div class='row-20 mar-bottom-10 bg-blue'>bg-blue</div>
+ * <div class='row-20 mar-bottom-10 bg-purple'>bg-purple</div>
+ * <div class='row-20 mar-bottom-10 bg-pink'>bg-pink</div>
+ * <div class='row-20 mar-bottom-10 bg-red'>bg-red</div>
+ * <div class='row-20 mar-bottom-10 bg-orange'>bg-orange</div>
+ * <div class='row-20 mar-bottom-10 bg-mustard'>bg-mustard</div>
+ * <div class='row-20 mar-bottom-10 bg-yellow'>bg-yellow</div>
+ * <div class='row-20 mar-bottom-10 bg-green'>bg-green</div>
+ * <div class='row-20 mar-bottom-10 bg-teal'>bg-teal</div>
+ * <div class='row-20 mar-bottom-10 bg-cyan'>bg-cyan</div>
+ * <div class='row-20 mar-bottom-10 bg-denim'>bg-denim</div>
+ * <div class='row-20 mar-bottom-10 bg-navy'>bg-navy</div>
+ * <div class='row-20 mar-bottom-10 bg-white'>bg-white</div>
+ * <div class='row-20 mar-bottom-10 bg-light'>bg-light</div>
+ * <div class='row-20 mar-bottom-10 bg-darken-5'>bg-darken-5</div>
+ * <div class='row-20 mar-bottom-10 bg-darken-25'>bg-darken-25</div>
+ * <div class='row-20 mar-bottom-10 bg-darken-50'>bg-darken-50</div>
+ * <div class='row-20 mar-bottom-10 bg-darken-75'>bg-darken-75</div>
+ * <div class='row-20 mar-bottom-10 bg-lighten-10'>bg-lighten-10</div>
+ * <div class='row-20 mar-bottom-10 bg-lighten-25'>bg-lighten-25</div>
+ * <div class='row-20 mar-bottom-10 bg-lighten-50'>bg-lighten-50</div>
+ * <div class='row-20 mar-bottom-10 bg-lighten-75'>bg-lighten-75</div>
+ */
+.bg-gray    { background-color: #acb4b9; }
+.bg-blue    { background-color: #0077cc; }
+.bg-purple  { background-color: #5500cc; }
+.bg-pink    { background-color: #cc0077; }
+.bg-red     { background-color: #cc0011; }
+.bg-orange  { background-color: #cc5500; }
+.bg-mustard { background-color: #ffbf16; }
+.bg-yellow  { background-color: #ffeb3b; }
+.bg-green   { background-color: #11cc00; }
+.bg-teal    { background-color: #3fbfbc; }
+.bg-cyan    { background-color: #00ccbb; }
+.bg-denim   { background-color: #34607f; }
+.bg-navy    { background-color: #223f54; }
+
+.bg-white   { background-color: #fff; }
+.bg-light   { background-color: #f2f2f2; }
+
+.bg-darken-5  { background-color: rgba(0,0,0,0.05); }
+.bg-darken-25 { background-color: rgba(0,0,0,0.25); }
+.bg-darken-50 { background-color: rgba(0,0,0,0.50); }
+.bg-darken-75 { background-color: rgba(0,0,0,0.75); }
+
+.bg-lighten-10 { background-color: rgba(255,255,255,0.10); }
+.bg-lighten-25 { background-color: rgba(255,255,255,0.25); }
+.bg-lighten-50 { background-color: rgba(255,255,255,0.50); }
+.bg-lighten-75 { background-color: rgba(255,255,255,0.75); }
