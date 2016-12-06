@@ -1,0 +1,220 @@
+/**
+ * Inline elements
+*/
+
+body,
+input,
+textarea {
+  color: #404040;
+  color: rgba(0, 0, 0, 0.75);
+  font: 16px/1.25 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Typography
+ * @namespace type
+ * @memberof Typography
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans Bold', sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: 33px;
+  line-height: 1.5152;
+}
+
+h2 {
+  font-size: 27px;
+  line-height: 1.8519;
+}
+
+h3 {
+  font-size: 23px;
+  line-height: 1.0870;
+}
+
+h4 {
+  font-size: 19px;
+  line-height: 1.3158;
+}
+
+h5,
+h6 {
+  font-size: 16px;
+  line-height: 1.5625;
+}
+
+em h1, h1 em,
+em h2, h2 em,
+em h3, h3 em,
+em h4, h4 em,
+em h5, h5 em,
+em h6, h6 em {
+  font-family: 'Open Sans Bold Italic', sans-serif;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+small,
+.prose.small,
+.small {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+small { display:block; }
+
+.micro,
+.prose .micro,
+.prose.micro {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.strong,
+strong {
+  font-family: 'Open Sans Bold', sans-serif;
+  font-weight: normal;
+}
+
+strong em,
+em strong {
+  font-family: 'Open Sans Bold Italic', sans-serif;
+  font-weight: normal;
+}
+
+address,
+em {
+  font-family: 'Open Sans Italic', sans-serif;
+}
+
+/**
+ * Typography modifiers
+ * @namespace type
+ * @memberof Typography
+*/
+
+/**
+ *  Prose-styled headlines.
+ *
+ * @example
+ *  <h1 class="type-light">Headline 1 - light</h1>
+ *  <h2 class="type-light">Headline 2 - light</h2>
+ *  <h3 class="type-light">Headline 3 - light</h3>
+ *  <h1 class="type-regular">Headline 1 - regular</h1>
+ *  <h2 class="type-regular">Headline 2 - regular</h2>
+ *  <h3 class="type-regular">Headline 3 - regular</h3>
+ *  <h1 class="type-fancy">Headline 1 - fancy</h1>
+ *  <h2 class="type-fancy">Headline 2 - fancy</h2>
+ *  <h3 class="type-fancy">Headline 3 - fancy</h3>
+*/
+h1.type-light,
+h2.type-light,
+h3.type-light {
+  font-family:'Open Sans Light', sans-serif;
+}
+
+h1.type-regular,
+h2.type-regular,
+h3.type-regular {
+  font-family:'Open Sans', sans-serif;
+}
+
+h1.type-fancy,
+h2.type-fancy,
+h3.type-fancy {
+  font-family:'Cabin Bold', sans-serif;
+  text-transform: uppercase;
+}
+
+h1.type-fancy {
+  letter-spacing: 3px;
+}
+
+h2.type-fancy,
+h3.type-fancy {
+  letter-spacing: 2px;
+}
+
+/**
+ * Prose classes
+ * @namespace prose
+ * @memberof Prose
+*/
+
+/**
+ *  Prose-styled headlines.
+ *
+ * @example
+ *  <div class="prose">
+ *    <h1>Headline 1</h1>
+ *    <h2>Headline 2</h2>
+ *    <h3>Headline 3</h3>
+ *    <h4>Headline 4</h4>
+ *    <h5>Headline 5</h5>
+ *    <h6>Headline 6</h6>
+ *  </div>
+*/
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6,
+.prose p {
+  margin-bottom: 25px;
+}
+
+.prose p {
+  line-height: 25px;
+}
+
+.prose h1 {
+  margin-top: 12.1216px;
+}
+
+.prose h2 {
+  margin-top: 14.8144px;
+}
+
+.prose h3 {
+  margin-top: 17.392px;
+}
+
+.prose h4 {
+  margin-top: 21.0528px;
+}
+
+.prose h5,
+.prose h6 {
+  margin-top: 25px;
+}
+
+.prose h1:first-child,
+.prose h2:first-child,
+.prose h3:first-child,
+.prose h4:first-child,
+.prose h5:first-child,
+.prose h6:first-child {
+  margin-top: 0;
+}
+
+.prose *:target {
+  padding-top: 20px;
+}
