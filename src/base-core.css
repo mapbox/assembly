@@ -76,7 +76,6 @@ table { border-collapse: collapse; border-spacing: 0; }
  * @namespace Cols
  * @memberof Layout
 */
-.col-0  { width: 04.1666%; }
 .col-1  { width: 08.3333%; }
 .col-2  { width: 16.6666%; }
 .col-3  { width: 25.0000%; }
@@ -102,7 +101,6 @@ table { border-collapse: collapse; border-spacing: 0; }
  * Column gutter classes
  * @memberof Layout
 */
-.cols-gut-5 > .col-0,
 .cols-gut-5 > .col-1,
 .cols-gut-5 > .col-2,
 .cols-gut-5 > .col-3,
@@ -115,11 +113,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 .cols-gut-5 > .col-10,
 .cols-gut-5 > .col-11,
 .cols-gut-5 > .col-12 {
-  margin-right: 5px;
+  margin-left: 5px;
   flex: 1;
 }
 
-.cols-gut-10 > .col-0,
 .cols-gut-10 > .col-1,
 .cols-gut-10 > .col-2,
 .cols-gut-10 > .col-3,
@@ -132,11 +129,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 .cols-gut-10 > .col-10,
 .cols-gut-10 > .col-11,
 .cols-gut-10 > .col-12 {
-  margin-right: 10px;
+  margin-left: 10px;
   flex: 1;
 }
 
-.cols-gut-20 > .col-0,
 .cols-gut-20 > .col-1,
 .cols-gut-20 > .col-2,
 .cols-gut-20 > .col-3,
@@ -149,11 +145,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 .cols-gut-20 > .col-10,
 .cols-gut-20 > .col-11,
 .cols-gut-20 > .col-12 {
-  margin-right: 20px;
+  margin-left: 20px;
   flex: 1;
 }
 
-.cols-gut-40 > .col-0,
 .cols-gut-40 > .col-1,
 .cols-gut-40 > .col-2,
 .cols-gut-40 > .col-3,
@@ -166,11 +161,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 .cols-gut-40 > .col-10,
 .cols-gut-40 > .col-11,
 .cols-gut-40 > .col-12 {
-  margin-right: 40px;
+  margin-left: 40px;
   flex: 1;
 }
 
-.cols-gut-80 > .col-0,
 .cols-gut-80 > .col-1,
 .cols-gut-80 > .col-2,
 .cols-gut-80 > .col-3,
