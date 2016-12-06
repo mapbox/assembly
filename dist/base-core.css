@@ -1,309 +1,48 @@
-/**
- * FontFace
-*/
-@font-face {
-  font-family:'Open Sans';
-  src:url('../fonts/opensans-regular.eot');
-  src:url('../fonts/opensans-regular.eot#iefix') format('embedded-opentype'),
-  url('../fonts/opensans-regular.woff') format('woff');
-}
-
-@font-face {
-  font-family:'Open Sans Light';
-  src:url('../fonts/opensans-light.eot');
-  src:url('../fonts/opensans-light.eot#iefix') format('embedded-opentype'),
-  url('../fonts/opensans-light.woff') format('woff');
-}
-
-@font-face {
-  font-family:'Open Sans Italic';
-  src:url('../fonts/opensans-italic.eot');
-  src:url('../fonts/opensans-italic.eot#iefix') format('embedded-opentype'),
-  url('../fonts/opensans-italic.woff') format('woff');
-}
-
-@font-face {
-  font-family:'Open Sans Bold';
-  src:url('../fonts/opensans-bold.eot');
-  src:url('../fonts/opensans-bold.eot#iefix') format('embedded-opentype'),
-  url('../fonts/opensans-bold.woff') format('woff');
-}
-
-@font-face {
-  font-family:'Open Sans Bold Italic';
-  src:url('../fonts/opensans-bolditalic.eot');
-  src:url('../fonts/opensans-bolditalic.eot#iefix') format('embedded-opentype'),
-  url('../fonts/opensans-bolditalic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cabin Bold';
-  src: url('../fonts/cabin-bold-webfont.eot');
-  src: url('../fonts/cabin-bold-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/cabin-bold-webfont.woff') format('woff');
-}
-
-/**
- * Inline elements
-*/
-
-body,
-input,
-textarea {
-  color: #404040;
-  color: rgba(0, 0, 0, 0.75);
-  font: 16px/1.25 'Open Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-/**
- * Typography
- * @namespace type
- * @memberof Typography
-*/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Open Sans Bold', sans-serif;
-  font-weight: normal;
+/* stylelint-disable */
+/* Reset ♥ Adapted from http://meyerweb.com/eric/tools/css/reset/
+------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
-}
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+  }
+body { line-height: 1; }
+ol, ul { list-style: none;  }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+/* remember to define focus styles. Hee Haw */
+:focus { outline: 0; }
 
-h1 {
-  font-size: 33px;
-  line-height: 1.5152;
-}
-
-h2 {
-  font-size: 27px;
-  line-height: 1.8519;
-}
-
-h3 {
-  font-size: 23px;
-  line-height: 1.0870;
-}
-
-h4 {
-  font-size: 19px;
-  line-height: 1.3158;
-}
-
-h5,
-h6 {
-  font-size: 16px;
-  line-height: 1.5625;
-}
-
-em h1, h1 em,
-em h2, h2 em,
-em h3, h3 em,
-em h4, h4 em,
-em h5, h5 em,
-em h6, h6 em {
-  font-family: 'Open Sans Bold Italic', sans-serif;
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-small,
-.prose.small,
-.small {
-  font-size: 14px;
-  line-height: 20px;
-}
-
-small { display:block; }
-
-.micro,
-.prose .micro,
-.prose.micro {
-  font-size: 12px;
-  line-height: 20px;
-}
-
-.strong,
-strong {
-  font-family: 'Open Sans Bold', sans-serif;
-  font-weight: normal;
-}
-
-strong em,
-em strong {
-  font-family: 'Open Sans Bold Italic', sans-serif;
-  font-weight: normal;
-}
-
-address,
-em {
-  font-family: 'Open Sans Italic', sans-serif;
-}
-
-/**
- * Typography modifiers
- * @namespace type
- * @memberof Typography
-*/
-
-/**
- *  Prose-styled headlines.
- *
- * @example
- *  <h1 class="type-light">Headline 1 - light</h1>
- *  <h2 class="type-light">Headline 2 - light</h2>
- *  <h3 class="type-light">Headline 3 - light</h3>
- *  <h1 class="type-regular">Headline 1 - regular</h1>
- *  <h2 class="type-regular">Headline 2 - regular</h2>
- *  <h3 class="type-regular">Headline 3 - regular</h3>
- *  <h1 class="type-fancy">Headline 1 - fancy</h1>
- *  <h2 class="type-fancy">Headline 2 - fancy</h2>
- *  <h3 class="type-fancy">Headline 3 - fancy</h3>
-*/
-h1.type-light,
-h2.type-light,
-h3.type-light {
-  font-family:'Open Sans Light', sans-serif;
-}
-
-h1.type-regular,
-h2.type-regular,
-h3.type-regular {
-  font-family:'Open Sans', sans-serif;
-}
-
-h1.type-fancy,
-h2.type-fancy,
-h3.type-fancy {
-  font-family:'Cabin Bold', sans-serif;
-  text-transform: uppercase;
-}
-
-h1.type-fancy {
-  letter-spacing: 3px;
-}
-
-h2.type-fancy,
-h3.type-fancy {
-  letter-spacing: 2px;
-}
-
-/**
- * Prose classes
- * @namespace prose
- * @memberof Prose
-*/
-
-/**
- *  Prose-styled headlines.
- *
- * @example
- *  <div class="prose">
- *    <h1>Headline 1</h1>
- *    <h2>Headline 2</h2>
- *    <h3>Headline 3</h3>
- *    <h4>Headline 4</h4>
- *    <h5>Headline 5</h5>
- *    <h6>Headline 6</h6>
- *  </div>
-*/
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6,
-.prose p {
-  margin-bottom: 25px;
-}
-
-.prose p {
-  line-height: 25px;
-}
-
-.prose h1 {
-  margin-top: 12.1216px;
-}
-
-.prose h2 {
-  margin-top: 14.8144px;
-}
-
-.prose h3 {
-  margin-top: 17.392px;
-}
-
-.prose h4 {
-  margin-top: 21.0528px;
-}
-
-.prose h5,
-.prose h6 {
-  margin-top: 25px;
-}
-
-.prose h1:first-child,
-.prose h2:first-child,
-.prose h3:first-child,
-.prose h4:first-child,
-.prose h5:first-child,
-.prose h6:first-child {
-  margin-top: 0;
-}
-
-.prose *:target {
-  padding-top: 20px;
-}
+*, *:after, *:before { box-sizing: border-box; }
 
 /**
  * Layout classes
  * @namespace Layout
  * @memberof Utilities
 */
-
-/**
- * Theming utilities
- * @namespace Theming
- * @memberof Utilities
-*/
-.round             { border-radius: 3px; }
-.round-top         { border-radius: 3px 3px 0 0; }
-.round-right       { border-radius: 0 3px 3px 0; }
-.round-bottom      { border-radius: 0 0 3px 3px; }
-.round-left        { border-radius: 3px 0 0 3px; }
-.round-topleft     { border-top-left-radius: 3px; }
-.round-topright    { border-top-right-radius: 3px; }
-.round-bottomright { border-bottom-right-radius: 3px; }
-.round-bottomleft  { border-bottom-left-radius: 3px; }
-
-.round-bold             { border-radius: 6px; }
-.round-bold-top         { border-radius: 6px 6px 0 0; }
-.round-bold-right       { border-radius: 0 6px 6px 0; }
-.round-bold-bottom      { border-radius: 0 0 6px 6px; }
-.round-bold-left        { border-radius: 6px 0 0 6px; }
-.round-bold-topleft     { border-top-left-radius: 6px; }
-.round-bold-topright    { border-top-right-radius: 6px; }
-.round-bold-bottomright { border-bottom-right-radius: 6px; }
-.round-bold-bottomleft  { border-bottom-left-radius: 6px; }
-
-.round-full             { border-radius: 50%; }
-.round-full-top         { border-radius: 50% 50% 0 0; }
-.round-full-right       { border-radius: 0 50% 50% 0; }
-.round-full-bottom      { border-radius: 0 0 50% 50%; }
-.round-full-left        { border-radius: 50% 0 0 50%; }
-.round-full-topleft     { border-top-left-radius: 50%; }
-.round-full-topright    { border-top-right-radius: 50%; }
-.round-full-bottomright { border-bottom-right-radius: 50%; }
-.round-full-bottomleft  { border-bottom-left-radius: 50%; }
 
 /**
  * Limiter classes
@@ -321,15 +60,18 @@ h3.type-fancy {
  * Column container for grids.
  *
  * @example
- * <div class='grd'>
+ * <div class='cols'>
  *  <div class='col6'>
  *  <div class='col6'>
  * </div>
  */
-.grd {
+.cols {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /**
@@ -361,94 +103,93 @@ h3.type-fancy {
 /* TODO: move grid to separate stylesheet */
 /* stylelint-disable selector-no-combinator */
 
-.grd-gut-5 { margin-left:-5px; }
-.grd-gut-10 { margin-left:-10px; }
-.grd-gut-20 { margin-left:-20px; }
-.grd-gut-40 { margin-left:-40px; }
-.grd-gut-80 { margin-left:-80px; }
-
 /**
  * Column gutter classes
  * @memberof Layout
 */
-.grd-gut-5 > .col-1,
-.grd-gut-5 > .col-2,
-.grd-gut-5 > .col-3,
-.grd-gut-5 > .col-4,
-.grd-gut-5 > .col-5,
-.grd-gut-5 > .col-6,
-.grd-gut-5 > .col-7,
-.grd-gut-5 > .col-8,
-.grd-gut-5 > .col-9,
-.grd-gut-5 > .col-10,
-.grd-gut-5 > .col-11,
-.grd-gut-5 > .col-12 {
+.cols-gut-5 > .col-1,
+.cols-gut-5 > .col-2,
+.cols-gut-5 > .col-3,
+.cols-gut-5 > .col-4,
+.cols-gut-5 > .col-5,
+.cols-gut-5 > .col-6,
+.cols-gut-5 > .col-7,
+.cols-gut-5 > .col-8,
+.cols-gut-5 > .col-9,
+.cols-gut-5 > .col-10,
+.cols-gut-5 > .col-11,
+.cols-gut-5 > .col-12 {
   margin-left: 5px;
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
 }
 
-.grd-gut-10 > .col-1,
-.grd-gut-10 > .col-2,
-.grd-gut-10 > .col-3,
-.grd-gut-10 > .col-4,
-.grd-gut-10 > .col-5,
-.grd-gut-10 > .col-6,
-.grd-gut-10 > .col-7,
-.grd-gut-10 > .col-8,
-.grd-gut-10 > .col-9,
-.grd-gut-10 > .col-10,
-.grd-gut-10 > .col-11,
-.grd-gut-10 > .col-12 {
+.cols-gut-10 > .col-1,
+.cols-gut-10 > .col-2,
+.cols-gut-10 > .col-3,
+.cols-gut-10 > .col-4,
+.cols-gut-10 > .col-5,
+.cols-gut-10 > .col-6,
+.cols-gut-10 > .col-7,
+.cols-gut-10 > .col-8,
+.cols-gut-10 > .col-9,
+.cols-gut-10 > .col-10,
+.cols-gut-10 > .col-11,
+.cols-gut-10 > .col-12 {
   margin-left: 10px;
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
 }
 
-.grd-gut-20 > .col-1,
-.grd-gut-20 > .col-2,
-.grd-gut-20 > .col-3,
-.grd-gut-20 > .col-4,
-.grd-gut-20 > .col-5,
-.grd-gut-20 > .col-6,
-.grd-gut-20 > .col-7,
-.grd-gut-20 > .col-8,
-.grd-gut-20 > .col-9,
-.grd-gut-20 > .col-10,
-.grd-gut-20 > .col-11,
-.grd-gut-20 > .col-12 {
+.cols-gut-20 > .col-1,
+.cols-gut-20 > .col-2,
+.cols-gut-20 > .col-3,
+.cols-gut-20 > .col-4,
+.cols-gut-20 > .col-5,
+.cols-gut-20 > .col-6,
+.cols-gut-20 > .col-7,
+.cols-gut-20 > .col-8,
+.cols-gut-20 > .col-9,
+.cols-gut-20 > .col-10,
+.cols-gut-20 > .col-11,
+.cols-gut-20 > .col-12 {
   margin-left: 20px;
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
 }
 
-.grd-gut-40 > .col-1,
-.grd-gut-40 > .col-2,
-.grd-gut-40 > .col-3,
-.grd-gut-40 > .col-4,
-.grd-gut-40 > .col-5,
-.grd-gut-40 > .col-6,
-.grd-gut-40 > .col-7,
-.grd-gut-40 > .col-8,
-.grd-gut-40 > .col-9,
-.grd-gut-40 > .col-10,
-.grd-gut-40 > .col-11,
-.grd-gut-40 > .col-12 {
+.cols-gut-40 > .col-1,
+.cols-gut-40 > .col-2,
+.cols-gut-40 > .col-3,
+.cols-gut-40 > .col-4,
+.cols-gut-40 > .col-5,
+.cols-gut-40 > .col-6,
+.cols-gut-40 > .col-7,
+.cols-gut-40 > .col-8,
+.cols-gut-40 > .col-9,
+.cols-gut-40 > .col-10,
+.cols-gut-40 > .col-11,
+.cols-gut-40 > .col-12 {
   margin-left: 40px;
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
 }
 
-.grd-gut-80 > .col-1,
-.grd-gut-80 > .col-2,
-.grd-gut-80 > .col-3,
-.grd-gut-80 > .col-4,
-.grd-gut-80 > .col-5,
-.grd-gut-80 > .col-6,
-.grd-gut-80 > .col-7,
-.grd-gut-80 > .col-8,
-.grd-gut-80 > .col-9,
-.grd-gut-80 > .col-10,
-.grd-gut-80 > .col-11,
-.grd-gut-80 > .col-12 {
+.cols-gut-80 > .col-1,
+.cols-gut-80 > .col-2,
+.cols-gut-80 > .col-3,
+.cols-gut-80 > .col-4,
+.cols-gut-80 > .col-5,
+.cols-gut-80 > .col-6,
+.cols-gut-80 > .col-7,
+.cols-gut-80 > .col-8,
+.cols-gut-80 > .col-9,
+.cols-gut-80 > .col-10,
+.cols-gut-80 > .col-11,
+.cols-gut-80 > .col-12 {
   margin-right: 80px;
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
 }
 
 /* stylelint-enable selector-no-combinator */
@@ -579,14 +320,14 @@ h3.type-fancy {
 .inline       { display: inline; }
 .block        { display: block; }
 .inline-block { display: inline-block; }
-.flex         { display: flex; }
+.flex         { display: -ms-flexbox; display: flex; }
 .hidden       { display: none; }
 
 @media only screen and (max-width: 770px) {
   .inline-md       { display: inline; }
   .block-md        { display: block; }
   .inline-block-md { display: inline-block; }
-  .flex-md         { display: flex; }
+  .flex-md         { display: -ms-flexbox; display: flex; }
   .hidden-md       { display: none; }
 }
 
@@ -594,7 +335,7 @@ h3.type-fancy {
   .inline-sm       { display: inline; }
   .block-sm        { display: block; }
   .inline-block-sm { display: inline-block; }
-  .flex-sm         { display: flex; }
+  .flex-sm         { display: -ms-flexbox; display: flex; }
   .hidden-sm       { display: none; }
 }
 
@@ -607,14 +348,14 @@ h3.type-fancy {
 .abs    { position: absolute; }
 .rel    { position: relative; }
 .static { position: static; }
-.sticky { position: sticky; }
+.sticky { position: -webkit-sticky; position: sticky; }
 
 @media only screen and (max-width: 770px) {
   .fix-md    { position: fixed; }
   .abs-md    { position: absolute; }
   .rel-md    { position: relative; }
   .static-md { position: static; }
-  .sticky-md { position: sticky; }
+  .sticky-md { position: -webkit-sticky; position: sticky; }
 }
 
 @media only screen and (max-width: 640px) {
@@ -622,7 +363,7 @@ h3.type-fancy {
   .abs-sm    { position: absolute; }
   .rel-sm    { position: relative; }
   .static-sm { position: static; }
-  .sticky-sm { position: sticky; }
+  .sticky-sm { position: -webkit-sticky; position: sticky; }
 }
 
 /*

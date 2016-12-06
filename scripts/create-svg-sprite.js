@@ -7,7 +7,8 @@ const path = require('path');
 const queue = require('d3-queue').queue;
 const SVGO = require('svgo');
 
-const svgDir = path.join(__dirname, '../svgs');
+const svgDir = path.join(__dirname, '../src/svgs');
+const svgScript = path.join(__dirname, '../dist/base-svgs.js');
 const svgo = new SVGO();
 const sprite = svgstore({
   cleanDefs: [
@@ -52,6 +53,6 @@ fs.readdir(svgDir, (err, filenames) => {
 
     const cleanedSprite = sprite.toString().replace(/\n/g, '');
     const jsContent = baseJsTemplate({ svgSprite: cleanedSprite });
-    fs.writeFileSync(path.join(__dirname, '../dist/base.js'), jsContent);
+    fs.writeFileSync(svgScript, jsContent);
   });
 });
