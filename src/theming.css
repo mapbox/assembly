@@ -1,10 +1,4 @@
 /**
- * Layout classes
- * @namespace Layout
- * @memberof Utilities
-*/
-
-/**
  * Theming utilities
  * @namespace Theming
  * @memberof Utilities
@@ -38,31 +32,4 @@
 .round-full-topright    { border-top-right-radius: 50%; }
 .round-full-bottomright { border-bottom-right-radius: 50%; }
 .round-full-bottomleft  { border-bottom-left-radius: 50%; }
-
-/**
- * Display utility classes
- * @namespace Display
- * @memberof Utilities
-*/
-.inline       { display: inline; }
-.block        { display: block; }
-.inline-block { display: inline-block; }
-.flex         { display: flex; }
-.hidden       { display: none; }
-
-@media only screen and (max-width: 770px) {
-  .inline-md       { display: inline; }
-  .block-md        { display: block; }
-  .inline-block-md { display: inline-block; }
-  .flex-md         { display: flex; }
-  .hidden-md       { display: none; }
-}
-
-@media only screen and (max-width: 640px) {
-  .inline-sm       { display: inline; }
-  .block-sm        { display: block; }
-  .inline-block-sm { display: inline-block; }
-  .flex-sm         { display: flex; }
-  .hidden-sm       { display: none; }
-}
 
