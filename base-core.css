@@ -43,6 +43,40 @@ table { border-collapse: collapse; border-spacing: 0; }
  * @memberof Utilities
 */
 
+/**
+ * Theming utilities
+ * @namespace Theming
+ * @memberof Utilities
+*/
+.round             { border-radius: 3px; }
+.round-top         { border-radius: 3px 3px 0 0; }
+.round-right       { border-radius: 0 3px 3px 0; }
+.round-bottom      { border-radius: 0 0 3px 3px; }
+.round-left        { border-radius: 3px 0 0 3px; }
+.round-topleft     { border-top-left-radius: 3px; }
+.round-topright    { border-top-right-radius: 3px; }
+.round-bottomright { border-bottom-right-radius: 3px; }
+.round-bottomleft  { border-bottom-left-radius: 3px; }
+
+.round-bold             { border-radius: 6px; }
+.round-bold-top         { border-radius: 6px 6px 0 0; }
+.round-bold-right       { border-radius: 0 6px 6px 0; }
+.round-bold-bottom      { border-radius: 0 0 6px 6px; }
+.round-bold-left        { border-radius: 6px 0 0 6px; }
+.round-bold-topleft     { border-top-left-radius: 6px; }
+.round-bold-topright    { border-top-right-radius: 6px; }
+.round-bold-bottomright { border-bottom-right-radius: 6px; }
+.round-bold-bottomleft  { border-bottom-left-radius: 6px; }
+
+.round-full             { border-radius: 50%; }
+.round-full-top         { border-radius: 50% 50% 0 0; }
+.round-full-right       { border-radius: 0 50% 50% 0; }
+.round-full-bottom      { border-radius: 0 0 50% 50%; }
+.round-full-left        { border-radius: 50% 0 0 50%; }
+.round-full-topleft     { border-top-left-radius: 50%; }
+.round-full-topright    { border-top-right-radius: 50%; }
+.round-full-bottomright { border-bottom-right-radius: 50%; }
+.round-full-bottomleft  { border-bottom-left-radius: 50%; }
 
 /**
  * Limiter classes
