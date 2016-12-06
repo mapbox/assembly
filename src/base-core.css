@@ -60,6 +60,12 @@
 /* TODO: move grid to separate stylesheet */
 /* stylelint-disable selector-no-combinator */
 
+.grd-gut-5 { margin-left:-5px; }
+.grd-gut-10 { margin-left:-10px; }
+.grd-gut-20 { margin-left:-20px; }
+.grd-gut-40 { margin-left:-40px; }
+.grd-gut-80 { margin-left:-80px; }
+
 /**
  * Column gutter classes
  * @memberof Layout
