@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "npm run lint:css && node scripts/process-css.js",
+    "css": "node scripts/process-css.js",
     "svgs": "node scripts/create-svg-sprite.js",
     "build": "trash dist/* && npm run css && npm run svgs",
     "debug": "http-server",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/mapbox/base-core#readme",
   "dependencies": {
     "autoprefixer": "^6.5.3",
+    "concat-with-sourcemaps": "^1.0.4",
     "cssnano": "^3.8.1",
     "d3-queue": "^3.0.3",
     "lodash": "^4.17.2",

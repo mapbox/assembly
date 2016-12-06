@@ -3,13 +3,23 @@
 const fs = require('fs');
 const path = require('path');
 const pify = require('pify');
+const Concat = require('concat-with-sourcemaps');
 const postcss = require('postcss');
 const reporter = require('postcss-reporter');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
-const cssSrc = path.join(__dirname, '../src/base-core.css');
+const cssSrcDir = path.join(__dirname, '../src');
 const cssDist = path.join(__dirname, '../dist/base-core.css');
+
+function cssPath(name) {
+  return path.join(__dirname, `../src/${name}.css`);
+}
+
+const cssFiles = [
+  cssPath('reset'),
+  cssPath('base-core')
+];
 
 const postcssPlugins = [
   autoprefixer({
@@ -19,15 +29,25 @@ const postcssPlugins = [
   reporter()
 ];
 
-function readCssSrc() {
-  return pify(fs.readFile)(cssSrc, 'utf8');
+
+function concatenateCss() {
+  const concat = new Concat(true, cssDist, '\n');
+  const promises = cssFiles.map((cssFile) => {
+    return pify(fs.readFile)(cssFile, 'utf8').then((css) => {
+      concat.add(cssFile, css);
+    });
+  });
+  return Promise.all(promises).then(() => concat);
 }
 
-function processCss(css) {
-  return postcss(postcssPlugins).process(css, {
-    from: cssSrc,
+function processConcatenatedCss(concat) {
+  return postcss(postcssPlugins).process(concat.content, {
+    from: cssDist,
     to: cssDist,
-    map: { inline: false }
+    map: {
+      inline: false,
+      prev: concat.sourceMap
+    }
   });
 }
 
@@ -38,8 +58,8 @@ function writeCssDist(result) {
   ]);
 }
 
-readCssSrc()
-  .then(processCss)
+concatenateCss()
+  .then(processConcatenatedCss)
   .then(writeCssDist)
   .catch((err) => {
     console.log(err.stack);
