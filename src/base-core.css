@@ -149,7 +149,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .cols-gut-20 > .col-10,
 .cols-gut-20 > .col-11,
 .cols-gut-20 > .col-12 {
-  margin-right: 10px;
+  margin-right: 20px;
   flex: 1;
 }
 
@@ -166,7 +166,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .cols-gut-40 > .col-10,
 .cols-gut-40 > .col-11,
 .cols-gut-40 > .col-12 {
-  margin-right: 10px;
+  margin-right: 40px;
   flex: 1;
 }
 
@@ -183,20 +183,9 @@ table { border-collapse: collapse; border-spacing: 0; }
 .cols-gut-80 > .col-10,
 .cols-gut-80 > .col-11,
 .cols-gut-80 > .col-12 {
-  margin-right: 10px;
+  margin-right: 80px;
   flex: 1;
 }
-
-/**
- * Column classes
- * @namespace Cols
- * @memberof Layout
-*/
-.col-2-gut-5:nth-child(2n+2),
-.col-2-gut-10:nth-child(2n+2),
-.col-2-gut-20:nth-child(2n+2),
-.col-2-gut-40:nth-child(2n+2),
-.col-2-gut-80:nth-child(2n+2) { margin-right: 0; }
 
 /**
  * Column classes
