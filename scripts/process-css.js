@@ -16,7 +16,7 @@ const postcssPlugins = [
     browsers: 'last 2 versions, ie > 11'
   }),
   cssnano(),
-  reporter
+  reporter()
 ];
 
 function readCssSrc() {
