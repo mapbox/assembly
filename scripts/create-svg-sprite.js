@@ -7,7 +7,7 @@ const path = require('path');
 const queue = require('d3-queue').queue;
 const SVGO = require('svgo');
 
-const svgDir = path.join(__dirname, '../svgs');
+const svgDir = path.join(__dirname, '../src/svgs');
 const svgo = new SVGO();
 const sprite = svgstore({
   cleanDefs: [
