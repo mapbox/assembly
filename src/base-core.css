@@ -4,7 +4,6 @@
  * @memberof Utilities
 */
 
-<<<<<<< HEAD
 /**
  * Theming utilities
  * @namespace Theming
@@ -40,8 +39,6 @@
 .round-full-bottomright { border-bottom-right-radius: 50%; }
 .round-full-bottomleft  { border-bottom-left-radius: 50%; }
 
-=======
->>>>>>> e5e7964885c1eb364114cd6e9e0e62c5cef23adb
 /**
  * Limiter classes
  * @namespace Limiter
@@ -58,12 +55,12 @@
  * Column container for grids.
  *
  * @example
- * <div class='cols'>
+ * <div class='grd'>
  *  <div class='col6'>
  *  <div class='col6'>
  * </div>
  */
-.cols {
+.grd {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -98,86 +95,92 @@
 /* TODO: move grid to separate stylesheet */
 /* stylelint-disable selector-no-combinator */
 
+.grd-gut-5 { margin-left:-5px; }
+.grd-gut-10 { margin-left:-10px; }
+.grd-gut-20 { margin-left:-20px; }
+.grd-gut-40 { margin-left:-40px; }
+.grd-gut-80 { margin-left:-80px; }
+
 /**
  * Column gutter classes
  * @memberof Layout
 */
-.cols-gut-5 > .col-1,
-.cols-gut-5 > .col-2,
-.cols-gut-5 > .col-3,
-.cols-gut-5 > .col-4,
-.cols-gut-5 > .col-5,
-.cols-gut-5 > .col-6,
-.cols-gut-5 > .col-7,
-.cols-gut-5 > .col-8,
-.cols-gut-5 > .col-9,
-.cols-gut-5 > .col-10,
-.cols-gut-5 > .col-11,
-.cols-gut-5 > .col-12 {
+.grd-gut-5 > .col-1,
+.grd-gut-5 > .col-2,
+.grd-gut-5 > .col-3,
+.grd-gut-5 > .col-4,
+.grd-gut-5 > .col-5,
+.grd-gut-5 > .col-6,
+.grd-gut-5 > .col-7,
+.grd-gut-5 > .col-8,
+.grd-gut-5 > .col-9,
+.grd-gut-5 > .col-10,
+.grd-gut-5 > .col-11,
+.grd-gut-5 > .col-12 {
   margin-left: 5px;
   flex: 1;
 }
 
-.cols-gut-10 > .col-1,
-.cols-gut-10 > .col-2,
-.cols-gut-10 > .col-3,
-.cols-gut-10 > .col-4,
-.cols-gut-10 > .col-5,
-.cols-gut-10 > .col-6,
-.cols-gut-10 > .col-7,
-.cols-gut-10 > .col-8,
-.cols-gut-10 > .col-9,
-.cols-gut-10 > .col-10,
-.cols-gut-10 > .col-11,
-.cols-gut-10 > .col-12 {
+.grd-gut-10 > .col-1,
+.grd-gut-10 > .col-2,
+.grd-gut-10 > .col-3,
+.grd-gut-10 > .col-4,
+.grd-gut-10 > .col-5,
+.grd-gut-10 > .col-6,
+.grd-gut-10 > .col-7,
+.grd-gut-10 > .col-8,
+.grd-gut-10 > .col-9,
+.grd-gut-10 > .col-10,
+.grd-gut-10 > .col-11,
+.grd-gut-10 > .col-12 {
   margin-left: 10px;
   flex: 1;
 }
 
-.cols-gut-20 > .col-1,
-.cols-gut-20 > .col-2,
-.cols-gut-20 > .col-3,
-.cols-gut-20 > .col-4,
-.cols-gut-20 > .col-5,
-.cols-gut-20 > .col-6,
-.cols-gut-20 > .col-7,
-.cols-gut-20 > .col-8,
-.cols-gut-20 > .col-9,
-.cols-gut-20 > .col-10,
-.cols-gut-20 > .col-11,
-.cols-gut-20 > .col-12 {
+.grd-gut-20 > .col-1,
+.grd-gut-20 > .col-2,
+.grd-gut-20 > .col-3,
+.grd-gut-20 > .col-4,
+.grd-gut-20 > .col-5,
+.grd-gut-20 > .col-6,
+.grd-gut-20 > .col-7,
+.grd-gut-20 > .col-8,
+.grd-gut-20 > .col-9,
+.grd-gut-20 > .col-10,
+.grd-gut-20 > .col-11,
+.grd-gut-20 > .col-12 {
   margin-left: 20px;
   flex: 1;
 }
 
-.cols-gut-40 > .col-1,
-.cols-gut-40 > .col-2,
-.cols-gut-40 > .col-3,
-.cols-gut-40 > .col-4,
-.cols-gut-40 > .col-5,
-.cols-gut-40 > .col-6,
-.cols-gut-40 > .col-7,
-.cols-gut-40 > .col-8,
-.cols-gut-40 > .col-9,
-.cols-gut-40 > .col-10,
-.cols-gut-40 > .col-11,
-.cols-gut-40 > .col-12 {
+.grd-gut-40 > .col-1,
+.grd-gut-40 > .col-2,
+.grd-gut-40 > .col-3,
+.grd-gut-40 > .col-4,
+.grd-gut-40 > .col-5,
+.grd-gut-40 > .col-6,
+.grd-gut-40 > .col-7,
+.grd-gut-40 > .col-8,
+.grd-gut-40 > .col-9,
+.grd-gut-40 > .col-10,
+.grd-gut-40 > .col-11,
+.grd-gut-40 > .col-12 {
   margin-left: 40px;
   flex: 1;
 }
 
-.cols-gut-80 > .col-1,
-.cols-gut-80 > .col-2,
-.cols-gut-80 > .col-3,
-.cols-gut-80 > .col-4,
-.cols-gut-80 > .col-5,
-.cols-gut-80 > .col-6,
-.cols-gut-80 > .col-7,
-.cols-gut-80 > .col-8,
-.cols-gut-80 > .col-9,
-.cols-gut-80 > .col-10,
-.cols-gut-80 > .col-11,
-.cols-gut-80 > .col-12 {
+.grd-gut-80 > .col-1,
+.grd-gut-80 > .col-2,
+.grd-gut-80 > .col-3,
+.grd-gut-80 > .col-4,
+.grd-gut-80 > .col-5,
+.grd-gut-80 > .col-6,
+.grd-gut-80 > .col-7,
+.grd-gut-80 > .col-8,
+.grd-gut-80 > .col-9,
+.grd-gut-80 > .col-10,
+.grd-gut-80 > .col-11,
+.grd-gut-80 > .col-12 {
   margin-right: 80px;
   flex: 1;
 }
