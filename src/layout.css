@@ -185,6 +185,11 @@
 
 /**
  * Bleed classes
+ * One caveat with using bleed rules is that there are certain occasisons where
+ * content will overflow from the left and right sides of the screens. It is
+ * generally necessary to add a `.clip` class on the parent to avoid overflow
+ * with scrollbars.
+ *
  * @namespace bld
  * @memberof Layout
 */
