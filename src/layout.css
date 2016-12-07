@@ -205,5 +205,5 @@
 }
 
 [class*='bld-'] { flex: 1; }
-.col-6.bld-right  { margin-right: calc(50% - 50vw); }
-.col-6.bld-left   { margin-left: calc(50% - 50vw); }
+.bld-right  { margin-right: calc(50% - 50vw); }
+.bld-left   { margin-left: calc(50% - 50vw); }
