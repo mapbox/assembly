@@ -3,24 +3,24 @@
  * @namespace Display
  * @memberof Utilities
 */
-.inline       { display: inline; }
-.block        { display: block; }
+.inline { display: inline; }
+.block { display: block; }
 .inline-block { display: inline-block; }
-.flex         { display: flex; }
-.hidden       { display: none; }
+.flex { display: flex; }
+.hidden { display: none; }
 
 @media only screen and (max-width: 770px) {
-  .inline-md       { display: inline; }
-  .block-md        { display: block; }
+  .inline-md { display: inline; }
+  .block-md { display: block; }
   .inline-block-md { display: inline-block; }
-  .flex-md         { display: flex; }
-  .hidden-md       { display: none; }
+  .flex-md { display: flex; }
+  .hidden-md { display: none; }
 }
 
 @media only screen and (max-width: 640px) {
-  .inline-sm       { display: inline; }
-  .block-sm        { display: block; }
+  .inline-sm { display: inline; }
+  .block-sm { display: block; }
   .inline-block-sm { display: inline-block; }
-  .flex-sm         { display: flex; }
-  .hidden-sm       { display: none; }
+  .flex-sm { display: flex; }
+  .hidden-sm { display: none; }
 }
