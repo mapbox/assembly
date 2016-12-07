@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function() {
 function addFileToSprite(filename, callback) {
   const basename = path.basename(filename, path.extname(filename));
   fs.readFile(filename, 'utf8', (err, content) => {
-    if (err) throw err;
+    if (err) return callback(err);
     svgo.optimize(content, (optimizedContent) => {
-      sprite.add(`base-svg-${basename}`, optimizedContent);
+      sprite.add(`base-svg-${basename}`, optimizedContent.data);
       callback();
     });
   });

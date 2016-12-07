@@ -20,7 +20,8 @@ const cssFiles = [
   cssPath('display'),
   cssPath('theming'),
   cssPath('positioning'),
-  cssPath('layout')
+  cssPath('layout'),
+  cssPath('icons')
 ];
 
 const postcssPlugins = [
