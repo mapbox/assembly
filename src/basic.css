@@ -1,0 +1,86 @@
+/* stylelint-disable selector-no-combinator, selector-no-type */
+
+/**
+ * Basic elements
+ * @namespace txt
+*/
+
+/**
+ * Table classes.
+ */
+.txt-table,
+.txt table {
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  margin-bottom: 25px;
+}
+
+.txt-table th,
+.txt-table td,
+.txt table th,
+.txt table td {
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+
+.txt-table th,
+.txt table th {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.txt-table .fixed,
+.txt .fixed {
+  table-layout: fixed;
+}
+
+.txt-table th + td,
+.txt th + td {
+  border-left: 1px solid #ddd;
+}
+
+/**
+ * List classes.
+ */
+.txt > ol,
+.txt > ul {
+  margin-bottom: 25px;
+}
+
+.txt-ol ul,
+.txt-ul ul,
+.txt-ul,
+.txt ul {
+  list-style: disc;
+  margin-left: 40px;
+}
+
+.txt-ul ol,
+.txt-ol ol,
+.txt-ol,
+.txt ol {
+  list-style: decimal;
+  margin-left: 40px;
+}
+
+.txt-ul li,
+.txt-ol li,
+.txt ul li,
+.txt ol li {
+  margin-bottom: 10px;
+}
+
+.txt ul ul,
+.txt ol ol,
+.txt ul ol,
+.txt ol ul,
+.txt-ul ul,
+.txt-ol ol,
+.txt-ul ol,
+.txt-ol ul {
+  margin-top: 10px;
+}
