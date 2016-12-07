@@ -3,41 +3,49 @@
 */
 @font-face {
   font-family:'Open Sans';
-  src:url('../fonts/opensans-regular.eot');
-  src:url('../fonts/opensans-regular.eot#iefix') format('embedded-opentype'),
+  font-weight: normal;
+  src: url('../fonts/opensans-regular.eot');
+  src: url('../fonts/opensans-regular.eot#iefix') format('embedded-opentype'),
   url('../fonts/opensans-regular.woff') format('woff');
 }
 
 @font-face {
   font-family:'Open Sans Light';
-  src:url('../fonts/opensans-light.eot');
-  src:url('../fonts/opensans-light.eot#iefix') format('embedded-opentype'),
+  font-weight: lighter;
+  src: url('../fonts/opensans-light.eot');
+  src: url('../fonts/opensans-light.eot#iefix') format('embedded-opentype'),
   url('../fonts/opensans-light.woff') format('woff');
 }
 
 @font-face {
   font-family:'Open Sans Italic';
-  src:url('../fonts/opensans-italic.eot');
-  src:url('../fonts/opensans-italic.eot#iefix') format('embedded-opentype'),
+  font-weight: normal;
+  font-style: italic;
+  src: url('../fonts/opensans-italic.eot');
+  src: url('../fonts/opensans-italic.eot#iefix') format('embedded-opentype'),
   url('../fonts/opensans-italic.woff') format('woff');
 }
 
 @font-face {
   font-family:'Open Sans Bold';
-  src:url('../fonts/opensans-bold.eot');
-  src:url('../fonts/opensans-bold.eot#iefix') format('embedded-opentype'),
+  font-weight: bold;
+  src: url('../fonts/opensans-bold.eot');
+  src: url('../fonts/opensans-bold.eot#iefix') format('embedded-opentype'),
   url('../fonts/opensans-bold.woff') format('woff');
 }
 
 @font-face {
   font-family:'Open Sans Bold Italic';
-  src:url('../fonts/opensans-bolditalic.eot');
-  src:url('../fonts/opensans-bolditalic.eot#iefix') format('embedded-opentype'),
+  font-weight: bold;
+  font-style: italic;
+  src: url('../fonts/opensans-bolditalic.eot');
+  src: url('../fonts/opensans-bolditalic.eot#iefix') format('embedded-opentype'),
   url('../fonts/opensans-bolditalic.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Cabin Bold';
+  font-weight: normal;
   src: url('../fonts/cabin-bold-webfont.eot');
   src: url('../fonts/cabin-bold-webfont.eot?#iefix') format('embedded-opentype'),
   url('../fonts/cabin-bold-webfont.woff') format('woff');

@@ -11,196 +11,193 @@ textarea {
 }
 
 /**
- * Prose classes
- * @namespace prose
- * @memberof Prose
+ * Type utilities
+ * @memberof Typography
+*/
+.strong,
+.txt strong {
+  font-family: 'Open Sans Bold', sans-serif;
+}
+
+.strong.em,
+.txt strong em,
+.txt em strong {
+  font-family: 'Open Sans Bold Italic', sans-serif;
+}
+
+.em,
+.txt em,
+.txt address {
+  font-family: 'Open Sans Italic', sans-serif;
+}
+
+.small,
+.txt small {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.txt small { display: block; }
+
+.micro {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/**
+ * Text/prose classes
+ * @namespace txt
+ * @memberof Typography
 */
 
 /**
- *  Prose-styled headlines.
+ *  txt-styled headlines and paragraph.
  *
  * @example
- *  <div class="prose">
+ *  <div class="txt">
  *    <h1>Headline 1</h1>
  *    <h2>Headline 2</h2>
  *    <h3>Headline 3</h3>
  *    <h4>Headline 4</h4>
  *    <h5>Headline 5</h5>
  *    <h6>Headline 6</h6>
+ *    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <strong>Incidunt magnam</strong>, cum consectetur maiores corrupti nulla iste saepe <em>porro repellat</em> beatae modi laudantium laborum magni voluptate impedit sint pariatur?</p>
  *  </div>
 */
-[class*='prose-h'],
-.prose-p,
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6,
-.prose p {
+[class*='txt-h'],
+.txt-p,
+.txt h1,
+.txt h2,
+.txt h3,
+.txt h4,
+.txt h5,
+.txt h6,
+.txt p {
   margin-bottom: 25px;
 }
 
-[class*='prose-h'],
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6 {
+[class*='txt-h'],
+.txt h1,
+.txt h2,
+.txt h3,
+.txt h4,
+.txt h5,
+.txt h6 {
   font-family: 'Open Sans Bold', sans-serif;
-  font-weight: normal;
   margin: 0;
 }
 
-.prose-h1,
-.prose h1 {
+.txt-h1,
+.txt h1 {
   margin-top: 12.1216px;
   font-size: 33px;
   line-height: 1.5152;
 }
 
-.prose-h2,
-.prose h2 {
+.txt-h2,
+.txt h2 {
   margin-top: 14.8144px;
   font-size: 27px;
   line-height: 1.8519;
 }
 
-.prose-h3,
-.prose h3 {
+.txt-h3,
+.txt h3 {
   margin-top: 17.392px;
   font-size: 23px;
   line-height: 1.0870;
 }
 
-.prose-h4,
-.prose h4 {
+.txt-h4,
+.txt h4 {
   margin-top: 21.0528px;
   font-size: 19px;
   line-height: 1.3158;
 }
 
-.prose-h5,
-.prose-h6,
-.prose h5,
-.prose h6 {
+.txt-h5,
+.txt-h6,
+.txt h5,
+.txt h6 {
   margin-top: 25px;
   font-size: 16px;
   line-height: 1.5625;
 }
 
-.prose h1:first-child,
-.prose h2:first-child,
-.prose h3:first-child,
-.prose h4:first-child,
-.prose h5:first-child,
-.prose h6:first-child {
+.txt h1:first-child,
+.txt h2:first-child,
+.txt h3:first-child,
+.txt h4:first-child,
+.txt h5:first-child,
+.txt h6:first-child {
   margin-top: 0;
 }
 
-.prose-type-light.h1,
-.prose-type-light.h2,
-.prose-type-light.h3,
-.prose h1.type-light,
-.prose h2.type-light,
-.prose h3.type-light {
+.txt-p,
+.txt p {
+  line-height: 25px;
+}
+
+.txt p:last-child {
+  margin-bottom: 0;
+}
+
+.txt em h1,
+.txt h1 em,
+.txt em h2,
+.txt h2 em,
+.txt em h3,
+.txt h3 em,
+.txt em h4,
+.txt h4 em,
+.txt em h5,
+.txt h5 em,
+.txt em h6,
+.txt h6 em {
+  font-family: 'Open Sans Bold Italic', sans-serif;
+}
+
+.txt *:target {
+  padding-top: 20px;
+}
+
+/**
+ * Type classes
+ * @namespace typ
+ * @memberof Typography
+*/
+/**
+ *  txt-styled headlines and paragraph.
+ *
+ * @example
+ *  <div class="txt">
+ *    <h1 class='typ-light'>Headline light</h1>
+ *    <h1 class='typ-regular'>Headline regular</h1>
+ *    <h1 class='typ-fancy'>Headline fancy</h1>
+ *  </div>
+*/
+.typ-light,
+.txt .typ-light {
   font-family: 'Open Sans Light', sans-serif;
 }
 
-.prose-type-regular.h1,
-.prose-type-regular.h2,
-.prose-type-regular.h3,
-.prose h1.type-regular,
-.prose h2.type-regular,
-.prose h3.type-regular {
+.typ-regular,
+.txt .typ-regular {
   font-family: 'Open Sans', sans-serif;
 }
 
-.prose-type-fancy.h1,
-.prose-type-fancy.h2,
-.prose-type-fancy.h3,
-.prose h1.type-fancy,
-.prose h2.type-fancy,
-.prose h3.type-fancy {
+h1.typ-fancy,
+h2.typ-fancy,
+h3.typ-fancy {
   font-family: 'Cabin Bold', sans-serif;
   text-transform: uppercase;
 }
 
-.prose-type-fancy.h1,
-.prose h1.type-fancy {
+h1.typ-fancy {
   letter-spacing: 3px;
 }
 
-.prose-type-fancy.h2,
-.prose-type-fancy.h3,
-.prose h2.type-fancy,
-.prose h3.type-fancy {
+h2.typ-fancy,
+h3.typ-fancy {
   letter-spacing: 2px;
 }
-
-.prose-p,
-.prose p {
-  line-height: 25px;
-}
-
-.prose p:last-child {
-  margin-bottom: 0;
-}
-
-.prose-small,
-.prose small,
-.prose .small {
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.prose-small,
-.prose small { display:block; }
-
-.prose-micro,
-.prose .micro {
-  font-size: 12px;
-  line-height: 20px;
-}
-
-.prose em h1,
-.prose h1 em,
-.prose em h2,
-.prose h2 em,
-.prose em h3,
-.prose h3 em,
-.prose em h4,
-.prose h4 em,
-.prose em h5,
-.prose h5 em,
-.prose em h6,
-.prose h6 em {
-  font-family: 'Open Sans Bold Italic', sans-serif;
-}
-
-.prose-strong,
-.prose .strong,
-.prose strong {
-  font-family: 'Open Sans Bold', sans-serif;
-  font-weight: normal;
-}
-
-.prose-strong-em,
-.prose strong em,
-.prose em strong {
-  font-family: 'Open Sans Bold Italic', sans-serif;
-  font-weight: normal;
-}
-
-.prose-address,
-.prose-em,
-.prose address,
-.prose em {
-  font-family: 'Open Sans Italic', sans-serif;
-}
-
-.prose *:target {
-  padding-top: 20px;
-}
-
