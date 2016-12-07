@@ -3,24 +3,32 @@
  * @namespace Display
  * @memberof Utilities
 */
-.inline { display: inline; }
-.block { display: block; }
-.inline-block { display: inline-block; }
-.flex { display: flex; }
-.hidden { display: none; }
+.dis-inline { display: inline; }
+.dis-block { display: block; }
+.dis-inline-block { display: inline-block; }
+.dis-flex { display: flex; }
+.dis-hidden { display: none; }
 
 @media only screen and (max-width: 770px) {
-  .inline-md { display: inline; }
-  .block-md { display: block; }
-  .inline-block-md { display: inline-block; }
-  .flex-md { display: flex; }
-  .hidden-md { display: none; }
+  .dis-inline-md { display: inline; }
+  .dis-block-md { display: block; }
+  .dis-inline-block-md { display: inline-block; }
+  .dis-flex-md { display: flex; }
+  .dis-hidden-md { display: none; }
 }
 
 @media only screen and (max-width: 640px) {
-  .inline-sm { display: inline; }
-  .block-sm { display: block; }
-  .inline-block-sm { display: inline-block; }
-  .flex-sm { display: flex; }
-  .hidden-sm { display: none; }
+  .dis-inline-sm { display: inline; }
+  .dis-block-sm { display: block; }
+  .dis-inline-block-sm { display: inline-block; }
+  .dis-flex-sm { display: flex; }
+  .dis-hidden-sm { display: none; }
+}
+
+@media only screen and (min-width: 1824px) {
+  .dis-inline-lg { display: inline; }
+  .dis-block-lg { display: block; }
+  .dis-inline-block-lg { display: inline-block; }
+  .dis-flex-lg { display: flex; }
+  .dis-hidden-lg { display: none; }
 }
