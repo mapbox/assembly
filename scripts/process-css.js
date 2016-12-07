@@ -9,19 +9,20 @@ const reporter = require('postcss-reporter');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
-const cssDist = path.join(__dirname, '../dist/base-core.css');
+const distCssFilename = 'base-core.css';
+const distCssPath = path.join(__dirname, `../dist/${distCssFilename}`);
 
-function cssPath(name) {
+function getCssPath(name) {
   return path.join(__dirname, `../src/${name}.css`);
 }
 
 const cssFiles = [
-  cssPath('reset'),
-  cssPath('display'),
-  cssPath('theming'),
-  cssPath('positioning'),
-  cssPath('layout'),
-  cssPath('icons')
+  getCssPath('reset'),
+  getCssPath('display'),
+  getCssPath('theming'),
+  getCssPath('positioning'),
+  getCssPath('layout'),
+  getCssPath('icons')
 ];
 
 const postcssPlugins = [
@@ -32,38 +33,40 @@ const postcssPlugins = [
   reporter()
 ];
 
+const concat = new Concat(true, distCssPath, '\n');
 
-function concatenateCss() {
-  const concat = new Concat(true, cssDist, '\n');
-  const promises = cssFiles.map((cssFile) => {
-    return pify(fs.readFile)(cssFile, 'utf8').then((css) => {
-      concat.add(cssFile, css);
-    });
-  });
-  return Promise.all(promises).then(() => concat);
+function processCss() {
+  return Promise.all(cssFiles.map(processCssFile));
 }
 
-function processConcatenatedCss(concat) {
-  return postcss(postcssPlugins).process(concat.content, {
-    from: cssDist,
-    to: cssDist,
-    map: {
-      inline: false,
-      prev: concat.sourceMap
-    }
+function processCssFile(cssFile) {
+  return pify(fs.readFile)(cssFile, 'utf8').then((css) => {
+    return postcss(postcssPlugins)
+      .process(css, {
+        from: cssFile,
+        to: cssFile,
+        map: {
+          inline: false,
+          annotation: false,
+          sourcesContent: true
+        }
+      })
+      .then((postcssResult) => {
+        concat.add(cssFile, postcssResult.css, postcssResult.map.toString());
+      });
   });
 }
 
-function writeCssDist(result) {
+function writeDistCss() {
+  const css = `${concat.content}\n/*# sourceMappingURL=${distCssFilename}.map */`;
   return Promise.all([
-    pify(fs.writeFile)(cssDist, result.css, 'utf8'),
-    pify(fs.writeFile)(`${cssDist}.map`, result.map, 'utf8')
+    pify(fs.writeFile)(distCssPath, css, 'utf8'),
+    pify(fs.writeFile)(`${distCssPath}.map`, concat.sourceMap, 'utf8')
   ]);
 }
 
-concatenateCss()
-  .then(processConcatenatedCss)
-  .then(writeCssDist)
+processCss()
+  .then(writeDistCss)
   .catch((err) => {
     console.log(err.stack);
   });
