@@ -36,7 +36,8 @@
  * @namespace Cols
  * @memberof Layout
 */
-[class*='col-'] { flex: 1; }
+[class*='col'] { flex: 1; }
+.col {}
 .col1 { width: 08.3333%; }
 .col2 { width: 16.6666%; }
 .col3 { width: 25%; }
@@ -68,11 +69,11 @@
  * Column gutter classes
  * @memberof Layout
 */
-.grd-gut5 > [class*='col-'] { margin-left: 5px; }
-.grd-gut10 > [class*='col-'] { margin-left: 10px; }
-.grd-gut20 > [class*='col-'] { margin-left: 20px; }
-.grd-gut40 > [class*='col-'] { margin-left: 40px; }
-.grd-gut80 > [class*='col-'] { margin-left: 80px; }
+.grd-gut5 > [class*='col'] { margin-left: 5px; }
+.grd-gut10 > [class*='col'] { margin-left: 10px; }
+.grd-gut20 > [class*='col'] { margin-left: 20px; }
+.grd-gut40 > [class*='col'] { margin-left: 40px; }
+.grd-gut80 > [class*='col'] { margin-left: 80px; }
 
 /**
  * Column classes
