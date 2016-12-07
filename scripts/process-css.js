@@ -7,7 +7,7 @@ const Concat = require('concat-with-sourcemaps');
 const postcss = require('postcss');
 const reporter = require('postcss-reporter');
 const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
+// const cssnano = require('cssnano');
 
 const distCssFilename = 'base-core.css';
 const distCssPath = path.join(__dirname, `../dist/${distCssFilename}`);
@@ -17,6 +17,7 @@ function getCssPath(name) {
 }
 
 const cssFiles = [
+  getCssPath('namespaces'),
   getCssPath('reset'),
   getCssPath('display'),
   getCssPath('theming'),
@@ -29,7 +30,7 @@ const postcssPlugins = [
   autoprefixer({
     browsers: 'last 2 versions, ie > 11'
   }),
-  cssnano(),
+  // cssnano(),
   reporter()
 ];
 

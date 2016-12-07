@@ -11,7 +11,13 @@
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint scripts",
     "lint": "npm run lint:css && npm run lint:js",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "docs": "budo docs/index.js"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   },
   "engines": {
     "node": ">4"
@@ -28,16 +34,29 @@
   "homepage": "https://github.com/mapbox/base-core#readme",
   "dependencies": {
     "autoprefixer": "^6.5.3",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "budo": "^9.2.2",
     "concat-with-sourcemaps": "^1.0.4",
     "cssnano": "^3.8.1",
     "d3-queue": "^3.0.3",
     "eslint": "^3.11.1",
     "eslint-plugin-node": "^3.0.5",
+    "eslint-plugin-react": "^6.8.0",
+    "highlight.js": "^9.8.0",
     "http-server": "^0.9.0",
     "lodash": "^4.17.2",
     "pify": "^2.3.0",
     "postcss": "^5.2.6",
     "postcss-reporter": "^2.0.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-lowlight": "^1.0.2",
+    "remark": "^6.2.0",
+    "remark-react": "^3.1.0",
     "stylelint": "^7.6.0",
     "svgo": "^0.7.1",
     "svgstore": "^1.1.0",
