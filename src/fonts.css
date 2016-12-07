@@ -1,12 +1,12 @@
 /**
  * FontFace
-*/
+ */
 @font-face {
   font-family: 'Open Sans';
   font-weight: 400;
   src: url('../fonts/opensans-regular.eot');
   src: url('../fonts/opensans-regular.eot#iefix') format('embedded-opentype'),
-  url('../fonts/opensans-regular.woff') format('woff');
+    url('../fonts/opensans-regular.woff') format('woff');
 }
 
 @font-face {
@@ -14,7 +14,7 @@
   font-weight: 300;
   src: url('../fonts/opensans-light.eot');
   src: url('../fonts/opensans-light.eot#iefix') format('embedded-opentype'),
-  url('../fonts/opensans-light.woff') format('woff');
+    url('../fonts/opensans-light.woff') format('woff');
 }
 
 @font-face {
@@ -22,7 +22,7 @@
   font-style: italic;
   src: url('../fonts/opensans-italic.eot');
   src: url('../fonts/opensans-italic.eot#iefix') format('embedded-opentype'),
-  url('../fonts/opensans-italic.woff') format('woff');
+    url('../fonts/opensans-italic.woff') format('woff');
 }
 
 @font-face {
@@ -30,7 +30,7 @@
   font-weight: bold;
   src: url('../fonts/opensans-bold.eot');
   src: url('../fonts/opensans-bold.eot#iefix') format('embedded-opentype'),
-  url('../fonts/opensans-bold.woff') format('woff');
+    url('../fonts/opensans-bold.woff') format('woff');
 }
 
 @font-face {
@@ -39,14 +39,14 @@
   font-style: italic;
   src: url('../fonts/opensans-bolditalic.eot');
   src: url('../fonts/opensans-bolditalic.eot#iefix') format('embedded-opentype'),
-  url('../fonts/opensans-bolditalic.woff') format('woff');
+    url('../fonts/opensans-bolditalic.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Headline';
   src: url('../fonts/leaguespartan-bold-webfont.eot');
   src: url('../fonts/leaguespartan-bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/leaguespartan-bold-webfont.woff') format('woff');
+    url('../fonts/leaguespartan-bold-webfont.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
