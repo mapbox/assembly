@@ -23,9 +23,9 @@ class Entry extends React.Component {
     const { props } = this;
     const { showSource } = this.state;
 
-    const example = props.parsedComment.example ? (<div>
-      <div>
-        <div>Example</div>
+    const example = props.parsedComment.example ? (<div style={{ marginBottom: '40px' }}>
+      <div style={{ marginBottom: '20px' }}>
+        <div className='styledoc-example-label'>Example</div>
         <div dangerouslySetInnerHTML={{ __html: props.parsedComment.example.description }} />
       </div>
       <Lowlight
@@ -36,18 +36,19 @@ class Entry extends React.Component {
     return (
       <div style={{ overflow: 'hidden' }}>
         <div style={{ float: 'left', width: `${100 / 3}%` }}>
-          <div style={{ fontWeight: 'bold' }}>
+          <div className='styledoc-selector-name'>
             {props.referencedSource.selector}
           </div>
-          <div className='styledoc-description'>
+          <div className='styledoc-selector-description'>
             {remark().use(reactRenderer).process(props.parsedComment.description).contents}
           </div>
           <div>
             <div
+              className='styledoc-selector-toggle'
               style={{ cursor: 'pointer' }}
               onClick={this.toggleShowSource}
             >
-              {showSource ? '➖' : '➕'} Source
+              {showSource ? 'Hide' : 'Show'} source
             </div>
             {showSource ? (<Lowlight
              language='css'

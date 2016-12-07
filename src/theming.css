@@ -1,8 +1,11 @@
 /**
- * Theming utilities
+ * Theming
  * @namespace Theming
- * @memberof Utilities
 */
+
+/**
+ * Round classes.
+ */
 .rc { border-radius: 3px; }
 .rc-top { border-radius: 3px 3px 0 0; }
 .rc-right { border-radius: 0 3px 3px 0; }
@@ -32,6 +35,10 @@
 .rcf-topright { border-top-right-radius: 50%; }
 .rcf-bottomright { border-bottom-right-radius: 50%; }
 .rcf-bottomleft { border-bottom-left-radius: 50%; }
+
+/**
+ * Border classes.
+ */
 
 [class^='bor'] { border: 0 solid currentColor; }
 [class^='bor'][class*='-dash'] { border-style: dashed; }
@@ -74,6 +81,10 @@
 [class^='bor'][class$='-lighten-50'] { border-color: rgba(255,255,255,0.50); }
 [class^='bor'][class$='-lighten-75'] { border-color: rgba(255,255,255,0.75); }
 
+/**
+ * Shadow classes.
+ */
+
 .sh5 { box-shadow: 0 0 5px 0 rgba(0,0,0,0.3); }
 .sh10 { box-shadow: 0 0 10px 0 rgba(0,0,0,0.3); }
 .sh20 { box-shadow: 0 0 20px 0 rgba(0,0,0,0.3); }
@@ -82,3 +93,4 @@
 .shb10 { box-shadow: 0 0 10px 0 rgba(0,0,0,0.9); }
 .shb20 { box-shadow: 0 0 20px 0 rgba(0,0,0,0.9); }
 .shb30 { box-shadow: 0 0 30px 0 rgba(0,0,0,0.9); }
+
