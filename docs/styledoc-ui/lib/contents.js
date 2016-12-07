@@ -37,7 +37,7 @@ class Contents extends React.Component {
     props.entries.map((entry) => addEntryAndMembers(entry, 1));
 
     return (
-      <div>
+      <div style={{ padding: '0 40px' }}>
         {entryEls}
       </div>
     );

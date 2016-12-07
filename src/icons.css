@@ -1,7 +1,13 @@
 /**
  * Icons
+ * @namespace Icons
  */
 
+/**
+ * Size icons with these classes. Icons require special instructions...
+ * @example
+ * <svg class="icn-md" role="img"><use xlink:href="#base-svg-library"/></svg>
+ */
 [class^='icn-'] { fill: currentColor; }
 
 .icn-sm {

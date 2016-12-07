@@ -1,8 +1,17 @@
 /**
- * Display utility classes
+ * Display
  * @namespace Display
- * @memberof Utilities
-*/
+ */
+
+/**
+ * Use display classes to control the display property of elements.
+ * @example
+ * <div class="p10 bor-all-gray mb10"><div class="dis-inline bor-all">dis-inline</div></div>
+ * <div class="p10 bor-all-gray mb10"><div class="dis-block bor-all">dis-block</div></div>
+ * <div class="p10 bor-all-gray mb10"><div class="dis-inline-block bor-all">dis-inline-block</div></div>
+ * <div class="p10 bor-all-gray mb10"><div class="dis-flex bor-all">dis-flex</div></div>
+ * <div class="p10 bor-all-gray mb10"><div class="dis-hidden bor-all">dis-hidden</div></div>
+ */
 .dis-inline { display: inline; }
 .dis-block { display: block; }
 .dis-inline-block { display: inline-block; }

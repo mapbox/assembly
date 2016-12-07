@@ -4,9 +4,13 @@ export const hljsStyle = `
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.25;
   color: #333;
   background: #f8f8f8;
+  font-family:Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
+  white-space: pre-wrap;
 }
 
 .hljs-comment,

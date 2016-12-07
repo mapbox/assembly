@@ -1,13 +1,10 @@
 /**
- * Layout classes
+ * Layout
  * @namespace Layout
- * @memberof Utilities
-*/
+ */
 
 /**
  * Limiter classes
- * @namespace Limiter
- * @memberof Layout
 */
 .limiter {
   width: 83.3333%;
@@ -33,8 +30,6 @@
 
 /**
  * Column classes
- * @namespace Cols
- * @memberof Layout
 */
 [class*='col'] { flex: 1; }
 .col {}
@@ -53,8 +48,6 @@
 
 /**
  * Max width containers
- * @namespace Max widths
- * @memberof Layout
 */
 .max1600 { max-width: 1600px; }
 .max1000 { max-width: 1000px; }
@@ -67,7 +60,6 @@
 
 /**
  * Column gutter classes
- * @memberof Layout
 */
 .grd-gut5 > [class*='col'] { margin-left: 5px; }
 .grd-gut10 > [class*='col'] { margin-left: 10px; }
@@ -77,8 +69,6 @@
 
 /**
  * Column classes
- * @namespace Cols
- * @memberof Layout
 */
 .off0 { margin-left: 04.1666%; }
 .off1 { margin-left: 08.3333%; }
@@ -191,8 +181,6 @@
  * generally necessary to add a `.clip` class on the parent to avoid overflow
  * with scrollbars.
  *
- * @namespace bld
- * @memberof Layout
 */
 .bld {
   margin-left: calc(50% - 50vw);
