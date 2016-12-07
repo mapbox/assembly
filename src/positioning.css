@@ -1,8 +1,12 @@
 /**
- * Positioning utility classes
+ * Positioning
  * @namespace Positioning
- * @memberof Utilities
+ */
+
+/**
+ * Position classes
 */
+
 .pos-fixed { position: fixed; }
 .pos-absolute { position: absolute; }
 .pos-relative { position: relative; }
@@ -44,7 +48,6 @@ Zero out positioning
 /**
  * Positioning utility classes
  * @namespace Positioning
- * @memberof Utilities
 */
 
 /**
