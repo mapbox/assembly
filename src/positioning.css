@@ -3,35 +3,43 @@
  * @namespace Positioning
  * @memberof Utilities
 */
-.fix { position: fixed; }
-.abs { position: absolute; }
-.rel { position: relative; }
-.static { position: static; }
-.sticky { position: sticky; }
+.pos-fixed { position: fixed; }
+.pos-absolute { position: absolute; }
+.pos-relative { position: relative; }
+.pos-static { position: static; }
+.pos-.sticky { position: sticky; }
 
 @media only screen and (max-width: 770px) {
-  .fix-md { position: fixed; }
-  .abs-md { position: absolute; }
-  .rel-md { position: relative; }
-  .static-md { position: static; }
-  .sticky-md { position: sticky; }
+  .pos-fixed-md { position: fixed; }
+  .pos-absolute-md { position: absolute; }
+  .pos-relative-md { position: relative; }
+  .pos-static-md { position: static; }
+  .pos-.sticky-md { position: sticky; }
 }
 
 @media only screen and (max-width: 640px) {
-  .fix-sm { position: fixed; }
-  .abs-sm { position: absolute; }
-  .rel-sm { position: relative; }
-  .static-sm { position: static; }
-  .sticky-sm { position: sticky; }
+  .pos-fixed-sm { position: fixed; }
+  .pos-absolute-sm { position: absolute; }
+  .pos-relative-sm { position: relative; }
+  .pos-static-sm { position: static; }
+  .pos-.sticky-sm { position: sticky; }
+}
+
+@media only screen and (min-width: 1824px) {
+  .pos-fixed-lg { position: fixed; }
+  .pos-absolute-lg { position: absolute; }
+  .pos-relative-lg { position: relative; }
+  .pos-static-lg { position: static; }
+  .pos-.sticky-lg { position: sticky; }
 }
 
 /*
 Zero out positioning
 */
-.pos-top { top: 0; }
-.pos-right { right: 0; }
-.pos-left { left: 0; }
-.pos-bottom { bottom: 0; }
+.t { top: 0; }
+.r { right: 0; }
+.l { left: 0; }
+.b { bottom: 0; }
 
 /**
  * Positioning utility classes
@@ -49,226 +57,226 @@ Zero out positioning
  * Top margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
  *
  * @example
- *  <div class='mar-top-5'></div>
- *  <div class='mar-top-10'></div>
- *  <div class='mar-top-40'></div>
- *  <div class='mar-top-100'></div>
- *  <div class='mar-top-200'></div>
+ *  <div class='mt5'></div>
+ *  <div class='mt10'></div>
+ *  <div class='mt40'></div>
+ *  <div class='mt100'></div>
+ *  <div class='mt200'></div>
  */
-.mar-top-5 { margin-top: 5px; }
-.mar-top-10 { margin-top: 10px; }
-.mar-top-20 { margin-top: 20px; }
-.mar-top-30 { margin-top: 30px; }
-.mar-top-40 { margin-top: 40px; }
-.mar-top-50 { margin-top: 50px; }
-.mar-top-60 { margin-top: 60px; }
-.mar-top-80 { margin-top: 80px; }
-.mar-top-100 { margin-top: 100px; }
-.mar-top-120 { margin-top: 120px; }
-.mar-top-140 { margin-top: 140px; }
-.mar-top-160 { margin-top: 160px; }
-.mar-top-180 { margin-top: 180px; }
-.mar-top-200 { margin-top: 200px; }
-.mar-top-400 { margin-top: 400px; }
-.mar-top-600 { margin-top: 600px; }
-.mar-top-800 { margin-top: 800px; }
+.mt5 { margin-top: 5px; }
+.mt10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+.mt30 { margin-top: 30px; }
+.mt40 { margin-top: 40px; }
+.mt50 { margin-top: 50px; }
+.mt60 { margin-top: 60px; }
+.mt80 { margin-top: 80px; }
+.mt100 { margin-top: 100px; }
+.mt120 { margin-top: 120px; }
+.mt140 { margin-top: 140px; }
+.mt160 { margin-top: 160px; }
+.mt180 { margin-top: 180px; }
+.mt200 { margin-top: 200px; }
+.mt400 { margin-top: 400px; }
+.mt600 { margin-top: 600px; }
+.mt800 { margin-top: 800px; }
 
 /**
  * Right margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
  *
  * @example
- *  <div class='mar-right-5'></div>
- *  <div class='mar-right-10'></div>
- *  <div class='mar-right-40'></div>
- *  <div class='mar-right-100'></div>
- *  <div class='mar-right-200'></div>
+ *  <div class='mr5'></div>
+ *  <div class='mr10'></div>
+ *  <div class='mr40'></div>
+ *  <div class='mr100'></div>
+ *  <div class='mr200'></div>
  */
-.mar-right-5 { margin-right: 5px; }
-.mar-right-10 { margin-right: 10px; }
-.mar-right-20 { margin-right: 20px; }
-.mar-right-30 { margin-right: 30px; }
-.mar-right-40 { margin-right: 40px; }
-.mar-right-50 { margin-right: 50px; }
-.mar-right-60 { margin-right: 60px; }
-.mar-right-80 { margin-right: 80px; }
-.mar-right-100 { margin-right: 100px; }
-.mar-right-120 { margin-right: 120px; }
-.mar-right-140 { margin-right: 140px; }
-.mar-right-160 { margin-right: 160px; }
-.mar-right-180 { margin-right: 180px; }
-.mar-right-200 { margin-right: 200px; }
-.mar-right-400 { margin-right: 400px; }
-.mar-right-600 { margin-right: 600px; }
-.mar-right-800 { margin-right: 800px; }
+.mr5 { margin-right: 5px; }
+.mr10 { margin-right: 10px; }
+.mr20 { margin-right: 20px; }
+.mr30 { margin-right: 30px; }
+.mr40 { margin-right: 40px; }
+.mr50 { margin-right: 50px; }
+.mr60 { margin-right: 60px; }
+.mr80 { margin-right: 80px; }
+.mr100 { margin-right: 100px; }
+.mr120 { margin-right: 120px; }
+.mr140 { margin-right: 140px; }
+.mr160 { margin-right: 160px; }
+.mr180 { margin-right: 180px; }
+.mr200 { margin-right: 200px; }
+.mr400 { margin-right: 400px; }
+.mr600 { margin-right: 600px; }
+.mr800 { margin-right: 800px; }
 
 /**
  * Bottom margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
  *
  * @example
- *  <div class='mar-top-5'></div>
- *  <div class='mar-top-10'></div>
- *  <div class='mar-top-40'></div>
- *  <div class='mar-top-100'></div>
- *  <div class='mar-top-200'></div>
+ *  <div class='mt5'></div>
+ *  <div class='mt10'></div>
+ *  <div class='mt40'></div>
+ *  <div class='mt100'></div>
+ *  <div class='mt200'></div>
  */
-.mar-bottom-5 { margin-bottom: 5px; }
-.mar-bottom-10 { margin-bottom: 10px; }
-.mar-bottom-20 { margin-bottom: 20px; }
-.mar-bottom-30 { margin-bottom: 30px; }
-.mar-bottom-40 { margin-bottom: 40px; }
-.mar-bottom-50 { margin-bottom: 50px; }
-.mar-bottom-60 { margin-bottom: 60px; }
-.mar-bottom-80 { margin-bottom: 80px; }
-.mar-bottom-100 { margin-bottom: 100px; }
-.mar-bottom-120 { margin-bottom: 120px; }
-.mar-bottom-140 { margin-bottom: 140px; }
-.mar-bottom-160 { margin-bottom: 160px; }
-.mar-bottom-180 { margin-bottom: 180px; }
-.mar-bottom-200 { margin-bottom: 200px; }
-.mar-bottom-400 { margin-bottom: 400px; }
-.mar-bottom-600 { margin-bottom: 600px; }
-.mar-bottom-800 { margin-bottom: 800px; }
+.mb5 { margin-bottom: 5px; }
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+.mb30 { margin-bottom: 30px; }
+.mb40 { margin-bottom: 40px; }
+.mb50 { margin-bottom: 50px; }
+.mb60 { margin-bottom: 60px; }
+.mb80 { margin-bottom: 80px; }
+.mb100 { margin-bottom: 100px; }
+.mb120 { margin-bottom: 120px; }
+.mb140 { margin-bottom: 140px; }
+.mb160 { margin-bottom: 160px; }
+.mb180 { margin-bottom: 180px; }
+.mb200 { margin-bottom: 200px; }
+.mb400 { margin-bottom: 400px; }
+.mb600 { margin-bottom: 600px; }
+.mb800 { margin-bottom: 800px; }
 
 /**
  * Left margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
  *
  * @example
- *  <div class='mar-left-5'></div>
- *  <div class='mar-left-10'></div>
- *  <div class='mar-left-40'></div>
- *  <div class='mar-left-100'></div>
- *  <div class='mar-left-200'></div>
+ *  <div class='ml5'></div>
+ *  <div class='ml10'></div>
+ *  <div class='ml40'></div>
+ *  <div class='ml100'></div>
+ *  <div class='ml200'></div>
  */
-.mar-left-5 { margin-left: 5px; }
-.mar-left-10 { margin-left: 10px; }
-.mar-left-20 { margin-left: 20px; }
-.mar-left-30 { margin-left: 30px; }
-.mar-left-40 { margin-left: 40px; }
-.mar-left-50 { margin-left: 50px; }
-.mar-left-60 { margin-left: 60px; }
-.mar-left-80 { margin-left: 80px; }
-.mar-left-100 { margin-left: 100px; }
-.mar-left-120 { margin-left: 120px; }
-.mar-left-140 { margin-left: 140px; }
-.mar-left-160 { margin-left: 160px; }
-.mar-left-180 { margin-left: 180px; }
-.mar-left-200 { margin-left: 200px; }
-.mar-left-400 { margin-left: 400px; }
-.mar-left-600 { margin-left: 600px; }
-.mar-left-800 { margin-left: 800px; }
+.ml5 { margin-left: 5px; }
+.ml10 { margin-left: 10px; }
+.ml20 { margin-left: 20px; }
+.ml30 { margin-left: 30px; }
+.ml40 { margin-left: 40px; }
+.ml50 { margin-left: 50px; }
+.ml60 { margin-left: 60px; }
+.ml80 { margin-left: 80px; }
+.ml100 { margin-left: 100px; }
+.ml120 { margin-left: 120px; }
+.ml140 { margin-left: 140px; }
+.ml160 { margin-left: 160px; }
+.ml180 { margin-left: 180px; }
+.ml200 { margin-left: 200px; }
+.ml400 { margin-left: 400px; }
+.ml600 { margin-left: 600px; }
+.ml800 { margin-left: 800px; }
 
 @media only screen and (max-width: 770px) {
   /**
    * Top margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mar-top-5'></div>
-   *  <div class='mar-top-10'></div>
-   *  <div class='mar-top-40'></div>
-   *  <div class='mar-top-100'></div>
-   *  <div class='mar-top-200'></div>
+   *  <div class='mt5'></div>
+   *  <div class='mt10'></div>
+   *  <div class='mt40'></div>
+   *  <div class='mt100'></div>
+   *  <div class='mt200'></div>
    */
-  .mar-top-5-md { margin-top: 5px; }
-  .mar-top-10-md { margin-top: 10px; }
-  .mar-top-20-md { margin-top: 20px; }
-  .mar-top-30-md { margin-top: 30px; }
-  .mar-top-40-md { margin-top: 40px; }
-  .mar-top-50-md { margin-top: 50px; }
-  .mar-top-60-md { margin-top: 60px; }
-  .mar-top-80-md { margin-top: 80px; }
-  .mar-top-100-md { margin-top: 100px; }
-  .mar-top-120-md { margin-top: 120px; }
-  .mar-top-140-md { margin-top: 140px; }
-  .mar-top-160-md { margin-top: 160px; }
-  .mar-top-180-md { margin-top: 180px; }
-  .mar-top-200-md { margin-top: 200px; }
-  .mar-top-400-md { margin-top: 400px; }
-  .mar-top-600-md { margin-top: 600px; }
-  .mar-top-800-md { margin-top: 800px; }
+  .mt5-md { margin-top: 5px; }
+  .mt10-md { margin-top: 10px; }
+  .mt20-md { margin-top: 20px; }
+  .mt30-md { margin-top: 30px; }
+  .mt40-md { margin-top: 40px; }
+  .mt50-md { margin-top: 50px; }
+  .mt60-md { margin-top: 60px; }
+  .mt80-md { margin-top: 80px; }
+  .mt100-md { margin-top: 100px; }
+  .mt120-md { margin-top: 120px; }
+  .mt140-md { margin-top: 140px; }
+  .mt160-md { margin-top: 160px; }
+  .mt180-md { margin-top: 180px; }
+  .mt200-md { margin-top: 200px; }
+  .mt400-md { margin-top: 400px; }
+  .mt600-md { margin-top: 600px; }
+  .mt800-md { margin-top: 800px; }
 
   /**
    * Right margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mar-right-5'></div>
-   *  <div class='mar-right-10'></div>
-   *  <div class='mar-right-40'></div>
-   *  <div class='mar-right-100'></div>
-   *  <div class='mar-right-200'></div>
+   *  <div class='mr5'></div>
+   *  <div class='mr10'></div>
+   *  <div class='mr40'></div>
+   *  <div class='mr100'></div>
+   *  <div class='mr200'></div>
    */
-  .mar-right-5-md { margin-right: 5px; }
-  .mar-right-10-md { margin-right: 10px; }
-  .mar-right-20-md { margin-right: 20px; }
-  .mar-right-30-md { margin-right: 30px; }
-  .mar-right-40-md { margin-right: 40px; }
-  .mar-right-50-md { margin-right: 50px; }
-  .mar-right-60-md { margin-right: 60px; }
-  .mar-right-80-md { margin-right: 80px; }
-  .mar-right-100-md { margin-right: 100px; }
-  .mar-right-120-md { margin-right: 120px; }
-  .mar-right-140-md { margin-right: 140px; }
-  .mar-right-160-md { margin-right: 160px; }
-  .mar-right-180-md { margin-right: 180px; }
-  .mar-right-200-md { margin-right: 200px; }
-  .mar-right-400-md { margin-right: 400px; }
-  .mar-right-600-md { margin-right: 600px; }
-  .mar-right-800-md { margin-right: 800px; }
+  .mr5-md { margin-right: 5px; }
+  .mr10-md { margin-right: 10px; }
+  .mr20-md { margin-right: 20px; }
+  .mr30-md { margin-right: 30px; }
+  .mr40-md { margin-right: 40px; }
+  .mr50-md { margin-right: 50px; }
+  .mr60-md { margin-right: 60px; }
+  .mr80-md { margin-right: 80px; }
+  .mr100-md { margin-right: 100px; }
+  .mr120-md { margin-right: 120px; }
+  .mr140-md { margin-right: 140px; }
+  .mr160-md { margin-right: 160px; }
+  .mr180-md { margin-right: 180px; }
+  .mr200-md { margin-right: 200px; }
+  .mr400-md { margin-right: 400px; }
+  .mr600-md { margin-right: 600px; }
+  .mr800-md { margin-right: 800px; }
 
   /**
    * Bottom margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mar-top-5'></div>
-   *  <div class='mar-top-10'></div>
-   *  <div class='mar-top-40'></div>
-   *  <div class='mar-top-100'></div>
-   *  <div class='mar-top-200'></div>
+   *  <div class='mt5-md'></div>
+   *  <div class='mt10-md'></div>
+   *  <div class='mt40-md'></div>
+   *  <div class='mt100-md'></div>
+   *  <div class='mt200-md'></div>
    */
-  .mar-bottom-5-md { margin-bottom: 5px; }
-  .mar-bottom-10-md { margin-bottom: 10px; }
-  .mar-bottom-20-md { margin-bottom: 20px; }
-  .mar-bottom-30-md { margin-bottom: 30px; }
-  .mar-bottom-40-md { margin-bottom: 40px; }
-  .mar-bottom-50-md { margin-bottom: 50px; }
-  .mar-bottom-60-md { margin-bottom: 60px; }
-  .mar-bottom-80-md { margin-bottom: 80px; }
-  .mar-bottom-100-md { margin-bottom: 100px; }
-  .mar-bottom-120-md { margin-bottom: 120px; }
-  .mar-bottom-140-md { margin-bottom: 140px; }
-  .mar-bottom-160-md { margin-bottom: 160px; }
-  .mar-bottom-180-md { margin-bottom: 180px; }
-  .mar-bottom-200-md { margin-bottom: 200px; }
-  .mar-bottom-400-md { margin-bottom: 400px; }
-  .mar-bottom-600-md { margin-bottom: 600px; }
-  .mar-bottom-800-md { margin-bottom: 800px; }
+  .mb5-md { margin-bottom: 5px; }
+  .mb10-md { margin-bottom: 10px; }
+  .mb20-md { margin-bottom: 20px; }
+  .mb30-md { margin-bottom: 30px; }
+  .mb40-md { margin-bottom: 40px; }
+  .mb50-md { margin-bottom: 50px; }
+  .mb60-md { margin-bottom: 60px; }
+  .mb80-md { margin-bottom: 80px; }
+  .mb100-md { margin-bottom: 100px; }
+  .mb120-md { margin-bottom: 120px; }
+  .mb140-md { margin-bottom: 140px; }
+  .mb160-md { margin-bottom: 160px; }
+  .mb180-md { margin-bottom: 180px; }
+  .mb200-md { margin-bottom: 200px; }
+  .mb400-md { margin-bottom: 400px; }
+  .mb600-md { margin-bottom: 600px; }
+  .mb800-md { margin-bottom: 800px; }
 
   /**
    * Left margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mar-left-5'></div>
-   *  <div class='mar-left-10'></div>
-   *  <div class='mar-left-40'></div>
-   *  <div class='mar-left-100'></div>
-   *  <div class='mar-left-200'></div>
+   *  <div class='ml5-md'></div>
+   *  <div class='ml10-md'></div>
+   *  <div class='ml40-md'></div>
+   *  <div class='ml100-md'></div>
+   *  <div class='ml200-md'></div>
    */
-  .mar-left-5-md { margin-left: 5px; }
-  .mar-left-10-md { margin-left: 10px; }
-  .mar-left-20-md { margin-left: 20px; }
-  .mar-left-30-md { margin-left: 30px; }
-  .mar-left-40-md { margin-left: 40px; }
-  .mar-left-50-md { margin-left: 50px; }
-  .mar-left-60-md { margin-left: 60px; }
-  .mar-left-80-md { margin-left: 80px; }
-  .mar-left-100-md { margin-left: 100px; }
-  .mar-left-120-md { margin-left: 120px; }
-  .mar-left-140-md { margin-left: 140px; }
-  .mar-left-160-md { margin-left: 160px; }
-  .mar-left-180-md { margin-left: 180px; }
-  .mar-left-200-md { margin-left: 200px; }
-  .mar-left-400-md { margin-left: 400px; }
-  .mar-left-600-md { margin-left: 600px; }
-  .mar-left-800-md { margin-left: 800px; }
+  .ml5-md { margin-left: 5px; }
+  .ml10-md { margin-left: 10px; }
+  .ml20-md { margin-left: 20px; }
+  .ml30-md { margin-left: 30px; }
+  .ml40-md { margin-left: 40px; }
+  .ml50-md { margin-left: 50px; }
+  .ml60-md { margin-left: 60px; }
+  .ml80-md { margin-left: 80px; }
+  .ml100-md { margin-left: 100px; }
+  .ml120-md { margin-left: 120px; }
+  .ml140-md { margin-left: 140px; }
+  .ml160-md { margin-left: 160px; }
+  .ml180-md { margin-left: 180px; }
+  .ml200-md { margin-left: 200px; }
+  .ml400-md { margin-left: 400px; }
+  .ml600-md { margin-left: 600px; }
+  .ml800-md { margin-left: 800px; }
 }
 
 @media only screen and (max-width: 640px) {
@@ -276,113 +284,125 @@ Zero out positioning
    * Top margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mar-top-5'></div>
-   *  <div class='mar-top-10'></div>
-   *  <div class='mar-top-40'></div>
-   *  <div class='mar-top-100'></div>
-   *  <div class='mar-top-200'></div>
+   *  <div class='mt5-sm'></div>
+   *  <div class='mt10-sm'></div>
+   *  <div class='mt40-sm'></div>
+   *  <div class='mt100-sm'></div>
+   *  <div class='mt200-sm'></div>
    */
-  .mar-top-5-sm { margin-top: 5px; }
-  .mar-top-10-sm { margin-top: 10px; }
-  .mar-top-20-sm { margin-top: 20px; }
-  .mar-top-30-sm { margin-top: 30px; }
-  .mar-top-40-sm { margin-top: 40px; }
-  .mar-top-50-sm { margin-top: 50px; }
-  .mar-top-60-sm { margin-top: 60px; }
-  .mar-top-80-sm { margin-top: 80px; }
-  .mar-top-100-sm { margin-top: 100px; }
-  .mar-top-120-sm { margin-top: 120px; }
-  .mar-top-140-sm { margin-top: 140px; }
-  .mar-top-160-sm { margin-top: 160px; }
-  .mar-top-180-sm { margin-top: 180px; }
-  .mar-top-200-sm { margin-top: 200px; }
-  .mar-top-400-sm { margin-top: 400px; }
-  .mar-top-600-sm { margin-top: 600px; }
-  .mar-top-800-sm { margin-top: 800px; }
+  .mt5-sm { margin-top: 5px; }
+  .mt10-sm { margin-top: 10px; }
+  .mt20-sm { margin-top: 20px; }
+  .mt30-sm { margin-top: 30px; }
+  .mt40-sm { margin-top: 40px; }
+  .mt50-sm { margin-top: 50px; }
+  .mt60-sm { margin-top: 60px; }
+  .mt80-sm { margin-top: 80px; }
+  .mt100-sm { margin-top: 100px; }
+  .mt120-sm { margin-top: 120px; }
+  .mt140-sm { margin-top: 140px; }
+  .mt160-sm { margin-top: 160px; }
+  .mt180-sm { margin-top: 180px; }
+  .mt200-sm { margin-top: 200px; }
+  .mt400-sm { margin-top: 400px; }
+  .mt600-sm { margin-top: 600px; }
+  .mt800-sm { margin-top: 800px; }
 
   /**
    * Right margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mar-right-5'></div>
-   *  <div class='mar-right-10'></div>
-   *  <div class='mar-right-40'></div>
-   *  <div class='mar-right-100'></div>
-   *  <div class='mar-right-200'></div>
+   *  <div class='mr5-sm'></div>
+   *  <div class='mr10-sm'></div>
+   *  <div class='mr40-sm'></div>
+   *  <div class='mr100-sm'></div>
+   *  <div class='mr200-sm'></div>
    */
-  .mar-right-5-sm { margin-right: 5px; }
-  .mar-right-10-sm { margin-right: 10px; }
-  .mar-right-20-sm { margin-right: 20px; }
-  .mar-right-30-sm { margin-right: 30px; }
-  .mar-right-40-sm { margin-right: 40px; }
-  .mar-right-50-sm { margin-right: 50px; }
-  .mar-right-60-sm { margin-right: 60px; }
-  .mar-right-80-sm { margin-right: 80px; }
-  .mar-right-100-sm { margin-right: 100px; }
-  .mar-right-120-sm { margin-right: 120px; }
-  .mar-right-140-sm { margin-right: 140px; }
-  .mar-right-160-sm { margin-right: 160px; }
-  .mar-right-180-sm { margin-right: 180px; }
-  .mar-right-200-sm { margin-right: 200px; }
-  .mar-right-400-sm { margin-right: 400px; }
-  .mar-right-600-sm { margin-right: 600px; }
-  .mar-right-800-sm { margin-right: 800px; }
+  .mr5-sm { margin-right: 5px; }
+  .mr10-sm { margin-right: 10px; }
+  .mr20-sm { margin-right: 20px; }
+  .mr30-sm { margin-right: 30px; }
+  .mr40-sm { margin-right: 40px; }
+  .mr50-sm { margin-right: 50px; }
+  .mr60-sm { margin-right: 60px; }
+  .mr80-sm { margin-right: 80px; }
+  .mr100-sm { margin-right: 100px; }
+  .mr120-sm { margin-right: 120px; }
+  .mr140-sm { margin-right: 140px; }
+  .mr160-sm { margin-right: 160px; }
+  .mr180-sm { margin-right: 180px; }
+  .mr200-sm { margin-right: 200px; }
+  .mr400-sm { margin-right: 400px; }
+  .mr600-sm { margin-right: 600px; }
+  .mr800-sm { margin-right: 800px; }
 
   /**
    * Bottom margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mar-top-5'></div>
-   *  <div class='mar-top-10'></div>
-   *  <div class='mar-top-40'></div>
-   *  <div class='mar-top-100'></div>
-   *  <div class='mar-top-200'></div>
+   *  <div class='mt5-sm'></div>
+   *  <div class='mt10-sm'></div>
+   *  <div class='mt20-sm'></div>
+   *  <div class='mt30-sm'></div>
+   *  <div class='mt40-sm'></div>
+   *  <div class='mt50-sm'></div>
+   *  <div class='mt60-sm'></div>
+   *  <div class='mt80-sm'></div>
+   *  <div class='mt100-sm'></div>
+   *  <div class='mt120-sm'></div>
+   *  <div class='mt140-sm'></div>
+   *  <div class='mt160-sm'></div>
+   *  <div class='mt180-sm'></div>
+   *  <div class='mt200-sm'></div>
+   *  <div class='mt400-sm'></div>
+   *  <div class='mt600-sm'></div>
+   *  <div class='mt800-sm'></div>
    */
-  .mar-bottom-5-sm { margin-bottom: 5px; }
-  .mar-bottom-10-sm { margin-bottom: 10px; }
-  .mar-bottom-20-sm { margin-bottom: 20px; }
-  .mar-bottom-30-sm { margin-bottom: 30px; }
-  .mar-bottom-40-sm { margin-bottom: 40px; }
-  .mar-bottom-50-sm { margin-bottom: 50px; }
-  .mar-bottom-60-sm { margin-bottom: 60px; }
-  .mar-bottom-80-sm { margin-bottom: 80px; }
-  .mar-bottom-100-sm { margin-bottom: 100px; }
-  .mar-bottom-120-sm { margin-bottom: 120px; }
-  .mar-bottom-140-sm { margin-bottom: 140px; }
-  .mar-bottom-160-sm { margin-bottom: 160px; }
-  .mar-bottom-180-sm { margin-bottom: 180px; }
-  .mar-bottom-200-sm { margin-bottom: 200px; }
-  .mar-bottom-400-sm { margin-bottom: 400px; }
-  .mar-bottom-600-sm { margin-bottom: 600px; }
-  .mar-bottom-800-sm { margin-bottom: 800px; }
+  .mb5-sm { margin-bottom: 5px; }
+  .mb10-sm { margin-bottom: 10px; }
+  .mb20-sm { margin-bottom: 20px; }
+  .mb30-sm { margin-bottom: 30px; }
+  .mb40-sm { margin-bottom: 40px; }
+  .mb50-sm { margin-bottom: 50px; }
+  .mb60-sm { margin-bottom: 60px; }
+  .mb80-sm { margin-bottom: 80px; }
+  .mb100-sm { margin-bottom: 100px; }
+  .mb120-sm { margin-bottom: 120px; }
+  .mb140-sm { margin-bottom: 140px; }
+  .mb160-sm { margin-bottom: 160px; }
+  .mb180-sm { margin-bottom: 180px; }
+  .mb200-sm { margin-bottom: 200px; }
+  .mb400-sm { margin-bottom: 400px; }
+  .mb600-sm { margin-bottom: 600px; }
+  .mb800-sm { margin-bottom: 800px; }
 
   /**
    * Left margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mar-left-5'></div>
-   *  <div class='mar-left-10'></div>
-   *  <div class='mar-left-40'></div>
-   *  <div class='mar-left-100'></div>
-   *  <div class='mar-left-200'></div>
+   *  <div class='ml5'></div>
+   *  <div class='ml10'></div>
+   *  <div class='ml40'></div>
+   *  <div class='ml100'></div>
+   *  <div class='ml200'></div>
    */
-  .mar-left-5-sm { margin-left: 5px; }
-  .mar-left-10-sm { margin-left: 10px; }
-  .mar-left-20-sm { margin-left: 20px; }
-  .mar-left-30-sm { margin-left: 30px; }
-  .mar-left-40-sm { margin-left: 40px; }
-  .mar-left-50-sm { margin-left: 50px; }
-  .mar-left-60-sm { margin-left: 60px; }
-  .mar-left-80-sm { margin-left: 80px; }
-  .mar-left-100-sm { margin-left: 100px; }
-  .mar-left-120-sm { margin-left: 120px; }
-  .mar-left-140-sm { margin-left: 140px; }
-  .mar-left-160-sm { margin-left: 160px; }
-  .mar-left-180-sm { margin-left: 180px; }
-  .mar-left-200-sm { margin-left: 200px; }
-  .mar-left-400-sm { margin-left: 400px; }
-  .mar-left-600-sm { margin-left: 600px; }
-  .mar-left-800-sm { margin-left: 800px; }
+  .ml5-sm { margin-left: 5px; }
+  .ml10-sm { margin-left: 10px; }
+  .ml20-sm { margin-left: 20px; }
+  .ml30-sm { margin-left: 30px; }
+  .ml40-sm { margin-left: 40px; }
+  .ml50-sm { margin-left: 50px; }
+  .ml60-sm { margin-left: 60px; }
+  .ml80-sm { margin-left: 80px; }
+  .ml100-sm { margin-left: 100px; }
+  .ml120-sm { margin-left: 120px; }
+  .ml140-sm { margin-left: 140px; }
+  .ml160-sm { margin-left: 160px; }
+  .ml180-sm { margin-left: 180px; }
+  .ml200-sm { margin-left: 200px; }
+  .ml400-sm { margin-left: 400px; }
+  .ml600-sm { margin-left: 600px; }
+  .ml800-sm { margin-left: 800px; }
 }
 
 /**
@@ -395,254 +415,254 @@ Zero out positioning
  *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
  *
  * @example
- *  <div class='pad-top-5'></div>
- *  <div class='pad-top-10'></div>
- *  <div class='pad-top-40'></div>
- *  <div class='pad-top-100'></div>
- *  <div class='pad-top-200'></div>
+ *  <div class='p5'></div>
+ *  <div class='p10'></div>
+ *  <div class='p40'></div>
+ *  <div class='p100'></div>
+ *  <div class='p200'></div>
  */
-.pad-5 { padding: 5px; }
-.pad-10 { padding: 10px; }
-.pad-20 { padding: 20px; }
-.pad-40 { padding: 40px; }
-.pad-60 { padding: 60px; }
-.pad-80 { padding: 80px; }
-.pad-100 { padding: 100px; }
+.p5 { padding: 5px; }
+.p10 { padding: 10px; }
+.p20 { padding: 20px; }
+.p40 { padding: 40px; }
+.p60 { padding: 60px; }
+.p80 { padding: 80px; }
+.p100 { padding: 100px; }
 
 /**
  *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
  *
  * @example
- *  <div class='pad-top-5'></div>
- *  <div class='pad-top-10'></div>
- *  <div class='pad-top-40'></div>
- *  <div class='pad-top-100'></div>
- *  <div class='pad-top-200'></div>
+ *  <div class='pt5'></div>
+ *  <div class='pt10'></div>
+ *  <div class='pt40'></div>
+ *  <div class='pt100'></div>
+ *  <div class='pt200'></div>
  */
-.pad-y-5 { padding-bottom: 5px; padding-top: 5px; }
-.pad-y-10 { padding-bottom: 10px; padding-top: 10px; }
-.pad-y-20 { padding-bottom: 20px; padding-top: 20px; }
-.pad-y-40 { padding-bottom: 40px; padding-top: 40px; }
-.pad-y-60 { padding-bottom: 60px; padding-top: 60px; }
-.pad-y-80 { padding-bottom: 80px; padding-top: 80px; }
-.pad-y-100 { padding-bottom: 100px; padding-top: 100px; }
+.py5 { padding-bottom: 5px; padding-top: 5px; }
+.py10 { padding-bottom: 10px; padding-top: 10px; }
+.py20 { padding-bottom: 20px; padding-top: 20px; }
+.py40 { padding-bottom: 40px; padding-top: 40px; }
+.py60 { padding-bottom: 60px; padding-top: 60px; }
+.py80 { padding-bottom: 80px; padding-top: 80px; }
+.py100 { padding-bottom: 100px; padding-top: 100px; }
 
 /**
  *  Left and right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
  *
  * @example
- *  <div class='pad-top-5'></div>
- *  <div class='pad-top-10'></div>
- *  <div class='pad-top-40'></div>
- *  <div class='pad-top-100'></div>
- *  <div class='pad-top-200'></div>
+ *  <div class='pt5'></div>
+ *  <div class='pt10'></div>
+ *  <div class='pt40'></div>
+ *  <div class='pt100'></div>
+ *  <div class='pt200'></div>
  */
-.pad-x-5 { padding-right: 5px; padding-left: 5px; }
-.pad-x-10 { padding-right: 10px; padding-left: 10px; }
-.pad-x-20 { padding-right: 20px; padding-left: 20px; }
-.pad-x-40 { padding-right: 40px; padding-left: 40px; }
-.pad-x-60 { padding-right: 60px; padding-left: 60px; }
-.pad-x-80 { padding-right: 80px; padding-left: 80px; }
-.pad-x-100 { padding-right: 100px; padding-left: 100px; }
+.px5 { padding-right: 5px; padding-left: 5px; }
+.px10 { padding-right: 10px; padding-left: 10px; }
+.px20 { padding-right: 20px; padding-left: 20px; }
+.px40 { padding-right: 40px; padding-left: 40px; }
+.px60 { padding-right: 60px; padding-left: 60px; }
+.px80 { padding-right: 80px; padding-left: 80px; }
+.px100 { padding-right: 100px; padding-left: 100px; }
 
 /**
  * Top padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
  *
  * @example
- *  <div class='pad-top-5'></div>
- *  <div class='pad-top-10'></div>
- *  <div class='pad-top-40'></div>
- *  <div class='pad-top-100'></div>
- *  <div class='pad-top-200'></div>
+ *  <div class='pt5'></div>
+ *  <div class='pt10'></div>
+ *  <div class='pt40'></div>
+ *  <div class='pt100'></div>
+ *  <div class='pt200'></div>
  */
-.pad-top-5 { padding-top: 5px; }
-.pad-top-10 { padding-top: 10px; }
-.pad-top-20 { padding-top: 20px; }
-.pad-top-40 { padding-top: 40px; }
-.pad-top-60 { padding-top: 60px; }
-.pad-top-80 { padding-top: 80px; }
-.pad-top-100 { padding-top: 100px; }
+.pt5 { padding-top: 5px; }
+.pt10 { padding-top: 10px; }
+.pt20 { padding-top: 20px; }
+.pt40 { padding-top: 40px; }
+.pt60 { padding-top: 60px; }
+.pt80 { padding-top: 80px; }
+.pt100 { padding-top: 100px; }
 
 /**
  * Right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
  *
  * @example
- *  <div class='mar-top-5'></div>
- *  <div class='mar-top-10'></div>
- *  <div class='mar-top-40'></div>
- *  <div class='mar-top-100'></div>
- *  <div class='mar-top-200'></div>
+ *  <div class='pr5'></div>
+ *  <div class='pr10'></div>
+ *  <div class='pr40'></div>
+ *  <div class='pr100'></div>
+ *  <div class='pr200'></div>
  */
-.pad-right-5 { padding-right: 5px; }
-.pad-right-10 { padding-right: 10px; }
-.pad-right-20 { padding-right: 20px; }
-.pad-right-40 { padding-right: 40px; }
-.pad-right-60 { padding-right: 60px; }
-.pad-right-80 { padding-right: 80px; }
-.pad-right-100 { padding-right: 100px; }
+.pr5 { padding-right: 5px; }
+.pr10 { padding-right: 10px; }
+.pr20 { padding-right: 20px; }
+.pr40 { padding-right: 40px; }
+.pr60 { padding-right: 60px; }
+.pr80 { padding-right: 80px; }
+.pr100 { padding-right: 100px; }
 
 /**
  * Bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
  *
  * @example
- *  <div class='pad-top-5'></div>
- *  <div class='pad-top-10'></div>
- *  <div class='pad-top-40'></div>
- *  <div class='pad-top-100'></div>
- *  <div class='pad-top-200'></div>
+ *  <div class='pt5'></div>
+ *  <div class='pt10'></div>
+ *  <div class='pt40'></div>
+ *  <div class='pt100'></div>
+ *  <div class='pt200'></div>
  */
-.pad-top-5 { padding-top: 5px; }
-.pad-top-10 { padding-top: 10px; }
-.pad-top-20 { padding-top: 20px; }
-.pad-top-40 { padding-top: 40px; }
-.pad-top-60 { padding-top: 60px; }
-.pad-top-80 { padding-top: 80px; }
-.pad-top-100 { padding-top: 100px; }
+.pt5 { padding-top: 5px; }
+.pt10 { padding-top: 10px; }
+.pt20 { padding-top: 20px; }
+.pt40 { padding-top: 40px; }
+.pt60 { padding-top: 60px; }
+.pt80 { padding-top: 80px; }
+.pt100 { padding-top: 100px; }
 
 /**
  * Left padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
  *
  * @example
- *  <div class='pad-left-5'></div>
- *  <div class='pad-left-10'></div>
- *  <div class='pad-left-40'></div>
- *  <div class='pad-left-100'></div>
- *  <div class='pad-left-200'></div>
+ *  <div class='pl5'></div>
+ *  <div class='pl10'></div>
+ *  <div class='pl40'></div>
+ *  <div class='pl100'></div>
+ *  <div class='pl200'></div>
  */
-.pad-left-5 { padding-left: 5px; }
-.pad-left-10 { padding-left: 10px; }
-.pad-left-20 { padding-left: 20px; }
-.pad-left-40 { padding-left: 40px; }
-.pad-left-60 { padding-left: 60px; }
-.pad-left-80 { padding-left: 80px; }
-.pad-left-100 { padding-left: 100px; }
+.pl5 { padding-left: 5px; }
+.pl10 { padding-left: 10px; }
+.pl20 { padding-left: 20px; }
+.pl40 { padding-left: 40px; }
+.pl60 { padding-left: 60px; }
+.pl80 { padding-left: 80px; }
+.pl100 { padding-left: 100px; }
 
 @media only screen and (max-width: 770px) {
   /**
    *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-top-5'></div>
-   *  <div class='pad-top-10'></div>
-   *  <div class='pad-top-40'></div>
-   *  <div class='pad-top-100'></div>
-   *  <div class='pad-top-200'></div>
+   *  <div class='pt5-md'></div>
+   *  <div class='pt10-md'></div>
+   *  <div class='pt40-md'></div>
+   *  <div class='pt100-md'></div>
+   *  <div class='pt200-md'></div>
    */
-  .pad-5-md { padding: 5px; }
-  .pad-10-md { padding: 10px; }
-  .pad-20-md { padding: 20px; }
-  .pad-40-md { padding: 40px; }
-  .pad-60-md { padding: 60px; }
-  .pad-80-md { padding: 80px; }
-  .pad-100-md { padding: 100px; }
+  .p5-md { padding: 5px; }
+  .p10-md { padding: 10px; }
+  .p20-md { padding: 20px; }
+  .p40-md { padding: 40px; }
+  .p60-md { padding: 60px; }
+  .p80-md { padding: 80px; }
+  .p100-md { padding: 100px; }
 
   /**
    *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-top-5'></div>
-   *  <div class='pad-top-10'></div>
-   *  <div class='pad-top-40'></div>
-   *  <div class='pad-top-100'></div>
-   *  <div class='pad-top-200'></div>
+   *  <div class='pt5-md'></div>
+   *  <div class='pt10-md'></div>
+   *  <div class='pt40-md'></div>
+   *  <div class='pt100-md'></div>
+   *  <div class='pt200-md'></div>
    */
-  .pad-y-5-md { padding-bottom: 5px; padding-top: 5px; }
-  .pad-y-10-md { padding-bottom: 10px; padding-top: 10px; }
-  .pad-y-20-md { padding-bottom: 20px; padding-top: 20px; }
-  .pad-y-40-md { padding-bottom: 40px; padding-top: 40px; }
-  .pad-y-60-md { padding-bottom: 60px; padding-top: 60px; }
-  .pad-y-80-md { padding-bottom: 80px; padding-top: 80px; }
-  .pad-y-100-md { padding-bottom: 100px; padding-top: 100px; }
+  .py5-md { padding-bottom: 5px; padding-top: 5px; }
+  .py10-md { padding-bottom: 10px; padding-top: 10px; }
+  .py20-md { padding-bottom: 20px; padding-top: 20px; }
+  .py40-md { padding-bottom: 40px; padding-top: 40px; }
+  .py60-md { padding-bottom: 60px; padding-top: 60px; }
+  .py80-md { padding-bottom: 80px; padding-top: 80px; }
+  .py100-md { padding-bottom: 100px; padding-top: 100px; }
 
   /**
    *  Left and right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-top-5'></div>
-   *  <div class='pad-top-10'></div>
-   *  <div class='pad-top-40'></div>
-   *  <div class='pad-top-100'></div>
-   *  <div class='pad-top-200'></div>
+   *  <div class='px5-md'></div>
+   *  <div class='px10-md'></div>
+   *  <div class='px40-md'></div>
+   *  <div class='px100-md'></div>
+   *  <div class='px200-md'></div>
    */
-  .pad-x-5-md { padding-right: 5px; padding-left: 5px; }
-  .pad-x-10-md { padding-right: 10px; padding-left: 10px; }
-  .pad-x-20-md { padding-right: 20px; padding-left: 20px; }
-  .pad-x-40-md { padding-right: 40px; padding-left: 40px; }
-  .pad-x-60-md { padding-right: 60px; padding-left: 60px; }
-  .pad-x-80-md { padding-right: 80px; padding-left: 80px; }
-  .pad-x-100-md { padding-right: 100px; padding-left: 100px; }
+  .px5-md { padding-right: 5px; padding-left: 5px; }
+  .px10-md { padding-right: 10px; padding-left: 10px; }
+  .px20-md { padding-right: 20px; padding-left: 20px; }
+  .px40-md { padding-right: 40px; padding-left: 40px; }
+  .px60-md { padding-right: 60px; padding-left: 60px; }
+  .px80-md { padding-right: 80px; padding-left: 80px; }
+  .px100-md { padding-right: 100px; padding-left: 100px; }
 
   /**
    * Top padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-top-5'></div>
-   *  <div class='pad-top-10'></div>
-   *  <div class='pad-top-40'></div>
-   *  <div class='pad-top-100'></div>
-   *  <div class='pad-top-200'></div>
+   *  <div class='pt5-md'></div>
+   *  <div class='pt10-md'></div>
+   *  <div class='pt40-md'></div>
+   *  <div class='pt100-md'></div>
+   *  <div class='pt200-md'></div>
    */
-  .pad-top-5-md { padding-top: 5px; }
-  .pad-top-10-md { padding-top: 10px; }
-  .pad-top-20-md { padding-top: 20px; }
-  .pad-top-40-md { padding-top: 40px; }
-  .pad-top-60-md { padding-top: 60px; }
-  .pad-top-80-md { padding-top: 80px; }
-  .pad-top-100-md { padding-top: 100px; }
+  .pt5-md { padding-top: 5px; }
+  .pt10-md { padding-top: 10px; }
+  .pt20-md { padding-top: 20px; }
+  .pt40-md { padding-top: 40px; }
+  .pt60-md { padding-top: 60px; }
+  .pt80-md { padding-top: 80px; }
+  .pt100-md { padding-top: 100px; }
 
   /**
    * Right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='mar-top-5'></div>
-   *  <div class='mar-top-10'></div>
-   *  <div class='mar-top-40'></div>
-   *  <div class='mar-top-100'></div>
-   *  <div class='mar-top-200'></div>
+   *  <div class='pr5-md'></div>
+   *  <div class='pr10-md'></div>
+   *  <div class='pr40-md'></div>
+   *  <div class='pr100-md'></div>
+   *  <div class='pr200-md'></div>
    */
-  .pad-right-5-md { padding-right: 5px; }
-  .pad-right-10-md { padding-right: 10px; }
-  .pad-right-20-md { padding-right: 20px; }
-  .pad-right-40-md { padding-right: 40px; }
-  .pad-right-60-md { padding-right: 60px; }
-  .pad-right-80-md { padding-right: 80px; }
-  .pad-right-100-md { padding-right: 100px; }
+  .pr5-md { padding-right: 5px; }
+  .pr10-md { padding-right: 10px; }
+  .pr20-md { padding-right: 20px; }
+  .pr40-md { padding-right: 40px; }
+  .pr60-md { padding-right: 60px; }
+  .pr80-md { padding-right: 80px; }
+  .pr100-md { padding-right: 100px; }
 
   /**
    * Bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-top-5'></div>
-   *  <div class='pad-top-10'></div>
-   *  <div class='pad-top-40'></div>
-   *  <div class='pad-top-100'></div>
-   *  <div class='pad-top-200'></div>
+   *  <div class='pt5-md'></div>
+   *  <div class='pt10-md'></div>
+   *  <div class='pt40-md'></div>
+   *  <div class='pt100-md'></div>
+   *  <div class='pt200-md'></div>
    */
-  .pad-top-5-md { padding-top: 5px; }
-  .pad-top-10-md { padding-top: 10px; }
-  .pad-top-20-md { padding-top: 20px; }
-  .pad-top-40-md { padding-top: 40px; }
-  .pad-top-60-md { padding-top: 60px; }
-  .pad-top-80-md { padding-top: 80px; }
-  .pad-top-100-md { padding-top: 100px; }
+  .pt5-md { padding-top: 5px; }
+  .pt10-md { padding-top: 10px; }
+  .pt20-md { padding-top: 20px; }
+  .pt40-md { padding-top: 40px; }
+  .pt60-md { padding-top: 60px; }
+  .pt80-md { padding-top: 80px; }
+  .pt100-md { padding-top: 100px; }
 
   /**
    * Left padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-left-5'></div>
-   *  <div class='pad-left-10'></div>
-   *  <div class='pad-left-40'></div>
-   *  <div class='pad-left-100'></div>
-   *  <div class='pad-left-200'></div>
+   *  <div class='pl5-md'></div>
+   *  <div class='pl10-md'></div>
+   *  <div class='pl40-md'></div>
+   *  <div class='pl100-md'></div>
+   *  <div class='pl200-md'></div>
    */
-  .pad-left-5-md { padding-left: 5px; }
-  .pad-left-10-md { padding-left: 10px; }
-  .pad-left-20-md { padding-left: 20px; }
-  .pad-left-40-md { padding-left: 40px; }
-  .pad-left-60-md { padding-left: 60px; }
-  .pad-left-80-md { padding-left: 80px; }
-  .pad-left-100-md { padding-left: 100px; }
+  .pl5-md { padding-left: 5px; }
+  .pl10-md { padding-left: 10px; }
+  .pl20-md { padding-left: 20px; }
+  .pl40-md { padding-left: 40px; }
+  .pl60-md { padding-left: 60px; }
+  .pl80-md { padding-left: 80px; }
+  .pl100-md { padding-left: 100px; }
 }
 
 @media only screen and (max-width: 640px) {
@@ -650,125 +670,125 @@ Zero out positioning
    *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-top-5'></div>
-   *  <div class='pad-top-10'></div>
-   *  <div class='pad-top-40'></div>
-   *  <div class='pad-top-100'></div>
-   *  <div class='pad-top-200'></div>
+   *  <div class='p5-sm'></div>
+   *  <div class='p10-sm'></div>
+   *  <div class='p40-sm'></div>
+   *  <div class='p100-sm'></div>
+   *  <div class='p200-sm'></div>
    */
-  .pad-5-sm { padding: 5px; }
-  .pad-10-sm { padding: 10px; }
-  .pad-20-sm { padding: 20px; }
-  .pad-40-sm { padding: 40px; }
-  .pad-60-sm { padding: 60px; }
-  .pad-80-sm { padding: 80px; }
-  .pad-100-sm { padding: 100px; }
+  .p5-sm { padding: 5px; }
+  .p10-sm { padding: 10px; }
+  .p20-sm { padding: 20px; }
+  .p40-sm { padding: 40px; }
+  .p60-sm { padding: 60px; }
+  .p80-sm { padding: 80px; }
+  .p100-sm { padding: 100px; }
 
   /**
    *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-top-5'></div>
-   *  <div class='pad-top-10'></div>
-   *  <div class='pad-top-40'></div>
-   *  <div class='pad-top-100'></div>
-   *  <div class='pad-top-200'></div>
+   *  <div class='py5-sm'></div>
+   *  <div class='py10-sm'></div>
+   *  <div class='py40-sm'></div>
+   *  <div class='py100-sm'></div>
+   *  <div class='py200-sm'></div>
    */
-  .pad-y-5-sm { padding-bottom: 5px; padding-top: 5px; }
-  .pad-y-10-sm { padding-bottom: 10px; padding-top: 10px; }
-  .pad-y-20-sm { padding-bottom: 20px; padding-top: 20px; }
-  .pad-y-40-sm { padding-bottom: 40px; padding-top: 40px; }
-  .pad-y-60-sm { padding-bottom: 60px; padding-top: 60px; }
-  .pad-y-80-sm { padding-bottom: 80px; padding-top: 80px; }
-  .pad-y-100-sm { padding-bottom: 100px; padding-top: 100px; }
+  .py5-sm { padding-bottom: 5px; padding-top: 5px; }
+  .py10-sm { padding-bottom: 10px; padding-top: 10px; }
+  .py20-sm { padding-bottom: 20px; padding-top: 20px; }
+  .py40-sm { padding-bottom: 40px; padding-top: 40px; }
+  .py60-sm { padding-bottom: 60px; padding-top: 60px; }
+  .py80-sm { padding-bottom: 80px; padding-top: 80px; }
+  .py100-sm { padding-bottom: 100px; padding-top: 100px; }
 
   /**
    *  Left and right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-top-5'></div>
-   *  <div class='pad-top-10'></div>
-   *  <div class='pad-top-40'></div>
-   *  <div class='pad-top-100'></div>
-   *  <div class='pad-top-200'></div>
+   *  <div class='px5-sm'></div>
+   *  <div class='px10-sm'></div>
+   *  <div class='px40-sm'></div>
+   *  <div class='px100-sm'></div>
+   *  <div class='px200-sm'></div>
    */
-  .pad-x-5-sm { padding-right: 5px; padding-left: 5px; }
-  .pad-x-10-sm { padding-right: 10px; padding-left: 10px; }
-  .pad-x-20-sm { padding-right: 20px; padding-left: 20px; }
-  .pad-x-40-sm { padding-right: 40px; padding-left: 40px; }
-  .pad-x-60-sm { padding-right: 60px; padding-left: 60px; }
-  .pad-x-80-sm { padding-right: 80px; padding-left: 80px; }
-  .pad-x-100-sm { padding-right: 100px; padding-left: 100px; }
+  .px5-sm { padding-right: 5px; padding-left: 5px; }
+  .px10-sm { padding-right: 10px; padding-left: 10px; }
+  .px20-sm { padding-right: 20px; padding-left: 20px; }
+  .px40-sm { padding-right: 40px; padding-left: 40px; }
+  .px60-sm { padding-right: 60px; padding-left: 60px; }
+  .px80-sm { padding-right: 80px; padding-left: 80px; }
+  .px100-sm { padding-right: 100px; padding-left: 100px; }
 
   /**
    * Top padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-top-5'></div>
-   *  <div class='pad-top-10'></div>
-   *  <div class='pad-top-40'></div>
-   *  <div class='pad-top-100'></div>
-   *  <div class='pad-top-200'></div>
+   *  <div class='pt5-sm'></div>
+   *  <div class='pt10-sm'></div>
+   *  <div class='pt40-sm'></div>
+   *  <div class='pt100-sm'></div>
+   *  <div class='pt200-sm'></div>
    */
-  .pad-top-5-sm { padding-top: 5px; }
-  .pad-top-10-sm { padding-top: 10px; }
-  .pad-top-20-sm { padding-top: 20px; }
-  .pad-top-40-sm { padding-top: 40px; }
-  .pad-top-60-sm { padding-top: 60px; }
-  .pad-top-80-sm { padding-top: 80px; }
-  .pad-top-100-sm { padding-top: 100px; }
+  .pt5-sm { padding-top: 5px; }
+  .pt10-sm { padding-top: 10px; }
+  .pt20-sm { padding-top: 20px; }
+  .pt40-sm { padding-top: 40px; }
+  .pt60-sm { padding-top: 60px; }
+  .pt80-sm { padding-top: 80px; }
+  .pt100-sm { padding-top: 100px; }
 
   /**
    * Right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='mar-top-5'></div>
-   *  <div class='mar-top-10'></div>
-   *  <div class='mar-top-40'></div>
-   *  <div class='mar-top-100'></div>
-   *  <div class='mar-top-200'></div>
+   *  <div class='pr5-sm'></div>
+   *  <div class='pr10-sm'></div>
+   *  <div class='pr40-sm'></div>
+   *  <div class='pr100-sm'></div>
+   *  <div class='pr200-sm'></div>
    */
-  .pad-right-5-sm { padding-right: 5px; }
-  .pad-right-10-sm { padding-right: 10px; }
-  .pad-right-20-sm { padding-right: 20px; }
-  .pad-right-40-sm { padding-right: 40px; }
-  .pad-right-60-sm { padding-right: 60px; }
-  .pad-right-80-sm { padding-right: 80px; }
-  .pad-right-100-sm { padding-right: 100px; }
+  .pr5-sm { padding-right: 5px; }
+  .pr10-sm { padding-right: 10px; }
+  .pr20-sm { padding-right: 20px; }
+  .pr40-sm { padding-right: 40px; }
+  .pr60-sm { padding-right: 60px; }
+  .pr80-sm { padding-right: 80px; }
+  .pr100-sm { padding-right: 100px; }
 
   /**
    * Bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-top-5'></div>
-   *  <div class='pad-top-10'></div>
-   *  <div class='pad-top-40'></div>
-   *  <div class='pad-top-100'></div>
-   *  <div class='pad-top-200'></div>
+   *  <div class='pt5-sm'></div>
+   *  <div class='pt10-sm'></div>
+   *  <div class='pt40-sm'></div>
+   *  <div class='pt100-sm'></div>
+   *  <div class='pt200-sm'></div>
    */
-  .pad-top-5-sm { padding-top: 5px; }
-  .pad-top-10-sm { padding-top: 10px; }
-  .pad-top-20-sm { padding-top: 20px; }
-  .pad-top-40-sm { padding-top: 40px; }
-  .pad-top-60-sm { padding-top: 60px; }
-  .pad-top-80-sm { padding-top: 80px; }
-  .pad-top-100-sm { padding-top: 100px; }
+  .pt5-sm { padding-top: 5px; }
+  .pt10-sm { padding-top: 10px; }
+  .pt20-sm { padding-top: 20px; }
+  .pt40-sm { padding-top: 40px; }
+  .pt60-sm { padding-top: 60px; }
+  .pt80-sm { padding-top: 80px; }
+  .pt100-sm { padding-top: 100px; }
 
   /**
    * Left padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pad-left-5'></div>
-   *  <div class='pad-left-10'></div>
-   *  <div class='pad-left-40'></div>
-   *  <div class='pad-left-100'></div>
-   *  <div class='pad-left-200'></div>
+   *  <div class='pl5-sm'></div>
+   *  <div class='pl10-sm'></div>
+   *  <div class='pl40-sm'></div>
+   *  <div class='pl100-sm'></div>
+   *  <div class='pl200-sm'></div>
    */
-  .pad-left-5-sm { padding-left: 5px; }
-  .pad-left-10-sm { padding-left: 10px; }
-  .pad-left-20-sm { padding-left: 20px; }
-  .pad-left-40-sm { padding-left: 40px; }
-  .pad-left-60-sm { padding-left: 60px; }
-  .pad-left-80-sm { padding-left: 80px; }
-  .pad-left-100-sm { padding-left: 100px; }
+  .pl5-sm { padding-left: 5px; }
+  .pl10-sm { padding-left: 10px; }
+  .pl20-sm { padding-left: 20px; }
+  .pl40-sm { padding-left: 40px; }
+  .pl60-sm { padding-left: 60px; }
+  .pl80-sm { padding-left: 80px; }
+  .pl100-sm { padding-left: 100px; }
 }
