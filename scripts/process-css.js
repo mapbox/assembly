@@ -19,6 +19,8 @@ function getCssPath(name) {
 const cssFiles = [
   getCssPath('namespaces'),
   getCssPath('reset'),
+  getCssPath('fonts'),
+  getCssPath('typography'),
   getCssPath('display'),
   getCssPath('theming'),
   getCssPath('positioning'),
