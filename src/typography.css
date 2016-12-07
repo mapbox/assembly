@@ -15,27 +15,20 @@ textarea {
  * Type utilities
  * @memberof Typography
 */
-.txt-strong,
-.txt strong {
+.txt-strong {
   font-weight: bold;
 }
 
-.txt-strong.txt-em,
-.txt strong em,
-.txt em strong {
+.txt-strong.txt-em {
   font-weight: bold;
   font-style: italic;
 }
 
-.txt-em,
-.txt-address,
-.txt em,
-.txt address {
+.txt-em {
   font-style: italic;
 }
 
-.txt-small,
-.txt small {
+.txt-small {
   font-size: 14px;
   line-height: 20px;
 }
