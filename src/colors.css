@@ -2,29 +2,29 @@
  * Background colors.
  *
  * @example
- * <div class='row-20 mar-bottom-10 bg-gray'>bg-gray</div>
- * <div class='row-20 mar-bottom-10 bg-blue'>bg-blue</div>
- * <div class='row-20 mar-bottom-10 bg-purple'>bg-purple</div>
- * <div class='row-20 mar-bottom-10 bg-pink'>bg-pink</div>
- * <div class='row-20 mar-bottom-10 bg-red'>bg-red</div>
- * <div class='row-20 mar-bottom-10 bg-orange'>bg-orange</div>
- * <div class='row-20 mar-bottom-10 bg-mustard'>bg-mustard</div>
- * <div class='row-20 mar-bottom-10 bg-yellow'>bg-yellow</div>
- * <div class='row-20 mar-bottom-10 bg-green'>bg-green</div>
- * <div class='row-20 mar-bottom-10 bg-teal'>bg-teal</div>
- * <div class='row-20 mar-bottom-10 bg-cyan'>bg-cyan</div>
- * <div class='row-20 mar-bottom-10 bg-denim'>bg-denim</div>
- * <div class='row-20 mar-bottom-10 bg-navy'>bg-navy</div>
- * <div class='row-20 mar-bottom-10 bg-white'>bg-white</div>
- * <div class='row-20 mar-bottom-10 bg-light'>bg-light</div>
- * <div class='row-20 mar-bottom-10 bg-darken-5'>bg-darken-5</div>
- * <div class='row-20 mar-bottom-10 bg-darken-25'>bg-darken-25</div>
- * <div class='row-20 mar-bottom-10 bg-darken-50'>bg-darken-50</div>
- * <div class='row-20 mar-bottom-10 bg-darken-75'>bg-darken-75</div>
- * <div class='row-20 mar-bottom-10 bg-lighten-10'>bg-lighten-10</div>
- * <div class='row-20 mar-bottom-10 bg-lighten-25'>bg-lighten-25</div>
- * <div class='row-20 mar-bottom-10 bg-lighten-50'>bg-lighten-50</div>
- * <div class='row-20 mar-bottom-10 bg-lighten-75'>bg-lighten-75</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-gray'>bg-gray</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-blue'>bg-blue</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-purple'>bg-purple</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-pink'>bg-pink</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-red'>bg-red</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-orange'>bg-orange</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-mustard'>bg-mustard</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-yellow'>bg-yellow</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-green'>bg-green</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-teal'>bg-teal</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-cyan'>bg-cyan</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-denim'>bg-denim</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-navy'>bg-navy</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-white'>bg-white</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-light'>bg-light</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-darken-5'>bg-darken-5</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-darken-25'>bg-darken-25</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-darken-50'>bg-darken-50</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-darken-75'>bg-darken-75</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-lighten-10'>bg-lighten-10</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-lighten-25'>bg-lighten-25</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-lighten-50'>bg-lighten-50</div>
+ * <div class='row-20 mar-bottom-10 pad-10 bg-lighten-75'>bg-lighten-75</div>
  */
 .bg-gray    { background-color: #acb4b9; }
 .bg-blue    { background-color: #0077cc; }
@@ -38,7 +38,7 @@
 .bg-teal    { background-color: #3fbfbc; }
 .bg-cyan    { background-color: #00ccbb; }
 .bg-denim   { background-color: #34607f; }
-.bg-navy    { background-color: #223f54; }
+.bg-navy    { background-color: #0a3a5c; }
 
 .bg-white   { background-color: #fff; }
 .bg-light   { background-color: #f2f2f2; }
@@ -54,32 +54,32 @@
 .bg-lighten-75 { background-color: rgba(255,255,255,0.75); }
 
 /**
- * Background colors.
+ * Text colors.
  *
  * @example
- * <div class='row-20 mar-bottom-10 txt-gray'>txt-gray</div>
- * <div class='row-20 mar-bottom-10 txt-blue'>txt-blue</div>
- * <div class='row-20 mar-bottom-10 txt-purple'>txt-purple</div>
- * <div class='row-20 mar-bottom-10 txt-pink'>txt-pink</div>
- * <div class='row-20 mar-bottom-10 txt-red'>txt-red</div>
- * <div class='row-20 mar-bottom-10 txt-orange'>txt-orange</div>
- * <div class='row-20 mar-bottom-10 txt-mustard'>txt-mustard</div>
- * <div class='row-20 mar-bottom-10 txt-yellow'>txt-yellow</div>
- * <div class='row-20 mar-bottom-10 txt-green'>txt-green</div>
- * <div class='row-20 mar-bottom-10 txt-teal'>txt-teal</div>
- * <div class='row-20 mar-bottom-10 txt-cyan'>txt-cyan</div>
- * <div class='row-20 mar-bottom-10 txt-denim'>txt-denim</div>
- * <div class='row-20 mar-bottom-10 txt-navy'>txt-navy</div>
- * <div class='row-20 mar-bottom-10 txt-white'>txt-white</div>
- * <div class='row-20 mar-bottom-10 txt-light'>txt-light</div>
- * <div class='row-20 mar-bottom-10 txt-darken-5'>txt-darken-5</div>
- * <div class='row-20 mar-bottom-10 txt-darken-25'>txt-darken-25</div>
- * <div class='row-20 mar-bottom-10 txt-darken-50'>txt-darken-50</div>
- * <div class='row-20 mar-bottom-10 txt-darken-75'>txt-darken-75</div>
- * <div class='row-20 mar-bottom-10 txt-lighten-10'>txt-lighten-10</div>
- * <div class='row-20 mar-bottom-10 txt-lighten-25'>txt-lighten-25</div>
- * <div class='row-20 mar-bottom-10 txt-lighten-50'>txt-lighten-50</div>
- * <div class='row-20 mar-bottom-10 txt-lighten-75'>txt-lighten-75</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-gray'>txt-gray</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-blue'>txt-blue</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-purple'>txt-purple</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-pink'>txt-pink</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-red'>txt-red</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-orange'>txt-orange</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-mustard'>txt-mustard</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-yellow'>txt-yellow</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-green'>txt-green</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-teal'>txt-teal</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-cyan'>txt-cyan</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-denim'>txt-denim</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-navy'>txt-navy</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-white'>txt-white</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-light'>txt-light</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-darken-5'>txt-darken-5</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-darken-25'>txt-darken-25</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-darken-50'>txt-darken-50</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-darken-75'>txt-darken-75</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-lighten-10'>txt-lighten-10</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-lighten-25'>txt-lighten-25</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-lighten-50'>txt-lighten-50</div>
+ * <div class='row-20 mar-bottom-10 pad-10 txt-lighten-75'>txt-lighten-75</div>
  */
 .txt-gray    { color: #acb4b9; }
 .txt-blue    { color: #0077cc; }
@@ -93,7 +93,7 @@
 .txt-teal    { color: #3fbfbc; }
 .txt-cyan    { color: #00ccbb; }
 .txt-denim   { color: #34607f; }
-.txt-navy    { color: #223f54; }
+.txt-navy    { color: #0a3a5c; }
 
 .txt-white   { color: #fff; }
 .txt-light   { color: #f2f2f2; }
@@ -107,3 +107,210 @@
 .txt-lighten-25 { color: rgba(255,255,255,0.25); }
 .txt-lighten-50 { color: rgba(255,255,255,0.50); }
 .txt-lighten-75 { color: rgba(255,255,255,0.75); }
+
+/**
+ * Gradients. Gradients come in cool, hot, and neutral colors.
+ * Cool gradients include all combinations of blue, cyan, navy, and transparent.
+ * Hot gradients include all combinations of yellow, orange, and transparent.
+ * Neutral gradients include all combinations of gray, light, and transparent.
+ *
+ * @example
+ * <div class='row-100 mar-bottom-10 pad-10 bg-blue-to-cyan'>bg-blue-to-cyan</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-blue-to-navy'>bg-blue-to-navy</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-blue-to-transparent'>bg-blue-to-transparent</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-transparent-to-blue'>bg-transparent-to-blue</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-navy-to-transparent'>bg-navy-to-transparent</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-transparent-to-navy'>bg-transparent-to-navy</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-cyan-to-blue'>bg-cyan-to-blue</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-cyan-to-transparent'>bg-cyan-to-transparent</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-cyan-to-navy'>bg-cyan-to-navy</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-transparent-to-cyan'>bg-transparent-to-cyan</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-orange-to-yellow'>bg-orange-to-yellow</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-yellow-to-orange'>bg-yellow-to-orange</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-orange-to-transparent'>bg-orange-to-transparent</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-yellow-to-transparent'>bg-yellow-to-transparent</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-transparent-to-orange'>bg-transparent-to-orange</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-transparent-to-yellow'>bg-transparent-to-yellow</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-gray-to-light'>bg-gray-to-light</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-light-to-gray'>bg-light-to-gray</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-light-to-transparent'>bg-light-to-transparent</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-transparent-to-light'>bg-transparent-to-light</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-gray-to-transparent'>bg-gray-to-transparent</div>
+ * <div class='row-100 mar-bottom-10 pad-10 bg-transparent-to-gray'>bg-transparent-to-gray</div>
+ */
+
+.bg-blue-to-cyan {
+  background-image: linear-gradient(
+    to bottom right,
+    #0077cc,
+    #00ccbb
+  );
+}
+
+.bg-blue-to-navy {
+  background-image: linear-gradient(
+    to bottom right,
+    #0077cc,
+    #0a3a5c
+  );
+}
+
+.bg-blue-to-transparent {
+  background-image: linear-gradient(
+    to bottom right,
+    #0077cc,
+    transparent
+  );
+}
+
+.bg-transparent-to-blue {
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    #0077cc
+  );
+}
+
+.bg-navy-to-transparent {
+  background-image: linear-gradient(
+    to bottom right,
+    #0a3a5c,
+    transparent
+  );
+}
+
+.bg-transparent-to-navy {
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    #0a3a5c
+  );
+}
+
+.bg-cyan-to-blue {
+  background-image: linear-gradient(
+    to bottom right,
+    #00ccbb,
+    #0077cc
+  );
+}
+
+.bg-cyan-to-transparent {
+  background-image: linear-gradient(
+    to bottom right,
+    #00ccbb,
+    transparent
+  );
+}
+
+.bg-cyan-to-navy {
+  background-image: linear-gradient(
+    to bottom right,
+    #00ccbb,
+    #0a3a5c
+  );
+}
+
+.bg-transparent-to-cyan {
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    #00ccbb
+  );
+}
+
+.bg-orange-to-yellow {
+  background-image: linear-gradient(
+    to bottom right,
+    #cc5500,
+    #ffeb3b
+  );
+}
+
+.bg-yellow-to-orange {
+  background-image: linear-gradient(
+    to bottom right,
+    #ffeb3b,
+    #cc5500
+  );
+}
+
+.bg-orange-to-transparent {
+  background-image: linear-gradient(
+    to bottom right,
+    #cc5500,
+    transparent
+  );
+}
+
+.bg-yellow-to-transparent {
+  background-image: linear-gradient(
+    to bottom right,
+    #ffeb3b,
+    transparent
+  );
+}
+
+.bg-transparent-to-orange {
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    #cc5500
+  );
+}
+
+.bg-transparent-to-yellow {
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    #ffeb3b
+  );
+}
+
+.bg-gray-to-light {
+  background-image: linear-gradient(
+    to bottom right,
+    #acb4b9,
+    transparent
+  );
+}
+
+.bg-light-to-gray {
+  background-image: linear-gradient(
+    to bottom right,
+    #f2f2f2,
+    #acb4b9
+  );
+}
+
+.bg-light-to-transparent {
+  background-image: linear-gradient(
+    to bottom right,
+    #f2f2f2,
+    transparent
+  );
+}
+
+.bg-transparent-to-light {
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    #f2f2f2
+  );
+}
+
+.bg-gray-to-transparent {
+  background-image: linear-gradient(
+    to bottom right,
+    #acb4b9,
+    transparent
+  );
+}
+
+.bg-transparent-to-gray {
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    #acb4b9
+  );
+}
