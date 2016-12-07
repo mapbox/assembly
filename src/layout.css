@@ -32,18 +32,18 @@
  * Column classes
 */
 [class*='col'] { flex: 1; }
-.col1 { width: 08.3333%; }
-.col2 { width: 16.6666%; }
-.col3 { width: 25%; }
-.col4 { width: 33.3333%; }
-.col5 { width: 41.6666%; }
-.col6 { width: 50%; }
-.col7 { width: 58.3333%; }
-.col8 { width: 66.6666%; }
-.col9 { width: 75%; }
-.col10 { width: 83.3333%; }
-.col11 { width: 91.6666%; }
-.col12 { width: 100%; }
+.col1 { min-width: 08.3333%; }
+.col2 { min-width: 16.6666%; }
+.col3 { min-width: 25%; }
+.col4 { min-width: 33.3333%; }
+.col5 { min-width: 41.6666%; }
+.col6 { min-width: 50%; }
+.col7 { min-width: 58.3333%; }
+.col8 { min-width: 66.6666%; }
+.col9 { min-width: 75%; }
+.col10 { min-width: 83.3333%; }
+.col11 { min-width: 91.6666%; }
+.col12 { min-width: 100%; }
 
 /**
  * Max width containers
@@ -61,11 +61,11 @@
 /**
  * Column gutter classes
 */
-.grd-gut5 > [class*='col'] { margin-left: 5px; }
-.grd-gut10 > [class*='col'] { margin-left: 10px; }
-.grd-gut20 > [class*='col'] { margin-left: 20px; }
-.grd-gut40 > [class*='col'] { margin-left: 40px; }
-.grd-gut80 > [class*='col'] { margin-left: 80px; }
+.grd-gut5 > [class*='col'] { padding-left: 5px; }
+.grd-gut10 > [class*='col'] { padding-left: 10px; }
+.grd-gut20 > [class*='col'] { padding-left: 20px; }
+.grd-gut40 > [class*='col'] { padding-left: 40px; }
+.grd-gut80 > [class*='col'] { padding-left: 80px; }
 /* stylelint-enable */
 
 /**
@@ -105,18 +105,18 @@
   .off11-md { margin-left: 91.6666%; }
   .off12-md { margin-left: 100%; }
 
-  .col1-md { width: 08.3333%; }
-  .col2-md { width: 16.6666%; }
-  .col3-md { width: 25%; }
-  .col4-md { width: 33.3333%; }
-  .col5-md { width: 41.6666%; }
-  .col6-md { width: 50%; }
-  .col7-md { width: 58.3333%; }
-  .col8-md { width: 66.6666%; }
-  .col9-md { width: 75%; }
-  .col10-md { width: 83.3333%; }
-  .col11-md { width: 91.6666%; }
-  .col12-md { width: 100%; }
+  .col1-md { min-width: 08.3333%; }
+  .col2-md { min-width: 16.6666%; }
+  .col3-md { min-width: 25%; }
+  .col4-md { min-width: 33.3333%; }
+  .col5-md { min-width: 41.6666%; }
+  .col6-md { min-width: 50%; }
+  .col7-md { min-width: 58.3333%; }
+  .col8-md { min-width: 66.6666%; }
+  .col9-md { min-width: 75%; }
+  .col10-md { min-width: 83.3333%; }
+  .col11-md { min-width: 91.6666%; }
+  .col12-md { min-width: 100%; }
 }
 
 @media only screen and (max-width: 640px) {
@@ -133,18 +133,18 @@
   .off11-sm { margin-left: 91.6666%; }
   .off12-sm { margin-left: 100%; }
 
-  .col1-sm { width: 08.3333%; }
-  .col2-sm { width: 16.6666%; }
-  .col3-sm { width: 25%; }
-  .col4-sm { width: 33.3333%; }
-  .col5-sm { width: 41.6666%; }
-  .col6-sm { width: 50%; }
-  .col7-sm { width: 58.3333%; }
-  .col8-sm { width: 66.6666%; }
-  .col9-sm { width: 75%; }
-  .col10-sm { width: 83.3333%; }
-  .col11-sm { width: 91.6666%; }
-  .col12-sm { width: 100%; }
+  .col1-sm { min-width: 08.3333%; }
+  .col2-sm { min-width: 16.6666%; }
+  .col3-sm { min-width: 25%; }
+  .col4-sm { min-width: 33.3333%; }
+  .col5-sm { min-width: 41.6666%; }
+  .col6-sm { min-width: 50%; }
+  .col7-sm { min-width: 58.3333%; }
+  .col8-sm { min-width: 66.6666%; }
+  .col9-sm { min-width: 75%; }
+  .col10-sm { min-width: 83.3333%; }
+  .col11-sm { min-width: 91.6666%; }
+  .col12-sm { min-width: 100%; }
 }
 
 @media only screen and (min-width: 1824px) {
@@ -161,18 +161,18 @@
   .off1-lg { margin-left: 91.6666%; }
   .off2-lg { margin-left: 100%; }
 
-  .col1-lg { width: 08.3333%; }
-  .col2-lg { width: 16.6666%; }
-  .col3-lg { width: 25%; }
-  .col4-lg { width: 33.3333%; }
-  .col5-lg { width: 41.6666%; }
-  .col6-lg { width: 50%; }
-  .col7-lg { width: 58.3333%; }
-  .col8-lg { width: 66.6666%; }
-  .col9-lg { width: 75%; }
-  .col10-lg { width: 83.3333%; }
-  .col11-lg { width: 91.6666%; }
-  .col12-lg { width: 100%; }
+  .col1-lg { min-width: 08.3333%; }
+  .col2-lg { min-width: 16.6666%; }
+  .col3-lg { min-width: 25%; }
+  .col4-lg { min-width: 33.3333%; }
+  .col5-lg { min-width: 41.6666%; }
+  .col6-lg { min-width: 50%; }
+  .col7-lg { min-width: 58.3333%; }
+  .col8-lg { min-width: 66.6666%; }
+  .col9-lg { min-width: 75%; }
+  .col10-lg { min-width: 83.3333%; }
+  .col11-lg { min-width: 91.6666%; }
+  .col12-lg { min-width: 100%; }
 }
 
 /**
