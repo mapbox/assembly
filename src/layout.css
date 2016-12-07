@@ -36,6 +36,7 @@
  * @namespace Cols
  * @memberof Layout
 */
+[class*='col-'] { flex: 1; }
 .col-1  { width: 08.3333%; }
 .col-2  { width: 16.6666%; }
 .col-3  { width: 25%; }
@@ -70,85 +71,11 @@
  * Column gutter classes
  * @memberof Layout
 */
-.grd-gut-5 [class*='col-']  { flex: 1; }
-.grd-gut-5 > .col-1,
-.grd-gut-5 > .col-2,
-.grd-gut-5 > .col-3,
-.grd-gut-5 > .col-4,
-.grd-gut-5 > .col-5,
-.grd-gut-5 > .col-6,
-.grd-gut-5 > .col-7,
-.grd-gut-5 > .col-8,
-.grd-gut-5 > .col-9,
-.grd-gut-5 > .col-10,
-.grd-gut-5 > .col-11,
-.grd-gut-5 > .col-12 {
-  margin-left: 5px;
-}
-
-.grd-gut-10 [class*='col-']  { flex: 1; }
-.grd-gut-10 > .col-1,
-.grd-gut-10 > .col-2,
-.grd-gut-10 > .col-3,
-.grd-gut-10 > .col-4,
-.grd-gut-10 > .col-5,
-.grd-gut-10 > .col-6,
-.grd-gut-10 > .col-7,
-.grd-gut-10 > .col-8,
-.grd-gut-10 > .col-9,
-.grd-gut-10 > .col-10,
-.grd-gut-10 > .col-11,
-.grd-gut-10 > .col-12 {
-  margin-left: 10px;
-}
-
-.grd-gut-20 [class*='col-']  { flex: 1; }
-.grd-gut-20 > .col-1,
-.grd-gut-20 > .col-2,
-.grd-gut-20 > .col-3,
-.grd-gut-20 > .col-4,
-.grd-gut-20 > .col-5,
-.grd-gut-20 > .col-6,
-.grd-gut-20 > .col-7,
-.grd-gut-20 > .col-8,
-.grd-gut-20 > .col-9,
-.grd-gut-20 > .col-10,
-.grd-gut-20 > .col-11,
-.grd-gut-20 > .col-12 {
-  margin-left: 20px;
-}
-
-.grd-gut-40 [class*='col-']  { flex: 1; }
-.grd-gut-40 > .col-1,
-.grd-gut-40 > .col-2,
-.grd-gut-40 > .col-3,
-.grd-gut-40 > .col-4,
-.grd-gut-40 > .col-5,
-.grd-gut-40 > .col-6,
-.grd-gut-40 > .col-7,
-.grd-gut-40 > .col-8,
-.grd-gut-40 > .col-9,
-.grd-gut-40 > .col-10,
-.grd-gut-40 > .col-11,
-.grd-gut-40 > .col-12 {
-  margin-left: 40px;
-}
-
-.grd-gut-80 [class*='col-']  { flex: 1; }
-.grd-gut-80 > .col-1,
-.grd-gut-80 > .col-2,
-.grd-gut-80 > .col-3,
-.grd-gut-80 > .col-4,
-.grd-gut-80 > .col-5,
-.grd-gut-80 > .col-6,
-.grd-gut-80 > .col-7,
-.grd-gut-80 > .col-8,
-.grd-gut-80 > .col-9,
-.grd-gut-80 > .col-10,
-.grd-gut-80 > .col-11,
-.grd-gut-80 > .col-12 {
-  margin-right: 80px;
-}
+.grd-gut-5 > [class*='col-'] { margin-left: 5px;}
+.grd-gut-10 > [class*='col-'] { margin-left: 10px;}
+.grd-gut-20 > [class*='col-'] { margin-left: 20px;}
+.grd-gut-40 > [class*='col-'] { margin-left: 40px;}
+.grd-gut-80 > [class*='col-'] { margin-left: 80px;}
 
 /* stylelint-enable selector-no-combinator */
 
@@ -280,4 +207,3 @@
 [class*='bld-'] { flex: 1; }
 .col-6.bld-right  { margin-right: calc(50% - 50vw); }
 .col-6.bld-left   { margin-left: calc(50% - 50vw); }
-
