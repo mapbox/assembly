@@ -7,14 +7,12 @@
 .abs { position: absolute; }
 .rel { position: relative; }
 .static { position: static; }
-.sticky { position: sticky; }
 
 @media only screen and (max-width: 770px) {
   .fix-md { position: fixed; }
   .abs-md { position: absolute; }
   .rel-md { position: relative; }
   .static-md { position: static; }
-  .sticky-md { position: sticky; }
 }
 
 @media only screen and (max-width: 640px) {
@@ -22,7 +20,6 @@
   .abs-sm { position: absolute; }
   .rel-sm { position: relative; }
   .static-sm { position: static; }
-  .sticky-sm { position: sticky; }
 }
 
 /*
