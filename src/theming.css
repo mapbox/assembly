@@ -34,14 +34,15 @@
 .rcf-bottomleft { border-bottom-left-radius: 50%; }
 
 [class^='bor'] { border: 0 solid currentColor; }
+[class^='bor'][class*='-dash'] { border-style: dashed; }
 
-.bor { border-width: 1px; }
+.bor, .bor-dash { border-width: 1px; }
 [class^='bor'][class*='-top'] { border-top-width: 1px; }
 [class^='bor'][class*='-right'] { border-right-width: 1px; }
 [class^='bor'][class*='-bottom'] { border-bottom-width: 1px; }
 [class^='bor'][class*='-left'] { border-left-width: 1px; }
 
-.bor2 { border-width: 2px; }
+.bor2, .bor2-dash { border-width: 2px; }
 [class^='bor2'][class*='-top'] { border-top-width: 2px; }
 [class^='bor2'][class*='-right'] { border-right-width: 2px; }
 [class^='bor2'][class*='-bottom'] { border-bottom-width: 2px; }
