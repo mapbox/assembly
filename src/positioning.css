@@ -158,7 +158,6 @@ Zero out positioning
 .mar-left-800 { margin-left: 800px; }
 
 @media only screen and (max-width: 770px) {
-
   /**
    * Top margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
@@ -270,11 +269,9 @@ Zero out positioning
   .mar-left-400-md { margin-left: 400px; }
   .mar-left-600-md { margin-left: 600px; }
   .mar-left-800-md { margin-left: 800px; }
-
 }
 
 @media only screen and (max-width: 640px) {
-
   /**
    * Top margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
@@ -521,7 +518,6 @@ Zero out positioning
 .pad-left-100 { padding-left: 100px; }
 
 @media only screen and (max-width: 770px) {
-
   /**
    *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
@@ -539,7 +535,6 @@ Zero out positioning
   .pad-60-md { padding: 60px; }
   .pad-80-md { padding: 80px; }
   .pad-100-md { padding: 100px; }
-
 
   /**
    *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px

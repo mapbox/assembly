@@ -11,7 +11,11 @@
 .round-topleft { border-top-left-radius: 3px; }
 .round-topright { border-top-right-radius: 3px; }
 .round-bottomright { border-bottom-right-radius: 3px; }
+<<<<<<< HEAD
 .round-bottomleft{ border-bottom-left-radius: 3px; }
+=======
+.round-bottomleft { border-bottom-left-radius: 3px; }
+>>>>>>> Almost pass linting
 
 .round-bold { border-radius: 6px; }
 .round-bold-top { border-radius: 6px 6px 0 0; }
@@ -233,11 +237,11 @@
 .bor-left-2-red { border-left: 2px solid #e55e5e; }
 .bor-left-2-pink { border-left: 2px solid #ed6498; }
 
-.shd-5 { box-shadow: 0 0 5px 0 rgba(0,0,0,0.3); }
-.shd-10 { box-shadow: 0 0 10px 0 rgba(0,0,0,0.3); }
-.shd-20 { box-shadow: 0 0 20px 0 rgba(0,0,0,0.3); }
-.shd-30 { box-shadow: 0 0 30px 0 rgba(0,0,0,0.3); }
-.shd-bold-5  { box-shadow: 0 0 5px 0 rgba(0,0,0,0.9); }
-.shd-bold-10 { box-shadow: 0 0 10px 0 rgba(0,0,0,0.9); }
-.shd-bold-20 { box-shadow: 0 0 20px 0 rgba(0,0,0,0.9); }
-.shd-bold-30 { box-shadow: 0 0 30px 0 rgba(0,0,0,0.9); }
+.shd-5 { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3); }
+.shd-10 { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
+.shd-20 { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3); }
+.shd-30 { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3); }
+.shd-bold-5 { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9); }
+.shd-bold-10 { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9); }
+.shd-bold-20 { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9); }
+.shd-bold-30 { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9); }
