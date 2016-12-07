@@ -7,14 +7,14 @@
 .pos-absolute { position: absolute; }
 .pos-relative { position: relative; }
 .pos-static { position: static; }
-.pos-.sticky { position: sticky; }
+.pos-sticky { position: sticky; }
 
 @media only screen and (max-width: 770px) {
   .pos-fixed-md { position: fixed; }
   .pos-absolute-md { position: absolute; }
   .pos-relative-md { position: relative; }
   .pos-static-md { position: static; }
-  .pos-.sticky-md { position: sticky; }
+  .pos-sticky-md { position: sticky; }
 }
 
 @media only screen and (max-width: 640px) {
@@ -22,7 +22,7 @@
   .pos-absolute-sm { position: absolute; }
   .pos-relative-sm { position: relative; }
   .pos-static-sm { position: static; }
-  .pos-.sticky-sm { position: sticky; }
+  .pos-sticky-sm { position: sticky; }
 }
 
 @media only screen and (min-width: 1824px) {
@@ -30,7 +30,7 @@
   .pos-absolute-lg { position: absolute; }
   .pos-relative-lg { position: relative; }
   .pos-static-lg { position: static; }
-  .pos-.sticky-lg { position: sticky; }
+  .pos-sticky-lg { position: sticky; }
 }
 
 /*
