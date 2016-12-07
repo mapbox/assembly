@@ -395,6 +395,24 @@ Zero out positioning
 */
 
 /**
+ *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+ *
+ * @example
+ *  <div class='pad-top-5'></div>
+ *  <div class='pad-top-10'></div>
+ *  <div class='pad-top-40'></div>
+ *  <div class='pad-top-100'></div>
+ *  <div class='pad-top-200'></div>
+ */
+.pad-5   { padding: 5px; }
+.pad-10  { padding: 10px; }
+.pad-20  { padding: 20px; }
+.pad-40  { padding: 40px; }
+.pad-60  { padding: 60px; }
+.pad-80  { padding: 80px; }
+.pad-100 { padding: 100px; }
+
+/**
  *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
  *
  * @example
@@ -503,6 +521,26 @@ Zero out positioning
 .pad-left-100 { padding-left: 100px; }
 
 @media only screen and (max-width: 770px) {
+
+  /**
+   *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+   *
+   * @example
+   *  <div class='pad-top-5'></div>
+   *  <div class='pad-top-10'></div>
+   *  <div class='pad-top-40'></div>
+   *  <div class='pad-top-100'></div>
+   *  <div class='pad-top-200'></div>
+   */
+  .pad-5-md   { padding: 5px; }
+  .pad-10-md  { padding: 10px; }
+  .pad-20-md  { padding: 20px; }
+  .pad-40-md  { padding: 40px; }
+  .pad-60-md  { padding: 60px; }
+  .pad-80-md  { padding: 80px; }
+  .pad-100-md { padding: 100px; }
+
+
   /**
    *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
@@ -613,6 +651,24 @@ Zero out positioning
 }
 
 @media only screen and (max-width: 640px) {
+  /**
+   *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+   *
+   * @example
+   *  <div class='pad-top-5'></div>
+   *  <div class='pad-top-10'></div>
+   *  <div class='pad-top-40'></div>
+   *  <div class='pad-top-100'></div>
+   *  <div class='pad-top-200'></div>
+   */
+  .pad-5-sm   { padding: 5px; }
+  .pad-10-sm  { padding: 10px; }
+  .pad-20-sm  { padding: 20px; }
+  .pad-40-sm  { padding: 40px; }
+  .pad-60-sm  { padding: 60px; }
+  .pad-80-sm  { padding: 80px; }
+  .pad-100-sm { padding: 100px; }
+
   /**
    *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
