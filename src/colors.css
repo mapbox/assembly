@@ -26,32 +26,32 @@
  * <div class='row-20 mar-bottom-10 pad-10 bg-lighten-50'>bg-lighten-50</div>
  * <div class='row-20 mar-bottom-10 pad-10 bg-lighten-75'>bg-lighten-75</div>
  */
-.bg-gray    { background-color: #acb4b9; }
-.bg-blue    { background-color: #0077cc; }
-.bg-purple  { background-color: #5500cc; }
-.bg-pink    { background-color: #cc0077; }
-.bg-red     { background-color: #cc0011; }
-.bg-orange  { background-color: #cc5500; }
+.bg-gray { background-color: #acb4b9; }
+.bg-blue { background-color: #0077cc; }
+.bg-purple { background-color: #5500cc; }
+.bg-pink { background-color: #cc0077; }
+.bg-red { background-color: #cc0011; }
+.bg-orange { background-color: #cc5500; }
 .bg-mustard { background-color: #ffbf16; }
-.bg-yellow  { background-color: #ffeb3b; }
-.bg-green   { background-color: #11cc00; }
-.bg-teal    { background-color: #3fbfbc; }
-.bg-cyan    { background-color: #00ccbb; }
-.bg-denim   { background-color: #34607f; }
-.bg-navy    { background-color: #0a3a5c; }
+.bg-yellow { background-color: #ffeb3b; }
+.bg-green { background-color: #11cc00; }
+.bg-teal { background-color: #3fbfbc; }
+.bg-cyan { background-color: #00ccbb; }
+.bg-denim { background-color: #34607f; }
+.bg-navy { background-color: #0a3a5c; }
 
-.bg-white   { background-color: #fff; }
-.bg-light   { background-color: #f2f2f2; }
+.bg-white { background-color: #fff; }
+.bg-light { background-color: #f2f2f2; }
 
-.bg-darken-5  { background-color: rgba(0,0,0,0.05); }
-.bg-darken-25 { background-color: rgba(0,0,0,0.25); }
-.bg-darken-50 { background-color: rgba(0,0,0,0.50); }
-.bg-darken-75 { background-color: rgba(0,0,0,0.75); }
+.bg-darken-5 { background-color: rgba(0, 0, 0, 0.05); }
+.bg-darken-25 { background-color: rgba(0, 0, 0, 0.25); }
+.bg-darken-50 { background-color: rgba(0, 0, 0, 0.5); }
+.bg-darken-75 { background-color: rgba(0, 0, 0, 0.75); }
 
-.bg-lighten-10 { background-color: rgba(255,255,255,0.10); }
-.bg-lighten-25 { background-color: rgba(255,255,255,0.25); }
-.bg-lighten-50 { background-color: rgba(255,255,255,0.50); }
-.bg-lighten-75 { background-color: rgba(255,255,255,0.75); }
+.bg-lighten-10 { background-color: rgba(255, 255, 255, 0.1); }
+.bg-lighten-25 { background-color: rgba(255, 255, 255, 0.25); }
+.bg-lighten-50 { background-color: rgba(255, 255, 255, 0.5); }
+.bg-lighten-75 { background-color: rgba(255, 255, 255, 0.75); }
 
 /**
  * Text colors.
@@ -81,32 +81,32 @@
  * <div class='row-20 mar-bottom-10 pad-10 txt-lighten-50'>txt-lighten-50</div>
  * <div class='row-20 mar-bottom-10 pad-10 txt-lighten-75'>txt-lighten-75</div>
  */
-.txt-gray    { color: #acb4b9; }
-.txt-blue    { color: #0077cc; }
-.txt-purple  { color: #5500cc; }
-.txt-pink    { color: #cc0077; }
-.txt-red     { color: #cc0011; }
-.txt-orange  { color: #cc5500; }
+.txt-gray { color: #acb4b9; }
+.txt-blue { color: #0077cc; }
+.txt-purple { color: #5500cc; }
+.txt-pink { color: #cc0077; }
+.txt-red { color: #cc0011; }
+.txt-orange { color: #cc5500; }
 .txt-mustard { color: #ffbf16; }
-.txt-yellow  { color: #ffeb3b; }
-.txt-green   { color: #11cc00; }
-.txt-teal    { color: #3fbfbc; }
-.txt-cyan    { color: #00ccbb; }
-.txt-denim   { color: #34607f; }
-.txt-navy    { color: #0a3a5c; }
+.txt-yellow { color: #ffeb3b; }
+.txt-green { color: #11cc00; }
+.txt-teal { color: #3fbfbc; }
+.txt-cyan { color: #00ccbb; }
+.txt-denim { color: #34607f; }
+.txt-navy { color: #0a3a5c; }
 
-.txt-white   { color: #fff; }
-.txt-light   { color: #f2f2f2; }
+.txt-white { color: #fff; }
+.txt-light { color: #f2f2f2; }
 
-.txt-darken-5  { color: rgba(0,0,0,0.05); }
-.txt-darken-25 { color: rgba(0,0,0,0.25); }
-.txt-darken-50 { color: rgba(0,0,0,0.50); }
-.txt-darken-75 { color: rgba(0,0,0,0.75); }
+.txt-darken-5 { color: rgba(0, 0, 0, 0.05); }
+.txt-darken-25 { color: rgba(0, 0, 0, 0.25); }
+.txt-darken-50 { color: rgba(0, 0, 0, 0.5); }
+.txt-darken-75 { color: rgba(0, 0, 0, 0.75); }
 
-.txt-lighten-10 { color: rgba(255,255,255,0.10); }
-.txt-lighten-25 { color: rgba(255,255,255,0.25); }
-.txt-lighten-50 { color: rgba(255,255,255,0.50); }
-.txt-lighten-75 { color: rgba(255,255,255,0.75); }
+.txt-lighten-10 { color: rgba(255, 255, 255, 0.1); }
+.txt-lighten-25 { color: rgba(255, 255, 255, 0.25); }
+.txt-lighten-50 { color: rgba(255, 255, 255, 0.5); }
+.txt-lighten-75 { color: rgba(255, 255, 255, 0.75); }
 
 /**
  * Gradients. Gradients come in cool, hot, and neutral colors.
