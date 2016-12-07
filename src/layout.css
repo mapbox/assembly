@@ -36,7 +36,7 @@
  * @namespace Cols
  * @memberof Layout
 */
-[class*='col-'] { flex: 1; }
+[class^='col-'] { flex: 1; }
 .col-1 { width: 08.3333%; }
 .col-2 { width: 16.6666%; }
 .col-3 { width: 25%; }
@@ -71,11 +71,11 @@
  * Column gutter classes
  * @memberof Layout
 */
-.grd-gut-5 > [class*='col-'] { margin-left: 5px; }
-.grd-gut-10 > [class*='col-'] { margin-left: 10px; }
-.grd-gut-20 > [class*='col-'] { margin-left: 20px; }
-.grd-gut-40 > [class*='col-'] { margin-left: 40px; }
-.grd-gut-80 > [class*='col-'] { margin-left: 80px; }
+.grd-gut-5 > [class^='col-'] { margin-left: 5px; }
+.grd-gut-10 > [class^='col-'] { margin-left: 10px; }
+.grd-gut-20 > [class^='col-'] { margin-left: 20px; }
+.grd-gut-40 > [class^='col-'] { margin-left: 40px; }
+.grd-gut-80 > [class^='col-'] { margin-left: 80px; }
 
 /* stylelint-enable selector-no-combinator */
 
@@ -204,6 +204,6 @@
   margin-right: calc(50% - 50vw);
 }
 
-[class*='bld-'] { flex: 1; }
+[class^='bld-'] { flex: 1; }
 .bld-right { margin-right: calc(50% - 50vw); }
 .bld-left { margin-left: calc(50% - 50vw); }
