@@ -17,7 +17,10 @@ function cssPath(name) {
 
 const cssFiles = [
   cssPath('reset'),
-  cssPath('base-core')
+  cssPath('display'),
+  cssPath('theming'),
+  cssPath('positioning'),
+  cssPath('layout')
 ];
 
 const postcssPlugins = [
