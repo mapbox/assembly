@@ -7,6 +7,7 @@ input,
 textarea {
   color: rgba(0, 0, 0, 0.75);
   font: 16px/1.25 'Open Sans', sans-serif;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -14,32 +15,32 @@ textarea {
  * Type utilities
  * @memberof Typography
 */
-.strong,
+.txt-strong,
 .txt strong {
-  font-family: 'Open Sans Bold', sans-serif;
+  font-weight: bold;
 }
 
-.strong.em,
+.txt-strong.txt-em,
 .txt strong em,
 .txt em strong {
-  font-family: 'Open Sans Bold Italic', sans-serif;
+  font-weight: bold;
+  font-style: italic;
 }
 
-.em,
+.txt-em,
+.txt-address,
 .txt em,
 .txt address {
-  font-family: 'Open Sans Italic', sans-serif;
+  font-style: italic;
 }
 
-.small,
+.txt-small,
 .txt small {
   font-size: 14px;
   line-height: 20px;
 }
 
-.txt small { display: block; }
-
-.micro {
+.txt-micro {
   font-size: 12px;
   line-height: 20px;
 }
@@ -83,8 +84,7 @@ textarea {
 .txt h4,
 .txt h5,
 .txt h6 {
-  font-family: 'Open Sans Bold', sans-serif;
-  margin: 0;
+  font-weight: bold;
 }
 
 .txt-h1,
@@ -154,7 +154,8 @@ textarea {
 .txt h5 em,
 .txt em h6,
 .txt h6 em {
-  font-family: 'Open Sans Bold Italic', sans-serif;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .txt *:target {
@@ -171,33 +172,24 @@ textarea {
  *
  * @example
  *  <div class="txt">
- *    <h1 class='typ-light'>Headline light</h1>
- *    <h1 class='typ-regular'>Headline regular</h1>
- *    <h1 class='typ-fancy'>Headline fancy</h1>
+ *    <h1 class='typ-light'>Light</h1>
+ *    <h1 class='typ-regular'>Regular</h1>
+ *    <h1 class='typ-headine'>Headline</h1>
  *  </div>
 */
 .typ-light,
 .txt .typ-light {
-  font-family: 'Open Sans Light', sans-serif;
+  font-weight: lighter;
 }
 
 .typ-regular,
 .txt .typ-regular {
-  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
 }
 
-h1.typ-fancy,
-h2.typ-fancy,
-h3.typ-fancy {
-  font-family: 'Cabin Bold', sans-serif;
+.typ-headline {
+  font-family: 'Headline', sans-serif;
   text-transform: uppercase;
-}
-
-h1.typ-fancy {
   letter-spacing: 3px;
 }
 
-h2.typ-fancy,
-h3.typ-fancy {
-  letter-spacing: 2px;
-}

@@ -2,24 +2,23 @@
  * FontFace
 */
 @font-face {
-  font-family:'Open Sans';
-  font-weight: normal;
+  font-family: 'Open Sans';
+  font-weight: 400;
   src: url('../fonts/opensans-regular.eot');
   src: url('../fonts/opensans-regular.eot#iefix') format('embedded-opentype'),
   url('../fonts/opensans-regular.woff') format('woff');
 }
 
 @font-face {
-  font-family:'Open Sans Light';
-  font-weight: lighter;
+  font-family: 'Open Sans';
+  font-weight: 300;
   src: url('../fonts/opensans-light.eot');
   src: url('../fonts/opensans-light.eot#iefix') format('embedded-opentype'),
   url('../fonts/opensans-light.woff') format('woff');
 }
 
 @font-face {
-  font-family:'Open Sans Italic';
-  font-weight: normal;
+  font-family: 'Open Sans';
   font-style: italic;
   src: url('../fonts/opensans-italic.eot');
   src: url('../fonts/opensans-italic.eot#iefix') format('embedded-opentype'),
@@ -27,7 +26,7 @@
 }
 
 @font-face {
-  font-family:'Open Sans Bold';
+  font-family: 'Open Sans';
   font-weight: bold;
   src: url('../fonts/opensans-bold.eot');
   src: url('../fonts/opensans-bold.eot#iefix') format('embedded-opentype'),
@@ -35,7 +34,7 @@
 }
 
 @font-face {
-  font-family:'Open Sans Bold Italic';
+  font-family: 'Open Sans';
   font-weight: bold;
   font-style: italic;
   src: url('../fonts/opensans-bolditalic.eot');
@@ -44,9 +43,10 @@
 }
 
 @font-face {
-  font-family: 'Cabin Bold';
-  font-weight: normal;
-  src: url('../fonts/cabin-bold-webfont.eot');
-  src: url('../fonts/cabin-bold-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/cabin-bold-webfont.woff') format('woff');
+  font-family: 'Headline';
+  src: url('../fonts/leaguespartan-bold-webfont.eot');
+  src: url('../fonts/leaguespartan-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/leaguespartan-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
