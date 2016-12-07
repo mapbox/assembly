@@ -1,4 +1,4 @@
-import styledoc from '../../core';
+import styledoc from '../../styledoc/core';
 import React from 'react';
 import { Contents } from './contents';
 import { addStyle } from './add-style';
@@ -14,8 +14,8 @@ class Loader extends React.Component {
 
   componentDidMount() {
     fetch(this.props.file)
-      .then(response => response.text())
-      .then(content => {
+      .then((response) => response.text())
+      .then((content) => {
         addStyle(content);
 
         this.setState({

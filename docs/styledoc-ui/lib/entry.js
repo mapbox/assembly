@@ -35,7 +35,7 @@ class Entry extends React.Component {
 
     return (
       <div style={{ overflow: 'hidden' }}>
-        <div style={{ float: 'left', width: `${100/3}%`}}>
+        <div style={{ float: 'left', width: `${100 / 3}%` }}>
           <div style={{ fontWeight: 'bold' }}>
             {props.referencedSource.selector}
           </div>
@@ -54,7 +54,7 @@ class Entry extends React.Component {
              value={props.referencedSource.toString()} />) : null}
           </div>
         </div>
-        <div style={{ float: 'left', width: `${100/3*2}%`}}>
+        <div style={{ float: 'left', width: `${100 / 3 * 2}%` }}>
           <div
             className='styledoc-example'
             style={{ marginLeft: 10 }}
