@@ -22,13 +22,14 @@ const cssFiles = [
   getCssPath('fonts'),
   getCssPath('typography'),
   getCssPath('basic'),
-  getCssPath('display'),
-  getCssPath('positioning'),
-  getCssPath('layout'),
-  getCssPath('theming'),
   getCssPath('buttons'),
+  getCssPath('forms'),
+  getCssPath('theming'),
+  getCssPath('icons'),
+  getCssPath('layout'),
   getCssPath('colors'),
-  getCssPath('icons')
+  getCssPath('display'),
+  getCssPath('positioning')
 ];
 
 const postcssPlugins = [

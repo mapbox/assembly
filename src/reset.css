@@ -19,20 +19,33 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
-  }
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
-  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body { line-height: 1; }
+
 ol, ul { list-style: none;  }
+
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,
 q:before, q:after { content: ''; content: none; }
-/* tables still need 'cellspacing="0"' in the markup */
+
 table { border-collapse: collapse; border-spacing: 0; }
-/* remember to define focus styles. Hee Haw */
+
 :focus { outline: 0; }
 hr { margin: 0; border: 0; }
 
@@ -46,7 +59,6 @@ html {
 
 button {
   background: transparent;
-  box-sizing: border-box;
   border: none;
   color: inherit;
   font: inherit;
@@ -62,4 +74,8 @@ button {
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
+}
+
+svg {
+  display: block;
 }
