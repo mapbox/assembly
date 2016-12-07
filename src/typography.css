@@ -1,3 +1,4 @@
+/* stylelint-disable selector-no-combinator, selector-no-type */
 /**
  * Inline elements
 */
@@ -105,7 +106,7 @@ textarea {
 .txt h3 {
   margin-top: 17.392px;
   font-size: 23px;
-  line-height: 1.0870;
+  line-height: 1.087;
 }
 
 .txt-h4,
@@ -158,9 +159,11 @@ textarea {
   font-style: italic;
 }
 
+/* stylelint-disable selector-no-universal */
 .txt *:target {
   padding-top: 20px;
 }
+/* stylelint-enable selector-no-universal */
 
 /**
  * Type classes
@@ -192,4 +195,3 @@ textarea {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-

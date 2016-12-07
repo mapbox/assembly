@@ -32,7 +32,6 @@
  * Column classes
 */
 [class*='col'] { flex: 1; }
-.col {}
 .col1 { width: 08.3333%; }
 .col2 { width: 16.6666%; }
 .col3 { width: 25%; }
@@ -58,6 +57,7 @@
 .grd-gut40 { margin-left: -40px; }
 .grd-gut80 { margin-left: -80px; }
 
+/* stylelint-disable selector-no-combinator */
 /**
  * Column gutter classes
 */
@@ -66,6 +66,7 @@
 .grd-gut20 > [class*='col'] { margin-left: 20px; }
 .grd-gut40 > [class*='col'] { margin-left: 40px; }
 .grd-gut80 > [class*='col'] { margin-left: 80px; }
+/* stylelint-enable */
 
 /**
  * Column classes
