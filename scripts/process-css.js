@@ -22,6 +22,7 @@ const cssFiles = [
   getCssPath('reset'),
   getCssPath('fonts'),
   getCssPath('typography'),
+  getCssPath('basic'),
   getCssPath('display'),
   getCssPath('positioning'),
   getCssPath('layout'),
