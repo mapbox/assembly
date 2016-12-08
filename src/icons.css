@@ -9,16 +9,15 @@
  * <svg class="icn icn--md" role="img"><use xlink:href="#base-svg-library"/></svg>
  */
 
-.icn { fill: currentColor; }
+.icn {
+  fill: currentColor;
+  height: 20px;
+  width: 20px;
+}
 
 .icn--sm {
   height: 15px;
   width: 15px;
-}
-
-.icn--md {
-  height: 20px;
-  width: 20px;
 }
 
 .icn--lg {

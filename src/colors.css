@@ -4,7 +4,9 @@
  */
 
 /**
- * background colors.
+ * Background colors.
+ * @group
+ * @memberof Color
  * @example
  * <div class='mar-bottom-10 p10 bg-gray-dark'>bg-gray-dark</div>
  * <div class='mar-bottom-10 p10 bg-gray'>bg-gray</div>
@@ -97,9 +99,12 @@
 .bg-lighten25 { background-color: rgba(255, 255, 255, 0.25); }
 .bg-lighten50 { background-color: rgba(255, 255, 255, 0.5); }
 .bg-lighten75 { background-color: rgba(255, 255, 255, 0.75); }
+/** @endgroup */
 
 /**
- * text colors.
+ * Text colors.
+ * @group
+ * @memberof Color
  * @example
  * <div class='mar-bottom-10 txt-gray-dark'>txt-gray-dark</div>
  * <div class='mar-bottom-10 txt-gray'>txt-gray</div>
@@ -192,10 +197,13 @@
 .txt-lighten25 { color: rgba(255, 255, 255, 0.25); }
 .txt-lighten50 { color: rgba(255, 255, 255, 0.5); }
 .txt-lighten75 { color: rgba(255, 255, 255, 0.75); }
+/** @endgroup */
 
 /**
- * gradients. for now, there's a gradient from each color to transparency.
+ * Gradients. For now, there's a gradient from each color to transparency.
  *
+ * @group
+ * @memberof Color
  * @example
  * <div class='mar-bottom-10 p10 bg-gray-to-transparent'>bg-gray-to-transparent</div>
  * <div class='mar-bottom-10 p10 bg-pink-to-transparent'>bg-pink-to-transparent</div>
@@ -278,3 +286,4 @@
     transparent
   );
 }
+/** @endgroup */

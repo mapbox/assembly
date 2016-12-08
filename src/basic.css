@@ -162,3 +162,50 @@ img {
 .txt sub {
   top: 0.5ex;
 }
+
+/**
+ * Code blocks and pre.
+ */
+pre {
+  display: block;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.cde,
+.cde-pre,
+.txt code,
+.txt pre {
+  font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
+  white-space: pre-wrap;
+}
+
+.cde,
+.cde-pre,
+.txt code,
+.txt pre {
+  background: rgba(0, 0, 0, 0.025);
+  font-size: 12px;
+  line-height: 20px;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.cde-pre,
+.txt pre {
+  padding: 10px;
+}
+
+.txt pre {
+  margin-bottom: 25px;
+}
+
+.cde,
+.txt pre code {
+  background: transparent;
+  padding: 0;
+}

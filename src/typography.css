@@ -35,15 +35,28 @@ textarea {
   font-style: italic;
 }
 
-.txt-small {
+.txt-s {
   font-size: 14px;
   line-height: 20px;
 }
 
-.txt-micro {
+.txt-xs {
   font-size: 10px;
   line-height: 20px;
 }
+
+.txt-uppercase { text-transform: uppercase; }
+.txt-capitalize { text-transform: capitalize; }
+
+.txt-sentence-case { text-transform: lowercase; }
+.txt-sentence-case::first-letter { text-transform: capitalize; }
+
+.txt-left { text-align: left; }
+.txt-right { text-align: right; }
+.txt-center { text-align: center; }
+
+.txt-align-top { vertical-align: top; }
+.txt-align-middle { vertical-align: middle; }
 
 /**
  * Text/prose classes
@@ -65,57 +78,62 @@ textarea {
  *    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <strong>Incidunt magnam</strong>, cum consectetur maiores corrupti nulla iste saepe <em>porro repellat</em> beatae modi laudantium laborum magni voluptate impedit sint pariatur?</p>
  *  </div>
 */
-.txt p,
-.txt-p {
+.txt p {
   margin-bottom: 25px;
 }
 
-.txt-h1,
 .txt h1,
-.txt-h2,
 .txt h2,
-.txt-h3,
 .txt h3,
-.txt-h4,
 .txt h4,
-.txt-h5,
 .txt h5,
-.txt-h6,
+.txt h6 {
+  margin-bottom: 25px;
+}
+
+.txt-headline,
+.txt h1,
+.txt-subheadline,
+.txt h2,
+.txt-lg,
+.txt h3,
+.txt h4,
+.txt h5,
 .txt h6 {
   font-weight: bold;
-  margin-bottom: 25px;
 }
 
-.txt-h1,
+.txt-headline,
 .txt h1 {
-  margin-top: 12.1216px;
   font-size: 33px;
   line-height: 1.5152;
 }
 
-.txt-h2,
+.txt h1 { margin-top: 12.1216px; }
+
+.txt-subheadline,
 .txt h2 {
-  margin-top: 14.8144px;
   font-size: 27px;
   line-height: 1.8519;
 }
 
-.txt-h3,
+.txt h2 { margin-top: 14.8144px; }
+
+.txt-lg,
 .txt h3 {
-  margin-top: 17.392px;
   font-size: 23px;
   line-height: 1.087;
 }
 
-.txt-h4,
+.txt h3 { margin-top: 17.392px; }
+
+.txt-lg,
 .txt h4 {
   margin-top: 21.0528px;
   font-size: 19px;
   line-height: 1.3158;
 }
 
-.txt-h5,
-.txt-h6,
 .txt h5,
 .txt h6 {
   margin-top: 25px;
@@ -132,7 +150,7 @@ textarea {
   margin-top: 0;
 }
 
-.txt-p,
+.txt-m,
 .txt p {
   line-height: 25px;
 }
@@ -164,32 +182,27 @@ textarea {
 /* stylelint-enable selector-no-universal */
 
 /**
- * Type classes
- * @section typ
- * @memberof Typography
-*/
-/**
- *  txt-styled headlines and paragraph.
+ *  txt-styled font variants.
  *
  * @example
  *  <div class="txt">
- *    <h1 class='typ-light'>Light</h1>
- *    <h1 class='typ-regular'>Regular</h1>
- *    <h1 class='typ-headine'>Headline</h1>
+ *    <h1 class='txt-weight-light'>Light</h1>
+ *    <h1 class='txt-weight-regular'>Regular</h1>
+ *    <h1 class='txt-fancy'>Headline</h1>
  *  </div>
 */
-.typ-light,
-.txt .typ-light {
+.txt-weight-light,
+.txt .txt-weight-light {
   font-weight: lighter;
 }
 
-.typ-regular,
-.txt .typ-regular {
+.txt-weight-regular,
+.txt .txt-weight-regular {
   font-weight: normal;
 }
 
-.typ-headline {
-  font-family: 'Headline', sans-serif;
+.txt-fancy {
+  font-family: 'txt-fancy', sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
