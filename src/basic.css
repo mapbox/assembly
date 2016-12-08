@@ -5,6 +5,25 @@
  * @namespace txt
 */
 
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.txt-abbr,
+.txt abbr {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+.txt-hr,
+.txt hr {
+  margin: 20px 0;
+  border: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
 /**
  * Table classes.
  */
@@ -77,4 +96,69 @@
 .txt ul ol,
 .txt ol ul {
   margin-top: 10px;
+}
+
+/**
+ * Blockquote.
+ */
+
+.txt-blockquote,
+.txt-q,
+.txt blockquote,
+.txt q {
+  quotes: none;
+  font-style: normal;
+  padding-left: 20px;
+  margin: 10px;
+}
+
+.txt blockquote,
+.txt q {
+  margin-bottom: 25px;
+}
+
+.txt blockquote::before,
+.txt blockquote::after,
+.txt q::before,
+.txt q::after {
+  content: '';
+}
+
+/**
+ * Keyboard.
+ */
+.txt-kbd,
+.txt kbd {
+  background: rgba(0, 0, 0, 0.025);
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 20px;
+  border-radius: 3px;
+  padding: 2px 3px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  font-weight: normal;
+}
+
+/**
+ * Sub and sup scripts
+ */
+.txt-sup,
+.txt-sub,
+.txt sup,
+.txt sub {
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  position: relative;
+  font-size: 75%;
+}
+
+.txt-sup,
+.txt sup {
+  bottom: 1ex;
+}
+
+.txt-sub,
+.txt sub {
+  top: 0.5ex;
 }
