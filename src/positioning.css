@@ -122,11 +122,11 @@ Zero out positioning
  * Bottom margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
  *
  * @example
- *  <div class='mt5'></div>
- *  <div class='mt10'></div>
- *  <div class='mt40'></div>
- *  <div class='mt100'></div>
- *  <div class='mt200'></div>
+ *  <div class='mb5'></div>
+ *  <div class='mb10'></div>
+ *  <div class='mb40'></div>
+ *  <div class='mb100'></div>
+ *  <div class='mb200'></div>
  */
 .mb-neg1 { margin-bottom: -1px; }
 .mb-neg2 { margin-bottom: -2px; }
@@ -176,17 +176,136 @@ Zero out positioning
 .ml600 { margin-left: 600px; }
 .ml800 { margin-left: 800px; }
 
+@media only screen and (max-width: 1824px) {
+  /**
+   * Top margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
+   *
+   * @example
+   *  <div class='mt5-lg'></div>
+   *  <div class='mt10-lg'></div>
+   *  <div class='mt40-lg'></div>
+   *  <div class='mt100-lg'></div>
+   *  <div class='mt200-lg'></div>
+   */
+  .mt0-lg { margin-top: 0; }
+  .mt5-lg { margin-top: 5px; }
+  .mt10-lg { margin-top: 10px; }
+  .mt20-lg { margin-top: 20px; }
+  .mt30-lg { margin-top: 30px; }
+  .mt40-lg { margin-top: 40px; }
+  .mt50-lg { margin-top: 50px; }
+  .mt60-lg { margin-top: 60px; }
+  .mt80-lg { margin-top: 80px; }
+  .mt100-lg { margin-top: 100px; }
+  .mt120-lg { margin-top: 120px; }
+  .mt140-lg { margin-top: 140px; }
+  .mt160-lg { margin-top: 160px; }
+  .mt180-lg { margin-top: 180px; }
+  .mt200-lg { margin-top: 200px; }
+  .mt400-lg { margin-top: 400px; }
+  .mt600-lg { margin-top: 600px; }
+  .mt800-lg { margin-top: 800px; }
+
+  /**
+   * Right margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
+   *
+   * @example
+   *  <div class='mr5-lg'></div>
+   *  <div class='mr10-lg'></div>
+   *  <div class='mr40-lg'></div>
+   *  <div class='mr100-lg'></div>
+   *  <div class='mr200-lg'></div>
+   */
+  .mr0-lg { margin-right: 0; }
+  .mr5-lg { margin-right: 5px; }
+  .mr10-lg { margin-right: 10px; }
+  .mr20-lg { margin-right: 20px; }
+  .mr30-lg { margin-right: 30px; }
+  .mr40-lg { margin-right: 40px; }
+  .mr50-lg { margin-right: 50px; }
+  .mr60-lg { margin-right: 60px; }
+  .mr80-lg { margin-right: 80px; }
+  .mr100-lg { margin-right: 100px; }
+  .mr120-lg { margin-right: 120px; }
+  .mr140-lg { margin-right: 140px; }
+  .mr160-lg { margin-right: 160px; }
+  .mr180-lg { margin-right: 180px; }
+  .mr200-lg { margin-right: 200px; }
+  .mr400-lg { margin-right: 400px; }
+  .mr600-lg { margin-right: 600px; }
+  .mr800-lg { margin-right: 800px; }
+
+  /**
+   * Bottom margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
+   *
+   * @example
+   *  <div class='mb5-lg'></div>
+   *  <div class='mb10-lg'></div>
+   *  <div class='mb40-lg'></div>
+   *  <div class='mb100-lg'></div>
+   *  <div class='mb200-lg'></div>
+   */
+  .mb0-lg { margin-bottom: 0; }
+  .mb5-lg { margin-bottom: 5px; }
+  .mb10-lg { margin-bottom: 10px; }
+  .mb20-lg { margin-bottom: 20px; }
+  .mb30-lg { margin-bottom: 30px; }
+  .mb40-lg { margin-bottom: 40px; }
+  .mb50-lg { margin-bottom: 50px; }
+  .mb60-lg { margin-bottom: 60px; }
+  .mb80-lg { margin-bottom: 80px; }
+  .mb100-lg { margin-bottom: 100px; }
+  .mb120-lg { margin-bottom: 120px; }
+  .mb140-lg { margin-bottom: 140px; }
+  .mb160-lg { margin-bottom: 160px; }
+  .mb180-lg { margin-bottom: 180px; }
+  .mb200-lg { margin-bottom: 200px; }
+  .mb400-lg { margin-bottom: 400px; }
+  .mb600-lg { margin-bottom: 600px; }
+  .mb800-lg { margin-bottom: 800px; }
+
+  /**
+   * Left margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
+   *
+   * @example
+   *  <div class='ml5-lg'></div>
+   *  <div class='ml10-lg'></div>
+   *  <div class='ml40-lg'></div>
+   *  <div class='ml100-lg'></div>
+   *  <div class='ml200-lg'></div>
+   */
+  .ml0-lg { margin-left: 0; }
+  .ml5-lg { margin-left: 5px; }
+  .ml10-lg { margin-left: 10px; }
+  .ml20-lg { margin-left: 20px; }
+  .ml30-lg { margin-left: 30px; }
+  .ml40-lg { margin-left: 40px; }
+  .ml50-lg { margin-left: 50px; }
+  .ml60-lg { margin-left: 60px; }
+  .ml80-lg { margin-left: 80px; }
+  .ml100-lg { margin-left: 100px; }
+  .ml120-lg { margin-left: 120px; }
+  .ml140-lg { margin-left: 140px; }
+  .ml160-lg { margin-left: 160px; }
+  .ml180-lg { margin-left: 180px; }
+  .ml200-lg { margin-left: 200px; }
+  .ml400-lg { margin-left: 400px; }
+  .ml600-lg { margin-left: 600px; }
+  .ml800-lg { margin-left: 800px; }
+}
+
 @media only screen and (max-width: 770px) {
   /**
    * Top margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mt5'></div>
-   *  <div class='mt10'></div>
-   *  <div class='mt40'></div>
-   *  <div class='mt100'></div>
-   *  <div class='mt200'></div>
+   *  <div class='mt5-md'></div>
+   *  <div class='mt10-md'></div>
+   *  <div class='mt40-md'></div>
+   *  <div class='mt100-md'></div>
+   *  <div class='mt200-md'></div>
    */
+  .mt0-md { margin-top: 0; }
   .mt5-md { margin-top: 5px; }
   .mt10-md { margin-top: 10px; }
   .mt20-md { margin-top: 20px; }
@@ -215,6 +334,7 @@ Zero out positioning
    *  <div class='mr100'></div>
    *  <div class='mr200'></div>
    */
+  .mr0-md { margin-right: 0; }
   .mr5-md { margin-right: 5px; }
   .mr10-md { margin-right: 10px; }
   .mr20-md { margin-right: 20px; }
@@ -237,12 +357,13 @@ Zero out positioning
    * Bottom margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mt5-md'></div>
-   *  <div class='mt10-md'></div>
-   *  <div class='mt40-md'></div>
-   *  <div class='mt100-md'></div>
-   *  <div class='mt200-md'></div>
+   *  <div class='mb5-md'></div>
+   *  <div class='mb10-md'></div>
+   *  <div class='mb40-md'></div>
+   *  <div class='mb100-md'></div>
+   *  <div class='mb200-md'></div>
    */
+  .mb0-md { margin-bottom: 0; }
   .mb5-md { margin-bottom: 5px; }
   .mb10-md { margin-bottom: 10px; }
   .mb20-md { margin-bottom: 20px; }
@@ -271,6 +392,7 @@ Zero out positioning
    *  <div class='ml100-md'></div>
    *  <div class='ml200-md'></div>
    */
+  .ml0-md { margin-left: 0; }
   .ml5-md { margin-left: 5px; }
   .ml10-md { margin-left: 10px; }
   .ml20-md { margin-left: 20px; }
@@ -295,12 +417,14 @@ Zero out positioning
    * Top margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
+   *  <div class='mt0-sm'></div>
    *  <div class='mt5-sm'></div>
    *  <div class='mt10-sm'></div>
    *  <div class='mt40-sm'></div>
    *  <div class='mt100-sm'></div>
    *  <div class='mt200-sm'></div>
    */
+  .mt0-sm { margin-top: 0; }
   .mt5-sm { margin-top: 5px; }
   .mt10-sm { margin-top: 10px; }
   .mt20-sm { margin-top: 20px; }
@@ -323,12 +447,14 @@ Zero out positioning
    * Right margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
+   *  <div class='mr0-sm'></div>
    *  <div class='mr5-sm'></div>
    *  <div class='mr10-sm'></div>
    *  <div class='mr40-sm'></div>
    *  <div class='mr100-sm'></div>
    *  <div class='mr200-sm'></div>
    */
+  .mr0-sm { margin-right: 0; }
   .mr5-sm { margin-right: 5px; }
   .mr10-sm { margin-right: 10px; }
   .mr20-sm { margin-right: 20px; }
@@ -351,24 +477,26 @@ Zero out positioning
    * Bottom margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
-   *  <div class='mt5-sm'></div>
-   *  <div class='mt10-sm'></div>
-   *  <div class='mt20-sm'></div>
-   *  <div class='mt30-sm'></div>
-   *  <div class='mt40-sm'></div>
-   *  <div class='mt50-sm'></div>
-   *  <div class='mt60-sm'></div>
-   *  <div class='mt80-sm'></div>
-   *  <div class='mt100-sm'></div>
-   *  <div class='mt120-sm'></div>
-   *  <div class='mt140-sm'></div>
-   *  <div class='mt160-sm'></div>
-   *  <div class='mt180-sm'></div>
-   *  <div class='mt200-sm'></div>
-   *  <div class='mt400-sm'></div>
-   *  <div class='mt600-sm'></div>
-   *  <div class='mt800-sm'></div>
+   *  <div class='mb0-sm'></div>
+   *  <div class='mb5-sm'></div>
+   *  <div class='mb10-sm'></div>
+   *  <div class='mb20-sm'></div>
+   *  <div class='mb30-sm'></div>
+   *  <div class='mb40-sm'></div>
+   *  <div class='mb50-sm'></div>
+   *  <div class='mb60-sm'></div>
+   *  <div class='mb80-sm'></div>
+   *  <div class='mb100-sm'></div>
+   *  <div class='mb120-sm'></div>
+   *  <div class='mb140-sm'></div>
+   *  <div class='mb160-sm'></div>
+   *  <div class='mb180-sm'></div>
+   *  <div class='mb200-sm'></div>
+   *  <div class='mb400-sm'></div>
+   *  <div class='mb600-sm'></div>
+   *  <div class='mb800-sm'></div>
    */
+  .mb0-sm { margin-bottom: 0; }
   .mb5-sm { margin-bottom: 5px; }
   .mb10-sm { margin-bottom: 10px; }
   .mb20-sm { margin-bottom: 20px; }
@@ -391,12 +519,14 @@ Zero out positioning
    * Left margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px
    *
    * @example
+   *  <div class='ml0'></div>
    *  <div class='ml5'></div>
    *  <div class='ml10'></div>
    *  <div class='ml40'></div>
    *  <div class='ml100'></div>
    *  <div class='ml200'></div>
    */
+  .ml0-sm { margin-left: 0; }
   .ml5-sm { margin-left: 5px; }
   .ml10-sm { margin-left: 10px; }
   .ml20-sm { margin-left: 20px; }
@@ -444,11 +574,11 @@ Zero out positioning
  *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
  *
  * @example
- *  <div class='pt5'></div>
- *  <div class='pt10'></div>
- *  <div class='pt40'></div>
- *  <div class='pt100'></div>
- *  <div class='pt200'></div>
+ *  <div class='py5'></div>
+ *  <div class='py10'></div>
+ *  <div class='py40'></div>
+ *  <div class='py100'></div>
+ *  <div class='py200'></div>
  */
 .py5 { padding-bottom: 5px; padding-top: 5px; }
 .py10 { padding-bottom: 10px; padding-top: 10px; }
@@ -516,19 +646,19 @@ Zero out positioning
  * Bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
  *
  * @example
- *  <div class='pt5'></div>
- *  <div class='pt10'></div>
- *  <div class='pt40'></div>
- *  <div class='pt100'></div>
- *  <div class='pt200'></div>
+ *  <div class='pb5'></div>
+ *  <div class='pb10'></div>
+ *  <div class='pb40'></div>
+ *  <div class='pb100'></div>
+ *  <div class='pb200'></div>
  */
-.pt5 { padding-top: 5px; }
-.pt10 { padding-top: 10px; }
-.pt20 { padding-top: 20px; }
-.pt40 { padding-top: 40px; }
-.pt60 { padding-top: 60px; }
-.pt80 { padding-top: 80px; }
-.pt100 { padding-top: 100px; }
+.pb5 { padding-bottom: 5px; }
+.pb10 { padding-bottom: 10px; }
+.pb20 { padding-bottom: 20px; }
+.pb40 { padding-bottom: 40px; }
+.pb60 { padding-bottom: 60px; }
+.pb80 { padding-bottom: 80px; }
+.pb100 { padding-bottom: 100px; }
 
 /**
  * Left padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
@@ -548,17 +678,161 @@ Zero out positioning
 .pl80 { padding-left: 80px; }
 .pl100 { padding-left: 100px; }
 
+@media only screen and (max-width: 1824px) {
+  /**
+   *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+   *
+   * @example
+   *  <div class='p0-lg'></div>
+   *  <div class='p5-lg'></div>
+   *  <div class='p10-lg'></div>
+   *  <div class='p40-lg'></div>
+   *  <div class='p100-lg'></div>
+   *  <div class='p200-lg'></div>
+   */
+  .p0-lg { padding: 0; }
+  .p5-lg { padding: 5px; }
+  .p10-lg { padding: 10px; }
+  .p20-lg { padding: 20px; }
+  .p40-lg { padding: 40px; }
+  .p60-lg { padding: 60px; }
+  .p80-lg { padding: 80px; }
+  .p100-lg { padding: 100px; }
+
+  /**
+   *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+   *
+   * @example
+   *  <div class='py0-lg'></div>
+   *  <div class='py5-lg'></div>
+   *  <div class='py10-lg'></div>
+   *  <div class='py40-lg'></div>
+   *  <div class='py100-lg'></div>
+   *  <div class='py200-lg'></div>
+   */
+  .py0-lg { padding-bottom: 0; padding-top: 0; }
+  .py5-lg { padding-bottom: 5px; padding-top: 5px; }
+  .py10-lg { padding-bottom: 10px; padding-top: 10px; }
+  .py20-lg { padding-bottom: 20px; padding-top: 20px; }
+  .py40-lg { padding-bottom: 40px; padding-top: 40px; }
+  .py60-lg { padding-bottom: 60px; padding-top: 60px; }
+  .py80-lg { padding-bottom: 80px; padding-top: 80px; }
+  .py100-lg { padding-bottom: 100px; padding-top: 100px; }
+
+  /**
+   *  Left and right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+   *
+   * @example
+   *  <div class='px0-lg'></div>
+   *  <div class='px5-lg'></div>
+   *  <div class='px10-lg'></div>
+   *  <div class='px40-lg'></div>
+   *  <div class='px100-lg'></div>
+   *  <div class='px200-lg'></div>
+   */
+  .px0-lg { padding-right: 0; padding-left: 0; }
+  .px5-lg { padding-right: 5px; padding-left: 5px; }
+  .px10-lg { padding-right: 10px; padding-left: 10px; }
+  .px20-lg { padding-right: 20px; padding-left: 20px; }
+  .px40-lg { padding-right: 40px; padding-left: 40px; }
+  .px60-lg { padding-right: 60px; padding-left: 60px; }
+  .px80-lg { padding-right: 80px; padding-left: 80px; }
+  .px100-lg { padding-right: 100px; padding-left: 100px; }
+
+  /**
+   * Top padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+   *
+   * @example
+   *  <div class='pt0-lg'></div>
+   *  <div class='pt5-lg'></div>
+   *  <div class='pt10-lg'></div>
+   *  <div class='pt40-lg'></div>
+   *  <div class='pt100-lg'></div>
+   *  <div class='pt200-lg'></div>
+   */
+  .pt0-lg { padding-top: 0; }
+  .pt5-lg { padding-top: 5px; }
+  .pt10-lg { padding-top: 10px; }
+  .pt20-lg { padding-top: 20px; }
+  .pt40-lg { padding-top: 40px; }
+  .pt60-lg { padding-top: 60px; }
+  .pt80-lg { padding-top: 80px; }
+  .pt100-lg { padding-top: 100px; }
+
+  /**
+   * Right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+   *
+   * @example
+   *  <div class='pr0-lg'></div>
+   *  <div class='pr5-lg'></div>
+   *  <div class='pr10-lg'></div>
+   *  <div class='pr40-lg'></div>
+   *  <div class='pr100-lg'></div>
+   *  <div class='pr200-lg'></div>
+   */
+  .pr0-lg { padding-right: 0; }
+  .pr5-lg { padding-right: 5px; }
+  .pr10-lg { padding-right: 10px; }
+  .pr20-lg { padding-right: 20px; }
+  .pr40-lg { padding-right: 40px; }
+  .pr60-lg { padding-right: 60px; }
+  .pr80-lg { padding-right: 80px; }
+  .pr100-lg { padding-right: 100px; }
+
+  /**
+   * Bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+   *
+   * @example
+   *  <div class='pb0-lg'></div>
+   *  <div class='pb5-lg'></div>
+   *  <div class='pb10-lg'></div>
+   *  <div class='pb40-lg'></div>
+   *  <div class='pb100-lg'></div>
+   *  <div class='pb200-lg'></div>
+   */
+  .pb0-lg { padding-bottom: 0; }
+  .pb5-lg { padding-bottom: 5px; }
+  .pb10-lg { padding-bottom: 10px; }
+  .pb20-lg { padding-bottom: 20px; }
+  .pb40-lg { padding-bottom: 40px; }
+  .pb60-lg { padding-bottom: 60px; }
+  .pb80-lg { padding-bottom: 80px; }
+  .pb100-lg { padding-bottom: 100px; }
+
+  /**
+   * Left padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
+   *
+   * @example
+   *  <div class='pl0-lg'></div>
+   *  <div class='pl5-lg'></div>
+   *  <div class='pl10-lg'></div>
+   *  <div class='pl40-lg'</div>
+   *  <div class='pl100-lg'></div>
+   *  <div class='pl200-lg'></div>
+   */
+  .pl0-lg { padding-left: 0; }
+  .pl5-lg { padding-left: 5px; }
+  .pl10-lg { padding-left: 10px; }
+  .pl20-lg { padding-left: 20px; }
+  .pl40-lg { padding-left: 40px; }
+  .pl60-lg { padding-left: 60px; }
+  .pl80-lg { padding-left: 80px; }
+  .pl100-lg { padding-left: 100px; }
+}
+
 @media only screen and (max-width: 770px) {
   /**
    *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pt5-md'></div>
-   *  <div class='pt10-md'></div>
-   *  <div class='pt40-md'></div>
-   *  <div class='pt100-md'></div>
-   *  <div class='pt200-md'></div>
+   *  <div class='p0-md'></div>
+   *  <div class='p5-md'></div>
+   *  <div class='p10-md'></div>
+   *  <div class='p40-md'></div>
+   *  <div class='p100-md'></div>
+   *  <div class='p200-md'></div>
    */
+  .p0-md { padding: 0; }
   .p5-md { padding: 5px; }
   .p10-md { padding: 10px; }
   .p20-md { padding: 20px; }
@@ -571,12 +845,14 @@ Zero out positioning
    *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pt5-md'></div>
-   *  <div class='pt10-md'></div>
-   *  <div class='pt40-md'></div>
-   *  <div class='pt100-md'></div>
-   *  <div class='pt200-md'></div>
+   *  <div class='py0-md'></div>
+   *  <div class='py5-md'></div>
+   *  <div class='py10-md'></div>
+   *  <div class='py40-md'></div>
+   *  <div class='py100-md'></div>
+   *  <div class='py200-md'></div>
    */
+  .py0-md { padding-bottom: 0; padding-top: 0; }
   .py5-md { padding-bottom: 5px; padding-top: 5px; }
   .py10-md { padding-bottom: 10px; padding-top: 10px; }
   .py20-md { padding-bottom: 20px; padding-top: 20px; }
@@ -589,12 +865,14 @@ Zero out positioning
    *  Left and right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
+   *  <div class='px0-md'></div>
    *  <div class='px5-md'></div>
    *  <div class='px10-md'></div>
    *  <div class='px40-md'></div>
    *  <div class='px100-md'></div>
    *  <div class='px200-md'></div>
    */
+  .px0-md { padding-right: 0; padding-left: 0; }
   .px5-md { padding-right: 5px; padding-left: 5px; }
   .px10-md { padding-right: 10px; padding-left: 10px; }
   .px20-md { padding-right: 20px; padding-left: 20px; }
@@ -607,12 +885,14 @@ Zero out positioning
    * Top padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
+   *  <div class='pt0-md'></div>
    *  <div class='pt5-md'></div>
    *  <div class='pt10-md'></div>
    *  <div class='pt40-md'></div>
    *  <div class='pt100-md'></div>
    *  <div class='pt200-md'></div>
    */
+  .pt0-md { padding-top: 0; }
   .pt5-md { padding-top: 5px; }
   .pt10-md { padding-top: 10px; }
   .pt20-md { padding-top: 20px; }
@@ -625,12 +905,14 @@ Zero out positioning
    * Right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
+   *  <div class='pr0-md'></div>
    *  <div class='pr5-md'></div>
    *  <div class='pr10-md'></div>
    *  <div class='pr40-md'></div>
    *  <div class='pr100-md'></div>
    *  <div class='pr200-md'></div>
    */
+  .pr0-md { padding-right: 0; }
   .pr5-md { padding-right: 5px; }
   .pr10-md { padding-right: 10px; }
   .pr20-md { padding-right: 20px; }
@@ -643,30 +925,34 @@ Zero out positioning
    * Bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pt5-md'></div>
-   *  <div class='pt10-md'></div>
-   *  <div class='pt40-md'></div>
-   *  <div class='pt100-md'></div>
-   *  <div class='pt200-md'></div>
+   *  <div class='pb0-md'></div>
+   *  <div class='pb5-md'></div>
+   *  <div class='pb10-md'></div>
+   *  <div class='pb40-md'></div>
+   *  <div class='pb100-md'></div>
+   *  <div class='pb200-md'></div>
    */
-  .pt5-md { padding-top: 5px; }
-  .pt10-md { padding-top: 10px; }
-  .pt20-md { padding-top: 20px; }
-  .pt40-md { padding-top: 40px; }
-  .pt60-md { padding-top: 60px; }
-  .pt80-md { padding-top: 80px; }
-  .pt100-md { padding-top: 100px; }
+  .pb0-md { padding-bottom: 0; }
+  .pb5-md { padding-bottom: 5px; }
+  .pb10-md { padding-bottom: 10px; }
+  .pb20-md { padding-bottom: 20px; }
+  .pb40-md { padding-bottom: 40px; }
+  .pb60-md { padding-bottom: 60px; }
+  .pb80-md { padding-bottom: 80px; }
+  .pb100-md { padding-bottom: 100px; }
 
   /**
    * Left padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
+   *  <div class='pl0-md'></div>
    *  <div class='pl5-md'></div>
    *  <div class='pl10-md'></div>
    *  <div class='pl40-md'></div>
    *  <div class='pl100-md'></div>
    *  <div class='pl200-md'></div>
    */
+  .pl0-md { padding-left: 0; }
   .pl5-md { padding-left: 5px; }
   .pl10-md { padding-left: 10px; }
   .pl20-md { padding-left: 20px; }
@@ -681,12 +967,14 @@ Zero out positioning
    *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
+   *  <div class='p0-sm'></div>
    *  <div class='p5-sm'></div>
    *  <div class='p10-sm'></div>
    *  <div class='p40-sm'></div>
    *  <div class='p100-sm'></div>
    *  <div class='p200-sm'></div>
    */
+  .p0-sm { padding: 0; }
   .p5-sm { padding: 5px; }
   .p10-sm { padding: 10px; }
   .p20-sm { padding: 20px; }
@@ -699,12 +987,14 @@ Zero out positioning
    *  Top and bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
+   *  <div class='py0-sm'></div>
    *  <div class='py5-sm'></div>
    *  <div class='py10-sm'></div>
    *  <div class='py40-sm'></div>
    *  <div class='py100-sm'></div>
    *  <div class='py200-sm'></div>
    */
+  .py0-sm { padding-bottom: 0; padding-top: 0; }
   .py5-sm { padding-bottom: 5px; padding-top: 5px; }
   .py10-sm { padding-bottom: 10px; padding-top: 10px; }
   .py20-sm { padding-bottom: 20px; padding-top: 20px; }
@@ -717,12 +1007,14 @@ Zero out positioning
    *  Left and right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
+   *  <div class='px0-sm'></div>
    *  <div class='px5-sm'></div>
    *  <div class='px10-sm'></div>
    *  <div class='px40-sm'></div>
    *  <div class='px100-sm'></div>
    *  <div class='px200-sm'></div>
    */
+  .px0-sm { padding-right: 0; padding-left: 0; }
   .px5-sm { padding-right: 5px; padding-left: 5px; }
   .px10-sm { padding-right: 10px; padding-left: 10px; }
   .px20-sm { padding-right: 20px; padding-left: 20px; }
@@ -735,12 +1027,14 @@ Zero out positioning
    * Top padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
+   *  <div class='pt0-sm'></div>
    *  <div class='pt5-sm'></div>
    *  <div class='pt10-sm'></div>
    *  <div class='pt40-sm'></div>
    *  <div class='pt100-sm'></div>
    *  <div class='pt200-sm'></div>
    */
+  .pt0-sm { padding-top: 0; }
   .pt5-sm { padding-top: 5px; }
   .pt10-sm { padding-top: 10px; }
   .pt20-sm { padding-top: 20px; }
@@ -753,12 +1047,14 @@ Zero out positioning
    * Right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
+   *  <div class='pr0-sm'></div>
    *  <div class='pr5-sm'></div>
    *  <div class='pr10-sm'></div>
    *  <div class='pr40-sm'></div>
    *  <div class='pr100-sm'></div>
    *  <div class='pr200-sm'></div>
    */
+  .pr0-sm { padding-right: 0; }
   .pr5-sm { padding-right: 5px; }
   .pr10-sm { padding-right: 10px; }
   .pr20-sm { padding-right: 20px; }
@@ -771,30 +1067,34 @@ Zero out positioning
    * Bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
-   *  <div class='pt5-sm'></div>
-   *  <div class='pt10-sm'></div>
-   *  <div class='pt40-sm'></div>
-   *  <div class='pt100-sm'></div>
-   *  <div class='pt200-sm'></div>
+   *  <div class='pb0-sm'></div>
+   *  <div class='pb5-sm'></div>
+   *  <div class='pb10-sm'></div>
+   *  <div class='pb40-sm'></div>
+   *  <div class='pb100-sm'></div>
+   *  <div class='pb200-sm'></div>
    */
-  .pt5-sm { padding-top: 5px; }
-  .pt10-sm { padding-top: 10px; }
-  .pt20-sm { padding-top: 20px; }
-  .pt40-sm { padding-top: 40px; }
-  .pt60-sm { padding-top: 60px; }
-  .pt80-sm { padding-top: 80px; }
-  .pt100-sm { padding-top: 100px; }
+  .pb0-sm { padding-bottom: 0; }
+  .pb5-sm { padding-bottom: 5px; }
+  .pb10-sm { padding-bottom: 10px; }
+  .pb20-sm { padding-bottom: 20px; }
+  .pb40-sm { padding-bottom: 40px; }
+  .pb60-sm { padding-bottom: 60px; }
+  .pb80-sm { padding-bottom: 80px; }
+  .pb100-sm { padding-bottom: 100px; }
 
   /**
    * Left padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
    *
    * @example
+   *  <div class='pl0-sm'></div>
    *  <div class='pl5-sm'></div>
    *  <div class='pl10-sm'></div>
    *  <div class='pl40-sm'></div>
    *  <div class='pl100-sm'></div>
    *  <div class='pl200-sm'></div>
    */
+  .pl0-sm { padding-left: 0; }
   .pl5-sm { padding-left: 5px; }
   .pl10-sm { padding-left: 10px; }
   .pl20-sm { padding-left: 20px; }
