@@ -6,45 +6,63 @@
 /**
  * Background colors.
  * @example
+ * <div class='mar-bottom-10 p10 bg-gray-dark'>bg-gray-dark</div>
  * <div class='mar-bottom-10 p10 bg-gray'>bg-gray</div>
- * <div class='mar-bottom-10 p10 bg-blue'>bg-blue</div>
- * <div class='mar-bottom-10 p10 bg-purple'>bg-purple</div>
+ * <div class='mar-bottom-10 p10 bg-gray-light'>bg-gray-light</div>
+ * <div class='mar-bottom-10 p10 bg-pink-dark'>bg-pink-dark</div>
  * <div class='mar-bottom-10 p10 bg-pink'>bg-pink</div>
+ * <div class='mar-bottom-10 p10 bg-pink-light'>bg-pink-light</div>
+ * <div class='mar-bottom-10 p10 bg-red-dark'>bg-red-dark</div>
  * <div class='mar-bottom-10 p10 bg-red'>bg-red</div>
+ * <div class='mar-bottom-10 p10 bg-red-light'>bg-red-light</div>
+ * <div class='mar-bottom-10 p10 bg-orange-dark'>bg-orange-dark</div>
  * <div class='mar-bottom-10 p10 bg-orange'>bg-orange</div>
- * <div class='mar-bottom-10 p10 bg-mustard'>bg-mustard</div>
+ * <div class='mar-bottom-10 p10 bg-orange-light'>bg-orange-light</div>
+ * <div class='mar-bottom-10 p10 bg-yellow-dark'>bg-yellow-dark</div>
  * <div class='mar-bottom-10 p10 bg-yellow'>bg-yellow</div>
+ * <div class='mar-bottom-10 p10 bg-yellow-light'>bg-yellow-light</div>
+ * <div class='mar-bottom-10 p10 bg-green-dark'>bg-green-dark</div>
  * <div class='mar-bottom-10 p10 bg-green'>bg-green</div>
+ * <div class='mar-bottom-10 p10 bg-green-light'>bg-green-light</div>
+ * <div class='mar-bottom-10 p10 bg-teal-dark'>bg-teal-dark</div>
  * <div class='mar-bottom-10 p10 bg-teal'>bg-teal</div>
- * <div class='mar-bottom-10 p10 bg-cyan'>bg-cyan</div>
- * <div class='mar-bottom-10 p10 bg-denim'>bg-denim</div>
- * <div class='mar-bottom-10 p10 bg-navy'>bg-navy</div>
- * <div class='mar-bottom-10 p10 bg-white'>bg-white</div>
- * <div class='mar-bottom-10 p10 bg-light'>bg-light</div>
- * <div class='mar-bottom-10 p10 bg-darken-5'>bg-darken-5</div>
- * <div class='mar-bottom-10 p10 bg-darken-25'>bg-darken-25</div>
- * <div class='mar-bottom-10 p10 bg-darken-50'>bg-darken-50</div>
- * <div class='mar-bottom-10 p10 bg-darken-75'>bg-darken-75</div>
- * <div class='mar-bottom-10 p10 bg-lighten-10'>bg-lighten-10</div>
- * <div class='mar-bottom-10 p10 bg-lighten-25'>bg-lighten-25</div>
- * <div class='mar-bottom-10 p10 bg-lighten-50'>bg-lighten-50</div>
- * <div class='mar-bottom-10 p10 bg-lighten-75'>bg-lighten-75</div>
+ * <div class='mar-bottom-10 p10 bg-teal-light'>bg-teal-light</div>
+ * <div class='mar-bottom-10 p10 bg-blue-dark'>bg-blue-dark</div>
+ * <div class='mar-bottom-10 p10 bg-blue'>bg-blue</div>
+ * <div class='mar-bottom-10 p10 bg-blue-light'>bg-blue-light</div>
+ * <div class='mar-bottom-10 p10 bg-purple-dark'>bg-purple-dark</div>
+ * <div class='mar-bottom-10 p10 bg-purple'>bg-purple</div>
+ * <div class='mar-bottom-10 p10 bg-purple-light'>bg-purple-light</div>
  */
-.bg-gray { background-color: #acb4b9; }
-.bg-blue { background-color: #0077cc; }
-.bg-purple { background-color: #5500cc; }
-.bg-pink { background-color: #cc0077; }
-.bg-red { background-color: #cc0011; }
-.bg-orange { background-color: #cc5500; }
-.bg-mustard { background-color: #ffbf16; }
-.bg-yellow { background-color: #ffeb3b; }
-.bg-green { background-color: #11cc00; }
-.bg-teal { background-color: #3fbfbc; }
-.bg-cyan { background-color: #00ccbb; }
-.bg-denim { background-color: #34607f; }
-.bg-navy { background-color: #0a3a5c; }
-.bg-white { background-color: #fff; }
-.bg-light { background-color: #f2f2f2; }
+
+.bg-gray-dark { background-color: #333; }
+.bg-gray { background-color: #888; }
+.bg-gray-light { background-color: #ccc; }
+.bg-pink-dark { background-color: #C8145A; }
+.bg-pink { background-color: #FF3C96; }
+.bg-pink-light { background-color: #FF88C0; }
+.bg-red-dark { background-color: #BE0014; }
+.bg-red { background-color: #DC2B28; }
+.bg-red-light { background-color: #FF8280; }
+.bg-orange-dark { background-color: #DC4600; }
+.bg-orange { background-color: #FF6E00; }
+.bg-orange-light { background-color: #FFA950; }
+.bg-yellow-dark { background-color: #FFBD0A; }
+.bg-yellow { background-color: #F0DC00; }
+.bg-yellow-light { background-color: #F0F062; }
+.bg-green-dark { background-color: #007532; }
+.bg-green { background-color: #01AA46; }
+.bg-green-light { background-color: #72C781; }
+.bg-teal-dark { background-color: #00626E; }
+.bg-teal { background-color: #01B5B4; }
+.bg-teal-light { background-color: #50D2D2; }
+.bg-blue-dark { background-color: #0014AA; }
+.bg-blue { background-color: #0065FB; }
+.bg-blue-light { background-color: #00B1FF; }
+.bg-purple-dark { background-color: #500078; }
+.bg-purple { background-color: #8C50C7; }
+.bg-purple-light { background-color: #C299E3; }
+.bg-darken-dark { background-color: rgba(0, 0, 0, 0.05); }
 
 .bg-darken5 { background-color: rgba(0, 0, 0, 0.05); }
 .bg-darken25 { background-color: rgba(0, 0, 0, 0.25); }
@@ -59,45 +77,62 @@
 /**
  * Text colors.
  * @example
+ * <div class='mar-bottom-10 txt-gray-dark'>txt-gray-dark</div>
  * <div class='mar-bottom-10 txt-gray'>txt-gray</div>
- * <div class='mar-bottom-10 txt-blue'>txt-blue</div>
- * <div class='mar-bottom-10 txt-purple'>txt-purple</div>
+ * <div class='mar-bottom-10 txt-gray-light'>txt-gray-light</div>
+ * <div class='mar-bottom-10 txt-pink-dark'>txt-pink-dark</div>
  * <div class='mar-bottom-10 txt-pink'>txt-pink</div>
+ * <div class='mar-bottom-10 txt-pink-light'>txt-pink-light</div>
+ * <div class='mar-bottom-10 txt-red-dark'>txt-red-dark</div>
  * <div class='mar-bottom-10 txt-red'>txt-red</div>
+ * <div class='mar-bottom-10 txt-red-light'>txt-red-light</div>
+ * <div class='mar-bottom-10 txt-orange-dark'>txt-orange-dark</div>
  * <div class='mar-bottom-10 txt-orange'>txt-orange</div>
- * <div class='mar-bottom-10 txt-mustard'>txt-mustard</div>
+ * <div class='mar-bottom-10 txt-orange-light'>txt-orange-light</div>
+ * <div class='mar-bottom-10 txt-yellow-dark'>txt-yellow-dark</div>
  * <div class='mar-bottom-10 txt-yellow'>txt-yellow</div>
+ * <div class='mar-bottom-10 txt-yellow-light'>txt-yellow-light</div>
+ * <div class='mar-bottom-10 txt-green-dark'>txt-green-dark</div>
  * <div class='mar-bottom-10 txt-green'>txt-green</div>
+ * <div class='mar-bottom-10 txt-green-light'>txt-green-light</div>
+ * <div class='mar-bottom-10 txt-teal-dark'>txt-teal-dark</div>
  * <div class='mar-bottom-10 txt-teal'>txt-teal</div>
- * <div class='mar-bottom-10 txt-cyan'>txt-cyan</div>
- * <div class='mar-bottom-10 txt-denim'>txt-denim</div>
- * <div class='mar-bottom-10 txt-navy'>txt-navy</div>
- * <div class='mar-bottom-10 txt-white'>txt-white</div>
- * <div class='mar-bottom-10 txt-light'>txt-light</div>
- * <div class='mar-bottom-10 txt-darken-5'>txt-darken-5</div>
- * <div class='mar-bottom-10 txt-darken-25'>txt-darken-25</div>
- * <div class='mar-bottom-10 txt-darken-50'>txt-darken-50</div>
- * <div class='mar-bottom-10 txt-darken-75'>txt-darken-75</div>
- * <div class='mar-bottom-10 txt-lighten-10'>txt-lighten-10</div>
- * <div class='mar-bottom-10 txt-lighten-25'>txt-lighten-25</div>
- * <div class='mar-bottom-10 txt-lighten-50'>txt-lighten-50</div>
- * <div class='mar-bottom-10 txt-lighten-75'>txt-lighten-75</div>
+ * <div class='mar-bottom-10 txt-teal-light'>txt-teal-light</div>
+ * <div class='mar-bottom-10 txt-blue-dark'>txt-blue-dark</div>
+ * <div class='mar-bottom-10 txt-blue'>txt-blue</div>
+ * <div class='mar-bottom-10 txt-blue-light'>txt-blue-light</div>
+ * <div class='mar-bottom-10 txt-purple-dark'>txt-purple-dark</div>
+ * <div class='mar-bottom-10 txt-purple'>txt-purple</div>
+ * <div class='mar-bottom-10 txt-purple-light'>txt-purple-light</div>
  */
-.txt-gray { color: #acb4b9; }
-.txt-blue { color: #0077cc; }
-.txt-purple { color: #5500cc; }
-.txt-pink { color: #cc0077; }
-.txt-red { color: #cc0011; }
-.txt-orange { color: #cc5500; }
-.txt-mustard { color: #ffbf16; }
-.txt-yellow { color: #ffeb3b; }
-.txt-green { color: #11cc00; }
-.txt-teal { color: #3fbfbc; }
-.txt-cyan { color: #00ccbb; }
-.txt-denim { color: #34607f; }
-.txt-navy { color: #0a3a5c; }
-.txt-white { color: #fff; }
-.txt-light { color: #f2f2f2; }
+
+.txt-gray-dark { color: #333; }
+.txt-gray { color: #888; }
+.txt-gray-light { color: #ccc; }
+.txt-pink-dark { color: #C8145A; }
+.txt-pink { color: #FF3C96; }
+.txt-pink-light { color: #FF88C0; }
+.txt-red-dark { color: #BE0014; }
+.txt-red { color: #DC2B28; }
+.txt-red-light { color: #FF8280; }
+.txt-orange-dark { color: #DC4600; }
+.txt-orange { color: #FF6E00; }
+.txt-orange-light { color: #FFA950; }
+.txt-yellow-dark { color: #FFBD0A; }
+.txt-yellow { color: #F0DC00; }
+.txt-yellow-light { color: #F0F062; }
+.txt-green-dark { color: #007532; }
+.txt-green { color: #01AA46; }
+.txt-green-light { color: #72C781; }
+.txt-teal-dark { color: #00626E; }
+.txt-teal { color: #01B5B4; }
+.txt-teal-light { color: #50D2D2; }
+.txt-blue-dark { color: #0014AA; }
+.txt-blue { color: #0065FB; }
+.txt-blue-light { color: #00B1FF; }
+.txt-purple-dark { color: #500078; }
+.txt-purple { color: #8C50C7; }
+.txt-purple-light { color: #C299E3; }
 
 .txt-darken5 { color: rgba(0, 0, 0, 0.05); }
 .txt-darken25 { color: rgba(0, 0, 0, 0.25); }
