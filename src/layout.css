@@ -514,3 +514,14 @@
 
 .bld-right { flex: 1; margin-right: calc(50% - 50vw); }
 .bld-left { flex: 1; margin-left: calc(50% - 50vw); }
+
+/**
+ * Float classes
+ */
+.cf::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.fl { float: left; }
+.fr { float: right; }
