@@ -6,23 +6,22 @@
 /**
  * Size icons with these classes. Icons require special instructions...
  * @example
- * <svg class="icn-md" role="img"><use xlink:href="#base-svg-library"/></svg>
+ * <svg class="icn icn--md" role="img"><use xlink:href="#base-svg-library"/></svg>
  */
 
-.icn-sm {
-  fill: currentColor;
+.icn { fill: currentColor; }
+
+.icn--sm {
   height: 15px;
   width: 15px;
 }
 
-.icn-md {
-  fill: currentColor;
+.icn--md {
   height: 20px;
   width: 20px;
 }
 
-.icn-lg {
-  fill: currentColor;
+.icn--lg {
   height: 40px;
   width: 40px;
 }
