@@ -8,19 +8,21 @@
  * @example
  * <svg class="icn-md" role="img"><use xlink:href="#base-svg-library"/></svg>
  */
-[class^='icn-'] { fill: currentColor; }
 
 .icn-sm {
+  fill: currentColor;
   height: 15px;
   width: 15px;
 }
 
 .icn-md {
+  fill: currentColor;
   height: 20px;
   width: 20px;
 }
 
 .icn-lg {
+  fill: currentColor;
   height: 40px;
   width: 40px;
 }

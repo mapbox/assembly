@@ -59,26 +59,25 @@ textarea {
  *    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <strong>Incidunt magnam</strong>, cum consectetur maiores corrupti nulla iste saepe <em>porro repellat</em> beatae modi laudantium laborum magni voluptate impedit sint pariatur?</p>
  *  </div>
 */
-[class*='txt-h'],
-.txt-p,
-.txt h1,
-.txt h2,
-.txt h3,
-.txt h4,
-.txt h5,
-.txt h6,
-.txt p {
+.txt p,
+.txt-p {
   margin-bottom: 25px;
 }
 
-[class*='txt-h'],
+.txt-h1,
 .txt h1,
+.txt-h2,
 .txt h2,
+.txt-h3,
 .txt h3,
+.txt-h4,
 .txt h4,
+.txt-h5,
 .txt h5,
+.txt-h6,
 .txt h6 {
   font-weight: bold;
+  margin-bottom: 25px;
 }
 
 .txt-h1,
