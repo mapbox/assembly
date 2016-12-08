@@ -1,0 +1,113 @@
+/**
+ * @section Buttons
+ */
+
+.btn {
+  background-color: #0077cc; /* blue */
+  color: #fff;
+  border: 2px solid transparent;
+  /* Odd numbers on padding are accommodating borders */
+  padding: 8px 23px;
+  line-height: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* States */
+.btn:hover {
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+.btn.is-active {
+  background: black;
+}
+.btn.is-disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* Sizes */
+.btn--short { padding: 1px 18px; }
+.btn--micro {
+  font-size: 10px;
+  padding: 0 8px;
+}
+
+/* Stroke and white */
+.btn--stroke,
+.btn--white {
+  background-color: #fff;
+  color: #0077cc; /* blue */
+}
+
+.btn--stroke {
+  border: 2px solid;
+}
+.btn--stroke:hover {
+  box-shadow: none;
+}
+
+.btn--stroke.btn--white {
+  background-color: transparent;
+  color: #fff;
+}
+
+.btn--stroke.is-active,
+.btn--white.is-active {
+  background: #0077cc; /* blue */
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Clean and underlined */
+.btn--clean,
+.btn--underline {
+  background-color: transparent;
+  padding: 0;
+  color: #0077cc; /* blue */
+}
+.btn--clean:hover,
+.btn--underline:hover {
+  box-shadow: none;
+}
+.btn--underline {
+  text-decoration: underline;
+}
+
+/* Curvature */
+.btn--round {
+  border-radius: 20px;
+}
+.btn--short.btn--round {
+  border-radius: 15px;
+}
+
+/* Pill formations */
+.btn--pill {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.btn--pill-l {
+  border-radius: 20px 0 0 20px;
+}
+.btn--pill-r {
+  border-radius: 0 20px 20px 0;
+}
+.btn--short.btn--pill-l {
+  border-radius: 15px 0 0 15px;
+}
+.btn--short.btn--pill-r {
+  border-radius: 0 15px 15px 0;
+}
+
+.btn--stroke.btn--pill {
+  margin-left: 0;
+  margin-right: 0;
+  border-left: 0;
+  border-right: 0;
+}

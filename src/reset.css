@@ -36,4 +36,30 @@ table { border-collapse: collapse; border-spacing: 0; }
 :focus { outline: 0; }
 hr { margin: 0; border: 0; }
 
-*, *:after, *:before { box-sizing: border-box; }
+html {
+  box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+button {
+  background: transparent;
+  box-sizing: border-box;
+  border: none;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  text-align: left;
+  appearance: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
