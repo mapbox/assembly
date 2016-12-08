@@ -77,6 +77,7 @@
     "number-no-trailing-zeros": true,
     "property-case": "lower",
     "property-no-unknown": true,
+    "selector-class-pattern": "^[a-z]+[0-9]*-((?!md-|sm-|lg-)[a-z0-9-]*)(-sm|-md|-lg)?$",
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,
