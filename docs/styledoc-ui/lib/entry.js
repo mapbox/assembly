@@ -23,21 +23,34 @@ class Entry extends React.Component {
     const { props } = this;
     const { showSource } = this.state;
 
-    const example = props.parsedComment.example ? (<div style={{ marginBottom: '40px' }}>
-      <div style={{ marginBottom: '20px' }}>
-        <div className='styledoc-example-label'>Example</div>
-        <div dangerouslySetInnerHTML={{ __html: props.parsedComment.example.description }} />
+    const example = !props.parsedComment.example ? null : (
+      <div style={{ marginBottom: '40px' }}>
+        <div style={{ marginBottom: '20px' }}>
+          <div className='styledoc-example-label'>Example</div>
+          <div dangerouslySetInnerHTML={{ __html: props.parsedComment.example.description }} />
+        </div>
+        <Lowlight
+          language='html'
+          value={props.parsedComment.example.description} />
       </div>
+    );
+
+    const source = (!showSource || !props.referencedSource) ? null : (
       <Lowlight
-        language='html'
-        value={props.parsedComment.example.description} />
-    </div>) : null;
+        language='css'
+        value={props.referencedSource.toString()}
+      />
+    );
+
+    const selector = (props.type === 'member')
+      ? props.referencedSource.selector
+      : props.members.join(', ');
 
     return (
       <div style={{ overflow: 'hidden' }}>
         <div style={{ float: 'left', width: `${100 / 3}%` }}>
           <div className='styledoc-selector-name'>
-            {props.referencedSource.selector}
+            {selector}
           </div>
           <div className='styledoc-selector-description'>
             {remark().use(reactRenderer).process(props.parsedComment.description).contents}
@@ -50,9 +63,7 @@ class Entry extends React.Component {
             >
               {showSource ? 'Hide' : 'Show'} source
             </div>
-            {showSource ? (<Lowlight
-             language='css'
-             value={props.referencedSource.toString()} />) : null}
+            {source}
           </div>
         </div>
         <div style={{ float: 'left', width: `${100 / 3 * 2}%` }}>
@@ -69,6 +80,7 @@ class Entry extends React.Component {
 }
 
 Entry.propTypes = {
+  type: React.PropTypes.oneOf(['group', 'member']).isRequired,
   parsedComment: React.PropTypes.shape({
     description: React.PropTypes.string.isRequired,
     example: React.PropTypes.shape({
@@ -77,7 +89,7 @@ Entry.propTypes = {
   }).isRequired,
   referencedSource: React.PropTypes.shape({
     toString: React.PropTypes.func.isRequired,
-  }).isRequired
+  })
 };
 
 export { Entry };

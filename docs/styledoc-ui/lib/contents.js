@@ -15,7 +15,7 @@ class Contents extends React.Component {
 
     const entryEls = [];
     function addEntryAndMembers(entry, level) {
-      if (entry.members !== undefined) {
+      if (entry.type === 'section') {
         entryEls.push(
           <Heading
             key={entryEls.length + 1}
