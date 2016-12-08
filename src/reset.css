@@ -34,5 +34,6 @@ q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 /* remember to define focus styles. Hee Haw */
 :focus { outline: 0; }
+hr { margin: 0; border: 0; }
 
 *, *:after, *:before { box-sizing: border-box; }
