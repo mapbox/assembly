@@ -9,14 +9,16 @@ const SVGO = require('svgo');
 
 const svgDir = path.join(__dirname, '../src/svgs');
 const svgScript = path.join(__dirname, '../dist/base-svgs.js');
-const svgo = new SVGO();
-const sprite = svgstore({
-  cleanDefs: [
-    'fill',
-    'width',
-    'height'
+const svgo = new SVGO({
+  plugins: [
+    {
+      removeAttrs: {
+        attrs: 'path:(fill|color|style|width|height|overflow)'
+      }
+    }
   ]
 });
+const sprite = svgstore();
 
 const baseJsTemplate = _.template(
 `var svgDocument = (new DOMParser()).parseFromString('<%= svgSprite %>', 'text/xml');
@@ -26,13 +28,29 @@ document.addEventListener("DOMContentLoaded", function() {
 );
 
 function addFileToSprite(filename, callback) {
-  const basename = path.basename(filename, path.extname(filename));
+  const extname = path.extname(filename);
+  if (extname !== '.svg') return callback();
+
+  const basename = path.basename(filename, extname);
+  const handleError = (err) => {
+    console.log(`Error with icon "${basename}"`);
+    callback(err);
+  };
+
   fs.readFile(filename, 'utf8', (err, content) => {
     if (err) return callback(err);
-    svgo.optimize(content, (optimizedContent) => {
-      sprite.add(`base-svg-${basename}`, optimizedContent.data);
-      callback();
-    });
+    try {
+      svgo.optimize(content, (optimizedContent) => {
+        try {
+          sprite.add(`base-svg-${basename}`, optimizedContent.data);
+          callback();
+        } catch (e) {
+          handleError(e);
+        }
+      });
+    } catch (e) {
+      handleError(e);
+    }
   });
 }
 
