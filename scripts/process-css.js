@@ -26,6 +26,7 @@ const cssFiles = [
   getCssPath('theming'),
   getCssPath('positioning'),
   getCssPath('layout'),
+  getCssPath('theming'),
   getCssPath('icons')
 ];
 
