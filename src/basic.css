@@ -8,18 +8,21 @@
 /**
  * Table classes.
  */
-.txt-table,
+.tbl,
 .txt table {
   width: 100%;
   background-color: transparent;
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid #ddd;
+}
+
+.txt table {
   margin-bottom: 25px;
 }
 
-.txt-table th,
-.txt-table td,
+.tbl th,
+.tbl td,
 .txt table th,
 .txt table td {
   text-align: left;
@@ -28,17 +31,17 @@
   padding: 8px;
 }
 
-.txt-table th,
+.tbl th,
 .txt table th {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.txt-table .fixed,
+.tbl .fixed,
 .txt .fixed {
   table-layout: fixed;
 }
 
-.txt-table th + td,
+.tbl th + td,
 .txt th + td {
   border-left: 1px solid #ddd;
 }
@@ -51,24 +54,19 @@
   margin-bottom: 25px;
 }
 
-.txt-ol ul,
-.txt-ul ul,
 .txt-ul,
 .txt ul {
   list-style: disc;
   margin-left: 40px;
 }
 
-.txt-ul ol,
-.txt-ol ol,
 .txt-ol,
 .txt ol {
   list-style: decimal;
   margin-left: 40px;
 }
 
-.txt-ul li,
-.txt-ol li,
+.txt-li,
 .txt ul li,
 .txt ol li {
   margin-bottom: 10px;
@@ -77,10 +75,6 @@
 .txt ul ul,
 .txt ol ol,
 .txt ul ol,
-.txt ol ul,
-.txt-ul ul,
-.txt-ol ol,
-.txt-ul ol,
-.txt-ol ul {
+.txt ol ul {
   margin-top: 10px;
 }
