@@ -49,52 +49,42 @@
 .bg-gray { background-color: #666; }
 .bg-gray-light { background-color: #aaa; }
 .bg-gray-faint { background-color: #f0f0f0; }
-
 .bg-pink-dark { background-color: #dc2878; }
 .bg-pink { background-color: #ff3c96; }
 .bg-pink-light { background-color: #eb74ac; }
 .bg-pink-faint { background-color: #ffdbed; }
-
 .bg-red-dark { background-color: #d20014; }
 .bg-red { background-color: #dc2b28; }
 .bg-red-light { background-color: #f0463c; }
 .bg-red-faint { background-color: #ffdad9; }
-
 .bg-orange-dark { background-color: #f05a00; }
 .bg-orange { background-color: #ff6e00; }
 .bg-orange-light { background-color: #eb9528; }
 .bg-orange-faint { background-color: #ffe5cb; }
-
 .bg-yellow-dark { background-color: #ffbd0a; }
 .bg-yellow { background-color: #f0dc00; }
 .bg-yellow-light { background-color: #e6e650; }
 .bg-yellow-faint { background-color: #fafbd1; }
-
 .bg-green-dark { background-color: #1e963c; }
 .bg-green { background-color: #01aa46; }
 .bg-green-light { background-color: #50be5a; }
 .bg-green-faint { background-color: #d4edda; }
-
 .bg-teal-dark { background-color: #3296a0; }
 .bg-teal { background-color: #01b5b4; }
 .bg-teal-light { background-color: #46c8c8; }
 .bg-teal-faint { background-color: #cbf2f1; }
-
 .bg-blue-dark { background-color: #3246dc; }
 .bg-blue { background-color: #0065fb; }
 .bg-blue-light { background-color: #0087fa; }
 .bg-blue-faint { background-color: #bae8ff; }
-
 .bg-purple-dark { background-color: #6e3296; }
 .bg-purple { background-color: #8c50c7; }
 .bg-purple-light { background-color: #a573d7; }
 .bg-purple-faint { background-color: #ede1f6; }
-
 .bg-darken5 { background-color: rgba(0, 0, 0, 0.05); }
 .bg-darken25 { background-color: rgba(0, 0, 0, 0.25); }
 .bg-darken50 { background-color: rgba(0, 0, 0, 0.5); }
 .bg-darken75 { background-color: rgba(0, 0, 0, 0.75); }
-
 .bg-lighten10 { background-color: rgba(255, 255, 255, 0.1); }
 .bg-lighten25 { background-color: rgba(255, 255, 255, 0.25); }
 .bg-lighten50 { background-color: rgba(255, 255, 255, 0.5); }
@@ -147,52 +137,42 @@
 .txt-gray { color: #666; }
 .txt-gray-light { color: #aaa; }
 .txt-gray-faint { color: #f0f0f0; }
-
 .txt-pink-dark { color: #dc2878; }
 .txt-pink { color: #ff3c96; }
 .txt-pink-light { color: #eb74ac; }
 .txt-pink-faint { color: #ffdbed; }
-
 .txt-red-dark { color: #d20014; }
 .txt-red { color: #dc2b28; }
 .txt-red-light { color: #f0463c; }
 .txt-red-faint { color: #ffdad9; }
-
 .txt-orange-dark { color: #f05a00; }
 .txt-orange { color: #ff6e00; }
 .txt-orange-light { color: #eb9528; }
 .txt-orange-faint { color: #ffe5cb; }
-
 .txt-yellow-dark { color: #ffbd0a; }
 .txt-yellow { color: #f0dc00; }
 .txt-yellow-light { color: #e6e650; }
 .txt-yellow-faint { color: #fafbd1; }
-
 .txt-green-dark { color: #1e963c; }
 .txt-green { color: #01aa46; }
 .txt-green-light { color: #50be5a; }
 .txt-green-faint { color: #d4edda; }
-
 .txt-teal-dark { color: #3296a0; }
 .txt-teal { color: #01b5b4; }
 .txt-teal-light { color: #46c8c8; }
 .txt-teal-faint { color: #cbf2f1; }
-
 .txt-blue-dark { color: #3246dc; }
 .txt-blue { color: #0065fb; }
 .txt-blue-light { color: #0087fa; }
 .txt-blue-faint { color: #bae8ff; }
-
 .txt-purple-dark { color: #6e3296; }
 .txt-purple { color: #8c50c7; }
 .txt-purple-light { color: #a573d7; }
 .txt-purple-faint { color: #ede1f6; }
-
 .txt-darken5 { color: rgba(0, 0, 0, 0.05); }
 .txt-darken25 { color: rgba(0, 0, 0, 0.25); }
 .txt-darken50 { color: rgba(0, 0, 0, 0.5); }
 .txt-darken75 { color: rgba(0, 0, 0, 0.75); }
-
 .txt-lighten10 { color: rgba(255, 255, 255, 0.1); }
 .txt-lighten25 { color: rgba(255, 255, 255, 0.25); }
 .txt-lighten50 { color: rgba(255, 255, 255, 0.5); }
@@ -222,7 +202,6 @@
     transparent
   );
 }
-
 .bg-pink-to-transparent {
   background-image: linear-gradient(
     to bottom right,
@@ -230,7 +209,6 @@
     transparent
   );
 }
-
 .bg-red-to-transparent {
   background-image: linear-gradient(
     to bottom right,
@@ -238,7 +216,6 @@
     transparent
   );
 }
-
 .bg-orange-to-transparent {
   background-image: linear-gradient(
     to bottom right,
@@ -246,7 +223,6 @@
     transparent
   );
 }
-
 .bg-yellow-to-transparent {
   background-image: linear-gradient(
     to bottom right,
@@ -254,7 +230,6 @@
     transparent
   );
 }
-
 .bg-green-to-transparent {
   background-image: linear-gradient(
     to bottom right,
@@ -262,7 +237,6 @@
     transparent
   );
 }
-
 .bg-teal-to-transparent {
   background-image: linear-gradient(
     to bottom right,
@@ -270,7 +244,6 @@
     transparent
   );
 }
-
 .bg-blue-to-transparent {
   background-image: linear-gradient(
     to bottom right,
@@ -278,7 +251,6 @@
     transparent
   );
 }
-
 .bg-purple-to-transparent {
   background-image: linear-gradient(
     to bottom right,
