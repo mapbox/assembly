@@ -69,6 +69,15 @@ textarea {
   margin-bottom: 25px;
 }
 
+.txt h1,
+.txt h2,
+.txt h3,
+.txt h4,
+.txt h5,
+.txt h6 {
+  margin-bottom: 25px;
+}
+
 .txt-headline,
 .txt h1,
 .txt-subheadline,
@@ -79,7 +88,6 @@ textarea {
 .txt h5,
 .txt h6 {
   font-weight: bold;
-  margin-bottom: 25px;
 }
 
 .txt-headline,
