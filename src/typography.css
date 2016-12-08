@@ -170,11 +170,13 @@ textarea {
  *    <h1 class='txt-fancy'>Headline</h1>
  *  </div>
 */
-.txt-weight-light {
+.txt-weight-light,
+.txt .txt-weight-light {
   font-weight: lighter;
 }
 
-.txt-weight-regular {
+.txt-weight-regular,
+.txt .txt-weight-regular {
   font-weight: normal;
 }
 
