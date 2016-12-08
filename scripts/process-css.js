@@ -17,7 +17,6 @@ function getCssPath(name) {
 }
 
 const cssFiles = [
-  getCssPath('colors'),
   getCssPath('sizing'),
   getCssPath('reset'),
   getCssPath('fonts'),
@@ -27,6 +26,8 @@ const cssFiles = [
   getCssPath('positioning'),
   getCssPath('layout'),
   getCssPath('theming'),
+  getCssPath('buttons'),
+  getCssPath('colors'),
   getCssPath('icons')
 ];
 

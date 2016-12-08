@@ -24,6 +24,8 @@ class Contents extends React.Component {
           />
         );
         entry.members.forEach((member) => addEntryAndMembers(member, level + 1));
+      } else if (entry.type === 'group') {
+        entry.members.forEach((member) => addEntryAndMembers(member, level + 1));
       } else {
         entryEls.push(
           <Entry
