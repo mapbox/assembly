@@ -180,7 +180,7 @@ pre {
 .cde-pre,
 .txt code,
 .txt pre {
-  font-family: Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
+  font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   white-space: pre-wrap;
 }
 
@@ -204,7 +204,7 @@ pre {
   margin-bottom: 25px;
 }
 
-.cde-pre .cde,
+.cde,
 .txt pre code {
   background: transparent;
   padding: 0;
