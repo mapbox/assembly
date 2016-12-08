@@ -15,14 +15,12 @@
 .dis-inline { display: inline; }
 .dis-block { display: block; }
 .dis-inline-block { display: inline-block; }
-.dis-flex { display: flex; }
 .dis-hidden { display: none; }
 
 @media only screen and (max-width: 770px) {
   .dis-inline-md { display: inline; }
   .dis-block-md { display: block; }
   .dis-inline-block-md { display: inline-block; }
-  .dis-flex-md { display: flex; }
   .dis-hidden-md { display: none; }
 }
 
@@ -30,7 +28,6 @@
   .dis-inline-sm { display: inline; }
   .dis-block-sm { display: block; }
   .dis-inline-block-sm { display: inline-block; }
-  .dis-flex-sm { display: flex; }
   .dis-hidden-sm { display: none; }
 }
 
@@ -38,6 +35,5 @@
   .dis-inline-lg { display: inline; }
   .dis-block-lg { display: block; }
   .dis-inline-block-lg { display: inline-block; }
-  .dis-flex-lg { display: flex; }
   .dis-hidden-lg { display: none; }
 }
