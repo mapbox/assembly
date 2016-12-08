@@ -84,10 +84,6 @@
     "rule-non-nested-empty-line-before": ["always-multi-line", {
       "ignore": ["after-comment"]
     }],
-    "selector-attribute-brackets-space-inside": "never",
-    "selector-attribute-operator-space-after": "never",
-    "selector-attribute-operator-space-before": "never",
-    "selector-attribute-quotes": "always",
     "selector-class-pattern": "^[a-z]+[0-9]*$|^[a-z]{1,3}[0-9]*-((?!md-|sm-|lg-)[a-z0-9-]*)(-sm|-md|-lg)?$",
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
@@ -95,6 +91,7 @@
     "selector-list-comma-newline-after": "always",
     "selector-list-comma-space-before": "never",
     "selector-max-empty-lines": 0,
+    "selector-no-attribute": true,
     "selector-no-combinator": true,
     "selector-no-empty": true,
     "selector-no-id": true,
