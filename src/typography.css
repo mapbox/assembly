@@ -45,6 +45,16 @@ textarea {
   line-height: 20px;
 }
 
+.txt-uppercase { text-transform: uppercase; }
+.txt-capitalize { text-transform: capitalize; }
+
+.txt-left { text-align: left; }
+.txt-right { text-align: right; }
+.txt-center { text-align: center; }
+
+.txt-align-top { vertical-align: top; }
+.txt-align-middle { vertical-align: middle; }
+
 /**
  * Text/prose classes
  * @section txt
