@@ -65,11 +65,11 @@
 .border--light { border-color: #f2f2f2; }
 .border--transparent { border-color: rgba(0, 0, 0, 0); }
 .border--darken5 { border-color: var(--darken5); }
-.border--darken10 { border-color: rgba(0, 0, 0, 0.1); }
+.border--darken10 { border-color: var(--darken10); }
 .border--darken25 { border-color: var(--darken25); }
 .border--darken50 { border-color: var(--darken50); }
 .border--darken75 { border-color: var(--darken75); }
-.border--lighten5 { border-color: rgba(255, 255, 255, 0.05); }
+.border--lighten5 { border-color: var(--lighten5); }
 .border--lighten10 { border-color: var(--lighten10); }
 .border--lighten25 { border-color: var(--lighten25); }
 .border--lighten50 { border-color: var(--lighten50); }
