@@ -55,8 +55,8 @@
 }
 
 /* Sizes */
-.btn--short { padding: 1px 18px; }
-.btn--micro {
+.btn--s { padding: 1px 18px; }
+.btn--xs {
   font-size: 10px;
   padding: 0 8px;
 }
@@ -80,10 +80,10 @@
 .btn--pill-r {
   border-radius: 0 20px 20px 0;
 }
-.btn--short.btn--pill-l {
+.btn--s.btn--pill-l {
   border-radius: 15px 0 0 15px;
 }
-.btn--short.btn--pill-r {
+.btn--s.btn--pill-r {
   border-radius: 0 15px 15px 0;
 }
 
