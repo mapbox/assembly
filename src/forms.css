@@ -1,7 +1,6 @@
-.legend {
-  display: block;
-  width: 100%;
-}
+/**
+ * @section Forms
+ */
 
 .fieldset,
 .input,
@@ -14,45 +13,87 @@
   box-shadow: none;
 }
 
-.input {
-  border: 1px solid #acb4b9;
+.input,
+.textarea {
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid var(--gray-light);
+  border-radius: var(--border-radius);
   display: inline-block;
-  border-radius: 3px;
 }
 
-.input:focus {
-  border-color: #3bb2d0;
-}
-
-.input:hover {
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+.input:focus,
+.textarea:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.22);
+  border: 1px solid var(--gray-light);
 }
 
 .input::placeholder {
-  color: #acb4b9;
+  color: var(--gray-light);
 }
 
+/**
+ * Text input. The following modifiers are available:
+ * - `input--s`: Small
+ * - `input--dark`: Dark
+ *
+ * Use `w*` width classes to change widths.
+ *
+ * @memberof Forms
+ * @example
+ * <input class='input' placeholder='basic' />
+ * <input class='input input--s' placeholder='small' />
+ * <input class='input input--dark' placeholder='dark' />
+ */
 .input {
   height: 40px;
   line-height: 38px; /* minus border */
-  padding: 0 10px;
+  padding: 0 12px;
 }
 
-.input--sm {
+.input--s {
   height: 30px;
   line-height: 28px; /* minus border */
-  padding: 0 5px;
+  padding: 0 10px;
+  font-size: 12px;
 }
 
+/**
+ * Textarea. The following modifiers are available:
+ * - `textarea--s`: Small
+ * - `textarea--dark`: Dark
+ *
+ * Use `w*` width classes to change widths.
+ *
+ * @memberof Forms
+ * @example
+ * <textarea class='textarea'>basic</textarea>
+ * <textarea class='textarea textarea--s'>small</textarea>
+ * <textarea class='textarea textarea--dark'>dark</textarea>
+ */
 .textarea {
-  border: 1px solid var(--darken50);
   resize: vertical;
-  border-radius: 3px;
-  padding: 10px;
+  padding-top: 8px; /* minus border to match input */
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
+.textarea--s {
+  font-size: 12px; /* match input--s */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Dark */
+.input--dark,
+.textarea--dark {
+  background-color: var(--gray-dark);
+  color: #fff;
+}
+
+/* Select */
 .select {
-  border: 2px solid #acb4b9;
+  border: 2px solid var(--gray-light);
   padding-right: 15px;
 }
 
@@ -347,3 +388,8 @@ input:checked + .color-purple,
   color: var(--purple-dark);
 }
 /* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
+
+.legend {
+  display: block;
+  width: 100%;
+}
