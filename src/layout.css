@@ -309,13 +309,13 @@
  * with scrollbars.
  *
  */
-.bld {
+.bleed {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 }
 
-.bld-right { flex: 1; margin-right: calc(50% - 50vw); }
-.bld-left { flex: 1; margin-left: calc(50% - 50vw); }
+.bleed-right { flex: 1; margin-right: calc(50% - 50vw); }
+.bleed-left { flex: 1; margin-left: calc(50% - 50vw); }
 
 /**
  * Float classes
