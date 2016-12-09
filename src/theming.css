@@ -181,16 +181,3 @@
 .hover-alpha75:hover,
 .focus-alpha75:focus,
 .active-alpha75:active { opacity: 0.75; }
-
-.hover-cursor-default:hover,
-.focus-cursor-default:focus,
-.active-cursor-default:active { cursor: default; }
-.hover-cursor-pointer:hover,
-.focus-cursor-pointer:focus,
-.active-cursor-pointer:active { cursor: pointer; }
-.hover-cursor-crosshair:hover,
-.focus-cursor-crosshair:focus,
-.active-cursor-crosshair:active { cursor: crosshair; }
-.hover-cursor-move:hover,
-.focus-cursor-move:focus,
-.active-cursor-move:active { cursor: move; }
