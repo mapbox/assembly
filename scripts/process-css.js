@@ -6,10 +6,12 @@ const pify = require('pify');
 const Concat = require('concat-with-sourcemaps');
 const postcss = require('postcss');
 const reporter = require('postcss-reporter');
-const initCustomProperties = require('postcss-custom-properties');
 const autoprefixer = require('autoprefixer');
 // const cssnano = require('cssnano');
+const initPostcssCustomProperties = require('postcss-custom-properties');
+const postcssCustomMedia = require('postcss-custom-media');
 const variableDefinitions = require('../src/variables');
+const customMediaQueries = require('../src/media-queries');
 
 const distCssFilename = 'base-core.css';
 const distCssPath = path.join(__dirname, `../dist/${distCssFilename}`);
@@ -19,8 +21,9 @@ function getCssPath(name) {
 }
 
 const cssFiles = [
-  // 'fonts' and 'reset' are intentionally left out, as they don't need to be documented
+  getCssPath('reset'),
   getCssPath('sizing'),
+  getCssPath('fonts'),
   getCssPath('typography'),
   getCssPath('basic'),
   getCssPath('buttons'),
@@ -33,11 +36,14 @@ const cssFiles = [
   getCssPath('positioning')
 ];
 
-const customProperties = initCustomProperties();
+const customProperties = initPostcssCustomProperties();
 customProperties.setVariables(variableDefinitions);
 
 const postcssPlugins = [
   customProperties,
+  postcssCustomMedia({
+    extensions: customMediaQueries
+  }),
   autoprefixer({
     browsers: 'last 2 versions, ie > 11'
   }),
