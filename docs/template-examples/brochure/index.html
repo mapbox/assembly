@@ -4,24 +4,15 @@
   <meta charset='utf-8' />
   <title>Brochure page</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link href='../../../src/reset.css' rel='stylesheet' />
-  <link href='../../../src/fonts.css' rel='stylesheet' />
-  <link href='../../../src/typography.css' rel='stylesheet' />
-  <link href='../../../src/layout.css' rel='stylesheet' />
-  <link href='../../../src/positioning.css' rel='stylesheet' />
-  <link href='../../../src/display.css' rel='stylesheet' />
-  <link href='../../../src/sizing.css' rel='stylesheet' />
-  <link href='../../../src/colors.css' rel='stylesheet' />
-  <link href='../../../src/buttons.css' rel='stylesheet' />
-  <link href='../../../src/theming.css' rel='stylesheet' />
+  <link href='/dist/base-core.css' rel='stylesheet' />
 </head>
 <body>
 
-  <header class='bg-blue-to-cyan h-almost flx flx-center-y'>
-    <div class='limiter txt-white'>
+  <header class='bg-teal bg-blue-to-transparent viewport-almost flx flx-center-y'>
+    <div class='limiter color-white'>
       <div class='txt-fancy txt-headline mb10'>Mapbox Spaceship</div>
       <p class='txt-m mb40'>Some cool thing about spaceships.</p>
-      <button class='btn'>Call to action</button>
+      <button class='btn btn--stroke btn--stroke-white btn--round'>Call to action</button>
     </div>
   </header>
 
@@ -29,22 +20,22 @@
     <div class='limiter'>
       <div class='grd grd-gut10 txt-xs'>
         <div class='col col--3 col--6-sm mb20-sm'>
-          <span class='w40 h40 mb10 rc bg-darken5 dis-inline-block'></span>
+          <span class='w40 h40 mb10 rc bg-darken5 inline-block'></span>
           <h4>Name</h4>
           <p>Feature</p>
         </div>
         <div class='col col--3 col--6-sm mb20-sm'>
-          <span class='w40 h40 mb10 rc bg-darken5 dis-inline-block'></span>
+          <span class='w40 h40 mb10 rc bg-darken5 inline-block'></span>
           <h4>Name</h4>
           <p>Feature</p>
         </div>
         <div class='col col--3 col--6-sm'>
-          <span class='w40 h40 mb10 rc bg-darken5 dis-inline-block'></span>
+          <span class='w40 h40 mb10 rc bg-darken5 inline-block'></span>
           <h4>Name</h4>
           <p>Feature</p>
         </div>
         <div class='col col--3 col--6-sm'>
-          <span class='w40 h40 mb10 rc bg-darken5 dis-inline-block'></span>
+          <span class='w40 h40 mb10 rc bg-darken5 inline-block'></span>
           <h4>Name</h4>
           <p>Feature</p>
         </div>
@@ -52,7 +43,7 @@
     </div>
   </section>
 
-  <section class='limiter py100'>
+  <section class='limiter py100 clip'>
     <div class='grd'>
       <div class='col col--4 col--12-sm mb40'>
         <small class='txt-xs txt-strong txt-fancy txt-darken50'>It starts as a rocket</small>
@@ -61,15 +52,15 @@
           More rocket than you have ever seen on a normal looking spaceship.
         </div>
       </div>
-      <div class='col col--12-sm ml0-sm offl2 bld-right bg-darken5 h400 rc'></div>
+      <div class='col bleed-right col--offl2 col--12-sm ml0-sm flx-none-sm bg-darken5 h400 rc'></div>
     </div>
   </section>
 
-  <section class='bg-darken5 py100'>
+  <section class='bg-darken5 py100 clip'>
     <div class='limiter'>
       <div class='grd'>
-        <div class='col bld-left bg-darken5 h400 rc'></div>
-        <div class='col offl2 offr2 col--4'>
+        <div class='col bleed-left bg-darken5 h400 rc'></div>
+        <div class='col col--offl2 col--offr2 col--4'>
           <small class='txt-xs txt-strong txt-fancy txt-darken50'>It starts as a rocket</small>
           <div class='txt-subheadline txt-weight-light'>A sweet looking rocket</div>
           <div class='txt-m txt-darken50'>
