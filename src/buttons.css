@@ -2,7 +2,7 @@
  * @section Buttons
  *
  * To color a filled button, add a background color, e.g. `.bg-red`.
- * To color a stroke button, add a text color, e.g. `.txt-purple`.
+ * To color a stroke button, add a text color, e.g. `.color-purple`.
  */
 
 .btn {
@@ -85,40 +85,40 @@
 /* Color variations */
 .btn.bg-gray:hover,
 .btn.bg-gray.is-active { background-color: #444; }
-.btn.btn--stroke.txt-gray:hover,
-.btn.btn--stroke.txt-gray.is-active { color: #444; }
+.btn.btn--stroke.color-gray:hover,
+.btn.btn--stroke.color-gray.is-active { color: #444; }
 
 .btn.bg-pink:hover,
 .btn.bg-pink.is-active { background-color: #dc2878; }
-.btn.btn--stroke.txt-pink:hover,
-.btn.btn--stroke.txt-pink.is-active { color: #dc2878; }
+.btn.btn--stroke.color-pink:hover,
+.btn.btn--stroke.color-pink.is-active { color: #dc2878; }
 
 .btn.bg-red:hover,
 .btn.bg-red.is-active { background-color: #d20014; }
-.btn.btn--stroke.txt-red:hover,
-.btn.btn--stroke.txt-red.is-active { color: #d20014; }
+.btn.btn--stroke.color-red:hover,
+.btn.btn--stroke.color-red.is-active { color: #d20014; }
 
 .btn.bg-orange:hover,
 .btn.bg-orange.is-active { background-color: #f05a00; }
-.btn.btn--stroke.txt-orange:hover,
-.btn.btn--stroke.txt-orange.is-active { color: #f05a00; }
+.btn.btn--stroke.color-orange:hover,
+.btn.btn--stroke.color-orange.is-active { color: #f05a00; }
 
 .btn.bg-yellow:hover,
 .btn.bg-yellow.is-active { background-color: #ffbd0a; }
-.btn.btn--stroke.txt-yellow:hover,
-.btn.btn--stroke.txt-yellow.is-active { color: #ffbd0a; }
+.btn.btn--stroke.color-yellow:hover,
+.btn.btn--stroke.color-yellow.is-active { color: #ffbd0a; }
 
 .btn.bg-green:hover,
 .btn.bg-green.is-active { background-color: #1e963c; }
-.btn.btn--stroke.txt-green:hover,
-.btn.btn--stroke.txt-green.is-active { color: #1e963c; }
+.btn.btn--stroke.color-green:hover,
+.btn.btn--stroke.color-green.is-active { color: #1e963c; }
 
 .btn.bg-teal:hover,
 .btn.bg-teal.is-active { background-color: #3296a0; }
-.btn.btn--stroke.txt-teal:hover,
-.btn.btn--stroke.txt-teal.is-active { color: #3296a0; }
+.btn.btn--stroke.color-teal:hover,
+.btn.btn--stroke.color-teal.is-active { color: #3296a0; }
 
 .btn.bg-purple:hover,
 .btn.bg-purple.is-active { background-color: #6e3296; }
-.btn.btn--stroke.txt-purple:hover,
-.btn.btn--stroke.txt-purple.is-active { color: #6e3296; }
+.btn.btn--stroke.color-purple:hover,
+.btn.btn--stroke.color-purple.is-active { color: #6e3296; }
