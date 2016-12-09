@@ -6,34 +6,34 @@
 /**
  * Use display classes to control the display property of elements.
  * @example
- * <div class="p10 border mb10"><div class="border border--cyan inline bor-all">dis-inline</div></div>
- * <div class="p10 border mb10"><div class="border border--cyan block bor-all">dis-block</div></div>
- * <div class="p10 border mb10"><div class="border border--cyan inline-block bor-all">dis-inline-block</div></div>
- * <div class="p10 border mb10"><div class="border border--cyan flex bor-all">dis-flex</div></div>
- * <div class="p10 border mb10"><div class="border border--cyan hidden bor-all">dis-hidden</div></div>
+ * <div class="p10 border mb10"><div class="border border--cyan inline bor-all">inline</div></div>
+ * <div class="p10 border mb10"><div class="border border--cyan block bor-all">block</div></div>
+ * <div class="p10 border mb10"><div class="border border--cyan inline-block bor-all">inline-block</div></div>
+ * <div class="p10 border mb10"><div class="border border--cyan flex bor-all">flex</div></div>
+ * <div class="p10 border mb10"><div class="border border--cyan none bor-all">none</div></div>
  */
 .inline { display: inline; }
 .block { display: block; }
 .inline-block { display: inline-block; }
-.hidden { display: none; }
+.none { display: none; }
 
 @media only screen and (--large-screen) {
   .inline-lg { display: inline; }
   .block-lg { display: block; }
   .inline-block-lg { display: inline-block; }
-  .hidden-lg { display: none; }
+  .none-lg { display: none; }
 }
 
 @media only screen and (--medium-screen) {
   .inline-md { display: inline; }
   .block-md { display: block; }
   .inline-block-md { display: inline-block; }
-  .hidden-md { display: none; }
+  .none-md { display: none; }
 }
 
 @media only screen and (--small-screen) {
   .inline-sm { display: inline; }
   .block-sm { display: block; }
   .inline-block-sm { display: inline-block; }
-  .hidden-sm { display: none; }
+  .none-sm { display: none; }
 }
