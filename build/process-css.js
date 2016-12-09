@@ -52,13 +52,7 @@ const postcssPlugins = [
   reporter()
 ];
 
-const concat = new Concat(true, distCssPath, '\n');
-
-function processCss() {
-  return Promise.all(cssFiles.map(processCssFile));
-}
-
-function processCssFile(cssFile) {
+function processCssFile(cssFile, concat) {
   return pify(fs.readFile)(cssFile, 'utf8').then((css) => {
     return postcss(postcssPlugins)
       .process(css, {
@@ -76,7 +70,7 @@ function processCssFile(cssFile) {
   });
 }
 
-function writeDistCss() {
+function writeDistCss(concat) {
   const css = `${concat.content}\n/*# sourceMappingURL=${distCssFilename}.map */`;
   return Promise.all([
     pify(fs.writeFile)(distCssPath, css, 'utf8'),
@@ -84,8 +78,12 @@ function writeDistCss() {
   ]);
 }
 
-processCss()
-  .then(writeDistCss)
-  .catch((err) => {
-    console.log(err.stack);
-  });
+function processCss() {
+  const concat = new Concat(true, distCssPath, '\n');
+
+  Promise.all(cssFiles.map((file) => processCssFile(file, concat)))
+    .then(() => writeDistCss(concat))
+    .catch((err) => console.log(err.stack));
+}
+
+module.exports = processCss;

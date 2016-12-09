@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+'use strict';
+
+const path = require('path');
+const chokidar = require('chokidar');
+const processCss = require('../build/process-css');
+
+const cssGlob = path.join(__dirname, '../src/*.css');
+
+console.log('Watching for changes to CSS ...');
+
+function rebuild() {
+  const now = new Date();
+  console.log(`[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Rebuilding CSS ...`);
+  processCss();
+}
+
+chokidar.watch(cssGlob, {
+  ignoreInitial: true
+}).on('all', rebuild);

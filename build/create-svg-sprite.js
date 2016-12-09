@@ -18,7 +18,6 @@ const svgo = new SVGO({
     }
   ]
 });
-const sprite = svgstore();
 
 const baseJsTemplate = _.template(
 `var svgDocument = (new DOMParser()).parseFromString('<%= svgSprite %>', 'text/xml');
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });`
 );
 
-function addFileToSprite(filename, callback) {
+function addFileToSprite(filename, sprite, callback) {
   const extname = path.extname(filename);
   if (extname !== '.svg') return callback();
 
@@ -54,23 +53,29 @@ function addFileToSprite(filename, callback) {
   });
 }
 
-fs.readdir(svgDir, (err, filenames) => {
-  if (err) throw err;
+function createSvgSprite() {
+  const sprite = svgstore();
 
-  const q = queue();
-  filenames.forEach((filename) => {
-    q.defer(addFileToSprite, path.join(svgDir, filename));
-  });
-
-  q.awaitAll((err) => {
+  fs.readdir(svgDir, (err, filenames) => {
     if (err) throw err;
 
-    sprite.element('svg')
-      .attr('id', 'svg-symbols')
-      .attr('style', 'display:none');
+    const q = queue();
+    filenames.forEach((filename) => {
+      q.defer(addFileToSprite, path.join(svgDir, filename), sprite);
+    });
 
-    const cleanedSprite = sprite.toString().replace(/\n/g, '');
-    const jsContent = baseJsTemplate({ svgSprite: cleanedSprite });
-    fs.writeFileSync(svgScript, jsContent);
+    q.awaitAll((err) => {
+      if (err) throw err;
+
+      sprite.element('svg')
+        .attr('id', 'svg-symbols')
+        .attr('style', 'display:none');
+
+      const cleanedSprite = sprite.toString().replace(/\n/g, '');
+      const jsContent = baseJsTemplate({ svgSprite: cleanedSprite });
+      fs.writeFileSync(svgScript, jsContent);
+    });
   });
-});
+}
+
+module.exports = createSvgSprite;

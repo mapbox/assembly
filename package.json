@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "node scripts/process-css.js",
-    "svgs": "node scripts/create-svg-sprite.js",
-    "build": "rm -rf dist && mkdir dist && npm run css && npm run svgs",
+    "css": "node scripts/process-css",
+    "svgs": "node scripts/create-svg-sprite",
+    "build": "rm -rf dist && mkdir -p dist && npm run css && npm run svgs",
     "debug": "npm run build && http-server",
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint scripts",
     "lint": "npm run lint:css && npm run lint:js",
     "test": "npm run lint",
-    "docs": "budo docs/index.js"
+    "watch": "mkdir -p dist && node scripts/watch-src",
+    "docs": "npm run build && budo docs/index.js -o -l"
   },
   "browserify": {
     "transform": [
@@ -40,6 +41,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.1.1",
     "budo": "^9.2.2",
+    "chokidar": "^1.6.1",
     "concat-with-sourcemaps": "^1.0.4",
     "cssnano": "^3.8.1",
     "d3-queue": "^3.0.3",
@@ -52,8 +54,8 @@
     "lodash": "^4.17.2",
     "pify": "^2.3.0",
     "postcss": "^5.2.6",
-    "postcss-custom-properties": "^5.0.1",
     "postcss-custom-media": "^5.0.1",
+    "postcss-custom-properties": "^5.0.1",
     "postcss-reporter": "^2.0.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
