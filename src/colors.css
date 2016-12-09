@@ -106,97 +106,97 @@
  * @group
  * @memberof Color
  * @example
- * <div class='mb10 txt-gray-dark'>txt-gray-dark</div>
- * <div class='mb10 txt-gray'>txt-gray</div>
- * <div class='mb10 txt-gray-light'>txt-gray-light</div>
- * <div class='mb10 txt-gray-faint'>txt-gray-faint</div>
- * <div class='mb10 txt-pink-dark'>txt-pink-dark</div>
- * <div class='mb10 txt-pink'>txt-pink</div>
- * <div class='mb10 txt-pink-light'>txt-pink-light</div>
- * <div class='mb10 txt-pink-faint'>txt-pink-faint</div>
- * <div class='mb10 txt-red-dark'>txt-red-dark</div>
- * <div class='mb10 txt-red'>txt-red</div>
- * <div class='mb10 txt-red-light'>txt-red-light</div>
- * <div class='mb10 txt-red-faint'>txt-red-faint</div>
- * <div class='mb10 txt-orange-dark'>txt-orange-dark</div>
- * <div class='mb10 txt-orange'>txt-orange</div>
- * <div class='mb10 txt-orange-light'>txt-orange-light</div>
- * <div class='mb10 txt-orange-faint'>txt-orange-faint</div>
- * <div class='mb10 txt-yellow-dark'>txt-yellow-dark</div>
- * <div class='mb10 txt-yellow'>txt-yellow</div>
- * <div class='mb10 txt-yellow-light'>txt-yellow-light</div>
- * <div class='mb10 txt-yellow-faint'>txt-yellow-faint</div>
- * <div class='mb10 txt-green-dark'>txt-green-dark</div>
- * <div class='mb10 txt-green'>txt-green</div>
- * <div class='mb10 txt-green-light'>txt-green-light</div>
- * <div class='mb10 txt-green-faint'>txt-green-faint</div>
- * <div class='mb10 txt-teal-dark'>txt-teal-dark</div>
- * <div class='mb10 txt-teal'>txt-teal</div>
- * <div class='mb10 txt-teal-light'>txt-teal-light</div>
- * <div class='mb10 txt-teal-faint'>txt-teal-faint</div>
- * <div class='mb10 txt-blue-dark'>txt-blue-dark</div>
- * <div class='mb10 txt-blue'>txt-blue</div>
- * <div class='mb10 txt-blue-light'>txt-blue-light</div>
- * <div class='mb10 txt-blue-faint'>txt-blue-faint</div>
- * <div class='mb10 txt-purple-dark'>txt-purple-dark</div>
- * <div class='mb10 txt-purple'>txt-purple</div>
- * <div class='mb10 txt-purple-light'>txt-purple-light</div>
- * <div class='mb10 txt-purple-faint'>txt-purple-faint</div>
+ * <div class='mb10 color-gray-dark'>color-gray-dark</div>
+ * <div class='mb10 color-gray'>color-gray</div>
+ * <div class='mb10 color-gray-light'>color-gray-light</div>
+ * <div class='mb10 color-gray-faint'>color-gray-faint</div>
+ * <div class='mb10 color-pink-dark'>color-pink-dark</div>
+ * <div class='mb10 color-pink'>color-pink</div>
+ * <div class='mb10 color-pink-light'>color-pink-light</div>
+ * <div class='mb10 color-pink-faint'>color-pink-faint</div>
+ * <div class='mb10 color-red-dark'>color-red-dark</div>
+ * <div class='mb10 color-red'>color-red</div>
+ * <div class='mb10 color-red-light'>color-red-light</div>
+ * <div class='mb10 color-red-faint'>color-red-faint</div>
+ * <div class='mb10 color-orange-dark'>color-orange-dark</div>
+ * <div class='mb10 color-orange'>color-orange</div>
+ * <div class='mb10 color-orange-light'>color-orange-light</div>
+ * <div class='mb10 color-orange-faint'>color-orange-faint</div>
+ * <div class='mb10 color-yellow-dark'>color-yellow-dark</div>
+ * <div class='mb10 color-yellow'>color-yellow</div>
+ * <div class='mb10 color-yellow-light'>color-yellow-light</div>
+ * <div class='mb10 color-yellow-faint'>color-yellow-faint</div>
+ * <div class='mb10 color-green-dark'>color-green-dark</div>
+ * <div class='mb10 color-green'>color-green</div>
+ * <div class='mb10 color-green-light'>color-green-light</div>
+ * <div class='mb10 color-green-faint'>color-green-faint</div>
+ * <div class='mb10 color-teal-dark'>color-teal-dark</div>
+ * <div class='mb10 color-teal'>color-teal</div>
+ * <div class='mb10 color-teal-light'>color-teal-light</div>
+ * <div class='mb10 color-teal-faint'>color-teal-faint</div>
+ * <div class='mb10 color-blue-dark'>color-blue-dark</div>
+ * <div class='mb10 color-blue'>color-blue</div>
+ * <div class='mb10 color-blue-light'>color-blue-light</div>
+ * <div class='mb10 color-blue-faint'>color-blue-faint</div>
+ * <div class='mb10 color-purple-dark'>color-purple-dark</div>
+ * <div class='mb10 color-purple'>color-purple</div>
+ * <div class='mb10 color-purple-light'>color-purple-light</div>
+ * <div class='mb10 color-purple-faint'>color-purple-faint</div>
  */
-.txt-gray-dark { color: #444; }
-.txt-gray { color: #666; }
-.txt-gray-light { color: #aaa; }
-.txt-gray-faint { color: #f0f0f0; }
+.color-gray-dark { color: #444; }
+.color-gray { color: #666; }
+.color-gray-light { color: #aaa; }
+.color-gray-faint { color: #f0f0f0; }
 
-.txt-pink-dark { color: #dc2878; }
-.txt-pink { color: #ff3c96; }
-.txt-pink-light { color: #eb74ac; }
-.txt-pink-faint { color: #ffdbed; }
+.color-pink-dark { color: #dc2878; }
+.color-pink { color: #ff3c96; }
+.color-pink-light { color: #eb74ac; }
+.color-pink-faint { color: #ffdbed; }
 
-.txt-red-dark { color: #d20014; }
-.txt-red { color: #dc2b28; }
-.txt-red-light { color: #f0463c; }
-.txt-red-faint { color: #ffdad9; }
+.color-red-dark { color: #d20014; }
+.color-red { color: #dc2b28; }
+.color-red-light { color: #f0463c; }
+.color-red-faint { color: #ffdad9; }
 
-.txt-orange-dark { color: #f05a00; }
-.txt-orange { color: #ff6e00; }
-.txt-orange-light { color: #eb9528; }
-.txt-orange-faint { color: #ffe5cb; }
+.color-orange-dark { color: #f05a00; }
+.color-orange { color: #ff6e00; }
+.color-orange-light { color: #eb9528; }
+.color-orange-faint { color: #ffe5cb; }
 
-.txt-yellow-dark { color: #ffbd0a; }
-.txt-yellow { color: #f0dc00; }
-.txt-yellow-light { color: #e6e650; }
-.txt-yellow-faint { color: #fafbd1; }
+.color-yellow-dark { color: #ffbd0a; }
+.color-yellow { color: #f0dc00; }
+.color-yellow-light { color: #e6e650; }
+.color-yellow-faint { color: #fafbd1; }
 
-.txt-green-dark { color: #1e963c; }
-.txt-green { color: #01aa46; }
-.txt-green-light { color: #50be5a; }
-.txt-green-faint { color: #d4edda; }
+.color-green-dark { color: #1e963c; }
+.color-green { color: #01aa46; }
+.color-green-light { color: #50be5a; }
+.color-green-faint { color: #d4edda; }
 
-.txt-teal-dark { color: #3296a0; }
-.txt-teal { color: #01b5b4; }
-.txt-teal-light { color: #46c8c8; }
-.txt-teal-faint { color: #cbf2f1; }
+.color-teal-dark { color: #3296a0; }
+.color-teal { color: #01b5b4; }
+.color-teal-light { color: #46c8c8; }
+.color-teal-faint { color: #cbf2f1; }
 
-.txt-blue-dark { color: #3246dc; }
-.txt-blue { color: #0065fb; }
-.txt-blue-light { color: #0087fa; }
-.txt-blue-faint { color: #bae8ff; }
+.color-blue-dark { color: #3246dc; }
+.color-blue { color: #0065fb; }
+.color-blue-light { color: #0087fa; }
+.color-blue-faint { color: #bae8ff; }
 
-.txt-purple-dark { color: #6e3296; }
-.txt-purple { color: #8c50c7; }
-.txt-purple-light { color: #a573d7; }
-.txt-purple-faint { color: #ede1f6; }
+.color-purple-dark { color: #6e3296; }
+.color-purple { color: #8c50c7; }
+.color-purple-light { color: #a573d7; }
+.color-purple-faint { color: #ede1f6; }
 
-.txt-darken5 { color: rgba(0, 0, 0, 0.05); }
-.txt-darken25 { color: rgba(0, 0, 0, 0.25); }
-.txt-darken50 { color: rgba(0, 0, 0, 0.5); }
-.txt-darken75 { color: rgba(0, 0, 0, 0.75); }
+.color-darken5 { color: rgba(0, 0, 0, 0.05); }
+.color-darken25 { color: rgba(0, 0, 0, 0.25); }
+.color-darken50 { color: rgba(0, 0, 0, 0.5); }
+.color-darken75 { color: rgba(0, 0, 0, 0.75); }
 
-.txt-lighten10 { color: rgba(255, 255, 255, 0.1); }
-.txt-lighten25 { color: rgba(255, 255, 255, 0.25); }
-.txt-lighten50 { color: rgba(255, 255, 255, 0.5); }
-.txt-lighten75 { color: rgba(255, 255, 255, 0.75); }
+.color-lighten10 { color: rgba(255, 255, 255, 0.1); }
+.color-lighten25 { color: rgba(255, 255, 255, 0.25); }
+.color-lighten50 { color: rgba(255, 255, 255, 0.5); }
+.color-lighten75 { color: rgba(255, 255, 255, 0.75); }
 /** @endgroup */
 
 /**
