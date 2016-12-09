@@ -61,6 +61,11 @@
  * <div class='col col--3 mar-bottom-10 p10 bg-purple'>bg-purple</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-purple-light'>bg-purple-light</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-purple-faint'>bg-purple-faint</div>
+ * </div>
+ * <div class='flx mb10'>
+ * <div class='col col--3 mar-bottom-10 p10 bg-black'>bg-black</div>
+ * <div class='col col--3 mar-bottom-10 p10 bg-white'>bg-white</div>
+ * </div>
  */
 
 .bg-gray-dark { background-color: var(--gray-dark); }
@@ -112,10 +117,15 @@
 .bg-darken25 { background-color: var(--darken25); }
 .bg-darken50 { background-color: var(--darken50); }
 .bg-darken75 { background-color: var(--darken75); }
+
 .bg-lighten10 { background-color: var(--lighten10); }
 .bg-lighten25 { background-color: var(--lighten25); }
 .bg-lighten50 { background-color: var(--lighten50); }
 .bg-lighten75 { background-color: var(--lighten75); }
+.bg-lighten75 { background-color: var(--lighten75); }
+
+.bg-black { background-color: var(--black); }
+.bg-white { background-color: var(--white); }
 /** @endgroup */
 
 /**
@@ -159,6 +169,8 @@
  * <div class='mb10 color-purple'>color-purple</div>
  * <div class='mb10 color-purple-light'>color-purple-light</div>
  * <div class='mb10 color-purple-faint'>color-purple-faint</div>
+ * <div class='mb10 color-black'>color-black</div>
+ * <div class='mb10 color-white'>color-white</div>
  */
 .color-gray-dark { color: var(--gray-dark); }
 .color-gray { color: var(--gray); }
@@ -214,6 +226,9 @@
 .color-lighten25 { color: var(--lighten25); }
 .color-lighten50 { color: var(--lighten50); }
 .color-lighten75 { color: var(--lighten75); }
+
+.color-black { color: var(--black); }
+.color-white { color: var(--white); }
 /** @endgroup */
 
 /**
@@ -236,6 +251,10 @@
  * <div class='col col--4 mar-bottom-10 p10 bg-teal-to-transparent'>bg-teal-to-transparent</div>
  * <div class='col col--4 mar-bottom-10 p10 bg-blue-to-transparent'>bg-blue-to-transparent</div>
  * <div class='col col--4 mar-bottom-10 p10 bg-purple-to-transparent'>bg-purple-to-transparent</div>
+ * </div>
+ * <div class='flx mb10'>
+ * <div class='col col--4 mar-bottom-10 p10 bg-black-to-transparent'>bg-black-to-transparent</div>
+ * <div class='col col--4 mar-bottom-10 p10 bg-white-to-transparent'>bg-white-to-transparent</div>
  * </div>
  */
 .bg-gray-to-transparent {
@@ -298,6 +317,20 @@
   background-image: linear-gradient(
     to bottom right,
     var(--purple),
+    transparent
+  );
+}
+.bg-black-to-transparent {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--black),
+    transparent
+  );
+}
+.bg-white-to-transparent {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--white),
     transparent
   );
 }
