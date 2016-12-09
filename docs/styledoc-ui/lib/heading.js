@@ -4,16 +4,26 @@ class Heading extends React.Component {
   render() {
     const { props } = this;
 
-    const id = props.text.replace(/\s+/g, '-');
+    const id = props.title.replace(/\s+/g, '-');
+
+    let description;
+    if (props.description) {
+      description = <div className='styledocs-description'>
+        {props.description}
+      </div>;
+    }
 
     return (
+      <div className='styledoc-heading-container'>
       <div
         id={id}
-        className={`styledoc-heading-${props.level}`}
+        className={`styledoc-heading-title-${props.level}`}
       >
         <a href={`#${id}`}>
-          {props.text}
+          {props.title}
         </a>
+      </div>
+        {description}
       </div>
     );
   }
@@ -21,7 +31,8 @@ class Heading extends React.Component {
 
 Heading.propTypes = {
   level: React.PropTypes.oneOf([1, 2, 3, 4, 5]).isRequired,
-  text: React.PropTypes.string.isRequired
+  title: React.PropTypes.string.isRequired,
+  description: React.PropTypes.string
 };
 
 export { Heading };

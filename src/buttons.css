@@ -1,10 +1,21 @@
 /**
+ * Buttons
  * @section Buttons
  *
  * To color a filled button, add a background color, e.g. `.bg-red`.
  * To color a stroke button, add a text color, e.g. `.color-purple`.
  */
 
+/**
+ * Use as an affordance for a javascript event on click.  Buttons have a blue background unless
+ * combined with [.bg-](#Background) classes. Buttons have white text unless combined with a  [.txt-](#Color)
+ * color class. Buttons have fully rounded corners unless combined with a [rnd-](#Theming) class. For links,
+ * use an a element with the [.a](#Links) class.
+ *
+ * @memberof Buttons
+ * @example
+ * <button class='btn'>Basic button</button>
+ */
 .btn {
   background-color: var(--blue);
   color: #fff;

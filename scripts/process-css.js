@@ -19,9 +19,8 @@ function getCssPath(name) {
 }
 
 const cssFiles = [
+  // 'fonts' and 'reset' are intentionally left out, as they don't need to be documented
   getCssPath('sizing'),
-  getCssPath('reset'),
-  getCssPath('fonts'),
   getCssPath('typography'),
   getCssPath('basic'),
   getCssPath('buttons'),

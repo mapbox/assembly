@@ -6,10 +6,11 @@
 /**
  * Use display classes to control the display property of elements.
  * @example
- * <div class="p10 mb10"><div class="inline">inline</div></div>
- * <div class="p10 mb10"><div class="block">block</div></div>
- * <div class="p10 mb10"><div class="inline-block">inline-block</div></div>
- * <div class="p10 mb10"><div class="hidden">hidden</div></div>
+ * <div class="p10 bor mb10"><div class="bor bor--cyan inline bor-all">dis-inline</div></div>
+ * <div class="p10 bor mb10"><div class="bor bor--cyan block bor-all">dis-block</div></div>
+ * <div class="p10 bor mb10"><div class="bor bor--cyan inline-block bor-all">dis-inline-block</div></div>
+ * <div class="p10 bor mb10"><div class="bor bor--cyan flex bor-all">dis-flex</div></div>
+ * <div class="p10 bor mb10"><div class="bor bor--cyan hidden bor-all">dis-hidden</div></div>
  */
 .inline { display: inline; }
 .block { display: block; }

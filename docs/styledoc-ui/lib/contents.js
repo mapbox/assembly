@@ -14,17 +14,26 @@ class Contents extends React.Component {
     const { props } = this;
 
     const entryEls = [];
+    const navEls = [];
     function addEntryAndMembers(entry, level) {
       if (entry.type === 'section') {
+        console.log(entry);
         entryEls.push(
           <Heading
             key={entryEls.length + 1}
             level={level}
-            text={entry.parsedComment.description}
+            title={entry.title}
+            description={entry.parsedComment.description}
           />
         );
-        entry.members.forEach((member) => addEntryAndMembers(member, level + 1));
-      } else if (entry.type === 'group') {
+
+        navEls.push(<a
+          key={entryEls.length + 1}
+          className='styledoc-nav-item'
+          href={'#' + entry.title.replace(/\s+/g, '-')}>
+            {entry.title}
+          </a>);
+
         entry.members.forEach((member) => addEntryAndMembers(member, level + 1));
       } else {
         entryEls.push(
@@ -36,11 +45,19 @@ class Contents extends React.Component {
         );
       }
     }
+
+    console.log(props.entries);
     props.entries.map((entry) => addEntryAndMembers(entry, 1));
 
     return (
-      <div style={{ padding: '0 40px' }}>
-        {entryEls}
+      <div>
+        <div className='styledoc-sidebar'>
+          <div className='styledoc-logo'>Decorator</div>
+          <div className='styledoc-nav'>{navEls}</div>
+        </div>
+        <div className='styledoc-container'>
+          {entryEls}
+        </div>
       </div>
     );
   }
