@@ -1,6 +1,5 @@
-export const themeStyle = `
-
 body { margin: 0; }
+
 * { box-sizing: border-box; }
 
 [class^='docs-'] {
@@ -126,5 +125,3 @@ body { margin: 0; }
   margin-bottom: 5px;
   background: rgba(0,0,0,.05);
 }
-
-`;
