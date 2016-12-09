@@ -119,7 +119,7 @@
  * - Modify `frm-checkbox` with `frm-checkbox--stroke`.
  * - Modify *non-stroke* `frm-checkbox` with a background color,
  *   e.g. `bg-red`.
- * - Modify *stroke* `frm-checkbox` with a text color, e.g. `txt-red`.
+ * - Modify *stroke* `frm-checkbox` with a text color, e.g. `color-red`.
  * - Use a different icon.
  *
  * When placing a checkbox inside a *non-stroke* `.btn`, you should always
@@ -151,7 +151,7 @@
 * - Text for the label.
 *
 * Variations:
-* - Modify `frm-radio` with a text color, e.g. `txt-purple`.
+* - Modify `frm-radio` with a text color, e.g. `color-purple`.
 *
 * The class `frm-radio` and its modifiers can also be used independent
 * of a `<label>` and `<input>` if you are building a custom components.
@@ -256,10 +256,10 @@ input:checked + .bg-gray:not(.frm-checkbox--stroke),
 .bg-gray.is-active:not(.frm-checkbox--stroke) {
   background-color: #444;
 }
-input:checked + .txt-gray.frm-checkbox--stroke,
-.txt-gray.frm-checkbox--stroke.is-active,
-input:checked + .txt-gray,
-.txt-gray.is-active {
+input:checked + .color-gray.frm-checkbox--stroke,
+.color-gray.frm-checkbox--stroke.is-active,
+input:checked + .color-gray,
+.color-gray.is-active {
   color: #444;
 }
 
@@ -267,10 +267,10 @@ input:checked + .bg-pink:not(.frm-checkbox--stroke),
 .bg-pink.is-active:not(.frm-checkbox--stroke) {
   background-color: #dc2878;
 }
-input:checked + .txt-pink.frm-checkbox--stroke,
-.txt-pink.frm-checkbox--stroke.is-active,
-input:checked + .txt-pink,
-.txt-pink.is-active {
+input:checked + .color-pink.frm-checkbox--stroke,
+.color-pink.frm-checkbox--stroke.is-active,
+input:checked + .color-pink,
+.color-pink.is-active {
   color: #dc2878;
 }
 
@@ -278,10 +278,10 @@ input:checked + .bg-red:not(.frm-checkbox--stroke),
 .bg-red.is-active:not(.frm-checkbox--stroke) {
   background-color: #d20014;
 }
-input:checked + .txt-red.frm-checkbox--stroke,
-.txt-red.frm-checkbox--stroke.is-active,
-input:checked + .txt-red,
-.txt-red.is-active {
+input:checked + .color-red.frm-checkbox--stroke,
+.color-red.frm-checkbox--stroke.is-active,
+input:checked + .color-red,
+.color-red.is-active {
   color: #d20014;
 }
 
@@ -289,10 +289,10 @@ input:checked + .bg-orange:not(.frm-checkbox--stroke),
 .bg-orange.is-active:not(.frm-checkbox--stroke) {
   background-color: #f05a00;
 }
-input:checked + .txt-orange.frm-checkbox--stroke,
-.txt-orange.frm-checkbox--stroke.is-active,
-input:checked + .txt-orange,
-.txt-orange.is-active {
+input:checked + .color-orange.frm-checkbox--stroke,
+.color-orange.frm-checkbox--stroke.is-active,
+input:checked + .color-orange,
+.color-orange.is-active {
   color: #f05a00;
 }
 
@@ -300,10 +300,10 @@ input:checked + .bg-yellow:not(.frm-checkbox--stroke),
 .bg-yellow.is-active:not(.frm-checkbox--stroke) {
   background-color: #ffbd0a;
 }
-input:checked + .txt-yellow.frm-checkbox--stroke,
-.txt-yellow.frm-checkbox--stroke.is-active,
-input:checked + .txt-yellow,
-.txt-yellow.is-active {
+input:checked + .color-yellow.frm-checkbox--stroke,
+.color-yellow.frm-checkbox--stroke.is-active,
+input:checked + .color-yellow,
+.color-yellow.is-active {
   color: #ffbd0a;
 }
 
@@ -311,10 +311,10 @@ input:checked + .bg-green:not(.frm-checkbox--stroke),
 .bg-green.is-active:not(.frm-checkbox--stroke) {
   background-color: #1e963c;
 }
-input:checked + .txt-green.frm-checkbox--stroke,
-.txt-green.frm-checkbox--stroke.is-active,
-input:checked + .txt-green,
-.txt-green.is-active {
+input:checked + .color-green.frm-checkbox--stroke,
+.color-green.frm-checkbox--stroke.is-active,
+input:checked + .color-green,
+.color-green.is-active {
   color: #1e963c;
 }
 
@@ -322,10 +322,10 @@ input:checked + .bg-teal:not(.frm-checkbox--stroke),
 .bg-teal.is-active:not(.frm-checkbox--stroke) {
   background-color: #3296a0;
 }
-input:checked + .txt-teal.frm-checkbox--stroke,
-.txt-teal.frm-checkbox--stroke.is-active,
-input:checked + .txt-teal,
-.txt-teal.is-active {
+input:checked + .color-teal.frm-checkbox--stroke,
+.color-teal.frm-checkbox--stroke.is-active,
+input:checked + .color-teal,
+.color-teal.is-active {
   color: #3296a0;
 }
 
@@ -333,10 +333,10 @@ input:checked + .bg-purple:not(.frm-checkbox--stroke),
 .bg-purple.is-active:not(.frm-checkbox--stroke) {
   background-color: #6e3296;
 }
-input:checked + .txt-purple.frm-checkbox--stroke,
-.txt-purple.frm-checkbox--stroke.is-active,
-input:checked + .txt-purple,
-.txt-purple.is-active {
+input:checked + .color-purple.frm-checkbox--stroke,
+.color-purple.frm-checkbox--stroke.is-active,
+input:checked + .color-purple,
+.color-purple.is-active {
   color: #6e3296;
 }
 /* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
