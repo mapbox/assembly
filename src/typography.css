@@ -40,36 +40,41 @@ textarea {
   Title font variation 1
 **/
 
-h1, h2, h3, h4, h5, h6 {
+.txt h1,
+.txt h2,
+.txt h3,
+.txt h4,
+.txt h5,
+.txt h6 {
   font-weight: bold;
 }
 
-h1 {
+.txt h1 {
   font-size: 38px;
   line-height: 45px;
 }
 
-h2 {
+.txt h2 {
   font-size: 32px;
   line-height: 40px;
 }
 
-h3 {
+.txt h3 {
   font-size: 28px;
   line-height: 35px;
 }
 
-h4 {
+.txt h4 {
   font-size: 22px;
   line-height: 30px;
 }
 
-h5 {
+.txt h5 {
   font-size: 18px;
   line-height: 25px;
 }
 
-h6 {
+.txt h6 {
   font-size: 15px;
   line-height: 20px;
 }
@@ -78,13 +83,13 @@ h6 {
   Title font variation 2
 **/
 
-h1.txt-fancy {
+.txt-fancy {
   font-size: 35px;
   letter-spacing: 6px;
   line-height: 50px;
 }
 
-h2.txt-fancy {
+.txt-fancy {
   font-size: 32px;
   line-height: 45px;
   letter-spacing: 5px;
@@ -154,12 +159,16 @@ h2.txt-fancy {
  *  </div>
 */
 
-
-p.txt, .txt p { margin-bottom: 15px; }
-p.txt-lg, .txt-lg p { margin-bottom: 20px; }
-p.txt-m, .txt-m p { margin-bottom: 15px; }
-p.txt-s, .txt-s p { margin-bottom: 10px; }
-p.txt-xs, .txt-xs p { margin-bottom: 5px; }
+.txt,
+.txt p { margin-bottom: 15px; }
+.txt-lg,
+.txt-lg p { margin-bottom: 20px; }
+.txt-m,
+.txt-m p { margin-bottom: 15px; }
+.txt-s,
+.txt-s p { margin-bottom: 10px; }
+.txt-xs,
+.txt-xs p { margin-bottom: 5px; }
 
 .txt h1 { margin-bottom: 20px; }
 .txt h2 { margin-bottom: 20px; }
