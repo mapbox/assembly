@@ -1,0 +1,62 @@
+/**
+ * @section Animations
+ */
+
+/**
+* Add animation to elements with the animation classes.
+* @example
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-pulse"></div>
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-spin"></div>
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-fade-in"></div>
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-fade-out"></div>
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-shake"></div>
+*/
+.animation-pulse { animation: pulse 1.5s infinite ease-in-out; }
+.animation-spin { animation: spin 1.5s infinite linear; }
+.animation-fade-in { animation: fadein 1.5s ease-in forwards; }
+.animation-fade-out { animation: fadein 1.5s ease-out reverse forwards; }
+.animation-shake { animation: shake 1.5s ease-in-out; }
+
+/**
+* Use animation modifiers to change the speed and delay of an animation.
+* @example
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-spin animation--speed-fast"></div>
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-spin animation--speed-slow"></div>
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-spin animation--delay"></div>
+*/
+.animation--speed-fast { animation-duration: 1s; }
+.animation--speed-slow { animation-duration: 2s; }
+.animation--delay { animation-delay: 1s; }
+
+@keyframes pulse {
+  0% { transform: scale(0.5); opacity: 0; }
+  45% { opacity: 0.5; }
+  90% { transform: scale(1.25); opacity: 0; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes shake {
+  from,
+  to { transform: translate3d(0, 0, 0); }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% { transform: translate3d(-10px, 0, 0); }
+
+  20%,
+  40%,
+  60%,
+  80% { transform: translate3d(10px, 0, 0); }
+}

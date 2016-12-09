@@ -33,7 +33,8 @@ const cssFiles = [
   getCssPath('layout'),
   getCssPath('colors'),
   getCssPath('display'),
-  getCssPath('positioning')
+  getCssPath('positioning'),
+  getCssPath('animations')
 ];
 
 const customProperties = initPostcssCustomProperties();
