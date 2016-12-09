@@ -87,6 +87,15 @@
 .shadow-bold20 { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9); }
 .shadow-bold30 { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9); }
 
+.txt-shadow5 { text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+.txt-shadow10 { text-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+.txt-shadow20 { text-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+.txt-shadow30 { text-shadow: 0 0 30px rgba(0, 0, 0, 0.3); }
+.txt-shadow-bold5 { text-shadow: 0 0 5px rgba(0, 0, 0, 0.9); }
+.txt-shadow-bold10 { text-shadow: 0 0 10px rgba(0, 0, 0, 0.9); }
+.txt-shadow-bold20 { text-shadow: 0 0 20px rgba(0, 0, 0, 0.9); }
+.txt-shadow-bold30 { text-shadow: 0 0 30px rgba(0, 0, 0, 0.9); }
+
 /**
  * Visibility classes.
  */
@@ -94,4 +103,85 @@
 .alpha25 { opacity: 0.25; }
 .alpha50 { opacity: 0.5; }
 .alpha75 { opacity: 0.75; }
+.alpha100 { opacity: 1; }
+
 .clip { overflow: hidden; }
+
+/**
+ * Cursor classes.
+ */
+.cursor-default { cursor: default; }
+.cursor-pointer { cursor: pointer; }
+.cursor-crosshair { cursor: crosshair; }
+.cursor-move { cursor: move; }
+
+/**
+ * State classes.
+ */
+.hover-shadow5:hover,
+.focus-shadow5:focus,
+.active-shadow5:active { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3) !important; }
+.hover-shadow10:hover,
+.focus-shadow10:focus,
+.active-shadow10:active { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3) !important; }
+.hover-shadow20:hover,
+.focus-shadow20:focus,
+.active-shadow20:active { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3) !important; }
+.hover-shadow30:hover,
+.focus-shadow30:focus,
+.active-shadow30:active { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3) !important; }
+
+.hover-shadow-bold5:hover,
+.focus-shadow-bold5:focus,
+.active-shadow-bold5:active { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9) !important; }
+.hover-shadow-bold10:hover,
+.focus-shadow-bold10:focus,
+.active-shadow-bold10:active { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9) !important; }
+.hover-shadow-bold20:hover,
+.focus-shadow-bold20:focus,
+.active-shadow-bold20:active { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9) !important; }
+.hover-shadow-bold30:hover,
+.focus-shadow-bold30:focus,
+.active-shadow-bold30:active { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9) !important; }
+
+.hover-txt-shadow5:hover,
+.focus-txt-shadow5:focus,
+.active-txt-shadow5:active { text-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important; }
+.hover-txt-shadow10:hover,
+.focus-txt-shadow10:focus,
+.active-txt-shadow10:active { text-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important; }
+.hover-txt-shadow20:hover,
+.focus-txt-shadow20:focus,
+.active-txt-shadow20:active { text-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important; }
+.hover-txt-shadow30:hover,
+.focus-txt-shadow30:focus,
+.active-txt-shadow30:active { text-shadow: 0 0 30px rgba(0, 0, 0, 0.3) !important; }
+
+.hover-txt-shadow-bold5:hover,
+.focus-txt-shadow-bold5:focus,
+.active-txt-shadow-bold5:active { text-shadow: 0 0 5px rgba(0, 0, 0, 0.9) !important; }
+.hover-txt-shadow-bold10:hover,
+.focus-txt-shadow-bold10:focus,
+.active-txt-shadow-bold10:active { text-shadow: 0 0 10px rgba(0, 0, 0, 0.9) !important; }
+.hover-txt-shadow-bold20:hover,
+.focus-txt-shadow-bold20:focus,
+.active-txt-shadow-bold20:active { text-shadow: 0 0 20px rgba(0, 0, 0, 0.9) !important; }
+.hover-txt-shadow-bold30:hover,
+.focus-txt-shadow-bold30:focus,
+.active-txt-shadow-bold30:active { text-shadow: 0 0 30px rgba(0, 0, 0, 0.9) !important; }
+
+.hover-alpha0:hover,
+.focus-alpha0:focus,
+.active-alpha0:active { opacity: 0 !important; }
+.hover-alpha25:hover,
+.focus-alpha25:focus,
+.active-alpha25:active { opacity: 0.25 !important; }
+.hover-alpha50:hover,
+.focus-alpha50:focus,
+.active-alpha50:active { opacity: 0.5 !important; }
+.hover-alpha75:hover,
+.focus-alpha75:focus,
+.active-alpha75:active { opacity: 0.75 !important; }
+.hover-alpha100:hover,
+.focus-alpha100:focus,
+.active-alpha100:active { opacity: 1 !important; }
