@@ -11,11 +11,51 @@
 * <div class="bg-blue mt10 mb10 w50 h50 round animation-fade-out"></div>
 * <div class="bg-blue mt10 mb10 w50 h50 round animation-shake"></div>
 */
-.animation-pulse { animation: pulse 1.5s infinite ease-in-out; }
-.animation-spin { animation: spin 1.5s infinite linear; }
-.animation-fade-in { animation: fadein 1.5s ease-in forwards; }
-.animation-fade-out { animation: fadein 1.5s ease-out reverse forwards; }
-.animation-shake { animation: shake 1.5s ease-in-out; }
+.animation-pulse {
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.animation-spin {
+  animation-name: spin;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animation-fade-in {
+  animation-name: fadein;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.animation-fade-out {
+  animation-name: fadein;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+.animation-shake {
+  animation-name: shake;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+/**
+* Use animation modifiers to change the speed and delay of an animation.
+* @example
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-spin animation--speed-fast"></div>
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-spin animation--speed-slow"></div>
+* <div class="bg-blue mt10 mb10 w50 h50 round animation-spin animation--delay"></div>
+*/
+.animation--speed-fast { animation-duration: 1s; }
+.animation--speed-slow { animation-duration: 2s; }
+.animation--delay { animation-delay: 1s; }
 
 @keyframes pulse {
   0% { transform: scale(0.5); opacity: 0; }
