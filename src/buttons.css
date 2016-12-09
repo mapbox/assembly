@@ -1,9 +1,12 @@
 /**
  * @section Buttons
+ *
+ * To color a filled button, add a background color, e.g. `.bg-red`.
+ * To color a stroke button, add a text color, e.g. `.txt-purple`.
  */
 
 .btn {
-  background-color: #0077cc; /* blue */
+  background-color: #0065fb;
   color: #fff;
   border: 2px solid transparent;
   /* Odd numbers on padding are accommodating borders */
@@ -12,20 +15,31 @@
   font-weight: bold;
   border-radius: 4px;
   font-size: 12px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
-/* States */
-.btn:hover {
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
-}
+.btn:hover,
 .btn.is-active {
-  background: black;
+  background-color: #3246dc;
 }
-.btn.is-disabled {
-  cursor: default;
-  opacity: 0.5;
+
+/* Stroke */
+.btn--stroke {
+  background-color: transparent;
+  border: 2px solid;
+  color: #0077cc; /* blue */
+}
+
+.btn--stroke:hover {
+  background-color: transparent;
+  color: #0087fa;
+}
+
+.btn--stroke.is-active {
+  border-color: transparent;
+  color: #fff;
+  background: #0077cc; /* blue */
 }
 
 /* Sizes */
@@ -35,53 +49,9 @@
   padding: 0 8px;
 }
 
-/* Stroke and white */
-.btn--stroke,
-.btn--white {
-  background-color: #fff;
-  color: #0077cc; /* blue */
-}
-
-.btn--stroke {
-  border: 2px solid;
-}
-.btn--stroke:hover {
-  box-shadow: none;
-}
-
-.btn--stroke.btn--white {
-  background-color: transparent;
-  color: #fff;
-}
-
-.btn--stroke.is-active,
-.btn--white.is-active {
-  background: #0077cc; /* blue */
-  color: #fff;
-  border-color: transparent;
-}
-
-/* Clean and underlined */
-.btn--clean,
-.btn--underline {
-  background-color: transparent;
-  padding: 0;
-  color: #0077cc; /* blue */
-}
-.btn--clean:hover,
-.btn--underline:hover {
-  box-shadow: none;
-}
-.btn--underline {
-  text-decoration: underline;
-}
-
 /* Curvature */
 .btn--round {
-  border-radius: 20px;
-}
-.btn--short.btn--round {
-  border-radius: 15px;
+  border-radius: 50px; /* Needs to be >1/2 as tall as the tallest button */
 }
 
 /* Pill formations */
@@ -111,3 +81,44 @@
   border-left: 0;
   border-right: 0;
 }
+
+/* Color variations */
+.btn.bg-gray:hover,
+.btn.bg-gray.is-active { background-color: #444; }
+.btn.btn--stroke.txt-gray:hover,
+.btn.btn--stroke.txt-gray.is-active { color: #444; }
+
+.btn.bg-pink:hover,
+.btn.bg-pink.is-active { background-color: #dc2878; }
+.btn.btn--stroke.txt-pink:hover,
+.btn.btn--stroke.txt-pink.is-active { color: #dc2878; }
+
+.btn.bg-red:hover,
+.btn.bg-red.is-active { background-color: #d20014; }
+.btn.btn--stroke.txt-red:hover,
+.btn.btn--stroke.txt-red.is-active { color: #d20014; }
+
+.btn.bg-orange:hover,
+.btn.bg-orange.is-active { background-color: #f05a00; }
+.btn.btn--stroke.txt-orange:hover,
+.btn.btn--stroke.txt-orange.is-active { color: #f05a00; }
+
+.btn.bg-yellow:hover,
+.btn.bg-yellow.is-active { background-color: #ffbd0a; }
+.btn.btn--stroke.txt-yellow:hover,
+.btn.btn--stroke.txt-yellow.is-active { color: #ffbd0a; }
+
+.btn.bg-green:hover,
+.btn.bg-green.is-active { background-color: #1e963c; }
+.btn.btn--stroke.txt-green:hover,
+.btn.btn--stroke.txt-green.is-active { color: #1e963c; }
+
+.btn.bg-teal:hover,
+.btn.bg-teal.is-active { background-color: #3296a0; }
+.btn.btn--stroke.txt-teal:hover,
+.btn.btn--stroke.txt-teal.is-active { color: #3296a0; }
+
+.btn.bg-purple:hover,
+.btn.bg-purple.is-active { background-color: #6e3296; }
+.btn.btn--stroke.txt-purple:hover,
+.btn.btn--stroke.txt-purple.is-active { color: #6e3296; }
