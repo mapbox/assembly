@@ -103,6 +103,7 @@
 .alpha25 { opacity: 0.25; }
 .alpha50 { opacity: 0.5; }
 .alpha75 { opacity: 0.75; }
+.alpha100 { opacity: 1; }
 
 .clip { overflow: hidden; }
 
@@ -181,3 +182,6 @@
 .hover-alpha75:hover,
 .focus-alpha75:focus,
 .active-alpha75:active { opacity: 0.75; }
+.hover-alpha100:hover,
+.focus-alpha100:focus,
+.active-alpha100:active { opacity: 1; }
