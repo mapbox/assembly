@@ -1,0 +1,342 @@
+.legend {
+  display: block;
+  width: 100%;
+}
+
+.fieldset,
+.input,
+.select,
+.textarea {
+  background: #fff;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.input {
+  border: 1px solid #acb4b9;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.input:focus {
+  border-color: #3bb2d0;
+}
+
+.input:hover {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.input::placeholder {
+  color: #acb4b9;
+}
+
+.input {
+  height: 40px;
+  line-height: 38px; /* minus border */
+  padding: 0 10px;
+}
+
+.input--sm {
+  height: 30px;
+  line-height: 28px; /* minus border */
+  padding: 0 5px;
+}
+
+.textarea {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  resize: vertical;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.select {
+  border: 2px solid #acb4b9;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding-right: 15px;
+}
+
+.select {
+  height: 40px;
+  line-height: 36px; /* minus border */
+  padding: 0 10px;
+}
+
+.select--sm {
+  height: 30px;
+  line-height: 26px; /* minus border */
+  padding: 0 5px;
+}
+
+.range {
+  -webkit-appearance: none;
+  min-width: 0;
+  height: 4px;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-shadow: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8f8f8f;
+}
+
+.range::-ms-thumb {
+  box-shadow: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8f8f8f;
+}
+
+.range::-moz-range-thumb {
+  box-shadow: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8f8f8f;
+}
+
+/**
+ * Checkboxes
+ *
+ * Consists of
+ * - A wrapping `<label>` with the class `checkbox-container`.
+ * - An `<input type='checkbox'>`.
+ * - A `<div>` with the class `checkbox`
+ *   containing an `<svg>` with the chosen icon.
+ * - Text for the label.
+ *
+ * Variations:
+ * - Modify `checkbox` with `checkbox--stroke`.
+ * - Modify *non-stroke* `checkbox` with a background color,
+ *   e.g. `bg-red`.
+ * - Modify *stroke* `checkbox` with a text color, e.g. `color-red`.
+ * - Use a different icon.
+ *
+ * When placing a checkbox inside a *non-stroke* `.btn`, you should always
+ * use `checkbox--stroke`. The checkbox's border will be removed,
+ * but the box will be white and the checkmark will be colored as you choose.
+ * Inside a `.btn--stroke`, anything goes.
+ *
+ * The class `checkbox` and its modifiers can also be used independent
+ * of a `<label>` and `<input>` if you are building a custom components.
+ * In that case, apply the state class `is-active` when it should be checked.
+ *
+ * @example
+ * <label class="checkbox-container">
+ *   <input type='checkbox' value='magic'>
+ *   <div class="checkbox">
+ *     <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+ *   </div>
+ *   Magi
+ * </label>
+ */
+
+/**
+* Radios
+*
+* Consists of
+* - A wrapping `<label>` with the class `radio-container`.
+* - An `<input type='radio'>`.
+* - A `<div>` with the class `radio`.
+* - Text for the label.
+*
+* Variations:
+* - Modify `radio` with a text color, e.g. `color-purple`.
+*
+* The class `radio` and its modifiers can also be used independent
+* of a `<label>` and `<input>` if you are building a custom components.
+* In that case, apply the state class `is-active` when it should be checked.
+*
+* @example
+* <label class="radio-container">
+*   <input name='radio-basic' value='magic' type='radio'>
+*   <div class="radio"></div>
+*   Mgaic
+* </label>
+*/
+
+/* stylelint-disable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
+.checkbox-container,
+.radio-container {
+  user-select: none;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.checkbox-container > input,
+.radio-container > input {
+  position: absolute;
+  left: -9999px;
+}
+
+.checkbox,
+.radio {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkbox {
+  background-color: #0065fb; /* blue */
+  color: #fff;
+}
+
+.checkbox--stroke {
+  background-color: #fff;
+  box-shadow: inset 0 0 0 2px currentColor;
+  color: #0065fb; /* blue */
+}
+
+.btn:not(.btn--stroke) > .checkbox--stroke {
+  box-shadow: none;
+}
+
+.radio {
+  border-radius: 50%;
+  color: #0065fb; /* blue */
+  box-shadow: inset 0 0 0 2px currentColor;
+  position: relative;
+}
+
+/* Unchecked state */
+.checkbox > .icn {
+  display: none;
+}
+
+.radio::before {
+  content: '';
+  background-color: currentColor;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -5px;
+  display: none;
+}
+
+/* Checked state */
+input:checked + .checkbox > .icn,
+.checkbox.is-active > .icn {
+  display: block;
+}
+input:checked + .radio::before,
+.radio.is-active::before {
+  display: block;
+}
+
+input:checked .checkbox:not(.checkbox--stroke),
+.checkbox.is-active:not(.checkbox--stroke) {
+  background-color: #3246dc;
+}
+input:checked + .checkbox--stroke,
+.checkbox--stroke.is-active,
+input:checked + .radio,
+.radio.is-active {
+  color: #3246dc;
+}
+
+/* Color variations */
+input:checked + .bg-gray:not(.checkbox--stroke),
+.bg-gray.is-active:not(.checkbox--stroke) {
+  background-color: #444;
+}
+input:checked + .color-gray.checkbox--stroke,
+.color-gray.checkbox--stroke.is-active,
+input:checked + .color-gray,
+.color-gray.is-active {
+  color: #444;
+}
+
+input:checked + .bg-pink:not(.checkbox--stroke),
+.bg-pink.is-active:not(.checkbox--stroke) {
+  background-color: #dc2878;
+}
+input:checked + .color-pink.checkbox--stroke,
+.color-pink.checkbox--stroke.is-active,
+input:checked + .color-pink,
+.color-pink.is-active {
+  color: #dc2878;
+}
+
+input:checked + .bg-red:not(.checkbox--stroke),
+.bg-red.is-active:not(.checkbox--stroke) {
+  background-color: #d20014;
+}
+input:checked + .color-red.checkbox--stroke,
+.color-red.checkbox--stroke.is-active,
+input:checked + .color-red,
+.color-red.is-active {
+  color: #d20014;
+}
+
+input:checked + .bg-orange:not(.checkbox--stroke),
+.bg-orange.is-active:not(.checkbox--stroke) {
+  background-color: #f05a00;
+}
+input:checked + .color-orange.checkbox--stroke,
+.color-orange.checkbox--stroke.is-active,
+input:checked + .color-orange,
+.color-orange.is-active {
+  color: #f05a00;
+}
+
+input:checked + .bg-yellow:not(.checkbox--stroke),
+.bg-yellow.is-active:not(.checkbox--stroke) {
+  background-color: #ffbd0a;
+}
+input:checked + .color-yellow.checkbox--stroke,
+.color-yellow.checkbox--stroke.is-active,
+input:checked + .color-yellow,
+.color-yellow.is-active {
+  color: #ffbd0a;
+}
+
+input:checked + .bg-green:not(.checkbox--stroke),
+.bg-green.is-active:not(.checkbox--stroke) {
+  background-color: #1e963c;
+}
+input:checked + .color-green.checkbox--stroke,
+.color-green.checkbox--stroke.is-active,
+input:checked + .color-green,
+.color-green.is-active {
+  color: #1e963c;
+}
+
+input:checked + .bg-teal:not(.checkbox--stroke),
+.bg-teal.is-active:not(.checkbox--stroke) {
+  background-color: #3296a0;
+}
+input:checked + .color-teal.checkbox--stroke,
+.color-teal.checkbox--stroke.is-active,
+input:checked + .color-teal,
+.color-teal.is-active {
+  color: #3296a0;
+}
+
+input:checked + .bg-purple:not(.checkbox--stroke),
+.bg-purple.is-active:not(.checkbox--stroke) {
+  background-color: #6e3296;
+}
+input:checked + .color-purple.checkbox--stroke,
+.color-purple.checkbox--stroke.is-active,
+input:checked + .color-purple,
+.color-purple.is-active {
+  color: #6e3296;
+}
+/* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<head>
+  <meta charset='utf-8' />
+  <title></title>
+  <meta name='viewport' content='initial-scale=1,user-scalable=no' />
+  <link href='/dist/base-core.css' rel='stylesheet' />
+  <script src='/dist/base-svgs.js'></script>
+</head>
+<body>
+
+  <div style='padding: 20px'>
+
+    <div class='color-subheadline mb10'>Unstyled</div>
+    <div>
+      <input id='checkbox-unstyled' type='checkbox'>
+      <label for='checkbox-unstyled'>Checkbox</label>
+    </div>
+
+    <div class='color-subheadline mt30 mb10'>Non-interactive</div>
+    <div>
+      <!-- default: blue -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="checkbox">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- gray -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-gray">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-gray is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-gray">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-gray is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- pink -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-pink">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-pink is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-pink">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-pink is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- red -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-red">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-red is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-red">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-red is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- orange -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-orange">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-orange is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-orange">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-orange is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- yellow -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-yellow">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-yellow is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-yellow">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-yellow is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- green -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-green">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-green is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-green">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-green is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- teal -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-teal">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-teal is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-teal">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-teal is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- purple -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-purple">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox bg-purple is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-purple">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="checkbox checkbox--stroke color-purple is-active">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='color-subheadline mt30 mb10'>Interactive</div>
+    <div>
+      <!-- default: blue -->
+      <div class='flx mb10'>
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox checkbox--stroke">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+      </div>
+
+      <!-- gray -->
+      <div class='flx mb10'>
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox bg-gray">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox checkbox--stroke color-gray">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+      </div>
+
+      <!-- pink -->
+      <div class='flx mb10'>
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox bg-pink">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox checkbox--stroke color-pink">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+      </div>
+
+      <!-- orange -->
+      <div class='flx mb10'>
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox bg-orange">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox checkbox--stroke color-orange">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+      </div>
+
+      <!-- yellow -->
+      <div class='flx mb10'>
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox bg-yellow">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox checkbox--stroke color-yellow">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+      </div>
+
+      <!-- green -->
+      <div class='flx mb10'>
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox bg-green">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox checkbox--stroke color-green">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+      </div>
+
+      <!-- teal -->
+      <div class='flx mb10'>
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox bg-teal">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox checkbox--stroke color-teal">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+      </div>
+
+      <!-- purple -->
+      <div class='flx mb10'>
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox bg-purple">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+
+        <div class='mr30'>
+          <label class="checkbox-container">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox checkbox--stroke color-purple">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            Checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class='color-subheadline mt30 mb10'>Other</div>
+    <div>
+      <div class='mb10'>
+        <label class="checkbox-container">
+          <input id='checkbox-basic' type='checkbox'>
+          <div class="checkbox">
+            <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+          </div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi non explicabo eligendi ab perspiciatis, ut quis aspernatur. Eum minus quod quas impedit. Quo doloribus aliquam dolores ea odit commodi iure.
+        </label>
+      </div>
+
+      <div class='flx mb10'>
+        <div class="mr30">
+          <label class="checkbox-container btn">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox checkbox--stroke">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            In button
+          </label>
+        </div>
+        <div class="mr30">
+          <label class="checkbox-container btn bg-red">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox checkbox--stroke color-red">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            In button
+          </label>
+        </div>
+      </div>
+
+      <div class='flx mb10'>
+        <div class="mr30">
+          <label class="checkbox-container btn btn--stroke color-purple">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox bg-teal">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            In button
+          </label>
+        </div>
+        <div class="mr30">
+          <label class="checkbox-container btn btn--stroke color-orange">
+            <input id='checkbox-basic' type='checkbox'>
+            <div class="checkbox color-red">
+              <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+            </div>
+            In button
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class='color-subheadline mb10'>Unstyled</div>
+    <div>
+      <input id='checkbox-unstyled' type='radio'>
+      <label for='checkbox-unstyled'>Radio</label>
+    </div>
+
+    <div class='color-subheadline mt30 mb10'>Non-interactive</div>
+    <div>
+      <!-- default: blue -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="radio"></div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="radio is-active"></div>
+        </div>
+      </div>
+
+      <!-- gray -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="radio color-gray"></div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="radio color-gray is-active"></div>
+        </div>
+      </div>
+
+      <!-- pink -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="radio color-pink"></div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="radio color-pink is-active"></div>
+        </div>
+      </div>
+
+      <!-- red -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="radio color-red"></div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="radio color-red is-active"></div>
+        </div>
+      </div>
+
+      <!-- orange -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="radio color-orange"></div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="radio color-orange is-active"></div>
+        </div>
+      </div>
+
+      <!-- yellow -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="radio color-yellow"></div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="radio color-yellow is-active"></div>
+        </div>
+      </div>
+
+      <!-- green -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="radio color-green"></div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="radio color-green is-active"></div>
+        </div>
+      </div>
+
+      <!-- teal -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="radio color-teal"></div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="radio color-teal is-active"></div>
+        </div>
+      </div>
+
+      <!-- purple -->
+      <div class='mb10'>
+        <div class="dis-inline-block">
+          <div class="radio color-purple"></div>
+        </div>
+        <div class="dis-inline-block">
+          <div class="radio color-purple is-active"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class='color-subheadline mt30 mb10'>Interactive</div>
+    <div>
+      <!-- default: blue -->
+      <div class="mb10">
+        <label class="radio-container">
+          <input id='radio-basic' name='radio-basic' value='radio-basic-' type='radio'>
+          <div class="radio"></div>
+          Radio
+        </label>
+      </div>
+
+      <!-- gray -->
+      <div class="mb10">
+        <label class="radio-container">
+          <input id='radio-basic' name='radio-basic' value='radio-basic-' type='radio'>
+          <div class="radio color-gray"></div>
+          Radio
+        </label>
+      </div>
+
+      <!-- pink -->
+      <div class="mb10">
+        <label class="radio-container">
+          <input id='radio-basic' name='radio-basic' value='radio-basic-' type='radio'>
+          <div class="radio color-pink"></div>
+          Radio
+        </label>
+      </div>
+
+      <!-- red -->
+      <div class="mb10">
+        <label class="radio-container">
+          <input id='radio-basic' name='radio-basic' value='radio-basic-' type='radio'>
+          <div class="radio color-red"></div>
+          Radio
+        </label>
+      </div>
+
+      <!-- orange -->
+      <div class="mb10">
+        <label class="radio-container">
+          <input id='radio-basic' name='radio-basic' value='radio-basic-' type='radio'>
+          <div class="radio color-orange"></div>
+          Radio
+        </label>
+      </div>
+
+      <!-- yellow -->
+      <div class="mb10">
+        <label class="radio-container">
+          <input id='radio-basic' name='radio-basic' value='radio-basic-' type='radio'>
+          <div class="radio color-yellow"></div>
+          Radio
+        </label>
+      </div>
+
+      <!-- green -->
+      <div class="mb10">
+        <label class="radio-container">
+          <input id='radio-basic' name='radio-basic' value='radio-basic-' type='radio'>
+          <div class="radio color-green"></div>
+          Radio
+        </label>
+      </div>
+
+      <!-- teal -->
+      <div class="mb10">
+        <label class="radio-container">
+          <input id='radio-basic' name='radio-basic' value='radio-basic-' type='radio'>
+          <div class="radio color-teal"></div>
+          Radio
+        </label>
+      </div>
+
+      <!-- purple -->
+      <div class="mb10">
+        <label class="radio-container">
+          <input id='radio-basic' name='radio-basic' value='radio-basic-' type='radio'>
+          <div class="radio color-purple"></div>
+          Radio
+        </label>
+      </div>
+    </div>
+
+    <div class='color-subheadline mt30 mb10'>Other</div>
+    <div>
+      <label class="radio-container">
+        <input id='radio-basic' name='radio-basic' value='radio-basic-defaultfill' type='radio'>
+        <div class="radio"></div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi non explicabo eligendi ab perspiciatis, ut quis aspernatur. Eum minus quod quas impedit. Quo doloribus aliquam dolores ea odit commodi iure.
+      </label>
+    </div>
+  </div>
+</body>
+</html>
