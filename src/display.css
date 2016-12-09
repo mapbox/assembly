@@ -17,21 +17,21 @@
 .inline-block { display: inline-block; }
 .hidden { display: none; }
 
-@media only screen and (min-width: 1824px) {
+@media only screen and (--large-screen) {
   .inline-lg { display: inline; }
   .block-lg { display: block; }
   .inline-block-lg { display: inline-block; }
   .hidden-lg { display: none; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .inline-md { display: inline; }
   .block-md { display: block; }
   .inline-block-md { display: inline-block; }
   .hidden-md { display: none; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .inline-sm { display: inline; }
   .block-sm { display: block; }
   .inline-block-sm { display: inline-block; }

@@ -34,7 +34,17 @@
 .w800 { width: 800px; }
 /** @endgroup */
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
+  /**
+   * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
+   *
+   * @example
+   *  <div class='w5'></div>
+   *  <div class='w10'></div>
+   *  <div class='w40'></div>
+   *  <div class='w100'></div>
+   *  <div class='w200'></div>
+   */
   .w5-lg { width: 5px; }
   .w10-lg { width: 10px; }
   .w20-lg { width: 20px; }
@@ -54,7 +64,18 @@
   .w800-lg { width: 800px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
+
+  /**
+   * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
+   *
+   * @example
+   *  <div class='w5'></div>
+   *  <div class='w10'></div>
+   *  <div class='w40'></div>
+   *  <div class='w100'></div>
+   *  <div class='w200'></div>
+   */
   .w5-md { width: 5px; }
   .w10-md { width: 10px; }
   .w20-md { width: 20px; }
@@ -74,7 +95,17 @@
   .w800-md { width: 800px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
+  /**
+   * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
+   *
+   * @example
+   *  <div class='w5'></div>
+   *  <div class='w10'></div>
+   *  <div class='w40'></div>
+   *  <div class='w100'></div>
+   *  <div class='w200'></div>
+   */
   .w5-sm { width: 5px; }
   .w10-sm { width: 10px; }
   .w20-sm { width: 20px; }
@@ -124,7 +155,7 @@
 .wmax1200 { max-width: 1200px; }
 .wmax1600 { max-width: 1600px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .wmax5-lg { max-width: 5px; }
   .wmax10-lg { max-width: 10px; }
   .wmax20-lg { max-width: 20px; }
@@ -146,7 +177,7 @@
   .wmax1600-lg { max-width: 1600px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .wmax5-md { max-width: 5px; }
   .wmax10-md { max-width: 10px; }
   .wmax20-md { max-width: 20px; }
@@ -168,7 +199,7 @@
   .wmax1600-md { max-width: 1600px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .wmax5-sm { max-width: 5px; }
   .wmax10-sm { max-width: 10px; }
   .wmax20-sm { max-width: 20px; }
@@ -218,7 +249,7 @@
 .wmin600 { min-width: 600px; }
 .wmin800 { min-width: 800px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .wmin5-lg { min-width: 5px; }
   .wmin10-lg { min-width: 10px; }
   .wmin20-lg { min-width: 20px; }
@@ -238,7 +269,7 @@
   .wmin800-lg { min-width: 800px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .wmin5-md { min-width: 5px; }
   .wmin10-md { min-width: 10px; }
   .wmin20-md { min-width: 20px; }
@@ -258,7 +289,7 @@
   .wmin800-md { min-width: 800px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .wmin5-sm { min-width: 5px; }
   .wmin10-sm { min-width: 10px; }
   .wmin20-sm { min-width: 20px; }
@@ -306,7 +337,7 @@
 .h600 { height: 600px; }
 .h800 { height: 800px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .h5-lg { height: 5px; }
   .h10-lg { height: 10px; }
   .h20-lg { height: 20px; }
@@ -326,7 +357,7 @@
   .h800-lg { height: 800px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .h5-md { height: 5px; }
   .h10-md { height: 10px; }
   .h20-md { height: 20px; }
@@ -346,7 +377,7 @@
   .h800-md { height: 800px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .h5-sm { height: 5px; }
   .h10-sm { height: 10px; }
   .h20-sm { height: 20px; }
@@ -396,7 +427,7 @@
 .hmax1200 { max-height: 1200px; }
 .hmax1600 { max-height: 1600px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .hmax5-lg { max-height: 5px; }
   .hmax10-lg { max-height: 10px; }
   .hmax20-lg { max-height: 20px; }
@@ -418,7 +449,7 @@
   .hmax1600-lg { max-height: 1600px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .hmax5-md { max-height: 5px; }
   .hmax10-md { max-height: 10px; }
   .hmax20-md { max-height: 20px; }
@@ -440,7 +471,7 @@
   .hmax1600-md { max-height: 1600px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .hmax5-sm { max-height: 5px; }
   .hmax10-sm { max-height: 10px; }
   .hmax20-sm { max-height: 20px; }
@@ -490,7 +521,7 @@
 .hmin600 { min-height: 600px; }
 .hmin800 { min-height: 800px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .hmin5-lg { min-height: 5px; }
   .hmin10-lg { min-height: 10px; }
   .hmin20-lg { min-height: 20px; }
@@ -510,7 +541,7 @@
   .hmin800-lg { min-height: 800px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .hmin5-md { min-height: 5px; }
   .hmin10-md { min-height: 10px; }
   .hmin20-md { min-height: 20px; }
@@ -530,7 +561,7 @@
   .hmin800-md { min-height: 800px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .hmin5-sm { min-height: 5px; }
   .hmin10-sm { min-height: 10px; }
   .hmin20-sm { min-height: 20px; }
@@ -566,7 +597,7 @@
 .viewport-almost { height: 90vh; }
 .viewport-full { height: 100vh; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .viewport-third-lg { height: 33.3333vh; }
   .viewport-half-lg { height: 50vh; }
   .viewport-twothirds-lg { height: 66.6666vh; }
@@ -574,7 +605,7 @@
   .viewport-full-lg { height: 100vh; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .viewport-third-md { height: 33.3333vh; }
   .viewport-half-md { height: 50vh; }
   .viewport-twothirds-md { height: 66.6666vh; }
@@ -582,7 +613,7 @@
   .viewport-full-md { height: 100vh; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .viewport-third-sm { height: 33.3333vh; }
   .viewport-half-sm { height: 50vh; }
   .viewport-twothirds-sm { height: 66.6666vh; }

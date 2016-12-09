@@ -12,21 +12,21 @@
 .relative { position: relative; }
 .static { position: static; }
 
-@media only screen and (min-width: 1824px) {
+@media only screen and (--large-screen) {
   .fixed-lg { position: fixed; }
   .absolute-lg { position: absolute; }
   .relative-lg { position: relative; }
   .static-lg { position: static; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .fixed-md { position: fixed; }
   .absolute-md { position: absolute; }
   .relative-md { position: relative; }
   .static-md { position: static; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .fixed-sm { position: fixed; }
   .absolute-sm { position: absolute; }
   .relative-sm { position: relative; }
@@ -41,21 +41,21 @@ Zero out positioning
 .left { left: 0; }
 .bottom { bottom: 0; }
 
-@media only screen and (min-width: 1824px) {
+@media only screen and (--large-screen) {
   .top-lg { top: 0; }
   .right-lg { right: 0; }
   .left-lg { left: 0; }
   .bottom-lg { bottom: 0; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .top-md { top: 0; }
   .right-md { right: 0; }
   .left-md { left: 0; }
   .bottom-md { bottom: 0; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .top-sm { top: 0; }
   .right-sm { right: 0; }
   .left-sm { left: 0; }
@@ -77,7 +77,7 @@ Zero out positioning
 .z5 { z-index: 5; }
 /** @endgroup */
 
-@media only screen and (min-width: 1824px) {
+@media only screen and (--large-screen) {
   .z-neg1-lg { z-index: -1; }
   .z0-lg { z-index: 0; }
   .z1-lg { z-index: 1; }
@@ -87,7 +87,7 @@ Zero out positioning
   .z5-lg { z-index: 5; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .z-neg1-md { z-index: -1; }
   .z0-md { z-index: 0; }
   .z1-md { z-index: 1; }
@@ -97,7 +97,7 @@ Zero out positioning
   .z5-md { z-index: 5; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .z-neg1-sm { z-index: -1; }
   .z0-sm { z-index: 0; }
   .z1-sm { z-index: 1; }
@@ -141,7 +141,7 @@ Zero out positioning
 .mt600 { margin-top: 600px; }
 .mt800 { margin-top: 800px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .mt0-lg { margin-top: 0; }
   .mt5-lg { margin-top: 5px; }
   .mt10-lg { margin-top: 10px; }
@@ -162,7 +162,7 @@ Zero out positioning
   .mt800-lg { margin-top: 800px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .mt0-md { margin-top: 0; }
   .mt5-md { margin-top: 5px; }
   .mt10-md { margin-top: 10px; }
@@ -183,7 +183,7 @@ Zero out positioning
   .mt800-md { margin-top: 800px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .mt0-sm { margin-top: 0; }
   .mt5-sm { margin-top: 5px; }
   .mt10-sm { margin-top: 10px; }
@@ -232,7 +232,7 @@ Zero out positioning
 .mr600 { margin-right: 600px; }
 .mr800 { margin-right: 800px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .mr0-lg { margin-right: 0; }
   .mr5-lg { margin-right: 5px; }
   .mr10-lg { margin-right: 10px; }
@@ -253,7 +253,7 @@ Zero out positioning
   .mr800-lg { margin-right: 800px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .mr0-md { margin-right: 0; }
   .mr5-md { margin-right: 5px; }
   .mr10-md { margin-right: 10px; }
@@ -274,7 +274,7 @@ Zero out positioning
   .mr800-md { margin-right: 800px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .mr0-sm { margin-right: 0; }
   .mr5-sm { margin-right: 5px; }
   .mr10-sm { margin-right: 10px; }
@@ -325,7 +325,7 @@ Zero out positioning
 .mb600 { margin-bottom: 600px; }
 .mb800 { margin-bottom: 800px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .mb0-lg { margin-bottom: 0; }
   .mb5-lg { margin-bottom: 5px; }
   .mb10-lg { margin-bottom: 10px; }
@@ -346,7 +346,7 @@ Zero out positioning
   .mb800-lg { margin-bottom: 800px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .mb0-md { margin-bottom: 0; }
   .mb5-md { margin-bottom: 5px; }
   .mb10-md { margin-bottom: 10px; }
@@ -367,7 +367,7 @@ Zero out positioning
   .mb800-md { margin-bottom: 800px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .mb0-sm { margin-bottom: 0; }
   .mb5-sm { margin-bottom: 5px; }
   .mb10-sm { margin-bottom: 10px; }
@@ -416,7 +416,7 @@ Zero out positioning
 .ml600 { margin-left: 600px; }
 .ml800 { margin-left: 800px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .ml0-lg { margin-left: 0; }
   .ml5-lg { margin-left: 5px; }
   .ml10-lg { margin-left: 10px; }
@@ -437,7 +437,7 @@ Zero out positioning
   .ml800-lg { margin-left: 800px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .ml0-md { margin-left: 0; }
   .ml5-md { margin-left: 5px; }
   .ml10-md { margin-left: 10px; }
@@ -458,7 +458,7 @@ Zero out positioning
   .ml800-md { margin-left: 800px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .ml0-sm { margin-left: 0; }
   .ml5-sm { margin-left: 5px; }
   .ml10-sm { margin-left: 10px; }
@@ -503,7 +503,7 @@ Zero out positioning
 .p80 { padding: 80px; }
 .p100 { padding: 100px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .p0-lg { padding: 0; }
   .p5-lg { padding: 5px; }
   .p10-lg { padding: 10px; }
@@ -514,7 +514,7 @@ Zero out positioning
   .p100-lg { padding: 100px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .p0-md { padding: 0; }
   .p5-md { padding: 5px; }
   .p10-md { padding: 10px; }
@@ -525,7 +525,7 @@ Zero out positioning
   .p100-md { padding: 100px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .p0-sm { padding: 0; }
   .p5-sm { padding: 5px; }
   .p10-sm { padding: 10px; }
@@ -554,7 +554,7 @@ Zero out positioning
 .py80 { padding-bottom: 80px; padding-top: 80px; }
 .py100 { padding-bottom: 100px; padding-top: 100px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .py0-lg { padding-bottom: 0; padding-top: 0; }
   .py5-lg { padding-bottom: 5px; padding-top: 5px; }
   .py10-lg { padding-bottom: 10px; padding-top: 10px; }
@@ -565,7 +565,7 @@ Zero out positioning
   .py100-lg { padding-bottom: 100px; padding-top: 100px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .py0-md { padding-bottom: 0; padding-top: 0; }
   .py5-md { padding-bottom: 5px; padding-top: 5px; }
   .py10-md { padding-bottom: 10px; padding-top: 10px; }
@@ -576,7 +576,7 @@ Zero out positioning
   .py100-md { padding-bottom: 100px; padding-top: 100px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .py0-sm { padding-bottom: 0; padding-top: 0; }
   .py5-sm { padding-bottom: 5px; padding-top: 5px; }
   .py10-sm { padding-bottom: 10px; padding-top: 10px; }
@@ -605,7 +605,7 @@ Zero out positioning
 .px80 { padding-right: 80px; padding-left: 80px; }
 .px100 { padding-right: 100px; padding-left: 100px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .px0-lg { padding-right: 0; padding-left: 0; }
   .px5-lg { padding-right: 5px; padding-left: 5px; }
   .px10-lg { padding-right: 10px; padding-left: 10px; }
@@ -616,7 +616,7 @@ Zero out positioning
   .px100-lg { padding-right: 100px; padding-left: 100px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .px0-md { padding-right: 0; padding-left: 0; }
   .px5-md { padding-right: 5px; padding-left: 5px; }
   .px10-md { padding-right: 10px; padding-left: 10px; }
@@ -627,7 +627,7 @@ Zero out positioning
   .px100-md { padding-right: 100px; padding-left: 100px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .px0-sm { padding-right: 0; padding-left: 0; }
   .px5-sm { padding-right: 5px; padding-left: 5px; }
   .px10-sm { padding-right: 10px; padding-left: 10px; }
@@ -656,7 +656,7 @@ Zero out positioning
 .pt80 { padding-top: 80px; }
 .pt100 { padding-top: 100px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .pt0-lg { padding-top: 0; }
   .pt5-lg { padding-top: 5px; }
   .pt10-lg { padding-top: 10px; }
@@ -667,7 +667,7 @@ Zero out positioning
   .pt100-lg { padding-top: 100px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .pt0-md { padding-top: 0; }
   .pt5-md { padding-top: 5px; }
   .pt10-md { padding-top: 10px; }
@@ -678,7 +678,7 @@ Zero out positioning
   .pt100-md { padding-top: 100px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .pt0-sm { padding-top: 0; }
   .pt5-sm { padding-top: 5px; }
   .pt10-sm { padding-top: 10px; }
@@ -707,7 +707,7 @@ Zero out positioning
 .pr80 { padding-right: 80px; }
 .pr100 { padding-right: 100px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .pr0-lg { padding-right: 0; }
   .pr5-lg { padding-right: 5px; }
   .pr10-lg { padding-right: 10px; }
@@ -718,7 +718,7 @@ Zero out positioning
   .pr100-lg { padding-right: 100px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .pr0-md { padding-right: 0; }
   .pr5-md { padding-right: 5px; }
   .pr10-md { padding-right: 10px; }
@@ -729,7 +729,7 @@ Zero out positioning
   .pr100-md { padding-right: 100px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .pr0-sm { padding-right: 0; }
   .pr5-sm { padding-right: 5px; }
   .pr10-sm { padding-right: 10px; }
@@ -758,7 +758,7 @@ Zero out positioning
 .pb80 { padding-bottom: 80px; }
 .pb100 { padding-bottom: 100px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .pb0-lg { padding-bottom: 0; }
   .pb5-lg { padding-bottom: 5px; }
   .pb10-lg { padding-bottom: 10px; }
@@ -769,7 +769,7 @@ Zero out positioning
   .pb100-lg { padding-bottom: 100px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .pb0-md { padding-bottom: 0; }
   .pb5-md { padding-bottom: 5px; }
   .pb10-md { padding-bottom: 10px; }
@@ -780,7 +780,7 @@ Zero out positioning
   .pb100-md { padding-bottom: 100px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .pb0-sm { padding-bottom: 0; }
   .pb5-sm { padding-bottom: 5px; }
   .pb10-sm { padding-bottom: 10px; }
@@ -809,7 +809,7 @@ Zero out positioning
 .pl80 { padding-left: 80px; }
 .pl100 { padding-left: 100px; }
 
-@media only screen and (max-width: 1824px) {
+@media only screen and (--large-screen) {
   .pl0-lg { padding-left: 0; }
   .pl5-lg { padding-left: 5px; }
   .pl10-lg { padding-left: 10px; }
@@ -820,7 +820,7 @@ Zero out positioning
   .pl100-lg { padding-left: 100px; }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (--medium-screen) {
   .pl0-md { padding-left: 0; }
   .pl5-md { padding-left: 5px; }
   .pl10-md { padding-left: 10px; }
@@ -831,7 +831,7 @@ Zero out positioning
   .pl100-md { padding-left: 100px; }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (--small-screen) {
   .pb0-sm { padding-bottom: 0; }
   .pl0-sm { padding-left: 0; }
   .pl5-sm { padding-left: 5px; }
