@@ -6,34 +6,33 @@
 /**
  * Use display classes to control the display property of elements.
  * @example
- * <div class="p10 bor-all-gray mb10"><div class="dis-inline bor-all">dis-inline</div></div>
- * <div class="p10 bor-all-gray mb10"><div class="dis-block bor-all">dis-block</div></div>
- * <div class="p10 bor-all-gray mb10"><div class="dis-inline-block bor-all">dis-inline-block</div></div>
- * <div class="p10 bor-all-gray mb10"><div class="dis-flex bor-all">dis-flex</div></div>
- * <div class="p10 bor-all-gray mb10"><div class="dis-hidden bor-all">dis-hidden</div></div>
+ * <div class="p10 mb10"><div class="inline">inline</div></div>
+ * <div class="p10 mb10"><div class="block">block</div></div>
+ * <div class="p10 mb10"><div class="inline-block">inline-block</div></div>
+ * <div class="p10 mb10"><div class="hidden">hidden</div></div>
  */
-.dis-inline { display: inline; }
-.dis-block { display: block; }
-.dis-inline-block { display: inline-block; }
-.dis-hidden { display: none; }
+.inline { display: inline; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.hidden { display: none; }
+
+@media only screen and (min-width: 1824px) {
+  .inline-lg { display: inline; }
+  .block-lg { display: block; }
+  .inline-block-lg { display: inline-block; }
+  .hidden-lg { display: none; }
+}
 
 @media only screen and (max-width: 770px) {
-  .dis-inline-md { display: inline; }
-  .dis-block-md { display: block; }
-  .dis-inline-block-md { display: inline-block; }
-  .dis-hidden-md { display: none; }
+  .inline-md { display: inline; }
+  .block-md { display: block; }
+  .inline-block-md { display: inline-block; }
+  .hidden-md { display: none; }
 }
 
 @media only screen and (max-width: 640px) {
-  .dis-inline-sm { display: inline; }
-  .dis-block-sm { display: block; }
-  .dis-inline-block-sm { display: inline-block; }
-  .dis-hidden-sm { display: none; }
-}
-
-@media only screen and (min-width: 1824px) {
-  .dis-inline-lg { display: inline; }
-  .dis-block-lg { display: block; }
-  .dis-inline-block-lg { display: inline-block; }
-  .dis-hidden-lg { display: none; }
+  .inline-sm { display: inline; }
+  .block-sm { display: block; }
+  .inline-block-sm { display: inline-block; }
+  .hidden-sm { display: none; }
 }

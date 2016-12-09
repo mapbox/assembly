@@ -7,11 +7,11 @@
  * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
  *
  * @example
- *  <div class='wid5'></div>
- *  <div class='wid10'></div>
- *  <div class='wid40'></div>
- *  <div class='wid100'></div>
- *  <div class='wid200'></div>
+ *  <div class='w5'></div>
+ *  <div class='w10'></div>
+ *  <div class='w40'></div>
+ *  <div class='w100'></div>
+ *  <div class='w200'></div>
  */
 .w5 { width: 5px; }
 .w10 { width: 10px; }
@@ -36,11 +36,11 @@
    * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
    *
    * @example
-   *  <div class='wid5'></div>
-   *  <div class='wid10'></div>
-   *  <div class='wid40'></div>
-   *  <div class='wid100'></div>
-   *  <div class='wid200'></div>
+   *  <div class='w5'></div>
+   *  <div class='w10'></div>
+   *  <div class='w40'></div>
+   *  <div class='w100'></div>
+   *  <div class='w200'></div>
    */
   .w5-lg { width: 5px; }
   .w10-lg { width: 10px; }
@@ -67,11 +67,11 @@
    * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
    *
    * @example
-   *  <div class='wid5'></div>
-   *  <div class='wid10'></div>
-   *  <div class='wid40'></div>
-   *  <div class='wid100'></div>
-   *  <div class='wid200'></div>
+   *  <div class='w5'></div>
+   *  <div class='w10'></div>
+   *  <div class='w40'></div>
+   *  <div class='w100'></div>
+   *  <div class='w200'></div>
    */
   .w5-md { width: 5px; }
   .w10-md { width: 10px; }
@@ -97,11 +97,11 @@
    * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
    *
    * @example
-   *  <div class='wid5'></div>
-   *  <div class='wid10'></div>
-   *  <div class='wid40'></div>
-   *  <div class='wid100'></div>
-   *  <div class='wid200'></div>
+   *  <div class='w5'></div>
+   *  <div class='w10'></div>
+   *  <div class='w40'></div>
+   *  <div class='w100'></div>
+   *  <div class='w200'></div>
    */
   .w5-sm { width: 5px; }
   .w10-sm { width: 10px; }
@@ -126,255 +126,195 @@
  * Max widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px, and by 400px up to 1600px.
  *
  * @example
- *  <div class='wid5'></div>
- *  <div class='wid10'></div>
- *  <div class='wid40'></div>
- *  <div class='wid100'></div>
- *  <div class='wid200'></div>
+ *  <div class='wmax5'></div>
+ *  <div class='wmax10'></div>
+ *  <div class='wmax40'></div>
+ *  <div class='wmax100'></div>
+ *  <div class='wmax200'></div>
  */
-.wmx5 { max-width: 5px; }
-.wmx10 { max-width: 10px; }
-.wmx20 { max-width: 20px; }
-.wmx30 { max-width: 30px; }
-.wmx40 { max-width: 40px; }
-.wmx50 { max-width: 50px; }
-.wmx60 { max-width: 60px; }
-.wmx80 { max-width: 80px; }
-.wmx100 { max-width: 100px; }
-.wmx120 { max-width: 120px; }
-.wmx140 { max-width: 140px; }
-.wmx160 { max-width: 160px; }
-.wmx180 { max-width: 180px; }
-.wmx200 { max-width: 200px; }
-.wmx400 { max-width: 400px; }
-.wmx600 { max-width: 600px; }
-.wmx800 { max-width: 800px; }
-.wmx1200 { max-width: 1200px; }
-.wmx1600 { max-width: 1600px; }
+.wmax5 { max-width: 5px; }
+.wmax10 { max-width: 10px; }
+.wmax20 { max-width: 20px; }
+.wmax30 { max-width: 30px; }
+.wmax40 { max-width: 40px; }
+.wmax50 { max-width: 50px; }
+.wmax60 { max-width: 60px; }
+.wmax80 { max-width: 80px; }
+.wmax100 { max-width: 100px; }
+.wmax120 { max-width: 120px; }
+.wmax140 { max-width: 140px; }
+.wmax160 { max-width: 160px; }
+.wmax180 { max-width: 180px; }
+.wmax200 { max-width: 200px; }
+.wmax400 { max-width: 400px; }
+.wmax600 { max-width: 600px; }
+.wmax800 { max-width: 800px; }
+.wmax1200 { max-width: 1200px; }
+.wmax1600 { max-width: 1600px; }
 
 @media only screen and (max-width: 1824px) {
-  /**
-   * Max widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px, and by 400px up to 1600px.
-   *
-   * @example
-   *  <div class='wid5'></div>
-   *  <div class='wid10'></div>
-   *  <div class='wid40'></div>
-   *  <div class='wid100'></div>
-   *  <div class='wid200'></div>
-   */
-  .wmx5-lg { max-width: 5px; }
-  .wmx10-lg { max-width: 10px; }
-  .wmx20-lg { max-width: 20px; }
-  .wmx30-lg { max-width: 30px; }
-  .wmx40-lg { max-width: 40px; }
-  .wmx50-lg { max-width: 50px; }
-  .wmx60-lg { max-width: 60px; }
-  .wmx80-lg { max-width: 80px; }
-  .wmx100-lg { max-width: 100px; }
-  .wmx120-lg { max-width: 120px; }
-  .wmx140-lg { max-width: 140px; }
-  .wmx160-lg { max-width: 160px; }
-  .wmx180-lg { max-width: 180px; }
-  .wmx200-lg { max-width: 200px; }
-  .wmx400-lg { max-width: 400px; }
-  .wmx600-lg { max-width: 600px; }
-  .wmx800-lg { max-width: 800px; }
-  .wmx1200-lg { max-width: 1200px; }
-  .wmx1600-lg { max-width: 1600px; }
+  .wmax5-lg { max-width: 5px; }
+  .wmax10-lg { max-width: 10px; }
+  .wmax20-lg { max-width: 20px; }
+  .wmax30-lg { max-width: 30px; }
+  .wmax40-lg { max-width: 40px; }
+  .wmax50-lg { max-width: 50px; }
+  .wmax60-lg { max-width: 60px; }
+  .wmax80-lg { max-width: 80px; }
+  .wmax100-lg { max-width: 100px; }
+  .wmax120-lg { max-width: 120px; }
+  .wmax140-lg { max-width: 140px; }
+  .wmax160-lg { max-width: 160px; }
+  .wmax180-lg { max-width: 180px; }
+  .wmax200-lg { max-width: 200px; }
+  .wmax400-lg { max-width: 400px; }
+  .wmax600-lg { max-width: 600px; }
+  .wmax800-lg { max-width: 800px; }
+  .wmax1200-lg { max-width: 1200px; }
+  .wmax1600-lg { max-width: 1600px; }
 }
 
 @media only screen and (max-width: 770px) {
-  /**
-   * Max widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px, and by 400px up to 1600px.
-   *
-   * @example
-   *  <div class='wid5'></div>
-   *  <div class='wid10'></div>
-   *  <div class='wid40'></div>
-   *  <div class='wid100'></div>
-   *  <div class='wid200'></div>
-   */
-  .wmx5-md { max-width: 5px; }
-  .wmx10-md { max-width: 10px; }
-  .wmx20-md { max-width: 20px; }
-  .wmx30-md { max-width: 30px; }
-  .wmx40-md { max-width: 40px; }
-  .wmx50-md { max-width: 50px; }
-  .wmx60-md { max-width: 60px; }
-  .wmx80-md { max-width: 80px; }
-  .wmx100-md { max-width: 100px; }
-  .wmx120-md { max-width: 120px; }
-  .wmx140-md { max-width: 140px; }
-  .wmx160-md { max-width: 160px; }
-  .wmx180-md { max-width: 180px; }
-  .wmx200-md { max-width: 200px; }
-  .wmx400-md { max-width: 400px; }
-  .wmx600-md { max-width: 600px; }
-  .wmx800-md { max-width: 800px; }
-  .wmx1200-md { max-width: 1200px; }
-  .wmx1600-md { max-width: 1600px; }
+  .wmax5-md { max-width: 5px; }
+  .wmax10-md { max-width: 10px; }
+  .wmax20-md { max-width: 20px; }
+  .wmax30-md { max-width: 30px; }
+  .wmax40-md { max-width: 40px; }
+  .wmax50-md { max-width: 50px; }
+  .wmax60-md { max-width: 60px; }
+  .wmax80-md { max-width: 80px; }
+  .wmax100-md { max-width: 100px; }
+  .wmax120-md { max-width: 120px; }
+  .wmax140-md { max-width: 140px; }
+  .wmax160-md { max-width: 160px; }
+  .wmax180-md { max-width: 180px; }
+  .wmax200-md { max-width: 200px; }
+  .wmax400-md { max-width: 400px; }
+  .wmax600-md { max-width: 600px; }
+  .wmax800-md { max-width: 800px; }
+  .wmax1200-md { max-width: 1200px; }
+  .wmax1600-md { max-width: 1600px; }
 }
 
 @media only screen and (max-width: 640px) {
-  /**
-   * Max widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px, and by 400px up to 1600px.
-   *
-   * @example
-   *  <div class='wid5'></div>
-   *  <div class='wid10'></div>
-   *  <div class='wid40'></div>
-   *  <div class='wid100'></div>
-   *  <div class='wid200'></div>
-   */
-  .wmx5-sm { max-width: 5px; }
-  .wmx10-sm { max-width: 10px; }
-  .wmx20-sm { max-width: 20px; }
-  .wmx30-sm { max-width: 30px; }
-  .wmx40-sm { max-width: 40px; }
-  .wmx50-sm { max-width: 50px; }
-  .wmx60-sm { max-width: 60px; }
-  .wmx80-sm { max-width: 80px; }
-  .wmx100-sm { max-width: 100px; }
-  .wmx120-sm { max-width: 120px; }
-  .wmx140-sm { max-width: 140px; }
-  .wmx160-sm { max-width: 160px; }
-  .wmx180-sm { max-width: 180px; }
-  .wmx200-sm { max-width: 200px; }
-  .wmx400-sm { max-width: 400px; }
-  .wmx600-sm { max-width: 600px; }
-  .wmx800-sm { max-width: 800px; }
-  .wmx1200-sm { max-width: 1200px; }
-  .wmx1600-sm { max-width: 1600px; }
+  .wmax5-sm { max-width: 5px; }
+  .wmax10-sm { max-width: 10px; }
+  .wmax20-sm { max-width: 20px; }
+  .wmax30-sm { max-width: 30px; }
+  .wmax40-sm { max-width: 40px; }
+  .wmax50-sm { max-width: 50px; }
+  .wmax60-sm { max-width: 60px; }
+  .wmax80-sm { max-width: 80px; }
+  .wmax100-sm { max-width: 100px; }
+  .wmax120-sm { max-width: 120px; }
+  .wmax140-sm { max-width: 140px; }
+  .wmax160-sm { max-width: 160px; }
+  .wmax180-sm { max-width: 180px; }
+  .wmax200-sm { max-width: 200px; }
+  .wmax400-sm { max-width: 400px; }
+  .wmax600-sm { max-width: 600px; }
+  .wmax800-sm { max-width: 800px; }
+  .wmax1200-sm { max-width: 1200px; }
+  .wmax1600-sm { max-width: 1600px; }
 }
 
 /**
  * Min widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px.
  *
  * @example
- *  <div class='wmn5'></div>
- *  <div class='wmn10'></div>
- *  <div class='wmn40'></div>
- *  <div class='wmn100'></div>
- *  <div class='wmn200'></div>
+ *  <div class='wmin5'></div>
+ *  <div class='wmin10'></div>
+ *  <div class='wmin40'></div>
+ *  <div class='wmin100'></div>
+ *  <div class='wmin200'></div>
  */
-.wmn5 { min-width: 5px; }
-.wmn10 { min-width: 10px; }
-.wmn20 { min-width: 20px; }
-.wmn30 { min-width: 30px; }
-.wmn40 { min-width: 40px; }
-.wmn50 { min-width: 50px; }
-.wmn60 { min-width: 60px; }
-.wmn80 { min-width: 80px; }
-.wmn100 { min-width: 100px; }
-.wmn120 { min-width: 120px; }
-.wmn140 { min-width: 140px; }
-.wmn160 { min-width: 160px; }
-.wmn180 { min-width: 180px; }
-.wmn200 { min-width: 200px; }
-.wmn400 { min-width: 400px; }
-.wmn600 { min-width: 600px; }
-.wmn800 { min-width: 800px; }
+.wmin5 { min-width: 5px; }
+.wmin10 { min-width: 10px; }
+.wmin20 { min-width: 20px; }
+.wmin30 { min-width: 30px; }
+.wmin40 { min-width: 40px; }
+.wmin50 { min-width: 50px; }
+.wmin60 { min-width: 60px; }
+.wmin80 { min-width: 80px; }
+.wmin100 { min-width: 100px; }
+.wmin120 { min-width: 120px; }
+.wmin140 { min-width: 140px; }
+.wmin160 { min-width: 160px; }
+.wmin180 { min-width: 180px; }
+.wmin200 { min-width: 200px; }
+.wmin400 { min-width: 400px; }
+.wmin600 { min-width: 600px; }
+.wmin800 { min-width: 800px; }
 
 @media only screen and (max-width: 1824px) {
-  /**
-   * Min widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px.
-   *
-   * @example
-   *  <div class='wmn5'></div>
-   *  <div class='wmn10'></div>
-   *  <div class='wmn40'></div>
-   *  <div class='wmn100'></div>
-   *  <div class='wmn200'></div>
-   */
-  .wmn5-lg { min-width: 5px; }
-  .wmn10-lg { min-width: 10px; }
-  .wmn20-lg { min-width: 20px; }
-  .wmn30-lg { min-width: 30px; }
-  .wmn40-lg { min-width: 40px; }
-  .wmn50-lg { min-width: 50px; }
-  .wmn60-lg { min-width: 60px; }
-  .wmn80-lg { min-width: 80px; }
-  .wmn100-lg { min-width: 100px; }
-  .wmn120-lg { min-width: 120px; }
-  .wmn140-lg { min-width: 140px; }
-  .wmn160-lg { min-width: 160px; }
-  .wmn180-lg { min-width: 180px; }
-  .wmn200-lg { min-width: 200px; }
-  .wmn400-lg { min-width: 400px; }
-  .wmn600-lg { min-width: 600px; }
-  .wmn800-lg { min-width: 800px; }
+  .wmin5-lg { min-width: 5px; }
+  .wmin10-lg { min-width: 10px; }
+  .wmin20-lg { min-width: 20px; }
+  .wmin30-lg { min-width: 30px; }
+  .wmin40-lg { min-width: 40px; }
+  .wmin50-lg { min-width: 50px; }
+  .wmin60-lg { min-width: 60px; }
+  .wmin80-lg { min-width: 80px; }
+  .wmin100-lg { min-width: 100px; }
+  .wmin120-lg { min-width: 120px; }
+  .wmin140-lg { min-width: 140px; }
+  .wmin160-lg { min-width: 160px; }
+  .wmin180-lg { min-width: 180px; }
+  .wmin200-lg { min-width: 200px; }
+  .wmin400-lg { min-width: 400px; }
+  .wmin600-lg { min-width: 600px; }
+  .wmin800-lg { min-width: 800px; }
 }
 
 @media only screen and (max-width: 770px) {
-  /**
-   * Min widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px.
-   *
-   * @example
-   *  <div class='wmn5'></div>
-   *  <div class='wmn10'></div>
-   *  <div class='wmn40'></div>
-   *  <div class='wmn100'></div>
-   *  <div class='wmn200'></div>
-   */
-  .wmn5-md { min-width: 5px; }
-  .wmn10-md { min-width: 10px; }
-  .wmn20-md { min-width: 20px; }
-  .wmn30-md { min-width: 30px; }
-  .wmn40-md { min-width: 40px; }
-  .wmn50-md { min-width: 50px; }
-  .wmn60-md { min-width: 60px; }
-  .wmn80-md { min-width: 80px; }
-  .wmn100-md { min-width: 100px; }
-  .wmn120-md { min-width: 120px; }
-  .wmn140-md { min-width: 140px; }
-  .wmn160-md { min-width: 160px; }
-  .wmn180-md { min-width: 180px; }
-  .wmn200-md { min-width: 200px; }
-  .wmn400-md { min-width: 400px; }
-  .wmn600-md { min-width: 600px; }
-  .wmn800-md { min-width: 800px; }
+  .wmin5-md { min-width: 5px; }
+  .wmin10-md { min-width: 10px; }
+  .wmin20-md { min-width: 20px; }
+  .wmin30-md { min-width: 30px; }
+  .wmin40-md { min-width: 40px; }
+  .wmin50-md { min-width: 50px; }
+  .wmin60-md { min-width: 60px; }
+  .wmin80-md { min-width: 80px; }
+  .wmin100-md { min-width: 100px; }
+  .wmin120-md { min-width: 120px; }
+  .wmin140-md { min-width: 140px; }
+  .wmin160-md { min-width: 160px; }
+  .wmin180-md { min-width: 180px; }
+  .wmin200-md { min-width: 200px; }
+  .wmin400-md { min-width: 400px; }
+  .wmin600-md { min-width: 600px; }
+  .wmin800-md { min-width: 800px; }
 }
 
 @media only screen and (max-width: 640px) {
-  /**
-   * Min widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px.
-   *
-   * @example
-   *  <div class='wmn5'></div>
-   *  <div class='wmn10'></div>
-   *  <div class='wmn40'></div>
-   *  <div class='wmn100'></div>
-   *  <div class='wmn200'></div>
-   */
-  .wmn5-sm { min-width: 5px; }
-  .wmn10-sm { min-width: 10px; }
-  .wmn20-sm { min-width: 20px; }
-  .wmn30-sm { min-width: 30px; }
-  .wmn40-sm { min-width: 40px; }
-  .wmn50-sm { min-width: 50px; }
-  .wmn60-sm { min-width: 60px; }
-  .wmn80-sm { min-width: 80px; }
-  .wmn100-sm { min-width: 100px; }
-  .wmn120-sm { min-width: 120px; }
-  .wmn140-sm { min-width: 140px; }
-  .wmn160-sm { min-width: 160px; }
-  .wmn180-sm { min-width: 180px; }
-  .wmn200-sm { min-width: 200px; }
-  .wmn400-sm { min-width: 400px; }
-  .wmn600-sm { min-width: 600px; }
-  .wmn800-sm { min-width: 800px; }
+  .wmin5-sm { min-width: 5px; }
+  .wmin10-sm { min-width: 10px; }
+  .wmin20-sm { min-width: 20px; }
+  .wmin30-sm { min-width: 30px; }
+  .wmin40-sm { min-width: 40px; }
+  .wmin50-sm { min-width: 50px; }
+  .wmin60-sm { min-width: 60px; }
+  .wmin80-sm { min-width: 80px; }
+  .wmin100-sm { min-width: 100px; }
+  .wmin120-sm { min-width: 120px; }
+  .wmin140-sm { min-width: 140px; }
+  .wmin160-sm { min-width: 160px; }
+  .wmin180-sm { min-width: 180px; }
+  .wmin200-sm { min-width: 200px; }
+  .wmin400-sm { min-width: 400px; }
+  .wmin600-sm { min-width: 600px; }
+  .wmin800-sm { min-width: 800px; }
 }
 
 /**
  * Heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
  *
  * @example
- *  <div class='row-5'></div>
- *  <div class='row-10'></div>
- *  <div class='row-40'></div>
- *  <div class='row-100'></div>
- *  <div class='row-200'></div>
+ *  <div class='h5'></div>
+ *  <div class='h10'></div>
+ *  <div class='h40'></div>
+ *  <div class='h100'></div>
+ *  <div class='h200'></div>
  */
 .h5 { height: 5px; }
 .h10 { height: 10px; }
@@ -395,16 +335,6 @@
 .h800 { height: 800px; }
 
 @media only screen and (max-width: 1824px) {
-  /**
-   * Heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
-   *
-   * @example
-   *  <div class='row-5'></div>
-   *  <div class='row-10'></div>
-   *  <div class='row-40'></div>
-   *  <div class='row-100'></div>
-   *  <div class='row-200'></div>
-   */
   .h5-lg { height: 5px; }
   .h10-lg { height: 10px; }
   .h20-lg { height: 20px; }
@@ -425,16 +355,6 @@
 }
 
 @media only screen and (max-width: 770px) {
-  /**
-   * Heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
-   *
-   * @example
-   *  <div class='row-5'></div>
-   *  <div class='row-10'></div>
-   *  <div class='row-40'></div>
-   *  <div class='row-100'></div>
-   *  <div class='row-200'></div>
-   */
   .h5-md { height: 5px; }
   .h10-md { height: 10px; }
   .h20-md { height: 20px; }
@@ -455,16 +375,6 @@
 }
 
 @media only screen and (max-width: 640px) {
-  /**
-   * Heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
-   *
-   * @example
-   *  <div class='row-5'></div>
-   *  <div class='row-10'></div>
-   *  <div class='row-40'></div>
-   *  <div class='row-100'></div>
-   *  <div class='row-200'></div>
-   */
   .h5-sm { height: 5px; }
   .h10-sm { height: 10px; }
   .h20-sm { height: 20px; }
@@ -488,301 +398,222 @@
  * Max heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px, and by 400px up to 1600px.
  *
  * @example
- *  <div class='hm5'></div>
- *  <div class='hm10'></div>
- *  <div class='hm40'></div>
- *  <div class='hm100'></div>
- *  <div class='hm200'></div>
+ *  <div class='hmax5'></div>
+ *  <div class='hmax10'></div>
+ *  <div class='hmax40'></div>
+ *  <div class='hmax100'></div>
+ *  <div class='hmax200'></div>
  */
-.hmx5 { max-height: 5px; }
-.hmx10 { max-height: 10px; }
-.hmx20 { max-height: 20px; }
-.hmx30 { max-height: 30px; }
-.hmx40 { max-height: 40px; }
-.hmx50 { max-height: 50px; }
-.hmx60 { max-height: 60px; }
-.hmx80 { max-height: 80px; }
-.hmx100 { max-height: 100px; }
-.hmx120 { max-height: 120px; }
-.hmx140 { max-height: 140px; }
-.hmx160 { max-height: 160px; }
-.hmx180 { max-height: 180px; }
-.hmx200 { max-height: 200px; }
-.hmx400 { max-height: 400px; }
-.hmx600 { max-height: 600px; }
-.hmx800 { max-height: 800px; }
-.hmx1200 { max-height: 1200px; }
-.hmx1600 { max-height: 1600px; }
+.hmax5 { max-height: 5px; }
+.hmax10 { max-height: 10px; }
+.hmax20 { max-height: 20px; }
+.hmax30 { max-height: 30px; }
+.hmax40 { max-height: 40px; }
+.hmax50 { max-height: 50px; }
+.hmax60 { max-height: 60px; }
+.hmax80 { max-height: 80px; }
+.hmax100 { max-height: 100px; }
+.hmax120 { max-height: 120px; }
+.hmax140 { max-height: 140px; }
+.hmax160 { max-height: 160px; }
+.hmax180 { max-height: 180px; }
+.hmax200 { max-height: 200px; }
+.hmax400 { max-height: 400px; }
+.hmax600 { max-height: 600px; }
+.hmax800 { max-height: 800px; }
+.hmax1200 { max-height: 1200px; }
+.hmax1600 { max-height: 1600px; }
 
 @media only screen and (max-width: 1824px) {
-  /**
-   * Max heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px, and by 400px up to 1600px.
-   *
-   * @example
-   *  <div class='hm5'></div>
-   *  <div class='hm10'></div>
-   *  <div class='hm40'></div>
-   *  <div class='hm100'></div>
-   *  <div class='hm200'></div>
-   */
-  .hmx5-lg { max-height: 5px; }
-  .hmx10-lg { max-height: 10px; }
-  .hmx20-lg { max-height: 20px; }
-  .hmx30-lg { max-height: 30px; }
-  .hmx40-lg { max-height: 40px; }
-  .hmx50-lg { max-height: 50px; }
-  .hmx60-lg { max-height: 60px; }
-  .hmx80-lg { max-height: 80px; }
-  .hmx100-lg { max-height: 100px; }
-  .hmx120-lg { max-height: 120px; }
-  .hmx140-lg { max-height: 140px; }
-  .hmx160-lg { max-height: 160px; }
-  .hmx180-lg { max-height: 180px; }
-  .hmx200-lg { max-height: 200px; }
-  .hmx400-lg { max-height: 400px; }
-  .hmx600-lg { max-height: 600px; }
-  .hmx800-lg { max-height: 800px; }
-  .hmx1200-lg { max-height: 1200px; }
-  .hmx1600-lg { max-height: 1600px; }
+  .hmax5-lg { max-height: 5px; }
+  .hmax10-lg { max-height: 10px; }
+  .hmax20-lg { max-height: 20px; }
+  .hmax30-lg { max-height: 30px; }
+  .hmax40-lg { max-height: 40px; }
+  .hmax50-lg { max-height: 50px; }
+  .hmax60-lg { max-height: 60px; }
+  .hmax80-lg { max-height: 80px; }
+  .hmax100-lg { max-height: 100px; }
+  .hmax120-lg { max-height: 120px; }
+  .hmax140-lg { max-height: 140px; }
+  .hmax160-lg { max-height: 160px; }
+  .hmax180-lg { max-height: 180px; }
+  .hmax200-lg { max-height: 200px; }
+  .hmax400-lg { max-height: 400px; }
+  .hmax600-lg { max-height: 600px; }
+  .hmax800-lg { max-height: 800px; }
+  .hmax1200-lg { max-height: 1200px; }
+  .hmax1600-lg { max-height: 1600px; }
 }
 
 @media only screen and (max-width: 770px) {
-  /**
-   * Max heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px, and by 400px up to 1600px.
-   *
-   * @example
-   *  <div class='hm5'></div>
-   *  <div class='hm10'></div>
-   *  <div class='hm40'></div>
-   *  <div class='hm100'></div>
-   *  <div class='hm200'></div>
-   */
-  .hmx5-md { max-height: 5px; }
-  .hmx10-md { max-height: 10px; }
-  .hmx20-md { max-height: 20px; }
-  .hmx30-md { max-height: 30px; }
-  .hmx40-md { max-height: 40px; }
-  .hmx50-md { max-height: 50px; }
-  .hmx60-md { max-height: 60px; }
-  .hmx80-md { max-height: 80px; }
-  .hmx100-md { max-height: 100px; }
-  .hmx120-md { max-height: 120px; }
-  .hmx140-md { max-height: 140px; }
-  .hmx160-md { max-height: 160px; }
-  .hmx180-md { max-height: 180px; }
-  .hmx200-md { max-height: 200px; }
-  .hmx400-md { max-height: 400px; }
-  .hmx600-md { max-height: 600px; }
-  .hmx800-md { max-height: 800px; }
-  .hmx1200-md { max-height: 1200px; }
-  .hmx1600-md { max-height: 1600px; }
+  .hmax5-md { max-height: 5px; }
+  .hmax10-md { max-height: 10px; }
+  .hmax20-md { max-height: 20px; }
+  .hmax30-md { max-height: 30px; }
+  .hmax40-md { max-height: 40px; }
+  .hmax50-md { max-height: 50px; }
+  .hmax60-md { max-height: 60px; }
+  .hmax80-md { max-height: 80px; }
+  .hmax100-md { max-height: 100px; }
+  .hmax120-md { max-height: 120px; }
+  .hmax140-md { max-height: 140px; }
+  .hmax160-md { max-height: 160px; }
+  .hmax180-md { max-height: 180px; }
+  .hmax200-md { max-height: 200px; }
+  .hmax400-md { max-height: 400px; }
+  .hmax600-md { max-height: 600px; }
+  .hmax800-md { max-height: 800px; }
+  .hmax1200-md { max-height: 1200px; }
+  .hmax1600-md { max-height: 1600px; }
 }
 
 @media only screen and (max-width: 640px) {
-  /**
-   * Max heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px, and by 400px up to 1600px.
-   *
-   * @example
-   *  <div class='hm5'></div>
-   *  <div class='hm10'></div>
-   *  <div class='hm40'></div>
-   *  <div class='hm100'></div>
-   *  <div class='hm200'></div>
-   */
-  .hmx5-sm { max-height: 5px; }
-  .hmx10-sm { max-height: 10px; }
-  .hmx20-sm { max-height: 20px; }
-  .hmx30-sm { max-height: 30px; }
-  .hmx40-sm { max-height: 40px; }
-  .hmx50-sm { max-height: 50px; }
-  .hmx60-sm { max-height: 60px; }
-  .hmx80-sm { max-height: 80px; }
-  .hmx100-sm { max-height: 100px; }
-  .hmx120-sm { max-height: 120px; }
-  .hmx140-sm { max-height: 140px; }
-  .hmx160-sm { max-height: 160px; }
-  .hmx180-sm { max-height: 180px; }
-  .hmx200-sm { max-height: 200px; }
-  .hmx400-sm { max-height: 400px; }
-  .hmx600-sm { max-height: 600px; }
-  .hmx800-sm { max-height: 800px; }
-  .hmx1200-sm { max-height: 1200px; }
-  .hmx1600-sm { max-height: 1600px; }
+  .hmax5-sm { max-height: 5px; }
+  .hmax10-sm { max-height: 10px; }
+  .hmax20-sm { max-height: 20px; }
+  .hmax30-sm { max-height: 30px; }
+  .hmax40-sm { max-height: 40px; }
+  .hmax50-sm { max-height: 50px; }
+  .hmax60-sm { max-height: 60px; }
+  .hmax80-sm { max-height: 80px; }
+  .hmax100-sm { max-height: 100px; }
+  .hmax120-sm { max-height: 120px; }
+  .hmax140-sm { max-height: 140px; }
+  .hmax160-sm { max-height: 160px; }
+  .hmax180-sm { max-height: 180px; }
+  .hmax200-sm { max-height: 200px; }
+  .hmax400-sm { max-height: 400px; }
+  .hmax600-sm { max-height: 600px; }
+  .hmax800-sm { max-height: 800px; }
+  .hmax1200-sm { max-height: 1200px; }
+  .hmax1600-sm { max-height: 1600px; }
 }
 
 /**
  * Min heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px.
  *
  * @example
- *  <div class='hmn5'></div>
- *  <div class='hmn10'></div>
- *  <div class='hmn40'></div>
- *  <div class='hmn100'></div>
- *  <div class='hmn200'></div>
+ *  <div class='hmin5'></div>
+ *  <div class='hmin10'></div>
+ *  <div class='hmin40'></div>
+ *  <div class='hmin100'></div>
+ *  <div class='hmin200'></div>
  */
-.hmn5 { min-height: 5px; }
-.hmn10 { min-height: 10px; }
-.hmn20 { min-height: 20px; }
-.hmn30 { min-height: 30px; }
-.hmn40 { min-height: 40px; }
-.hmn50 { min-height: 50px; }
-.hmn60 { min-height: 60px; }
-.hmn80 { min-height: 80px; }
-.hmn100 { min-height: 100px; }
-.hmn120 { min-height: 120px; }
-.hmn140 { min-height: 140px; }
-.hmn160 { min-height: 160px; }
-.hmn180 { min-height: 180px; }
-.hmn200 { min-height: 200px; }
-.hmn400 { min-height: 400px; }
-.hmn600 { min-height: 600px; }
-.hmn800 { min-height: 800px; }
+.hmin5 { min-height: 5px; }
+.hmin10 { min-height: 10px; }
+.hmin20 { min-height: 20px; }
+.hmin30 { min-height: 30px; }
+.hmin40 { min-height: 40px; }
+.hmin50 { min-height: 50px; }
+.hmin60 { min-height: 60px; }
+.hmin80 { min-height: 80px; }
+.hmin100 { min-height: 100px; }
+.hmin120 { min-height: 120px; }
+.hmin140 { min-height: 140px; }
+.hmin160 { min-height: 160px; }
+.hmin180 { min-height: 180px; }
+.hmin200 { min-height: 200px; }
+.hmin400 { min-height: 400px; }
+.hmin600 { min-height: 600px; }
+.hmin800 { min-height: 800px; }
 
 @media only screen and (max-width: 1824px) {
-  /**
-   * Min heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px.
-   *
-   * @example
-   *  <div class='hmn5'></div>
-   *  <div class='hmn10'></div>
-   *  <div class='hmn40'></div>
-   *  <div class='hmn100'></div>
-   *  <div class='hmn200'></div>
-   */
-  .hmn5-lg { min-height: 5px; }
-  .hmn10-lg { min-height: 10px; }
-  .hmn20-lg { min-height: 20px; }
-  .hmn30-lg { min-height: 30px; }
-  .hmn40-lg { min-height: 40px; }
-  .hmn50-lg { min-height: 50px; }
-  .hmn60-lg { min-height: 60px; }
-  .hmn80-lg { min-height: 80px; }
-  .hmn100-lg { min-height: 100px; }
-  .hmn120-lg { min-height: 120px; }
-  .hmn140-lg { min-height: 140px; }
-  .hmn160-lg { min-height: 160px; }
-  .hmn180-lg { min-height: 180px; }
-  .hmn200-lg { min-height: 200px; }
-  .hmn400-lg { min-height: 400px; }
-  .hmn600-lg { min-height: 600px; }
-  .hmn800-lg { min-height: 800px; }
+  .hmin5-lg { min-height: 5px; }
+  .hmin10-lg { min-height: 10px; }
+  .hmin20-lg { min-height: 20px; }
+  .hmin30-lg { min-height: 30px; }
+  .hmin40-lg { min-height: 40px; }
+  .hmin50-lg { min-height: 50px; }
+  .hmin60-lg { min-height: 60px; }
+  .hmin80-lg { min-height: 80px; }
+  .hmin100-lg { min-height: 100px; }
+  .hmin120-lg { min-height: 120px; }
+  .hmin140-lg { min-height: 140px; }
+  .hmin160-lg { min-height: 160px; }
+  .hmin180-lg { min-height: 180px; }
+  .hmin200-lg { min-height: 200px; }
+  .hmin400-lg { min-height: 400px; }
+  .hmin600-lg { min-height: 600px; }
+  .hmin800-lg { min-height: 800px; }
 }
 
 @media only screen and (max-width: 770px) {
-  /**
-   * Min heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px.
-   *
-   * @example
-   *  <div class='hmn5'></div>
-   *  <div class='hmn10'></div>
-   *  <div class='hmn40'></div>
-   *  <div class='hmn100'></div>
-   *  <div class='hmn200'></div>
-   */
-  .hmn5-md { min-height: 5px; }
-  .hmn10-md { min-height: 10px; }
-  .hmn20-md { min-height: 20px; }
-  .hmn30-md { min-height: 30px; }
-  .hmn40-md { min-height: 40px; }
-  .hmn50-md { min-height: 50px; }
-  .hmn60-md { min-height: 60px; }
-  .hmn80-md { min-height: 80px; }
-  .hmn100-md { min-height: 100px; }
-  .hmn120-md { min-height: 120px; }
-  .hmn140-md { min-height: 140px; }
-  .hmn160-md { min-height: 160px; }
-  .hmn180-md { min-height: 180px; }
-  .hmn200-md { min-height: 200px; }
-  .hmn400-md { min-height: 400px; }
-  .hmn600-md { min-height: 600px; }
-  .hmn800-md { min-height: 800px; }
+  .hmin5-md { min-height: 5px; }
+  .hmin10-md { min-height: 10px; }
+  .hmin20-md { min-height: 20px; }
+  .hmin30-md { min-height: 30px; }
+  .hmin40-md { min-height: 40px; }
+  .hmin50-md { min-height: 50px; }
+  .hmin60-md { min-height: 60px; }
+  .hmin80-md { min-height: 80px; }
+  .hmin100-md { min-height: 100px; }
+  .hmin120-md { min-height: 120px; }
+  .hmin140-md { min-height: 140px; }
+  .hmin160-md { min-height: 160px; }
+  .hmin180-md { min-height: 180px; }
+  .hmin200-md { min-height: 200px; }
+  .hmin400-md { min-height: 400px; }
+  .hmin600-md { min-height: 600px; }
+  .hmin800-md { min-height: 800px; }
 }
 
 @media only screen and (max-width: 640px) {
-  /**
-   * Min heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px.
-   *
-   * @example
-   *  <div class='hmn5'></div>
-   *  <div class='hmn10'></div>
-   *  <div class='hmn40'></div>
-   *  <div class='hmn100'></div>
-   *  <div class='hmn200'></div>
-   */
-  .hmn5-sm { min-height: 5px; }
-  .hmn10-sm { min-height: 10px; }
-  .hmn20-sm { min-height: 20px; }
-  .hmn30-sm { min-height: 30px; }
-  .hmn40-sm { min-height: 40px; }
-  .hmn50-sm { min-height: 50px; }
-  .hmn60-sm { min-height: 60px; }
-  .hmn80-sm { min-height: 80px; }
-  .hmn100-sm { min-height: 100px; }
-  .hmn120-sm { min-height: 120px; }
-  .hmn140-sm { min-height: 140px; }
-  .hmn160-sm { min-height: 160px; }
-  .hmn180-sm { min-height: 180px; }
-  .hmn200-sm { min-height: 200px; }
-  .hmn400-sm { min-height: 400px; }
-  .hmn600-sm { min-height: 600px; }
-  .hmn800-sm { min-height: 800px; }
+  .hmin5-sm { min-height: 5px; }
+  .hmin10-sm { min-height: 10px; }
+  .hmin20-sm { min-height: 20px; }
+  .hmin30-sm { min-height: 30px; }
+  .hmin40-sm { min-height: 40px; }
+  .hmin50-sm { min-height: 50px; }
+  .hmin60-sm { min-height: 60px; }
+  .hmin80-sm { min-height: 80px; }
+  .hmin100-sm { min-height: 100px; }
+  .hmin120-sm { min-height: 120px; }
+  .hmin140-sm { min-height: 140px; }
+  .hmin160-sm { min-height: 160px; }
+  .hmin180-sm { min-height: 180px; }
+  .hmin200-sm { min-height: 200px; }
+  .hmin400-sm { min-height: 400px; }
+  .hmin600-sm { min-height: 600px; }
+  .hmin800-sm { min-height: 800px; }
 }
 
 /**
  * Match height of browser window.
  *
  * @example
- *  <div class='row-full'></div>
+ *  <div class='viewport-third'></div>
+ *  <div class='viewport-half'></div>
+ *  <div class='viewport-twothirds'></div>
+ *  <div class='viewport-almost'></div>
+ *  <div class='viewport-full'></div>
  */
-
-.h-third { height: 33.3333vh; }
-.h-half { height: 50vh; }
-.h-twothirds { height: 66.6666vh; }
-.h-almost { height: 90vh; }
-.h-full { height: 100vh; }
+.viewport-third { height: 33.3333vh; }
+.viewport-half { height: 50vh; }
+.viewport-twothirds { height: 66.6666vh; }
+.viewport-almost { height: 90vh; }
+.viewport-full { height: 100vh; }
 
 @media only screen and (max-width: 1824px) {
-  /**
-   * Match height of browser window.
-   *
-   * @example
-   *  <div class='row-full'></div>
-   */
-
-  .h-third-lg { height: 33.3333vh; }
-  .h-half-lg { height: 50vh; }
-  .h-twothirds-lg { height: 66.6666vh; }
-  .h-almost-lg { height: 90vh; }
-  .h-full-lg { height: 100vh; }
+  .viewport-third-lg { height: 33.3333vh; }
+  .viewport-half-lg { height: 50vh; }
+  .viewport-twothirds-lg { height: 66.6666vh; }
+  .viewport-almost-lg { height: 90vh; }
+  .viewport-full-lg { height: 100vh; }
 }
 
 @media only screen and (max-width: 770px) {
-  /**
-   * Match height of browser window.
-   *
-   * @example
-   *  <div class='row-full'></div>
-   */
-
-  .h-third-md { height: 33.3333vh; }
-  .h-half-md { height: 50vh; }
-  .h-twothirds-md { height: 66.6666vh; }
-  .h-almost-md { height: 90vh; }
-  .h-full-md { height: 100vh; }
+  .viewport-third-md { height: 33.3333vh; }
+  .viewport-half-md { height: 50vh; }
+  .viewport-twothirds-md { height: 66.6666vh; }
+  .viewport-almost-md { height: 90vh; }
+  .viewport-full-md { height: 100vh; }
 }
 
 @media only screen and (max-width: 640px) {
-
-  /**
-   * Match height of browser window.
-   *
-   * @example
-   *  <div class='row-full'></div>
-   */
-
-  .h-third-sm { height: 33.3333vh; }
-  .h-half-sm { height: 50vh; }
-  .h-twothirds-sm { height: 66.6666vh; }
-  .h-almost-sm { height: 90vh; }
-  .h-full-sm { height: 100vh; }
+  .viewport-third-sm { height: 33.3333vh; }
+  .viewport-half-sm { height: 50vh; }
+  .viewport-twothirds-sm { height: 66.6666vh; }
+  .viewport-almost-sm { height: 90vh; }
+  .viewport-full-sm { height: 100vh; }
 }

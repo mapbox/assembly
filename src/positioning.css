@@ -7,39 +7,60 @@
  * Position classes
 */
 
-.pos-fixed { position: fixed; }
-.pos-absolute { position: absolute; }
-.pos-relative { position: relative; }
-.pos-static { position: static; }
+.fixed { position: fixed; }
+.absolute { position: absolute; }
+.relative { position: relative; }
+.static { position: static; }
 
 @media only screen and (min-width: 1824px) {
-  .pos-fixed-lg { position: fixed; }
-  .pos-absolute-lg { position: absolute; }
-  .pos-relative-lg { position: relative; }
-  .pos-static-lg { position: static; }
+  .fixed-lg { position: fixed; }
+  .absolute-lg { position: absolute; }
+  .relative-lg { position: relative; }
+  .static-lg { position: static; }
 }
 
 @media only screen and (max-width: 770px) {
-  .pos-fixed-md { position: fixed; }
-  .pos-absolute-md { position: absolute; }
-  .pos-relative-md { position: relative; }
-  .pos-static-md { position: static; }
+  .fixed-md { position: fixed; }
+  .absolute-md { position: absolute; }
+  .relative-md { position: relative; }
+  .static-md { position: static; }
 }
 
 @media only screen and (max-width: 640px) {
-  .pos-fixed-sm { position: fixed; }
-  .pos-absolute-sm { position: absolute; }
-  .pos-relative-sm { position: relative; }
-  .pos-static-sm { position: static; }
+  .fixed-sm { position: fixed; }
+  .absolute-sm { position: absolute; }
+  .relative-sm { position: relative; }
+  .static-sm { position: static; }
 }
 
 /*
 Zero out positioning
 */
-.t { top: 0; }
-.r { right: 0; }
-.l { left: 0; }
-.b { bottom: 0; }
+.top { top: 0; }
+.right { right: 0; }
+.left { left: 0; }
+.bottom { bottom: 0; }
+
+@media only screen and (min-width: 1824px) {
+  .top-lg { top: 0; }
+  .right-lg { right: 0; }
+  .left-lg { left: 0; }
+  .bottom-lg { bottom: 0; }
+}
+
+@media only screen and (max-width: 770px) {
+  .top-md { top: 0; }
+  .right-md { right: 0; }
+  .left-md { left: 0; }
+  .bottom-md { bottom: 0; }
+}
+
+@media only screen and (max-width: 640px) {
+  .top-sm { top: 0; }
+  .right-sm { right: 0; }
+  .left-sm { left: 0; }
+  .bottom-sm { bottom: 0; }
+}
 
 /**
  * Override default stacking order with z-index classes. Whenever possible, rely on
@@ -47,7 +68,6 @@ Zero out positioning
  * @section zIndex
  * @memberof Positioning
  */
-
 .z-neg1 { z-index: -1; }
 .z0 { z-index: 0; }
 .z1 { z-index: 1; }
@@ -55,6 +75,36 @@ Zero out positioning
 .z3 { z-index: 3; }
 .z4 { z-index: 4; }
 .z5 { z-index: 5; }
+
+@media only screen and (min-width: 1824px) {
+  .z-neg1-lg { z-index: -1; }
+  .z0-lg { z-index: 0; }
+  .z1-lg { z-index: 1; }
+  .z2-lg { z-index: 2; }
+  .z3-lg { z-index: 3; }
+  .z4-lg { z-index: 4; }
+  .z5-lg { z-index: 5; }
+}
+
+@media only screen and (max-width: 770px) {
+  .z-neg1-md { z-index: -1; }
+  .z0-md { z-index: 0; }
+  .z1-md { z-index: 1; }
+  .z2-md { z-index: 2; }
+  .z3-md { z-index: 3; }
+  .z4-md { z-index: 4; }
+  .z5-md { z-index: 5; }
+}
+
+@media only screen and (max-width: 640px) {
+  .z-neg1-sm { z-index: -1; }
+  .z0-sm { z-index: 0; }
+  .z1-sm { z-index: 1; }
+  .z2-sm { z-index: 2; }
+  .z3-sm { z-index: 3; }
+  .z4-sm { z-index: 4; }
+  .z5-sm { z-index: 5; }
+}
 
 /**
  * Margin classes
