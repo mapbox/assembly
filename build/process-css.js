@@ -7,7 +7,6 @@ const Concat = require('concat-with-sourcemaps');
 const postcss = require('postcss');
 const reporter = require('postcss-reporter');
 const autoprefixer = require('autoprefixer');
-// const cssnano = require('cssnano');
 const initPostcssCustomProperties = require('postcss-custom-properties');
 const postcssCustomMedia = require('postcss-custom-media');
 const variableDefinitions = require('../src/variables');
@@ -48,7 +47,6 @@ const postcssPlugins = [
   autoprefixer({
     browsers: 'last 2 versions, ie > 11'
   }),
-  // cssnano(),
   reporter()
 ];
 
