@@ -6,7 +6,7 @@
   "scripts": {
     "css": "node scripts/process-css.js",
     "svgs": "node scripts/create-svg-sprite.js",
-    "build": "trash dist/* && mkdir dist && npm run css && npm run svgs",
+    "build": "rm -rf dist && mkdir dist && npm run css && npm run svgs",
     "debug": "npm run build && http-server",
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint scripts",
@@ -59,7 +59,6 @@
     "remark-react": "^3.1.0",
     "stylelint": "^7.6.0",
     "svgo": "^0.7.1",
-    "svgstore": "^1.1.0",
-    "trash-cli": "^1.4.0"
+    "svgstore": "^1.1.0"
   }
 }
