@@ -134,3 +134,8 @@
 .btn.bg-purple.is-active { background-color: var(--purple-dark); }
 .btn.btn--stroke.color-purple:hover,
 .btn.btn--stroke.color-purple.is-active { color: var(--purple-dark); }
+
+.btn.bg-white:hover,
+.btn.bg-white.is-active { background-color: var(--lighten75); }
+.btn.btn--stroke.color-white:hover,
+.btn.btn--stroke.color-white.is-active { color: var(--lighten75); }
