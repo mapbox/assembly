@@ -3,31 +3,31 @@ export const themeStyle = `
 body { margin: 0; }
 * { box-sizing: border-box; }
 
-[class^='styledoc-'] {
+[class^='docs-'] {
   font-family: "Open Sans";
   color: rgba(0,0,0,.75);
   line-height: 1.5;
 }
 
-[class^='styledoc-heading-title-'] {
+[class^='docs-heading-title-'] {
   padding-top: 40px;
 }
 
-[class^='styledoc-heading-title-'] a {
+[class^='docs-heading-title-'] a {
   color: rgba(0,0,0,.75);
   margin-bottom: 10px;
   text-decoration: none;
 }
 
-[class^='ƒstyledoc-heading-title-'] a:hover {
+[class^='ƒdocs-heading-title-'] a:hover {
   color: rgba(0,0,0,.9);
 }
 
-.styledoc-logo {
+.docs-logo {
   margin-bottom: 20px;
 }
 
-.styledoc-sidebar {
+.docs-sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -37,7 +37,7 @@ body { margin: 0; }
   height: 100vh;
 }
 
-.styledoc-nav-item {
+.docs-nav-item {
   display: block;
   font-size: 14px;
   margin-bottom: 5px;
@@ -45,11 +45,11 @@ body { margin: 0; }
   text-decoration: none;
 }
 
-.styledoc-nav-item:hover {
+.docs-nav-item:hover {
   color: rgba(0,0,0,.75);
 }
 
-.styledoc-container {
+.docs-container {
   position: relative;
   left: 80px;
   width: calc(100vw - 240px);
@@ -58,66 +58,66 @@ body { margin: 0; }
   margin-right: auto;
 }
 
-.styledoc-selector-group {
+.docs-selector-group {
   margin-bottom: 40px;
   border-bottom: 5px solid rgba(0,0,0,.1);
 }
 
-.styledoc-heading-container {
+.docs-heading-container {
   margin-bottom: 40px;
 }
 
-.styledoc-heading-title-1 {
+.docs-heading-title-1 {
   font-size: 20px;
   font-weight: bold;
 }
 
-.styledoc-heading-title-2 {
+.docs-heading-title-2 {
   font-size: 20px;
   font-weight: bold;
 }
 
-.styledoc-heading-title-3 {
+.docs-heading-title-3 {
   font-size: 20px;
   font-weight: bold;
 }
 
-.styledoc-heading-title-4 {
+.docs-heading-title-4 {
   font-size: 16px;
   font-weight: bold;
 }
 
-.styledoc-heading-title-5 {
+.docs-heading-title-5 {
   font-size: 12px;
   font-weight: bold;
 }
 
-.styledocs-description {
+.docs-description {
   font-size: 20px;
   color: rgba(0,0,0,.5);
 }
 
-.styledoc-selector-name {
+.docs-selector-name {
   font-family:Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
   font-size: 16px;
   margin-bottom: 10px;
 }
 
-.styledoc-selector-description {
+.docs-selector-description {
   color: rgba(0,0,0,.5);
   font-size: 16px;
   margin-bottom: 20px;
 }
 
-.styledoc-selector-description a {
+.docs-selector-description a {
   color: #0077cc;
 }
 
-.styledoc-selector-description a:hover {
+.docs-selector-description a:hover {
   color: #3246dc;
 }
 
-.styledoc-group-member {
+.docs-group-member {
   font-family:Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
   border-radius: 4px;
   padding: 2px 4px;

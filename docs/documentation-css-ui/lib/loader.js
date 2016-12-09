@@ -1,4 +1,4 @@
-import styledoc from '../../styledoc/core';
+import documentationCss from 'documentation-css';
 import React from 'react';
 import { Contents } from './contents';
 import { addStyle } from './add-style';
@@ -20,12 +20,13 @@ class Loader extends React.Component {
 
         this.setState({
           loading: false,
-          entries: styledoc.extract([{
+          entries: documentationCss.extract([{
             contents: content,
             path: this.props.file
           }])
         });
-      });
+      })
+      .catch((err) => console.error(err));
   }
 
   render() {

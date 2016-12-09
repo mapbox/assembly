@@ -28,19 +28,19 @@ class Entry extends React.Component {
 
     const selectors = props.referencedSource ? [props.referencedSource.selector] : props.members;
 
-    const selectorEls = selectors.map((m) => <span key={m}>
-        <span className='styledoc-group-member'>{m}</span>
+    const selectorEls = selectors !== undefined && selectors.map((m) => <span key={m}>
+        <span className='docs-group-member'>{m}</span>
       </span>);
 
     return (
-      <div className='styledoc-selector-group'>
-        <div className='styledoc-selector-name'>
+      <div className='docs-selector-group'>
+        <div className='docs-selector-name'>
           {selectorEls}
         </div>
-        <div className='styledoc-selector-description'>
+        <div className='docs-selector-description'>
           {remark().use(reactRenderer).process(props.parsedComment.description).contents}
         </div>
-        <div className='styledoc-example'>
+        <div className='docs-example'>
           {example}
         </div>
       </div>

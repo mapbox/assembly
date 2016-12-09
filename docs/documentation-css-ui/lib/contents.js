@@ -29,7 +29,7 @@ class Contents extends React.Component {
 
         navEls.push(<a
           key={entryEls.length + 1}
-          className='styledoc-nav-item'
+          className='docs-nav-item'
           href={'#' + entry.title.replace(/\s+/g, '-')}>
             {entry.title}
           </a>);
@@ -51,11 +51,11 @@ class Contents extends React.Component {
 
     return (
       <div>
-        <div className='styledoc-sidebar'>
-          <div className='styledoc-logo'>Decorator</div>
-          <div className='styledoc-nav'>{navEls}</div>
+        <div className='docs-sidebar'>
+          <div className='docs-logo'>Decorator</div>
+          <div className='docs-nav'>{navEls}</div>
         </div>
-        <div className='styledoc-container'>
+        <div className='docs-container'>
           {entryEls}
         </div>
       </div>

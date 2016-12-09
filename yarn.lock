@@ -1803,6 +1803,21 @@ doctrine@^1.2.2:
     esutils "^2.0.2"
     isarray "^1.0.0"
 
+doctrine@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-2.0.0.tgz#c73d8d2909d22291e1a007a395804da8b665fe63"
+  dependencies:
+    esutils "^2.0.2"
+    isarray "^1.0.0"
+
+documentation-css@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/documentation-css/-/documentation-css-0.1.2.tgz#ac9b5a9a8e97839bf5ea10a2fd1362e47ce0d482"
+  dependencies:
+    doctrine "^2.0.0"
+    postcss "^5.2.6"
+    vfile "^2.0.0"
+
 doiuse@^2.4.1:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/doiuse/-/doiuse-2.5.0.tgz#c7f156965d054bf4d699a4067af1cadbc7350b7c"

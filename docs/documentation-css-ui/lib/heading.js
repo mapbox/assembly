@@ -8,16 +8,16 @@ class Heading extends React.Component {
 
     let description;
     if (props.description) {
-      description = <div className='styledocs-description'>
+      description = <div className='docs-description'>
         {props.description}
       </div>;
     }
 
     return (
-      <div className='styledoc-heading-container'>
+      <div className='docs-heading-container'>
       <div
         id={id}
-        className={`styledoc-heading-title-${props.level}`}
+        className={`docs-heading-title-${props.level}`}
       >
         <a href={`#${id}`}>
           {props.title}
