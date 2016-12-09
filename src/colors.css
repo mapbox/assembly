@@ -8,42 +8,42 @@
  * @group
  * @memberof Color
  * @example
- * <div class='mar-bottom-10 p10 bg-gray-dark'>bg-gray-dark</div>
- * <div class='mar-bottom-10 p10 bg-gray'>bg-gray</div>
- * <div class='mar-bottom-10 p10 bg-gray-light'>bg-gray-light</div>
- * <div class='mar-bottom-10 p10 bg-gray-faint'>bg-gray-faint</div>
- * <div class='mar-bottom-10 p10 bg-pink-dark'>bg-pink-dark</div>
- * <div class='mar-bottom-10 p10 bg-pink'>bg-pink</div>
- * <div class='mar-bottom-10 p10 bg-pink-light'>bg-pink-light</div>
- * <div class='mar-bottom-10 p10 bg-pink-faint'>bg-pink-faint</div>
- * <div class='mar-bottom-10 p10 bg-red-dark'>bg-red-dark</div>
- * <div class='mar-bottom-10 p10 bg-red'>bg-red</div>
- * <div class='mar-bottom-10 p10 bg-red-light'>bg-red-light</div>
- * <div class='mar-bottom-10 p10 bg-red-faint'>bg-red-faint</div>
- * <div class='mar-bottom-10 p10 bg-orange-dark'>bg-orange-dark</div>
- * <div class='mar-bottom-10 p10 bg-orange'>bg-orange</div>
- * <div class='mar-bottom-10 p10 bg-orange-light'>bg-orange-light</div>
- * <div class='mar-bottom-10 p10 bg-orange-faint'>bg-orange-faint</div>
- * <div class='mar-bottom-10 p10 bg-yellow-dark'>bg-yellow-dark</div>
- * <div class='mar-bottom-10 p10 bg-yellow'>bg-yellow</div>
- * <div class='mar-bottom-10 p10 bg-yellow-light'>bg-yellow-light</div>
- * <div class='mar-bottom-10 p10 bg-yellow-faint'>bg-yellow-faint</div>
- * <div class='mar-bottom-10 p10 bg-green-dark'>bg-green-dark</div>
- * <div class='mar-bottom-10 p10 bg-green'>bg-green</div>
- * <div class='mar-bottom-10 p10 bg-green-light'>bg-green-light</div>
- * <div class='mar-bottom-10 p10 bg-green-faint'>bg-green-faint</div>
- * <div class='mar-bottom-10 p10 bg-teal-dark'>bg-teal-dark</div>
- * <div class='mar-bottom-10 p10 bg-teal'>bg-teal</div>
- * <div class='mar-bottom-10 p10 bg-teal-light'>bg-teal-light</div>
- * <div class='mar-bottom-10 p10 bg-teal-faint'>bg-teal-faint</div>
- * <div class='mar-bottom-10 p10 bg-blue-dark'>bg-blue-dark</div>
- * <div class='mar-bottom-10 p10 bg-blue'>bg-blue</div>
- * <div class='mar-bottom-10 p10 bg-blue-light'>bg-blue-light</div>
- * <div class='mar-bottom-10 p10 bg-blue-faint'>bg-blue-faint</div>
- * <div class='mar-bottom-10 p10 bg-purple-dark'>bg-purple-dark</div>
- * <div class='mar-bottom-10 p10 bg-purple'>bg-purple</div>
- * <div class='mar-bottom-10 p10 bg-purple-light'>bg-purple-light</div>
- * <div class='mar-bottom-10 p10 bg-purple-faint'>bg-purple-faint</div>
+ * <div class='mb10 p10 bg-gray-dark'>bg-gray-dark</div>
+ * <div class='mb10 p10 bg-gray'>bg-gray</div>
+ * <div class='mb10 p10 bg-gray-light'>bg-gray-light</div>
+ * <div class='mb10 p10 bg-gray-faint'>bg-gray-faint</div>
+ * <div class='mb10 p10 bg-pink-dark'>bg-pink-dark</div>
+ * <div class='mb10 p10 bg-pink'>bg-pink</div>
+ * <div class='mb10 p10 bg-pink-light'>bg-pink-light</div>
+ * <div class='mb10 p10 bg-pink-faint'>bg-pink-faint</div>
+ * <div class='mb10 p10 bg-red-dark'>bg-red-dark</div>
+ * <div class='mb10 p10 bg-red'>bg-red</div>
+ * <div class='mb10 p10 bg-red-light'>bg-red-light</div>
+ * <div class='mb10 p10 bg-red-faint'>bg-red-faint</div>
+ * <div class='mb10 p10 bg-orange-dark'>bg-orange-dark</div>
+ * <div class='mb10 p10 bg-orange'>bg-orange</div>
+ * <div class='mb10 p10 bg-orange-light'>bg-orange-light</div>
+ * <div class='mb10 p10 bg-orange-faint'>bg-orange-faint</div>
+ * <div class='mb10 p10 bg-yellow-dark'>bg-yellow-dark</div>
+ * <div class='mb10 p10 bg-yellow'>bg-yellow</div>
+ * <div class='mb10 p10 bg-yellow-light'>bg-yellow-light</div>
+ * <div class='mb10 p10 bg-yellow-faint'>bg-yellow-faint</div>
+ * <div class='mb10 p10 bg-green-dark'>bg-green-dark</div>
+ * <div class='mb10 p10 bg-green'>bg-green</div>
+ * <div class='mb10 p10 bg-green-light'>bg-green-light</div>
+ * <div class='mb10 p10 bg-green-faint'>bg-green-faint</div>
+ * <div class='mb10 p10 bg-teal-dark'>bg-teal-dark</div>
+ * <div class='mb10 p10 bg-teal'>bg-teal</div>
+ * <div class='mb10 p10 bg-teal-light'>bg-teal-light</div>
+ * <div class='mb10 p10 bg-teal-faint'>bg-teal-faint</div>
+ * <div class='mb10 p10 bg-blue-dark'>bg-blue-dark</div>
+ * <div class='mb10 p10 bg-blue'>bg-blue</div>
+ * <div class='mb10 p10 bg-blue-light'>bg-blue-light</div>
+ * <div class='mb10 p10 bg-blue-faint'>bg-blue-faint</div>
+ * <div class='mb10 p10 bg-purple-dark'>bg-purple-dark</div>
+ * <div class='mb10 p10 bg-purple'>bg-purple</div>
+ * <div class='mb10 p10 bg-purple-light'>bg-purple-light</div>
+ * <div class='mb10 p10 bg-purple-faint'>bg-purple-faint</div>
  */
 .bg-gray-dark { background-color: #444; }
 .bg-gray { background-color: #666; }
@@ -106,42 +106,42 @@
  * @group
  * @memberof Color
  * @example
- * <div class='mar-bottom-10 txt-gray-dark'>txt-gray-dark</div>
- * <div class='mar-bottom-10 txt-gray'>txt-gray</div>
- * <div class='mar-bottom-10 txt-gray-light'>txt-gray-light</div>
- * <div class='mar-bottom-10 txt-gray-faint'>txt-gray-faint</div>
- * <div class='mar-bottom-10 txt-pink-dark'>txt-pink-dark</div>
- * <div class='mar-bottom-10 txt-pink'>txt-pink</div>
- * <div class='mar-bottom-10 txt-pink-light'>txt-pink-light</div>
- * <div class='mar-bottom-10 txt-pink-faint'>txt-pink-faint</div>
- * <div class='mar-bottom-10 txt-red-dark'>txt-red-dark</div>
- * <div class='mar-bottom-10 txt-red'>txt-red</div>
- * <div class='mar-bottom-10 txt-red-light'>txt-red-light</div>
- * <div class='mar-bottom-10 txt-red-faint'>txt-red-faint</div>
- * <div class='mar-bottom-10 txt-orange-dark'>txt-orange-dark</div>
- * <div class='mar-bottom-10 txt-orange'>txt-orange</div>
- * <div class='mar-bottom-10 txt-orange-light'>txt-orange-light</div>
- * <div class='mar-bottom-10 txt-orange-faint'>txt-orange-faint</div>
- * <div class='mar-bottom-10 txt-yellow-dark'>txt-yellow-dark</div>
- * <div class='mar-bottom-10 txt-yellow'>txt-yellow</div>
- * <div class='mar-bottom-10 txt-yellow-light'>txt-yellow-light</div>
- * <div class='mar-bottom-10 txt-yellow-faint'>txt-yellow-faint</div>
- * <div class='mar-bottom-10 txt-green-dark'>txt-green-dark</div>
- * <div class='mar-bottom-10 txt-green'>txt-green</div>
- * <div class='mar-bottom-10 txt-green-light'>txt-green-light</div>
- * <div class='mar-bottom-10 txt-green-faint'>txt-green-faint</div>
- * <div class='mar-bottom-10 txt-teal-dark'>txt-teal-dark</div>
- * <div class='mar-bottom-10 txt-teal'>txt-teal</div>
- * <div class='mar-bottom-10 txt-teal-light'>txt-teal-light</div>
- * <div class='mar-bottom-10 txt-teal-faint'>txt-teal-faint</div>
- * <div class='mar-bottom-10 txt-blue-dark'>txt-blue-dark</div>
- * <div class='mar-bottom-10 txt-blue'>txt-blue</div>
- * <div class='mar-bottom-10 txt-blue-light'>txt-blue-light</div>
- * <div class='mar-bottom-10 txt-blue-faint'>txt-blue-faint</div>
- * <div class='mar-bottom-10 txt-purple-dark'>txt-purple-dark</div>
- * <div class='mar-bottom-10 txt-purple'>txt-purple</div>
- * <div class='mar-bottom-10 txt-purple-light'>txt-purple-light</div>
- * <div class='mar-bottom-10 txt-purple-faint'>txt-purple-faint</div>
+ * <div class='mb10 txt-gray-dark'>txt-gray-dark</div>
+ * <div class='mb10 txt-gray'>txt-gray</div>
+ * <div class='mb10 txt-gray-light'>txt-gray-light</div>
+ * <div class='mb10 txt-gray-faint'>txt-gray-faint</div>
+ * <div class='mb10 txt-pink-dark'>txt-pink-dark</div>
+ * <div class='mb10 txt-pink'>txt-pink</div>
+ * <div class='mb10 txt-pink-light'>txt-pink-light</div>
+ * <div class='mb10 txt-pink-faint'>txt-pink-faint</div>
+ * <div class='mb10 txt-red-dark'>txt-red-dark</div>
+ * <div class='mb10 txt-red'>txt-red</div>
+ * <div class='mb10 txt-red-light'>txt-red-light</div>
+ * <div class='mb10 txt-red-faint'>txt-red-faint</div>
+ * <div class='mb10 txt-orange-dark'>txt-orange-dark</div>
+ * <div class='mb10 txt-orange'>txt-orange</div>
+ * <div class='mb10 txt-orange-light'>txt-orange-light</div>
+ * <div class='mb10 txt-orange-faint'>txt-orange-faint</div>
+ * <div class='mb10 txt-yellow-dark'>txt-yellow-dark</div>
+ * <div class='mb10 txt-yellow'>txt-yellow</div>
+ * <div class='mb10 txt-yellow-light'>txt-yellow-light</div>
+ * <div class='mb10 txt-yellow-faint'>txt-yellow-faint</div>
+ * <div class='mb10 txt-green-dark'>txt-green-dark</div>
+ * <div class='mb10 txt-green'>txt-green</div>
+ * <div class='mb10 txt-green-light'>txt-green-light</div>
+ * <div class='mb10 txt-green-faint'>txt-green-faint</div>
+ * <div class='mb10 txt-teal-dark'>txt-teal-dark</div>
+ * <div class='mb10 txt-teal'>txt-teal</div>
+ * <div class='mb10 txt-teal-light'>txt-teal-light</div>
+ * <div class='mb10 txt-teal-faint'>txt-teal-faint</div>
+ * <div class='mb10 txt-blue-dark'>txt-blue-dark</div>
+ * <div class='mb10 txt-blue'>txt-blue</div>
+ * <div class='mb10 txt-blue-light'>txt-blue-light</div>
+ * <div class='mb10 txt-blue-faint'>txt-blue-faint</div>
+ * <div class='mb10 txt-purple-dark'>txt-purple-dark</div>
+ * <div class='mb10 txt-purple'>txt-purple</div>
+ * <div class='mb10 txt-purple-light'>txt-purple-light</div>
+ * <div class='mb10 txt-purple-faint'>txt-purple-faint</div>
  */
 .txt-gray-dark { color: #444; }
 .txt-gray { color: #666; }
@@ -205,15 +205,15 @@
  * @group
  * @memberof Color
  * @example
- * <div class='mar-bottom-10 p10 bg-gray-to-transparent'>bg-gray-to-transparent</div>
- * <div class='mar-bottom-10 p10 bg-pink-to-transparent'>bg-pink-to-transparent</div>
- * <div class='mar-bottom-10 p10 bg-red-to-transparent'>bg-red-to-transparent</div>
- * <div class='mar-bottom-10 p10 bg-orange-to-transparent'>bg-orange-to-transparent</div>
- * <div class='mar-bottom-10 p10 bg-yellow-to-transparent'>bg-yellow-to-transparent</div>
- * <div class='mar-bottom-10 p10 bg-green-to-transparent'>bg-green-to-transparent</div>
- * <div class='mar-bottom-10 p10 bg-teal-to-transparent'>bg-teal-to-transparent</div>
- * <div class='mar-bottom-10 p10 bg-blue-to-transparent'>bg-blue-to-transparent</div>
- * <div class='mar-bottom-10 p10 bg-purple-to-transparent'>bg-purple-to-transparent</div>
+ * <div class='mb10 p10 bg-gray-to-transparent'>bg-gray-to-transparent</div>
+ * <div class='mb10 p10 bg-pink-to-transparent'>bg-pink-to-transparent</div>
+ * <div class='mb10 p10 bg-red-to-transparent'>bg-red-to-transparent</div>
+ * <div class='mb10 p10 bg-orange-to-transparent'>bg-orange-to-transparent</div>
+ * <div class='mb10 p10 bg-yellow-to-transparent'>bg-yellow-to-transparent</div>
+ * <div class='mb10 p10 bg-green-to-transparent'>bg-green-to-transparent</div>
+ * <div class='mb10 p10 bg-teal-to-transparent'>bg-teal-to-transparent</div>
+ * <div class='mb10 p10 bg-blue-to-transparent'>bg-blue-to-transparent</div>
+ * <div class='mb10 p10 bg-purple-to-transparent'>bg-purple-to-transparent</div>
  */
 .bg-gray-to-transparent {
   background-image: linear-gradient(

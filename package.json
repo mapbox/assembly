@@ -6,7 +6,7 @@
   "scripts": {
     "css": "node scripts/process-css.js",
     "svgs": "node scripts/create-svg-sprite.js",
-    "build": "trash dist/* && npm run css && npm run svgs",
+    "build": "trash dist/* && mkdir dist && npm run css && npm run svgs",
     "debug": "npm run build && http-server",
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint scripts",
