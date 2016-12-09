@@ -6,6 +6,8 @@
 /**
  * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
  *
+ * @group
+ * @memberof Sizing
  * @example
  *  <div class='w5'></div>
  *  <div class='w10'></div>
@@ -30,18 +32,9 @@
 .w400 { width: 400px; }
 .w600 { width: 600px; }
 .w800 { width: 800px; }
+/** @endgroup */
 
 @media only screen and (max-width: 1824px) {
-  /**
-   * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
-   *
-   * @example
-   *  <div class='w5'></div>
-   *  <div class='w10'></div>
-   *  <div class='w40'></div>
-   *  <div class='w100'></div>
-   *  <div class='w200'></div>
-   */
   .w5-lg { width: 5px; }
   .w10-lg { width: 10px; }
   .w20-lg { width: 20px; }
@@ -62,17 +55,6 @@
 }
 
 @media only screen and (max-width: 770px) {
-
-  /**
-   * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
-   *
-   * @example
-   *  <div class='w5'></div>
-   *  <div class='w10'></div>
-   *  <div class='w40'></div>
-   *  <div class='w100'></div>
-   *  <div class='w200'></div>
-   */
   .w5-md { width: 5px; }
   .w10-md { width: 10px; }
   .w20-md { width: 20px; }
@@ -93,16 +75,6 @@
 }
 
 @media only screen and (max-width: 640px) {
-  /**
-   * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
-   *
-   * @example
-   *  <div class='w5'></div>
-   *  <div class='w10'></div>
-   *  <div class='w40'></div>
-   *  <div class='w100'></div>
-   *  <div class='w200'></div>
-   */
   .w5-sm { width: 5px; }
   .w10-sm { width: 10px; }
   .w20-sm { width: 20px; }

@@ -11,6 +11,7 @@ export const hljsStyle = `
   background: #f8f8f8;
   font-family:Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
   white-space: pre-wrap;
+  max-height: 200px;
 }
 
 .hljs-comment,
