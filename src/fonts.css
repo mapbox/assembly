@@ -32,5 +32,5 @@
 
 @font-face {
   font-family: 'txt-fancy';
-  src: url('../fonts/leaguespartan-bold.woff') format('woff');
+  src: var(--txt-fancy-path);
 }
