@@ -53,12 +53,11 @@
 
 .select {
   border: 2px solid #acb4b9;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   padding-right: 15px;
 }
 
 .select {
+  appearance: none;
   height: 40px;
   line-height: 36px; /* minus border */
   padding: 0 10px;
@@ -71,7 +70,7 @@
 }
 
 .range {
-  -webkit-appearance: none;
+  appearance: none;
   min-width: 0;
   height: 4px;
   padding: 0;
@@ -81,7 +80,7 @@
 }
 
 .range::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  appearance: none;
   box-shadow: none;
   width: 8px;
   height: 8px;
