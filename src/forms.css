@@ -45,7 +45,7 @@
 }
 
 .textarea {
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--darken50);
   resize: vertical;
   border-radius: 3px;
   padding: 10px;
@@ -184,20 +184,20 @@
   flex-shrink: 0;
   width: 20px;
   height: 20px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   margin-right: 10px;
   cursor: pointer;
 }
 
 .checkbox {
-  background-color: #0065fb; /* blue */
+  background-color: var(--blue); /* blue */
   color: #fff;
 }
 
 .checkbox--stroke {
   background-color: #fff;
   box-shadow: inset 0 0 0 2px currentColor;
-  color: #0065fb; /* blue */
+  color: var(--blue); /* blue */
 }
 
 .btn:not(.btn--stroke) > .checkbox--stroke {
@@ -206,7 +206,7 @@
 
 .radio {
   border-radius: 50%;
-  color: #0065fb; /* blue */
+  color: var(--blue); /* blue */
   box-shadow: inset 0 0 0 2px currentColor;
   position: relative;
 }
@@ -242,101 +242,101 @@ input:checked + .radio::before,
 
 input:checked .checkbox:not(.checkbox--stroke),
 .checkbox.is-active:not(.checkbox--stroke) {
-  background-color: #3246dc;
+  background-color: var(--blue-dark);
 }
 input:checked + .checkbox--stroke,
 .checkbox--stroke.is-active,
 input:checked + .radio,
 .radio.is-active {
-  color: #3246dc;
+  color: var(--blue-dark);
 }
 
 /* Color variations */
 input:checked + .bg-gray:not(.checkbox--stroke),
 .bg-gray.is-active:not(.checkbox--stroke) {
-  background-color: #444;
+  background-color: var(--gray-dark);
 }
 input:checked + .color-gray.checkbox--stroke,
 .color-gray.checkbox--stroke.is-active,
 input:checked + .color-gray,
 .color-gray.is-active {
-  color: #444;
+  color: var(--gray-dark);
 }
 
 input:checked + .bg-pink:not(.checkbox--stroke),
 .bg-pink.is-active:not(.checkbox--stroke) {
-  background-color: #dc2878;
+  background-color: var(--pink-dark);
 }
 input:checked + .color-pink.checkbox--stroke,
 .color-pink.checkbox--stroke.is-active,
 input:checked + .color-pink,
 .color-pink.is-active {
-  color: #dc2878;
+  color: var(--pink-dark);
 }
 
 input:checked + .bg-red:not(.checkbox--stroke),
 .bg-red.is-active:not(.checkbox--stroke) {
-  background-color: #d20014;
+  background-color: var(--red-dark);
 }
 input:checked + .color-red.checkbox--stroke,
 .color-red.checkbox--stroke.is-active,
 input:checked + .color-red,
 .color-red.is-active {
-  color: #d20014;
+  color: var(--red-dark);
 }
 
 input:checked + .bg-orange:not(.checkbox--stroke),
 .bg-orange.is-active:not(.checkbox--stroke) {
-  background-color: #f05a00;
+  background-color: var(--orange-dark);
 }
 input:checked + .color-orange.checkbox--stroke,
 .color-orange.checkbox--stroke.is-active,
 input:checked + .color-orange,
 .color-orange.is-active {
-  color: #f05a00;
+  color: var(--orange-dark);
 }
 
 input:checked + .bg-yellow:not(.checkbox--stroke),
 .bg-yellow.is-active:not(.checkbox--stroke) {
-  background-color: #ffbd0a;
+  background-color: var(--yellow-dark);
 }
 input:checked + .color-yellow.checkbox--stroke,
 .color-yellow.checkbox--stroke.is-active,
 input:checked + .color-yellow,
 .color-yellow.is-active {
-  color: #ffbd0a;
+  color: var(--yellow-dark);
 }
 
 input:checked + .bg-green:not(.checkbox--stroke),
 .bg-green.is-active:not(.checkbox--stroke) {
-  background-color: #1e963c;
+  background-color: var(--green-dark);
 }
 input:checked + .color-green.checkbox--stroke,
 .color-green.checkbox--stroke.is-active,
 input:checked + .color-green,
 .color-green.is-active {
-  color: #1e963c;
+  color: var(--green-dark);
 }
 
 input:checked + .bg-teal:not(.checkbox--stroke),
 .bg-teal.is-active:not(.checkbox--stroke) {
-  background-color: #3296a0;
+  background-color: var(--teal-dark);
 }
 input:checked + .color-teal.checkbox--stroke,
 .color-teal.checkbox--stroke.is-active,
 input:checked + .color-teal,
 .color-teal.is-active {
-  color: #3296a0;
+  color: var(--teal-dark);
 }
 
 input:checked + .bg-purple:not(.checkbox--stroke),
 .bg-purple.is-active:not(.checkbox--stroke) {
-  background-color: #6e3296;
+  background-color: var(--purple-dark);
 }
 input:checked + .color-purple.checkbox--stroke,
 .color-purple.checkbox--stroke.is-active,
 input:checked + .color-purple,
 .color-purple.is-active {
-  color: #6e3296;
+  color: var(--purple-dark);
 }
 /* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */

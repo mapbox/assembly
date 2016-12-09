@@ -21,7 +21,7 @@ img {
   margin: 20px 0;
   border: 0;
   height: 1px;
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--darken5);
 }
 
 /**
@@ -52,7 +52,7 @@ img {
 
 .tbl th,
 .txt table th {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--darken5);
 }
 
 .tbl .fixed,
@@ -130,7 +130,7 @@ img {
 .txt-kbd,
 .txt kbd {
   background: rgba(0, 0, 0, 0.025);
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--darken50);
   border: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 20px;
   border-radius: 3px;
