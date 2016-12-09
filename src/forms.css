@@ -120,6 +120,11 @@
  * - Modify `frm-checkbox` with a color, e.g. `frm-checkbox--purple`.
  * - Use a different icon.
  *
+ * When placing a checkbox inside a *non-stroke* `.btn`, you should always
+ * use `frm-checkbox--stroke`. The checkbox's border will be removed,
+ * but the box will be white and the checkmark will be colored as you choose.
+ * Inside a `.btn--stroke`, anything goes.
+ *
  * The class `frm-checkbox` and its modifiers can also be used independent
  * of a `<label>` and `<input>` if you are building a custom components.
  * In that case, apply the state class `is-active` when it should be checked.
@@ -188,9 +193,13 @@
 }
 
 .frm-checkbox--stroke {
-  background-color: transparent;
+  background-color: #fff;
   box-shadow: inset 0 0 0 2px currentColor;
   color: #0065fb; /* blue */
+}
+
+.btn:not(.btn--stroke) > .frm-checkbox--stroke {
+  box-shadow: none;
 }
 
 .frm-radio {
