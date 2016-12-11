@@ -6,20 +6,15 @@
   "scripts": {
     "css": "node scripts/process-css",
     "svgs": "node scripts/create-svg-sprite",
-    "build": "rm -rf dist && mkdir -p dist && npm run css && npm run svgs && build-site",
-    "build-site": "babel src --out-dir ./ && babel-node scripts/render",
+    "build": "rm -rf dist && mkdir -p dist && npm run css && npm run svgs && npm run build-site",
+    "build-site": "babel-node scripts/render",
+    "watch-site": "nodemon scripts/watch-site --exec babel-node",
     "debug": "npm run build && http-server",
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint scripts",
     "lint": "npm run lint:css && npm run lint:js",
     "test": "npm run lint",
-    "watch": "mkdir -p dist && node scripts/watch-src",
-    "docs": "npm run build && budo docs/index.js -o -l"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
+    "watch-css": "mkdir -p dist && node scripts/watch-css"
   },
   "engines": {
     "node": ">4"
@@ -41,8 +36,6 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.18.0",
-    "babelify": "^7.3.0",
-    "browserify": "^13.1.1",
     "budo": "^9.2.2",
     "chokidar": "^1.6.1",
     "concat-with-sourcemaps": "^1.0.4",
@@ -56,6 +49,7 @@
     "http-server": "^0.9.0",
     "lodash": "^4.17.2",
     "mkdirp": "^0.5.1",
+    "nodemon": "^1.11.0",
     "pify": "^2.3.0",
     "postcss": "^5.2.6",
     "postcss-custom-media": "^5.0.1",
@@ -66,6 +60,7 @@
     "react-lowlight": "^1.0.2",
     "remark": "^6.2.0",
     "remark-react": "^3.1.0",
+    "rimraf": "^2.5.4",
     "stylelint": "^7.6.0",
     "svgo": "^0.7.1",
     "svgstore": "^1.1.0"

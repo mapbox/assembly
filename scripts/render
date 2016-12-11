@@ -1,51 +1,38 @@
 #!/usr/bin/env node
+'use strict';
 
-import React from 'react';
-import ReactDOMServer from 'react-dom/server';
-import { Contents } from '../site/documentation/lib/contents';
-import { Home } from '../site/home';
-import { Examples } from '../site/examples';
-import fs from 'fs';
-import path from 'path';
-import documentationCss from 'documentation-css';
-import mkdirp from 'mkdirp';
+const routes = require('../site/routes');
+const ReactDOMServer = require('react-dom/server');
+const fs = require('fs');
+const path = require('path');
+const mkdirp = require('mkdirp');
 
-let template = fs.readFileSync(path.join(__dirname, '../site/template.html'), 'utf8');
-
-let Documentation;
-const assemblyCss = path.join(__dirname, '../dist/base-core.css');
-const entryContent = fs.readFileSync(assemblyCss, 'utf8');
-
-const pages = [{
-  component: <Home />,
-  dest: ''
-}, {
-  component: <Contents
-    entries={documentationCss.extract([{
-      contents: entryContent,
-      path: assemblyCss
-    }])} />,
-  dest: 'documentation/'
-}, {
-  component: <Examples />,
-  dest: 'examples/'
-}];
-
-pages.forEach((p) => {
-  // Make paths relative
+function render() {
+  const template = fs.readFileSync(path.join(__dirname, '../site/template.html'), 'utf8');
   let pathPrefix = '';
-  const levels = p.dest.match(/\//ig) || [];
-  levels.forEach((l) => {
-    pathPrefix += '../'
+
+  routes().forEach((p) => {
+    // Make paths relative
+    const levels = p.route.match(/\//ig) || [];
+    levels.forEach(() => {
+      pathPrefix += '../';
+    });
+    const correctedTemplate = template.split('{baseurl}').join(pathPrefix);
+
+    const routePath = path.join(__dirname, '../', p.route);
+    if (!fs.existsSync(routePath)) {
+      mkdirp.sync(routePath);
+    }
+
+    fs.writeFileSync(path.join(routePath, 'index.html'),
+      correctedTemplate.split('{content}').join(ReactDOMServer.renderToStaticMarkup(p.component))
+    );
+    console.log('Completed ' + p.name);
   });
-  const correctedTemplate = template.split('{baseurl}').join(pathPrefix);
+}
 
-  const destPath = path.join(__dirname, '../', p.dest);
-  if (!fs.existsSync(destPath)) {
-    mkdirp.sync(destPath);
-  }
+module.exports = render;
 
-  fs.writeFileSync(path.join(destPath, 'index.html'),
-    correctedTemplate.split('{content}').join(ReactDOMServer.renderToString(p.component))
-  );
-});
+if (require.main === module) {
+  render();
+}

@@ -3,7 +3,7 @@ import React from 'react';
 class Home extends React.Component {
   render() {
     return (<div className='docs-container'>
-      Home page!
+      Home page.
     </div>);
   }
 }
