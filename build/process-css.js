@@ -12,7 +12,7 @@ const postcssCustomMedia = require('postcss-custom-media');
 const variableDefinitions = require('../src/variables');
 const customMediaQueries = require('../src/media-queries');
 
-const distCssFilename = 'base-core.css';
+const distCssFilename = 'assembly.css';
 const distCssPath = path.join(__dirname, `../dist/${distCssFilename}`);
 
 function getCssPath(name) {
