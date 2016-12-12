@@ -5,9 +5,9 @@
 
 /**
  * Round classes.
- * - Choose the size of a border radius with `*-bold` and `*-full`
- * - Target sides with `*t`, `*r`, `*b`, `*l`
- * - Target corners with `*tl`, `*tr`, `*bl`, `*br`
+ * - Choose the size of a border radius with `*-bold` and `*-full`.
+ * - Target sides with `*t`, `*r`, `*b`, `*l`.
+ * - Target corners with `*tl`, `*tr`, `*bl`, `*br`.
  * @group
  * @memberof Theming
  * @example
@@ -55,32 +55,65 @@
 
 /**
  * Border classes.
+ * - `.border` will add a 1px solid border. Target sides with `*t`, `*r`, `*b`, `*l`.
+ * - For a thicker border, add the modifying class `.border--2`
+ * - For a dashed border, add the modifying class `.border--dash`
+ * - For a colored border, add the modifying class `.border--color` where color is a color.
+ * @group
+ * @memberof Theming
+ * @example
+ * <div class='col col--4 p10 mb10 txt-center border'>.border</div>
+ * <div class='col col--4 p10 mb10 txt-center borderl'>.borderl</div>
+ * <div class='col col--4 p10 mb10 txt-center border border--2'>.border.border--2</div>
+ * <div class='col col--4 p10 mb10 txt-center border border--dash'>.border.border--dash</div>
+ * <div class='col col--4 p10 txt-center border border--blue-light'>.border.border--blue-light</div>
  */
 .border { border: 1px solid; }
+
+.borderl { border-left: 1px solid; }
+.bordert { border-top: 1px solid; }
+.borderr { border-right: 1px solid; }
+.borderb { border-bottom: 1px solid; }
+
 .border--2 { border-width: 2px; }
 .border--dash { border-style: dashed; }
 
-.border-l { border-left: 1px solid; }
-.border-t { border-top: 1px solid; }
-.border-r { border-right: 1px solid; }
-.border-b { border-bottom: 1px solid; }
-
-.border--gray { border-color: #acb4b9; }
-.border--blue { border-color: #0077cc; }
-.border--purple { border-color: #5500cc; }
-.border--pink { border-color: #cc0077; }
-.border--red { border-color: #cc0011; }
-.border--orange { border-color: #cc5500; }
-.border--mustard { border-color: #ffbf16; }
-.border--yellow { border-color: #ffeb3b; }
-.border--green { border-color: #11cc00; }
-.border--teal { border-color: #3fbfbc; }
-.border--cyan { border-color: #00ccbb; }
-.border--denim { border-color: #34607f; }
-.border--navy { border-color: #0a3a5c; }
-.border--white { border-color: #fff; }
-.border--light { border-color: #f2f2f2; }
-.border--transparent { border-color: rgba(0, 0, 0, 0); }
+.border--gray-dark { border-color: var(--gray-dark); }
+.border--gray { border-color: var(--gray); }
+.border--gray-light { border-color: var(--gray-light); }
+.border--gray-faint { border-color: var(--gray-faint); }
+.border--pink-dark { border-color: var(--pink-dark); }
+.border--pink { border-color: var(--pink); }
+.border--pink-light { border-color: var(--pink-light); }
+.border--pink-faint { border-color: var(--pink-faint); }
+.border--red-dark { border-color: var(--red-dark); }
+.border--red { border-color: var(--red); }
+.border--red-light { border-color: var(--red-light); }
+.border--red-faint { border-color: var(--red-faint); }
+.border--orange-dark { border-color: var(--orange-dark); }
+.border--orange { border-color: var(--orange); }
+.border--orange-light { border-color: var(--orange-light); }
+.border--orange-faint { border-color: var(--orange-faint); }
+.border--yellow-dark { border-color: var(--yellow-dark); }
+.border--yellow { border-color: var(--yellow); }
+.border--yellow-light { border-color: var(--yellow-light); }
+.border--yellow-faint { border-color: var(--yellow-faint); }
+.border--green-dark { border-color: var(--green-dark); }
+.border--green { border-color: var(--green); }
+.border--green-light { border-color: var(--green-light); }
+.border--green-faint { border-color: var(--green-faint); }
+.border--teal-dark { border-color: var(--teal-dark); }
+.border--teal { border-color: var(--teal); }
+.border--teal-light { border-color: var(--teal-light); }
+.border--teal-faint { border-color: var(--teal-faint); }
+.border--blue-dark { border-color: var(--blue-dark); }
+.border--blue { border-color: var(--blue); }
+.border--blue-light { border-color: var(--blue-light); }
+.border--blue-faint { border-color: var(--blue-faint); }
+.border--purple-dark { border-color: var(--purple-dark); }
+.border--purple { border-color: var(--purple); }
+.border--purple-light { border-color: var(--purple-light); }
+.border--purple-faint { border-color: var(--purple-faint); }
 .border--darken5 { border-color: var(--darken5); }
 .border--darken10 { border-color: var(--darken10); }
 .border--darken25 { border-color: var(--darken25); }
@@ -91,6 +124,9 @@
 .border--lighten25 { border-color: var(--lighten25); }
 .border--lighten50 { border-color: var(--lighten50); }
 .border--lighten75 { border-color: var(--lighten75); }
+.border--black { border-color: var(--black); }
+.border--white { border-color: var(--white); }
+/** @endgroup */
 
 /**
  * Shadow classes.
