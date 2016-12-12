@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 const fs = require('fs');
@@ -11,6 +12,7 @@ const initPostcssCustomProperties = require('postcss-custom-properties');
 const postcssCustomMedia = require('postcss-custom-media');
 const variableDefinitions = require('../src/variables');
 const customMediaQueries = require('../src/media-queries');
+const timelog = require('./timelog');
 
 const distCssFilename = 'assembly.css';
 const distCssPath = path.join(__dirname, `../dist/${distCssFilename}`);
@@ -61,7 +63,8 @@ function processCssFile(cssFile, concat) {
       })
       .then((postcssResult) => {
         concat.add(cssFile, postcssResult.css, postcssResult.map.toString());
-      });
+      })
+      .catch((err) => console.log(err));
   });
 }
 
@@ -74,11 +77,16 @@ function writeDistCss(concat) {
 }
 
 function processCss() {
+  timelog('Building CSS');
   const concat = new Concat(true, distCssPath, '\n');
 
-  Promise.all(cssFiles.map((file) => processCssFile(file, concat)))
+  return Promise.all(cssFiles.map((file) => processCssFile(file, concat)))
     .then(() => writeDistCss(concat))
-    .catch((err) => console.log(err.stack));
+    .then(() => timelog('Done building CSS'));
 }
 
 module.exports = processCss;
+
+if (require.main === module) {
+  processCss().catch((err) => console.log(err.stack));
+}

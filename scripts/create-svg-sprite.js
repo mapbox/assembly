@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 const svgstore = require('svgstore');
@@ -6,6 +7,7 @@ const _ = require('lodash');
 const path = require('path');
 const queue = require('d3-queue').queue;
 const SVGO = require('svgo');
+const timelog = require('./timelog');
 
 const svgDir = path.join(__dirname, '../src/svgs');
 const svgScript = path.join(__dirname, '../dist/base-svgs.js');
@@ -54,6 +56,7 @@ function addFileToSprite(filename, sprite, callback) {
 }
 
 function createSvgSprite() {
+  timelog('Building SVGs');
   const sprite = svgstore();
 
   fs.readdir(svgDir, (err, filenames) => {
@@ -74,8 +77,13 @@ function createSvgSprite() {
       const cleanedSprite = sprite.toString().replace(/\n/g, '');
       const jsContent = baseJsTemplate({ svgSprite: cleanedSprite });
       fs.writeFileSync(svgScript, jsContent);
+      timelog('Done building SVGs');
     });
   });
 }
 
 module.exports = createSvgSprite;
+
+if (require.main === module) {
+  createSvgSprite();
+}

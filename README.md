@@ -31,13 +31,9 @@ Assembly targets IE 11+ and other modern browsers.
 ```bash
 yarn # Installs your `node_modules`
 
-npm run css # Builds the CSS
+npm start # Builds everything, starts a dev server, re-builds on changes
 
-npm run watch # Watches source CSS for changes and re-builds
-
-npm run svgs # Builds the SVGs
-
-npm run debug # Starts a simple server you can use to look at pages in debug/
-
-npm run build # Builds everything
+npm run build:svg # Build SVGs
 ```
+
+For other scripts, look in `package.json`.

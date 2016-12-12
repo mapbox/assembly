@@ -1,4 +1,6 @@
 import React from 'react';
+import remark from 'remark';
+import reactRenderer from 'remark-react';
 
 class Heading extends React.Component {
   render() {
@@ -6,24 +8,24 @@ class Heading extends React.Component {
 
     const id = props.title.replace(/\s+/g, '-');
 
-    let description;
+    let descriptionEl;
     if (props.description) {
-      description = <div className='docs-description'>
-        {props.description}
+      descriptionEl = <div className='docs-description'>
+        {remark().use(reactRenderer).process(props.description).contents}
       </div>;
     }
 
     return (
       <div className='docs-heading-container'>
-      <div
-        id={id}
-        className={`docs-heading-title-${props.level}`}
-      >
-        <a href={`#${id}`}>
-          {props.title}
-        </a>
-      </div>
-        {description}
+        <div
+          id={id}
+          className={`docs-heading-title-${props.level}`}
+        >
+          <a href={`#${id}`}>
+            {props.title}
+          </a>
+        </div>
+        {descriptionEl}
       </div>
     );
   }
