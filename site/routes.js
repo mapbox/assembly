@@ -5,9 +5,11 @@
 
 const React = require('react');
 const documentationCss = require('documentation-css');
+const { Page } = require('./page');
 const { Documentation } = require('./documentation/documentation');
 const { Home } = require('./home');
 const { Examples } = require('./examples');
+const { Debug } = require('./debug');
 const fs = require('fs');
 const path = require('path');
 
@@ -31,20 +33,23 @@ const routes = [
   }, {
     name: 'Examples',
     route: '/examples/'
+  }, {
+    name: 'Debug',
+    route: '/debug/'
   }];
 
 function buildRoutes() {
 
 
   const routesWithComponents = routes.map(r => {
-    let props = {
-      navItems: {
-        main: routes,
-        secondary: null,
-        // set current route to active.
-        active: r.name
-      }
+    const navItems = {
+      main: routes,
+      secondary: null,
+      // set current route to active.
+      active: r.name
     };
+
+    const props = {};
 
     // Add component and one-off props for components.
     switch (r.name) {
@@ -57,11 +62,11 @@ function buildRoutes() {
         }]);
 
         props.documentationData = documentationData;
-        props.navItems.secondary = [];
+        navItems.secondary = [];
 
         function buildSecondaryNav(entry) {
           if (entry.type === 'section') {
-            props.navItems.secondary.push({
+            navItems.secondary.push({
               name: entry.title,
               route: '#' + entry.title.replace(/\s+/g, '-')
             });
@@ -70,16 +75,35 @@ function buildRoutes() {
         }
         documentationData.forEach((entry) => buildSecondaryNav(entry));
 
-        r.component = <Documentation {...props} />;
+        r.component = (
+          <Page navItems={navItems}>
+            <Documentation {...props} />
+          </Page>
+        );
         break;
       case 'Home':
-        r.component = <Home {...props} />;
+        r.component = (
+          <Page navItems={navItems}>
+            <Home {...props} />
+          </Page>
+        );
         break;
       case 'Examples':
-        r.component = <Examples {...props} />;
+        r.component = (
+          <Page navItems={navItems}>
+            <Examples {...props} />
+          </Page>
+        );
+        break;
+      case 'Debug':
+        r.component = (
+          <Page navItems={navItems}>
+            <Debug {...props} />
+          </Page>
+        );
         break;
       default:
-        console.err(r.name + ' has no matching component.');
+        console.error(r.name + ' has no matching component.');
         break;
     }
 
