@@ -1,8 +1,9 @@
 import React from 'react';
 import { Entry } from './entry';
 import { Heading } from './heading';
+import { Navigation } from '../shared/navigation';
 
-class Contents extends React.Component {
+class Documentation extends React.Component {
 
   render() {
     const { props } = this;
@@ -39,24 +40,24 @@ class Contents extends React.Component {
       }
     }
 
-    props.entries.map((entry) => addEntryAndMembers(entry, 1));
+    props.documentationData.forEach((entry) => addEntryAndMembers(entry, 1));
 
     return (
-      <div>
-        <div className='docs-sidebar'>
-          <div className='docs-logo'>Decorator</div>
-          <div className='docs-nav'>{navEls}</div>
-        </div>
-        <div className='docs-container'>
-          {entryEls}
-        </div>
+      <div className='limiter'>
+      <Navigation navItems={props.navItems} />
+        {entryEls}
       </div>
     );
   }
 }
 
-Contents.propTypes = {
-  entries: React.PropTypes.arrayOf(React.PropTypes.shape({
+Documentation.propTypes = {
+  navItems: React.PropTypes.shape({
+    main: React.PropTypes.array.isRequired,
+    secondary: React.PropTypes.array,
+    active: React.PropTypes.string
+  }).isRequired,
+  documentationData: React.PropTypes.arrayOf(React.PropTypes.shape({
     parsedComment: React.PropTypes.shape({
       description: React.PropTypes.string.isRequired,
     }).isRequired,
@@ -64,4 +65,4 @@ Contents.propTypes = {
   })).isRequired
 };
 
-export { Contents };
+export { Documentation };
