@@ -180,7 +180,7 @@
 /* stylelint-enable selector-no-combinator */
 
 /**
- * Column classes
+ * Column offset classes
  */
 .col--offl1 { margin-left: 08.3333%; }
 .col--offl2 { margin-left: 16.6666%; }
@@ -483,7 +483,7 @@ Zero out positioning
 */
 
 /**
- * Top margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
+ * Top margins. Increments by 5px up to 20px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
  *
  * @example
  *  <div class='mt5'></div>
@@ -494,6 +494,7 @@ Zero out positioning
  */
 .mt5 { margin-top: 5px; }
 .mt10 { margin-top: 10px; }
+.mt15 { margin-top: 15px; }
 .mt20 { margin-top: 20px; }
 .mt30 { margin-top: 30px; }
 .mt40 { margin-top: 40px; }
@@ -514,6 +515,7 @@ Zero out positioning
   .mt0-lg { margin-top: 0; }
   .mt5-lg { margin-top: 5px; }
   .mt10-lg { margin-top: 10px; }
+  .mt15-lg { margin-top: 15px; }
   .mt20-lg { margin-top: 20px; }
   .mt30-lg { margin-top: 30px; }
   .mt40-lg { margin-top: 40px; }
@@ -535,6 +537,7 @@ Zero out positioning
   .mt0-md { margin-top: 0; }
   .mt5-md { margin-top: 5px; }
   .mt10-md { margin-top: 10px; }
+  .mt15-md { margin-top: 15px; }
   .mt20-md { margin-top: 20px; }
   .mt30-md { margin-top: 30px; }
   .mt40-md { margin-top: 40px; }
@@ -556,6 +559,7 @@ Zero out positioning
   .mt0-sm { margin-top: 0; }
   .mt5-sm { margin-top: 5px; }
   .mt10-sm { margin-top: 10px; }
+  .mt15-sm { margin-top: 15px; }
   .mt20-sm { margin-top: 20px; }
   .mt30-sm { margin-top: 30px; }
   .mt40-sm { margin-top: 40px; }
@@ -574,7 +578,7 @@ Zero out positioning
 }
 
 /**
- * Right margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
+ * Right margins. Increments by 5px up to 20px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
  *
  * @example
  *  <div class='mr5'></div>
@@ -585,6 +589,7 @@ Zero out positioning
  */
 .mr5 { margin-right: 5px; }
 .mr10 { margin-right: 10px; }
+.mr15 { margin-right: 15px; }
 .mr20 { margin-right: 20px; }
 .mr30 { margin-right: 30px; }
 .mr40 { margin-right: 40px; }
@@ -605,6 +610,7 @@ Zero out positioning
   .mr0-lg { margin-right: 0; }
   .mr5-lg { margin-right: 5px; }
   .mr10-lg { margin-right: 10px; }
+  .mr15-lg { margin-right: 15px; }
   .mr20-lg { margin-right: 20px; }
   .mr30-lg { margin-right: 30px; }
   .mr40-lg { margin-right: 40px; }
@@ -626,6 +632,7 @@ Zero out positioning
   .mr0-md { margin-right: 0; }
   .mr5-md { margin-right: 5px; }
   .mr10-md { margin-right: 10px; }
+  .mr15-md { margin-right: 15px; }
   .mr20-md { margin-right: 20px; }
   .mr30-md { margin-right: 30px; }
   .mr40-md { margin-right: 40px; }
@@ -647,6 +654,7 @@ Zero out positioning
   .mr0-sm { margin-right: 0; }
   .mr5-sm { margin-right: 5px; }
   .mr10-sm { margin-right: 10px; }
+  .mr15-sm { margin-right: 15px; }
   .mr20-sm { margin-right: 20px; }
   .mr30-sm { margin-right: 30px; }
   .mr40-sm { margin-right: 40px; }
@@ -665,7 +673,7 @@ Zero out positioning
 }
 
 /**
- * Bottom margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
+ * Bottom margins. Increments by 5px up to 20px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
  *
  * @example
  *  <div class='mb5'></div>
@@ -678,6 +686,7 @@ Zero out positioning
 .mb-neg2 { margin-bottom: -2px; }
 .mb5 { margin-bottom: 5px; }
 .mb10 { margin-bottom: 10px; }
+.mb15 { margin-bottom: 15px; }
 .mb20 { margin-bottom: 20px; }
 .mb30 { margin-bottom: 30px; }
 .mb40 { margin-bottom: 40px; }
@@ -698,6 +707,7 @@ Zero out positioning
   .mb0-lg { margin-bottom: 0; }
   .mb5-lg { margin-bottom: 5px; }
   .mb10-lg { margin-bottom: 10px; }
+  .mb15-lg { margin-bottom: 15px; }
   .mb20-lg { margin-bottom: 20px; }
   .mb30-lg { margin-bottom: 30px; }
   .mb40-lg { margin-bottom: 40px; }
@@ -719,6 +729,7 @@ Zero out positioning
   .mb0-md { margin-bottom: 0; }
   .mb5-md { margin-bottom: 5px; }
   .mb10-md { margin-bottom: 10px; }
+  .mb15-md { margin-bottom: 15px; }
   .mb20-md { margin-bottom: 20px; }
   .mb30-md { margin-bottom: 30px; }
   .mb40-md { margin-bottom: 40px; }
@@ -740,6 +751,7 @@ Zero out positioning
   .mb0-sm { margin-bottom: 0; }
   .mb5-sm { margin-bottom: 5px; }
   .mb10-sm { margin-bottom: 10px; }
+  .mb15-sm { margin-bottom: 15px; }
   .mb20-sm { margin-bottom: 20px; }
   .mb30-sm { margin-bottom: 30px; }
   .mb40-sm { margin-bottom: 40px; }
@@ -758,7 +770,7 @@ Zero out positioning
 }
 
 /**
- * Left margins. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
+ * Left margins. Increments by 5px up to 20px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
  *
  * @example
  *  <div class='ml5'></div>
@@ -769,6 +781,7 @@ Zero out positioning
  */
 .ml5 { margin-left: 5px; }
 .ml10 { margin-left: 10px; }
+.ml15 { margin-left: 15px; }
 .ml20 { margin-left: 20px; }
 .ml30 { margin-left: 30px; }
 .ml40 { margin-left: 40px; }
@@ -789,6 +802,7 @@ Zero out positioning
   .ml0-lg { margin-left: 0; }
   .ml5-lg { margin-left: 5px; }
   .ml10-lg { margin-left: 10px; }
+  .ml15-lg { margin-left: 15px; }
   .ml20-lg { margin-left: 20px; }
   .ml30-lg { margin-left: 30px; }
   .ml40-lg { margin-left: 40px; }
@@ -810,6 +824,7 @@ Zero out positioning
   .ml0-md { margin-left: 0; }
   .ml5-md { margin-left: 5px; }
   .ml10-md { margin-left: 10px; }
+  .ml15-md { margin-left: 15px; }
   .ml20-md { margin-left: 20px; }
   .ml30-md { margin-left: 30px; }
   .ml40-md { margin-left: 40px; }
@@ -831,6 +846,7 @@ Zero out positioning
   .ml0-sm { margin-left: 0; }
   .ml5-sm { margin-left: 5px; }
   .ml10-sm { margin-left: 10px; }
+  .ml15-sm { margin-left: 15px; }
   .ml20-sm { margin-left: 20px; }
   .ml30-sm { margin-left: 30px; }
   .ml40-sm { margin-left: 40px; }
