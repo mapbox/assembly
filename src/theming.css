@@ -1,40 +1,57 @@
 /**
- * Theming
+ * Utility classes for theming
  * @section Theming
 */
 
 /**
  * Round classes.
+ * - Choose the size of a border radius with `*-bold` and `*-full`
+ * - Target sides with `*t`, `*r`, `*b`, `*l`
+ * - Target corners with `*tl`, `*tr`, `*bl`, `*br`
+ * @group
+ * @memberof Theming
+ * @example
+ * <div class='flx mb10'>
+ * <div class='col col--2 bg-gray color-white p10 mr10 txt-center round'>.round</div>
+ * <div class='col col--2 bg-gray color-white p10 mr10 txt-center round-bold '>.round-bold</div>
+ * <div class='col col--2 bg-gray color-white p10 txt-center round-full'>.round-full</div>
+ * </div>
+ * <div class='flx'>
+ * <div class='col col--2 bg-gray color-white p10 mr10 txt-center roundt'>.roundt</div>
+ * <div class='col col--2 bg-gray color-white p10 mr10 txt-center roundbl'>.roundbl</div>
+ * <div class='col col--2 bg-gray color-white p10 txt-center roundr-bold'>.roundr-bold</div>
+ * </div>
  */
 .round { border-radius: var(--border-radius); }
-.round-t { border-radius: 4px 4px 0 0; }
-.round-r { border-radius: 0 4px 4px 0; }
-.round-b { border-radius: 0 0 4px 4px; }
-.round-l { border-radius: 4px 0 0 4px; }
-.round-tl { border-top-left-radius: 4px; }
-.round-tr { border-top-right-radius: 4px; }
-.round-br { border-bottom-right-radius: 4px; }
-.round-bl { border-bottom-left-radius: 4px; }
+.roundt { border-radius: var(--border-radius) var(--border-radius) 0 0; }
+.roundr { border-radius: 0 var(--border-radius) var(--border-radius) 0; }
+.roundb { border-radius: 0 0 var(--border-radius) var(--border-radius); }
+.roundl { border-radius: var(--border-radius) 0 0 var(--border-radius); }
+.roundtl { border-top-left-radius: var(--border-radius); }
+.roundtr { border-top-right-radius: var(--border-radius); }
+.roundbr { border-bottom-right-radius: var(--border-radius); }
+.roundbl { border-bottom-left-radius: var(--border-radius); }
 
 .round-bold { border-radius: var(--border-radius-bold); }
-.round-bold-t { border-radius: 8px 8px 0 0; }
-.round-bold-r { border-radius: 0 8px 8px 0; }
-.round-bold-b { border-radius: 0 0 8px 8px; }
-.round-bold-l { border-radius: 8px 0 0 8px; }
-.round-bold-tl { border-top-left-radius: 8px; }
-.round-bold-tr { border-top-right-radius: 8px; }
-.round-bold-br { border-bottom-right-radius: 8px; }
-.round-bold-bl { border-bottom-left-radius: 8px; }
+.roundt-bold { border-radius: var(--border-radius-bold) var(--border-radius-bold) 0 0; }
+.roundr-bold { border-radius: 0 var(--border-radius-bold) var(--border-radius-bold) 0; }
+.roundb-bold { border-radius: 0 0 var(--border-radius-bold) var(--border-radius-bold); }
+.roundl-bold { border-radius: var(--border-radius-bold) 0 0 var(--border-radius-bold); }
+.roundtl-bold { border-top-left-radius: var(--border-radius-bold); }
+.roundtr-bold { border-top-right-radius: var(--border-radius-bold); }
+.roundbr-bold { border-bottom-right-radius: var(--border-radius-bold); }
+.roundbl-bold { border-bottom-left-radius: var(--border-radius-bold); }
 
-.round-full { border-radius: 50%; }
-.round-full-t { border-radius: 50% 50% 0 0; }
-.round-full-r { border-radius: 0 50% 50% 0; }
-.round-full-b { border-radius: 0 0 50% 50%; }
-.round-full-l { border-radius: 50% 0 0 50%; }
-.round-full-tl { border-top-left-radius: 50%; }
-.round-full-tr { border-top-right-radius: 50%; }
-.round-full-br { border-bottom-right-radius: 50%; }
-.round-full-bl { border-bottom-left-radius: 50%; }
+.round-full { border-radius: var(--border-radius-full); }
+.roundt-full { border-radius: var(--border-radius-full) var(--border-radius-full) 0 0; }
+.roundr-full { border-radius: 0 var(--border-radius-full) var(--border-radius-full) 0; }
+.roundb-full { border-radius: 0 0 var(--border-radius-full) var(--border-radius-full); }
+.roundl-full { border-radius: var(--border-radius-full) 0 0 var(--border-radius-full); }
+.roundtl-full { border-top-left-radius: var(--border-radius-full); }
+.roundtr-full { border-top-right-radius: var(--border-radius-full); }
+.roundbr-full { border-bottom-right-radius: var(--border-radius-full); }
+.roundbl-full { border-bottom-left-radius: var(--border-radius-full); }
+/** @endgroup */
 
 /**
  * Border classes.
