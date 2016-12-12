@@ -62,7 +62,7 @@ test('valid svgs ', (t) => {
       });
     }
 
-    if (svg.$.width !== null || svg.$.height !== null) errors.push('must not have height or width properties');
+    if (svg.$.width || svg.$.height) errors.push('must not have height or width properties');
 
     if (!svg.$.viewBox) {
       errors.push('must use viewBox sizing');
