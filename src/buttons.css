@@ -1,34 +1,38 @@
 /**
- * Buttons
- *
- * To color a filled button, add a background color, e.g. `.bg-red`.
- * To color a stroke button, add a text color, e.g. `.color-purple`.
- *
  * @section Buttons
  */
 
 /**
- * Use as an affordance for a javascript event on click.  Buttons have a blue background unless
- * combined with [.bg-](#Background) classes. Buttons have white text unless combined with a  [.txt-](#Color)
- * color class. Buttons have fully rounded corners unless combined with a [rnd-](#Theming) class. For links,
- * use an a element with the [.a](#Links) class.
+ * Use as an affordance for JavaScript-powered click behaviors.  Buttons have a blue background unless
+ * combined with [`.bg-*`](#Background) classes. Buttons have white text unless combined with a [`.color-*`](#Color)
+ * class. Buttons have fully rounded corners unless combined with a [`.round-*`](#Theming) class. For links,
+ * use an a element with the [`.a`](#Links) class.
  *
  * @memberof Buttons
  * @example
- * <button class='btn'>Basic button</button>
+ * <button class='btn'>Default</button>
+ * <button class='btn bg-red'>Color</button>
+ * <button class='btn bg-teal color-blue-dark'>More colors</button>
+ * <button class='btn round'>Less rounded</button>
+ * <div class='mt10'>
+ *   <div class='p10 bg-blue inline-block'>
+ *     <button class='btn bg-white color-blue'>Reverse</button>
+ *   </div>
+ * </div>
  */
 .btn {
   background-color: var(--blue);
   color: #fff;
   border: 2px solid transparent;
+  border-radius: 20px; /* fully round by default */
   /* Odd numbers on padding are accommodating borders */
   padding: 8px 23px;
   line-height: 20px;
   font-weight: bold;
-  border-radius: var(--border-radius);
   font-size: 12px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .btn:hover,
@@ -36,7 +40,22 @@
   background-color: var(--blue-dark);
 }
 
-/* Stroke */
+/**
+ * A modifier class to create buttons with colored borders.
+ * The border color and text color will always match.
+ * To change the text & border color, use a [`.color-*`](#Color) class.
+ *
+ * @memberof Buttons
+ * @example
+ * <button class='btn btn--stroke'>Default</button>
+ * <button class='btn btn--stroke color-red'>Color</button>
+ * <button class='btn btn--stroke round'>Less rounded</button>
+ * <div class='mt10'>
+ *   <div class='p10 bg-blue inline-block'>
+ *     <button class='btn btn--stroke color-white'>Reverse</button>
+ *   </div>
+ * </div>
+ */
 .btn--stroke {
   background-color: transparent;
   border: 2px solid;
@@ -54,17 +73,26 @@
   background: #0077cc; /* blue */
 }
 
-/* Sizes */
-.btn--s { padding: 1px 18px; }
+/**
+ * Modifier classes to create smaller buttons.
+ *
+ * @group
+ * @memberof Buttons
+ * @example
+ * <button class='btn btn--s'>Small</button>
+ * <button class='btn btn--xs btn--stroke'>Extra small</button>
+ */
+.btn--s {
+  padding: 1px 18px;
+  border-radius: 15px;
+}
+
 .btn--xs {
   font-size: 10px;
   padding: 0 8px;
+  border-radius: 10px;
 }
-
-/* Curvature */
-.btn--round {
-  border-radius: 50px; /* Needs to be >1/2 as tall as the tallest button */
-}
+/* @endgroup */
 
 /* Color variations */
 .btn.bg-gray:hover,
@@ -162,7 +190,52 @@
 .btn.btn--stroke.color-darken75:hover,
 .btn.btn--stroke.color-darken75.is-active { color: var(--black); }
 
-/* Pill formations */
+/**
+ * Classes to create pill button groups. Every button in a pill group
+ * has a `.btn--pill` class and a modifier specifying its position.
+ * Pill groups should be wrapped in a container with a
+ * `flx-inline` container.
+ *
+ * For *horizontal* pills, use
+ * - `btn--pill-hc` (center)
+ * - `btn--pill-hl` (left)
+ * - `btn--pill-hr` (right)
+ *
+ * For *vertical* pills, use
+ * - `flx-column` on the flex container
+ * - `btn--pill-vc` (center)
+ * - `btn--pill-vt` (top)
+ * - `btn--pill-vb` (bottom)
+ *
+ * Pill buttons can be modified and themed the same ways as regular buttons.
+ *
+ * @memberof Buttons
+ * @example
+ * <div>
+ *   <div class="mr10 flx-inline">
+ *     <button class="btn btn--pill btn--pill-hl">Left</button>
+ *     <button class="btn btn--pill btn--pill-hc">Center</button>
+ *     <button class="btn btn--pill btn--pill-hr">Right</button>
+ *   </div>
+ *   <div class="flx-inline">
+ *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hl">Left</button>
+ *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hc">Center</button>
+ *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hr">Right</button>
+ *   </div>
+ * </div>
+ * <div class="mt10">
+ *   <div class="mr10 flx-inline flx-column">
+ *     <button class="btn btn--pill btn--pill-vt bg-purple">Top</button>
+ *     <button class="btn btn--pill btn--pill-vc bg-purple">Center</button>
+ *     <button class="btn btn--pill btn--pill-vb bg-purple">Bottom</button>
+ *   </div>
+ *   <div class="flx-inline flx-column">
+ *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vt">Top</button>
+ *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vc">Center</button>
+ *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vb">Bottom</button>
+ *   </div>
+ * </div>
+ */
 .btn--pill {
   position: relative;
 }
@@ -187,15 +260,6 @@
   border-bottom-left-radius: 0;
 }
 
-.btn--stroke.btn--pill-hc {
-  margin-left: -2px;
-  margin-right: 0;
-}
-
-.btn--stroke.btn--pill-hr {
-  margin-left: -2px;
-}
-
 .btn--pill-vc {
   border-radius: 0;
   margin-top: 2px;
@@ -212,11 +276,20 @@
   border-top-left-radius: 0;
 }
 
+.btn--stroke.btn--pill-hc {
+  margin-left: -2px;
+  margin-right: 0;
+}
+
+.btn--stroke.btn--pill-hr {
+  margin-left: -2px;
+}
+
 .btn--stroke.btn--pill-vc {
   margin-top: -2px;
   margin-bottom: 0;
 }
 
-.btn--stroke.btn--pill-hb {
-  margin-bottom: -2px;
+.btn--stroke.btn--pill-vb {
+  margin-top: -2px;
 }
