@@ -35,17 +35,16 @@ const routes = [
 
 function buildRoutes() {
 
-  let props = {
-    navItems: {
-      main: routes,
-      secondary: null,
-      active: null
-    }
-  };
 
   const routesWithComponents = routes.map(r => {
-    // set current route to active.
-    props.navItems.active = r.name;
+    let props = {
+      navItems: {
+        main: routes,
+        secondary: null,
+        // set current route to active.
+        active: r.name
+      }
+    };
 
     // Add component and one-off props for components.
     switch (r.name) {
