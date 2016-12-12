@@ -5,7 +5,7 @@ class Examples extends React.Component {
   render() {
     return (<div className='docs-container'>
       <Navigation navItems={this.props.navItems} />
-      Home
+      Examples
     </div>);
   }
 }
