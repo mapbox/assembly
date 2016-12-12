@@ -2,11 +2,8 @@
 'use strict';
 
 const render = require('./render');
-const routes = require('../site/routes');
-const path = require('path');
 const budo = require('budo');
 const babelify = require('babelify');
-const fs = require('fs');
 const watchCss = require('./watch-css');
 
 budo(null, {
@@ -20,9 +17,4 @@ budo(null, {
   console.log(`[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Watching for changes to site directory ...`);
   render();
   watchCss();
-}).on('exit', () => {
-  // Clean generated files.
-  routes().forEach((p) => {
-    fs.unlink(path.join(__dirname, '../', p.dest, 'index.html'));
-  });
 });

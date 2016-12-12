@@ -19,9 +19,9 @@ class Navigation extends React.Component {
   render() {
     const NavEls = routes.map(r =>
       // TODO: Add a prop that sticks subnav for documentation in here.
-      <a key={r} className='block' href={r.route}>{r.name}</a>
+      <a key={r.name} className='block' href={r.route}>{r.name}</a>
     );
-    console.log(NavEls);
+
     return (<div className='fixed top left'>
       {NavEls}
     </div>);
