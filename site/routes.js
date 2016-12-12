@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+
+/* eslint-disable */
 'use strict';
 
 const React = require('react');
