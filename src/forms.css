@@ -3,16 +3,19 @@
   width: 100%;
 }
 
+/* stylelint-disable selector-no-type, selector-no-combinator */
 .fieldset,
 .input,
-.select,
+.select > select,
 .textarea {
+  appearance: none;
   background: #fff;
   border: 0;
   margin: 0;
   padding: 0;
   box-shadow: none;
 }
+/* stylelint-enable */
 
 .input {
   border: 1px solid #acb4b9;
@@ -51,23 +54,115 @@
   padding: 10px;
 }
 
+/* stylelint-disable selector-no-type, selector-no-combinator, selector-no-attribute */
 .select {
-  border: 2px solid #acb4b9;
-  padding-right: 15px;
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  border-radius: var(--border-radius);
 }
 
-.select {
-  appearance: none;
+.select > select {
+  display: block;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--gray-light);
+  border-radius: var(--border-radius);
+  color: currentColor;
+  cursor: pointer;
+  background: transparent;
   height: 40px;
   line-height: 36px; /* minus border */
-  padding: 0 10px;
+  padding: 0 47px 0 12px; /* plus arrow */
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  width: 100%;
 }
 
-.select--sm {
+.select--stroke > select {
+  border-color: currentColor;
+}
+
+.select[class*='bg-']:not(.select--stroke) > select {
+  color: #fff;
+  border-color: transparent;
+}
+
+.select--s > select {
   height: 30px;
   line-height: 26px; /* minus border */
-  padding: 0 5px;
+  padding: 0 40px 0 10px; /* plus arrow */
 }
+
+.select--xs > select {
+  height: 20px;
+  line-height: 16px; /* minus border */
+  padding: 0 20px 0 5px; /* plus arrow */
+}
+
+.select-arrow {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 0 2px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: currentColor;
+  color: var(--gray-light);
+  width: 35px;
+}
+
+.select--stroke > .select-arrow {
+  color: currentColor;
+}
+
+.select[class*='bg-']:not(.select--stroke) > .select-arrow {
+  color: #fff;
+  border-left-color: rgba(255, 255, 255, 0.3);
+}
+
+.select--s > .select-arrow {
+  width: 30px;
+}
+
+.select--xs > .select-arrow {
+  width: 15px;
+}
+
+/* Color variations */
+.select.bg-gray:hover { background-color: var(--gray-dark); }
+.select--stroke.color-gray:hover { color: var(--gray-dark); }
+
+.select.bg-pink:hover { background-color: var(--pink-dark); }
+.select--stroke.color-pink:hover { color: var(--pink-dark); }
+
+.select.bg-red:hover { background-color: var(--red-dark); }
+.select--stroke.color-red:hover { color: var(--red-dark); }
+
+.select.bg-orange:hover { background-color: var(--orange-dark); }
+.select--stroke.color-orange:hover { color: var(--orange-dark); }
+
+.select.bg-yellow:hover { background-color: var(--yellow-dark); }
+.select--stroke.color-yellow:hover { color: var(--yellow-dark); }
+
+.select.bg-green:hover { background-color: var(--green-dark); }
+.select--stroke.color-green:hover { color: var(--green-dark); }
+
+.select.bg-teal:hover { background-color: var(--teal-dark); }
+.select--stroke.color-teal:hover { color: var(--teal-dark); }
+
+.select.bg-blue:hover { background-color: var(--blue-dark); }
+.select--stroke.color-blue:hover { color: var(--blue-dark); }
+
+.select.bg-purple:hover { background-color: var(--purple-dark); }
+.select--stroke.color-purple:hover { color: var(--purple-dark); }
+
+/* stylelint-enable */
 
 .range {
   appearance: none;
@@ -346,4 +441,4 @@ input:checked + .color-purple,
 .color-purple.is-active {
   color: var(--purple-dark);
 }
-/* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
+/* stylelint-enable */
