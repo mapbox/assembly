@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+'use strict';
+
+const routes = require('../site/routes');
+const ReactDOMServer = require('react-dom/server');
+const fs = require('fs');
+const path = require('path');
+const mkdirp = require('mkdirp');
+
+function render() {
+  const template = fs.readFileSync(path.join(__dirname, '../site/template.html'), 'utf8');
+  let pathPrefix = '';
+
+  routes().forEach((p) => {
+    // Make paths relative
+    const levels = p.route.match(/\//ig) || [];
+    levels.forEach(() => {
+      pathPrefix += '../';
+    });
+    const correctedTemplate = template.split('{baseurl}').join(pathPrefix);
+
+    const routePath = path.join(__dirname, '../', p.route);
+    if (!fs.existsSync(routePath)) {
+      mkdirp.sync(routePath);
+    }
+
+    fs.writeFileSync(path.join(routePath, 'index.html'),
+      correctedTemplate.split('{content}').join(ReactDOMServer.renderToStaticMarkup(p.component))
+    );
+    console.log('Completed ' + p.name);
+  });
+}
+
+module.exports = render;
+
+if (require.main === module) {
+  render();
+}

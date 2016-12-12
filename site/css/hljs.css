@@ -1,6 +1,5 @@
-// github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+/* github.com style (c) Vasily Polovnyov <vast@whiteants.net> */
 
-export const hljsStyle = `
 .hljs {
   display: block;
   overflow-x: auto;
@@ -99,4 +98,3 @@ export const hljsStyle = `
 .hljs-strong {
   font-weight: bold;
 }
-`;

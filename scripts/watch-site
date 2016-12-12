@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+'use strict';
+
+const render = require('./render');
+const budo = require('budo');
+const babelify = require('babelify');
+const watchCss = require('./watch-css');
+
+budo(null, {
+  live: false,
+  stream: process.stdout,
+  browserify: {
+    transform: babelify
+  }
+}).on('connect', () => {
+  const now = new Date();
+  console.log(`[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Watching for changes to site directory ...`);
+  render();
+  watchCss();
+});
