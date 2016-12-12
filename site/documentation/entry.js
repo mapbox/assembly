@@ -37,7 +37,7 @@ class Entry extends React.Component {
         <div className='docs-selector-name'>
           {selectorEls}
         </div>
-        <div className='docs-selector-description'>
+        <div className='docs-selector-description txt'>
           {remark().use(reactRenderer).process(props.parsedComment.description).contents}
         </div>
         <div className='docs-example'>

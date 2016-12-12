@@ -26,6 +26,7 @@
  * @memberof Layout
  */
 .flx { display: flex; }
+.flx-inline { display: inline-flex; }
 .flx-column { flex-direction: column; }
 .flx-right { justify-content: flex-end; }
 .flx-center-x { justify-content: center; }

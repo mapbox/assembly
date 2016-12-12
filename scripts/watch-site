@@ -16,5 +16,5 @@ budo(null, {
   const now = new Date();
   console.log(`[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Watching for changes to site directory ...`);
   renderSite();
-  watchCss();
+  watchCss(renderSite);
 });

@@ -15,10 +15,13 @@ function rebuild() {
   processCss();
 }
 
-function watchCss() {
+function watchCss(callback) {
   chokidar.watch(cssGlob, {
     ignoreInitial: true
-  }).on('all', rebuild);
+  }).on('all', () => {
+    rebuild();
+    if (callback) callback();
+  });
 }
 
 module.exports = watchCss;
