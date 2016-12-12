@@ -7,7 +7,7 @@
     "css": "node scripts/process-css",
     "svgs": "node scripts/create-svg-sprite",
     "build": "rm -rf dist && mkdir -p dist && npm run css && npm run svgs && npm run build-site",
-    "build-site": "babel-node scripts/render",
+    "build-site": "babel-node scripts/render-site",
     "watch-site": "nodemon scripts/watch-site --exec babel-node",
     "debug": "npm run build && http-server",
     "lint:css": "stylelint src/*.css",
