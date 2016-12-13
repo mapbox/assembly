@@ -21,6 +21,14 @@ function getCssPath(name) {
   return path.join(__dirname, `../src/${name}.css`);
 }
 
+function handlePostcssError(error) {
+  if ( error.name === 'CssSyntaxError' ) {
+    process.stderr.write(error.message + error.showSourceCode());
+  } else {
+    console.error(error);
+  }
+}
+
 const cssFiles = [
   getCssPath('reset'),
   getCssPath('fonts'),
@@ -64,7 +72,7 @@ function processCssFile(cssFile, concat) {
       .then((postcssResult) => {
         concat.add(cssFile, postcssResult.css, postcssResult.map.toString());
       })
-      .catch((err) => console.log(err));
+      .catch(handlePostcssError);
   });
 }
 
@@ -88,5 +96,5 @@ function processCss() {
 module.exports = processCss;
 
 if (require.main === module) {
-  processCss().catch((err) => console.log(err.stack));
+  processCss().catch(handlePostcssError);
 }
