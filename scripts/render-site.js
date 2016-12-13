@@ -16,7 +16,7 @@ function writePage(pageData, pageTemplate) {
   const pagePath = path.join(siteDistDir, pageData.route);
   const pageContent = ReactDOMServer.renderToStaticMarkup(pageData.component);
 
-  const fullPage = baseUrlTemplate
+  const fullPage = pageTemplate
     .split('{baseurl}').join(process.env.NODE_ENV === 'production' ? '/assembly' : '')
     .split('{content}').join(pageContent);
 
