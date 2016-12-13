@@ -10,7 +10,7 @@ const SVGO = require('svgo');
 const timelog = require('./timelog');
 
 const svgDir = path.join(__dirname, '../src/svgs');
-const svgScript = path.join(__dirname, '../dist/base-svgs.js');
+const svgScript = path.join(__dirname, '../dist/assembly-svg.js');
 const svgo = new SVGO({
   plugins: [
     {
@@ -43,7 +43,7 @@ function addFileToSprite(filename, sprite, callback) {
     try {
       svgo.optimize(content, (optimizedContent) => {
         try {
-          sprite.add(`base-svg-${basename}`, optimizedContent.data);
+          sprite.add(`icon-${basename}`, optimizedContent.data);
           callback();
         } catch (e) {
           handleError(e);

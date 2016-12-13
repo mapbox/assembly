@@ -1,7 +1,6 @@
 import React from 'react';
 import { Entry } from './entry';
 import { Heading } from './heading';
-import { Navigation } from '../shared/navigation';
 
 class Documentation extends React.Component {
 
@@ -43,8 +42,7 @@ class Documentation extends React.Component {
     props.documentationData.forEach((entry) => addEntryAndMembers(entry, 1));
 
     return (
-      <div className='limiter'>
-      <Navigation navItems={props.navItems} />
+      <div>
         {entryEls}
       </div>
     );
@@ -52,11 +50,6 @@ class Documentation extends React.Component {
 }
 
 Documentation.propTypes = {
-  navItems: React.PropTypes.shape({
-    main: React.PropTypes.array.isRequired,
-    secondary: React.PropTypes.array,
-    active: React.PropTypes.string
-  }).isRequired,
   documentationData: React.PropTypes.arrayOf(React.PropTypes.shape({
     parsedComment: React.PropTypes.shape({
       description: React.PropTypes.string.isRequired,

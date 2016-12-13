@@ -244,34 +244,37 @@
   z-index: 2;
 }
 
-.btn--pill-hc {
+/* Extra .btn in selectors below to increase specificity
+against .round class */
+
+.btn.btn--pill-hc {
   border-radius: 0;
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.btn--pill-hl {
+.btn.btn--pill-hl {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.btn--pill-hr {
+.btn.btn--pill-hr {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn--pill-vc {
+.btn.btn--pill-vc {
   border-radius: 0;
   margin-top: 2px;
   margin-bottom: 2px;
 }
 
-.btn--pill-vt {
+.btn.btn--pill-vt {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn--pill-vb {
+.btn.btn--pill-vb {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
