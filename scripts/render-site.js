@@ -9,16 +9,14 @@ const mkdirp = require('mkdirp');
 const pify = require('pify');
 const timelog = require('./timelog');
 
-const siteDistDir = path.join(__dirname, '../build');
+const siteDistDir = path.join(__dirname, '../dist');
 const pageTemplatePath = path.join(__dirname, '../site/template.html');
 
 function writePage(pageData, pageTemplate) {
   const pagePath = path.join(siteDistDir, pageData.route);
   const pageContent = ReactDOMServer.renderToStaticMarkup(pageData.component);
 
-  const fullPage = pageTemplate
-    .split('{baseurl}').join(process.env.NODE_ENV === 'production' ? '/assembly/' : '')
-    .split('{content}').join(pageContent);
+  const fullPage = pageTemplate.split('{content}').join(pageContent);
 
   return pify(mkdirp)(pagePath).then(() => {
     return pify(fs.writeFile)(path.join(pagePath, 'index.html'), fullPage);

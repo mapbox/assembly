@@ -17,7 +17,7 @@ class Navigation extends React.Component {
 
     const navEls = props.navItems.main.map((r) =>
       <div key={r.name}>
-        <a className={`block ${r.name === props.navItems.active && 'is-active'}`} href={r.route}>{r.name}</a>
+        <a className={`block ${r.name === props.navItems.active && 'is-active'}`} href={`/assembly${r.route}`}>{r.name}</a>
         {r.name === props.navItems.active ? secondaryEls : ''}
       </div>
     );

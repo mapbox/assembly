@@ -25,7 +25,7 @@ function copyFonts() {
 function copySiteAssets() {
   return globby([distGlob, siteAssetsGlob]).then((assetFiles) => {
     return Promise.all(assetFiles.map((file) => {
-      return copyFile(file, path.join(__dirname, '../build/assets'));
+      return copyFile(file, path.join(__dirname, '../dist/assets'));
     }));
   });
 }

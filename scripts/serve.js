@@ -9,7 +9,7 @@ const copyAssets = require('./copy-assets');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '../build')));
+app.use('/assembly', express.static(path.join(__dirname, '../dist')));
 const port = process.env.PORT || 9967;
 app.listen(port, () => timelog(`Assembly app running at localhost:${port}`));
 
