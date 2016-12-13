@@ -10,12 +10,12 @@ class Navigation extends React.Component {
 
     let secondaryEls;
     if (props.navItems.secondary) {
-      secondaryEls = props.navItems.secondary.map(r =>
+      secondaryEls = props.navItems.secondary.map((r) =>
         <a key={r.name} className='block txt-small' href={r.route}>{r.name}</a>
       );
     }
 
-    const navEls = props.navItems.main.map(r =>
+    const navEls = props.navItems.main.map((r) =>
       <div key={r.name}>
         <a className={`block ${r.name === props.navItems.active && 'is-active'}`} href={r.route}>{r.name}</a>
         {r.name === props.navItems.active ? secondaryEls : ''}

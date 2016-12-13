@@ -12,7 +12,7 @@
     "build:prod": "npm run build && cssnano dist/assembly.css > dist/assembly.min.css",
     "watch:css": "nodemon scripts/process-css -w src -e css",
     "lint:css": "stylelint src/*.css",
-    "lint:js": "eslint scripts",
+    "lint:js": "eslint .",
     "lint": "npm run lint:css && npm run lint:js",
     "start": "npm run build:svg && nodemon scripts/serve -w src -w site -e js,css --exec babel-node",
     "test:svgs": "tape test/test-icons.js | tap-spec",
