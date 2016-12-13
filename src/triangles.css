@@ -11,10 +11,10 @@
  * <div class='triangle triangle--u'></div>
  */
 .triangle {
-  width: 0 !important;
-  height: 0 !important;
-  font-size: 0 !important;
-  line-height: 0 !important;
+  width: 10px;
+  height: 10px;
+  font-size: 0;
+  line-height: 0;
 }
 
 /**
@@ -23,77 +23,91 @@
 .triangle--u {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid currentColor;
+  border-bottom: 7px solid currentColor;
 }
 
 .triangle--r {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid currentColor;
+  border-left: 7px solid currentColor;
 }
 
 .triangle--d {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid currentColor;
+  border-top: 7px solid currentColor;
 }
 
 .triangle--l {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 5px solid currentColor;
+  border-right: 7px solid currentColor;
 }
 
 /**
  * Medium sized triangles
  */
-.triangle--u-l {
+.triangle-l {
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.triangle-l--u {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid currentColor;
+  border-bottom: 13px solid currentColor;
 }
 
-.triangle--r-l {
+.triangle-l--r {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 10px solid currentColor;
+  border-left: 13px solid currentColor;
 }
 
-.triangle--d-l {
+.triangle-l--d {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid currentColor;
+  border-top: 13px solid currentColor;
 }
 
-.triangle--l-l {
+.triangle-l--l {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-right: 10px solid currentColor;
+  border-right: 13px solid currentColor;
 }
 
 /**
  * Extra large triangles
  */
-.triangle--u-xl {
+.triangle-xl {
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.triangle-xl--u {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid currentColor;
+  border-bottom: 25px solid currentColor;
 }
 
-.triangle--r-xl {
+.triangle-xl--r {
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-left: 20px solid currentColor;
+  border-left: 25px solid currentColor;
 }
 
-.triangle--d-xl {
+.triangle-xl--d {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 20px solid currentColor;
+  border-top: 25px solid currentColor;
 }
 
-.triangle--l-xl {
+.triangle-xl--l {
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 20px solid currentColor;
+  border-right: 24px solid currentColor;
 }

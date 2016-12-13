@@ -28,7 +28,7 @@ const directions = [
 ];
 
 function TriangleEl(props) {
-  const triangleClass = `triangle triangle--${props.direction}${props.size ? '-' + props.size : ''} color-${props.color}`;
+  const triangleClass = `triangle${props.size ? '-' + props.size : ''} triangle${props.size ? '-' + props.size : ''}--${props.direction} color-${props.color}`;
   return (
     <div className='inline-block mr20'>
       <div className={triangleClass} />
