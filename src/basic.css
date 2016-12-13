@@ -77,7 +77,8 @@ img {
   list-style: disc;
 }
 
-.prose ul {
+.prose ul,
+.txt-ul {
   margin-left: 40px;
 }
 
@@ -87,7 +88,8 @@ img {
   list-style: decimal;
 }
 
-.prose ol {
+.prose ol,
+.txt-ol {
   margin-left: 40px;
 }
 
