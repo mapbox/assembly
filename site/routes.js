@@ -10,6 +10,7 @@ const { Documentation } = require('./documentation/documentation');
 const { Home } = require('./home');
 const { Examples } = require('./examples');
 const { Debug } = require('./debug');
+const { Reset } = require('./reset');
 const fs = require('fs');
 const path = require('path');
 
@@ -30,6 +31,9 @@ const routes = [
   }, {
     name: 'Documentation',
     route: '/documentation/'
+  }, {
+    name: 'Reset',
+    route: '/reset/'
   }, {
     name: 'Examples',
     route: '/examples/'
@@ -90,6 +94,12 @@ function buildRoutes() {
         r.component = (
           <Page navItems={navItems}>
             <Home {...props} />
+          </Page>
+        );
+      case 'Reset':
+        r.component = (
+          <Page navItems={navItems}>
+            <Reset {...props} />
           </Page>
         );
         break;
