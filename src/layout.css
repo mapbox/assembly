@@ -28,7 +28,7 @@
 .flx { display: flex; }
 .flx-inline { display: inline-flex; }
 .flx-column { flex-direction: column; }
-.flx-right { justify-content: flex-end; }
+.flx-end { justify-content: flex-end; }
 .flx-center-x { justify-content: center; }
 .flx-center-y { align-items: center; }
 .flx-stretch-y { align-items: stretch; }
@@ -45,7 +45,7 @@
   .flx-lg { display: flex; }
   .flx-none-lg { flex: none; }
   .flx-column-lg { flex-direction: column; }
-  .flx-right-lg { justify-content: flex-end; }
+  .flx-end-lg { justify-content: flex-end; }
   .flx-center-x-lg { justify-content: center; }
   .flx-center-y-lg { align-items: center; }
   .flx-stretch-y-lg { align-items: stretch; }
@@ -60,7 +60,7 @@
   .flx-md { display: flex; }
   .flx-none-md { flex: none; }
   .flx-column-md { flex-direction: column; }
-  .flx-right-md { justify-content: flex-end; }
+  .flx-end-md { justify-content: flex-end; }
   .flx-center-x-md { justify-content: center; }
   .flx-center-y-md { align-items: center; }
   .flx-stretch-y-md { align-items: stretch; }
@@ -75,7 +75,7 @@
   .flx-sm { display: flex; }
   .flx-none-sm { flex: none; }
   .flx-column-sm { flex-direction: column; }
-  .flx-right-sm { justify-content: flex-end; }
+  .flx-end-sm { justify-content: flex-end; }
   .flx-center-x-sm { justify-content: center; }
   .flx-center-y-sm { align-items: center; }
   .flx-stretch-y-sm { align-items: stretch; }
@@ -311,8 +311,8 @@
   margin-right: calc(50% - 50vw);
 }
 
-.bleed-right { flex: 1; margin-right: calc(50% - 50vw); }
-.bleed-left { flex: 1; margin-left: calc(50% - 50vw); }
+.bleed-r { flex: 1; margin-right: calc(50% - 50vw); }
+.bleed-l { flex: 1; margin-left: calc(50% - 50vw); }
 
 /**
  * Float classes
