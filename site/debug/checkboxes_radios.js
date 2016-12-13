@@ -1,16 +1,16 @@
 import React from 'react';
 
-const variations = [
-  { color: null },
-  { color: 'gray' },
-  { color: 'pink' },
-  { color: 'red' },
-  { color: 'orange' },
-  { color: 'yellow' },
-  { color: 'green' },
-  { color: 'teal' },
-  { color: 'blue' },
-  { color: 'purple' }
+const colors = [
+  null,
+  'gray',
+  'pink',
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'teal',
+  'blue',
+  'purple'
 ];
 
 class CheckboxesRadios extends React.Component {
@@ -23,12 +23,12 @@ class CheckboxesRadios extends React.Component {
      </svg>
    );
 
-    const checkboxes = variations.map((item, i) => {
+    const checkboxes = colors.map((color, i) => {
       let checkboxFillClass = 'checkbox';
       let checkboxStrokeClass = 'checkbox checkbox--stroke';
-      if (item.color !== null) {
-        checkboxFillClass += ` bg-${item.color}`;
-        checkboxStrokeClass += ` color-${item.color}`;
+      if (color !== null) {
+        checkboxFillClass += ` bg-${color}`;
+        checkboxStrokeClass += ` color-${color}`;
       }
 
       return (
@@ -75,12 +75,12 @@ class CheckboxesRadios extends React.Component {
       );
     });
 
-    const radios = variations.map((item, i) => {
+    const radios = colors.map((color, i) => {
       let radioClass = 'radio';
       let id = 'radio';
-      if (item.color !== null) {
-        radioClass += ` color-${item.color}`;
-        id += `-${item.color}`;
+      if (color !== null) {
+        radioClass += ` color-${color}`;
+        id += `-${color}`;
       }
 
       return (
@@ -104,6 +104,10 @@ class CheckboxesRadios extends React.Component {
 
     return (
       <div>
+        <h1 className='txt-headline mb20'>
+          Checkboxes & Radios
+        </h1>
+
         <h2 className='subheadline mb20 mt20'>
           Checkboxes
         </h2>
