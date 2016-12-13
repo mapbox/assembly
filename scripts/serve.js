@@ -11,10 +11,20 @@ const app = express();
 
 app.use('/assembly', express.static(path.join(__dirname, '../dist')));
 const port = process.env.PORT || 9967;
-app.listen(port, () => timelog(`Assembly app running at localhost:${port}`));
 
 processCss()
   .then(() => {
     return Promise.all([renderSite(), copyAssets()]);
   })
-  .catch((err) => console.error(err));
+  .then(() => {
+    return new Promise((resolve, reject) => {
+      app.listen(port, (err) => {
+        if (err) return reject(err);
+        console.log('==================================================');
+        timelog(`Assembly app running at localhost:${port}`);
+        console.log('==================================================');
+        resolve();
+      });
+    });
+  })
+  .catch((err) => console.error(err.stack));

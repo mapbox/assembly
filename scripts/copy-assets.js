@@ -5,9 +5,9 @@ const globby = require('globby');
 const cpFile = require('cp-file');
 const timelog = require('./timelog');
 
-const fontsGlob = path.join(__dirname, '../fonts/*');
-const distGlob = path.join(__dirname, '../dist/*');
-const siteAssetsGlob = path.join(__dirname, '../site/css/*');
+const fontsGlob = path.join(__dirname, '../fonts/*.*');
+const distGlob = path.join(__dirname, '../dist/*.*');
+const siteAssetsGlob = path.join(__dirname, '../site/css/*.*');
 
 function copyFile(infile, outdir) {
   const outfile = path.join(outdir, path.basename(infile));
@@ -39,5 +39,5 @@ function copyAssets() {
 module.exports = copyAssets;
 
 if (require.main === module) {
-  copyAssets().catch((err) => console.log(err));
+  copyAssets().catch((err) => console.error(err.stack));
 }

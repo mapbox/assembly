@@ -88,5 +88,5 @@ function processCss() {
 module.exports = processCss;
 
 if (require.main === module) {
-  processCss().catch((err) => console.log(err.stack));
+  processCss().catch((err) => console.error(err.stack));
 }

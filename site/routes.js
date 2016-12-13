@@ -55,7 +55,12 @@ function buildRoutes() {
     switch (r.name) {
       case 'Documentation':
         const assemblyCss = path.join(__dirname, '../dist/assembly.css');
-        const entryContent = fs.readFileSync(assemblyCss, 'utf8');
+        let entryContent;
+        try {
+          entryContent = fs.readFileSync(assemblyCss, 'utf8');
+        } catch (err) {
+          throw new Error('assembly.css must be built');
+        }
         const documentationData = documentationCss.extract([{
           contents: entryContent,
           path: assemblyCss
