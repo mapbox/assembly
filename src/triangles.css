@@ -1,0 +1,99 @@
+/**
+ * General-purpose triangle-shaped elements. Great for dialog boxes and tooltips.
+ * @section Triangles
+ */
+
+/**
+ * Triangles
+ *
+ * @memberof Triangles
+ * @example
+ * <div class='triangle triangle--u'></div>
+ */
+.triangle {
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+/**
+ * Small triangles
+ */
+.triangle--u {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid currentColor;
+}
+
+.triangle--r {
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+}
+
+.triangle--d {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid currentColor;
+}
+
+.triangle--l {
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid currentColor;
+}
+
+/**
+ * Medium sized triangles
+ */
+.triangle--u-l {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid currentColor;
+}
+
+.triangle--r-l {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid currentColor;
+}
+
+.triangle--d-l {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid currentColor;
+}
+
+.triangle--l-l {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid currentColor;
+}
+
+/**
+ * Extra large triangles
+ */
+.triangle--u-xl {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid currentColor;
+}
+
+.triangle--r-xl {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid currentColor;
+}
+
+.triangle--d-xl {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid currentColor;
+}
+
+.triangle--l-xl {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid currentColor;
+}

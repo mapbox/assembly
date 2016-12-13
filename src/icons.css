@@ -7,7 +7,7 @@
  * Size icons with these classes. TODO: display all icons.
  * @memberof Icons
  * @example
- * <svg class="bor icn icn--md" role="img"><use xlink:href="#base-svg-library"/></svg>
+ * <svg class="bor icn icn--m" role="img"><use xlink:href="#base-svg-library"/></svg>
  */
 .icn {
   fill: currentColor;
@@ -15,12 +15,12 @@
   width: 20px;
 }
 
-.icn--sm {
+.icn--s {
   height: 15px;
   width: 15px;
 }
 
-.icn--lg {
+.icn--l {
   height: 40px;
   width: 40px;
 }
