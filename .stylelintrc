@@ -80,7 +80,7 @@
     "property-case": "lower",
     "property-no-unknown": true,
     "property-no-vendor-prefix": true,
-    "selector-class-pattern": "^[a-z]+[0-9]*(-((?!md-|sm-|lg-)[a-z0-9-]*))?(-sm|-md|-lg)?$",
+    "selector-class-pattern": "^[a-z]+[0-9]*(-{1,2}(?!md-|sm-|lg-|top|bottom|left|right)[a-z0-9]+?)*$",
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,
