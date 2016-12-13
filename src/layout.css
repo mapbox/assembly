@@ -22,8 +22,13 @@
 }
 
 /**
- * Flexbox
+ * Flexbox utilities. Check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+ * to learn how the system works.
+ *
+ * Includes `-sm`, `-md`, and `-lg` variations to target screen sizes.
+ *
  * @memberof Layout
+ * @group
  */
 .flx { display: flex; }
 .flx-inline { display: inline-flex; }
@@ -33,13 +38,13 @@
 .flx-center-y { align-items: center; }
 .flx-stretch-y { align-items: stretch; }
 .flx-noshrink { flex-shrink: 0; }
-
 .flx-fill {
   flex-grow: 1;
   /* prevent overflowing chidlren
   cf. https://css-tricks.com/flexbox-truncated-text/ */
   min-width: 0;
 }
+/** @endgroup */
 
 @media only screen and (--large-screen) {
   .flx-lg { display: flex; }
@@ -477,21 +482,27 @@ Zero out positioning
 }
 
 /**
- * Margin classes
- * @section Margin
+ * All margin and padding classes follow the following pattern:
+ * `<m|p><side><spacing-size>-<screen-size>`. "Side" is `l`, `t`, `r`, or `b`.
+ *
+ * All spacing sizes increment by `5px` up to `20px`, by `10px` up to `60px`,
+ * by `20px` up to `200px`, and by `200px` up to `800px`. This makes the list
+ * of sizes: `5`, `10`, `15`, `20`, `30`, `40`, `50`, `60`, `80`, `100`, `120`, `140`, `160`,
+ * `180`, `200`, `400`, `600`, `800`.
+ *
+ * Screen sizes are *optional* and are `-sm`, `-md`, and `-lg`.
+ * These screen-size variations include classes that implement `0px`.
+ *
+ * Here are some examples that put the pieces together:
+ * - `mt20`: margin-top of `20px`.
+ * - `ml30-sm`: margin-left of `30px` on small screens.
+ * - `pl5`: padding-left of `5px`.
+ *
+ * @section Margin and padding
  * @memberof Positioning
 */
 
-/**
- * Top margins. Increments by 5px up to 20px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
- *
- * @example
- *  <div class='mt5'></div>
- *  <div class='mt10'></div>
- *  <div class='mt40'></div>
- *  <div class='mt100'></div>
- *  <div class='mt200'></div>
- */
+/* Top margins */
 .mt0 { margin-top: 0; }
 .mt5 { margin-top: 5px; }
 .mt10 { margin-top: 10px; }
@@ -578,16 +589,7 @@ Zero out positioning
   .mt800-sm { margin-top: 800px; }
 }
 
-/**
- * Right margins. Increments by 5px up to 20px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
- *
- * @example
- *  <div class='mr5'></div>
- *  <div class='mr10'></div>
- *  <div class='mr40'></div>
- *  <div class='mr100'></div>
- *  <div class='mr200'></div>
- */
+/* Right margins */
 .mr0 { margin-right: 0; }
 .mr5 { margin-right: 5px; }
 .mr10 { margin-right: 10px; }
@@ -674,16 +676,7 @@ Zero out positioning
   .mr800-sm { margin-right: 800px; }
 }
 
-/**
- * Bottom margins. Increments by 5px up to 20px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
- *
- * @example
- *  <div class='mb5'></div>
- *  <div class='mb10'></div>
- *  <div class='mb40'></div>
- *  <div class='mb100'></div>
- *  <div class='mb200'></div>
- */
+/* Bottom margins */
 .mb-neg1 { margin-bottom: -1px; }
 .mb-neg2 { margin-bottom: -2px; }
 .mb0 { margin-bottom: 0; }
@@ -778,16 +771,7 @@ Zero out positioning
   .mb800-sm { margin-bottom: 800px; }
 }
 
-/**
- * Left margins. Increments by 5px up to 20px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
- *
- * @example
- *  <div class='ml5'></div>
- *  <div class='ml10'></div>
- *  <div class='ml40'></div>
- *  <div class='ml100'></div>
- *  <div class='ml200'></div>
- */
+/* Left margins */
 .ml0 { margin-left: 0; }
 .ml5 { margin-left: 5px; }
 .ml10 { margin-left: 10px; }
@@ -874,22 +858,7 @@ Zero out positioning
   .ml800-sm { margin-left: 800px; }
 }
 
-/**
- * Padding classes
- * @section Padding
- * @memberof Positioning
-*/
-
-/**
- *  Padding in all directions. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
- *
- * @example
- *  <div class='p5'></div>
- *  <div class='p10'></div>
- *  <div class='p40'></div>
- *  <div class='p100'></div>
- *  <div class='p200'></div>
- */
+/* Padding on all sides */
 .p0 { padding: 0; }
 .p5 { padding: 5px; }
 .p10 { padding: 10px; }
@@ -932,16 +901,7 @@ Zero out positioning
   .p100-sm { padding: 100px; }
 }
 
-/**
- * Top padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
- *
- * @example
- *  <div class='pt5'></div>
- *  <div class='pt10'></div>
- *  <div class='pt40'></div>
- *  <div class='pt100'></div>
- *  <div class='pt200'></div>
- */
+/* Top padding */
 .pt0 { padding-top: 0; }
 .pt5 { padding-top: 5px; }
 .pt10 { padding-top: 10px; }
@@ -984,16 +944,7 @@ Zero out positioning
   .pt100-sm { padding-top: 100px; }
 }
 
-/**
- * Right padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
- *
- * @example
- *  <div class='pr5'></div>
- *  <div class='pr10'></div>
- *  <div class='pr40'></div>
- *  <div class='pr100'></div>
- *  <div class='pr200'></div>
- */
+/* Right padding */
 .pr0 { padding-right: 0; }
 .pr5 { padding-right: 5px; }
 .pr10 { padding-right: 10px; }
@@ -1036,16 +987,7 @@ Zero out positioning
   .pr100-sm { padding-right: 100px; }
 }
 
-/**
- * Bottom padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
- *
- * @example
- *  <div class='pb5'></div>
- *  <div class='pb10'></div>
- *  <div class='pb40'></div>
- *  <div class='pb100'></div>
- *  <div class='pb200'></div>
- */
+/* Bottom padding */
 .pb0 { padding-bottom: 0; }
 .pb5 { padding-bottom: 5px; }
 .pb10 { padding-bottom: 10px; }
@@ -1088,16 +1030,7 @@ Zero out positioning
   .pb100-sm { padding-bottom: 100px; }
 }
 
-/**
- * Left padding. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 100px
- *
- * @example
- *  <div class='pl5'></div>
- *  <div class='pl10'></div>
- *  <div class='pl40'></div>
- *  <div class='pl100'></div>
- *  <div class='pl200'></div>
- */
+/* Left padding */
 .pl0 { padding-left: 0; }
 .pl5 { padding-left: 5px; }
 .pl10 { padding-left: 10px; }
