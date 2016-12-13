@@ -2,6 +2,7 @@
 
 /**
  * Typography
+ *
  * @section Typography
 */
 
@@ -149,6 +150,10 @@ textarea {
   margin-top: 20px;
 }
 
+.prose a {
+  text-decoration: underline;
+}
+
 .prose p {
   font-size: 15px;
   line-height: 25px;
@@ -272,3 +277,33 @@ textarea {
 .txt-align-top { vertical-align: top; }
 .txt-align-middle { vertical-align: middle; }
 /** @endgroup */
+
+/**
+ * Text underline
+ * @member of Typography utilities
+ */
+.txt-underline { text-decoration: underline; }
+
+/**
+ * By default, the `txt-link` class does *nothing*. It should be
+ * combined with a `color-*` class and, optionally, a `txt-underline` class.
+ * It simply sets a hover state, darkening the chosen color.
+ *
+ * Links within `.prose` are underlined.
+ *
+ * @memberof Typography utilities
+ * @example
+ * <a href='#link' class='txt-link color-blue'>blue link</a>
+ * <a href='#link' class='txt-link txt-underline color-red'>red underlined link</a>
+ */
+.txt-link { /* empty */ }
+.txt-link.color-gray:hover { color: var(--gray-dark); }
+.txt-link.color-pink:hover { color: var(--pink-dark); }
+.txt-link.color-red:hover { color: var(--red-dark); }
+.txt-link.color-orange:hover { color: var(--orange-dark); }
+.txt-link.color-yellow:hover { color: var(--yellow-dark); }
+.txt-link.color-green:hover { color: var(--green-dark); }
+.txt-link.color-teal:hover { color: var(--teal-dark); }
+.txt-link.color-blue:hover { color: var(--blue-dark); }
+.txt-link.color-purple:hover { color: var(--purple-dark); }
+.txt-link.color-white:hover { color: var(--gray-faint); }

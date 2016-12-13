@@ -10,7 +10,7 @@ class Heading extends React.Component {
 
     let descriptionEl;
     if (props.description) {
-      descriptionEl = <div className='docs-description'>
+      descriptionEl = <div className='docs-description prose'>
         {remark().use(reactRenderer).process(props.description).contents}
       </div>;
     }
