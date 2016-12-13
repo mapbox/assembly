@@ -25,7 +25,7 @@
  * Flexbox utilities. Check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
  * to learn how the system works.
  *
- * Includes `-sm`, `-md`, and `-lg` variations to target screen sizes.
+ * Class set includes `-sm`, `-md`, and `-lg` variations to target screen sizes.
  *
  * @memberof Layout
  * @group
@@ -41,7 +41,7 @@
 .flx-fill {
   flex-grow: 1;
   /* prevent overflowing chidlren
-  cf. https://css-tricks.com/flexbox-truncated-text/ */
+  clearfix. https://css-tricks.com/flexbox-truncated-text/ */
   min-width: 0;
 }
 /** @endgroup */
@@ -157,9 +157,16 @@
  * Column container for grids.
  *
  * @example
- * <div class='grd'>
- *  <div class='col6'>
- *  <div class='col6'>
+ * <div class='grd grd--gut10'>
+ *  <div class='col col--6'>
+ *    <div class='p10 bg-blue-faint'>6</div>
+ *  </div>
+ *  <div class='col col--3'>
+ *    <div class='p10 bg-blue-faint'>3</div>
+ *  </div>
+ *  <div class='col col--3'>
+ *    <div class='p10 bg-blue-faint'>3</div>
+ *  </div>
  * </div>
  */
 .grd {
@@ -320,35 +327,64 @@
 .bleed-l { flex: 1; margin-left: calc(50% - 50vw); }
 
 /**
- * Float classes
+ * For non-grid, non-flexbox layouts.
+ *
+ * @section Floats and clearfix
+ * @memberof Layout
  */
-.cf::after {
+
+/**
+ * @group
+ * @memberof Floats and clearfix
+ * @example
+ * <div class='clearfix border border--gray'>
+ *   <div class='fl'>left</div>
+ *   <div class='fr'>right</div>
+ * </div>
+ */
+.fl { float: left; }
+.fr { float: right; }
+.clearfix::after {
   content: '';
   display: block;
   clear: both;
 }
-.fl { float: left; }
-.fr { float: right; }
+/** @endgroup */
 
 /**
- * Display
+ * Use display classes to control the display property of elements.
+ *
+ * Class set includes `-sm`, `-md`, and `-lg` variations to target screen sizes.
+ *
  * @section Display
  * @memberof Layout
  */
 
 /**
- * Use display classes to control the display property of elements.
+ * @group
+ * @memberof Display
  * @example
- * <div class="p10 border mb10"><div class="border border--cyan inline bor-all">inline</div></div>
- * <div class="p10 border mb10"><div class="border border--cyan block bor-all">block</div></div>
- * <div class="p10 border mb10"><div class="border border--cyan inline-block bor-all">inline-block</div></div>
- * <div class="p10 border mb10"><div class="border border--cyan flex bor-all">flex</div></div>
- * <div class="p10 border mb10"><div class="border border--cyan none bor-all">none</div></div>
+ * <div class="p10 border mb10">
+ *   <div class="inline border border--cyan bor-all">inline</div>
+ * </div>
+ * <div class="p10 border mb10">
+ *   <div class="block border border--cyan bor-all">block</div>
+ * </div>
+ * <div class="p10 border mb10">
+ *   <div class="inline-block border border--cyan bor-all">inline-block</div>
+ * </div>
+ * <div class="p10 border mb10">
+ *   <div class="flex border border--cyan bor-all">flex</div>
+ * </div>
+ * <div class="p10 border">
+ *   <div class="none border border--cyan bor-all">none</div>
+ * </div>
  */
 .inline { display: inline; }
 .block { display: block; }
 .inline-block { display: inline-block; }
 .none { display: none; }
+/** @endgroup */
 
 @media only screen and (--large-screen) {
   .inline-lg { display: inline; }
@@ -378,13 +414,18 @@
  */
 
 /**
- * Position classes
-*/
-
+ * Set an element's `position`.
+ *
+ * Class set includes `-sm`, `-md`, and `-lg` variations to target screen sizes.
+ *
+ * @group
+ * @memberof Positioning
+ */
 .fixed { position: fixed; }
 .absolute { position: absolute; }
 .relative { position: relative; }
 .static { position: static; }
+/** @endgroup */
 
 @media only screen and (--large-screen) {
   .fixed-lg { position: fixed; }
@@ -407,13 +448,19 @@
   .static-sm { position: static; }
 }
 
-/*
-Zero out positioning
-*/
+/**
+ * Set positioned elements flush against a side of their container.
+ *
+ * Class set includes `-sm`, `-md`, and `-lg` variations to target screen sizes.
+ *
+ * @group
+ * @memberof Positioning
+ */
 .top { top: 0; }
 .right { right: 0; }
 .left { left: 0; }
 .bottom { bottom: 0; }
+/** @endgroup */
 
 @media only screen and (--large-screen) {
   .top-lg { top: 0; }
@@ -439,6 +486,9 @@ Zero out positioning
 /**
  * Override default stacking order with z-index classes. Whenever possible, rely on
  * built-in stacking order and avoid these rules.
+ *
+ * Class set includes `-sm`, `-md`, and `-lg` variations to target screen sizes.
+ *
  * @group
  * @memberof Positioning
  */
@@ -487,8 +537,11 @@ Zero out positioning
  *
  * All spacing sizes increment by `5px` up to `20px`, by `10px` up to `60px`,
  * by `20px` up to `200px`, and by `200px` up to `800px`. This makes the list
- * of sizes: `5`, `10`, `15`, `20`, `30`, `40`, `50`, `60`, `80`, `100`, `120`, `140`, `160`,
- * `180`, `200`, `400`, `600`, `800`.
+ * of sizes:
+ * `5`, `10`, `15`, `20`,
+ * `30`, `40`, `50`, `60`,
+ * `80`, `100`, `120`, `140`, `160`, `180`, `200`, `400`, `600`, `800`.
+ * Padding classes stop at `100`, but margin classes include the full range.
  *
  * Screen sizes are *optional* and are `-sm`, `-md`, and `-lg`.
  * These screen-size variations include classes that implement `0px`.
@@ -498,9 +551,19 @@ Zero out positioning
  * - `ml30-sm`: margin-left of `30px` on small screens.
  * - `pl5`: padding-left of `5px`.
  *
- * @section Margin and padding
- * @memberof Positioning
-*/
+ * @section Margins and padding
+ * @memberof Layout
+ */
+
+/**
+ * @memberof Margins and padding
+ * @example
+ * <div class='border border--gray clearfix'>
+ *   <div class='fl mt10 ml30 mb5 mr10 p10 bg-gray'>one</div>
+ *   <div class='fl pt10 pl30 pb5 pr10 mt5 mb5 mr5 bg-gray'>two</div>
+ *   <div class='fl pt60 pl10 ml30 bg-gray'>three</div>
+ * </div>
+ */
 
 /* Top margins */
 .mt0 { margin-top: 0; }
@@ -862,8 +925,11 @@ Zero out positioning
 .p0 { padding: 0; }
 .p5 { padding: 5px; }
 .p10 { padding: 10px; }
+.p15 { padding: 15px; }
 .p20 { padding: 20px; }
+.p30 { padding: 30px; }
 .p40 { padding: 40px; }
+.p45 { padding: 50px; }
 .p60 { padding: 60px; }
 .p80 { padding: 80px; }
 .p100 { padding: 100px; }
@@ -872,8 +938,11 @@ Zero out positioning
   .p0-lg { padding: 0; }
   .p5-lg { padding: 5px; }
   .p10-lg { padding: 10px; }
+  .p15-lg { padding: 15px; }
   .p20-lg { padding: 20px; }
+  .p30-lg { padding: 30px; }
   .p40-lg { padding: 40px; }
+  .p45-lg { padding: 50px; }
   .p60-lg { padding: 60px; }
   .p80-lg { padding: 80px; }
   .p100-lg { padding: 100px; }
@@ -883,8 +952,11 @@ Zero out positioning
   .p0-md { padding: 0; }
   .p5-md { padding: 5px; }
   .p10-md { padding: 10px; }
+  .p15-md { padding: 15px; }
   .p20-md { padding: 20px; }
+  .p30-md { padding: 30px; }
   .p40-md { padding: 40px; }
+  .p45-md { padding: 50px; }
   .p60-md { padding: 60px; }
   .p80-md { padding: 80px; }
   .p100-md { padding: 100px; }
@@ -894,8 +966,11 @@ Zero out positioning
   .p0-sm { padding: 0; }
   .p5-sm { padding: 5px; }
   .p10-sm { padding: 10px; }
+  .p15-sm { padding: 15px; }
   .p20-sm { padding: 20px; }
+  .p30-sm { padding: 30px; }
   .p40-sm { padding: 40px; }
+  .p45-sm { padding: 50px; }
   .p60-sm { padding: 60px; }
   .p80-sm { padding: 80px; }
   .p100-sm { padding: 100px; }
@@ -905,8 +980,11 @@ Zero out positioning
 .pt0 { padding-top: 0; }
 .pt5 { padding-top: 5px; }
 .pt10 { padding-top: 10px; }
+.pt15 { padding-top: 15px; }
 .pt20 { padding-top: 20px; }
+.pt30 { padding-top: 30px; }
 .pt40 { padding-top: 40px; }
+.pt50 { padding-top: 50px; }
 .pt60 { padding-top: 60px; }
 .pt80 { padding-top: 80px; }
 .pt100 { padding-top: 100px; }
@@ -915,8 +993,11 @@ Zero out positioning
   .pt0-lg { padding-top: 0; }
   .pt5-lg { padding-top: 5px; }
   .pt10-lg { padding-top: 10px; }
+  .pt15-lg { padding-top: 15px; }
   .pt20-lg { padding-top: 20px; }
+  .pt30-lg { padding-top: 30px; }
   .pt40-lg { padding-top: 40px; }
+  .pt50-lg { padding-top: 50px; }
   .pt60-lg { padding-top: 60px; }
   .pt80-lg { padding-top: 80px; }
   .pt100-lg { padding-top: 100px; }
@@ -926,8 +1007,11 @@ Zero out positioning
   .pt0-md { padding-top: 0; }
   .pt5-md { padding-top: 5px; }
   .pt10-md { padding-top: 10px; }
+  .pt15-md { padding-top: 15px; }
   .pt20-md { padding-top: 20px; }
+  .pt30-md { padding-top: 30px; }
   .pt40-md { padding-top: 40px; }
+  .pt50-md { padding-top: 50px; }
   .pt60-md { padding-top: 60px; }
   .pt80-md { padding-top: 80px; }
   .pt100-md { padding-top: 100px; }
@@ -937,8 +1021,11 @@ Zero out positioning
   .pt0-sm { padding-top: 0; }
   .pt5-sm { padding-top: 5px; }
   .pt10-sm { padding-top: 10px; }
+  .pt15-sm { padding-top: 15px; }
   .pt20-sm { padding-top: 20px; }
+  .pt30-sm { padding-top: 30px; }
   .pt40-sm { padding-top: 40px; }
+  .pt50-sm { padding-top: 50px; }
   .pt60-sm { padding-top: 60px; }
   .pt80-sm { padding-top: 80px; }
   .pt100-sm { padding-top: 100px; }
@@ -948,8 +1035,11 @@ Zero out positioning
 .pr0 { padding-right: 0; }
 .pr5 { padding-right: 5px; }
 .pr10 { padding-right: 10px; }
+.pr15 { padding-right: 15px; }
 .pr20 { padding-right: 20px; }
+.pr30 { padding-right: 30px; }
 .pr40 { padding-right: 40px; }
+.pr50 { padding-right: 50px; }
 .pr60 { padding-right: 60px; }
 .pr80 { padding-right: 80px; }
 .pr100 { padding-right: 100px; }
@@ -958,8 +1048,11 @@ Zero out positioning
   .pr0-lg { padding-right: 0; }
   .pr5-lg { padding-right: 5px; }
   .pr10-lg { padding-right: 10px; }
+  .pr15-lg { padding-right: 15px; }
   .pr20-lg { padding-right: 20px; }
+  .pr30-lg { padding-right: 30px; }
   .pr40-lg { padding-right: 40px; }
+  .pr50-lg { padding-right: 50px; }
   .pr60-lg { padding-right: 60px; }
   .pr80-lg { padding-right: 80px; }
   .pr100-lg { padding-right: 100px; }
@@ -969,8 +1062,11 @@ Zero out positioning
   .pr0-md { padding-right: 0; }
   .pr5-md { padding-right: 5px; }
   .pr10-md { padding-right: 10px; }
+  .pr15-md { padding-right: 15px; }
   .pr20-md { padding-right: 20px; }
+  .pr30-md { padding-right: 30px; }
   .pr40-md { padding-right: 40px; }
+  .pr50-md { padding-right: 50px; }
   .pr60-md { padding-right: 60px; }
   .pr80-md { padding-right: 80px; }
   .pr100-md { padding-right: 100px; }
@@ -980,8 +1076,11 @@ Zero out positioning
   .pr0-sm { padding-right: 0; }
   .pr5-sm { padding-right: 5px; }
   .pr10-sm { padding-right: 10px; }
+  .pr15-sm { padding-right: 15px; }
   .pr20-sm { padding-right: 20px; }
+  .pr30-sm { padding-right: 30px; }
   .pr40-sm { padding-right: 40px; }
+  .pr50-sm { padding-right: 50px; }
   .pr60-sm { padding-right: 60px; }
   .pr80-sm { padding-right: 80px; }
   .pr100-sm { padding-right: 100px; }
@@ -991,8 +1090,11 @@ Zero out positioning
 .pb0 { padding-bottom: 0; }
 .pb5 { padding-bottom: 5px; }
 .pb10 { padding-bottom: 10px; }
+.pb15 { padding-bottom: 15px; }
 .pb20 { padding-bottom: 20px; }
+.pb30 { padding-bottom: 30px; }
 .pb40 { padding-bottom: 40px; }
+.pb50 { padding-bottom: 50px; }
 .pb60 { padding-bottom: 60px; }
 .pb80 { padding-bottom: 80px; }
 .pb100 { padding-bottom: 100px; }
@@ -1001,8 +1103,11 @@ Zero out positioning
   .pb0-lg { padding-bottom: 0; }
   .pb5-lg { padding-bottom: 5px; }
   .pb10-lg { padding-bottom: 10px; }
+  .pb15-lg { padding-bottom: 15px; }
   .pb20-lg { padding-bottom: 20px; }
+  .pb30-lg { padding-bottom: 30px; }
   .pb40-lg { padding-bottom: 40px; }
+  .pb50-lg { padding-bottom: 50px; }
   .pb60-lg { padding-bottom: 60px; }
   .pb80-lg { padding-bottom: 80px; }
   .pb100-lg { padding-bottom: 100px; }
@@ -1012,8 +1117,11 @@ Zero out positioning
   .pb0-md { padding-bottom: 0; }
   .pb5-md { padding-bottom: 5px; }
   .pb10-md { padding-bottom: 10px; }
+  .pb15-md { padding-bottom: 15px; }
   .pb20-md { padding-bottom: 20px; }
+  .pb30-md { padding-bottom: 30px; }
   .pb40-md { padding-bottom: 40px; }
+  .pb50-md { padding-bottom: 50px; }
   .pb60-md { padding-bottom: 60px; }
   .pb80-md { padding-bottom: 80px; }
   .pb100-md { padding-bottom: 100px; }
@@ -1023,8 +1131,11 @@ Zero out positioning
   .pb0-sm { padding-bottom: 0; }
   .pb5-sm { padding-bottom: 5px; }
   .pb10-sm { padding-bottom: 10px; }
+  .pb15-sm { padding-bottom: 15px; }
   .pb20-sm { padding-bottom: 20px; }
+  .pb30-sm { padding-bottom: 30px; }
   .pb40-sm { padding-bottom: 40px; }
+  .pb50-sm { padding-bottom: 50px; }
   .pb60-sm { padding-bottom: 60px; }
   .pb80-sm { padding-bottom: 80px; }
   .pb100-sm { padding-bottom: 100px; }
@@ -1034,8 +1145,11 @@ Zero out positioning
 .pl0 { padding-left: 0; }
 .pl5 { padding-left: 5px; }
 .pl10 { padding-left: 10px; }
+.pl15 { padding-left: 15px; }
 .pl20 { padding-left: 20px; }
+.pl30 { padding-left: 30px; }
 .pl40 { padding-left: 40px; }
+.pl50 { padding-left: 50px; }
 .pl60 { padding-left: 60px; }
 .pl80 { padding-left: 80px; }
 .pl100 { padding-left: 100px; }
@@ -1044,8 +1158,11 @@ Zero out positioning
   .pl0-lg { padding-left: 0; }
   .pl5-lg { padding-left: 5px; }
   .pl10-lg { padding-left: 10px; }
+  .pl15-lg { padding-left: 15px; }
   .pl20-lg { padding-left: 20px; }
+  .pl30-lg { padding-left: 30px; }
   .pl40-lg { padding-left: 40px; }
+  .pl50-lg { padding-left: 50px; }
   .pl60-lg { padding-left: 60px; }
   .pl80-lg { padding-left: 80px; }
   .pl100-lg { padding-left: 100px; }
@@ -1055,8 +1172,11 @@ Zero out positioning
   .pl0-md { padding-left: 0; }
   .pl5-md { padding-left: 5px; }
   .pl10-md { padding-left: 10px; }
+  .pl15-md { padding-left: 15px; }
   .pl20-md { padding-left: 20px; }
+  .pl30-md { padding-left: 30px; }
   .pl40-md { padding-left: 40px; }
+  .pl50-md { padding-left: 50px; }
   .pl60-md { padding-left: 60px; }
   .pl80-md { padding-left: 80px; }
   .pl100-md { padding-left: 100px; }
@@ -1067,31 +1187,48 @@ Zero out positioning
   .pl0-sm { padding-left: 0; }
   .pl5-sm { padding-left: 5px; }
   .pl10-sm { padding-left: 10px; }
+  .pl15-sm { padding-left: 15px; }
   .pl20-sm { padding-left: 20px; }
+  .pl30-sm { padding-left: 30px; }
   .pl40-sm { padding-left: 40px; }
+  .pl50-sm { padding-left: 50px; }
   .pl60-sm { padding-left: 60px; }
   .pl80-sm { padding-left: 80px; }
   .pl100-sm { padding-left: 100px; }
 }
 
 /**
- * Sizing
+ * All sizing classes follow the following pattern:
+ * `<w|h><min|max><dimension-size>-<screen-size>`.
+ *
+ * Min/max is *optional*.
+ *
+ * All dimension sizes increment by `5px` up to `20px`, by `10px` up to `60px`,
+ * by `20px` up to `200px`, and by `200px` up to `800px`. This makes the list
+ * of sizes:
+ * `5`, `10`, `15`, `20`,
+ * `30`, `40`, `50`, `60`,
+ * `80`, `100`, `120`, `140`, `160`, `180`, `200`, `400`, `600`, `800`.
+ *
+ * Screen sizes are *optional* and are `-sm`, `-md`, and `-lg`.
+ * These screen-size variations include classes that implement `0px`.
+ *
+ * Here are some examples that put the pieces together:
+ * - `w80`: width of `80px`.
+ * - `hmin30-lg`: min-height of `30px` on large screens.
+ * - `wmax60`: max-width of `60px`.
+ *
  * @section Sizing
  * @memberof Layout
  */
 
 /**
- * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
- *
- * @group
  * @memberof Sizing
  * @example
- *  <div class='w5'></div>
- *  <div class='w10'></div>
- *  <div class='w40'></div>
- *  <div class='w100'></div>
- *  <div class='w200'></div>
+ * <div class='w80 h30 bg-gray'>w80 h30</div>
  */
+
+/* Widths */
 .w5 { width: 5px; }
 .w10 { width: 10px; }
 .w20 { width: 20px; }
@@ -1109,19 +1246,8 @@ Zero out positioning
 .w400 { width: 400px; }
 .w600 { width: 600px; }
 .w800 { width: 800px; }
-/** @endgroup */
 
 @media only screen and (--large-screen) {
-  /**
-   * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
-   *
-   * @example
-   *  <div class='w5'></div>
-   *  <div class='w10'></div>
-   *  <div class='w40'></div>
-   *  <div class='w100'></div>
-   *  <div class='w200'></div>
-   */
   .w5-lg { width: 5px; }
   .w10-lg { width: 10px; }
   .w20-lg { width: 20px; }
@@ -1142,17 +1268,6 @@ Zero out positioning
 }
 
 @media only screen and (--medium-screen) {
-
-  /**
-   * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
-   *
-   * @example
-   *  <div class='w5'></div>
-   *  <div class='w10'></div>
-   *  <div class='w40'></div>
-   *  <div class='w100'></div>
-   *  <div class='w200'></div>
-   */
   .w5-md { width: 5px; }
   .w10-md { width: 10px; }
   .w20-md { width: 20px; }
@@ -1173,16 +1288,6 @@ Zero out positioning
 }
 
 @media only screen and (--small-screen) {
-  /**
-   * Widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
-   *
-   * @example
-   *  <div class='w5'></div>
-   *  <div class='w10'></div>
-   *  <div class='w40'></div>
-   *  <div class='w100'></div>
-   *  <div class='w200'></div>
-   */
   .w5-sm { width: 5px; }
   .w10-sm { width: 10px; }
   .w20-sm { width: 20px; }
@@ -1202,16 +1307,7 @@ Zero out positioning
   .w800-sm { width: 800px; }
 }
 
-/**
- * Max widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px, and by 400px up to 1600px.
- *
- * @example
- *  <div class='wmax5'></div>
- *  <div class='wmax10'></div>
- *  <div class='wmax40'></div>
- *  <div class='wmax100'></div>
- *  <div class='wmax200'></div>
- */
+/* Max widths */
 .wmax5 { max-width: 5px; }
 .wmax10 { max-width: 10px; }
 .wmax20 { max-width: 20px; }
@@ -1298,16 +1394,7 @@ Zero out positioning
   .wmax1600-sm { max-width: 1600px; }
 }
 
-/**
- * Min widths. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px.
- *
- * @example
- *  <div class='wmin5'></div>
- *  <div class='wmin10'></div>
- *  <div class='wmin40'></div>
- *  <div class='wmin100'></div>
- *  <div class='wmin200'></div>
- */
+/* Min widths */
 .wmin5 { min-width: 5px; }
 .wmin10 { min-width: 10px; }
 .wmin20 { min-width: 20px; }
@@ -1386,16 +1473,7 @@ Zero out positioning
   .wmin800-sm { min-width: 800px; }
 }
 
-/**
- * Heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, and by 200px up to 800px.
- *
- * @example
- *  <div class='h5'></div>
- *  <div class='h10'></div>
- *  <div class='h40'></div>
- *  <div class='h100'></div>
- *  <div class='h200'></div>
- */
+/* Heights */
 .h5 { height: 5px; }
 .h10 { height: 10px; }
 .h20 { height: 20px; }
@@ -1474,16 +1552,7 @@ Zero out positioning
   .h800-sm { height: 800px; }
 }
 
-/**
- * Max heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px, and by 400px up to 1600px.
- *
- * @example
- *  <div class='hmax5'></div>
- *  <div class='hmax10'></div>
- *  <div class='hmax40'></div>
- *  <div class='hmax100'></div>
- *  <div class='hmax200'></div>
- */
+/* Max heights */
 .hmax5 { max-height: 5px; }
 .hmax10 { max-height: 10px; }
 .hmax20 { max-height: 20px; }
@@ -1570,16 +1639,7 @@ Zero out positioning
   .hmax1600-sm { max-height: 1600px; }
 }
 
-/**
- * Min heights. Increments by 5px up to 10px, by 10px up to 60px, by 20px up to 200px, by 200px up to 800px.
- *
- * @example
- *  <div class='hmin5'></div>
- *  <div class='hmin10'></div>
- *  <div class='hmin40'></div>
- *  <div class='hmin100'></div>
- *  <div class='hmin200'></div>
- */
+/* Min heights */
 .hmin5 { min-height: 5px; }
 .hmin10 { min-height: 10px; }
 .hmin20 { min-height: 20px; }
@@ -1659,20 +1719,19 @@ Zero out positioning
 }
 
 /**
- * Match height of browser window.
+ * Set the height of an element relative to the viewport.
  *
- * @example
- *  <div class='viewport-third'></div>
- *  <div class='viewport-half'></div>
- *  <div class='viewport-twothirds'></div>
- *  <div class='viewport-almost'></div>
- *  <div class='viewport-full'></div>
+ * Class set includes `-sm`, `-md`, and `-lg` variations to target screen sizes.
+ *
+ * @group
+ * @memberof Sizing
  */
 .viewport-third { height: 33.3333vh; }
 .viewport-half { height: 50vh; }
 .viewport-twothirds { height: 66.6666vh; }
 .viewport-almost { height: 90vh; }
 .viewport-full { height: 100vh; }
+/** @endgroup */
 
 @media only screen and (--large-screen) {
   .viewport-third-lg { height: 33.3333vh; }
