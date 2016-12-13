@@ -8,7 +8,7 @@
     "build:site": "babel-node scripts/render-site",
     "build:css": "mkdir -p dist && node scripts/process-css && npm run copy-assets",
     "build:svg": "mkdir -p dist && node scripts/create-svg-sprite",
-    "build": "rm -rf dist && rm -rf _site && npm-run-all --parallel build:css build:svg build:site",
+    "build": "rm -rf dist && rm -rf build && npm-run-all --parallel build:css build:svg build:site",
     "build:prod": "npm run build && cssnano dist/assembly.css > dist/assembly.min.css",
     "watch:css": "nodemon scripts/process-css -w src -e css",
     "lint:css": "stylelint src/*.css",

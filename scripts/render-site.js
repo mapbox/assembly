@@ -9,7 +9,7 @@ const mkdirp = require('mkdirp');
 const pify = require('pify');
 const timelog = require('./timelog');
 
-const siteDistDir = path.join(__dirname, '../_site');
+const siteDistDir = path.join(__dirname, '../build');
 const pageTemplatePath = path.join(__dirname, '../site/template.html');
 
 function writePage(pageData, pageTemplate) {
