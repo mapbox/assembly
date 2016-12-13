@@ -788,7 +788,7 @@ Zero out positioning
  *  <div class='ml100'></div>
  *  <div class='ml200'></div>
  */
-.ml0 { margin-left: 0px; }
+.ml0 { margin-left: 0; }
 .ml5 { margin-left: 5px; }
 .ml10 { margin-left: 10px; }
 .ml15 { margin-left: 15px; }
@@ -994,7 +994,7 @@ Zero out positioning
  *  <div class='pr100'></div>
  *  <div class='pr200'></div>
  */
-.pr0 { padding-right: 0px; }
+.pr0 { padding-right: 0; }
 .pr5 { padding-right: 5px; }
 .pr10 { padding-right: 10px; }
 .pr20 { padding-right: 20px; }
@@ -1046,7 +1046,7 @@ Zero out positioning
  *  <div class='pb100'></div>
  *  <div class='pb200'></div>
  */
-.pb0 { padding-bottom: 0px; }
+.pb0 { padding-bottom: 0; }
 .pb5 { padding-bottom: 5px; }
 .pb10 { padding-bottom: 10px; }
 .pb20 { padding-bottom: 20px; }
@@ -1098,7 +1098,7 @@ Zero out positioning
  *  <div class='pl100'></div>
  *  <div class='pl200'></div>
  */
-.pl0 { padding-left: 0px; }
+.pl0 { padding-left: 0; }
 .pl5 { padding-left: 5px; }
 .pl10 { padding-left: 10px; }
 .pl20 { padding-left: 20px; }
