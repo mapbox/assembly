@@ -79,3 +79,8 @@ button::-moz-focus-inner {
 svg {
   display: block;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

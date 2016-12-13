@@ -53,12 +53,11 @@
 
 .select {
   border: 2px solid #acb4b9;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   padding-right: 15px;
 }
 
 .select {
+  appearance: none;
   height: 40px;
   line-height: 36px; /* minus border */
   padding: 0 10px;
@@ -71,7 +70,7 @@
 }
 
 .range {
-  -webkit-appearance: none;
+  appearance: none;
   min-width: 0;
   height: 4px;
   padding: 0;
@@ -81,7 +80,7 @@
 }
 
 .range::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  appearance: none;
   box-shadow: none;
   width: 8px;
   height: 8px;
@@ -187,33 +186,41 @@
   border-radius: var(--border-radius);
   margin-right: 10px;
   cursor: pointer;
+  position: relative;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
 }
 
 .checkbox {
-  background-color: var(--blue); /* blue */
+  background-color: var(--blue);
   color: #fff;
 }
 
 .checkbox--stroke {
   background-color: #fff;
-  box-shadow: inset 0 0 0 2px currentColor;
-  color: var(--blue); /* blue */
+  border-color: currentColor;
+  color: var(--blue);
 }
 
 .btn:not(.btn--stroke) > .checkbox--stroke {
-  box-shadow: none;
+  border-color: transparent;
 }
 
 .radio {
   border-radius: 50%;
-  color: var(--blue); /* blue */
-  box-shadow: inset 0 0 0 2px currentColor;
-  position: relative;
+  color: var(--blue);
+  border-color: currentColor;
 }
 
 /* Unchecked state */
 .checkbox > .icn {
   display: none;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
 }
 
 .radio::before {

@@ -11,13 +11,13 @@ img {
 }
 
 .txt-abbr,
-.txt abbr {
+.prose abbr {
   border-bottom: 1px dotted #000;
   cursor: help;
 }
 
 .txt-hr,
-.txt hr {
+.prose hr {
   margin: 20px 0;
   border: 0;
   height: 1px;
@@ -28,7 +28,7 @@ img {
  * Table classes.
  */
 .tbl,
-.txt table {
+.prose table {
   width: 100%;
   background-color: transparent;
   border-collapse: collapse;
@@ -36,14 +36,14 @@ img {
   border: 1px solid #ddd;
 }
 
-.txt table {
-  margin-bottom: 25px;
+.prose table {
+  margin-bottom: 20px;
 }
 
 .tbl th,
 .tbl td,
-.txt table th,
-.txt table td {
+.prose table th,
+.prose table td {
   text-align: left;
   vertical-align: top;
   border-bottom: 1px solid #ddd;
@@ -51,76 +51,88 @@ img {
 }
 
 .tbl th,
-.txt table th {
+.prose table th {
   background-color: var(--darken5);
 }
 
-.tbl .fixed,
-.txt .fixed {
+.tbl-fixed {
   table-layout: fixed;
 }
 
 .tbl th + td,
-.txt th + td {
+.prose th + td {
   border-left: 1px solid #ddd;
 }
 
 /**
  * List classes.
  */
-.txt > ol,
-.txt > ul {
-  margin-bottom: 25px;
+.prose > ol,
+.prose > ul {
+  margin-bottom: 20px;
 }
 
 .txt-ul,
-.txt ul {
+.prose ul {
   list-style: disc;
+}
+
+.prose ul,
+.txt-ul {
   margin-left: 40px;
 }
 
 .txt-ol,
-.txt ol {
+.prose ol {
+  display: list-item;
   list-style: decimal;
+}
+
+.prose ol,
+.txt-ol {
   margin-left: 40px;
 }
 
 .txt-li,
-.txt ul li,
-.txt ol li {
+.prose ul li,
+.prose ol li {
+  display: list-item;
+}
+
+.prose ul li,
+.prose ol li {
   margin-bottom: 10px;
 }
 
-.txt ul ul,
-.txt ol ol,
-.txt ul ol,
-.txt ol ul {
+.prose ul ul,
+.prose ol ol,
+.prose ul ol,
+.prose ol ul {
   margin-top: 10px;
 }
 
 /**
  * Blockquote.
  */
-
 .txt-blockquote,
 .txt-q,
-.txt blockquote,
-.txt q {
+.prose blockquote,
+.prose q {
   quotes: none;
   font-style: normal;
   padding-left: 20px;
   margin: 10px;
 }
 
-.txt blockquote,
-.txt q {
-  margin-bottom: 25px;
+.prose blockquote,
+.prose q {
+  margin-bottom: 20px;
 }
 
-.txt blockquote::before,
-.txt blockquote::after,
-.txt q::before,
-.txt q::after {
+.prose blockquote::before,
+.prose blockquote::after,
+.prose q::before,
+.prose q::after {
   content: '';
 }
 
@@ -128,7 +140,7 @@ img {
  * Keyboard.
  */
 .txt-kbd,
-.txt kbd {
+.prose kbd {
   background: rgba(0, 0, 0, 0.025);
   color: var(--darken50);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -144,8 +156,8 @@ img {
  */
 .txt-sup,
 .txt-sub,
-.txt sup,
-.txt sub {
+.prose sup,
+.prose sub {
   height: 0;
   line-height: 1;
   vertical-align: baseline;
@@ -154,12 +166,12 @@ img {
 }
 
 .txt-sup,
-.txt sup {
+.prose sup {
   bottom: 1ex;
 }
 
 .txt-sub,
-.txt sub {
+.prose sub {
   top: 0.5ex;
 }
 
@@ -168,26 +180,22 @@ img {
  */
 pre {
   display: block;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: pre;
   white-space: pre-wrap;
-  -moz-tab-size: 4;
-  tab-size: 4;
+  tab-size: 2;
 }
 
 .cde,
 .cde-pre,
-.txt code,
-.txt pre {
+.prose code,
+.prose pre {
   font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   white-space: pre-wrap;
 }
 
 .cde,
 .cde-pre,
-.txt code,
-.txt pre {
+.prose code,
+.prose pre {
   background: rgba(0, 0, 0, 0.025);
   font-size: 12px;
   line-height: 20px;
@@ -196,16 +204,27 @@ pre {
 }
 
 .cde-pre,
-.txt pre {
+.prose pre {
   padding: 10px;
 }
 
-.txt pre {
-  margin-bottom: 25px;
+.prose pre {
+  margin-bottom: 20px;
 }
 
 .cde,
-.txt pre code {
+.prose pre code {
   background: transparent;
   padding: 0;
+}
+
+/**
+ * Clear bottom margins if element is last in container
+ */
+.prose table:last-child,
+.prose > ol:last-child,
+.prose > ul:last-child,
+.prose li:last-child,
+.prose pre:last-child {
+  margin-bottom: 0;
 }

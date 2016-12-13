@@ -1,57 +1,60 @@
 {
-  "name": "base-core",
+  "name": "assembly",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css": "node scripts/process-css",
-    "svgs": "node scripts/create-svg-sprite",
-    "build": "rm -rf dist && mkdir -p dist && npm run css && npm run svgs",
-    "debug": "npm run build && http-server",
+    "copy-assets": "node scripts/copy-assets",
+    "build:site": "babel-node scripts/render-site",
+    "build:css": "mkdir -p dist && node scripts/process-css && npm run copy-assets",
+    "build:svg": "mkdir -p dist && node scripts/create-svg-sprite",
+    "build:all": "rm -rf dist && rm -rf build && npm-run-all --parallel build:css build:svg build:site",
+    "build:dev": "NODE_ENV=dev && npm run build:all",
+    "build": "NODE_ENV=production && npm run build:all && cssnano dist/assembly.css > dist/assembly.min.css",
+    "watch:css": "nodemon scripts/process-css -w src -e css",
     "lint:css": "stylelint src/*.css",
-    "lint:js": "eslint scripts",
+    "lint:js": "eslint .",
     "lint": "npm run lint:css && npm run lint:js",
-    "test": "npm run lint",
-    "watch": "mkdir -p dist && node scripts/watch-src",
-    "docs": "npm run build && budo docs/index.js -o -l"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
+    "start": "npm run build:svg && nodemon scripts/serve -w src -w site -e js,css --exec babel-node",
+    "test:svgs": "tape test/test-icons.js | tap-spec",
+    "test": "npm run lint && npm run test:svgs"
   },
   "engines": {
     "node": ">4"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mapbox/base-core.git"
+    "url": "git+https://github.com/mapbox/assembly.git"
   },
   "author": "Mapbox",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mapbox/base-core/issues"
+    "url": "https://github.com/mapbox/assembly/issues"
   },
-  "homepage": "https://github.com/mapbox/base-core#readme",
+  "homepage": "https://github.com/mapbox/assembly#readme",
   "dependencies": {
     "autoprefixer": "^6.5.3",
+    "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.18.0",
     "babelify": "^7.3.0",
-    "browserify": "^13.1.1",
-    "budo": "^9.2.2",
-    "chokidar": "^1.6.1",
     "concat-with-sourcemaps": "^1.0.4",
-    "cssnano": "^3.8.1",
+    "cp-file": "^4.1.1",
+    "cssnano-cli": "^1.0.5",
     "d3-queue": "^3.0.3",
     "documentation-css": "^0.1.3",
     "eslint": "^3.11.1",
     "eslint-plugin-node": "^3.0.5",
     "eslint-plugin-react": "^6.8.0",
+    "express": "^4.14.0",
+    "globby": "^6.1.0",
     "highlight.js": "^9.8.0",
-    "http-server": "^0.9.0",
     "lodash": "^4.17.2",
+    "mkdirp": "^0.5.1",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^3.1.2",
     "pify": "^2.3.0",
     "postcss": "^5.2.6",
     "postcss-custom-media": "^5.0.1",
@@ -64,6 +67,9 @@
     "remark-react": "^3.1.0",
     "stylelint": "^7.6.0",
     "svgo": "^0.7.1",
-    "svgstore": "^1.1.0"
+    "svgstore": "^1.1.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3",
+    "xml2js": "^0.4.17"
   }
 }

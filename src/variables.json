@@ -1,54 +1,56 @@
 {
-  "gray-dark": "#444",
+  "gray-dark": "#333",
   "gray": "#666",
-  "gray-light": "#aaa",
+  "gray-light": "#ccc",
   "gray-faint": "#f0f0f0",
 
-  "pink-dark": "#dc2878",
+  "pink-dark": "#C8145A",
   "pink": "#ff3c96",
-  "pink-light": "#eb74ac",
+  "pink-light": "#FF88C0",
   "pink-faint": "#ffdbed",
 
-  "red-dark": "#d20014",
+  "red-dark": "#BE0014",
   "red": "#dc2b28",
-  "red-light": "#f0463c",
+  "red-light": "#FF8280",
   "red-faint": "#ffdad9",
 
-  "orange-dark": "#f05a00",
+  "orange-dark": "#DC4600",
   "orange": "#ff6e00",
-  "orange-light": "#eb9528",
-  "orange-faint": "#ffe5cb",
+  "orange-light": "#FFA950",
+  "orange-faint": "#FFE5CB",
 
-  "yellow-dark": "#ffbd0a",
+  "yellow-dark": "#FFBD0A",
   "yellow": "#f0dc00",
-  "yellow-light": "#e6e650",
+  "yellow-light": "#F0F062",
   "yellow-faint": "#fafbd1",
 
-  "green-dark": "#1e963c",
+  "green-dark": "#007532",
   "green": "#01aa46",
-  "green-light": "#50be5a",
+  "green-light": "#72C781",
   "green-faint": "#d4edda",
 
-  "teal-dark": "#3296a0",
+  "teal-dark": "#00626E",
   "teal": "#01b5b4",
-  "teal-light": "#46c8c8",
+  "teal-light": "#50D2D2",
   "teal-faint": "#cbf2f1",
 
-  "blue-dark": "#3246dc",
+  "blue-dark": "#0014AA",
   "blue": "#0065fb",
-  "blue-light": "#0087fa",
+  "blue-light": "#00B1FF",
   "blue-faint": "#bae8ff",
 
-  "purple-dark": "#6e3296",
+  "purple-dark": "#500078",
   "purple": "#8c50c7",
-  "purple-light": "#a573d7",
+  "purple-light": "#C299E3",
   "purple-faint": "#ede1f6",
 
   "darken5": "rgba(0, 0, 0, 0.05)",
+  "darken10": "rgba(0, 0, 0, 0.10)",
   "darken25": "rgba(0, 0, 0, 0.25)",
   "darken50": "rgba(0, 0, 0, 0.5)",
   "darken75": "rgba(0, 0, 0, 0.75)",
 
+  "lighten5": "rgba(255, 255, 255, 0.05)",
   "lighten10": "rgba(255, 255, 255, 0.1)",
   "lighten25": "rgba(255, 255, 255, 0.25)",
   "lighten50": "rgba(255, 255, 255, 0.5)",
@@ -57,6 +59,10 @@
   "black": "#000",
   "white": "#fff",
 
+  "text-color": "rgba(0, 0, 0, 0.75)",
+
   "border-radius": "4px",
-  "border-radius-bold": "8px"
+  "border-radius-bold": "8px",
+
+  "txt-fancy-path": "url('leaguespartan-bold.woff') format('woff')"
 }
