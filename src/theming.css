@@ -130,24 +130,50 @@
 
 /**
  * Shadow classes.
+ * - Shadows come in 5px, 10px, 20px, and 30px variants.
+ * - Append `-bold` for a more opaque shadow.
+ * - Add shadows to text with `txt-shadow`.
+ *
+ * @group
+ * @memberof Theming
+ * @example
+ * <div class='flx mb10'>
+ * <div class='col col--2 p10 mr10 txt-center shadow5'>.shadow5</div>
+ * <div class='col col--2 p10 mr10 txt-center shadow10'>.shadow10</div>
+ * <div class='col col--2 p10 mr10 txt-center shadow20'>.shadow20</div>
+ * <div class='col col--2 p10 txt-center shadow30'>.shadow30</div>
+ * </div>
+ * <div class='flx mb10'>
+ * <div class='col col--2 p10 mr10 txt-center shadow5-bold'>.shadow5-bold</div>
+ * <div class='col col--2 p10 mr10 txt-center shadow10-bold'>.shadow10-bold</div>
+ * <div class='col col--2 p10 mr10 txt-center shadow20-bold'>.shadow20-bold</div>
+ * <div class='col col--2 p10 txt-center shadow30-bold'>.shadow30-bold</div>
+ * </div>
+ * <div class='flx'>
+ * <div class='col col--2 p10 mr10 txt-center txt-shadow5'>.txt-shadow5</div>
+ * <div class='col col--2 p10 mr10 txt-center txt-shadow10'>.txt-shadow10</div>
+ * <div class='col col--2 p10 mr10 txt-center txt-shadow5-bold'>.txt-shadow20-bold</div>
+ * <div class='col col--2 p10 txt-center txt-shadow10-bold'>.txt-shadow30-bold</div>
+ * </div>
  */
 .shadow5 { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3); }
 .shadow10 { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
 .shadow20 { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3); }
 .shadow30 { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3); }
-.shadow-bold5 { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9); }
-.shadow-bold10 { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9); }
-.shadow-bold20 { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9); }
-.shadow-bold30 { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9); }
+.shadow5-bold { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9); }
+.shadow10-bold { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9); }
+.shadow20-bold { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9); }
+.shadow30-bold { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9); }
 
 .txt-shadow5 { text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
 .txt-shadow10 { text-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
 .txt-shadow20 { text-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
 .txt-shadow30 { text-shadow: 0 0 30px rgba(0, 0, 0, 0.3); }
-.txt-shadow-bold5 { text-shadow: 0 0 5px rgba(0, 0, 0, 0.9); }
-.txt-shadow-bold10 { text-shadow: 0 0 10px rgba(0, 0, 0, 0.9); }
-.txt-shadow-bold20 { text-shadow: 0 0 20px rgba(0, 0, 0, 0.9); }
-.txt-shadow-bold30 { text-shadow: 0 0 30px rgba(0, 0, 0, 0.9); }
+.txt-shadow5-bold { text-shadow: 0 0 5px rgba(0, 0, 0, 0.9); }
+.txt-shadow10-bold { text-shadow: 0 0 10px rgba(0, 0, 0, 0.9); }
+.txt-shadow20-bold { text-shadow: 0 0 20px rgba(0, 0, 0, 0.9); }
+.txt-shadow30-bold { text-shadow: 0 0 30px rgba(0, 0, 0, 0.9); }
+/** @endgroup */
 
 /**
  * Visibility classes.
