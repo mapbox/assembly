@@ -5,6 +5,7 @@ const path = require('path');
 const timelog = require('./timelog');
 const renderSite = require('./render-site');
 const processCss = require('./process-css');
+const copyAssets = require('./copy-assets');
 
 const app = express();
 
@@ -13,5 +14,7 @@ const port = process.env.PORT || 9967;
 app.listen(port, () => timelog(`Assembly app running at localhost:${port}`));
 
 processCss()
-  .then(() => renderSite())
+  .then(() => {
+    return Promise.all([renderSite(), copyAssets()]);
+  })
   .catch((err) => console.error(err));

@@ -178,11 +178,8 @@ img {
  */
 pre {
   display: block;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: pre;
   white-space: pre-wrap;
-  tab-size: 4;
+  tab-size: 2;
 }
 
 .cde,
@@ -229,4 +226,3 @@ pre {
 .prose pre:last-child {
   margin-bottom: 0;
 }
-
