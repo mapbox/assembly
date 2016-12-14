@@ -35,7 +35,7 @@ class Typography extends React.Component {
         <div className='col col--6'>
 
           {/* note there is no top margin here, on the first element in the container */}
-          <div className='txt-headline strong mb20'>Inceptos Nullam Venenatis</div>
+          <div className='txt-headline txt-bold mb20'>Inceptos Nullam Venenatis</div>
           <div className='txt-m mb15'>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.</div>
 
           <div className='txt-ul mb20'>
@@ -46,7 +46,7 @@ class Typography extends React.Component {
 
           <div className='txt-m mb20'>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 
-          <div className='txt-subhead strong mt40 mb15'>Sit Nullam Elit</div>
+          <div className='txt-subhead txt-bold mt40 mb15'>Sit Nullam Elit</div>
 
           <div className='txt-s mb10'>Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
 
@@ -54,10 +54,10 @@ class Typography extends React.Component {
 
           <div className='txt-m mb20'>Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
 
-          <div className='txt-xl strong mb20 mt40'>Sit Nullam Elit</div>
+          <div className='txt-xl txt-bold mb20 mt40'>Sit Nullam Elit</div>
 
           {/* note there is no bottom margin here, on the final element in the container */}
-          <div className='txt-xl mb20 mt40 strong em'>Sit Nullam Elit</div>
+          <div className='txt-xl mb20 mt40 txt-bold em'>Sit Nullam Elit</div>
 
         </div>
       </div>

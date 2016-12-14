@@ -17,7 +17,7 @@ class CheckboxesRadios extends React.Component {
   render() {
     const checkmark = (
       <svg
-       className='icn'
+       className='icon'
        dangerouslySetInnerHTML={{ __html: '<use xlink:href="#icon-check"></use>' }}
      >
      </svg>

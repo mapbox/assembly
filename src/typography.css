@@ -203,9 +203,9 @@ textarea {
  * Light text.
  * @memberof Typography utilities
  * @example
- * <div class='txt-weight-light'>light</div>
+ * <div class='txt-light'>txt-light</div>
  */
-.txt-weight-light {
+.txt-light {
   font-weight: lighter !important;
 }
 
@@ -213,9 +213,9 @@ textarea {
  * Bold text.
  * @memberof Typography utilities
  * @example
- * <div class='strong'>strong</div>
+ * <div class='txt-bold'>txt-bold</div>
  */
-.strong { font-weight: bold !important; }
+.txt-bold { font-weight: bold !important; }
 
 /**
  * Italic text.
