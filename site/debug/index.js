@@ -6,6 +6,7 @@ import { Grid } from './grid';
 import { Typography } from './typography';
 import { Elements } from './elements';
 import { TablesLists } from './tables_lists';
+import { Triangles } from './triangles';
 
 class Debug extends React.Component {
   render() {
@@ -16,6 +17,9 @@ class Debug extends React.Component {
         </div>
         <div className='mb40'>
           <Buttons />
+        </div>
+        <div className='mb40'>
+          <Triangles />
         </div>
         <div className='mb40'>
           <Pills />

@@ -40,6 +40,7 @@ const cssFiles = [
   getCssPath('icons'),
   getCssPath('layout'),
   getCssPath('colors'),
+  getCssPath('triangles'),
   getCssPath('animations')
 ];
 
