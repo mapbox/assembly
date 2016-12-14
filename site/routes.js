@@ -98,6 +98,7 @@ function buildRoutes() {
             <Home {...props} />
           </Page>
         );
+        break;
       case 'Reset':
         r.component = (
           <Page navItems={navItems}>
