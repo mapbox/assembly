@@ -390,6 +390,16 @@ textarea {
  */
 
 /**
+ * Monospaced text.
+ * @memberof Typography utilities
+ * @example
+ * <div class='txt-mono'>txt-mono</div>
+ */
+.txt-mono {
+  font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
+}
+
+/**
  * Light text.
  * @memberof Typography utilities
  * @example
