@@ -33,6 +33,7 @@
   font-size: 12px;
   display: inline-flex;
   align-items: center;
+  text-decoration: none !important; /* prevent underline when inside .prose */
   justify-content: center;
 }
 
