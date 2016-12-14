@@ -280,7 +280,7 @@ textarea {
 
 /**
  * Text underline
- * @member of Typography utilities
+ * @memberof Typography utilities
  */
 .txt-underline { text-decoration: underline !important; }
 
@@ -307,3 +307,46 @@ textarea {
 .txt-link.color-blue:hover { color: var(--blue-dark) !important; }
 .txt-link.color-purple:hover { color: var(--purple-dark) !important; }
 .txt-link.color-white:hover { color: var(--gray-faint) !important; }
+
+/**
+ * Prevents text from wrapping.
+ *
+ * @memberof Typography utilities
+ * @example
+ * <div class='border border--gray w100 txt-nowrap'>
+ *   This text is too long for its container
+ * </div>
+ */
+.txt-nowrap {
+  white-space: nowrap !important;
+}
+
+/**
+ * Allows words to be broken across lines.
+ *
+ * @memberof Typography utilities
+ * @example
+ * <div class='border border--gray w100 txt-break-word'>
+ *   Thiswordistoolongforitscontainer
+ * </div>
+ */
+.txt-break-word {
+  word-break: break-all !important;
+}
+
+/**
+ * Truncates text to a single line contained within the width
+ * of its container, ending with an ellipsis if it overflows.
+ *
+ * @memberof Typography utilities
+ * @example
+ * <div class='border border--gray w100 txt-truncate'>
+ *   This text is too long for its container
+ * </div>
+ */
+.txt-truncate {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
