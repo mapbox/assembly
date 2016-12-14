@@ -23,10 +23,11 @@
 .btn {
   background-color: var(--blue);
   color: #fff;
-  border: 2px solid transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
   border-radius: 20px; /* fully round by default */
-  /* Odd numbers on padding are accommodating borders */
-  padding: 8px 23px;
+  padding: 8px 23px; /* Padding accommodates borders */
   line-height: 20px;
   font-weight: bold;
   font-size: 12px;
@@ -58,8 +59,8 @@
  */
 .btn--stroke {
   background-color: transparent;
-  border: 2px solid;
-  color: #0077cc; /* blue */
+  border-color: currentColor;
+  color: var(--blue);
 }
 
 .btn--stroke:hover {
@@ -69,8 +70,7 @@
 
 .btn--stroke.is-active {
   border-color: transparent;
-  color: #fff;
-  background: #0077cc; /* blue */
+  color: var(--blue-dark);
 }
 
 /**
@@ -240,12 +240,17 @@
   position: relative;
 }
 
-.btn--pill:hover {
+/* Put the active pill on top, so if they're stroke pills its
+active color is visible on all borders */
+.btn--pill:hover,
+.btn--pill.is-active {
   z-index: 2;
 }
 
 /* Extra .btn in selectors below to increase specificity
 against .round class */
+
+/* 1px margins create gutters. -2px margins blend borders */
 
 .btn.btn--pill-hc {
   border-radius: 0;
