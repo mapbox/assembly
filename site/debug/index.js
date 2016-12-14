@@ -7,6 +7,7 @@ import { Typography } from './typography';
 import { Elements } from './elements';
 import { TablesLists } from './tables_lists';
 import { Triangles } from './triangles';
+import { Miscellaneous } from './miscellaneous';
 
 class Debug extends React.Component {
   render() {
@@ -35,6 +36,9 @@ class Debug extends React.Component {
         </div>
         <div className='mb40'>
           <TablesLists />
+        </div>
+        <div className='mb40'>
+          <Miscellaneous />
         </div>
       </div>
     );

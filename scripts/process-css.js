@@ -41,7 +41,8 @@ const cssFiles = [
   getCssPath('layout'),
   getCssPath('colors'),
   getCssPath('triangles'),
-  getCssPath('animations')
+  getCssPath('animations'),
+  getCssPath('miscellaneous')
 ];
 
 const customProperties = initPostcssCustomProperties();
