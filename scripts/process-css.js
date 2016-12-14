@@ -33,7 +33,7 @@ const cssFiles = [
   getCssPath('reset'),
   getCssPath('fonts'),
   getCssPath('typography'),
-  getCssPath('basic'),
+  getCssPath('tables'),
   getCssPath('buttons'),
   getCssPath('forms'),
   getCssPath('theming'),

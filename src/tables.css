@@ -1,0 +1,83 @@
+/* stylelint-disable selector-no-combinator, selector-no-type */
+
+/**
+ * @section Tables
+ */
+
+/**
+ * `<table>`s are styled inside `.prose` sections and
+ * when they have a `table` class.
+ *
+ * @memberof Tables
+ * @example
+ *
+ * <table class='table'>
+ *   <thead>
+ *     <tr>
+ *       <th>Column 1</th>
+ *       <th>Column 1</th>
+ *     </tr>
+ *   </thead>
+ *   <tr>
+ *     <td>item</td>
+ *     <td>item</td>
+ *   </tr>
+ *   <tr>
+ *     <td>item</td>
+ *     <td>item</td>
+ *   </tr>
+ * </table>
+ * <table class='mt10 table'>
+ *   <tr>
+ *     <th>Row 1</th>
+ *     <td>item</td>
+ *     <td>item</td>
+ *   </tr>
+ *   <tr>
+ *     <th>Row 2</th>
+ *     <td>item</td>
+ *     <td>item</td>
+ *   </tr>
+ *   <tr>
+ *     <th>Row 3</th>
+ *     <td>item</td>
+ *     <td>item</td>
+ *   </tr>
+ * </table>
+ */
+.table,
+.prose table {
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+
+.prose table {
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td,
+.prose table th,
+.prose table td {
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th,
+.prose table th {
+  background-color: var(--darken5);
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+.table th + td,
+.prose th + td {
+  border-left: 1px solid #ddd;
+}
