@@ -8,8 +8,6 @@ const { Home } = require('./home');
 const { Icons } = require('./icons');
 const { Examples } = require('./examples');
 const { Debug } = require('./debug');
-const { Reset } = require('./reset');
-const { MediaQueries } = require('./media_queries');
 const fs = require('fs');
 const path = require('path');
 
@@ -31,17 +29,11 @@ const routes = [
     name: 'Documentation',
     route: '/documentation/'
   }, {
-    name: 'Reset',
-    route: '/reset/'
-  }, {
     name: 'Examples',
     route: '/examples/'
   }, {
     name: 'Icons',
     route: '/icons/'
-  }, {
-    name: 'MediaQueries',
-    route: '/media-queries/'
   }, {
     name: 'Debug',
     route: '/debug/'
@@ -103,13 +95,6 @@ function buildRoutes() {
           </Page>
         );
         break;
-      case 'Reset':
-        r.component = (
-          <Page navItems={navItems}>
-            <Reset {...props} />
-          </Page>
-        );
-        break;
       case 'Examples':
         r.component = (
           <Page navItems={navItems}>
@@ -121,13 +106,6 @@ function buildRoutes() {
         r.component = (
           <Page navItems={navItems}>
             <Icons {...props} />
-          </Page>
-        );
-        break;
-      case 'MediaQueries':
-        r.component = (
-          <Page navItems={navItems}>
-            <MediaQueries {...props} />
           </Page>
         );
         break;
