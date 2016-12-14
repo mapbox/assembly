@@ -2,6 +2,7 @@
 
 /**
  * Typography
+ *
  * @section Typography
 */
 
@@ -12,54 +13,81 @@
 body,
 input,
 textarea {
-  color: var(--darken75);
-  font: 16px/1.25 'Open Sans', sans-serif;
+  color: var(--text-color);
+  font: 15px/25px 'Open Sans', sans-serif;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
 }
 
 /**
- * Type utilities
+ * Universal text scale
  * @memberof Typography
-*/
-.txt-strong {
-  font-weight: bold;
+ * @group
+ */
+.txt-headline {
+  font-size: 32px;
+  line-height: 40px;
 }
 
-.txt-strong.txt-em {
-  font-weight: bold;
-  font-style: italic;
+.txt-subhead {
+  font-size: 28px;
+  line-height: 35px;
 }
 
-.txt-em {
-  font-style: italic;
+.txt-xl {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.txt-l {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.txt-m {
+  font-size: 15px;
+  line-height: 25px;
 }
 
 .txt-s {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
 }
 
 .txt-xs {
   font-size: 10px;
-  line-height: 20px;
+  line-height: 15px;
 }
-
-.txt-uppercase { text-transform: uppercase; }
-.txt-capitalize { text-transform: capitalize; }
-
-.txt-sentence-case { text-transform: lowercase; }
-.txt-sentence-case::first-letter { text-transform: capitalize; }
-
-.txt-left { text-align: left; }
-.txt-right { text-align: right; }
-.txt-center { text-align: center; }
-
-.txt-align-top { vertical-align: top; }
-.txt-align-middle { vertical-align: middle; }
+/** @endgroup */
 
 /**
- * Prose classes
+ * Fancy text scale
+ * @memberof Typography
+ * @group
+ * @example
+ * <div class='txt-headline-fancy'>txt-headline-fancy</div>
+ * <div class='txt-subhead-fancy'>txt-subhead-fancy</div>
+ */
+
+.txt-headline-fancy {
+  font-family: 'txt-fancy', sans-serif;
+  text-transform: uppercase;
+  font-size: 35px;
+  letter-spacing: 6px;
+  line-height: 50px;
+}
+
+.txt-subhead-fancy {
+  font-family: 'txt-fancy', sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 45px;
+  letter-spacing: 5px;
+}
+
+/** @endgroup */
+
+/**
  * @section Prose
  * @memberof Typography
  * @remarks the .txt class works by setting nice default typographic styling to every child element.
@@ -68,144 +96,257 @@ textarea {
 */
 
 /**
- *  Prose headlines and paragraph.
- *
+ * Prose text scale. Prose headlines correspond to `txt-{size}` classes, except with built-in top and bottom margins.
+ * @group
  * @example
- *  <div class="txt">
- *    <h1>Headline 1</h1>
- *    <h2>Headline 2</h2>
- *    <h3>Headline 3</h3>
- *    <h4>Headline 4</h4>
- *    <h5>Headline 5</h5>
- *    <h6>Headline 6</h6>
- *    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <strong>Incidunt magnam</strong>, cum consectetur maiores corrupti nulla iste saepe <em>porro repellat</em> beatae modi laudantium laborum magni voluptate impedit sint pariatur?</p>
- *  </div>
+ * <div class="txt">
+ *   <h1>Headline 1</h1>
+ *   <h2>Headline 2</h2>
+ *   <h3>Headline 3</h3>
+ *   <h4>Headline 4</h4>
+ *   <h5>Headline 5</h5>
+ *   <h6>Headline 6</h6>
+ *   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <strong>Incidunt magnam</strong>, cum consectetur maiores corrupti nulla iste saepe <em>porro repellat</em> beatae modi laudantium laborum magni voluptate impedit sint pariatur?</p>
+ * </div>
 */
-.txt p {
-  margin-bottom: 25px;
-}
-
-.txt h1,
-.txt h2,
-.txt h3,
-.txt h4,
-.txt h5,
-.txt h6 {
-  margin-bottom: 25px;
-}
-
-.txt-headline,
-.txt h1,
-.txt-subheadline,
-.txt h2,
-.txt-lg,
-.txt h3,
-.txt h4,
-.txt h5,
-.txt h6 {
+.prose h1 {
   font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
-.txt-headline,
-.txt h1 {
-  font-size: 33px;
-  line-height: 1.5152;
+.prose h2 {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 35px;
+  margin-bottom: 15px;
+  margin-top: 40px;
 }
 
-.txt h1 { margin-top: 12.1216px; }
-
-.txt-subheadline,
-.txt h2 {
-  font-size: 27px;
-  line-height: 1.8519;
+.prose h3 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  margin-top: 40px;
 }
 
-.txt h2 { margin-top: 14.8144px; }
-
-.txt-lg,
-.txt h3 {
-  font-size: 23px;
-  line-height: 1.087;
+.prose h4 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
-.txt h3 { margin-top: 17.392px; }
-
-.txt-lg,
-.txt h4 {
-  margin-top: 21.0528px;
-  font-size: 19px;
-  line-height: 1.3158;
+.prose h5,
+.prose h6 {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
-.txt h5,
-.txt h6 {
-  margin-top: 25px;
-  font-size: 16px;
-  line-height: 1.5625;
+.prose a {
+  text-decoration: underline;
 }
 
-.txt h1:first-child,
-.txt h2:first-child,
-.txt h3:first-child,
-.txt h4:first-child,
-.txt h5:first-child,
-.txt h6:first-child {
+.prose p {
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+
+.prose small {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+/** @endgroup */
+
+.prose h1:first-child,
+.prose h2:first-child,
+.prose h3:first-child,
+.prose h4:first-child,
+.prose h5:first-child,
+.prose h6:first-child {
   margin-top: 0;
 }
 
-.txt-m,
-.txt p {
-  line-height: 25px;
-}
-
-.txt p:last-child {
+.prose h1:last-child,
+.prose h2:last-child,
+.prose h3:last-child,
+.prose h4:last-child,
+.prose h5:last-child,
+.prose h6:last-child,
+.prose p:last-child {
   margin-bottom: 0;
 }
 
-.txt em h1,
-.txt h1 em,
-.txt em h2,
-.txt h2 em,
-.txt em h3,
-.txt h3 em,
-.txt em h4,
-.txt h4 em,
-.txt em h5,
-.txt h5 em,
-.txt em h6,
-.txt h6 em {
-  font-weight: bold;
-  font-style: italic;
-}
-
 /* stylelint-disable selector-no-universal */
-.txt *:target {
+.prose *:target {
   padding-top: 20px;
 }
 /* stylelint-enable selector-no-universal */
 
 /**
- *  txt-styled font variants.
- *
+ * Type utilities
+ * @section Typography utilities
+ * @memberof Typography
+ */
+
+/**
+ * Light text.
+ * @memberof Typography utilities
  * @example
- *  <div class="txt">
- *    <h1 class='txt-weight-light'>Light</h1>
- *    <h1 class='txt-weight-regular'>Regular</h1>
- *    <h1 class='txt-fancy'>Headline</h1>
- *  </div>
-*/
-.txt-weight-light,
-.txt .txt-weight-light {
-  font-weight: lighter;
+ * <div class='txt-light'>txt-light</div>
+ */
+.txt-light {
+  font-weight: lighter !important;
 }
 
-.txt-weight-regular,
-.txt .txt-weight-regular {
-  font-weight: normal;
+/**
+ * Bold text.
+ * @memberof Typography utilities
+ * @example
+ * <div class='txt-bold'>txt-bold</div>
+ */
+.txt-bold { font-weight: bold !important; }
+
+/**
+ * Italic text.
+ * @memberof Typography utilities
+ * @example
+ * <div class='em'>em</div>
+ */
+.em { font-style: italic !important; }
+
+/**
+ * Uppercase text.
+ * @memberof Typography utilities
+ * @example
+ * <div class='uppercase'>uppercase</div>
+ */
+.uppercase { text-transform: uppercase !important; }
+
+/**
+ * All caps.
+ * @memberof Typography utilities
+ * @example
+ * <div class='capitalize'>capitalize</div>
+ */
+.capitalize { text-transform: capitalize !important; }
+
+/**
+ * Sentence case.
+ * @memberof Typography utilities
+ * @group
+ * @example
+ * <div class='sentence-case'>sentence-case</div>
+ */
+.sentence-case { text-transform: lowercase !important; }
+.sentence-case::first-letter { text-transform: capitalize !important; }
+/** @endgroup */
+
+/**
+ * Text horizontal alignment.
+ * @memberof Typography utilities
+ * @group
+ * @example
+ * <div class='txt-l'>txt-l</div>
+ * <div class='txt-r'>txt-r</div>
+ * <div class='txt-center'>txt-center</div>
+ */
+.txt-l { text-align: left !important; }
+.txt-r { text-align: right !important; }
+.txt-center { text-align: center !important; }
+/** @endgroup */
+
+/**
+ * Text vertical alignment.
+ * @memberof Typography utilities
+ * @group
+ * @example
+ * <div class='txt-align-t'>txt-align-t</div>
+ * <div class='txt-align-middle'>txt-align-middle</div>
+ */
+.txt-align-t { vertical-align: top !important; }
+.txt-align-middle { vertical-align: middle !important; }
+/** @endgroup */
+
+/**
+ * Text underline
+ * @memberof Typography utilities
+ */
+.txt-underline { text-decoration: underline !important; }
+
+/**
+ * By default, the `txt-link` class does *nothing*. It should be
+ * combined with a `color-*` class and, optionally, a `txt-underline` class.
+ * It simply sets a hover state, darkening the chosen color.
+ *
+ * Links within `.prose` are underlined.
+ *
+ * @memberof Typography utilities
+ * @example
+ * <a href='#link' class='txt-link color-blue'>blue link</a>
+ * <a href='#link' class='txt-link txt-underline color-red'>red underlined link</a>
+ */
+.txt-link { /* empty */ }
+.txt-link.color-gray:hover { color: var(--gray-dark) !important; }
+.txt-link.color-pink:hover { color: var(--pink-dark) !important; }
+.txt-link.color-red:hover { color: var(--red-dark) !important; }
+.txt-link.color-orange:hover { color: var(--orange-dark) !important; }
+.txt-link.color-yellow:hover { color: var(--yellow-dark) !important; }
+.txt-link.color-green:hover { color: var(--green-dark) !important; }
+.txt-link.color-teal:hover { color: var(--teal-dark) !important; }
+.txt-link.color-blue:hover { color: var(--blue-dark) !important; }
+.txt-link.color-purple:hover { color: var(--purple-dark) !important; }
+.txt-link.color-white:hover { color: var(--gray-faint) !important; }
+
+/**
+ * Prevents text from wrapping.
+ *
+ * @memberof Typography utilities
+ * @example
+ * <div class='border border--gray w100 txt-nowrap'>
+ *   This text is too long for its container
+ * </div>
+ */
+.txt-nowrap {
+  white-space: nowrap !important;
 }
 
-.txt-fancy {
-  font-family: 'txt-fancy', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+/**
+ * Allows words to be broken across lines.
+ *
+ * @memberof Typography utilities
+ * @example
+ * <div class='border border--gray w100 txt-break-word'>
+ *   Thiswordistoolongforitscontainer
+ * </div>
+ */
+.txt-break-word {
+  word-break: break-all !important;
+}
+
+/**
+ * Truncates text to a single line contained within the width
+ * of its container, ending with an ellipsis if it overflows.
+ *
+ * @memberof Typography utilities
+ * @example
+ * <div class='border border--gray w100 txt-truncate'>
+ *   This text is too long for its container
+ * </div>
+ */
+.txt-truncate {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

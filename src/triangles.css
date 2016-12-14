@@ -1,0 +1,113 @@
+/**
+ * General-purpose triangle-shaped elements. Great for dialog boxes and tooltips.
+ * @section Triangles
+ */
+
+/**
+ * Triangles
+ *
+ * @memberof Triangles
+ * @example
+ * <div class='triangle triangle--u'></div>
+ */
+.triangle {
+  width: 10px !important;
+  height: 10px !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+/**
+ * Small triangles
+ */
+.triangle--u {
+  border-left: 5px solid transparent !important;
+  border-right: 5px solid transparent !important;
+  border-bottom: 7px solid currentColor !important;
+}
+
+.triangle--r {
+  border-top: 5px solid transparent !important;
+  border-bottom: 5px solid transparent !important;
+  border-left: 7px solid currentColor !important;
+}
+
+.triangle--d {
+  border-left: 5px solid transparent !important;
+  border-right: 5px solid transparent !important;
+  border-top: 7px solid currentColor !important;
+}
+
+.triangle--l {
+  border-top: 5px solid transparent !important;
+  border-bottom: 5px solid transparent !important;
+  border-right: 7px solid currentColor !important;
+}
+
+/**
+ * Medium sized triangles
+ */
+.triangle-l {
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.triangle-l--u {
+  border-left: 10px solid transparent !important;
+  border-right: 10px solid transparent !important;
+  border-bottom: 13px solid currentColor !important;
+}
+
+.triangle-l--r {
+  border-top: 10px solid transparent !important;
+  border-bottom: 10px solid transparent !important;
+  border-left: 13px solid currentColor !important;
+}
+
+.triangle-l--d {
+  border-left: 10px solid transparent !important;
+  border-right: 10px solid transparent !important;
+  border-top: 13px solid currentColor !important;
+}
+
+.triangle-l--l {
+  border-top: 10px solid transparent !important;
+  border-bottom: 10px solid transparent !important;
+  border-right: 13px solid currentColor !important;
+}
+
+/**
+ * Extra large triangles
+ */
+.triangle-xl {
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.triangle-xl--u {
+  border-left: 20px solid transparent !important;
+  border-right: 20px solid transparent !important;
+  border-bottom: 25px solid currentColor !important;
+}
+
+.triangle-xl--r {
+  border-top: 20px solid transparent !important;
+  border-bottom: 20px solid transparent !important;
+  border-left: 25px solid currentColor !important;
+}
+
+.triangle-xl--d {
+  border-left: 20px solid transparent !important;
+  border-right: 20px solid transparent !important;
+  border-top: 25px solid currentColor !important;
+}
+
+.triangle-xl--l {
+  border-top: 20px solid transparent !important;
+  border-bottom: 20px solid transparent !important;
+  border-right: 24px solid currentColor !important;
+}

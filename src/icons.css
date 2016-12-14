@@ -1,26 +1,35 @@
 /**
- * Icons
+ * To use icons, you must include `assembly-svg.js` on your page.
+ *
  * @section Icons
  */
 
 /**
- * Size icons with these classes. TODO: display all icons.
+ * Apply the `.icon` class and an optional size modifier to an `<svg>` element.
+ * Inside the `<svg>`, insert a `<use>` element whose `xlink:href` attribute
+ * points to an icon loaded by `assembldy-svg.js`. All icons are referenced
+ * by the string `#icon-<name>`.
+ *
+ * To see a list of all available icons, [visited the Icons page](/assembly/icons).
+ *
+ * @group
  * @memberof Icons
  * @example
- * <svg class="bor icn icn--md" role="img"><use xlink:href="#base-svg-library"/></svg>
+ * <svg class='icon icon--m'><use xlink:href='#icon-account'/></svg>
  */
-.icn {
+.icon {
   fill: currentColor;
   height: 20px;
   width: 20px;
 }
 
-.icn--sm {
-  height: 15px;
-  width: 15px;
+.icon--s {
+  height: 15px !important;
+  width: 15px !important;
 }
 
-.icn--lg {
-  height: 40px;
-  width: 40px;
+.icon--l {
+  height: 40px !important;
+  width: 40px !important;
 }
+/** @endgroup */

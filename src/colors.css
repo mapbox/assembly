@@ -8,126 +8,125 @@
  * @group
  * @memberof Colors & gradients
  * @example
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--3 mar-bottom-10 p10 bg-gray-dark'>bg-gray-dark</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-gray'>bg-gray</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-gray-light'>bg-gray-light</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-gray-faint'>bg-gray-faint</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--3 mar-bottom-10 p10 bg-pink-dark'>bg-pink-dark</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-pink'>bg-pink</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-pink-light'>bg-pink-light</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-pink-faint'>bg-pink-faint</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--3 mar-bottom-10 p10 bg-red-dark'>bg-red-dark</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-red'>bg-red</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-red-light'>bg-red-light</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-red-faint'>bg-red-faint</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--3 mar-bottom-10 p10 bg-orange-dark'>bg-orange-dark</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-orange'>bg-orange</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-orange-light'>bg-orange-light</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-orange-faint'>bg-orange-faint</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--3 mar-bottom-10 p10 bg-yellow-dark'>bg-yellow-dark</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-yellow'>bg-yellow</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-yellow-light'>bg-yellow-light</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-yellow-faint'>bg-yellow-faint</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--3 mar-bottom-10 p10 bg-green-dark'>bg-green-dark</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-green'>bg-green</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-green-light'>bg-green-light</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-green-faint'>bg-green-faint</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--3 mar-bottom-10 p10 bg-teal-dark'>bg-teal-dark</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-teal'>bg-teal</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-teal-light'>bg-teal-light</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-teal-faint'>bg-teal-faint</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--3 mar-bottom-10 p10 bg-blue-dark'>bg-blue-dark</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-blue'>bg-blue</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-blue-light'>bg-blue-light</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-blue-faint'>bg-blue-faint</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--3 mar-bottom-10 p10 bg-purple-dark'>bg-purple-dark</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-purple'>bg-purple</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-purple-light'>bg-purple-light</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-purple-faint'>bg-purple-faint</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--3 mar-bottom-10 p10 bg-black'>bg-black</div>
  * <div class='col col--3 mar-bottom-10 p10 bg-white'>bg-white</div>
  * </div>
  */
 
-.bg-gray-dark { background-color: var(--gray-dark); }
-.bg-gray { background-color: var(--gray); }
-.bg-gray-light { background-color: var(--gray-light); }
-.bg-gray-faint { background-color: var(--gray-faint); }
+.bg-gray-dark { background-color: var(--gray-dark) !important; }
+.bg-gray { background-color: var(--gray) !important; }
+.bg-gray-light { background-color: var(--gray-light) !important; }
+.bg-gray-faint { background-color: var(--gray-faint) !important; }
 
-.bg-pink-dark { background-color: var(--pink-dark); }
-.bg-pink { background-color: var(--pink); }
-.bg-pink-light { background-color: var(--pink-light); }
-.bg-pink-faint { background-color: var(--pink-faint); }
+.bg-pink-dark { background-color: var(--pink-dark) !important; }
+.bg-pink { background-color: var(--pink) !important; }
+.bg-pink-light { background-color: var(--pink-light) !important; }
+.bg-pink-faint { background-color: var(--pink-faint) !important; }
 
-.bg-red-dark { background-color: var(--red-dark); }
-.bg-red { background-color: var(--red); }
-.bg-red-light { background-color: var(--red-light); }
-.bg-red-faint { background-color: var(--red-faint); }
+.bg-red-dark { background-color: var(--red-dark) !important; }
+.bg-red { background-color: var(--red) !important; }
+.bg-red-light { background-color: var(--red-light) !important; }
+.bg-red-faint { background-color: var(--red-faint) !important; }
 
-.bg-orange-dark { background-color: var(--orange-dark); }
-.bg-orange { background-color: var(--orange); }
-.bg-orange-light { background-color: var(--orange-light); }
-.bg-orange-faint { background-color: var(--orange-faint); }
+.bg-orange-dark { background-color: var(--orange-dark) !important; }
+.bg-orange { background-color: var(--orange) !important; }
+.bg-orange-light { background-color: var(--orange-light) !important; }
+.bg-orange-faint { background-color: var(--orange-faint) !important; }
 
-.bg-yellow-dark { background-color: var(--yellow-dark); }
-.bg-yellow { background-color: var(--yellow); }
-.bg-yellow-light { background-color: var(--yellow-light); }
-.bg-yellow-faint { background-color: var(--yellow-faint); }
+.bg-yellow-dark { background-color: var(--yellow-dark) !important; }
+.bg-yellow { background-color: var(--yellow) !important; }
+.bg-yellow-light { background-color: var(--yellow-light) !important; }
+.bg-yellow-faint { background-color: var(--yellow-faint) !important; }
 
-.bg-green-dark { background-color: var(--green-dark); }
-.bg-green { background-color: var(--green); }
-.bg-green-light { background-color: var(--green-light); }
-.bg-green-faint { background-color: var(--green-faint); }
+.bg-green-dark { background-color: var(--green-dark) !important; }
+.bg-green { background-color: var(--green) !important; }
+.bg-green-light { background-color: var(--green-light) !important; }
+.bg-green-faint { background-color: var(--green-faint) !important; }
 
-.bg-teal-dark { background-color: var(--teal-dark); }
-.bg-teal { background-color: var(--teal); }
-.bg-teal-light { background-color: var(--teal-light); }
-.bg-teal-faint { background-color: var(--teal-faint); }
+.bg-teal-dark { background-color: var(--teal-dark) !important; }
+.bg-teal { background-color: var(--teal) !important; }
+.bg-teal-light { background-color: var(--teal-light) !important; }
+.bg-teal-faint { background-color: var(--teal-faint) !important; }
 
-.bg-blue-dark { background-color: var(--blue-dark); }
-.bg-blue { background-color: var(--blue); }
-.bg-blue-light { background-color: var(--blue-light); }
-.bg-blue-faint { background-color: var(--blue-faint); }
+.bg-blue-dark { background-color: var(--blue-dark) !important; }
+.bg-blue { background-color: var(--blue) !important; }
+.bg-blue-light { background-color: var(--blue-light) !important; }
+.bg-blue-faint { background-color: var(--blue-faint) !important; }
 
-.bg-purple-dark { background-color: var(--purple-dark); }
-.bg-purple { background-color: var(--purple); }
-.bg-purple-light { background-color: var(--purple-light); }
-.bg-purple-faint { background-color: var(--purple-faint); }
+.bg-purple-dark { background-color: var(--purple-dark) !important; }
+.bg-purple { background-color: var(--purple) !important; }
+.bg-purple-light { background-color: var(--purple-light) !important; }
+.bg-purple-faint { background-color: var(--purple-faint) !important; }
 
-.bg-darken5 { background-color: var(--darken5); }
-.bg-darken10 { background-color: var(--darken10); }
-.bg-darken25 { background-color: var(--darken25); }
-.bg-darken50 { background-color: var(--darken50); }
-.bg-darken75 { background-color: var(--darken75); }
+.bg-darken5 { background-color: var(--darken5) !important; }
+.bg-darken10 { background-color: var(--darken10) !important; }
+.bg-darken25 { background-color: var(--darken25) !important; }
+.bg-darken50 { background-color: var(--darken50) !important; }
+.bg-darken75 { background-color: var(--darken75) !important; }
 
-.bg-lighten5 { background-color: var(--lighten5); }
-.bg-lighten10 { background-color: var(--lighten10); }
-.bg-lighten25 { background-color: var(--lighten25); }
-.bg-lighten50 { background-color: var(--lighten50); }
-.bg-lighten75 { background-color: var(--lighten75); }
-.bg-lighten75 { background-color: var(--lighten75); }
+.bg-lighten5 { background-color: var(--lighten5) !important; }
+.bg-lighten10 { background-color: var(--lighten10) !important; }
+.bg-lighten25 { background-color: var(--lighten25) !important; }
+.bg-lighten50 { background-color: var(--lighten50) !important; }
+.bg-lighten75 { background-color: var(--lighten75) !important; }
 
-.bg-black { background-color: var(--black); }
-.bg-white { background-color: var(--white); }
+.bg-black { background-color: var(--black) !important; }
+.bg-white { background-color: var(--white) !important; }
 /** @endgroup */
 
 /**
@@ -174,65 +173,67 @@
  * <div class='mb10 color-black'>color-black</div>
  * <div class='mb10 color-white'>color-white</div>
  */
-.color-gray-dark { color: var(--gray-dark); }
-.color-gray { color: var(--gray); }
-.color-gray-light { color: var(--gray-light); }
-.color-gray-faint { color: var(--gray-faint); }
+.color-gray-dark { color: var(--gray-dark) !important; }
+.color-gray { color: var(--gray) !important; }
+.color-gray-light { color: var(--gray-light) !important; }
+.color-gray-faint { color: var(--gray-faint) !important; }
 
-.color-pink-dark { color: var(--pink-dark); }
-.color-pink { color: var(--pink); }
-.color-pink-light { color: var(--pink-light); }
-.color-pink-faint { color: var(--pink-faint); }
+.color-pink-dark { color: var(--pink-dark) !important; }
+.color-pink { color: var(--pink) !important; }
+.color-pink-light { color: var(--pink-light) !important; }
+.color-pink-faint { color: var(--pink-faint) !important; }
 
-.color-red-dark { color: var(--red-dark); }
-.color-red { color: var(--red); }
-.color-red-light { color: var(--red-light); }
-.color-red-faint { color: var(--red-faint); }
+.color-red-dark { color: var(--red-dark) !important; }
+.color-red { color: var(--red) !important; }
+.color-red-light { color: var(--red-light) !important; }
+.color-red-faint { color: var(--red-faint) !important; }
 
-.color-orange-dark { color: var(--orange-dark); }
-.color-orange { color: var(--orange); }
-.color-orange-light { color: var(--orange-light); }
-.color-orange-faint { color: var(--orange-faint); }
+.color-orange-dark { color: var(--orange-dark) !important; }
+.color-orange { color: var(--orange) !important; }
+.color-orange-light { color: var(--orange-light) !important; }
+.color-orange-faint { color: var(--orange-faint) !important; }
 
-.color-yellow-dark { color: var(--yellow-dark); }
-.color-yellow { color: var(--yellow); }
-.color-yellow-light { color: var(--yellow-light); }
-.color-yellow-faint { color: var(--yellow-faint); }
+.color-yellow-dark { color: var(--yellow-dark) !important; }
+.color-yellow { color: var(--yellow) !important; }
+.color-yellow-light { color: var(--yellow-light) !important; }
+.color-yellow-faint { color: var(--yellow-faint) !important; }
 
-.color-green-dark { color: var(--green-dark); }
-.color-green { color: var(--green); }
-.color-green-light { color: var(--green-light); }
-.color-green-faint { color: var(--green-faint); }
+.color-green-dark { color: var(--green-dark) !important; }
+.color-green { color: var(--green) !important; }
+.color-green-light { color: var(--green-light) !important; }
+.color-green-faint { color: var(--green-faint) !important; }
 
-.color-teal-dark { color: var(--teal-dark); }
-.color-teal { color: var(--teal); }
-.color-teal-light { color: var(--teal-light); }
-.color-teal-faint { color: var(--teal-faint); }
+.color-teal-dark { color: var(--teal-dark) !important; }
+.color-teal { color: var(--teal) !important; }
+.color-teal-light { color: var(--teal-light) !important; }
+.color-teal-faint { color: var(--teal-faint) !important; }
 
-.color-blue-dark { color: var(--blue-dark); }
-.color-blue { color: var(--blue); }
-.color-blue-light { color: var(--blue-light); }
-.color-blue-faint { color: var(--blue-faint); }
+.color-blue-dark { color: var(--blue-dark) !important; }
+.color-blue { color: var(--blue) !important; }
+.color-blue-light { color: var(--blue-light) !important; }
+.color-blue-faint { color: var(--blue-faint) !important; }
 
-.color-purple-dark { color: var(--purple-dark); }
-.color-purple { color: var(--purple); }
-.color-purple-light { color: var(--purple-light); }
-.color-purple-faint { color: var(--purple-faint); }
+.color-purple-dark { color: var(--purple-dark) !important; }
+.color-purple { color: var(--purple) !important; }
+.color-purple-light { color: var(--purple-light) !important; }
+.color-purple-faint { color: var(--purple-faint) !important; }
 
-.color-darken5 { color: var(--darken5); }
-.color-darken10 { color: var(--darken10); }
-.color-darken25 { color: var(--darken25); }
-.color-darken50 { color: var(--darken50); }
-.color-darken75 { color: var(--darken75); }
+.color-darken5 { color: var(--darken5) !important; }
+.color-darken10 { color: var(--darken10) !important; }
+.color-darken25 { color: var(--darken25) !important; }
+.color-darken50 { color: var(--darken50) !important; }
+.color-darken75 { color: var(--darken75) !important; }
 
-.color-lighten5 { color: var(--lighten5); }
-.color-lighten10 { color: var(--lighten10); }
-.color-lighten25 { color: var(--lighten25); }
-.color-lighten50 { color: var(--lighten50); }
-.color-lighten75 { color: var(--lighten75); }
+.color-lighten5 { color: var(--lighten5) !important; }
+.color-lighten10 { color: var(--lighten10) !important; }
+.color-lighten25 { color: var(--lighten25) !important; }
+.color-lighten50 { color: var(--lighten50) !important; }
+.color-lighten75 { color: var(--lighten75) !important; }
 
-.color-black { color: var(--black); }
-.color-white { color: var(--white); }
+.color-black { color: var(--black) !important; }
+.color-white { color: var(--white) !important; }
+
+.color-text { color: var(--text-color) !important; }
 /** @endgroup */
 
 /**
@@ -241,22 +242,22 @@
  * @group
  * @memberof Colors & gradients
  * @example
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--4 mar-bottom-10 p10 bg-gray-to-transparent'>bg-gray-to-transparent</div>
  * <div class='col col--4 mar-bottom-10 p10 bg-pink-to-transparent'>bg-pink-to-transparent</div>
  * <div class='col col--4 mar-bottom-10 p10 bg-red-to-transparent'>bg-red-to-transparent</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--4 mar-bottom-10 p10 bg-orange-to-transparent'>bg-orange-to-transparent</div>
  * <div class='col col--4 mar-bottom-10 p10 bg-yellow-to-transparent'>bg-yellow-to-transparent</div>
  * <div class='col col--4 mar-bottom-10 p10 bg-green-to-transparent'>bg-green-to-transparent</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--4 mar-bottom-10 p10 bg-teal-to-transparent'>bg-teal-to-transparent</div>
  * <div class='col col--4 mar-bottom-10 p10 bg-blue-to-transparent'>bg-blue-to-transparent</div>
  * <div class='col col--4 mar-bottom-10 p10 bg-purple-to-transparent'>bg-purple-to-transparent</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--4 mar-bottom-10 p10 bg-black-to-transparent'>bg-black-to-transparent</div>
  * <div class='col col--4 mar-bottom-10 p10 bg-white-to-transparent'>bg-white-to-transparent</div>
  * </div>
@@ -266,76 +267,76 @@
     to bottom right,
     var(--gray),
     transparent
-  );
+  ) !important;
 }
 .bg-pink-to-transparent {
   background-image: linear-gradient(
     to bottom right,
     var(--pink),
     transparent
-  );
+  ) !important;
 }
 .bg-red-to-transparent {
   background-image: linear-gradient(
     to bottom right,
     var(--red),
     transparent
-  );
+  ) !important;
 }
 .bg-orange-to-transparent {
   background-image: linear-gradient(
     to bottom right,
     var(--orange),
     transparent
-  );
+  ) !important;
 }
 .bg-yellow-to-transparent {
   background-image: linear-gradient(
     to bottom right,
     var(--yellow),
     transparent
-  );
+  ) !important;
 }
 .bg-green-to-transparent {
   background-image: linear-gradient(
     to bottom right,
     var(--green),
     transparent
-  );
+  ) !important;
 }
 .bg-teal-to-transparent {
   background-image: linear-gradient(
     to bottom right,
     var(--teal),
     transparent
-  );
+  ) !important;
 }
 .bg-blue-to-transparent {
   background-image: linear-gradient(
     to bottom right,
     var(--blue),
     transparent
-  );
+  ) !important;
 }
 .bg-purple-to-transparent {
   background-image: linear-gradient(
     to bottom right,
     var(--purple),
     transparent
-  );
+  ) !important;
 }
 .bg-black-to-transparent {
   background-image: linear-gradient(
     to bottom right,
     var(--black),
     transparent
-  );
+  ) !important;
 }
 .bg-white-to-transparent {
   background-image: linear-gradient(
     to bottom right,
     var(--white),
     transparent
-  );
+  ) !important;
 }
 /** @endgroup */
