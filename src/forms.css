@@ -166,7 +166,7 @@
  *   e.g. `bg-red`.
  * - Modify *stroke* `checkbox` with a text color, e.g. `color-red`.
  * - Use a different icon.
- * - Modify `checkbox` with `checkbox--small-label` if the text is small,
+ * - Modify `checkbox` with `checkbox--s-label` if the text is small,
  *   for proper vertical alignment.
  *
  * When placing a checkbox inside a *non-stroke* `.btn`, you should always
@@ -197,7 +197,7 @@
  * <div class='txt-s'>
  *   <label class='checkbox-container'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox checkbox--stroke checkbox--small-label color-red'>
+ *     <div class='checkbox checkbox--stroke checkbox--s-label color-red'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     Checkbox magic
@@ -223,7 +223,7 @@
  *
  * Variations:
  * - Modify `radio` with a text color, e.g. `color-purple`.
- * - Modify `radio` with `radio--small-label` if the text is small,
+ * - Modify `radio` with `radio--s-label` if the text is small,
  *   for proper vertical alignment.
  *
  * The class `radio` and its modifiers can also be used independent
@@ -246,7 +246,7 @@
  * <div class='txt-s'>
  *   <label class='radio-container'>
  *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio radio--small-label color-yellow'></div>
+ *     <div class='radio radio--s-label color-yellow'></div>
  *     Magic radio
  *   </label>
  * </div>
@@ -292,8 +292,8 @@
   color: var(--blue);
 }
 
-.checkbox--small-label,
-.radio--small-label {
+.checkbox--s-label,
+.radio--s-label {
   top: 0;
 }
 
