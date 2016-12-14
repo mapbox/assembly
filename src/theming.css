@@ -8,6 +8,7 @@
  * - Choose the size of a border radius with `*-bold` and `*-full`.
  * - Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
  * - Target corners with `*-tl`, `*-tr`, `*-bl`, `*-br`.
+ *
  * @group
  * @memberof Theming
  * @example
@@ -26,6 +27,7 @@
 .round-tr { border-top-right-radius: var(--border-radius) !important; }
 .round-br { border-bottom-right-radius: var(--border-radius) !important; }
 .round-bl { border-bottom-left-radius: var(--border-radius) !important; }
+/** @endgroup */
 
 .round-bold { border-radius: var(--border-radius-bold) !important; }
 .round-bold-t { border-radius: var(--border-radius-bold) var(--border-radius-bold) 0 0 !important; }
@@ -46,7 +48,6 @@
 .round-full-tr { border-top-right-radius: var(--border-radius-full) !important; }
 .round-full-br { border-bottom-right-radius: var(--border-radius-full) !important; }
 .round-full-bl { border-bottom-left-radius: var(--border-radius-full) !important; }
-/** @endgroup */
 
 /**
  * Border classes.
@@ -54,6 +55,7 @@
  * - For a thicker border, add the modifying class `.border--2`
  * - For a dashed border, add the modifying class `.border--dash`
  * - For a colored border, add the modifying class `.border--color` where color is a [color](#Colors-&-gradients).
+ *
  * @group
  * @memberof Theming
  * @example
@@ -69,6 +71,7 @@
 .border-t { border-top: 1px solid !important; }
 .border-r { border-right: 1px solid !important; }
 .border-b { border-bottom: 1px solid !important; }
+/** @endgroup */
 
 .border--2 { border-width: 2px !important; }
 .border--dash { border-style: dashed !important; }
@@ -121,7 +124,6 @@
 .border--lighten75 { border-color: var(--lighten75) !important; }
 .border--black { border-color: var(--black) !important; }
 .border--white { border-color: var(--white) !important; }
-/** @endgroup */
 
 /**
  * Shadow classes.
@@ -146,6 +148,7 @@
 .shadow10-bold { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9) !important; }
 .shadow20-bold { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9) !important; }
 .shadow30-bold { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9) !important; }
+/** @endgroup */
 
 .txt-shadow5 { text-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important; }
 .txt-shadow10 { text-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important; }
@@ -155,7 +158,6 @@
 .txt-shadow10-bold { text-shadow: 0 0 10px rgba(0, 0, 0, 0.9) !important; }
 .txt-shadow20-bold { text-shadow: 0 0 20px rgba(0, 0, 0, 0.9) !important; }
 .txt-shadow30-bold { text-shadow: 0 0 30px rgba(0, 0, 0, 0.9) !important; }
-/** @endgroup */
 
 /**
  * Opacity classes.
@@ -221,6 +223,7 @@
 .hover-shadow30:hover,
 .focus-shadow30:focus,
 .active-shadow30:active { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3) !important; }
+/** @endgroup */
 
 .hover-shadow5-bold:hover,
 .focus-shadow5-bold:focus,
@@ -276,4 +279,3 @@
 .hover-alpha100:hover,
 .focus-alpha100:focus,
 .active-alpha100:active { opacity: 1 !important; }
-/** @endgroup */
