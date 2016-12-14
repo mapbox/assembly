@@ -18,6 +18,8 @@ textarea {
 /**
  * Standard text scale.
  *
+ * Class set includes `-sm`, `-md`, and `-lg` variations to target screen sizes.
+ *
  * @memberof Typography
  * @group
  */
@@ -56,6 +58,117 @@ textarea {
   line-height: 15px;
 }
 /** @endgroup */
+
+@media only screen and (--large-screen) {
+  .txt-headline-lg {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .txt-subhead-lg {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .txt-xl-lg {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .txt-l-lg {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .txt-m-lg {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .txt-s-lg {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .txt-xs-lg {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+@media only screen and (--medium-screen) {
+  .txt-headline-md {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .txt-subhead-md {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .txt-xl-md {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .txt-l-md {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .txt-m-md {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .txt-s-md {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .txt-xs-md {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+@media only screen and (--small-screen) {
+  .txt-headline-sm {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .txt-subhead-sm {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .txt-xl-sm {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .txt-l-sm {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .txt-m-sm {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .txt-s-sm {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .txt-xs-sm {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
 
 /**
  * Fancy text scale.
