@@ -1,5 +1,5 @@
 /**
- * Utility classes for theming
+ * Utility classes for theming.
  * @section Theming
 */
 
@@ -11,15 +11,10 @@
  * @group
  * @memberof Theming
  * @example
- * <div class='flex mb10'>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center round'>.round</div>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center round-bold '>.round-bold</div>
- * <div class='col col--2 bg-gray color-white p10 txt-center round-full'>.round-full</div>
- * </div>
  * <div class='flex'>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center round-t'>.round-t</div>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center round-bl'>.round-bl</div>
- * <div class='col col--2 bg-gray color-white p10 txt-center round-bold-r'>.round-bold-r</div>
+ *   <div class='col col--2 bg-gray color-white p10 mr10 round'>.round</div>
+ *   <div class='col col--2 bg-gray color-white p10 mr10 round-bold-r'>.round-bold-r</div>
+ *   <div class='col col--2 bg-gray color-white p10 round-full'>.round-full</div>
  * </div>
  */
 .round { border-radius: var(--border-radius) !important; }
@@ -55,18 +50,18 @@
 
 /**
  * Border classes.
- * - `.border` will add a 1px solid border. Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
+ * - `.border` will add a `1px` solid border. Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
  * - For a thicker border, add the modifying class `.border--2`
  * - For a dashed border, add the modifying class `.border--dash`
  * - For a colored border, add the modifying class `.border--color` where color is a [color](#Colors-&-gradients).
  * @group
  * @memberof Theming
  * @example
- * <div class='col col--4 p10 mb10 txt-center border'>.border</div>
- * <div class='col col--4 p10 mb10 txt-center border-l'>.border-l</div>
- * <div class='col col--4 p10 mb10 txt-center border border--2'>.border.border--2</div>
- * <div class='col col--4 p10 mb10 txt-center border border--dash'>.border.border--dash</div>
- * <div class='col col--4 p10 txt-center border border--blue-light'>.border.border--blue-light</div>
+ * <div class='flex'>
+ *  <div class='col col--2 p10 mr10 border'>.border</div>
+ *  <div class='col col--2 p10 mr10 border-b'>.border-b</div>
+ *  <div class='col col--2 p10 border border--dash'>.border.border--dash</div>
+ * </div>
  */
 .border { border: 1px solid !important; }
 
@@ -130,30 +125,17 @@
 
 /**
  * Shadow classes.
- * - Shadows come in 5px, 10px, 20px, and 30px variants.
+ * - Shadows come in `5px`, `10px`, `20px`, and `30px` variants.
  * - Append `-bold` for a more opaque shadow.
  * - Add shadows to text with `txt-shadow`.
  *
  * @group
  * @memberof Theming
  * @example
- * <div class='flex mb10'>
- * <div class='col col--2 p10 mr10 txt-center shadow5'>.shadow5</div>
- * <div class='col col--2 p10 mr10 txt-center shadow10'>.shadow10</div>
- * <div class='col col--2 p10 mr10 txt-center shadow20'>.shadow20</div>
- * <div class='col col--2 p10 txt-center shadow30'>.shadow30</div>
- * </div>
- * <div class='flex mb10'>
- * <div class='col col--2 p10 mr10 txt-center shadow5-bold'>.shadow5-bold</div>
- * <div class='col col--2 p10 mr10 txt-center shadow10-bold'>.shadow10-bold</div>
- * <div class='col col--2 p10 mr10 txt-center shadow20-bold'>.shadow20-bold</div>
- * <div class='col col--2 p10 txt-center shadow30-bold'>.shadow30-bold</div>
- * </div>
  * <div class='flex'>
- * <div class='col col--2 p10 mr10 txt-center txt-shadow5'>.txt-shadow5</div>
- * <div class='col col--2 p10 mr10 txt-center txt-shadow10'>.txt-shadow10</div>
- * <div class='col col--2 p10 mr10 txt-center txt-shadow5-bold'>.txt-shadow5-bold</div>
- * <div class='col col--2 p10 txt-center txt-shadow10-bold'>.txt-shadow10-bold</div>
+ *   <div class='col col--2 p10 mr10 txt-shadow5'>.txt-shadow5</div>
+ *   <div class='col col--2 p10 mr10 shadow10'>.shadow10</div>
+ *   <div class='col col--2 p10 shadow20-bold'>.shadow20-bold</div>
  * </div>
  */
 .shadow5 { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3) !important; }
@@ -177,16 +159,15 @@
 
 /**
  * Opacity classes.
- * - Alpha classes come in 0%, 25%, 50%, and 100% opacity variants.
+ * - Alpha classes come in `0%`, `25%`, `50%`, `75%`, and `100%` opacity variants.
  *
  * @group
  * @memberof Theming
  * @example
- * <div class='flex mb10'>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center alpha25'>.alpha25</div>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center alpha50'>.alpha50</div>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center alpha75'>.alpha75</div>
- * <div class='col col--2 bg-gray color-white p10 txt-center alpha100'>.alpha100</div>
+ * <div class='flex'>
+ *   <div class='col col--2 bg-gray color-white p10 mr10 alpha25'>.alpha25</div>
+ *   <div class='col col--2 bg-gray color-white p10 mr10 alpha50'>.alpha50</div>
+ *   <div class='col col--2 bg-gray color-white p10 alpha100'>.alpha100</div>
  * </div>
  */
 .alpha0 { opacity: 0 !important; }
@@ -200,15 +181,15 @@
 
 /**
  * Cursor classes.
- * - Cursor is one of default, pointer, crosshair, or move on hover.
+ * - Cursor is one of `default`, `pointer`, `crosshair`, or `move` on hover.
  *
  * @group
  * @memberof Theming
  * @example
- * <div class='flex mb10'>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center cursor-pointer'>.cursor-pointer</div>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center cursor-crosshair'>.cursor-crosshair</div>
- * <div class='col col--2 bg-gray color-white p10 txt-center cursor-move'>.cursor-move</div>
+ * <div class='flex'>
+ *   <div class='col col--2 bg-gray color-white p10 mr10 cursor-pointer'>.cursor-pointer</div>
+ *   <div class='col col--2 bg-gray color-white p10 mr10 cursor-crosshair'>.cursor-crosshair</div>
+ *   <div class='col col--2 bg-gray color-white p10 cursor-move'>.cursor-move</div>
  * </div>
  */
 .cursor-default { cursor: default !important; }
@@ -226,7 +207,7 @@
  * @group
  * @memberof Theming
  * @example
- * <div class='col col--2 bg-gray color-white p10 txt-center hover-shadow30'>.hover-shadow30</div>
+ * <div class='col col--2 bg-gray color-white p10 hover-shadow30'>.hover-shadow30</div>
  */
 .hover-shadow5:hover,
 .focus-shadow5:focus,
