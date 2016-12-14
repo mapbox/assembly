@@ -153,9 +153,7 @@
 }
 
 /**
- * Checkboxes
- *
- * Consists of
+ * The checkbox markup must fit the following pattern.
  * - A wrapping `<label>` with the class `checkbox-container`.
  * - An `<input type='checkbox'>`.
  * - A `<div>` with the class `checkbox`
@@ -168,6 +166,8 @@
  *   e.g. `bg-red`.
  * - Modify *stroke* `checkbox` with a text color, e.g. `color-red`.
  * - Use a different icon.
+ * - Modify `checkbox` with `checkbox--s-label` if the text is small,
+ *   for proper vertical alignment.
  *
  * When placing a checkbox inside a *non-stroke* `.btn`, you should always
  * use `checkbox--stroke`. The checkbox's border will be removed,
@@ -178,39 +178,79 @@
  * of a `<label>` and `<input>` if you are building a custom components.
  * In that case, apply the state class `is-active` when it should be checked.
  *
+ * @section Checkboxes
+ * @memberof Forms
+ */
+
+/*
+ * @memberof Checkboxes
  * @example
- * <label class="checkbox-container">
- *   <input type='checkbox' value='magic'>
- *   <div class="checkbox">
- *     <svg class="icon"><use xlink:href="#base-svg-check" /></svg>
- *   </div>
- *   Magi
- * </label>
+ * <div class='mb10'>
+ *   <label class='checkbox-container'>
+ *     <input type='checkbox' value='magic'>
+ *     <div class='checkbox'>
+ *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
+ *     </div>
+ *     Checkbox magic
+ *   </label>
+ * </div>
+ * <div class='txt-s'>
+ *   <label class='checkbox-container'>
+ *     <input type='checkbox' value='magic'>
+ *     <div class='checkbox checkbox--stroke checkbox--s-label color-red'>
+ *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
+ *     </div>
+ *     Checkbox magic
+ *   </label>
+ * </div>
+ * <div class='mb10'>
+ *   <label class='checkbox-container'>
+ *     <input type='checkbox' value='magic'>
+ *     <div class='checkbox'>
+ *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
+ *     </div>
+ *     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci tenetur distinctio provident a, debitis obcaecati ipsam laborum autem suscipit natus repellendus nam cumque ab qui ducimus unde ratione, quisquam nisi.
+ *   </label>
+ * </div>
  */
 
 /**
-* Radios
-*
-* Consists of
-* - A wrapping `<label>` with the class `radio-container`.
-* - An `<input type='radio'>`.
-* - A `<div>` with the class `radio`.
-* - Text for the label.
-*
-* Variations:
-* - Modify `radio` with a text color, e.g. `color-purple`.
-*
-* The class `radio` and its modifiers can also be used independent
-* of a `<label>` and `<input>` if you are building a custom components.
-* In that case, apply the state class `is-active` when it should be checked.
-*
-* @example
-* <label class="radio-container">
-*   <input name='radio-basic' value='magic' type='radio'>
-*   <div class="radio"></div>
-*   Mgaic
-* </label>
-*/
+ * The radio markup must fit the following pattern.
+ * - A wrapping `<label>` with the class `radio-container`.
+ * - An `<input type='radio'>`.
+ * - A `<div>` with the class `radio`.
+ * - Text for the label.
+ *
+ * Variations:
+ * - Modify `radio` with a text color, e.g. `color-purple`.
+ * - Modify `radio` with `radio--s-label` if the text is small,
+ *   for proper vertical alignment.
+ *
+ * The class `radio` and its modifiers can also be used independent
+ * of a `<label>` and `<input>` if you are building a custom components.
+ * In that case, apply the state class `is-active` when it should be checked.
+ *
+ * @section Radio buttons
+ */
+
+/**
+ * @memberof Radio buttons
+ * @example
+ * <div class='mb10'>
+ *   <label class='radio-container'>
+ *     <input name='radio-basic' value='magic' type='radio'>
+ *     <div class='radio'></div>
+ *     Magic radio
+ *   </label>
+ * </div>
+ * <div class='txt-s'>
+ *   <label class='radio-container'>
+ *     <input name='radio-basic' value='magic' type='radio'>
+ *     <div class='radio radio--s-label color-yellow'></div>
+ *     Magic radio
+ *   </label>
+ * </div>
+ */
 
 /* stylelint-disable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
 .checkbox-container,
@@ -235,6 +275,7 @@
   margin-right: 10px;
   cursor: pointer;
   position: relative;
+  top: 2px;
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
@@ -249,6 +290,11 @@
   background-color: #fff;
   border-color: currentColor;
   color: var(--blue);
+}
+
+.checkbox--s-label,
+.radio--s-label {
+  top: 0;
 }
 
 .btn:not(.btn--stroke) > .checkbox--stroke {
