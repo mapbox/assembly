@@ -88,3 +88,19 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+q::before,
+q::after {
+  content: '';
+}
+
+pre {
+  display: block;
+  white-space: pre-wrap;
+  tab-size: 2;
+}
