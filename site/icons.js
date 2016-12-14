@@ -9,7 +9,7 @@ class Icons extends React.Component {
   render() {
     const iconEls = icons.map((icon) => {
       return (
-        <div key={icon} className='round mr5 mb5 border border--gray pl10 pr10 pt5 pb5 flx flx-center-y'>
+        <div key={icon} className='round mr5 mb5 border border--gray pl10 pr10 pt5 pb5 flex flex-center-y'>
           <div className='mr10'>
             {icon}
           </div>
@@ -29,7 +29,7 @@ class Icons extends React.Component {
         <p className='mb20 prose'>
           This page lists and displays all available icons. To learn more about how to use icons, look at <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>.
         </p>
-        <div className='flx flx-wrap txt-s'>
+        <div className='flex flex-wrap txt-s'>
           {iconEls}
         </div>
       </div>

@@ -30,17 +30,17 @@
  * @memberof Layout
  * @group
  */
-.flx { display: flex !important; }
-.flx-inline { display: inline-flex !important; }
-.flx-column { flex-direction: column !important; }
-.flx-wrap { flex-wrap: wrap; }
-.flx-end { justify-content: flex-end !important; }
-.flx-center-x { justify-content: center !important; }
-.flx-center-y { align-items: center !important; }
-.flx-stretch-y { align-items: stretch !important; }
-.flx-noshrink { flex-shrink: 0 !important; }
-.flx-fill {
-  flex-grow: 1 !important;
+.flex { display: flex !important; }
+.flex-inline { display: inline-flex !important; }
+.flex-column { flex-direction: column !important; }
+.flex-wrap { flex-wrap: wrap !important; }
+.flex-end { justify-content: flex-end !important; }
+.flex-center-x { justify-content: center !important; }
+.flex-center-y { align-items: center !important; }
+.flex-stretch-y { align-items: stretch !important; }
+.flex-noshrink { flex-shrink: 0 !important; }
+.flex-fill {
+  flex-grow: 1;
   /* prevent overflowing chidlren
   clearfix. https://css-tricks.com/flexbox-truncated-text/ */
   min-width: 0 !important;
@@ -48,48 +48,48 @@
 /** @endgroup */
 
 @media only screen and (--large-screen) {
-  .flx-lg { display: flex !important; }
-  .flx-none-lg { flex: none !important; }
-  .flx-column-lg { flex-direction: column !important; }
-  .flx-wrap-lg { flex-wrap: wrap; }
-  .flx-end-lg { justify-content: flex-end !important; }
-  .flx-center-x-lg { justify-content: center !important; }
-  .flx-center-y-lg { align-items: center !important; }
-  .flx-stretch-y-lg { align-items: stretch !important; }
-  .flx-noshrink-lg { flex-shrink: 0 !important; }
-  .flx-fill-lg {
+  .flex-lg { display: flex !important; }
+  .flex-none-lg { flex: none !important; }
+  .flex-column-lg { flex-direction: column !important; }
+  .flex-wrap-lg { flex-wrap: wrap !important; }
+  .flex-end-lg { justify-content: flex-end !important; }
+  .flex-center-x-lg { justify-content: center !important; }
+  .flex-center-y-lg { align-items: center !important; }
+  .flex-stretch-y-lg { align-items: stretch !important; }
+  .flex-noshrink-lg { flex-shrink: 0 !important; }
+  .flex-fill-lg {
     flex-grow: 1 !important;
     min-width: 0 !important;
   }
 }
 
 @media only screen and (--medium-screen) {
-  .flx-md { display: flex !important; }
-  .flx-none-md { flex: none !important; }
-  .flx-column-md { flex-direction: column !important; }
-  .flx-wrap-md { flex-wrap: wrap; }
-  .flx-end-md { justify-content: flex-end !important; }
-  .flx-center-x-md { justify-content: center !important; }
-  .flx-center-y-md { align-items: center !important; }
-  .flx-stretch-y-md { align-items: stretch !important; }
-  .flx-noshrink-md { flex-shrink: 0 !important; }
-  .flx-fill-md {
+  .flex-md { display: flex !important; }
+  .flex-none-md { flex: none !important; }
+  .flex-column-md { flex-direction: column !important; }
+  .flex-wrap-md { flex-wrap: wrap !important; }
+  .flex-end-md { justify-content: flex-end !important; }
+  .flex-center-x-md { justify-content: center !important; }
+  .flex-center-y-md { align-items: center !important; }
+  .flex-stretch-y-md { align-items: stretch !important; }
+  .flex-noshrink-md { flex-shrink: 0 !important; }
+  .flex-fill-md {
     flex-grow: 1 !important;
     min-width: 0 !important;
   }
 }
 
 @media only screen and (--small-screen) {
-  .flx-sm { display: flex !important; }
-  .flx-none-sm { flex: none !important; }
-  .flx-column-sm { flex-direction: column !important; }
-  .flx-wrap-sm { flex-wrap: wrap; }
-  .flx-end-sm { justify-content: flex-end !important; }
-  .flx-center-x-sm { justify-content: center !important; }
-  .flx-center-y-sm { align-items: center !important; }
-  .flx-stretch-y-sm { align-items: stretch !important; }
-  .flx-noshrink-sm { flex-shrink: 0 !important; }
-  .flx-fill-sm {
+  .flex-sm { display: flex !important; }
+  .flex-none-sm { flex: none !important; }
+  .flex-column-sm { flex-direction: column !important; }
+  .flex-wrap-sm { flex-wrap: wrap !important; }
+  .flex-end-sm { justify-content: flex-end !important; }
+  .flex-center-x-sm { justify-content: center !important; }
+  .flex-center-y-sm { align-items: center !important; }
+  .flex-stretch-y-sm { align-items: stretch !important; }
+  .flex-noshrink-sm { flex-shrink: 0 !important; }
+  .flex-fill-sm {
     flex-grow: 1 !important;
     min-width: 0 !important;
   }
