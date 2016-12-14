@@ -252,6 +252,32 @@
  * </div>
  */
 
+/**
+ * Switches
+ *
+ * Consists of
+ * - A wrapping `<label>` with the class `switch-container`.
+ * - An `<input type='checkbox'>`.
+ * - A `<div>` with the class `switch`.
+ *
+ * Variations:
+ * - Modify `checkbox` with `checkbox--stroke`.
+ * - Modify *non-stroke* `checkbox` with a background color,
+ *   e.g. `bg-red`.
+ * - Modify *stroke* `checkbox` with a text color, e.g. `color-red`.
+ *
+ * The class `switch` and its modifiers can also be used independent
+ * of a `<label>` and `<input>` if you are building a custom components.
+ * In that case, apply the state class `is-active` when it should be checked.
+ *
+ * @example
+ * <label class="switch-container">
+ *   <input type='checkbox' value='magic'>
+ *   <div class="switch">
+ *   </div>
+ * </label>
+ */
+
 /* stylelint-disable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
 .checkbox-container,
 .radio-container {
@@ -441,3 +467,8 @@ input:checked + .color-purple,
   color: var(--purple-dark) !important;
 }
 /* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
+
+.legend {
+  display: block;
+  width: 100%;
+}
