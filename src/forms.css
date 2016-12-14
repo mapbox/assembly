@@ -27,6 +27,11 @@
   border: 1px solid var(--gray-light);
 }
 
+.input--no-shadow:focus,
+.textarea--no-shadow:focus {
+  box-shadow: none;
+}
+
 .input::placeholder {
   color: var(--gray-light);
 }
@@ -35,13 +40,14 @@
  * Text input. The following modifiers are available:
  * - `input--s`: Small
  * - `input--dark`: Dark
+ * - `input--no-shadow`: No shadow on focus
  *
  * Use `w*` width classes to change widths.
  *
  * @memberof Forms
  * @example
  * <input class='input' placeholder='basic' />
- * <input class='input input--s' placeholder='small' />
+ * <input class='input input--s input--no-shadow' placeholder='small' />
  * <input class='input input--dark' placeholder='dark' />
  */
 .input {
@@ -61,13 +67,14 @@
  * Textarea. The following modifiers are available:
  * - `textarea--s`: Small
  * - `textarea--dark`: Dark
+ * - `textarea--no-shadow`: No shadow on focus
  *
  * Use `w*` width classes to change widths.
  *
  * @memberof Forms
  * @example
  * <textarea class='textarea'>basic</textarea>
- * <textarea class='textarea textarea--s'>small</textarea>
+ * <textarea class='textarea textarea--s textarea--no-shadow'>small</textarea>
  * <textarea class='textarea textarea--dark'>dark</textarea>
  */
 .textarea {
