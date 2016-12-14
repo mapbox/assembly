@@ -9,6 +9,7 @@ const { Icons } = require('./icons');
 const { Examples } = require('./examples');
 const { Debug } = require('./debug');
 const { Reset } = require('./reset');
+const { MediaQueries } = require('./media_queries');
 const fs = require('fs');
 const path = require('path');
 
@@ -38,6 +39,9 @@ const routes = [
   }, {
     name: 'Icons',
     route: '/icons/'
+  }, {
+    name: 'MediaQueries',
+    route: '/media-queries/'
   }, {
     name: 'Debug',
     route: '/debug/'
@@ -117,6 +121,13 @@ function buildRoutes() {
         r.component = (
           <Page navItems={navItems}>
             <Icons {...props} />
+          </Page>
+        );
+        break;
+      case 'MediaQueries':
+        r.component = (
+          <Page navItems={navItems}>
+            <MediaQueries {...props} />
           </Page>
         );
         break;
