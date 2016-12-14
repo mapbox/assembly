@@ -6,56 +6,56 @@
 /**
  * Round classes.
  * - Choose the size of a border radius with `*-bold` and `*-full`.
- * - Target sides with `*t`, `*r`, `*b`, `*l`.
- * - Target corners with `*tl`, `*tr`, `*bl`, `*br`.
+ * - Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
+ * - Target corners with `*-tl`, `*-tr`, `*-bl`, `*-br`.
  * @group
  * @memberof Theming
  * @example
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--2 bg-gray color-white p10 mr10 txt-center round'>.round</div>
  * <div class='col col--2 bg-gray color-white p10 mr10 txt-center round-bold '>.round-bold</div>
  * <div class='col col--2 bg-gray color-white p10 txt-center round-full'>.round-full</div>
  * </div>
- * <div class='flx'>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center roundt'>.roundt</div>
- * <div class='col col--2 bg-gray color-white p10 mr10 txt-center roundbl'>.roundbl</div>
- * <div class='col col--2 bg-gray color-white p10 txt-center roundr-bold'>.roundr-bold</div>
+ * <div class='flex'>
+ * <div class='col col--2 bg-gray color-white p10 mr10 txt-center roundt'>.round-t</div>
+ * <div class='col col--2 bg-gray color-white p10 mr10 txt-center roundbl'>.round-bl</div>
+ * <div class='col col--2 bg-gray color-white p10 txt-center roundr-bold'>.round-r-bold</div>
  * </div>
  */
 .round { border-radius: var(--border-radius); }
-.roundt { border-radius: var(--border-radius) var(--border-radius) 0 0; }
-.roundr { border-radius: 0 var(--border-radius) var(--border-radius) 0; }
-.roundb { border-radius: 0 0 var(--border-radius) var(--border-radius); }
-.roundl { border-radius: var(--border-radius) 0 0 var(--border-radius); }
-.roundtl { border-top-left-radius: var(--border-radius); }
-.roundtr { border-top-right-radius: var(--border-radius); }
-.roundbr { border-bottom-right-radius: var(--border-radius); }
-.roundbl { border-bottom-left-radius: var(--border-radius); }
+.round-t { border-radius: var(--border-radius) var(--border-radius) 0 0; }
+.round-r { border-radius: 0 var(--border-radius) var(--border-radius) 0; }
+.round-b { border-radius: 0 0 var(--border-radius) var(--border-radius); }
+.round-l { border-radius: var(--border-radius) 0 0 var(--border-radius); }
+.round-tl { border-top-left-radius: var(--border-radius); }
+.round-tr { border-top-right-radius: var(--border-radius); }
+.round-br { border-bottom-right-radius: var(--border-radius); }
+.round-bl { border-bottom-left-radius: var(--border-radius); }
 
 .round-bold { border-radius: var(--border-radius-bold); }
-.roundt-bold { border-radius: var(--border-radius-bold) var(--border-radius-bold) 0 0; }
-.roundr-bold { border-radius: 0 var(--border-radius-bold) var(--border-radius-bold) 0; }
-.roundb-bold { border-radius: 0 0 var(--border-radius-bold) var(--border-radius-bold); }
-.roundl-bold { border-radius: var(--border-radius-bold) 0 0 var(--border-radius-bold); }
-.roundtl-bold { border-top-left-radius: var(--border-radius-bold); }
-.roundtr-bold { border-top-right-radius: var(--border-radius-bold); }
-.roundbr-bold { border-bottom-right-radius: var(--border-radius-bold); }
-.roundbl-bold { border-bottom-left-radius: var(--border-radius-bold); }
+.round-t-bold { border-radius: var(--border-radius-bold) var(--border-radius-bold) 0 0; }
+.round-r-bold { border-radius: 0 var(--border-radius-bold) var(--border-radius-bold) 0; }
+.round-b-bold { border-radius: 0 0 var(--border-radius-bold) var(--border-radius-bold); }
+.round-l-bold { border-radius: var(--border-radius-bold) 0 0 var(--border-radius-bold); }
+.round-tl-bold { border-top-left-radius: var(--border-radius-bold); }
+.round-tr-bold { border-top-right-radius: var(--border-radius-bold); }
+.round-br-bold { border-bottom-right-radius: var(--border-radius-bold); }
+.round-bl-bold { border-bottom-left-radius: var(--border-radius-bold); }
 
 .round-full { border-radius: var(--border-radius-full); }
-.roundt-full { border-radius: var(--border-radius-full) var(--border-radius-full) 0 0; }
-.roundr-full { border-radius: 0 var(--border-radius-full) var(--border-radius-full) 0; }
-.roundb-full { border-radius: 0 0 var(--border-radius-full) var(--border-radius-full); }
-.roundl-full { border-radius: var(--border-radius-full) 0 0 var(--border-radius-full); }
-.roundtl-full { border-top-left-radius: var(--border-radius-full); }
-.roundtr-full { border-top-right-radius: var(--border-radius-full); }
-.roundbr-full { border-bottom-right-radius: var(--border-radius-full); }
-.roundbl-full { border-bottom-left-radius: var(--border-radius-full); }
+.round-t-full { border-radius: var(--border-radius-full) var(--border-radius-full) 0 0; }
+.round-r-full { border-radius: 0 var(--border-radius-full) var(--border-radius-full) 0; }
+.round-b-full { border-radius: 0 0 var(--border-radius-full) var(--border-radius-full); }
+.round-l-full { border-radius: var(--border-radius-full) 0 0 var(--border-radius-full); }
+.round-tl-full { border-top-left-radius: var(--border-radius-full); }
+.round-tr-full { border-top-right-radius: var(--border-radius-full); }
+.round-br-full { border-bottom-right-radius: var(--border-radius-full); }
+.round-bl-full { border-bottom-left-radius: var(--border-radius-full); }
 /** @endgroup */
 
 /**
  * Border classes.
- * - `.border` will add a 1px solid border. Target sides with `*t`, `*r`, `*b`, `*l`.
+ * - `.border` will add a 1px solid border. Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
  * - For a thicker border, add the modifying class `.border--2`
  * - For a dashed border, add the modifying class `.border--dash`
  * - For a colored border, add the modifying class `.border--color` where color is a color.
@@ -63,17 +63,17 @@
  * @memberof Theming
  * @example
  * <div class='col col--4 p10 mb10 txt-center border'>.border</div>
- * <div class='col col--4 p10 mb10 txt-center borderl'>.borderl</div>
+ * <div class='col col--4 p10 mb10 txt-center border-l'>.border-l</div>
  * <div class='col col--4 p10 mb10 txt-center border border--2'>.border.border--2</div>
  * <div class='col col--4 p10 mb10 txt-center border border--dash'>.border.border--dash</div>
  * <div class='col col--4 p10 txt-center border border--blue-light'>.border.border--blue-light</div>
  */
 .border { border: 1px solid; }
 
-.borderl { border-left: 1px solid; }
-.bordert { border-top: 1px solid; }
-.borderr { border-right: 1px solid; }
-.borderb { border-bottom: 1px solid; }
+.border-l { border-left: 1px solid; }
+.border-t { border-top: 1px solid; }
+.border-r { border-right: 1px solid; }
+.border-b { border-bottom: 1px solid; }
 
 .border--2 { border-width: 2px; }
 .border--dash { border-style: dashed; }
@@ -137,19 +137,19 @@
  * @group
  * @memberof Theming
  * @example
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--2 p10 mr10 txt-center shadow5'>.shadow5</div>
  * <div class='col col--2 p10 mr10 txt-center shadow10'>.shadow10</div>
  * <div class='col col--2 p10 mr10 txt-center shadow20'>.shadow20</div>
  * <div class='col col--2 p10 txt-center shadow30'>.shadow30</div>
  * </div>
- * <div class='flx mb10'>
+ * <div class='flex mb10'>
  * <div class='col col--2 p10 mr10 txt-center shadow5-bold'>.shadow5-bold</div>
  * <div class='col col--2 p10 mr10 txt-center shadow10-bold'>.shadow10-bold</div>
  * <div class='col col--2 p10 mr10 txt-center shadow20-bold'>.shadow20-bold</div>
  * <div class='col col--2 p10 txt-center shadow30-bold'>.shadow30-bold</div>
  * </div>
- * <div class='flx'>
+ * <div class='flex'>
  * <div class='col col--2 p10 mr10 txt-center txt-shadow5'>.txt-shadow5</div>
  * <div class='col col--2 p10 mr10 txt-center txt-shadow10'>.txt-shadow10</div>
  * <div class='col col--2 p10 mr10 txt-center txt-shadow5-bold'>.txt-shadow20-bold</div>
