@@ -13,7 +13,9 @@
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint .",
     "lint": "npm run lint:css && npm run lint:js",
-    "start": "npm run build:svg && nodemon scripts/serve -w src -w site -e js,css --exec babel-node",
+    "open": "opn http://localhost:9967/assembly",
+    "serve": "nodemon scripts/serve -w src -w site -e js,css --exec babel-node",
+    "start": "npm run build:svg && npm-run-all --parallel serve open",
     "test:svgs": "tape test/test-icons.js | tap-spec",
     "test": "npm run lint && npm run test:svgs"
   },
@@ -53,6 +55,7 @@
     "mkdirp": "^0.5.1",
     "nodemon": "^1.11.0",
     "npm-run-all": "^3.1.2",
+    "opn-cli": "^3.1.0",
     "pify": "^2.3.0",
     "postcss": "^5.2.6",
     "postcss-custom-media": "^5.0.1",

@@ -17,7 +17,7 @@ To allow for this, Assembly resets all browser-default margins, paddings, border
 
 [The \`border-box\` box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) allows for more intuitive styling than the default, \`content-box\` model.
 
-Assembly's use of '\`border-box\` means, for example, that when you set a \`w300\` class, your element will always be 300 pixels wide, regardless of its padding and borders.
+Assembly's use of \`border-box\` means, for example, that when you set a \`w300\` class, your element will always be 300 pixels wide, regardless of its padding and borders.
 `;
 
 class Reset extends React.Component {
