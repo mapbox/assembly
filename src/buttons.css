@@ -96,99 +96,104 @@
 
 /* Color variations */
 .btn.bg-gray:hover,
-.btn.bg-gray.is-active { background-color: var(--gray-dark); }
+.btn.bg-gray.is-active { background-color: var(--gray-dark) !important; }
 .btn.btn--stroke.color-gray:hover,
-.btn.btn--stroke.color-gray.is-active { color: var(--gray-dark); }
+.btn.btn--stroke.color-gray.is-active { color: var(--gray-dark) !important; }
 
 .btn.bg-pink:hover,
-.btn.bg-pink.is-active { background-color: var(--pink-dark); }
+.btn.bg-pink.is-active { background-color: var(--pink-dark) !important; }
 .btn.btn--stroke.color-pink:hover,
-.btn.btn--stroke.color-pink.is-active { color: var(--pink-dark); }
+.btn.btn--stroke.color-pink.is-active { color: var(--pink-dark) !important; }
 
 .btn.bg-red:hover,
-.btn.bg-red.is-active { background-color: var(--red-dark); }
+.btn.bg-red.is-active { background-color: var(--red-dark) !important; }
 .btn.btn--stroke.color-red:hover,
-.btn.btn--stroke.color-red.is-active { color: var(--red-dark); }
+.btn.btn--stroke.color-red.is-active { color: var(--red-dark) !important; }
 
 .btn.bg-orange:hover,
-.btn.bg-orange.is-active { background-color: var(--orange-dark); }
+.btn.bg-orange.is-active { background-color: var(--orange-dark) !important; }
 .btn.btn--stroke.color-orange:hover,
-.btn.btn--stroke.color-orange.is-active { color: var(--orange-dark); }
+.btn.btn--stroke.color-orange.is-active { color: var(--orange-dark) !important; }
 
 .btn.bg-yellow:hover,
-.btn.bg-yellow.is-active { background-color: var(--yellow-dark); }
+.btn.bg-yellow.is-active { background-color: var(--yellow-dark) !important; }
 .btn.btn--stroke.color-yellow:hover,
-.btn.btn--stroke.color-yellow.is-active { color: var(--yellow-dark); }
+.btn.btn--stroke.color-yellow.is-active { color: var(--yellow-dark) !important; }
 
 .btn.bg-green:hover,
-.btn.bg-green.is-active { background-color: var(--green-dark); }
+.btn.bg-green.is-active { background-color: var(--green-dark) !important; }
 .btn.btn--stroke.color-green:hover,
-.btn.btn--stroke.color-green.is-active { color: var(--green-dark); }
+.btn.btn--stroke.color-green.is-active { color: var(--green-dark) !important; }
 
 .btn.bg-teal:hover,
-.btn.bg-teal.is-active { background-color: var(--teal-dark); }
+.btn.bg-teal.is-active { background-color: var(--teal-dark) !important; }
 .btn.btn--stroke.color-teal:hover,
-.btn.btn--stroke.color-teal.is-active { color: var(--teal-dark); }
+.btn.btn--stroke.color-teal.is-active { color: var(--teal-dark) !important; }
+
+.btn.bg-blue:hover,
+.btn.bg-blue.is-active { background-color: var(--blue-dark) !important; }
+.btn.btn--stroke.color-blue:hover,
+.btn.btn--stroke.color-blue.is-active { color: var(--blue-dark) !important; }
 
 .btn.bg-purple:hover,
-.btn.bg-purple.is-active { background-color: var(--purple-dark); }
+.btn.bg-purple.is-active { background-color: var(--purple-dark) !important; }
 .btn.btn--stroke.color-purple:hover,
-.btn.btn--stroke.color-purple.is-active { color: var(--purple-dark); }
+.btn.btn--stroke.color-purple.is-active { color: var(--purple-dark) !important; }
 
 .btn.bg-white:hover,
-.btn.bg-white.is-active { background-color: var(--gray-faint); }
+.btn.bg-white.is-active { background-color: var(--gray-faint) !important; }
 .btn.btn--stroke.color-white:hover,
-.btn.btn--stroke.color-white.is-active { color: var(--gray-faint); }
+.btn.btn--stroke.color-white.is-active { color: var(--gray-faint) !important; }
 
 .btn.bg-lighten5:hover,
-.btn.bg-lighten5.is-active { background-color: transparent; }
+.btn.bg-lighten5.is-active { background-color: transparent !important; }
 .btn.btn--stroke.color-lighten5:hover,
-.btn.btn--stroke.color-lighten5.is-active { color: transparent; }
+.btn.btn--stroke.color-lighten5.is-active { color: transparent !important; }
 
 .btn.bg-lighten10:hover,
-.btn.bg-lighten10.is-active { background-color: var(--lighten5); }
+.btn.bg-lighten10.is-active { background-color: var(--lighten5) !important; }
 .btn.btn--stroke.color-lighten10:hover,
-.btn.btn--stroke.color-lighten10.is-active { color: var(--lighten5); }
+.btn.btn--stroke.color-lighten10.is-active { color: var(--lighten5) !important; }
 
 .btn.bg-lighten25:hover,
-.btn.bg-lighten25.is-active { background-color: var(--lighten10); }
+.btn.bg-lighten25.is-active { background-color: var(--lighten10) !important; }
 .btn.btn--stroke.color-lighten25:hover,
-.btn.btn--stroke.color-lighten25.is-active { color: var(--lighten10); }
+.btn.btn--stroke.color-lighten25.is-active { color: var(--lighten10) !important; }
 
 .btn.bg-lighten50:hover,
-.btn.bg-lighten50.is-active { background-color: var(--lighten25); }
+.btn.bg-lighten50.is-active { background-color: var(--lighten25) !important; }
 .btn.btn--stroke.color-lighten50:hover,
-.btn.btn--stroke.color-lighten50.is-active { color: var(--lighten25); }
+.btn.btn--stroke.color-lighten50.is-active { color: var(--lighten25) !important; }
 
 .btn.bg-lighten75:hover,
-.btn.bg-lighten75.is-active { background-color: var(--lighten50); }
+.btn.bg-lighten75.is-active { background-color: var(--lighten50) !important; }
 .btn.btn--stroke.color-lighten75:hover,
-.btn.btn--stroke.color-lighten75.is-active { color: var(--lighten50); }
+.btn.btn--stroke.color-lighten75.is-active { color: var(--lighten50) !important; }
 
 .btn.bg-darken5:hover,
-.btn.bg-darken5.is-active { background-color: var(--darken10); }
+.btn.bg-darken5.is-active { background-color: var(--darken10) !important; }
 .btn.btn--stroke.color-darken5:hover,
-.btn.btn--stroke.color-darken5.is-active { color: var(--darken10); }
+.btn.btn--stroke.color-darken5.is-active { color: var(--darken10) !important; }
 
 .btn.bg-darken10:hover,
-.btn.bg-darken10.is-active { background-color: var(--darken25); }
+.btn.bg-darken10.is-active { background-color: var(--darken25) !important; }
 .btn.btn--stroke.color-darken10:hover,
-.btn.btn--stroke.color-darken10.is-active { color: var(--darken25); }
+.btn.btn--stroke.color-darken10.is-active { color: var(--darken25) !important; }
 
 .btn.bg-darken25:hover,
-.btn.bg-darken25.is-active { background-color: var(--darken50); }
+.btn.bg-darken25.is-active { background-color: var(--darken50) !important; }
 .btn.btn--stroke.color-darken25:hover,
-.btn.btn--stroke.color-darken25.is-active { color: var(--darken50); }
+.btn.btn--stroke.color-darken25.is-active { color: var(--darken50) !important; }
 
 .btn.bg-darken50:hover,
-.btn.bg-darken50.is-active { background-color: var(--darken75); }
+.btn.bg-darken50.is-active { background-color: var(--darken75) !important; }
 .btn.btn--stroke.color-darken50:hover,
-.btn.btn--stroke.color-darken50.is-active { color: var(--darken75); }
+.btn.btn--stroke.color-darken50.is-active { color: var(--darken75) !important; }
 
 .btn.bg-darken75:hover,
-.btn.bg-darken75.is-active { background-color: var(--black); }
+.btn.bg-darken75.is-active { background-color: var(--black) !important; }
 .btn.btn--stroke.color-darken75:hover,
-.btn.btn--stroke.color-darken75.is-active { color: var(--black); }
+.btn.btn--stroke.color-darken75.is-active { color: var(--black) !important; }
 
 /**
  * Classes to create pill button groups. Every button in a pill group
