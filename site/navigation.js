@@ -23,7 +23,7 @@ class Navigation extends React.Component {
     );
 
     return (<div className='p20 fixed top left'>
-      <div className='txt-m strong mb20'>Assembly</div>
+      <div className='txt-m txt-bold mb20'>Assembly</div>
       {navEls}
     </div>);
   }
