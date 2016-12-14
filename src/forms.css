@@ -175,7 +175,7 @@
  * <label class="checkbox-container">
  *   <input type='checkbox' value='magic'>
  *   <div class="checkbox">
- *     <svg class="icn"><use xlink:href="#base-svg-check" /></svg>
+ *     <svg class="icon"><use xlink:href="#base-svg-check" /></svg>
  *   </div>
  *   Magi
  * </label>
@@ -255,7 +255,7 @@
 }
 
 /* Unchecked state */
-.checkbox > .icn {
+.checkbox > .icon {
   display: none;
   position: absolute;
   top: -2px;
@@ -279,8 +279,8 @@
 }
 
 /* Checked state */
-input:checked + .checkbox > .icn,
-.checkbox.is-active > .icn {
+input:checked + .checkbox > .icon,
+.checkbox.is-active > .icon {
   display: block;
 }
 input:checked + .radio::before,

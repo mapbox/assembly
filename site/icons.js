@@ -14,7 +14,7 @@ class Icons extends React.Component {
             {icon}
           </div>
           <svg
-            className='icn'
+            className='icon'
             dangerouslySetInnerHTML={{ __html: `<use xlink:href="#icon-${icon}"></use>` }}
           />
         </div>
@@ -27,7 +27,7 @@ class Icons extends React.Component {
           Icons
         </h1>
         <p className='mb20 prose'>
-          This page lists and displays all available icons. To learn more about how to use icons, look at <a href='/assembly/documentation/#Icons'>the <code>.icn</code> class documentation</a>.
+          This page lists and displays all available icons. To learn more about how to use icons, look at <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>.
         </p>
         <div className='flx flx-wrap txt-s'>
           {iconEls}
