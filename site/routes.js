@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-/* eslint-disable */
-'use strict';
-
 const React = require('react');
 const documentationCss = require('documentation-css');
 const { Page } = require('./page');
 const { Documentation } = require('./documentation/documentation');
 const { Home } = require('./home');
+const { Icons } = require('./icons');
 const { Examples } = require('./examples');
 const { Debug } = require('./debug');
 const fs = require('fs');
@@ -34,6 +32,9 @@ const routes = [
     name: 'Examples',
     route: '/examples/'
   }, {
+    name: 'Icons',
+    route: '/icons/'
+  }, {
     name: 'Debug',
     route: '/debug/'
   }];
@@ -41,7 +42,7 @@ const routes = [
 function buildRoutes() {
 
 
-  const routesWithComponents = routes.map(r => {
+  const routesWithComponents = routes.map((r) => {
     const navItems = {
       main: routes,
       secondary: null,
@@ -53,7 +54,7 @@ function buildRoutes() {
 
     // Add component and one-off props for components.
     switch (r.name) {
-      case 'Documentation':
+      case 'Documentation': {
         const assemblyCss = path.join(__dirname, '../dist/assembly.css');
         let entryContent;
         try {
@@ -69,7 +70,7 @@ function buildRoutes() {
         props.documentationData = documentationData;
         navItems.secondary = [];
 
-        function buildSecondaryNav(entry) {
+        const buildSecondaryNav = (entry) => {
           if (entry.type === 'section') {
             navItems.secondary.push({
               name: entry.title,
@@ -77,7 +78,7 @@ function buildRoutes() {
             });
             entry.members.forEach((member) => buildSecondaryNav(member));
           }
-        }
+        };
         documentationData.forEach((entry) => buildSecondaryNav(entry));
 
         r.component = (
@@ -86,6 +87,7 @@ function buildRoutes() {
           </Page>
         );
         break;
+      }
       case 'Home':
         r.component = (
           <Page navItems={navItems}>
@@ -97,6 +99,13 @@ function buildRoutes() {
         r.component = (
           <Page navItems={navItems}>
             <Examples {...props} />
+          </Page>
+        );
+        break;
+      case 'Icons':
+        r.component = (
+          <Page navItems={navItems}>
+            <Icons {...props} />
           </Page>
         );
         break;

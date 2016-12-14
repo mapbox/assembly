@@ -33,6 +33,7 @@
 .flx { display: flex; }
 .flx-inline { display: inline-flex; }
 .flx-column { flex-direction: column; }
+.flx-wrap { flex-wrap: wrap; }
 .flx-end { justify-content: flex-end; }
 .flx-center-x { justify-content: center; }
 .flx-center-y { align-items: center; }
@@ -50,6 +51,7 @@
   .flx-lg { display: flex; }
   .flx-none-lg { flex: none; }
   .flx-column-lg { flex-direction: column; }
+  .flx-wrap-lg { flex-wrap: wrap; }
   .flx-end-lg { justify-content: flex-end; }
   .flx-center-x-lg { justify-content: center; }
   .flx-center-y-lg { align-items: center; }
@@ -65,6 +67,7 @@
   .flx-md { display: flex; }
   .flx-none-md { flex: none; }
   .flx-column-md { flex-direction: column; }
+  .flx-wrap-md { flex-wrap: wrap; }
   .flx-end-md { justify-content: flex-end; }
   .flx-center-x-md { justify-content: center; }
   .flx-center-y-md { align-items: center; }
@@ -80,6 +83,7 @@
   .flx-sm { display: flex; }
   .flx-none-sm { flex: none; }
   .flx-column-sm { flex-direction: column; }
+  .flx-wrap-sm { flex-wrap: wrap; }
   .flx-end-sm { justify-content: flex-end; }
   .flx-center-x-sm { justify-content: center; }
   .flx-center-y-sm { align-items: center; }
