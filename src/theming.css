@@ -201,81 +201,198 @@
 /** @endgroup */
 
 /**
- * State classes.
- * - Control the shadow and opacity of elements in a hover, focus, or active state.
- * - Start with a prefix of `hover-*`, `focus-*`, or `active-*`
- * - Complete the class with any of assembly's `shadow`, `txt-shadow`, or `alpha` classes
+ * Change styling based on element hover, focus, and active states.
+ * @section State modifiers
+ * @memberof Theming
+ */
+
+/**
+ * Control the shadow of elements in a hover, focus, or active state.
  *
  * @group
- * @memberof Theming
+ * @memberof State modifiers
  * @example
- * <div class='col col--2 bg-gray color-white p10 hover-shadow30'>.hover-shadow30</div>
+ * <div class='w400 hover-shadow-darken25'>.hover-shadow-darken25</div>
+ * <div class='w400 is-active active-shadow-darken25'>.active-shadow-darken25.is-active</div>
  */
-.hover-shadow5:hover,
-.focus-shadow5:focus,
-.active-shadow5:active { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3) !important; }
-.hover-shadow10:hover,
-.focus-shadow10:focus,
-.active-shadow10:active { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3) !important; }
-.hover-shadow20:hover,
-.focus-shadow20:focus,
-.active-shadow20:active { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3) !important; }
-.hover-shadow30:hover,
-.focus-shadow30:focus,
-.active-shadow30:active { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3) !important; }
+.hover-shadow-darken5:hover,
+.focus-shadow-darken5:focus,
+.active-shadow-darken5:active,
+.active-shadow-darken5.is-active { box-shadow: 0 0 10px 2px var(--darken5) !important; }
+.hover-shadow-darken10:hover,
+.focus-shadow-darken10:focus,
+.active-shadow-darken10:active,
+.active-shadow-darken10.is-active { box-shadow: 0 0 10px 2px var(--darken10) !important; }
+.hover-shadow-darken25:hover,
+.focus-shadow-darken25:focus,
+.active-shadow-darken25:active,
+.active-shadow-darken25.is-active { box-shadow: 0 0 10px 2px var(--darken25) !important; }
+.hover-shadow-darken50:hover,
+.focus-shadow-darken50:focus,
+.active-shadow-darken50:active,
+.active-shadow-darken50.is-active { box-shadow: 0 0 10px 2px var(--darken50) !important; }
+
+.hover-shadow-lighten5:hover,
+.focus-shadow-lighten5:focus,
+.active-shadow-lighten5:active,
+.active-shadow-lighten5.is-active { box-shadow: 0 0 10px 2px var(--lighten5) !important; }
+.hover-shadow-lighten10:hover,
+.focus-shadow-lighten10:focus,
+.active-shadow-lighten10:active,
+.active-shadow-lighten10.is-active { box-shadow: 0 0 10px 2px var(--lighten10) !important; }
+.hover-shadow-lighten25:hover,
+.focus-shadow-lighten25:focus,
+.active-shadow-lighten25:active,
+.active-shadow-lighten25.is-active { box-shadow: 0 0 10px 2px var(--lighten25) !important; }
+.hover-shadow-lighten50:hover,
+.focus-shadow-lighten50:focus,
+.active-shadow-lighten50:active,
+.active-shadow-lighten50.is-active { box-shadow: 0 0 10px 2px var(--lighten50) !important; }
 /** @endgroup */
 
-.hover-shadow5-bold:hover,
-.focus-shadow5-bold:focus,
-.active-shadow5-bold:active { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9) !important; }
-.hover-shadow10-bold:hover,
-.focus-shadow10-bold:focus,
-.active-shadow10-bold:active { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9) !important; }
-.hover-shadow20-bold:hover,
-.focus-shadow20-bold:focus,
-.active-shadow20-bold:active { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9) !important; }
-.hover-shadow30-bold:hover,
-.focus-shadow30-bold:focus,
-.active-shadow30-bold:active { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9) !important; }
+.hover-shadow-darken5-bold:hover,
+.focus-shadow-darken5-bold:focus,
+.active-shadow-darken5-bold:active { box-shadow: 0 0 20px 2px var(--darken5) !important; }
+.hover-shadow-darken10-bold:hover,
+.focus-shadow-darken10-bold:focus,
+.active-shadow-darken10-bold:active { box-shadow: 0 0 20px 2px var(--darken10) !important; }
+.hover-shadow-darken25-bold:hover,
+.focus-shadow-darken25-bold:focus,
+.active-shadow-darken25-bold:active { box-shadow: 0 0 20px 2px var(--darken25) !important; }
+.hover-shadow-darken50-bold:hover,
+.focus-shadow-darken50-bold:focus,
+.active-shadow-darken50-bold:active { box-shadow: 0 0 20px 2px var(--darken50) !important; }
 
-.hover-txt-shadow5:hover,
-.focus-txt-shadow5:focus,
-.active-txt-shadow5:active { text-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important; }
-.hover-txt-shadow10:hover,
-.focus-txt-shadow10:focus,
-.active-txt-shadow10:active { text-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important; }
-.hover-txt-shadow20:hover,
-.focus-txt-shadow20:focus,
-.active-txt-shadow20:active { text-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important; }
-.hover-txt-shadow30:hover,
-.focus-txt-shadow30:focus,
-.active-txt-shadow30:active { text-shadow: 0 0 30px rgba(0, 0, 0, 0.3) !important; }
+.hover-shadow-lighten5-bold:hover,
+.focus-shadow-lighten5-bold:focus,
+.active-shadow-lighten5-bold:active { box-shadow: 0 0 20px 2px var(--lighten5) !important; }
+.hover-shadow-lighten10-bold:hover,
+.focus-shadow-lighten10-bold:focus,
+.active-shadow-lighten10-bold:active { box-shadow: 0 0 20px 2px var(--lighten10) !important; }
+.hover-shadow-lighten25-bold:hover,
+.focus-shadow-lighten25-bold:focus,
+.active-shadow-lighten25-bold:active { box-shadow: 0 0 20px 2px var(--lighten25) !important; }
+.hover-shadow-lighten50-bold:hover,
+.focus-shadow-lighten50-bold:focus,
+.active-shadow-lighten50-bold:active { box-shadow: 0 0 20px 2px var(--lighten50) !important; }
 
-.hover-txt-shadow5-bold:hover,
-.focus-txt-shadow5-bold:focus,
-.active-txt-shadow5-bold:active { text-shadow: 0 0 5px rgba(0, 0, 0, 0.9) !important; }
-.hover-txt-shadow10-bold:hover,
-.focus-txt-shadow10-bold:focus,
-.active-txt-shadow10-bold:active { text-shadow: 0 0 10px rgba(0, 0, 0, 0.9) !important; }
-.hover-txt-shadow20-bold:hover,
-.focus-txt-shadow20-bold:focus,
-.active-txt-shadow20-bold:active { text-shadow: 0 0 20px rgba(0, 0, 0, 0.9) !important; }
-.hover-txt-shadow30-bold:hover,
-.focus-txt-shadow30-bold:focus,
-.active-txt-shadow30-bold:active { text-shadow: 0 0 30px rgba(0, 0, 0, 0.9) !important; }
-
+/**
+ * Control the opacity of elements in a hover, focus, or active state.
+ *
+ * @group
+ * @memberof State modifiers
+ * @example
+ * <div class='w400 hover-alpha25'>.hover-alpha25</div>
+ */
 .hover-alpha0:hover,
 .focus-alpha0:focus,
+.focus-alpha0.is-active,
 .active-alpha0:active { opacity: 0 !important; }
 .hover-alpha25:hover,
 .focus-alpha25:focus,
+.focus-alpha25.is-active,
 .active-alpha25:active { opacity: 0.25 !important; }
 .hover-alpha50:hover,
 .focus-alpha50:focus,
+.focus-alpha50.is-active,
 .active-alpha50:active { opacity: 0.5 !important; }
 .hover-alpha75:hover,
 .focus-alpha75:focus,
+.focus-alpha75.is-active,
 .active-alpha75:active { opacity: 0.75 !important; }
 .hover-alpha100:hover,
 .focus-alpha100:focus,
+.focus-alpha100.is-active,
 .active-alpha100:active { opacity: 1 !important; }
+/** @endgroup */
+
+/**
+ * Don't show shadows on state change. Useful for nullifying default button and form styles.
+ *
+ * @group
+ * @memberof State modifiers
+ * @example
+ * <div class='btn hover-noshadow'>.btn.hover-noshadow</div>
+ */
+.hover-noshadow:hover,
+.focus-noshadow:focus,
+.active-noshadow.is-active,
+.active-noshadow:active { box-shadow: none !important; }
+/** @endgroup */
+
+/**
+ * Control the color of elements in a hover state. TODO: Add actives, plus the same thing for strokes;
+ *
+ * @group
+ * @memberof State modifiers
+ * @example
+ * <div class='w400 hover-bg-orange-dark'>.hover-bg-orange-dark</div>
+ */
+.active-bg-gray-dark.is-active,
+.active-bg-gray-dark:active,
+.hover-bg-gray-dark:hover { background-color: var(--gray-dark) !important; }
+.active-bg-gray.is-active,
+.active-bg-gray:active,
+.hover-bg-gray:hover { background-color: var(--gray) !important; }
+.active-bg-gray-light.is-active,
+.active-bg-gray-light:active,
+.hover-bg-gray-light:hover { background-color: var(--gray-light) !important; }
+.active-bg-gray-faint.is-active,
+.active-bg-gray-faint:active,
+.hover-bg-gray-faint:hover { background-color: var(--gray-faint) !important; }
+
+.hover-bg-pink-dark:hover { background-color: var(--pink-dark) !important; }
+.hover-bg-pink:hover { background-color: var(--pink) !important; }
+.hover-bg-pink-light:hover { background-color: var(--pink-light) !important; }
+.hover-bg-pink-faint:hover { background-color: var(--pink-faint) !important; }
+
+.hover-bg-red-dark:hover { background-color: var(--red-dark) !important; }
+.hover-bg-red:hover { background-color: var(--red) !important; }
+.hover-bg-red-light:hover { background-color: var(--red-light) !important; }
+.hover-bg-red-faint:hover { background-color: var(--red-faint) !important; }
+
+.hover-bg-orange-dark:hover { background-color: var(--orange-dark) !important; }
+.hover-bg-orange:hover { background-color: var(--orange) !important; }
+.hover-bg-orange-light:hover { background-color: var(--orange-light) !important; }
+.hover-bg-orange-faint:hover { background-color: var(--orange-faint) !important; }
+
+.hover-bg-yellow-dark:hover { background-color: var(--yellow-dark) !important; }
+.hover-bg-yellow:hover { background-color: var(--yellow) !important; }
+.hover-bg-yellow-light:hover { background-color: var(--yellow-light) !important; }
+.hover-bg-yellow-faint:hover { background-color: var(--yellow-faint) !important; }
+
+.hover-bg-green-dark:hover { background-color: var(--green-dark) !important; }
+.hover-bg-green:hover { background-color: var(--green) !important; }
+.hover-bg-green-light:hover { background-color: var(--green-light) !important; }
+.hover-bg-green-faint:hover { background-color: var(--green-faint) !important; }
+
+.hover-bg-teal-dark:hover { background-color: var(--teal-dark) !important; }
+.hover-bg-teal:hover { background-color: var(--teal) !important; }
+.hover-bg-teal-light:hover { background-color: var(--teal-light) !important; }
+.hover-bg-teal-faint:hover { background-color: var(--teal-faint) !important; }
+
+.hover-bg-blue-dark:hover { background-color: var(--blue-dark) !important; }
+.hover-bg-blue:hover { background-color: var(--blue) !important; }
+.hover-bg-blue-light:hover { background-color: var(--blue-light) !important; }
+.hover-bg-blue-faint:hover { background-color: var(--blue-faint) !important; }
+
+.hover-bg-purple-dark:hover { background-color: var(--purple-dark) !important; }
+.hover-bg-purple:hover { background-color: var(--purple) !important; }
+.hover-bg-purple-light:hover { background-color: var(--purple-light) !important; }
+.hover-bg-purple-faint:hover { background-color: var(--purple-faint) !important; }
+
+.hover-bg-darken5:hover { background-color: var(--darken5) !important; }
+.hover-bg-darken10:hover { background-color: var(--darken10) !important; }
+.hover-bg-darken25:hover { background-color: var(--darken25) !important; }
+.hover-bg-darken50:hover { background-color: var(--darken50) !important; }
+.hover-bg-darken75:hover { background-color: var(--darken75) !important; }
+
+.hover-bg-lighten5:hover { background-color: var(--lighten5) !important; }
+.hover-bg-lighten10:hover { background-color: var(--lighten10) !important; }
+.hover-bg-lighten25:hover { background-color: var(--lighten25) !important; }
+.hover-bg-lighten50:hover { background-color: var(--lighten50) !important; }
+.hover-bg-lighten75:hover { background-color: var(--lighten75) !important; }
+
+.hover-bg-black:hover { background-color: var(--black) !important; }
+.hover-bg-white:hover { background-color: var(--white) !important; }
+/** @endgroup */

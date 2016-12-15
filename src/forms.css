@@ -316,6 +316,8 @@
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
+  transition: box-shadow 0.125s;
+  box-shadow: 0 0 0 0 transparent;
 }
 
 /* Primary checkbox styles */
@@ -379,6 +381,8 @@
   border-style: solid;
   border-color: currentColor;
   color: var(--blue);
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.125s;
 }
 
 .switch::after {
@@ -399,6 +403,13 @@
 .checkbox--s-label,
 .radio--s-label {
   top: 0;
+}
+
+/* Shared default hover styles */
+.checkbox:hover,
+.radio:hover,
+.switch:hover {
+  box-shadow: 0 0 7px 2px var(--darken25);
 }
 
 /* State management for checkboxes and radio inputs */
