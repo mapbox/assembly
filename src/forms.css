@@ -379,6 +379,7 @@
   border-style: solid;
   border-color: currentColor;
   color: var(--blue);
+  transition: color 0.125s, background-color 0.125s, border-color 0.125s;
 }
 
 .switch::after {
@@ -391,7 +392,7 @@
   height: 12px;
   left: 2px;
   top: 2px;
-  transition: left 0.125s;
+  transition: left 0.125s, background-color 0.125s;
 }
 
 /* align labels with small text */
@@ -423,6 +424,14 @@ input:checked + .radio,
 }
 
 /* state management for switches */
+input:not(:checked) + .switch:not(.is-active):hover::after {
+  background-color: var(--blue-dark);
+}
+
+.switch:hover {
+  color: var(--blue-dark);
+}
+
 .is-active.switch::after,
 input:checked + .switch::after {
   left: 18px;
@@ -432,7 +441,7 @@ input:checked + .switch::after {
 .is-active.switch,
 input:checked + .switch {
   border-color: transparent !important;
-  background-color: currentColor;
+  background-color: var(--blue-dark) !important;
 }
 
 /* Color variations for checkboxes */
@@ -569,119 +578,19 @@ input:checked + .color-black,
 }
 
 /* Color variations for switches */
-.is-active.switch--handle-gray-faint::after,
-input:checked + .switch--handle-gray-faint::after {
-  background-color: var(--gray-faint) !important;
+.switch.color-purple:hover {
+  border-color: var(--purple-dark) !important;
 }
 
-.is-active.switch--handle-gray-light::after,
-input:checked + .switch--handle-gray-light::after {
-  background-color: var(--gray-light) !important;
-}
-
-.is-active.switch--handle-gray::after,
-input:checked + .switch--handle-gray::after {
-  background-color: var(--gray) !important;
-}
-
-.is-active.switch--handle-gray-dark::after,
-input:checked + .switch--handle-gray-dark::after {
-  background-color: var(--gray-dark) !important;
-}
-
-.is-active.switch--handle-pink::after,
-input:checked + .switch--handle-pink::after {
-  background-color: var(--pink) !important;
-}
-
-.is-active.switch--handle-red::after,
-input:checked + .switch--handle-red::after {
-  background-color: var(--red) !important;
-}
-
-.is-active.switch--handle-orange::after,
-input:checked + .switch--handle-orange::after {
-  background-color: var(--orange) !important;
-}
-
-.is-active.switch--handle-yellow::after,
-input:checked + .switch--handle-yellow::after {
-  background-color: var(--yellow) !important;
-}
-
-.is-active.switch--handle-green::after,
-input:checked + .switch--handle-green::after {
-  background-color: var(--green) !important;
-}
-
-.is-active.switch--handle-teal::after,
-input:checked + .switch--handle-teal::after {
-  background-color: var(--teal) !important;
-}
-
-.is-active.switch--handle-blue::after,
-input:checked + .switch--handle-blue::after {
-  background-color: var(--blue) !important;
-}
-
+/* make switch background dark purple when active */
+.is-active.switch.color-purple,
+input:checked + .switch.color-purple,
+/* make dot dark purple on hover, if not active  */
+input:not(:checked) + .switch.color-purple:not(.is-active):hover::after,
+/* use modifier class to make the dot dark purple on hover, if active  */
 .is-active.switch--handle-purple::after,
 input:checked + .switch--handle-purple::after {
-  background-color: var(--purple) !important;
-}
-
-.is-active.switch--handle-darken5::after,
-input:checked + .switch--handle-darken5::after {
-  background-color: var(--darken5) !important;
-}
-
-.is-active.switch--handle-darken10::after,
-input:checked + .switch--handle-darken10::after {
-  background-color: var(--darken10) !important;
-}
-
-.is-active.switch--handle-darken25::after,
-input:checked + .switch--handle-darken25::after {
-  background-color: var(--darken25) !important;
-}
-
-.is-active.switch--handle-darken50::after,
-input:checked + .switch--handle-darken50::after {
-  background-color: var(--darken50) !important;
-}
-
-.is-active.switch--handle-darken75::after,
-input:checked + .switch--handle-darken75::after {
-  background-color: var(--darken75) !important;
-}
-
-.is-active.switch--handle-lighten5::after,
-input:checked + .switch--handle-lighten5::after {
-  background-color: var(--lighten5) !important;
-}
-
-.is-active.switch--handle-lighten10::after,
-input:checked + .switch--handle-lighten10::after {
-  background-color: var(--lighten10) !important;
-}
-
-.is-active.switch--handle-lighten25::after,
-input:checked + .switch--handle-lighten25::after {
-  background-color: var(--lighten25) !important;
-}
-
-.is-active.switch--handle-lighten50::after,
-input:checked + .switch--handle-lighten50::after {
-  background-color: var(--lighten50) !important;
-}
-
-.is-active.switch--handle-lighten75::after,
-input:checked + .switch--handle-lighten75::after {
-  background-color: var(--lighten75) !important;
-}
-
-.is-active.switch--handle-black::after,
-input:checked + .switch--handle-black::after {
-  background-color: var(--black) !important;
+  background-color: var(--purple-dark) !important;
 }
 
 /* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
