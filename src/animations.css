@@ -43,7 +43,9 @@
 .animation--delay { animation-delay: 1s; }
 /** @endgroup */
 
-.loading-light:after, .loading-dark:after {
+.loading-light::after,
+.loading-dark::after {
+  margin: 10px;
   content: '';
   display: block;
   height: 40px;
@@ -52,12 +54,12 @@
   animation: loading 1s infinite linear;
 }
 
-.loading-light:after {
+.loading-light::after {
   border: var(--lighten10) 3px solid;
   border-top-color: var(--gray-faint);
 }
 
-.loading-dark:after {
+.loading-dark::after {
   border: var(--darken10) 3px solid;
   border-top-color: var(--gray-dark);
 }
