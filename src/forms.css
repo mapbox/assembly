@@ -586,7 +586,8 @@ input:checked + .color-black,
 .is-active.switch.color-purple,
 input:checked + .switch.color-purple,
 /* make dot dark purple on hover, if not active  */
-input:not(:checked) + .switch.color-purple:not(.is-active):hover::after,
+input:not(:checked) + .switch.color-purple:hover::after,
+:not(input) + .switch.color-purple:not(.is-active):hover::after,
 /* use modifier class to make the dot dark purple on hover, if active  */
 .is-active.switch--handle-purple::after,
 input:checked + .switch--handle-purple::after {
