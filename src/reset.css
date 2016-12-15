@@ -94,6 +94,11 @@ img {
   vertical-align: top;
 }
 
+video {
+  width: 100%;
+  height: auto;
+}
+
 q::before,
 q::after {
   content: '';
