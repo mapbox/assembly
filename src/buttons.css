@@ -259,35 +259,36 @@ against .round class */
 /* 1px margins create gutters. -2px margins blend borders */
 
 .btn.btn--pill-hc {
-  border-radius: 0;
+  border-radius: 0 !important;
   margin-left: 1px;
   margin-right: 1px;
 }
 
+/* !importants here to override .round classes */
 .btn.btn--pill-hl {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 .btn.btn--pill-hr {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 
 .btn.btn--pill-vc {
-  border-radius: 0;
+  border-radius: 0 !important;
   margin-top: 1px;
   margin-bottom: 1px;
 }
 
 .btn.btn--pill-vt {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 
 .btn.btn--pill-vb {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
 }
 
 .btn--stroke.btn--pill-hc {
