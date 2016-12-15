@@ -195,7 +195,7 @@
  *   </label>
  * </div>
  * <div class='txt-s'>
- *   <label class='checkbox-container'>
+ *   <label class='checkbox-container mr10'>
  *     <input type='checkbox' value='magic'>
  *     <div class='checkbox checkbox--stroke checkbox--s-label color-red'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
@@ -204,7 +204,7 @@
  *   </label>
  * </div>
  * <div class='mb10'>
- *   <label class='checkbox-container'>
+ *   <label class='checkbox-container mr10'>
  *     <input type='checkbox' value='magic'>
  *     <div class='checkbox'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
@@ -237,14 +237,14 @@
  * @memberof Radio buttons
  * @example
  * <div class='mb10'>
- *   <label class='radio-container'>
+ *   <label class='radio-container mr10'>
  *     <input name='radio-basic' value='magic' type='radio'>
  *     <div class='radio'></div>
  *     Magic radio
  *   </label>
  * </div>
  * <div class='txt-s'>
- *   <label class='radio-container'>
+ *   <label class='radio-container mr10'>
  *     <input name='radio-basic' value='magic' type='radio'>
  *     <div class='radio radio--s-label color-yellow'></div>
  *     Magic radio
@@ -252,8 +252,45 @@
  * </div>
  */
 
+/**
+ * The switch markup must fit the following pattern.
+ *
+ * Consists of
+ * - A wrapping `<label>` with the class `switch-container`.
+ * - An `<input type='checkbox'>`.
+ * - A `<div>` with the class `switch`.
+ *
+ * Variations:
+ * - Modify the active state of the switch handle with `switch--handle-{color}`.
+ * - Modify the color of the dot when inactive, the border when inactive and the background in active state with `color--{color}`
+ *
+ * The class `switch` and its modifiers can also be used independent
+ * of a `<label>` and `<input>` if you are building a custom components.
+ * In that case, apply the state class `is-active` when it should be checked.
+ *
+ * @section Switches
+ */
+
+/**
+ * @memberof Switches
+ * @example
+ * <label class="switch-container mr10">
+ *   <input type='checkbox' value='magic'>
+ *   <div class="switch">
+ *   </div>
+ * </label>
+ * <label class="switch-container">
+ *   <input type='checkbox' value='magic'>
+ *   <div class='switch border--pink color-gray'>
+ *   </div>
+ * </label>
+ */
+
 /* stylelint-disable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
+
+/* shared form styles */
 .checkbox-container,
+.switch-container,
 .radio-container {
   user-select: none;
   display: inline-flex;
@@ -261,6 +298,7 @@
 }
 
 .checkbox-container > input,
+.switch-container > input,
 .radio-container > input {
   position: absolute;
   left: -9999px;
@@ -272,7 +310,6 @@
   width: 20px;
   height: 20px;
   border-radius: var(--border-radius);
-  margin-right: 10px;
   cursor: pointer;
   position: relative;
   top: 2px;
@@ -281,6 +318,7 @@
   border-color: transparent;
 }
 
+/* Primary checkbox styles */
 .checkbox {
   background-color: var(--blue);
   color: #fff;
@@ -292,21 +330,6 @@
   color: var(--blue);
 }
 
-.checkbox--s-label,
-.radio--s-label {
-  top: 0;
-}
-
-.btn:not(.btn--stroke) > .checkbox--stroke {
-  border-color: transparent;
-}
-
-.radio {
-  border-radius: 50%;
-  color: var(--blue);
-  border-color: currentColor;
-}
-
 /* Unchecked state */
 .checkbox > .icon {
   display: none;
@@ -315,6 +338,18 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
+}
+
+/* Ensure checkboxes inside buttons look nice */
+.btn:not(.btn--stroke) > .checkbox--stroke {
+  border-color: transparent;
+}
+
+/* Primary radio styles */
+.radio {
+  border-radius: 50%;
+  color: var(--blue);
+  border-color: currentColor;
 }
 
 .radio::before {
@@ -331,7 +366,42 @@
   display: none;
 }
 
-/* Checked state */
+/* Primary switch styles */
+.switch {
+  position: relative;
+  top: 2px;
+  flex-shrink: 0;
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  border-color: currentColor;
+  color: var(--blue);
+}
+
+.switch::after {
+  background-color: currentColor;
+  position: relative;
+  display: block;
+  content: '';
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  left: 2px;
+  top: 2px;
+  transition: left 0.125s;
+}
+
+/* align labels with small text */
+.switch--s-label,
+.checkbox--s-label,
+.radio--s-label {
+  top: 0;
+}
+
+/* State management for checkboxes and radio inputs */
 input:checked + .checkbox > .icon,
 .checkbox.is-active > .icon {
   display: block;
@@ -352,7 +422,42 @@ input:checked + .radio,
   color: var(--blue-dark);
 }
 
-/* Color variations */
+/* state management for switches */
+.is-active.switch::after,
+input:checked + .switch::after {
+  left: 18px;
+  background-color: #fff;
+}
+
+.is-active.switch,
+input:checked + .switch {
+  border-color: transparent !important;
+  background-color: currentColor;
+}
+
+/* Color variations for checkboxes */
+input:checked + .bg-gray-faint:not(.checkbox--stroke),
+.bg-gray-faint.is-active:not(.checkbox--stroke) {
+  background-color: var(--gray-light) !important;
+}
+input:checked + .color-gray-faint.checkbox--stroke,
+.color-gray-faint.checkbox--stroke.is-active,
+input:checked + .color-gray-faint,
+.color-gray-faint.is-active {
+  color: var(--gray-light) !important;
+}
+
+input:checked + .bg-gray-light:not(.checkbox--stroke),
+.bg-gray-light.is-active:not(.checkbox--stroke) {
+  background-color: var(--gray) !important;
+}
+input:checked + .color-gray-light.checkbox--stroke,
+.color-gray-light.checkbox--stroke.is-active,
+input:checked + .color-gray-light,
+.color-gray-light.is-active {
+  color: var(--gray) !important;
+}
+
 input:checked + .bg-gray:not(.checkbox--stroke),
 .bg-gray.is-active:not(.checkbox--stroke) {
   background-color: var(--gray-dark) !important;
@@ -362,6 +467,17 @@ input:checked + .color-gray.checkbox--stroke,
 input:checked + .color-gray,
 .color-gray.is-active {
   color: var(--gray-dark) !important;
+}
+
+input:checked + .bg-gray-dark:not(.checkbox--stroke),
+.bg-gray-dark.is-active:not(.checkbox--stroke) {
+  background-color: var(--black) !important;
+}
+input:checked + .color-gray-dark.checkbox--stroke,
+.color-gray-dark.checkbox--stroke.is-active,
+input:checked + .color-gray-dark,
+.color-gray-dark.is-active {
+  color: var(--black) !important;
 }
 
 input:checked + .bg-pink:not(.checkbox--stroke),
@@ -440,4 +556,137 @@ input:checked + .color-purple,
 .color-purple.is-active {
   color: var(--purple-dark) !important;
 }
+
+input:checked + .bg-black:not(.checkbox--stroke),
+.bg-black.is-active:not(.checkbox--stroke) {
+  background-color: var(--black) !important;
+}
+input:checked + .color-black.checkbox--stroke,
+.color-black.checkbox--stroke.is-active,
+input:checked + .color-black,
+.color-black.is-active {
+  color: var(--black) !important;
+}
+
+/* Color variations for switches */
+.is-active.switch--handle-gray-faint::after,
+input:checked + .switch--handle-gray-faint::after {
+  background-color: var(--gray-faint) !important;
+}
+
+.is-active.switch--handle-gray-light::after,
+input:checked + .switch--handle-gray-light::after {
+  background-color: var(--gray-light) !important;
+}
+
+.is-active.switch--handle-gray::after,
+input:checked + .switch--handle-gray::after {
+  background-color: var(--gray) !important;
+}
+
+.is-active.switch--handle-gray-dark::after,
+input:checked + .switch--handle-gray-dark::after {
+  background-color: var(--gray-dark) !important;
+}
+
+.is-active.switch--handle-pink::after,
+input:checked + .switch--handle-pink::after {
+  background-color: var(--pink) !important;
+}
+
+.is-active.switch--handle-red::after,
+input:checked + .switch--handle-red::after {
+  background-color: var(--red) !important;
+}
+
+.is-active.switch--handle-orange::after,
+input:checked + .switch--handle-orange::after {
+  background-color: var(--orange) !important;
+}
+
+.is-active.switch--handle-yellow::after,
+input:checked + .switch--handle-yellow::after {
+  background-color: var(--yellow) !important;
+}
+
+.is-active.switch--handle-green::after,
+input:checked + .switch--handle-green::after {
+  background-color: var(--green) !important;
+}
+
+.is-active.switch--handle-teal::after,
+input:checked + .switch--handle-teal::after {
+  background-color: var(--teal) !important;
+}
+
+.is-active.switch--handle-blue::after,
+input:checked + .switch--handle-blue::after {
+  background-color: var(--blue) !important;
+}
+
+.is-active.switch--handle-purple::after,
+input:checked + .switch--handle-purple::after {
+  background-color: var(--purple) !important;
+}
+
+.is-active.switch--handle-darken5::after,
+input:checked + .switch--handle-darken5::after {
+  background-color: var(--darken5) !important;
+}
+
+.is-active.switch--handle-darken10::after,
+input:checked + .switch--handle-darken10::after {
+  background-color: var(--darken10) !important;
+}
+
+.is-active.switch--handle-darken25::after,
+input:checked + .switch--handle-darken25::after {
+  background-color: var(--darken25) !important;
+}
+
+.is-active.switch--handle-darken50::after,
+input:checked + .switch--handle-darken50::after {
+  background-color: var(--darken50) !important;
+}
+
+.is-active.switch--handle-darken75::after,
+input:checked + .switch--handle-darken75::after {
+  background-color: var(--darken75) !important;
+}
+
+.is-active.switch--handle-lighten5::after,
+input:checked + .switch--handle-lighten5::after {
+  background-color: var(--lighten5) !important;
+}
+
+.is-active.switch--handle-lighten10::after,
+input:checked + .switch--handle-lighten10::after {
+  background-color: var(--lighten10) !important;
+}
+
+.is-active.switch--handle-lighten25::after,
+input:checked + .switch--handle-lighten25::after {
+  background-color: var(--lighten25) !important;
+}
+
+.is-active.switch--handle-lighten50::after,
+input:checked + .switch--handle-lighten50::after {
+  background-color: var(--lighten50) !important;
+}
+
+.is-active.switch--handle-lighten75::after,
+input:checked + .switch--handle-lighten75::after {
+  background-color: var(--lighten75) !important;
+}
+
+.is-active.switch--handle-black::after,
+input:checked + .switch--handle-black::after {
+  background-color: var(--black) !important;
+}
+
 /* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
+
+.legend {
+  display: block;
+  width: 100%;
+}
