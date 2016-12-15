@@ -441,8 +441,3 @@ input:checked + .color-purple,
   color: var(--purple-dark) !important;
 }
 /* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
-
-.legend {
-  display: block;
-  width: 100%;
-}

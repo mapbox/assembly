@@ -104,3 +104,8 @@ pre {
   white-space: pre-wrap;
   tab-size: 2;
 }
+
+legend {
+  display: block;
+  width: 100%;
+}

@@ -8,6 +8,7 @@ import { Elements } from './elements';
 import { TablesLists } from './tables_lists';
 import { Triangles } from './triangles';
 import { Miscellaneous } from './miscellaneous';
+import { Forms } from './forms';
 
 class Debug extends React.Component {
   render() {
@@ -39,6 +40,9 @@ class Debug extends React.Component {
         </div>
         <div className='mb40'>
           <Miscellaneous />
+        </div>
+        <div className='mb40'>
+          <Forms />
         </div>
       </div>
     );
