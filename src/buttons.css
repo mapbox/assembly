@@ -22,19 +22,17 @@
  */
 .btn {
   background-color: var(--blue);
-  color: #fff;
+  color: var(--white);
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
   border-radius: 20px; /* fully round by default */
   padding: 8px 23px; /* Padding accommodates borders */
-  line-height: 20px;
   font-weight: bold;
-  font-size: 12px;
   display: inline-flex;
   align-items: center;
-  text-decoration: none !important; /* prevent underline when inside .prose */
   justify-content: center;
+  text-decoration: none !important; /* prevent underline when inside .prose */
 }
 
 .btn:hover,
