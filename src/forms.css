@@ -1,11 +1,13 @@
+/* stylelint-disable selector-no-type, selector-no-combinator */
 /**
  * @section Forms
  */
 
 .fieldset,
 .input,
-.select,
+.select > select,
 .textarea {
+  appearance: none;
   background: #fff;
   border: 0;
   margin: 0;
@@ -98,25 +100,192 @@
   color: #fff;
 }
 
-/* Select */
+/**
+ * The select markup must fit the following pattern.
+ * - A wrapping `<div>` with the class `checkbox`.
+ * - A `<select>`.
+ * - A `<div>` with the class `select-arrow`
+ *   containing an `<svg>` with the icon `#icon-caret-down`.
+ *
+ * Use `w*` width classes to change widths.
+ *
+ * The default styling looks kind of like an input.
+ *
+ * Variations:
+ * - Modify `.select` with `select--stroke`.
+ * - Modify *non-stroke* `.select` with a `.bg-{color}` class.
+ * - Modify *stroke* `.checkbox` with a text color, e.g. `.color-red`.
+ * - Add a border to the `.select-arrow` with a `.border-{color}` class.
+ *
+ * @section Selects
+ * @memberof Forms
+ */
+
+/**
+ * @memberof Selects
+ * @example
+ * <div class='select'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ *   <div class='select-arrow'>
+ *     <svg class='icon'>
+ *       <use xlink:href='#icon-caret-down' />
+ *     </svg>
+ *   </div>
+ * </div>
+ * <div class='select bg-red'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ *   <div class='select-arrow'>
+ *     <svg class='icon'>
+ *       <use xlink:href='#icon-caret-down' />
+ *     </svg>
+ *   </div>
+ * </div>
+ * <div class='select select--stroke color-purple'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ *   <div class='select-arrow'>
+ *     <svg class='icon'>
+ *       <use xlink:href='#icon-caret-down' />
+ *     </svg>
+ *   </div>
+ * </div>
+ */
 .select {
-  border: 2px solid var(--gray-light);
-  padding-right: 15px;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--border-radius);
 }
 
-.select {
-  appearance: none;
+/* Borders are on the select, but colors are applied
+to the `.select` container. */
+
+.select > select {
+  display: block;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--gray-light);
+  border-radius: var(--border-radius);
+  color: currentColor;
+  font-weight: bold;
+  cursor: pointer;
   height: 40px;
   line-height: 36px; /* minus border */
-  padding: 0 10px;
+  padding: 0 47px 0 12px; /* plus arrow */
+  /* Needs to be on top of everything but transparent */
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  width: 100%;
 }
 
-.select--s {
+/* IE overrides */
+.select > select::-ms-expand { display: none; }
+/* IE actually colors the options, so they can't be white */
+.select option { color: var(--text-color); }
+/* Remove purple highlight in HC mode */
+@media all and (-ms-high-contrast: active) {
+  .select > select:focus::-ms-value {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+/* Remove blue highlight in Normal mode */
+@media all and (-ms-high-contrast: none) {
+  .select > select:focus::-ms-value {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+/* End IE overrides */
+
+.select--stroke > select {
+  border-color: currentColor;
+}
+
+.select--s > select {
   height: 30px;
   line-height: 26px; /* minus border */
-  padding: 0 5px;
+  padding: 0 40px 0 10px; /* plus arrow */
+  font-size: 12px;
 }
 
+.select-arrow {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 0 2px;
+  border-style: solid;
+  border-color: transparent;
+  color: var(--gray-light);
+  width: 35px;
+}
+
+.select--stroke > .select-arrow {
+  color: currentColor;
+}
+
+.select--s > .select-arrow {
+  width: 30px;
+}
+
+.select--xs > .select-arrow {
+  width: 15px;
+}
+
+/* stylelint-disable selector-no-attribute */
+/* bg- colors */
+.select[class*='bg-']:not(.select--stroke),
+.select[class*='bg-']:not(.select--stroke) > select,
+.select[class*='bg-']:not(.select--stroke) > .select-arrow {
+  border-color: transparent;
+  color: #fff;
+}
+/* stylelint-enable selector-no-attribute */
+
+/* Color variations */
+.select.bg-gray:hover { background-color: var(--gray-dark) !important; }
+.select--stroke.color-gray:hover { color: var(--gray-dark) !important; }
+
+.select.bg-pink:hover { background-color: var(--pink-dark) !important; }
+.select--stroke.color-pink:hover { color: var(--pink-dark) !important; }
+
+.select.bg-red:hover { background-color: var(--red-dark) !important; }
+.select--stroke.color-red:hover { color: var(--red-dark) !important; }
+
+.select.bg-orange:hover { background-color: var(--orange-dark) !important; }
+.select--stroke.color-orange:hover { color: var(--orange-dark) !important; }
+
+.select.bg-yellow:hover { background-color: var(--yellow-dark) !important; }
+.select--stroke.color-yellow:hover { color: var(--yellow-dark) !important; }
+
+.select.bg-green:hover { background-color: var(--green-dark) !important; }
+.select--stroke.color-green:hover { color: var(--green-dark) !important; }
+
+.select.bg-teal:hover { background-color: var(--teal-dark) !important; }
+.select--stroke.color-teal:hover { color: var(--teal-dark) !important; }
+
+.select.bg-blue:hover { background-color: var(--blue-dark) !important; }
+.select--stroke.color-blue:hover { color: var(--blue-dark) !important; }
+
+.select.bg-purple:hover { background-color: var(--purple-dark) !important; }
+.select--stroke.color-purple:hover { color: var(--purple-dark) !important; }
+
+/* Ranges */
 .range {
   appearance: none;
   min-width: 0;
@@ -285,8 +454,6 @@
  *   </div>
  * </label>
  */
-
-/* stylelint-disable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
 
 /* shared form styles */
 .checkbox-container,
@@ -592,11 +759,4 @@ input:not(:checked) + .switch.color-purple:hover::after,
 .is-active.switch--handle-purple::after,
 input:checked + .switch--handle-purple::after {
   background-color: var(--purple-dark) !important;
-}
-
-/* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
-
-.legend {
-  display: block;
-  width: 100%;
 }
