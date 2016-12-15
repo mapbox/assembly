@@ -124,7 +124,7 @@ class TablesLists extends React.Component {
                 <td>item</td>
               </tr>
             </table>
-            <h2 className='txt-h2'>Unordered</h2>
+            <h2 className='txt-h2'>Unordered (with classes)</h2>
             <ul className='txt-ul'>
               <li className='txt-li'>Unordered list item</li>
               <li className='txt-li'>Unordered list item
@@ -142,7 +142,7 @@ class TablesLists extends React.Component {
               </li>
               <li className='txt-li'>Unordered list item</li>
             </ul>
-            <h2 className='txt-h2'>Ordered</h2>
+            <h2 className='txt-h2'>Ordered (with classes)</h2>
             <ol className='txt-ol'>
               <li className='txt-li'>Ordered list item</li>
               <li className='txt-li'>Ordered list item

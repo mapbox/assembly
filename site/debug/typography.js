@@ -22,6 +22,8 @@ class Typography extends React.Component {
 
           <blockquote>Cras mattis consectetur purus sit amet fermentum.</blockquote>
 
+          <img src='http://placehold.it/800'></img>
+
           <p>Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
           <h3>Sit Nullam Elit</h3>
@@ -38,7 +40,7 @@ class Typography extends React.Component {
           <div className='txt-headline txt-bold mb20'>Inceptos Nullam Venenatis</div>
           <div className='txt-m mb15'>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.</div>
 
-          <div className='txt-ul mb20'>
+          <div className='txt-ul ml40 mb20'>
             <div className='txt-li mb10'>Nullam quis risus eget urna mollis ornare vel eu leo.</div>
             <div className='txt-li mb10'>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
             <div className='txt-li mb10'>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div>
@@ -51,6 +53,8 @@ class Typography extends React.Component {
           <div className='txt-s mb10'>Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
 
           <div className='txt-blockquote mb20'>Cras mattis consectetur purus sit amet fermentum.</div>
+
+          <img className='mb15' src='http://placehold.it/800'></img>
 
           <div className='txt-m mb20'>Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
 
