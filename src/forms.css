@@ -330,13 +330,6 @@
   color: var(--blue);
 }
 
-/* align labels with small text */
-.switch--s-label,
-.checkbox--s-label,
-.radio--s-label {
-  top: 0;
-}
-
 /* Unchecked state */
 .checkbox > .icon {
   display: none;
@@ -399,6 +392,13 @@
   left: 2px;
   top: 2px;
   transition: left 0.125s;
+}
+
+/* align labels with small text */
+.switch--s-label,
+.checkbox--s-label,
+.radio--s-label {
+  top: 0;
 }
 
 /* State management for checkboxes and radio inputs */
