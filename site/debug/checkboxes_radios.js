@@ -34,7 +34,7 @@ class CheckboxesRadios extends React.Component {
       return (
         <div key={i} className='mb10'>
           <div className='inline-block mr30'>
-            <label className='checkbox-container'>
+            <label className='checkbox-container mr10'>
               <input type='checkbox' />
               <div className={checkboxFillClass}>
                 {checkmark}
@@ -43,7 +43,7 @@ class CheckboxesRadios extends React.Component {
             </label>
           </div>
           <div className='inline-block mr30'>
-            <label className='checkbox-container'>
+            <label className='checkbox-container mr10'>
               <input type='checkbox' />
               <div className={checkboxStrokeClass}>
                 {checkmark}
@@ -86,7 +86,7 @@ class CheckboxesRadios extends React.Component {
       return (
         <div key={i} className='mb10'>
           <div className='inline-block mr30'>
-            <label className='radio-container'>
+            <label className='radio-container mr10'>
               <input id={id} name='radios' value={id} type='radio' />
               <div className={radioClass}></div>
               Radio

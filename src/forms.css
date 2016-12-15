@@ -195,7 +195,7 @@
  *   </label>
  * </div>
  * <div class='txt-s'>
- *   <label class='checkbox-container'>
+ *   <label class='checkbox-container mr10'>
  *     <input type='checkbox' value='magic'>
  *     <div class='checkbox checkbox--stroke checkbox--s-label color-red'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
@@ -204,7 +204,7 @@
  *   </label>
  * </div>
  * <div class='mb10'>
- *   <label class='checkbox-container'>
+ *   <label class='checkbox-container mr10'>
  *     <input type='checkbox' value='magic'>
  *     <div class='checkbox'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
@@ -237,14 +237,14 @@
  * @memberof Radio buttons
  * @example
  * <div class='mb10'>
- *   <label class='radio-container'>
+ *   <label class='radio-container mr10'>
  *     <input name='radio-basic' value='magic' type='radio'>
  *     <div class='radio'></div>
  *     Magic radio
  *   </label>
  * </div>
  * <div class='txt-s'>
- *   <label class='radio-container'>
+ *   <label class='radio-container mr10'>
  *     <input name='radio-basic' value='magic' type='radio'>
  *     <div class='radio radio--s-label color-yellow'></div>
  *     Magic radio
@@ -310,7 +310,6 @@
   width: 20px;
   height: 20px;
   border-radius: var(--border-radius);
-  margin-right: 10px;
   cursor: pointer;
   position: relative;
   top: 2px;
