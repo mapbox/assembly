@@ -18,6 +18,8 @@ textarea {
 /**
  * Standard text scale.
  *
+ * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ *
  * @memberof Typography
  * @group
  */
@@ -56,6 +58,117 @@ textarea {
   line-height: 15px;
 }
 /** @endgroup */
+
+@media only screen and (--large-screen) {
+  .txt-headline-media-l {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .txt-subhead-media-l {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .txt-xl-media-l {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .txt-l-media-l {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .txt-m-media-l {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .txt-s-media-l {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .txt-xs-media-l {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+@media only screen and (--medium-screen) {
+  .txt-headline-media-l {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .txt-subhead-media-l {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .txt-xl-media-l {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .txt-l-media-l {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .txt-m-media-l {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .txt-s-media-l {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .txt-xs-media-l {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+@media only screen and (--small-screen) {
+  .txt-headline-media-s {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .txt-subhead-media-s {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .txt-xl-media-s {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .txt-l-media-s {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .txt-m-media-s {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .txt-s-media-s {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .txt-xs-media-s {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
 
 /**
  * Fancy text scale.
