@@ -43,6 +43,32 @@
 .animation--delay { animation-delay: 1s; }
 /** @endgroup */
 
+.loading-light:after, .loading-dark:after {
+  content: '';
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  animation: loading 1s infinite linear;
+}
+
+.loading-light:after {
+  border: var(--lighten10) 3px solid;
+  border-top-color: var(--gray-faint);
+}
+
+.loading-dark:after {
+  border: var(--darken10) 3px solid;
+  border-top-color: var(--gray-dark);
+}
+
+@keyframes loading {
+  0% { transform: rotate(0); }
+  20% { transform: rotate(20deg); }
+  80% { transform: rotate(340deg); }
+  100% { transform: rotate(360deg); }
+}
+
 @keyframes pulse {
   0% { transform: scale(0.5); opacity: 0; }
   45% { opacity: 0.5; }
