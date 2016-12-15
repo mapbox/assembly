@@ -117,39 +117,143 @@
   padding: 0 5px;
 }
 
+/**
+ * Range input. The following modifiers are available:
+ * - `input--s`: Small
+ * - `input--dark`: Dark
+ *
+ *
+ * @memberof Forms
+ * @example
+ * <input class='range' type='range' />
+ * <div class='bg-gray-dark px10 pb5 round inline-block'><input class='range range--dark' type='range' /></div>
+ * <input class='range range--s' type='range' />
+ */
 .range {
   appearance: none;
   min-width: 0;
-  height: 4px;
+  height: 3px;
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--gray-light);
+  vertical-align: middle;
+}
+
+.range:hover {
+  background: var(--blue);
+}
+
+.range:hover::-moz-range-progress {
+  background-color: var(--blue);
 }
 
 .range::-webkit-slider-thumb {
   appearance: none;
   box-shadow: none;
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background: #8f8f8f;
+  background: var(--gray-light);
+  border: 2px solid var(--white);
 }
 
 .range::-ms-thumb {
   box-shadow: none;
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background: #8f8f8f;
+  background: var(--gray-light);
+  border: 2px solid var(--white);
 }
 
 .range::-moz-range-thumb {
   box-shadow: none;
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background: #8f8f8f;
+  background: var(--gray-light);
+  border: 2px solid var(--white);
+}
+
+.range:hover::-webkit-slider-thumb {
+  transform: scale(1.25);
+  background: var(--blue);
+}
+
+.range:hover::-ms-thumb {
+  transform: scale(1.25);
+  background: var(--blue);
+}
+
+.range:hover::-moz-range-thumb {
+  transform: scale(1.25);
+  background: var(--blue);
+}
+
+.range--s {
+  height: 2px;
+}
+
+.range--s::-webkit-slider-thumb {
+  width: 13px;
+  height: 13px;
+}
+
+.range--s::-ms-thumb {
+  width: 13px;
+  height: 13px;
+}
+
+.range--s::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+}
+
+.range--dark {
+  background: var(--gray);
+}
+
+.range--dark:hover {
+  background: var(--gray-light);
+}
+
+.range--dark:hover::-moz-range-progress {
+  background-color: var(--gray-light);
+}
+
+.range--dark:hover::-moz-range-progress {
+  background-color: var(--gray-light);
+}
+
+.range--dark::-webkit-slider-thumb {
+  background: var(--gray);
+  border-color: var(--darken50);
+}
+
+.range--dark::-ms-thumb {
+  background: var(--gray);
+  border-color: var(--darken50);
+}
+
+.range--dark::-moz-range-thumb {
+  background: var(--gray);
+  border-color: var(--darken50);
+}
+
+.range--dark:hover::-webkit-slider-thumb {
+  background: var(--gray-faint);
+  border-color: var(--darken75);
+}
+
+.range--dark:hover::-ms-thumb {
+  background: var(--gray-faint);
+  border-color: var(--darken75);
+}
+
+.range--dark:hover::-moz-range-thumb {
+  background: var(--gray-faint);
+  border-color: var(--darken75);
 }
 
 /**

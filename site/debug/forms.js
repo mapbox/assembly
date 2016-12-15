@@ -72,6 +72,24 @@ class Forms extends React.Component {
               </label>
             </div>
           </fieldset>
+          <fieldset className='mt30'>
+            <legend className='txt-bold'>Range</legend>
+            <div className='mt5'>
+              <label className='range-container'>
+                <input className='range' name='range' min='0' max='100' type='range' /> Range
+              </label>
+            </div>
+            <div className='mt5'>
+              <label className='range-container'>
+                <input className='range range--s' name='range' min='0' max='100' type='range' /> Small range
+              </label>
+            </div>
+            <div className='mt5 bg-gray-dark color-white'>
+              <label className='range-container'>
+                <input className='range range--dark' name='range' min='0' max='100' type='range' /> Dark range
+              </label>
+            </div>
+          </fieldset>
         </div>
       </div>
     );
