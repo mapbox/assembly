@@ -96,8 +96,13 @@
 /* Dark */
 .input--dark,
 .textarea--dark {
-  background-color: var(--gray-dark);
+  background-color: var(--darken75);
   color: var(--white);
+}
+
+.input--dark::placeholder,
+.textarea--dark::placeholder {
+  color: var(--lighten25);
 }
 
 /**
