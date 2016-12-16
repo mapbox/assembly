@@ -102,10 +102,8 @@
 
 /**
  * The select markup must fit the following pattern.
- * - A wrapping `<div>` with the class `checkbox`.
+ * - A wrapping `<div>` with the class `select`.
  * - A `<select>`.
- * - A `<div>` with the class `select-arrow`
- *   containing an `<svg>` with the icon `#icon-caret-down`.
  *
  * Use `w*` width classes to change widths.
  *
@@ -114,8 +112,7 @@
  * Variations:
  * - Modify `.select` with `select--stroke`.
  * - Modify *non-stroke* `.select` with a `.bg-{color}` class.
- * - Modify *stroke* `.checkbox` with a text color, e.g. `.color-red`.
- * - Add a border to the `.select-arrow` with a `.border-{color}` class.
+ * - Modify *stroke* `.select` with a text color, e.g. `.color-red`.
  *
  * @section Selects
  * @memberof Forms
@@ -130,11 +127,6 @@
  *     <option>two</option>
  *     <option>three</option>
  *   </select>
- *   <div class='select-arrow'>
- *     <svg class='icon'>
- *       <use xlink:href='#icon-caret-down' />
- *     </svg>
- *   </div>
  * </div>
  * <div class='select bg-red'>
  *   <select>
@@ -142,11 +134,13 @@
  *     <option>two</option>
  *     <option>three</option>
  *   </select>
- *   <div class='select-arrow'>
- *     <svg class='icon'>
- *       <use xlink:href='#icon-caret-down' />
- *     </svg>
- *   </div>
+ * </div>
+ * <div class='select select--s bg-blue'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
  * </div>
  * <div class='select select--stroke color-purple'>
  *   <select>
@@ -154,11 +148,6 @@
  *     <option>two</option>
  *     <option>three</option>
  *   </select>
- *   <div class='select-arrow'>
- *     <svg class='icon'>
- *       <use xlink:href='#icon-caret-down' />
- *     </svg>
- *   </div>
  * </div>
  */
 .select {
@@ -177,11 +166,12 @@ to the `.select` container. */
   border-color: var(--gray-light);
   border-radius: var(--border-radius);
   color: currentColor;
+  font-size: 12px;
   font-weight: bold;
   cursor: pointer;
   height: 40px;
   line-height: 36px; /* minus border */
-  padding: 0 47px 0 12px; /* plus arrow */
+  padding: 0 30px 0 12px; /* plus arrow */
   /* Needs to be on top of everything but transparent */
   position: relative;
   z-index: 2;
@@ -217,43 +207,44 @@ to the `.select` container. */
   height: 30px;
   line-height: 26px; /* minus border */
   padding: 0 40px 0 10px; /* plus arrow */
-  font-size: 12px;
 }
 
-.select-arrow {
+.select::after {
+  content: '';
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid var(--gray-light);
+  width: 8px;
+  height: 8px;
+  font-size: 0;
+  line-height: 0;
   position: absolute;
-  top: 4px;
-  right: 0;
-  bottom: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-width: 0 2px;
-  border-style: solid;
-  border-color: transparent;
-  color: var(--gray-light);
-  width: 35px;
+  top: 50%;
+  margin-top: -3px;
+  right: 10px;
 }
 
-.select--stroke > .select-arrow {
-  color: currentColor;
+.select--stroke::after {
+  border-top-color: currentColor;
 }
 
-.select--s > .select-arrow {
-  width: 30px;
+.select--s > select {
+  padding-right: 26px;
 }
 
-.select--xs > .select-arrow {
-  width: 15px;
+.select--s::after {
+  right: 8px;
 }
 
 /* stylelint-disable selector-no-attribute */
 /* bg- colors */
 .select[class*='bg-']:not(.select--stroke),
-.select[class*='bg-']:not(.select--stroke) > select,
-.select[class*='bg-']:not(.select--stroke) > .select-arrow {
+.select[class*='bg-']:not(.select--stroke) > select {
   border-color: transparent;
   color: #fff;
+}
+.select[class*='bg-']:not(.select--stroke)::after {
+  border-top-color: #fff;
 }
 /* stylelint-enable selector-no-attribute */
 
