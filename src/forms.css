@@ -122,32 +122,76 @@
  * - `input--s`: Small
  * - `input--dark`: Dark
  *
+ * Use `w*` width classes to change widths.
  *
  * @memberof Forms
  * @example
- * <input class='range' type='range' />
- * <div class='bg-gray-dark px10 pb5 round inline-block'><input class='range range--dark' type='range' /></div>
- * <input class='range range--s' type='range' />
- */
+ * <input class='range w100' type='range' />
+ * <input class='range range--s w100' type='range' />
+ * <div class='bg-gray-dark px10 round inline-block'><input class='range range--dark w100' type='range' /></div>
+*/
 .range {
   appearance: none;
-  min-width: 0;
+  padding: 5px 0; /* to increase click area for ranges */
+  width: 100%;
+  vertical-align: middle;
+  background: transparent;
+}
+
+/* range track */
+.range::-webkit-slider-runnable-track {
+  width: 100%;
   height: 3px;
   padding: 0;
   border: 0;
   border-radius: 2px;
   background: var(--gray-light);
   vertical-align: middle;
+  cursor: pointer;
+  box-shadow: 0;
 }
 
-.range:hover {
-  background: var(--blue);
+.range::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: var(--gray-light);
+  vertical-align: middle;
+  cursor: pointer;
+  box-shadow: 0;
 }
 
-.range:hover::-moz-range-progress {
-  background-color: var(--blue);
+.range::-ms-track { /* use fill-lower + fill-upper to set color */
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
 }
 
+.range::-ms-fill-lower {
+  background: var(--gray-light);
+  border: 0;
+  box-shadow: 0;
+}
+
+.range::-ms-fill-upper {
+  background: var(--gray-light);
+  border: 0;
+  box-shadow: 0;
+}
+
+/* range track:hover */
+.range:hover::-webkit-slider-runnable-track { background: var(--blue); }
+.range:hover::-moz-range-track { background: var(--blue); }
+.range:hover::-ms-fill-upper { background: var(--blue); }
+.range:hover::-ms-fill-lower { background: var(--blue); }
+
+/* range thumb */
 .range::-webkit-slider-thumb {
   appearance: none;
   box-shadow: none;
@@ -155,106 +199,104 @@
   height: 15px;
   border-radius: 50%;
   background: var(--gray-light);
-  border: 2px solid var(--white);
-}
-
-.range::-ms-thumb {
-  box-shadow: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: var(--gray-light);
-  border: 2px solid var(--white);
+  border: 0;
+  cursor: pointer;
+  margin-top: -7.5px;
 }
 
 .range::-moz-range-thumb {
-  box-shadow: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--gray-light);
+  border: 0;
+  cursor: pointer;
+  margin-top: -7.5px;
+}
+
+.range::-ms-thumb {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background: var(--gray-light);
-  border: 2px solid var(--white);
+  border: 0;
+  cursor: pointer;
 }
 
-.range:hover::-webkit-slider-thumb {
-  transform: scale(1.25);
-  background: var(--blue);
-}
+/* range thumb:hover */
+.range:hover::-webkit-slider-thumb { transform: scale(1.25); background: var(--blue); }
+.range:hover::-ms-thumb { transform: scale(1.25); background: var(--blue); }
+.range:hover::-moz-range-thumb { transform: scale(1.25); background: var(--blue); }
 
-.range:hover::-ms-thumb {
-  transform: scale(1.25);
-  background: var(--blue);
-}
+/* range small */
+/* range small track */
+.range--s::-webkit-slider-runnable-track { height: 2px; }
+.range--s::-moz-range-track { height: 2px; }
+.range--s::-ms-track { height: 2px; border-width: 7px 0; }
 
-.range:hover::-moz-range-thumb {
-  transform: scale(1.25);
-  background: var(--blue);
-}
-
-.range--s {
-  height: 2px;
-}
-
+/* range small thumb */
 .range--s::-webkit-slider-thumb {
   width: 13px;
   height: 13px;
+  margin-top: -5px;
 }
 
 .range--s::-ms-thumb {
   width: 13px;
   height: 13px;
+  margin-top: -1px;
 }
 
 .range--s::-moz-range-thumb {
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
 }
 
-.range--dark {
-  background: var(--gray);
-}
+/* range dark */
+/* range dark track */
+.range--dark::-webkit-slider-runnable-track { background: var(--gray); }
+.range--dark::-moz-range-track { background: var(--gray); }
+.range--dark::-ms-fill-lower { background: var(--gray); }
+.range--dark::-ms-fill-upper { background: var(--gray); }
 
-.range--dark:hover {
-  background: var(--gray-light);
-}
+/* range dark thumb */
+.range--dark::-webkit-slider-thumb { background: var(--gray); }
+.range--dark::-ms-thumb { background: var(--gray); }
+.range--dark::-moz-range-thumb { background: var(--gray); }
 
-.range--dark:hover::-moz-range-progress {
-  background-color: var(--gray-light);
-}
+/* range dark thumb:hover */
+.range--dark:hover::-webkit-slider-thumb { background: var(--gray-light); }
+.range--dark:hover::-ms-thumb { background: var(--gray-light); }
+.range--dark:hover::-moz-range-thumb { background: var(--gray-light); }
 
-.range--dark:hover::-moz-range-progress {
-  background-color: var(--gray-light);
-}
+/* range dark track:hover */
+.range--dark:hover::-webkit-slider-runnable-track { background: var(--gray-light); }
+.range--dark:hover::-moz-range-track { background: var(--gray-light); }
+.range--dark:hover::-ms-fill-lower { background: var(--gray-light); }
+.range--dark:hover::-ms-fill-upper { background: var(--gray-light); }
 
-.range--dark::-webkit-slider-thumb {
-  background: var(--gray);
-  border-color: var(--darken50);
-}
+/* range blue - example */
+/* range blue track */
+.range--blue::-webkit-slider-runnable-track { background: var(--blue); }
+.range--blue::-moz-range-track { background: var(--blue); }
+.range--blue::-ms-fill-lower { background: var(--blue); }
+.range--blue::-ms-fill-upper { background: var(--blue); }
 
-.range--dark::-ms-thumb {
-  background: var(--gray);
-  border-color: var(--darken50);
-}
+/* range blue thumb */
+.range--blue::-webkit-slider-thumb { background: var(--blue); }
+.range--blue::-ms-thumb { background: var(--blue); }
+.range--blue::-moz-range-thumb { background: var(--blue); }
 
-.range--dark::-moz-range-thumb {
-  background: var(--gray);
-  border-color: var(--darken50);
-}
+/* range blue track:hover */
+.range--blue:hover::-webkit-slider-runnable-track { background: var(--blue-light); }
+.range--blue:hover::-moz-range-track { background: var(--blue-light); }
+.range--blue:hover::-ms-fill-lower { background: var(--blue-light); }
+.range--blue:hover::-ms-fill-upper { background: var(--blue-light); }
 
-.range--dark:hover::-webkit-slider-thumb {
-  background: var(--gray-faint);
-  border-color: var(--darken75);
-}
-
-.range--dark:hover::-ms-thumb {
-  background: var(--gray-faint);
-  border-color: var(--darken75);
-}
-
-.range--dark:hover::-moz-range-thumb {
-  background: var(--gray-faint);
-  border-color: var(--darken75);
-}
+/* range blue thumb:hover */
+.range--blue:hover::-webkit-slider-thumb { background: var(--blue-light); }
+.range--blue:hover::-ms-thumb { background: var(--blue-light); }
+.range--blue:hover::-moz-range-thumb { background: var(--blue-light); }
 
 /**
  * The checkbox markup must fit the following pattern.
