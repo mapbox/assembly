@@ -4,11 +4,16 @@
  */
 
 /**
- * Triangles
+ * Simple small triangle
  *
  * @memberof Triangles
+ * @group
  * @example
- * <div class='triangle triangle--u'></div>
+ * <span class='triangle triangle--u color-blue'></span>
+ * <span class='triangle triangle--r color-green'></span>
+ * <span class='triangle triangle--d color-teal'></span>
+ * <span class='triangle triangle--l color-pink'></span>
+ * @memberof Triangles
  */
 .triangle {
   width: 10px !important;
@@ -17,9 +22,6 @@
   line-height: 0 !important;
 }
 
-/**
- * Small triangles
- */
 .triangle--u {
   border-left: 5px solid transparent !important;
   border-right: 5px solid transparent !important;
@@ -43,9 +45,17 @@
   border-bottom: 5px solid transparent !important;
   border-right: 7px solid currentColor !important;
 }
+/** @endgroup */
 
 /**
- * Medium sized triangles
+ * Large triangles.
+ * @group
+ * @example
+ * <span class='triangle-l triangle-l--u color-blue'></span>
+ * <span class='triangle-l triangle-l--r color-green'></span>
+ * <span class='triangle-l triangle-l--d color-teal'></span>
+ * <span class='triangle-l triangle-l--l color-pink'></span>
+ * @memberof Triangles
  */
 .triangle-l {
   width: 20px !important;
@@ -77,9 +87,17 @@
   border-bottom: 10px solid transparent !important;
   border-right: 13px solid currentColor !important;
 }
+/** @endgroup */
 
 /**
  * Extra large triangles
+ * @group
+ * @example
+ * <span class='triangle-xl triangle-xl--u color-blue'></span>
+ * <span class='triangle-xl triangle-xl--r color-green'></span>
+ * <span class='triangle-xl triangle-xl--d color-teal'></span>
+ * <span class='triangle-xl triangle-xl--l color-pink'></span>
+ * @memberof Triangles
  */
 .triangle-xl {
   width: 40px !important;
@@ -111,3 +129,5 @@
   border-bottom: 20px solid transparent !important;
   border-right: 24px solid currentColor !important;
 }
+/** @endgroup */
+
