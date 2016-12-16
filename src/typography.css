@@ -67,7 +67,7 @@ textarea {
 }
 /** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .txt-headline-media-l {
     font-size: 32px;
     line-height: 40px;
@@ -104,7 +104,7 @@ textarea {
   }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .txt-headline-media-l {
     font-size: 32px;
     line-height: 40px;
@@ -141,7 +141,7 @@ textarea {
   }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .txt-headline-media-s {
     font-size: 32px;
     line-height: 40px;
