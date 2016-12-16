@@ -14,10 +14,8 @@
  * <button class='btn bg-red'>Color</button>
  * <button class='btn bg-teal color-blue-dark'>More colors</button>
  * <button class='btn round'>Less rounded</button>
- * <div class='mt10'>
- *   <div class='p10 bg-blue inline-block'>
- *     <button class='btn bg-white color-blue'>Reverse</button>
- *   </div>
+ * <div class='p10 bg-blue inline-block'>
+ *   <button class='btn bg-white color-blue'>Reverse</button>
  * </div>
  */
 .btn {
@@ -26,13 +24,14 @@
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 20px; /* fully round by default */
+  border-radius: 22px; /* fully round by default */
   padding: 8px 23px; /* Padding accommodates borders */
   font-weight: bold;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none !important; /* prevent underline when inside .prose */
+  transition: background-color .125s, border-color .125s, color .125s;
 }
 
 .btn:hover,
@@ -50,10 +49,8 @@
  * <button class='btn btn--stroke'>Default</button>
  * <button class='btn btn--stroke color-red'>Color</button>
  * <button class='btn btn--stroke round'>Less rounded</button>
- * <div class='mt10'>
- *   <div class='p10 bg-blue inline-block'>
- *     <button class='btn btn--stroke color-white'>Reverse</button>
- *   </div>
+ * <div class='p10 bg-blue inline-block'>
+ *   <button class='btn btn--stroke color-white'>Reverse</button>
  * </div>
  */
 .btn--stroke {
@@ -73,13 +70,13 @@
 }
 
 /**
- * Modifier classes to create smaller buttons.
+ * Modifier classes to create smaller buttons. Combine with [.txt-{s}](#txt-s) and [.txt-{s}](#txt-xs)
  *
  * @group
  * @memberof Buttons
  * @example
- * <button class='btn btn--s'>Small</button>
- * <button class='btn btn--xs btn--stroke'>Extra small</button>
+ * <button class='btn txt-s btn--s'>Small</button>
+ * <button class='btn txt-xs btn--xs btn--stroke'>Extra small</button>
  */
 .btn--s {
   padding: 1px 18px;
@@ -87,9 +84,8 @@
 }
 
 .btn--xs {
-  font-size: 10px;
   padding: 0 8px;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 /* @endgroup */
 
@@ -227,18 +223,16 @@
  *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hr">Right</button>
  *   </div>
  * </div>
- * <div class="mt10">
- *   <div class="mr10 flex-inline flex-column">
+ *  <div class="mr10 flex-inline flex-column">
  *     <button class="btn btn--pill btn--pill-vt bg-purple">Top</button>
  *     <button class="btn btn--pill btn--pill-vc bg-purple">Center</button>
  *     <button class="btn btn--pill btn--pill-vb bg-purple">Bottom</button>
- *   </div>
- *   <div class="flex-inline flex-column">
+ *  </div>
+ *  <div class="flex-inline flex-column">
  *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vt">Top</button>
  *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vc">Center</button>
  *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vb">Bottom</button>
- *   </div>
- * </div>
+ *  </div>
  */
 .btn--pill {
   position: relative;
