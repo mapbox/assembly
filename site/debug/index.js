@@ -10,12 +10,16 @@ import { Triangles } from './triangles';
 import { Miscellaneous } from './miscellaneous';
 import { Forms } from './forms';
 import { Switches } from './switches';
+import { Spinners } from './spinners';
 import { Toggles } from './toggles';
 
 class Debug extends React.Component {
   render() {
     return (
       <div>
+        <div className='mb40'>
+          <Spinners />
+        </div>
         <div className='mb40'>
           <Toggles />
         </div>
