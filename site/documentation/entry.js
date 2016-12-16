@@ -16,33 +16,42 @@ class Entry extends React.Component {
     const { props } = this;
 
     const example = !props.parsedComment.example ? null : (
-      <div style={{ marginBottom: '40px' }}>
-        <div style={{ marginBottom: '20px' }}>
-          <div dangerouslySetInnerHTML={{ __html: props.parsedComment.example.description }} />
+      <div className='mt10 grid grid--gut10'>
+        <div className='col col--6'>
+          <div className='border border--2 border--blue round p20' dangerouslySetInnerHTML={{ __html: props.parsedComment.example.description }} />
         </div>
+        <div className='col col--6'>
         <Lowlight
           language='html'
           value={props.parsedComment.example.description} />
+        </div>
       </div>
     );
 
-    const selectors = props.referencedSource ? [props.referencedSource.selector] : props.members;
+    let selectors = props.referencedSource ? [props.referencedSource.selector] : props.members;
 
-    const selectorEls = selectors !== undefined && selectors.map((m) => <span key={m}>
-        <span className='docs-group-member'>{m}</span>
+    if (selectors) {
+      selectors = selectors
+        .map((s) => {
+          return s.split(',');
+        }).reduce((a, b) => {
+          return a.concat(b);
+        });
+    }
+
+    const selectorEls = selectors !== undefined && selectors.map((m) => <span className='mr5 inline-block' key={m}>
+        <span id={`#${m.trim().replace(/\s+/g, '-').replace(/./g, '')}`} className='pl5 pr5 round bg-blue color-white txt-mono inline-block'>{m.trim()}</span>
       </span>);
 
     return (
-      <div className='docs-selector-group'>
-        <div className='docs-selector-name'>
+      <div className='mt30 mb20'>
+        <div className='mb5'>
           {selectorEls}
         </div>
-        <div className='docs-selector-description prose'>
+        <div className='prose'>
           {remark().use(reactRenderer).process(props.parsedComment.description).contents}
         </div>
-        <div className='docs-example'>
-          {example}
-        </div>
+        {example}
       </div>
     );
   }
