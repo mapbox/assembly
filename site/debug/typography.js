@@ -3,7 +3,7 @@ import React from 'react';
 class Typography extends React.Component {
   render() {
     return (
-      <div className='grd grd--gut10'>
+      <div className='grid grid--gut10'>
         <div className='col col--6 prose'>
           <h1>Inceptos Nullam Venenatis</h1>
           <p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.</p>

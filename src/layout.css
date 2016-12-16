@@ -23,9 +23,7 @@
 
 /**
  * Flexbox utilities. Check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
- * to learn how the system works.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * to learn how the system works. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @memberof Layout
  * @group
@@ -161,7 +159,7 @@
  * Column container for grids.
  *
  * @example
- * <div class='grd grd--gut10'>
+ * <div class='grid grid--gut10'>
  *  <div class='col col--6'>
  *    <div class='p10 bg-blue-faint'>6</div>
  *  </div>
@@ -173,7 +171,7 @@
  *  </div>
  * </div>
  */
-.grd {
+.grid {
   display: flex !important;
   flex-wrap: wrap !important;
 }
@@ -181,18 +179,18 @@
 /**
  * Column gutter classes
  */
-.grd--gut5 { margin-left: -5px !important; }
-.grd--gut10 { margin-left: -10px !important; }
-.grd--gut20 { margin-left: -20px !important; }
-.grd--gut40 { margin-left: -40px !important; }
-.grd--gut80 { margin-left: -80px !important; }
+.grid--gut5 { margin-left: -5px !important; }
+.grid--gut10 { margin-left: -10px !important; }
+.grid--gut20 { margin-left: -20px !important; }
+.grid--gut40 { margin-left: -40px !important; }
+.grid--gut80 { margin-left: -80px !important; }
 
 /* stylelint-disable selector-no-combinator */
-.grd--gut5 > .col { padding-left: 5px !important; }
-.grd--gut10 > .col { padding-left: 10px !important; }
-.grd--gut20 > .col { padding-left: 20px !important; }
-.grd--gut40 > .col { padding-left: 40px !important; }
-.grd--gut80 > .col { padding-left: 80px !important; }
+.grid--gut5 > .col { padding-left: 5px !important; }
+.grid--gut10 > .col { padding-left: 10px !important; }
+.grid--gut20 > .col { padding-left: 20px !important; }
+.grid--gut40 > .col { padding-left: 40px !important; }
+.grid--gut80 > .col { padding-left: 80px !important; }
 /* stylelint-enable selector-no-combinator */
 
 /**
@@ -356,9 +354,7 @@
 /** @endgroup */
 
 /**
- * Use display classes to control the display property of elements.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * Use display classes to control the display property of elements. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @section Display
  * @memberof Layout
@@ -418,9 +414,7 @@
  */
 
 /**
- * Set an element's `position`.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * Set an element's `position`. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -453,9 +447,7 @@
 }
 
 /**
- * Set positioned elements flush against a side of their container.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * Set positioned elements flush against a side of their container. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -489,9 +481,7 @@
 
 /**
  * Override default stacking order with z-index classes. Whenever possible, rely on
- * built-in stacking order and avoid these rules.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * built-in stacking order and avoid these rules. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -1935,9 +1925,7 @@
 }
 
 /**
- * Set the height of an element relative to the viewport.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * Set the height of an element relative to the viewport. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @group
  * @memberof Sizing

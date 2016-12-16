@@ -7,7 +7,7 @@ class TablesLists extends React.Component {
         <h1 className='txt-headline mb20'>
           Tables & Lists
         </h1>
-        <div className='grd grd--gut10'>
+        <div className='grid grid--gut10'>
           <div className='col col--4'>
             Unstyled
             <table>
