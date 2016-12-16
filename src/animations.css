@@ -57,11 +57,8 @@
    <div class="col col--1 loading loading--s p10"></div>
    <div class="col col--1 loading loading--light bg-gray-dark p10"></div>
  </div>
- */
- .loading {
-  display: flex;
- }
-
+*/
+.loading { display: flex; }
 .loading::after,
 .loading::after {
   content: '';
