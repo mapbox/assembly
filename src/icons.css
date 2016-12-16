@@ -10,12 +10,14 @@
  * points to an icon loaded by `assembldy-svg.js`. All icons are referenced
  * by the string `#icon-<name>`.
  *
- * To see a list of all available icons, [visit the icons page](/assembly/icons).
+ * To see a list of all available icons, visit [the icons page](/assembly/icons).
  *
  * @group
  * @memberof Icons
  * @example
- * <svg class='icon icon--m'><use xlink:href='#icon-account'/></svg>
+ * <svg class='icon'><use xlink:href='#icon-account'/></svg>
+ * <svg class='icon icon--s'><use xlink:href='#icon-account'/></svg>
+ * <svg class='icon icon--l'><use xlink:href='#icon-account'/></svg>
  */
 .icon {
   fill: currentColor;
