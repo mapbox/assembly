@@ -67,8 +67,7 @@
  *   <div class='col col--3 p10 bg-white'>bg-white</div>
  *   <div class='col col--3 p10 bg-transparent'>bg-transparent</div>
  * </div>
- */
- /** @endgroup */
+/** @endgroup */
 
 .bg-gray-dark { background-color: var(--gray-dark) !important; }
 .bg-gray { background-color: var(--gray) !important; }
@@ -194,8 +193,7 @@
  *   <span class='mr5 color-black'>color-black</span>
  *   <span class='color-white txt-shadow5-bold'>color-white</span>
  * </div>
- */
- /** @endgroup */
+/** @endgroup */
 .color-gray-dark { color: var(--gray-dark) !important; }
 .color-gray { color: var(--gray) !important; }
 .color-gray-light { color: var(--gray-light) !important; }
@@ -284,8 +282,7 @@
  *   <div class='col col--4 p10 bg-black-to-transparent'>bg-black-to-transparent</div>
  *   <div class='col col--4 p10 bg-white-to-transparent'>bg-white-to-transparent</div>
  * </div>
- */
- /** @endgroup */
+/** @endgroup */
 .bg-gray-to-transparent {
   background-image: linear-gradient(
     to bottom right,
