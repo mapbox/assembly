@@ -253,34 +253,6 @@ to the `.select` container. */
 }
 /* stylelint-enable selector-no-attribute */
 
-/* Color variations */
-.select.bg-gray:hover { background-color: var(--gray-dark) !important; }
-.select--stroke.color-gray:hover { color: var(--gray-dark) !important; }
-
-.select.bg-pink:hover { background-color: var(--pink-dark) !important; }
-.select--stroke.color-pink:hover { color: var(--pink-dark) !important; }
-
-.select.bg-red:hover { background-color: var(--red-dark) !important; }
-.select--stroke.color-red:hover { color: var(--red-dark) !important; }
-
-.select.bg-orange:hover { background-color: var(--orange-dark) !important; }
-.select--stroke.color-orange:hover { color: var(--orange-dark) !important; }
-
-.select.bg-yellow:hover { background-color: var(--yellow-dark) !important; }
-.select--stroke.color-yellow:hover { color: var(--yellow-dark) !important; }
-
-.select.bg-green:hover { background-color: var(--green-dark) !important; }
-.select--stroke.color-green:hover { color: var(--green-dark) !important; }
-
-.select.bg-teal:hover { background-color: var(--teal-dark) !important; }
-.select--stroke.color-teal:hover { color: var(--teal-dark) !important; }
-
-.select.bg-blue:hover { background-color: var(--blue-dark) !important; }
-.select--stroke.color-blue:hover { color: var(--blue-dark) !important; }
-
-.select.bg-purple:hover { background-color: var(--purple-dark) !important; }
-.select--stroke.color-purple:hover { color: var(--purple-dark) !important; }
-
 /* Ranges */
 .range {
   appearance: none;
@@ -320,24 +292,17 @@ to the `.select` container. */
 /**
  * The checkbox markup must fit the following pattern.
  * - A wrapping `<label>` with the class `checkbox-container`.
- * - An `<input type='checkbox'>`.
+ * - An `<input type='checkbox'>`. You may want to add a `mr*` margin-right
+ *   class to separate the checkbox from its label.
  * - A `<div>` with the class `checkbox`
  *   containing an `<svg>` with the chosen icon.
  * - Text for the label.
  *
  * Variations:
- * - Modify `checkbox` with `checkbox--stroke`.
- * - Modify *non-stroke* `checkbox` with a background color,
- *   e.g. `bg-red`.
- * - Modify *stroke* `checkbox` with a text color, e.g. `color-red`.
+ * - Modify `checkbox` with a text color, e.g. `color-red`.
  * - Use a different icon.
  * - Modify `checkbox` with `checkbox--s-label` if the text is small,
  *   for proper vertical alignment.
- *
- * When placing a checkbox inside a *non-stroke* `.btn`, you should always
- * use `checkbox--stroke`. The checkbox's border will be removed,
- * but the box will be white and the checkmark will be colored as you choose.
- * Inside a `.btn--stroke`, anything goes.
  *
  * The class `checkbox` and its modifiers can also be used independent
  * of a `<label>` and `<input>` if you are building a custom components.
@@ -350,7 +315,7 @@ to the `.select` container. */
 /*
  * @memberof Checkboxes
  * @example
- * <div class='mb10'>
+ * <div>
  *   <label class='checkbox-container'>
  *     <input type='checkbox' value='magic'>
  *     <div class='checkbox mr5'>
@@ -362,7 +327,7 @@ to the `.select` container. */
  * <div class='mb10'>
  *   <label class='checkbox-container mr10'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr5'>
+ *     <div class='checkbox'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci tenetur distinctio provident a, debitis obcaecati ipsam laborum autem suscipit natus repellendus nam cumque ab qui ducimus unde ratione, quisquam nisi.
@@ -371,7 +336,7 @@ to the `.select` container. */
  * <div class='txt-s'>
  *   <label class='checkbox-container mr10'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr5 checkbox--stroke checkbox--s-label color-red'>
+ *     <div class='checkbox mr5 checkbox--s-label color-red'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     More zebras
@@ -382,7 +347,8 @@ to the `.select` container. */
 /**
  * The radio markup must fit the following pattern.
  * - A wrapping `<label>` with the class `radio-container`.
- * - An `<input type='radio'>`.
+ * - An `<input type='radio'>`. You may want to add a `mr*` margin-right
+ *   class to separate the radio from its label.
  * - A `<div>` with the class `radio`.
  * - Text for the label.
  *
@@ -413,7 +379,7 @@ to the `.select` container. */
  *   <label class='radio-container mr10'>
  *     <input name='radio-basic' value='magic' type='radio'>
  *     <div class='radio radio--s-label color-yellow mr5'></div>
- *     Option 2
+ *     Magic radio
  *   </label>
  * </div>
  */
@@ -441,16 +407,19 @@ to the `.select` container. */
 /**
  * @memberof Switches
  * @example
- * <label class="switch-container mr10">
- *   <input type='checkbox' value='magic'>
- *   <div class="switch">
- *   </div>
- * </label>
- * <label class="switch-container">
- *   <input type='checkbox' value='magic'>
- *   <div class='switch border--pink color-gray'>
- *   </div>
- * </label>
+ * <div>
+ *   <label class="switch-container mr10">
+ *     <input type='checkbox' value='magic'>
+ *     <div class="switch"></div>
+ *   </label>
+ * </div>
+ * <div>
+ *   <label class="switch-container">
+ *     <input type='checkbox' value='magic'>
+ *     <div class='switch border--pink color-gray mr10'></div>
+ *     Switch this!
+ *   </label>
+ * </div>
  */
 
 /**
@@ -564,29 +533,24 @@ to the `.select` container. */
 
 /* Primary checkbox styles */
 .checkbox {
-  background-color: var(--blue);
-  color: var(--white);
-}
-
-.checkbox--stroke {
-  background-color: var(--white);
-  border-color: currentColor;
+  background-color: #fff;
   color: var(--blue);
-}
-
-/* Unchecked state */
-.checkbox > .icon {
-  display: none;
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
+  border-color: currentColor;
 }
 
 /* Ensure checkboxes inside buttons look nice */
 .btn:not(.btn--stroke) > .checkbox--stroke {
   border-color: transparent;
+}
+
+.checkbox > .icon {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  /* Unchecked state */
+  display: none;
 }
 
 /* Primary radio styles */
@@ -681,12 +645,8 @@ input:checked + .radio::before,
   display: block;
 }
 
-input:checked .checkbox:not(.checkbox--stroke),
-.checkbox.is-active:not(.checkbox--stroke) {
-  background-color: var(--blue-dark);
-}
-input:checked + .checkbox--stroke,
-.checkbox--stroke.is-active,
+input:checked + .checkbox,
+.checkbox.is-active,
 input:checked + .radio,
 .radio.is-active {
   color: var(--blue-dark);
@@ -723,156 +683,6 @@ input:not(:checked) + .toggle:not(.is-active):hover,
 input:checked + .toggle {
   background: var(--blue) !important;
   color: var(--white);
-}
-
-/* Color variations for checkboxes */
-input:checked + .bg-gray-faint:not(.checkbox--stroke),
-.bg-gray-faint.is-active:not(.checkbox--stroke) {
-  background-color: var(--gray-light) !important;
-}
-input:checked + .color-gray-faint.checkbox--stroke,
-.color-gray-faint.checkbox--stroke.is-active,
-input:checked + .color-gray-faint,
-.color-gray-faint.is-active {
-  color: var(--gray-light) !important;
-}
-
-input:checked + .bg-gray-light:not(.checkbox--stroke),
-.bg-gray-light.is-active:not(.checkbox--stroke) {
-  background-color: var(--gray) !important;
-}
-input:checked + .color-gray-light.checkbox--stroke,
-.color-gray-light.checkbox--stroke.is-active,
-input:checked + .color-gray-light,
-.color-gray-light.is-active {
-  color: var(--gray) !important;
-}
-
-input:checked + .bg-gray:not(.checkbox--stroke),
-.bg-gray.is-active:not(.checkbox--stroke) {
-  background-color: var(--gray-dark) !important;
-}
-input:checked + .color-gray.checkbox--stroke,
-.color-gray.checkbox--stroke.is-active,
-input:checked + .color-gray,
-.color-gray.is-active {
-  color: var(--gray-dark) !important;
-}
-
-input:checked + .bg-gray-dark:not(.checkbox--stroke),
-.bg-gray-dark.is-active:not(.checkbox--stroke) {
-  background-color: var(--black) !important;
-}
-input:checked + .color-gray-dark.checkbox--stroke,
-.color-gray-dark.checkbox--stroke.is-active,
-input:checked + .color-gray-dark,
-.color-gray-dark.is-active {
-  color: var(--black) !important;
-}
-
-input:checked + .bg-pink:not(.checkbox--stroke),
-.bg-pink.is-active:not(.checkbox--stroke) {
-  background-color: var(--pink-dark) !important;
-}
-input:checked + .color-pink.checkbox--stroke,
-.color-pink.checkbox--stroke.is-active,
-input:checked + .color-pink,
-.color-pink.is-active {
-  color: var(--pink-dark) !important;
-}
-
-input:checked + .bg-red:not(.checkbox--stroke),
-.bg-red.is-active:not(.checkbox--stroke) {
-  background-color: var(--red-dark) !important;
-}
-input:checked + .color-red.checkbox--stroke,
-.color-red.checkbox--stroke.is-active,
-input:checked + .color-red,
-.color-red.is-active {
-  color: var(--red-dark) !important;
-}
-
-input:checked + .bg-orange:not(.checkbox--stroke),
-.bg-orange.is-active:not(.checkbox--stroke) {
-  background-color: var(--orange-dark) !important;
-}
-input:checked + .color-orange.checkbox--stroke,
-.color-orange.checkbox--stroke.is-active,
-input:checked + .color-orange,
-.color-orange.is-active {
-  color: var(--orange-dark) !important;
-}
-
-input:checked + .bg-yellow:not(.checkbox--stroke),
-.bg-yellow.is-active:not(.checkbox--stroke) {
-  background-color: var(--yellow-dark) !important;
-}
-input:checked + .color-yellow.checkbox--stroke,
-.color-yellow.checkbox--stroke.is-active,
-input:checked + .color-yellow,
-.color-yellow.is-active {
-  color: var(--yellow-dark) !important;
-}
-
-input:checked + .bg-green:not(.checkbox--stroke),
-.bg-green.is-active:not(.checkbox--stroke) {
-  background-color: var(--green-dark) !important;
-}
-input:checked + .color-green.checkbox--stroke,
-.color-green.checkbox--stroke.is-active,
-input:checked + .color-green,
-.color-green.is-active {
-  color: var(--green-dark) !important;
-}
-
-input:checked + .bg-teal:not(.checkbox--stroke),
-.bg-teal.is-active:not(.checkbox--stroke) {
-  background-color: var(--teal-dark) !important;
-}
-input:checked + .color-teal.checkbox--stroke,
-.color-teal.checkbox--stroke.is-active,
-input:checked + .color-teal,
-.color-teal.is-active {
-  color: var(--teal-dark) !important;
-}
-
-input:checked + .bg-purple:not(.checkbox--stroke),
-.bg-purple.is-active:not(.checkbox--stroke) {
-  background-color: var(--purple-dark) !important;
-}
-input:checked + .color-purple.checkbox--stroke,
-.color-purple.checkbox--stroke.is-active,
-input:checked + .color-purple,
-.color-purple.is-active {
-  color: var(--purple-dark) !important;
-}
-
-input:checked + .bg-black:not(.checkbox--stroke),
-.bg-black.is-active:not(.checkbox--stroke) {
-  background-color: var(--black) !important;
-}
-input:checked + .color-black.checkbox--stroke,
-.color-black.checkbox--stroke.is-active,
-input:checked + .color-black,
-.color-black.is-active {
-  color: var(--black) !important;
-}
-
-/* Color variations for switches */
-.switch.color-purple:hover {
-  border-color: var(--purple-dark) !important;
-}
-
-/* make switch background dark purple when active */
-.is-active.switch.color-purple,
-input:checked + .switch.color-purple,
-/* make dot dark purple on hover, if not active  */
-input:not(:checked) + .switch.color-purple:hover::after,
-:not(input) + .switch.color-purple:not(.is-active):hover::after,
-/* use modifier class to make the dot dark purple on hover, if active  */
-.is-active.switch--handle-purple::after,
-input:checked + .switch--handle-purple::after {
-  background-color: var(--purple-dark) !important;
 }
 
 /* Color variations for toggles */

@@ -1,26 +1,94 @@
+#!/usr/bin/env node
 'use strict';
 
-const postcss = require('postcss');
-const pify = require('pify');
-const fs = require('fs');
-const path = require('path');
 const stripIndent = require('strip-indent');
 const variables = require('../src/variables');
 
-const outfile = path.join(__dirname, '../dist/color-variants.css');
+const allConfig = [
+  'gray-dark',
+  'gray',
+  'gray-light',
+  'gray-faint',
 
-const defaultConfig = {
-  buttons: {
-    fill: ['pink', 'red', 'lighten25', 'orange'],
-    stroke: ['pink', 'red', 'orange', 'yellow'],
-  },
-  checkboxes: ['pink', 'red', 'lighten25', 'orange'],
-  radios: ['pink', 'red', 'lighten25', 'orange'],
-  switches: ['pink', 'red', 'lighten25', 'orange'],
-  borders: ['pink', 'red', 'lighten25', 'orange'],
-};
+  'pink-dark',
+  'pink',
+  'pink-light',
+  'pink-faint',
 
-function getDarkerVariant(color) {
+  'red-dark',
+  'red',
+  'red-light',
+  'red-faint',
+
+  'orange-dark',
+  'orange',
+  'orange-light',
+  'orange-faint',
+
+  'yellow-dark',
+  'yellow',
+  'yellow-light',
+  'yellow-faint',
+
+  'green-dark',
+  'green',
+  'green-light',
+  'green-faint',
+
+  'teal-dark',
+  'teal',
+  'teal-light',
+  'teal-faint',
+
+  'blue-dark',
+  'blue',
+  'blue-light',
+  'blue-faint',
+
+  'purple-dark',
+  'purple',
+  'purple-light',
+  'purple-faint',
+
+  'darken5',
+  'darken10',
+  'darken25',
+  'darken50',
+  'darken75',
+
+  'lighten5',
+  'lighten10',
+  'lighten25',
+  'lighten50',
+  'lighten75',
+
+  'white',
+  'black'
+];
+
+// const defaultConfig = {
+//   buttons: {
+//     fill: ['pink', 'red', 'lighten25', 'orange'],
+//     stroke: ['pink', 'red', 'orange', 'yellow'],
+//   },
+//   checkboxes: ['pink', 'red', 'lighten25', 'orange'],
+//   radios: ['pink', 'red', 'lighten25', 'orange'],
+//   switches: ['pink', 'red', 'lighten25', 'orange'],
+//   borders: ['pink', 'red', 'lighten25', 'orange'],
+// };
+
+function isSemitransparent(color) {
+  return /^(lighten|darken)/.test(color);
+}
+
+function isDark(color) {
+  return color === 'black' || /-dark$/.test(color);
+}
+
+function getDarkerShade(color) {
+  if (color === 'white') return 'gray-faint';
+  if (color === 'black') return 'No dark variant for "black"';
+
   const semitransparentMatch = color.match(/(lighten|darken)(\d+$)/);
   if (semitransparentMatch !== null) {
     const action = semitransparentMatch[1];
@@ -42,152 +110,201 @@ function getDarkerVariant(color) {
     }
   }
 
-  switch (color.split('-')[1]) {
+  const splitColor = color.split('-');
+  const colorBase = splitColor[0];
+  const colorShade = splitColor[1];
+  switch (colorShade) {
     case 'faint':
-      return variables[`${color}-light`];
+      return variables[`${colorBase}-light`];
     case 'light':
-      return variables[color];
+      return variables[colorBase];
     case undefined:
-      return variables[`${color}-dark`];
+      return variables[`${colorBase}-dark`];
     case 'dark':
-      throw new Error(`Dark variants not allowed as base colors: use "${color.split('-')[0]}" instead of "${color}"`);
+      throw new Error(`Dark variants not allowed as base colors: use "${colorBase}" instead of "${color}"`);
     default:
       throw new Error(`Unknown color ${color}`);
   }
 }
 
-function createAllButtonVariants(buttonConfig) {
-  const createButtonFillVariant = (color) => {
-    const darker = getDarkerVariant(color);
-    const css = stripIndent(`
-      .btn.bg-${color}.is-active {
-        background-color: ${darker} !important;
-      }
-    `);
-    const rule = postcss.parse(css).nodes[0];
-    return rule;
-  };
+const variantGenerators = {};
 
-  const createButtonStrokeVariant = (color) => {
-    const darker = getDarkerVariant(color);
-    const css = stripIndent(`
-      .btn--stroke.color-${color}.is-active {
-        color: ${darker} !important;
-      }
-    `);
-    const rule = postcss.parse(css).nodes[0];
-    return rule;
-  };
+variantGenerators.buttonFill = function (color) {
+  if (isDark(color)) return '';
+  const darkerShade = getDarkerShade(color);
+  return stripIndent(`
+    .btn.bg-${color}:hover {
+      background-color: ${darkerShade} !important;
+    }
+  `);
+};
 
-  const rules = [];
-  if (buttonConfig.fill !== undefined) {
-    buttonConfig.fill.forEach((color) => {
-      rules.push(createButtonFillVariant(color));
-    });
-  }
-  if (buttonConfig.stroke !== undefined) {
-    buttonConfig.stroke.forEach((color) => {
-      rules.push(createButtonStrokeVariant(color));
-    });
-  }
+variantGenerators.buttonStroke = function (color) {
+  if (isDark(color)) return '';
+  const darkerShade = getDarkerShade(color);
+  return stripIndent(`
+    .btn--stroke.color-${color}:hover {
+      color: ${darkerShade} !important;
+    }
+  `);
+};
 
-  return rules;
-}
+variantGenerators.selectFill = function (color) {
+  if (isDark(color)) return '';
+  const darkerShade = getDarkerShade(color);
+  return stripIndent(`
+    .select.bg-${color}:hover {
+      background-color: ${darkerShade} !important;
+    }
+  `);
+};
 
-function createAllCheckboxVariants(checkboxConfig) {
-  const createVariant = (color) => {
-    const darker = getDarkerVariant(color);
-    const css = stripIndent(`
-      input:checked + .checkbox--stroke.color-${color},
-      .checkbox--stroke.color-${color}.is-active {
-        color: ${darker} !important;
-      }
-    `);
-    const rule = postcss.parse(css).nodes[0];
-    return rule;
-  };
+variantGenerators.selectStroke = function (color) {
+  if (isDark(color)) return '';
+  const darkerShade = getDarkerShade(color);
+  return stripIndent(`
+    .select--stroke.color-${color}:hover {
+      color: ${darkerShade} !important;
+    }
+  `);
+};
 
-  return checkboxConfig.map(createVariant);
-}
+variantGenerators.checkbox = function (color) {
+  if (isDark(color)) return '';
+  const darkerShade = getDarkerShade(color);
+  return stripIndent(`
+    input:checked + .checkbox.color-${color},
+    .checkbox.color-${color}.is-active {
+      color: ${darkerShade} !important;
+    }
+  `);
+};
 
-function createAllRadioVariants(radioConfig) {
-  const createVariant = (color) => {
-    const darker = getDarkerVariant(color);
-    const css = stripIndent(`
-      input:checked + .radio.color-${color},
-      .radio.color-${color}.is-active {
-        color: ${darker} !important;
-      }
-    `);
-    const rule = postcss.parse(css).nodes[0];
-    return rule;
-  };
+variantGenerators.radio = function (color) {
+  if (isDark(color)) return '';
+  const darkerShade = getDarkerShade(color);
+  return stripIndent(`
+    input:checked + .radio.color-${color},
+    .radio.color-${color}.is-active {
+      color: ${darkerShade} !important;
+    }
+  `);
+};
 
-  return radioConfig.map(createVariant);
-}
+variantGenerators.switch = function (color) {
+  if (isDark(color)) return '';
+  const darkerShade = getDarkerShade(color);
+  // Darken background when active
+  // Darken dot on hover when inactive only
+  return stripIndent(`
+    .switch.color-${color}:hover {
+      border-color: ${darkerShade} !important;
+    }
+    input:not(:checked) + .switch.color-${color}:hover::after,
+    :not(input) + .switch.color-${color}:not(.is-active):hover::after,
+    .switch--handle-${color}.is-active::after,
+    input:checked + .switch--handle-${color}::after {
+      background-color: ${darkerShade} !important;
+    }
+  `);
+};
 
-function createAllSwitchVariants(switchConfig) {
-  const createVariant = (color) => {
-    const darker = getDarkerVariant(color);
-    const css = stripIndent(`
-      input:checked + .switch--handle-${color}::after,
-      .switch--handle-${color}.is-active::after {
-        background-color: ${darker} !important;
-      }
-    `);
-    const rule = postcss.parse(css).nodes[0];
-    return rule;
-  };
+variantGenerators.link = function (color) {
+  if (isDark(color)) return '';
+  const darkerShade = getDarkerShade(color);
+  return stripIndent(`
+    .txt-link.color-${color}:hover {
+      border-color: ${darkerShade} !important;
+    }
+  `);
+};
 
-  return switchConfig.map(createVariant);
-}
+variantGenerators.border = function (color) {
+  return stripIndent(`
+    .border--${color} {
+      border-color: ${variables[color]} !important;
+    }
+  `);
+};
 
-function createAllBorderVariants(borderConfig) {
-  const createVariant = (color) => {
-    const css = stripIndent(`
-      .border--${color} {
-        border-color: ${variables[color]} !important;
-      }
-    `);
-    const rule = postcss.parse(css).nodes[0];
-    return rule;
-  };
+variantGenerators.hoverShadow = function (color) {
+  if (!isSemitransparent(color)) return '';
+  const colorValue = variables[color];
+  return stripIndent(`
+    .hover-shadow-${color}:hover {
+      box-shadow: 0 0 10px 2px ${colorValue} !important;
+    }
+    .hover-shadow-${color}-bold:hover {
+      box-shadow: 0 0 20px 2px ${colorValue} !important;
+    }
+  `);
+};
 
-  return borderConfig.map(createVariant);
-}
+variantGenerators.hoverBackground = function (color) {
+  return stripIndent(`
+    .hover-bg-${color}:hover {
+      background-color: ${variables[color]} !important;
+    }
+  `);
+};
 
-function createColorVariantCss(config) {
-  const root = postcss.root();
+variantGenerators.hoverColor = function (color) {
+  return stripIndent(`
+    .hover-color-${color}:hover {
+      color: ${variables[color]} !important;
+    }
+  `);
+};
 
-  if (config.buttons !== undefined) {
-    root.append.apply(root, createAllButtonVariants(config.buttons));
-  }
+variantGenerators.activeColor = function (color) {
+  return stripIndent(`
+    .active-color-${color}.is-active {
+      color: ${variables[color]} !important;
+    }
+  `);
+};
 
-  if (config.checkboxes !== undefined) {
-    root.append.apply(root, createAllCheckboxVariants(config.checkboxes));
-  }
+variantGenerators.hoverBorder = function (color) {
+  return stripIndent(`
+    .hover-border-${color}:hover {
+      border-color: ${variables[color]} !important;
+    }
+  `);
+};
 
-  if (config.radios !== undefined) {
-    root.append.apply(root, createAllRadioVariants(config.radios));
-  }
+variantGenerators.activeBackground = function (color) {
+  return stripIndent(`
+    .active-bg-${color}.is-active {
+      background-color: ${variables[color]} !important;
+    }
+  `);
+};
 
-  if (config.switches !== undefined) {
-    root.append.apply(root, createAllSwitchVariants(config.switches));
-  }
-
-  if (config.borders !== undefined) {
-    root.append.apply(root, createAllBorderVariants(config.borders));
-  }
-
-  return root.toString();
-}
+variantGenerators.activeBorder = function (color) {
+  return stripIndent(`
+    .active-border-${color}.is-active {
+      border-color: ${variables[color]} !important;
+    }
+  `);
+};
 
 function buildColorVariants(config) {
-  config = config || defaultConfig;
-  const css = createColorVariantCss(config);
-  return pify(fs.writeFile)(outfile, css).then(() => {
-    console.log('done');
+  config = config || allConfig;
+  const universalColors = (Array.isArray(config))
+    ? config
+    : null;
+
+  let result = '';
+
+  Object.keys(variantGenerators).forEach((coloredThing) => {
+    const colors = universalColors || config[coloredThing];
+    if (colors === null || colors === undefined) return;
+    colors.forEach((color) => {
+      result += variantGenerators[coloredThing](color);
+    });
   });
+
+  return result;
 }
 
 module.exports = buildColorVariants;

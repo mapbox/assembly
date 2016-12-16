@@ -24,11 +24,9 @@ class CheckboxesRadios extends React.Component {
    );
 
     const checkboxes = colors.map((color, i) => {
-      let checkboxFillClass = 'checkbox';
-      let checkboxStrokeClass = 'checkbox checkbox--stroke';
+      let checkboxClass = 'checkbox mr10';
       if (color !== null) {
-        checkboxFillClass += ` bg-${color}`;
-        checkboxStrokeClass += ` color-${color}`;
+        checkboxClass += ` color-${color}`;
       }
 
       return (
@@ -36,38 +34,19 @@ class CheckboxesRadios extends React.Component {
           <div className='inline-block mr30'>
             <label className='checkbox-container mr10'>
               <input type='checkbox' />
-              <div className={checkboxFillClass}>
+              <div className={checkboxClass}>
                 {checkmark}
               </div>
-              Filled
-            </label>
-          </div>
-          <div className='inline-block mr30'>
-            <label className='checkbox-container mr10'>
-              <input type='checkbox' />
-              <div className={checkboxStrokeClass}>
-                {checkmark}
-              </div>
-              Unfilled
+              Check me
             </label>
           </div>
           <div className='inline-block'>
-            <div className={checkboxFillClass}>
+            <div className={checkboxClass}>
               {checkmark}
             </div>
           </div>
           <div className='inline-block'>
-            <div className={`${checkboxFillClass} is-active`}>
-              {checkmark}
-            </div>
-          </div>
-          <div className='inline-block'>
-            <div className={checkboxStrokeClass}>
-              {checkmark}
-            </div>
-          </div>
-          <div className='inline-block'>
-            <div className={`${checkboxStrokeClass} is-active`}>
+            <div className={`${checkboxClass} is-active`}>
               {checkmark}
             </div>
           </div>
@@ -76,7 +55,7 @@ class CheckboxesRadios extends React.Component {
     });
 
     const radios = colors.map((color, i) => {
-      let radioClass = 'radio';
+      let radioClass = 'radio mr10';
       let id = 'radio';
       if (color !== null) {
         radioClass += ` color-${color}`;

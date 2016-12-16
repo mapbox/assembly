@@ -365,19 +365,19 @@
  * @memberof Display
  * @example
  * <div class="p10 border mb10">
- *   <div class="inline border border--cyan bor-all">inline</div>
+ *   <div class="inline border border--blue-light bor-all">inline</div>
  * </div>
  * <div class="p10 border mb10">
- *   <div class="block border border--cyan bor-all">block</div>
+ *   <div class="block border border--blue-light bor-all">block</div>
  * </div>
  * <div class="p10 border mb10">
- *   <div class="inline-block border border--cyan bor-all">inline-block</div>
+ *   <div class="inline-block border border--blue-light bor-all">inline-block</div>
  * </div>
  * <div class="p10 border mb10">
- *   <div class="flex border border--cyan bor-all">flex</div>
+ *   <div class="flex border border--blue-light bor-all">flex</div>
  * </div>
  * <div class="p10 border">
- *   <div class="none border border--cyan bor-all">none</div>
+ *   <div class="none border border--blue-light bor-all">none</div>
  * </div>
  */
 .inline { display: inline !important; }
