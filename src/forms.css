@@ -276,7 +276,19 @@ to the `.select` container. */
 .select.bg-purple:hover { background-color: var(--purple-dark) !important; }
 .select--stroke.color-purple:hover { color: var(--purple-dark) !important; }
 
-/* Ranges */
+/**
+ * Range input. The following modifiers are available:
+ * - `input--s`: Small
+ * - `input--dark`: Dark
+ *
+ * Use `w*` width classes to change widths.
+ *
+ * @memberof Forms
+ * @example
+ * <input class='range w100' type='range' />
+ * <input class='range range--s w100' type='range' />
+ * <div class='bg-gray-dark px10 round inline-block'><input class='range range--dark w100' type='range' /></div>
+*/
 .range {
   appearance: none;
   padding: 5px 0; /* to increase click area for ranges */
