@@ -1,5 +1,6 @@
 import React from 'react';
 import { UnderlineTabs } from './underline_tabs';
+import { DiverseTiles } from './diverse_tiles';
 
 class Examples extends React.Component {
   render() {
@@ -11,6 +12,9 @@ class Examples extends React.Component {
 
         <div className='mt30'>
           <UnderlineTabs />
+        </div>
+        <div className='mt30'>
+          <DiverseTiles />
         </div>
       </div>
     );

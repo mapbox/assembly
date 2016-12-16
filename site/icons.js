@@ -24,7 +24,7 @@ class Icons extends React.Component {
   render() {
     const iconEls = icons.map((icon) => {
       return (
-        <div key={icon} className='round mr5 mb5 border border--gray pl10 pr10 pt5 pb5 flex flex-center-y'>
+        <div key={icon} className='round mr5 mb5 border border--gray pl10 pr10 pt5 pb5 flex-parent flex-parent--center-cross'>
           <div className='mr10'>
             {icon}
           </div>
