@@ -1,5 +1,19 @@
 import React from 'react';
 
+const colors = [
+  null,
+  'gray',
+  'pink',
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'teal',
+  'blue',
+  'purple'
+];
+
+
 class Forms extends React.Component {
   render() {
     return (
@@ -73,6 +87,48 @@ class Forms extends React.Component {
             </div>
           </fieldset>
         </div>
+
+        <div>
+          <h2 className='txt-subhead mb20 mt20'>
+            Selects
+          </h2>
+
+          {colors.map((color) => (
+            <div>
+              <div className='mb10'>
+                <div className={`select bg-${color}`}>
+                  <select>
+                    <option>one</option>
+                    <option>two</option>
+                    <option>three</option>
+                  </select>
+                  <div className='select-arrow'>
+                    <svg
+                      className='icon'
+                      dangerouslySetInnerHTML={{ __html: '<use xlink:href="#icon-caret-down"></use>' }}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className='mb10'>
+                <div className={`select select--stroke color-${color}`}>
+                  <select>
+                    <option>one</option>
+                    <option>two</option>
+                    <option>three</option>
+                  </select>
+                  <div className='select-arrow'>
+                    <svg
+                      className='icon'
+                      dangerouslySetInnerHTML={{ __html: '<use xlink:href="#icon-caret-down"></use>' }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     );
   }
