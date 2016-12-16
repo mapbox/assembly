@@ -15,11 +15,14 @@ class Heading extends React.Component {
       </div>;
     }
 
+    const sectionClass = props.level === 1 ? 'bg-blue-faint p20 mb30 mt40 round' : 'mt40';
+    const levelClass = props.level === 1 ? 'txt-subhead mb5' : 'txt-xl mb5';
+
     return (
-      <div className='docs-heading-container'>
+      <div className={sectionClass}>
         <div
           id={id}
-          className={`docs-heading-title-${props.level}`}
+          className={`${levelClass}`}
         >
           <a href={`#${id}`}>
             {props.title}

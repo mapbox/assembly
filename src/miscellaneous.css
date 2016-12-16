@@ -24,7 +24,7 @@
  *
  * @memberof Miscellaneous
  * @example
- * <div class='events-none'><div class='events-all'>You can click this</div></div>
+ * <div class='events-none'><div class='events-all'>You can click this.</div></div>
  */
 .events-all {
   -webkit-touch-callout: default;
@@ -53,4 +53,15 @@
  */
 .select-all {
   user-select: auto;
+}
+
+/**
+ * Disable transition on elements like [`btn`](#btn) that have default transitions.
+ *
+ * @memberof Miscellaneous
+ * @example
+ * <div class='btn transition-none'>.transition-none</div>
+ */
+.transition-none {
+  transition: auto;
 }

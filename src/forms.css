@@ -1,12 +1,14 @@
+/* stylelint-disable selector-no-type, selector-no-combinator */
 /**
  * @section Forms
  */
 
 .fieldset,
 .input,
-.select,
+.select > select,
 .textarea {
-  background: #fff;
+  appearance: none;
+  background: var(--white);
   border: 0;
   margin: 0;
   padding: 0;
@@ -95,28 +97,186 @@
 .input--dark,
 .textarea--dark {
   background-color: var(--gray-dark);
-  color: #fff;
+  color: var(--white);
 }
 
-/* Select */
+/**
+ * The select markup must fit the following pattern.
+ * - A wrapping `<div>` with the class `select`.
+ * - A `<select>`.
+ *
+ * Use `w*` width classes to change widths.
+ *
+ * The default styling looks kind of like an input.
+ *
+ * Variations:
+ * - Modify `.select` with `select--stroke`.
+ * - Modify *non-stroke* `.select` with a `.bg-{color}` class.
+ * - Modify *stroke* `.select` with a text color, e.g. `.color-red`.
+ *
+ * @section Selects
+ * @memberof Forms
+ */
+
+/**
+ * @memberof Selects
+ * @example
+ * <div class='select'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ * </div>
+ * <div class='select bg-red'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ * </div>
+ * <div class='select select--s bg-blue'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ * </div>
+ * <div class='select select--stroke color-purple'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ * </div>
+ */
 .select {
-  border: 2px solid var(--gray-light);
-  padding-right: 15px;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--border-radius);
 }
 
-.select {
-  appearance: none;
+/* Borders are on the select, but colors are applied
+to the `.select` container. */
+
+.select > select {
+  display: block;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--gray-light);
+  border-radius: var(--border-radius);
+  color: currentColor;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
   height: 40px;
   line-height: 36px; /* minus border */
-  padding: 0 10px;
+  padding: 0 30px 0 12px; /* plus arrow */
+  /* Needs to be on top of everything but transparent */
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  width: 100%;
 }
 
-.select--s {
+/* IE overrides */
+.select > select::-ms-expand { display: none; }
+/* IE actually colors the options, so they can't be white */
+.select option { color: var(--text-color); }
+/* Remove purple highlight in HC mode */
+@media all and (-ms-high-contrast: active) {
+  .select > select:focus::-ms-value {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+/* Remove blue highlight in Normal mode */
+@media all and (-ms-high-contrast: none) {
+  .select > select:focus::-ms-value {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+/* End IE overrides */
+
+.select--stroke > select {
+  border-color: currentColor;
+}
+
+.select--s > select {
   height: 30px;
   line-height: 26px; /* minus border */
-  padding: 0 5px;
+  padding: 0 40px 0 10px; /* plus arrow */
 }
 
+.select::after {
+  content: '';
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid var(--gray-light);
+  width: 8px;
+  height: 8px;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+  right: 10px;
+}
+
+.select--stroke::after {
+  border-top-color: currentColor;
+}
+
+.select--s > select {
+  padding-right: 26px;
+}
+
+.select--s::after {
+  right: 8px;
+}
+
+/* stylelint-disable selector-no-attribute */
+/* bg- colors */
+.select[class*='bg-']:not(.select--stroke),
+.select[class*='bg-']:not(.select--stroke) > select {
+  border-color: transparent;
+  color: #fff;
+}
+.select[class*='bg-']:not(.select--stroke)::after {
+  border-top-color: #fff;
+}
+/* stylelint-enable selector-no-attribute */
+
+/* Color variations */
+.select.bg-gray:hover { background-color: var(--gray-dark) !important; }
+.select--stroke.color-gray:hover { color: var(--gray-dark) !important; }
+
+.select.bg-pink:hover { background-color: var(--pink-dark) !important; }
+.select--stroke.color-pink:hover { color: var(--pink-dark) !important; }
+
+.select.bg-red:hover { background-color: var(--red-dark) !important; }
+.select--stroke.color-red:hover { color: var(--red-dark) !important; }
+
+.select.bg-orange:hover { background-color: var(--orange-dark) !important; }
+.select--stroke.color-orange:hover { color: var(--orange-dark) !important; }
+
+.select.bg-yellow:hover { background-color: var(--yellow-dark) !important; }
+.select--stroke.color-yellow:hover { color: var(--yellow-dark) !important; }
+
+.select.bg-green:hover { background-color: var(--green-dark) !important; }
+.select--stroke.color-green:hover { color: var(--green-dark) !important; }
+
+.select.bg-teal:hover { background-color: var(--teal-dark) !important; }
+.select--stroke.color-teal:hover { color: var(--teal-dark) !important; }
+
+.select.bg-blue:hover { background-color: var(--blue-dark) !important; }
+.select--stroke.color-blue:hover { color: var(--blue-dark) !important; }
+
+.select.bg-purple:hover { background-color: var(--purple-dark) !important; }
+.select--stroke.color-purple:hover { color: var(--purple-dark) !important; }
+
+/* Ranges */
 .range {
   appearance: none;
   min-width: 0;
@@ -188,28 +348,28 @@
  * <div class='mb10'>
  *   <label class='checkbox-container'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox'>
+ *     <div class='checkbox mr5'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
- *     Checkbox magic
- *   </label>
- * </div>
- * <div class='txt-s'>
- *   <label class='checkbox-container mr10'>
- *     <input type='checkbox' value='magic'>
- *     <div class='checkbox checkbox--stroke checkbox--s-label color-red'>
- *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
- *     </div>
- *     Checkbox magic
+ *     More cats
  *   </label>
  * </div>
  * <div class='mb10'>
  *   <label class='checkbox-container mr10'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox'>
+ *     <div class='checkbox mr5'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci tenetur distinctio provident a, debitis obcaecati ipsam laborum autem suscipit natus repellendus nam cumque ab qui ducimus unde ratione, quisquam nisi.
+ *   </label>
+ * </div>
+ * <div class='txt-s'>
+ *   <label class='checkbox-container mr10'>
+ *     <input type='checkbox' value='magic'>
+ *     <div class='checkbox mr5 checkbox--stroke checkbox--s-label color-red'>
+ *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
+ *     </div>
+ *     More zebras
  *   </label>
  * </div>
  */
@@ -231,6 +391,7 @@
  * In that case, apply the state class `is-active` when it should be checked.
  *
  * @section Radio buttons
+ * @memberof Forms
  */
 
 /**
@@ -239,15 +400,15 @@
  * <div class='mb10'>
  *   <label class='radio-container mr10'>
  *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio'></div>
- *     Magic radio
+ *     <div class='radio mr5'></div>
+ *     Option 1
  *   </label>
  * </div>
  * <div class='txt-s'>
  *   <label class='radio-container mr10'>
  *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio radio--s-label color-yellow'></div>
- *     Magic radio
+ *     <div class='radio radio--s-label color-yellow mr5'></div>
+ *     Option 2
  *   </label>
  * </div>
  */
@@ -269,6 +430,7 @@
  * In that case, apply the state class `is-active` when it should be checked.
  *
  * @section Switches
+ * @memberof Forms
  */
 
 /**
@@ -286,7 +448,82 @@
  * </label>
  */
 
-/* stylelint-disable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
+/**
+ * The toggle is an alternative way to style a set of radio inputs. Switch markup must fit the following pattern.
+ *
+ * Consists of
+ * - A wrapping `<div>` around all your radio options with the class `toggle-group`.
+ * - A wrapping `<label>` around each radio option with the class `toggle-container`.
+ * - An `<input type='radio'>`.
+ * - A `<div>` with the class `toggle`.
+ *
+ * Variations:
+ * - Modify the inactive toggle label text color, and the active toggle background color with `toggle--{color}`.
+ * - Modify the border radiuses of toggle groups inside small text with `toggle-group--s` on toggle group element.
+ *
+ * The Toggle component and its modifiers can be used independent
+ * of a `<label>` and `<input>` if you are building a custom components.
+ * In that case, apply the state class `is-active` to a `toggle` and it will appear active.
+ *
+ * @section Toggles
+ * @memberof Forms
+ */
+
+/**
+ * @memberof Toggles
+ * @example
+ * <div class='toggle-group mr20'>
+ *   <label class='toggle-container'>
+ *     <input name='pet' value='cat' type='radio' />
+ *     <div class='toggle'>
+ *     cat
+ *     </div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='pet' value='dog' type='radio' />
+ *     <div class='toggle'>
+ *     dog
+ *     </div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='pet' value='bird' type='radio' />
+ *     <div class='toggle'>
+ *     bird
+ *     </div>
+ *   </label>
+ * </div>
+ * <div class='toggle-group txt-s mr20'>
+ *   <label class='toggle-container'>
+ *     <input name='beast' value='cat' type='radio' />
+ *     <div class='toggle toggle--purple'>
+ *     dragon
+ *     </div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='beast' value='dog' type='radio' />
+ *     <div class='toggle toggle--purple'>
+ *     phoenix
+ *     </div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='beast' value='bird' type='radio' />
+ *     <div class='toggle toggle--purple'>
+ *     hydra
+ *     </div>
+ *   </label>
+ * </div>
+ * <div class='toggle-group'>
+ *   <div class='toggle is-active'>
+ *   cyrus
+ *   </div>
+ *   <div class='toggle'>
+ *   steve
+ *   </div>
+ *   <div class='toggle'>
+ *   penny
+ *   </div>
+ * </div>
+ */
 
 /* shared form styles */
 .checkbox-container,
@@ -297,6 +534,7 @@
   cursor: pointer;
 }
 
+.toggle-container > input,
 .checkbox-container > input,
 .switch-container > input,
 .radio-container > input {
@@ -316,16 +554,17 @@
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
+  transition: color 0.125s, background-color 0.125s;
 }
 
 /* Primary checkbox styles */
 .checkbox {
   background-color: var(--blue);
-  color: #fff;
+  color: var(--white);
 }
 
 .checkbox--stroke {
-  background-color: #fff;
+  background-color: var(--white);
   border-color: currentColor;
   color: var(--blue);
 }
@@ -368,9 +607,9 @@
 
 /* Primary switch styles */
 .switch {
+  flex-shrink: 0;
   position: relative;
   top: 2px;
-  flex-shrink: 0;
   width: 36px;
   height: 20px;
   border-radius: 10px;
@@ -379,19 +618,45 @@
   border-style: solid;
   border-color: currentColor;
   color: var(--blue);
+  transition: color 0.125s, background-color 0.125s, border-color 0.125s;
 }
 
 .switch::after {
+  content: '';
   background-color: currentColor;
   position: relative;
   display: block;
-  content: '';
   border-radius: 50%;
   width: 12px;
   height: 12px;
   left: 2px;
   top: 2px;
-  transition: left 0.125s;
+  transition: left 0.125s, background-color 0.125s;
+}
+
+/* Primary toggle styles */
+.toggle-group {
+  display: inline-flex;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.toggle {
+  flex-shrink: 0;
+  cursor: pointer;
+  color: var(--blue);
+  font-weight: bold;
+  margin: 2px;
+  padding: 0 12px;
+  border-radius: 13px;
+  text-decoration: none !important; /* prevent underline when inside .prose */
+  background-color: transparent;
+  transition: color 0.125s, background-color 0.125s;
+}
+
+/* adjust border radiuses with small text */
+.toggle-group--s {
+  border-radius: 13px;
 }
 
 /* align labels with small text */
@@ -423,16 +688,36 @@ input:checked + .radio,
 }
 
 /* state management for switches */
+input:not(:checked) + .switch:not(.is-active):hover::after {
+  background-color: var(--blue-dark);
+}
+
+.switch:hover {
+  color: var(--blue-dark);
+}
+
 .is-active.switch::after,
 input:checked + .switch::after {
   left: 18px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .is-active.switch,
 input:checked + .switch {
   border-color: transparent !important;
-  background-color: currentColor;
+  background-color: var(--blue-dark) !important;
+}
+
+/* state management for toggles */
+input:not(:checked) + .toggle:not(.is-active):hover,
+:not(input) + .toggle:not(.is-active):hover {
+  color: var(--blue-dark) !important;
+}
+
+.toggle.is-active,
+input:checked + .toggle {
+  background: var(--blue) !important;
+  color: var(--white);
 }
 
 /* Color variations for checkboxes */
@@ -569,124 +854,38 @@ input:checked + .color-black,
 }
 
 /* Color variations for switches */
-.is-active.switch--handle-gray-faint::after,
-input:checked + .switch--handle-gray-faint::after {
-  background-color: var(--gray-faint) !important;
+.switch.color-purple:hover {
+  border-color: var(--purple-dark) !important;
 }
 
-.is-active.switch--handle-gray-light::after,
-input:checked + .switch--handle-gray-light::after {
-  background-color: var(--gray-light) !important;
-}
-
-.is-active.switch--handle-gray::after,
-input:checked + .switch--handle-gray::after {
-  background-color: var(--gray) !important;
-}
-
-.is-active.switch--handle-gray-dark::after,
-input:checked + .switch--handle-gray-dark::after {
-  background-color: var(--gray-dark) !important;
-}
-
-.is-active.switch--handle-pink::after,
-input:checked + .switch--handle-pink::after {
-  background-color: var(--pink) !important;
-}
-
-.is-active.switch--handle-red::after,
-input:checked + .switch--handle-red::after {
-  background-color: var(--red) !important;
-}
-
-.is-active.switch--handle-orange::after,
-input:checked + .switch--handle-orange::after {
-  background-color: var(--orange) !important;
-}
-
-.is-active.switch--handle-yellow::after,
-input:checked + .switch--handle-yellow::after {
-  background-color: var(--yellow) !important;
-}
-
-.is-active.switch--handle-green::after,
-input:checked + .switch--handle-green::after {
-  background-color: var(--green) !important;
-}
-
-.is-active.switch--handle-teal::after,
-input:checked + .switch--handle-teal::after {
-  background-color: var(--teal) !important;
-}
-
-.is-active.switch--handle-blue::after,
-input:checked + .switch--handle-blue::after {
-  background-color: var(--blue) !important;
-}
-
+/* make switch background dark purple when active */
+.is-active.switch.color-purple,
+input:checked + .switch.color-purple,
+/* make dot dark purple on hover, if not active  */
+input:not(:checked) + .switch.color-purple:hover::after,
+:not(input) + .switch.color-purple:not(.is-active):hover::after,
+/* use modifier class to make the dot dark purple on hover, if active  */
 .is-active.switch--handle-purple::after,
 input:checked + .switch--handle-purple::after {
-  background-color: var(--purple) !important;
+  background-color: var(--purple-dark) !important;
 }
 
-.is-active.switch--handle-darken5::after,
-input:checked + .switch--handle-darken5::after {
-  background-color: var(--darken5) !important;
+/* Color variations for toggles */
+
+/* set the text color to purple when inactive */
+.toggle--purple {
+  color: var(--purple) !important;
 }
 
-.is-active.switch--handle-darken10::after,
-input:checked + .switch--handle-darken10::after {
-  background-color: var(--darken10) !important;
+/* set the text color to dark purple when inactive, on hover  */
+input:not(:checked) + .toggle.toggle--purple:not(.is-active):hover,
+:not(input) + .toggle.toggle--purple:not(.is-active):hover {
+  color: var(--purple-dark) !important;
 }
 
-.is-active.switch--handle-darken25::after,
-input:checked + .switch--handle-darken25::after {
-  background-color: var(--darken25) !important;
-}
-
-.is-active.switch--handle-darken50::after,
-input:checked + .switch--handle-darken50::after {
-  background-color: var(--darken50) !important;
-}
-
-.is-active.switch--handle-darken75::after,
-input:checked + .switch--handle-darken75::after {
-  background-color: var(--darken75) !important;
-}
-
-.is-active.switch--handle-lighten5::after,
-input:checked + .switch--handle-lighten5::after {
-  background-color: var(--lighten5) !important;
-}
-
-.is-active.switch--handle-lighten10::after,
-input:checked + .switch--handle-lighten10::after {
-  background-color: var(--lighten10) !important;
-}
-
-.is-active.switch--handle-lighten25::after,
-input:checked + .switch--handle-lighten25::after {
-  background-color: var(--lighten25) !important;
-}
-
-.is-active.switch--handle-lighten50::after,
-input:checked + .switch--handle-lighten50::after {
-  background-color: var(--lighten50) !important;
-}
-
-.is-active.switch--handle-lighten75::after,
-input:checked + .switch--handle-lighten75::after {
-  background-color: var(--lighten75) !important;
-}
-
-.is-active.switch--handle-black::after,
-input:checked + .switch--handle-black::after {
-  background-color: var(--black) !important;
-}
-
-/* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
-
-.legend {
-  display: block;
-  width: 100%;
+/* set the background color to dark purple and text color to white when active  */
+.toggle.toggle--purple.is-active,
+input:checked + .toggle.toggle--purple {
+  background: var(--purple) !important;
+  color: var(--white) !important;
 }

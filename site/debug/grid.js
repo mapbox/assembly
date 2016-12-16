@@ -9,7 +9,7 @@ class Grid extends React.Component {
         </h1>
 
         <div className='mt20 bg-gray-faint p10'>
-          <div className='grd'>
+          <div className='grid'>
             <div className='col col--1'>
               <div className='txt-s border border--blue p5'>1</div>
             </div>
@@ -20,7 +20,7 @@ class Grid extends React.Component {
         </div>
 
         <div className='mt20 bg-gray-faint p10'>
-          <div className='grd grd--gut5'>
+          <div className='grid grid--gut5'>
             <div className='col col--2'>
               <div className='txt-s border border--blue p5'>2</div>
             </div>
@@ -31,7 +31,7 @@ class Grid extends React.Component {
         </div>
 
         <div className='mt20 bg-gray-faint p10'>
-          <div className='grd grd--gut10'>
+          <div className='grid grid--gut10'>
             <div className='col col--3'>
               <div className='txt-s border border--blue p5'>3</div>
             </div>
@@ -42,7 +42,7 @@ class Grid extends React.Component {
         </div>
 
         <div className='mt20 bg-gray-faint p10'>
-          <div className='grd grd--gut20'>
+          <div className='grid grid--gut20'>
             <div className='col col--4'>
               <div className='txt-s border border--blue p5'>4</div>
             </div>
@@ -53,7 +53,7 @@ class Grid extends React.Component {
         </div>
 
         <div className='mt20 bg-gray-faint p10'>
-          <div className='grd grd--gut40'>
+          <div className='grid grid--gut40'>
             <div className='col col--5'>
               <div className='txt-s border border--blue p5'>5</div>
             </div>
@@ -64,7 +64,7 @@ class Grid extends React.Component {
         </div>
 
         <div className='mt20 bg-gray-faint p10'>
-          <div className='grd grd--gut80'>
+          <div className='grid grid--gut80'>
             <div className='col col--6'>
               <div className='txt-s border border--blue p5'>6</div>
             </div>
@@ -78,7 +78,7 @@ class Grid extends React.Component {
         </div>
 
         <div className='mt20 bg-gray-faint p10'>
-          <div className='grd grd--gut10'>
+          <div className='grid grid--gut10'>
             <div className='col col--3'>
               <div className='txt-s border border--blue p5'>3</div>
             </div>
