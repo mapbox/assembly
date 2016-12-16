@@ -1,11 +1,13 @@
+/* stylelint-disable selector-no-type, selector-no-combinator */
 /**
  * @section Forms
  */
 
 .fieldset,
 .input,
-.select,
+.select > select,
 .textarea {
+  appearance: none;
   background: #fff;
   border: 0;
   margin: 0;
@@ -98,38 +100,183 @@
   color: #fff;
 }
 
-/* Select */
-.select {
-  border: 2px solid var(--gray-light);
-  padding-right: 15px;
-}
-
-.select {
-  appearance: none;
-  height: 40px;
-  line-height: 36px; /* minus border */
-  padding: 0 10px;
-}
-
-.select--s {
-  height: 30px;
-  line-height: 26px; /* minus border */
-  padding: 0 5px;
-}
-
 /**
- * Range input. The following modifiers are available:
- * - `input--s`: Small
- * - `input--dark`: Dark
+ * The select markup must fit the following pattern.
+ * - A wrapping `<div>` with the class `select`.
+ * - A `<select>`.
  *
  * Use `w*` width classes to change widths.
  *
+ * The default styling looks kind of like an input.
+ *
+ * Variations:
+ * - Modify `.select` with `select--stroke`.
+ * - Modify *non-stroke* `.select` with a `.bg-{color}` class.
+ * - Modify *stroke* `.select` with a text color, e.g. `.color-red`.
+ *
+ * @section Selects
  * @memberof Forms
+ */
+
+/**
+ * @memberof Selects
  * @example
- * <input class='range w100' type='range' />
- * <input class='range range--s w100' type='range' />
- * <div class='bg-gray-dark px10 round inline-block'><input class='range range--dark w100' type='range' /></div>
-*/
+ * <div class='select'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ * </div>
+ * <div class='select bg-red'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ * </div>
+ * <div class='select select--s bg-blue'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ * </div>
+ * <div class='select select--stroke color-purple'>
+ *   <select>
+ *     <option>one</option>
+ *     <option>two</option>
+ *     <option>three</option>
+ *   </select>
+ * </div>
+ */
+.select {
+  display: inline-block;
+  position: relative;
+  border-radius: var(--border-radius);
+}
+
+/* Borders are on the select, but colors are applied
+to the `.select` container. */
+
+.select > select {
+  display: block;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--gray-light);
+  border-radius: var(--border-radius);
+  color: currentColor;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 40px;
+  line-height: 36px; /* minus border */
+  padding: 0 30px 0 12px; /* plus arrow */
+  /* Needs to be on top of everything but transparent */
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  width: 100%;
+}
+
+/* IE overrides */
+.select > select::-ms-expand { display: none; }
+/* IE actually colors the options, so they can't be white */
+.select option { color: var(--text-color); }
+/* Remove purple highlight in HC mode */
+@media all and (-ms-high-contrast: active) {
+  .select > select:focus::-ms-value {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+/* Remove blue highlight in Normal mode */
+@media all and (-ms-high-contrast: none) {
+  .select > select:focus::-ms-value {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+/* End IE overrides */
+
+.select--stroke > select {
+  border-color: currentColor;
+}
+
+.select--s > select {
+  height: 30px;
+  line-height: 26px; /* minus border */
+  padding: 0 40px 0 10px; /* plus arrow */
+}
+
+.select::after {
+  content: '';
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid var(--gray-light);
+  width: 8px;
+  height: 8px;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+  right: 10px;
+}
+
+.select--stroke::after {
+  border-top-color: currentColor;
+}
+
+.select--s > select {
+  padding-right: 26px;
+}
+
+.select--s::after {
+  right: 8px;
+}
+
+/* stylelint-disable selector-no-attribute */
+/* bg- colors */
+.select[class*='bg-']:not(.select--stroke),
+.select[class*='bg-']:not(.select--stroke) > select {
+  border-color: transparent;
+  color: #fff;
+}
+.select[class*='bg-']:not(.select--stroke)::after {
+  border-top-color: #fff;
+}
+/* stylelint-enable selector-no-attribute */
+
+/* Color variations */
+.select.bg-gray:hover { background-color: var(--gray-dark) !important; }
+.select--stroke.color-gray:hover { color: var(--gray-dark) !important; }
+
+.select.bg-pink:hover { background-color: var(--pink-dark) !important; }
+.select--stroke.color-pink:hover { color: var(--pink-dark) !important; }
+
+.select.bg-red:hover { background-color: var(--red-dark) !important; }
+.select--stroke.color-red:hover { color: var(--red-dark) !important; }
+
+.select.bg-orange:hover { background-color: var(--orange-dark) !important; }
+.select--stroke.color-orange:hover { color: var(--orange-dark) !important; }
+
+.select.bg-yellow:hover { background-color: var(--yellow-dark) !important; }
+.select--stroke.color-yellow:hover { color: var(--yellow-dark) !important; }
+
+.select.bg-green:hover { background-color: var(--green-dark) !important; }
+.select--stroke.color-green:hover { color: var(--green-dark) !important; }
+
+.select.bg-teal:hover { background-color: var(--teal-dark) !important; }
+.select--stroke.color-teal:hover { color: var(--teal-dark) !important; }
+
+.select.bg-blue:hover { background-color: var(--blue-dark) !important; }
+.select--stroke.color-blue:hover { color: var(--blue-dark) !important; }
+
+.select.bg-purple:hover { background-color: var(--purple-dark) !important; }
+.select--stroke.color-purple:hover { color: var(--purple-dark) !important; }
+
+/* Ranges */
 .range {
   appearance: none;
   padding: 5px 0; /* to increase click area for ranges */
@@ -432,8 +579,6 @@
  * </label>
  */
 
-/* stylelint-disable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
-
 /* shared form styles */
 .checkbox-container,
 .switch-container,
@@ -525,6 +670,7 @@
   border-style: solid;
   border-color: currentColor;
   color: var(--blue);
+  transition: color 0.125s, background-color 0.125s, border-color 0.125s;
 }
 
 .switch::after {
@@ -537,7 +683,7 @@
   height: 12px;
   left: 2px;
   top: 2px;
-  transition: left 0.125s;
+  transition: left 0.125s, background-color 0.125s;
 }
 
 /* align labels with small text */
@@ -569,6 +715,14 @@ input:checked + .radio,
 }
 
 /* state management for switches */
+input:not(:checked) + .switch:not(.is-active):hover::after {
+  background-color: var(--blue-dark);
+}
+
+.switch:hover {
+  color: var(--blue-dark);
+}
+
 .is-active.switch::after,
 input:checked + .switch::after {
   left: 18px;
@@ -578,7 +732,7 @@ input:checked + .switch::after {
 .is-active.switch,
 input:checked + .switch {
   border-color: transparent !important;
-  background-color: currentColor;
+  background-color: var(--blue-dark) !important;
 }
 
 /* Color variations for checkboxes */
@@ -715,124 +869,18 @@ input:checked + .color-black,
 }
 
 /* Color variations for switches */
-.is-active.switch--handle-gray-faint::after,
-input:checked + .switch--handle-gray-faint::after {
-  background-color: var(--gray-faint) !important;
+.switch.color-purple:hover {
+  border-color: var(--purple-dark) !important;
 }
 
-.is-active.switch--handle-gray-light::after,
-input:checked + .switch--handle-gray-light::after {
-  background-color: var(--gray-light) !important;
-}
-
-.is-active.switch--handle-gray::after,
-input:checked + .switch--handle-gray::after {
-  background-color: var(--gray) !important;
-}
-
-.is-active.switch--handle-gray-dark::after,
-input:checked + .switch--handle-gray-dark::after {
-  background-color: var(--gray-dark) !important;
-}
-
-.is-active.switch--handle-pink::after,
-input:checked + .switch--handle-pink::after {
-  background-color: var(--pink) !important;
-}
-
-.is-active.switch--handle-red::after,
-input:checked + .switch--handle-red::after {
-  background-color: var(--red) !important;
-}
-
-.is-active.switch--handle-orange::after,
-input:checked + .switch--handle-orange::after {
-  background-color: var(--orange) !important;
-}
-
-.is-active.switch--handle-yellow::after,
-input:checked + .switch--handle-yellow::after {
-  background-color: var(--yellow) !important;
-}
-
-.is-active.switch--handle-green::after,
-input:checked + .switch--handle-green::after {
-  background-color: var(--green) !important;
-}
-
-.is-active.switch--handle-teal::after,
-input:checked + .switch--handle-teal::after {
-  background-color: var(--teal) !important;
-}
-
-.is-active.switch--handle-blue::after,
-input:checked + .switch--handle-blue::after {
-  background-color: var(--blue) !important;
-}
-
+/* make switch background dark purple when active */
+.is-active.switch.color-purple,
+input:checked + .switch.color-purple,
+/* make dot dark purple on hover, if not active  */
+input:not(:checked) + .switch.color-purple:hover::after,
+:not(input) + .switch.color-purple:not(.is-active):hover::after,
+/* use modifier class to make the dot dark purple on hover, if active  */
 .is-active.switch--handle-purple::after,
 input:checked + .switch--handle-purple::after {
-  background-color: var(--purple) !important;
-}
-
-.is-active.switch--handle-darken5::after,
-input:checked + .switch--handle-darken5::after {
-  background-color: var(--darken5) !important;
-}
-
-.is-active.switch--handle-darken10::after,
-input:checked + .switch--handle-darken10::after {
-  background-color: var(--darken10) !important;
-}
-
-.is-active.switch--handle-darken25::after,
-input:checked + .switch--handle-darken25::after {
-  background-color: var(--darken25) !important;
-}
-
-.is-active.switch--handle-darken50::after,
-input:checked + .switch--handle-darken50::after {
-  background-color: var(--darken50) !important;
-}
-
-.is-active.switch--handle-darken75::after,
-input:checked + .switch--handle-darken75::after {
-  background-color: var(--darken75) !important;
-}
-
-.is-active.switch--handle-lighten5::after,
-input:checked + .switch--handle-lighten5::after {
-  background-color: var(--lighten5) !important;
-}
-
-.is-active.switch--handle-lighten10::after,
-input:checked + .switch--handle-lighten10::after {
-  background-color: var(--lighten10) !important;
-}
-
-.is-active.switch--handle-lighten25::after,
-input:checked + .switch--handle-lighten25::after {
-  background-color: var(--lighten25) !important;
-}
-
-.is-active.switch--handle-lighten50::after,
-input:checked + .switch--handle-lighten50::after {
-  background-color: var(--lighten50) !important;
-}
-
-.is-active.switch--handle-lighten75::after,
-input:checked + .switch--handle-lighten75::after {
-  background-color: var(--lighten75) !important;
-}
-
-.is-active.switch--handle-black::after,
-input:checked + .switch--handle-black::after {
-  background-color: var(--black) !important;
-}
-
-/* stylelint-enable selector-no-combinator, selector-no-type, selector-no-qualifying-type */
-
-.legend {
-  display: block;
-  width: 100%;
+  background-color: var(--purple-dark) !important;
 }

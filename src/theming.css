@@ -201,81 +201,113 @@
 /** @endgroup */
 
 /**
- * State classes.
- * - Control the shadow and opacity of elements in a hover, focus, or active state.
- * - Start with a prefix of `hover-*`, `focus-*`, or `active-*`
- * - Complete the class with any of assembly's `shadow`, `txt-shadow`, or `alpha` classes
+ * Change styling based on element hover, focus, and active states.
+ * @section State modifiers
+ * @memberof Theming
+ */
+
+/**
+ * Control the shadow of elements in a hover, focus, or active state.
  *
  * @group
- * @memberof Theming
+ * @memberof State modifiers
  * @example
- * <div class='col col--2 bg-gray color-white p10 hover-shadow30'>.hover-shadow30</div>
+ * <div class='w400 hover-shadow-darken25'>.hover-shadow-darken25</div>
+ * <div class='w400 is-active active-shadow-darken25'>.active-shadow-darken25.is-active</div>
  */
-.hover-shadow5:hover,
-.focus-shadow5:focus,
-.active-shadow5:active { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3) !important; }
-.hover-shadow10:hover,
-.focus-shadow10:focus,
-.active-shadow10:active { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3) !important; }
-.hover-shadow20:hover,
-.focus-shadow20:focus,
-.active-shadow20:active { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3) !important; }
-.hover-shadow30:hover,
-.focus-shadow30:focus,
-.active-shadow30:active { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3) !important; }
+.hover-shadow-darken5:hover,
+.focus-shadow-darken5:focus,
+.active-shadow-darken5:active,
+.active-shadow-darken5.is-active { box-shadow: 0 0 10px 2px var(--darken5) !important; }
+.hover-shadow-darken10:hover,
+.focus-shadow-darken10:focus,
+.active-shadow-darken10:active,
+.active-shadow-darken10.is-active { box-shadow: 0 0 10px 2px var(--darken10) !important; }
+.hover-shadow-darken25:hover,
+.focus-shadow-darken25:focus,
+.active-shadow-darken25:active,
+.active-shadow-darken25.is-active { box-shadow: 0 0 10px 2px var(--darken25) !important; }
+.hover-shadow-darken50:hover,
+.focus-shadow-darken50:focus,
+.active-shadow-darken50:active,
+.active-shadow-darken50.is-active { box-shadow: 0 0 10px 2px var(--darken50) !important; }
+
+.hover-shadow-lighten5:hover,
+.focus-shadow-lighten5:focus,
+.active-shadow-lighten5:active,
+.active-shadow-lighten5.is-active { box-shadow: 0 0 10px 2px var(--lighten5) !important; }
+.hover-shadow-lighten10:hover,
+.focus-shadow-lighten10:focus,
+.active-shadow-lighten10:active,
+.active-shadow-lighten10.is-active { box-shadow: 0 0 10px 2px var(--lighten10) !important; }
+.hover-shadow-lighten25:hover,
+.focus-shadow-lighten25:focus,
+.active-shadow-lighten25:active,
+.active-shadow-lighten25.is-active { box-shadow: 0 0 10px 2px var(--lighten25) !important; }
+.hover-shadow-lighten50:hover,
+.focus-shadow-lighten50:focus,
+.active-shadow-lighten50:active,
+.active-shadow-lighten50.is-active { box-shadow: 0 0 10px 2px var(--lighten50) !important; }
 /** @endgroup */
 
-.hover-shadow5-bold:hover,
-.focus-shadow5-bold:focus,
-.active-shadow5-bold:active { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9) !important; }
-.hover-shadow10-bold:hover,
-.focus-shadow10-bold:focus,
-.active-shadow10-bold:active { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9) !important; }
-.hover-shadow20-bold:hover,
-.focus-shadow20-bold:focus,
-.active-shadow20-bold:active { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9) !important; }
-.hover-shadow30-bold:hover,
-.focus-shadow30-bold:focus,
-.active-shadow30-bold:active { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9) !important; }
+.hover-shadow-darken5-bold:hover,
+.focus-shadow-darken5-bold:focus,
+.active-shadow-darken5-bold.is-active,
+.active-shadow-darken5-bold:active { box-shadow: 0 0 20px 2px var(--darken5) !important; }
+.hover-shadow-darken10-bold:hover,
+.focus-shadow-darken10-bold:focus,
+.active-shadow-darken10-bold.is-active,
+.active-shadow-darken10-bold:active { box-shadow: 0 0 20px 2px var(--darken10) !important; }
+.hover-shadow-darken25-bold:hover,
+.focus-shadow-darken25-bold:focus,
+.active-shadow-darken25-bold.is-active,
+.active-shadow-darken25-bold:active { box-shadow: 0 0 20px 2px var(--darken25) !important; }
+.hover-shadow-darken50-bold:hover,
+.focus-shadow-darken50-bold:focus,
+.active-shadow-darken50-bold.is-active,
+.active-shadow-darken50-bold:active { box-shadow: 0 0 20px 2px var(--darken50) !important; }
 
-.hover-txt-shadow5:hover,
-.focus-txt-shadow5:focus,
-.active-txt-shadow5:active { text-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important; }
-.hover-txt-shadow10:hover,
-.focus-txt-shadow10:focus,
-.active-txt-shadow10:active { text-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important; }
-.hover-txt-shadow20:hover,
-.focus-txt-shadow20:focus,
-.active-txt-shadow20:active { text-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important; }
-.hover-txt-shadow30:hover,
-.focus-txt-shadow30:focus,
-.active-txt-shadow30:active { text-shadow: 0 0 30px rgba(0, 0, 0, 0.3) !important; }
+.hover-shadow-lighten5-bold:hover,
+.focus-shadow-lighten5-bold:focus,
+.active-shadow-lighten5-bold:active { box-shadow: 0 0 20px 2px var(--lighten5) !important; }
+.hover-shadow-lighten10-bold:hover,
+.focus-shadow-lighten10-bold:focus,
+.active-shadow-lighten10-bold:active { box-shadow: 0 0 20px 2px var(--lighten10) !important; }
+.hover-shadow-lighten25-bold:hover,
+.focus-shadow-lighten25-bold:focus,
+.active-shadow-lighten25-bold.is-active,
+.active-shadow-lighten25-bold:active { box-shadow: 0 0 20px 2px var(--lighten25) !important; }
+.hover-shadow-lighten50-bold:hover,
+.focus-shadow-lighten50-bold:focus,
+.active-shadow-lighten50-bold.is-active,
+.active-shadow-lighten50-bold:active { box-shadow: 0 0 20px 2px var(--lighten50) !important; }
 
-.hover-txt-shadow5-bold:hover,
-.focus-txt-shadow5-bold:focus,
-.active-txt-shadow5-bold:active { text-shadow: 0 0 5px rgba(0, 0, 0, 0.9) !important; }
-.hover-txt-shadow10-bold:hover,
-.focus-txt-shadow10-bold:focus,
-.active-txt-shadow10-bold:active { text-shadow: 0 0 10px rgba(0, 0, 0, 0.9) !important; }
-.hover-txt-shadow20-bold:hover,
-.focus-txt-shadow20-bold:focus,
-.active-txt-shadow20-bold:active { text-shadow: 0 0 20px rgba(0, 0, 0, 0.9) !important; }
-.hover-txt-shadow30-bold:hover,
-.focus-txt-shadow30-bold:focus,
-.active-txt-shadow30-bold:active { text-shadow: 0 0 30px rgba(0, 0, 0, 0.9) !important; }
-
+/**
+ * Control the opacity of elements in a hover, focus, or active state.
+ *
+ * @group
+ * @memberof State modifiers
+ * @example
+ * <div class='w400 hover-alpha25'>.hover-alpha25</div>
+ */
 .hover-alpha0:hover,
 .focus-alpha0:focus,
+.focus-alpha0.is-active,
 .active-alpha0:active { opacity: 0 !important; }
 .hover-alpha25:hover,
 .focus-alpha25:focus,
+.focus-alpha25.is-active,
 .active-alpha25:active { opacity: 0.25 !important; }
 .hover-alpha50:hover,
 .focus-alpha50:focus,
+.focus-alpha50.is-active,
 .active-alpha50:active { opacity: 0.5 !important; }
 .hover-alpha75:hover,
 .focus-alpha75:focus,
+.focus-alpha75.is-active,
 .active-alpha75:active { opacity: 0.75 !important; }
 .hover-alpha100:hover,
 .focus-alpha100:focus,
+.focus-alpha100.is-active,
 .active-alpha100:active { opacity: 1 !important; }
+/** @endgroup */
