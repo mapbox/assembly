@@ -43,33 +43,40 @@
 .animation--delay { animation-delay: 1s; }
 /** @endgroup */
 
-.loading-light::after,
-.loading-dark::after {
-  margin: 10px;
+/**
+ * Loading spinners.
+ * - Act on their own or on a loading element.
+ * - For a light spinner on dark backgrounds, add the modifying class `loading--light`.
+ * - For a smaller spinner, add the modifying class 'loading--s'.
+ * @group
+ * @memberof Animations
+ * @example
+ <div class="loading inline-block p10"></div>
+ <div class="loading loading--s inline-block p10"></div>
+ <div class="loading loading--light bg-gray-dark inline-block p10"></div>
+ */
+.loading::after,
+.loading::after {
   content: '';
   display: block;
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  animation: loading 1s infinite linear;
-}
-
-.loading-light::after {
-  border: var(--lighten10) 3px solid;
-  border-top-color: var(--gray-faint);
-}
-
-.loading-dark::after {
+  animation: spin 0.8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
   border: var(--darken10) 3px solid;
   border-top-color: var(--gray-dark);
 }
 
-@keyframes loading {
-  0% { transform: rotate(0); }
-  20% { transform: rotate(20deg); }
-  80% { transform: rotate(340deg); }
-  100% { transform: rotate(360deg); }
+.loading--light::after {
+  border: var(--lighten10) 3px solid !important;
+  border-top-color: var(--gray-faint) !important;
 }
+
+.loading--s::after {
+  height: 20px !important;
+  width: 20px !important;
+}
+/** @endgroup */
 
 @keyframes pulse {
   0% { transform: scale(0.5); opacity: 0; }
