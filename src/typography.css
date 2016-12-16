@@ -579,13 +579,13 @@ textarea {
  * @memberof Typography utilities
  * @group
  * @example
- * <div class='txt-l'>txt-l</div>
- * <div class='txt-r'>txt-r</div>
- * <div class='txt-center'>txt-center</div>
+ * <div class='txt-align-l'>.txt-align-l</div>
+ * <div class='txt-align-r'>.txt-align-r</div>
+ * <div class='txt-align-center'>.txt-align-center</div>
  */
-.txt-l { text-align: left !important; }
-.txt-r { text-align: right !important; }
-.txt-center { text-align: center !important; }
+.txt-align-l { text-align: left !important; }
+.txt-align-r { text-align: right !important; }
+.txt-align-center { text-align: center !important; }
 /** @endgroup */
 
 /**
@@ -618,7 +618,10 @@ textarea {
  * <a href='#link' class='txt-link color-blue'>blue link</a>
  * <a href='#link' class='txt-link txt-underline color-red'>red underlined link</a>
  */
-.txt-link { /* empty */ }
+.txt-link {
+  transition: var(--transition);
+}
+
 .txt-link.color-gray:hover { color: var(--gray-dark) !important; }
 .txt-link.color-pink:hover { color: var(--pink-dark) !important; }
 .txt-link.color-red:hover { color: var(--red-dark) !important; }
