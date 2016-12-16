@@ -1,72 +1,74 @@
 /**
- * Some general comments about colors and gradients.
+ * Default colors, including dark, light, and faint variants.
  * @section Colors & gradients
  */
 
 /**
- * Background colors.
+ * Background color classes.
  * @group
  * @memberof Colors & gradients
  * @example
- * <div class='flex mb10'>
- * <div class='col col--3 mar-bottom-10 p10 bg-gray-dark'>bg-gray-dark</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-gray'>bg-gray</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-gray-light'>bg-gray-light</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-gray-faint'>bg-gray-faint</div>
+ * <div class='flex'>
+ *   <div class='col col--3 p10 bg-gray-dark color-lighten75'>bg-gray-dark</div>
+ *   <div class='col col--3 p10 bg-gray'>bg-gray</div>
+ *   <div class='col col--3 p10 bg-gray-light'>bg-gray-light</div>
+ *   <div class='col col--3 p10 bg-gray-faint'>bg-gray-faint</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--3 mar-bottom-10 p10 bg-pink-dark'>bg-pink-dark</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-pink'>bg-pink</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-pink-light'>bg-pink-light</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-pink-faint'>bg-pink-faint</div>
+ * <div class='flex'>
+ *   <div class='col col--3 p10 bg-pink-dark color-lighten75'>bg-pink-dark</div>
+ *   <div class='col col--3 p10 bg-pink'>bg-pink</div>
+ *   <div class='col col--3 p10 bg-pink-light'>bg-pink-light</div>
+ *   <div class='col col--3 p10 bg-pink-faint'>bg-pink-faint</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--3 mar-bottom-10 p10 bg-red-dark'>bg-red-dark</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-red'>bg-red</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-red-light'>bg-red-light</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-red-faint'>bg-red-faint</div>
+ * <div class='flex'>
+ *   <div class='col col--3 p10 bg-red-dark color-lighten75'>bg-red-dark</div>
+ *   <div class='col col--3 p10 bg-red'>bg-red</div>
+ *   <div class='col col--3 p10 bg-red-light'>bg-red-light</div>
+ *   <div class='col col--3 p10 bg-red-faint'>bg-red-faint</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--3 mar-bottom-10 p10 bg-orange-dark'>bg-orange-dark</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-orange'>bg-orange</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-orange-light'>bg-orange-light</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-orange-faint'>bg-orange-faint</div>
+ * <div class='flex'>
+ *   <div class='col col--3 p10 bg-orange-dark color-lighten75'>bg-orange-dark</div>
+ *   <div class='col col--3 p10 bg-orange'>bg-orange</div>
+ *   <div class='col col--3 p10 bg-orange-light'>bg-orange-light</div>
+ *   <div class='col col--3 p10 bg-orange-faint'>bg-orange-faint</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--3 mar-bottom-10 p10 bg-yellow-dark'>bg-yellow-dark</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-yellow'>bg-yellow</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-yellow-light'>bg-yellow-light</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-yellow-faint'>bg-yellow-faint</div>
+ * <div class='flex'>
+ *   <div class='col col--3 p10 bg-yellow-dark color-lighten75'>bg-yellow-dark</div>
+ *   <div class='col col--3 p10 bg-yellow'>bg-yellow</div>
+ *   <div class='col col--3 p10 bg-yellow-light'>bg-yellow-light</div>
+ *   <div class='col col--3 p10 bg-yellow-faint'>bg-yellow-faint</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--3 mar-bottom-10 p10 bg-green-dark'>bg-green-dark</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-green'>bg-green</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-green-light'>bg-green-light</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-green-faint'>bg-green-faint</div>
+ * <div class='flex'>
+ *   <div class='col col--3 p10 bg-green-dark color-lighten75'>bg-green-dark</div>
+ *   <div class='col col--3 p10 bg-green'>bg-green</div>
+ *   <div class='col col--3 p10 bg-green-light'>bg-green-light</div>
+ *   <div class='col col--3 p10 bg-green-faint'>bg-green-faint</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--3 mar-bottom-10 p10 bg-teal-dark'>bg-teal-dark</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-teal'>bg-teal</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-teal-light'>bg-teal-light</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-teal-faint'>bg-teal-faint</div>
+ * <div class='flex'>
+ *   <div class='col col--3 p10 bg-teal-dark color-lighten75'>bg-teal-dark</div>
+ *   <div class='col col--3 p10 bg-teal'>bg-teal</div>
+ *   <div class='col col--3 p10 bg-teal-light'>bg-teal-light</div>
+ *   <div class='col col--3 p10 bg-teal-faint'>bg-teal-faint</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--3 mar-bottom-10 p10 bg-blue-dark'>bg-blue-dark</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-blue'>bg-blue</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-blue-light'>bg-blue-light</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-blue-faint'>bg-blue-faint</div>
+ * <div class='flex'>
+ *   <div class='col col--3 p10 bg-blue-dark color-lighten75'>bg-blue-dark</div>
+ *   <div class='col col--3 p10 bg-blue'>bg-blue</div>
+ *   <div class='col col--3 p10 bg-blue-light'>bg-blue-light</div>
+ *   <div class='col col--3 p10 bg-blue-faint'>bg-blue-faint</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--3 mar-bottom-10 p10 bg-purple-dark'>bg-purple-dark</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-purple'>bg-purple</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-purple-light'>bg-purple-light</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-purple-faint'>bg-purple-faint</div>
+ * <div class='flex'>
+ *   <div class='col col--3 p10 bg-purple-dark color-lighten75'>bg-purple-dark</div>
+ *   <div class='col col--3 p10 bg-purple'>bg-purple</div>
+ *   <div class='col col--3 p10 bg-purple-light'>bg-purple-light</div>
+ *   <div class='col col--3 p10 bg-purple-faint'>bg-purple-faint</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--3 mar-bottom-10 p10 bg-black'>bg-black</div>
- * <div class='col col--3 mar-bottom-10 p10 bg-white'>bg-white</div>
+ * <div class='flex'>
+ *   <div class='col col--3 p10 bg-black color-lighten75'>bg-black</div>
+ *   <div class='col col--3 p10 bg-white'>bg-white</div>
+ *   <div class='col col--3 p10 bg-transparent'>bg-transparent</div>
  * </div>
  */
+ /** @endgroup */
 
 .bg-gray-dark { background-color: var(--gray-dark) !important; }
 .bg-gray { background-color: var(--gray) !important; }
@@ -127,52 +129,73 @@
 
 .bg-black { background-color: var(--black) !important; }
 .bg-white { background-color: var(--white) !important; }
-/** @endgroup */
+.bg-transparent { background-color: transparent !important; }
 
 /**
- * Text colors.
+ * Text color classes.
  * @group
  * @memberof Colors & gradients
  * @example
- * <div class='mb10 color-gray-dark'>color-gray-dark</div>
- * <div class='mb10 color-gray'>color-gray</div>
- * <div class='mb10 color-gray-light'>color-gray-light</div>
- * <div class='mb10 color-gray-faint'>color-gray-faint</div>
- * <div class='mb10 color-pink-dark'>color-pink-dark</div>
- * <div class='mb10 color-pink'>color-pink</div>
- * <div class='mb10 color-pink-light'>color-pink-light</div>
- * <div class='mb10 color-pink-faint'>color-pink-faint</div>
- * <div class='mb10 color-red-dark'>color-red-dark</div>
- * <div class='mb10 color-red'>color-red</div>
- * <div class='mb10 color-red-light'>color-red-light</div>
- * <div class='mb10 color-red-faint'>color-red-faint</div>
- * <div class='mb10 color-orange-dark'>color-orange-dark</div>
- * <div class='mb10 color-orange'>color-orange</div>
- * <div class='mb10 color-orange-light'>color-orange-light</div>
- * <div class='mb10 color-orange-faint'>color-orange-faint</div>
- * <div class='mb10 color-yellow-dark'>color-yellow-dark</div>
- * <div class='mb10 color-yellow'>color-yellow</div>
- * <div class='mb10 color-yellow-light'>color-yellow-light</div>
- * <div class='mb10 color-yellow-faint'>color-yellow-faint</div>
- * <div class='mb10 color-green-dark'>color-green-dark</div>
- * <div class='mb10 color-green'>color-green</div>
- * <div class='mb10 color-green-light'>color-green-light</div>
- * <div class='mb10 color-green-faint'>color-green-faint</div>
- * <div class='mb10 color-teal-dark'>color-teal-dark</div>
- * <div class='mb10 color-teal'>color-teal</div>
- * <div class='mb10 color-teal-light'>color-teal-light</div>
- * <div class='mb10 color-teal-faint'>color-teal-faint</div>
- * <div class='mb10 color-blue-dark'>color-blue-dark</div>
- * <div class='mb10 color-blue'>color-blue</div>
- * <div class='mb10 color-blue-light'>color-blue-light</div>
- * <div class='mb10 color-blue-faint'>color-blue-faint</div>
- * <div class='mb10 color-purple-dark'>color-purple-dark</div>
- * <div class='mb10 color-purple'>color-purple</div>
- * <div class='mb10 color-purple-light'>color-purple-light</div>
- * <div class='mb10 color-purple-faint'>color-purple-faint</div>
- * <div class='mb10 color-black'>color-black</div>
- * <div class='mb10 color-white'>color-white</div>
+ * <div class='flex'>
+ *   <span class='mr5 color-gray-dark'>color-gray-dark</span>
+ *   <span class='mr5 color-gray'>color-gray</span>
+ *   <span class='mr5 color-gray-light'>color-gray-light</span>
+ *   <span class='color-gray-faint'>color-gray-faint</span>
+ * </div>
+ * <div class='flex'>
+ *   <span class='mr5 color-pink-dark'>color-pink-dark</span>
+ *   <span class='mr5 color-pink'>color-pink</span>
+ *   <span class='mr5 color-pink-light'>color-pink-light</span>
+ *   <span class='color-pink-faint'>color-pink-faint</span>
+ * </div>
+ * <div class='flex'>
+ *   <span class='mr5 color-red-dark'>color-red-dark</span>
+ *   <span class='mr5 color-red'>color-red</span>
+ *   <span class='mr5 color-red-light'>color-red-light</span>
+ *   <span class='color-red-faint'>color-red-faint</span>
+ * </div>
+ * <div class='flex'>
+ *   <span class='mr5 color-orange-dark'>color-orange-dark</span>
+ *   <span class='mr5 color-orange'>color-orange</span>
+ *   <span class='mr5 color-orange-light'>color-orange-light</span>
+ *   <span class='color-orange-faint'>color-orange-faint</span>
+ * </div>
+ * <div class='flex'>
+ *   <span class='mr5 color-yellow-dark'>color-yellow-dark</span>
+ *   <span class='mr5 color-yellow'>color-yellow</span>
+ *   <span class='mr5 color-yellow-light'>color-yellow-light</span>
+ *   <span class='color-yellow-faint'>color-yellow-faint</span>
+ * </div>
+ * <div class='flex'>
+ *   <span class='mr5 color-green-dark'>color-green-dark</span>
+ *   <span class='mr5 color-green'>color-green</span>
+ *   <span class='mr5 color-green-light'>color-green-light</span>
+ *   <span class='color-green-faint'>color-green-faint</span>
+ * </div>
+ * <div class='flex'>
+ *   <span class='mr5 color-teal-dark'>color-teal-dark</span>
+ *   <span class='mr5 color-teal'>color-teal</span>
+ *   <span class='mr5 color-teal-light'>color-teal-light</span>
+ *   <span class='color-teal-faint'>color-teal-faint</span>
+ * </div>
+ * <div class='flex'>
+ *   <span class='mr5 color-blue-dark'>color-blue-dark</span>
+ *   <span class='mr5 color-blue'>color-blue</span>
+ *   <span class='mr5 color-blue-light'>color-blue-light</span>
+ *   <span class='color-blue-faint'>color-blue-faint</span>
+ * </div>
+ * <div class='flex'>
+ *   <span class='mr5 color-purple-dark'>color-purple-dark</span>
+ *   <span class='mr5 color-purple'>color-purple</span>
+ *   <span class='mr5 color-purple-light'>color-purple-light</span>
+ *   <span class='color-purple-faint'>color-purple-faint</span>
+ * </div>
+ * <div class='flex'>
+ *   <span class='mr5 color-black'>color-black</span>
+ *   <span class='color-white txt-shadow5-bold'>color-white</span>
+ * </div>
  */
+ /** @endgroup */
 .color-gray-dark { color: var(--gray-dark) !important; }
 .color-gray { color: var(--gray) !important; }
 .color-gray-light { color: var(--gray-light) !important; }
@@ -232,36 +255,37 @@
 
 .color-black { color: var(--black) !important; }
 .color-white { color: var(--white) !important; }
+.color-transparent { color: transparent !important; }
 
 .color-text { color: var(--text-color) !important; }
-/** @endgroup */
 
 /**
- * Gradients. For now, there's a gradient from each color to transparency.
+ * Gradient classes.
  *
  * @group
  * @memberof Colors & gradients
  * @example
- * <div class='flex mb10'>
- * <div class='col col--4 mar-bottom-10 p10 bg-gray-to-transparent'>bg-gray-to-transparent</div>
- * <div class='col col--4 mar-bottom-10 p10 bg-pink-to-transparent'>bg-pink-to-transparent</div>
- * <div class='col col--4 mar-bottom-10 p10 bg-red-to-transparent'>bg-red-to-transparent</div>
+ * <div class='flex'>
+ *   <div class='col col--4 p10 bg-gray-to-transparent'>bg-gray-to-transparent</div>
+ *   <div class='col col--4 p10 bg-pink-to-transparent'>bg-pink-to-transparent</div>
+ *   <div class='col col--4 p10 bg-red-to-transparent'>bg-red-to-transparent</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--4 mar-bottom-10 p10 bg-orange-to-transparent'>bg-orange-to-transparent</div>
- * <div class='col col--4 mar-bottom-10 p10 bg-yellow-to-transparent'>bg-yellow-to-transparent</div>
- * <div class='col col--4 mar-bottom-10 p10 bg-green-to-transparent'>bg-green-to-transparent</div>
+ * <div class='flex'>
+ *   <div class='col col--4 p10 bg-orange-to-transparent'>bg-orange-to-transparent</div>
+ *   <div class='col col--4 p10 bg-yellow-to-transparent'>bg-yellow-to-transparent</div>
+ *   <div class='col col--4 p10 bg-green-to-transparent'>bg-green-to-transparent</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--4 mar-bottom-10 p10 bg-teal-to-transparent'>bg-teal-to-transparent</div>
- * <div class='col col--4 mar-bottom-10 p10 bg-blue-to-transparent'>bg-blue-to-transparent</div>
- * <div class='col col--4 mar-bottom-10 p10 bg-purple-to-transparent'>bg-purple-to-transparent</div>
+ * <div class='flex'>
+ *   <div class='col col--4 p10 bg-teal-to-transparent'>bg-teal-to-transparent</div>
+ *   <div class='col col--4 p10 bg-blue-to-transparent'>bg-blue-to-transparent</div>
+ *   <div class='col col--4 p10 bg-purple-to-transparent'>bg-purple-to-transparent</div>
  * </div>
- * <div class='flex mb10'>
- * <div class='col col--4 mar-bottom-10 p10 bg-black-to-transparent'>bg-black-to-transparent</div>
- * <div class='col col--4 mar-bottom-10 p10 bg-white-to-transparent'>bg-white-to-transparent</div>
+ * <div class='flex'>
+ *   <div class='col col--4 p10 bg-black-to-transparent'>bg-black-to-transparent</div>
+ *   <div class='col col--4 p10 bg-white-to-transparent'>bg-white-to-transparent</div>
  * </div>
  */
+ /** @endgroup */
 .bg-gray-to-transparent {
   background-image: linear-gradient(
     to bottom right,
@@ -339,4 +363,3 @@
     transparent
   ) !important;
 }
-/** @endgroup */
