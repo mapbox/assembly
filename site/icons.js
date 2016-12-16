@@ -56,7 +56,7 @@ class Icons extends React.Component {
           Programmatically adding icons with JavaScript
         </h2>
         <div className='mb10 prose'>
-          You must use special DOM methods that handle namespaces to create and add attributes SVG elements programmatically. This function should do the trick for creating an icon element, which you can then add where you need it. Modify as needed with modifier classes (documented in <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>).
+          To add icons to the page programmatically, you must use special DOM methods that handle XML namespaces. The following function creates an icon element, which you can then add to the DOM where you need it. You can also modify the icon as needed with <a href='/assembly/documentation/#Icons'>icon modifier classes</a>.
         </div>
         <pre className='code-block'>
           <code>
