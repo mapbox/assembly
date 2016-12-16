@@ -135,29 +135,30 @@
  * @memberof Theming
  * @example
  * <div class='flex'>
- *   <div class='col col--2 p10 mr10 txt-shadow5'>.txt-shadow5</div>
- *   <div class='col col--2 p10 mr10 shadow10'>.shadow10</div>
- *   <div class='col col--2 p10 shadow20-bold'>.shadow20-bold</div>
+ *   <div class='shadow-darken25'>.shadow-darken25</div>
+ *   <div class='shadow-darken25-bold'>.shadow-darken25-bold</div>
  * </div>
  */
-.shadow5 { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3) !important; }
-.shadow10 { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3) !important; }
-.shadow20 { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3) !important; }
-.shadow30 { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3) !important; }
-.shadow5-bold { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9) !important; }
-.shadow10-bold { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9) !important; }
-.shadow20-bold { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9) !important; }
-.shadow30-bold { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9) !important; }
+.shadow-darken5 { box-shadow: 0 0 10px 2px var(--darken5) !important; }
+.shadow-darken10 { box-shadow: 0 0 10px 2px var(--darken10) !important; }
+.shadow-darken25 { box-shadow: 0 0 10px 2px var(--darken25) !important; }
+.shadow-darken50 { box-shadow: 0 0 10px 2px var(--darken50) !important; }
+
+.shadow-lighten5 { box-shadow: 0 0 10px 2px var(--lighten5) !important; }
+.shadow-lighten10 { box-shadow: 0 0 10px 2px var(--lighten10) !important; }
+.shadow-lighten25 { box-shadow: 0 0 10px 2px var(--lighten25) !important; }
+.shadow-lighten50 { box-shadow: 0 0 10px 2px var(--lighten50) !important; }
 /** @endgroup */
 
-.txt-shadow5 { text-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important; }
-.txt-shadow10 { text-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important; }
-.txt-shadow20 { text-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important; }
-.txt-shadow30 { text-shadow: 0 0 30px rgba(0, 0, 0, 0.3) !important; }
-.txt-shadow5-bold { text-shadow: 0 0 5px rgba(0, 0, 0, 0.9) !important; }
-.txt-shadow10-bold { text-shadow: 0 0 10px rgba(0, 0, 0, 0.9) !important; }
-.txt-shadow20-bold { text-shadow: 0 0 20px rgba(0, 0, 0, 0.9) !important; }
-.txt-shadow30-bold { text-shadow: 0 0 30px rgba(0, 0, 0, 0.9) !important; }
+.shadow-darken5-bold { box-shadow: 0 0 20px 2px var(--darken5) !important; }
+.shadow-darken10-bold { box-shadow: 0 0 20px 2px var(--darken10) !important; }
+.shadow-darken25-bold { box-shadow: 0 0 20px 2px var(--darken25) !important; }
+.shadow-darken50-bold { box-shadow: 0 0 20px 2px var(--darken50) !important; }
+
+.shadow-lighten5-bold { box-shadow: 0 0 20px 2px var(--lighten5) !important; }
+.shadow-lighten10-bold { box-shadow: 0 0 20px 2px var(--lighten10) !important; }
+.shadow-lighten25-bold { box-shadow: 0 0 20px 2px var(--lighten25) !important; }
+.shadow-lighten50-bold { box-shadow: 0 0 20px 2px var(--lighten50) !important; }
 
 /**
  * Opacity classes.
@@ -167,9 +168,9 @@
  * @memberof Theming
  * @example
  * <div class='flex'>
- *   <div class='col col--2 bg-gray color-white p10 mr10 alpha25'>.alpha25</div>
- *   <div class='col col--2 bg-gray color-white p10 mr10 alpha50'>.alpha50</div>
- *   <div class='col col--2 bg-gray color-white p10 alpha100'>.alpha100</div>
+ *   <div class='w400 alpha25'>.alpha25</div>
+ *   <div class='w400 alpha50'>.alpha50</div>
+ *   <div class='w400 alpha100'>.alpha100</div>
  * </div>
  */
 .alpha0 { opacity: 0 !important; }
@@ -189,9 +190,9 @@
  * @memberof Theming
  * @example
  * <div class='flex'>
- *   <div class='col col--2 bg-gray color-white p10 mr10 cursor-pointer'>.cursor-pointer</div>
- *   <div class='col col--2 bg-gray color-white p10 mr10 cursor-crosshair'>.cursor-crosshair</div>
- *   <div class='col col--2 bg-gray color-white p10 cursor-move'>.cursor-move</div>
+ *   <div class='w400 cursor-pointer'>.cursor-pointer</div>
+ *   <div class='w400 cursor-crosshair'>.cursor-crosshair</div>
+ *   <div class='w400 cursor-move'>.cursor-move</div>
  * </div>
  */
 .cursor-default { cursor: default !important; }
