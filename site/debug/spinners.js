@@ -10,8 +10,9 @@ class Spinners extends React.Component {
 
         <div>
 
-          <div className='loading-dark inline-block p10'></div>
-          <div className='loading-light bg-gray-dark inline-block p10'></div>
+          <div className="loading p10"></div>
+          <div className="loading loading--s p10"></div>
+          <div className="loading loading--light bg-gray-dark p10"></div>
 
         </div>
       </div>

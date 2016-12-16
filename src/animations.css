@@ -48,17 +48,25 @@
  * - Act on their own or on a loading element.
  * - For a light spinner on dark backgrounds, add the modifying class `loading--light`.
  * - For a smaller spinner, add the modifying class 'loading--s'.
+ * - If appending a spinner to an element, that element will take on `display: flex` to center the spinner.
  * @group
  * @memberof Animations
  * @example
- <div class="loading inline-block p10"></div>
- <div class="loading loading--s inline-block p10"></div>
- <div class="loading loading--light bg-gray-dark inline-block p10"></div>
+ <div class='flex'>
+   <div class="col col--1 loading p10"></div>
+   <div class="col col--1 loading loading--s p10"></div>
+   <div class="col col--1 loading loading--light bg-gray-dark p10"></div>
+ </div>
  */
+ .loading {
+  display: flex;
+ }
+
 .loading::after,
 .loading::after {
   content: '';
   display: block;
+  margin: auto;
   height: 40px;
   width: 40px;
   border-radius: 50%;
