@@ -618,20 +618,6 @@ textarea {
  * <a href='#link' class='txt-link color-blue'>blue link</a>
  * <a href='#link' class='txt-link txt-underline color-red'>red underlined link</a>
  */
-.txt-link {
-  transition: var(--transition);
-}
-
-.txt-link.color-gray:hover { color: var(--gray-dark) !important; }
-.txt-link.color-pink:hover { color: var(--pink-dark) !important; }
-.txt-link.color-red:hover { color: var(--red-dark) !important; }
-.txt-link.color-orange:hover { color: var(--orange-dark) !important; }
-.txt-link.color-yellow:hover { color: var(--yellow-dark) !important; }
-.txt-link.color-green:hover { color: var(--green-dark) !important; }
-.txt-link.color-teal:hover { color: var(--teal-dark) !important; }
-.txt-link.color-blue:hover { color: var(--blue-dark) !important; }
-.txt-link.color-purple:hover { color: var(--purple-dark) !important; }
-.txt-link.color-white:hover { color: var(--gray-faint) !important; }
 
 /**
  * Prevents text from wrapping.

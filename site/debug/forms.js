@@ -93,40 +93,45 @@ class Forms extends React.Component {
             Selects
           </h2>
 
-          {colors.map((color) => (
-            <div>
-              <div className='mb10'>
-                <div className={`select bg-${color}`}>
-                  <select>
-                    <option>one</option>
-                    <option>two</option>
-                    <option>three</option>
-                  </select>
-                  <div className='select-arrow'>
-                    <svg
-                      className='icon'
-                      dangerouslySetInnerHTML={{ __html: '<use xlink:href="#icon-caret-down"></use>' }}
-                    />
+          {colors.map((color) => {
+            let selectClass = 'select';
+            let selectStrokeClass = 'select select--stroke';
+            if (color !== null) {
+              selectClass += ` bg-${color}`;
+              selectStrokeClass += ` color-${color}`;
+            }
+            return (
+              <div key={color} className='mb10'>
+                <div className='inline-block mr10'>
+                  <div className={selectClass}>
+                    <select>
+                      <option>one</option>
+                      <option>two</option>
+                      <option>three</option>
+                    </select>
+                  </div>
+                </div>
+                <div className='inline-block mr10'>
+                  <div className={selectStrokeClass}>
+                    <select>
+                      <option>one</option>
+                      <option>two</option>
+                      <option>three</option>
+                    </select>
+                  </div>
+                </div>
+                <div className='inline-block mr10'>
+                  <div className={`${selectClass} select--s`}>
+                    <select>
+                      <option>one</option>
+                      <option>two</option>
+                      <option>three</option>
+                    </select>
                   </div>
                 </div>
               </div>
-              <div className='mb10'>
-                <div className={`select select--stroke color-${color}`}>
-                  <select>
-                    <option>one</option>
-                    <option>two</option>
-                    <option>three</option>
-                  </select>
-                  <div className='select-arrow'>
-                    <svg
-                      className='icon'
-                      dangerouslySetInnerHTML={{ __html: '<use xlink:href="#icon-caret-down"></use>' }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>
