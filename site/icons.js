@@ -24,7 +24,7 @@ class Icons extends React.Component {
   render() {
     const iconEls = icons.map((icon) => {
       return (
-        <div key={icon} className='round mr5 mb5 border border--gray pl10 pr10 pt5 pb5 flex flex-center-y'>
+        <div key={icon} className='round mr5 mb5 border border--gray pl10 pr10 pt5 pb5 flex-parent flex-parent--center-cross'>
           <div className='mr10'>
             {icon}
           </div>
@@ -48,7 +48,7 @@ class Icons extends React.Component {
         <div className='mb20 prose'>
           Below are all available icons. To learn more about how to use icons, look at <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>.
         </div>
-        <div className='flex flex-wrap txt-s'>
+        <div className='flex-parent flex-parent--wrap txt-s'>
           {iconEls}
         </div>
 

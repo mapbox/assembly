@@ -1,10 +1,7 @@
 import React from 'react';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
-import Lowlight from 'react-lowlight';
-import xmlLanguage from 'highlight.js/lib/languages/xml';
-
-Lowlight.registerLanguage('html', xmlLanguage);
+import { HtmlExample } from '../html_example';
 
 class Entry extends React.Component {
   constructor(props) {
@@ -16,15 +13,8 @@ class Entry extends React.Component {
     const { props } = this;
 
     const example = !props.parsedComment.example ? null : (
-      <div className='mt10 grid grid--gut10'>
-        <div className='col col--6'>
-          <div className='border border--2 border--blue round p20' dangerouslySetInnerHTML={{ __html: props.parsedComment.example.description }} />
-        </div>
-        <div className='col col--6'>
-        <Lowlight
-          language='html'
-          value={props.parsedComment.example.description} />
-        </div>
+      <div className='mt10'>
+        <HtmlExample code={props.parsedComment.example.description} />
       </div>
     );
 

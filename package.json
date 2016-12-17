@@ -14,7 +14,7 @@
     "lint:js": "eslint .",
     "lint": "npm run lint:css && npm run lint:js",
     "open": "opn http://localhost:9967/assembly",
-    "serve": "nodemon scripts/serve -w src -w site -e js,css --exec babel-node",
+    "serve": "nodemon scripts/serve -w src -w site -e js,css,html --exec babel-node",
     "start": "npm run build:svg && npm-run-all --parallel serve open",
     "test:jest": "jest",
     "test:svgs": "tape test/test-icons.js | tap-spec",

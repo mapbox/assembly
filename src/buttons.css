@@ -93,7 +93,7 @@
  * Classes to create pill button groups. Every button in a pill group
  * has a `.btn--pill` class and a modifier specifying its position.
  * Pill groups should be wrapped in a container with a
- * `flex-inline` container.
+ * `flex-parent flex-parent--inline` container.
  *
  * For *horizontal* pills, use
  * - `btn--pill-hc` (center)
@@ -101,7 +101,7 @@
  * - `btn--pill-hr` (right)
  *
  * For *vertical* pills, use
- * - `flex-column` on the flex container
+ * - `flex-parent flex-parent--column` on the flex-parent container
  * - `btn--pill-vc` (center)
  * - `btn--pill-vt` (top)
  * - `btn--pill-vb` (bottom)
@@ -111,23 +111,23 @@
  * @memberof Buttons
  * @example
  * <div>
- *   <div class="mr10 flex-inline">
+ *   <div class="mr10 flex-parent--inline">
  *     <button class="btn btn--pill btn--pill-hl">Left</button>
  *     <button class="btn btn--pill btn--pill-hc">Center</button>
  *     <button class="btn btn--pill btn--pill-hr">Right</button>
  *   </div>
- *   <div class="flex-inline">
+ *   <div class="flex-parent--inline">
  *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hl">Left</button>
  *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hc">Center</button>
  *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hr">Right</button>
  *   </div>
  * </div>
- *  <div class="mr10 flex-inline flex-column">
+ *  <div class="mr10 flex-parent flex-parent--inline flex-parent--column">
  *     <button class="btn btn--pill btn--pill-vt bg-purple">Top</button>
  *     <button class="btn btn--pill btn--pill-vc bg-purple">Center</button>
  *     <button class="btn btn--pill btn--pill-vb bg-purple">Bottom</button>
  *  </div>
- *  <div class="flex-inline flex-column">
+ *  <div class="flex-parent flex-parent--inline flex-parent--column">
  *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vt">Top</button>
  *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vc">Center</button>
  *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vb">Bottom</button>
