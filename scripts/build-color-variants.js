@@ -200,11 +200,38 @@ variantGenerators.switch = function (color) {
     .switch.color-${color}:hover {
       border-color: ${darkerShade} !important;
     }
+
     input:not(:checked) + .switch.color-${color}:hover::after,
     :not(input) + .switch.color-${color}:not(.is-active):hover::after,
     .switch--handle-${color}.is-active::after,
     input:checked + .switch--handle-${color}::after {
       background-color: ${darkerShade} !important;
+    }
+  `);
+};
+
+variantGenerators.toggle = function (color) {
+  if (isDark(color)) return '';
+  const colorValue = variables[color];
+  const darkerShade = getDarkerShade(color);
+  // Set the text color to regular when inactive.
+  // Set the text color to dark when inactive on hover.
+  // Set the background color to dark and text color to white
+  // when active.
+  return stripIndent(`
+    .toggle--${color} {
+      color: ${colorValue} !important;
+    }
+
+    input:not(:checked) + .toggle.toggle--${color}:not(.is-active):hover,
+    :not(input) + .toggle.toggle--${color}:not(.is-active):hover {
+      color: ${darkerShade} !important;
+    }
+
+    .toggle.toggle--${color}.is-active,
+    input:checked + .toggle.toggle--${color} {
+      background: ${colorValue} !important;
+      color: #fff !important;
     }
   `);
 };

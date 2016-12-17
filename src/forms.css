@@ -684,23 +684,3 @@ input:checked + .toggle {
   background: var(--blue) !important;
   color: var(--white);
 }
-
-/* Color variations for toggles */
-
-/* set the text color to purple when inactive */
-.toggle--purple {
-  color: var(--purple) !important;
-}
-
-/* set the text color to dark purple when inactive, on hover  */
-input:not(:checked) + .toggle.toggle--purple:not(.is-active):hover,
-:not(input) + .toggle.toggle--purple:not(.is-active):hover {
-  color: var(--purple-dark) !important;
-}
-
-/* set the background color to dark purple and text color to white when active  */
-.toggle.toggle--purple.is-active,
-input:checked + .toggle.toggle--purple {
-  background: var(--purple) !important;
-  color: var(--white) !important;
-}
