@@ -240,7 +240,8 @@ variantGenerators.link = function (color) {
   if (isDark(color)) return '';
   const darkerShade = getDarkerShade(color);
   return stripIndent(`
-    .txt-link.color-${color}:hover {
+    .txt-link.color-${color}:hover,
+    .txt-link.color-${color}.is-active {
       border-color: ${darkerShade} !important;
     }
   `);
