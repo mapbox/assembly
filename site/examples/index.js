@@ -10,10 +10,10 @@ class Examples extends React.Component {
           Examples
         </h1>
 
-        <div className='mt30'>
+        <div className='mt48'>
           <UnderlineTabs />
         </div>
-        <div className='mt30'>
+        <div className='mt48'>
           <DiverseTiles />
         </div>
       </div>

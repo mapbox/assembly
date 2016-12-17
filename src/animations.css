@@ -8,8 +8,8 @@
  * @group
  * @memberof Animations
  * @example
- * <div class="bg-blue inline-block mr20 w50 h50 round animation-pulse"></div>
- * <div class="bg-blue inline-block mr20 w50 h50 round animation-spin"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-pulse"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin"></div>
 */
 .animation-pulse { animation: pulse 1.5s infinite ease-in-out; }
 .animation-spin { animation: spin 1.5s infinite linear; }
@@ -20,9 +20,9 @@
  * @group
  * @memberof Animations
  * @example
- * <div class="bg-blue inline-block mr20 w50 h50 round animation-fade-in"></div>
- * <div class="bg-blue inline-block mr20 w50 h50 round animation-fade-out"></div>
- * <div class="bg-blue inline-block mr20 w50 h50 round animation-shake"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-fade-in"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-fade-out"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-shake"></div>
 */
 .animation-fade-in { animation: fadein 1.5s ease-in forwards; }
 .animation-fade-out { animation: fadein 1.5s ease-out reverse forwards; }
@@ -34,9 +34,9 @@
  * @group
  * @memberof Animations
  * @example
-* <div class="bg-blue inline-block mr20 w50 h50 round animation-spin animation--speed-fast"></div>
-* <div class="bg-blue inline-block mr20 w50 h50 round animation-spin animation--speed-slow"></div>
-* <div class="bg-blue inline-block mr20 w50 h50 round animation-spin animation--delay"></div>
+* <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-fast"></div>
+* <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-slow"></div>
+* <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--delay"></div>
 */
 .animation--speed-fast { animation-duration: 1s; }
 .animation--speed-slow { animation-duration: 2s; }
@@ -53,9 +53,9 @@
  * @memberof Animations
  * @example
  <div class='flex'>
-   <div class="col col--1 loading p10"></div>
-   <div class="col col--1 loading loading--s p10"></div>
-   <div class="col col--1 loading loading--light bg-gray-dark p10"></div>
+   <div class="col col--1 loading p12"></div>
+   <div class="col col--1 loading loading--s p12"></div>
+   <div class="col col--1 loading loading--light bg-gray-dark p12"></div>
  </div>
 */
 .loading { display: flex; }
@@ -64,8 +64,8 @@
   content: '';
   display: block;
   margin: auto;
-  height: 40px;
-  width: 40px;
+  height: 36px;
+  width: 36px;
   border-radius: 50%;
   animation: spin 0.8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
   border: var(--darken10) 3px solid;
@@ -78,8 +78,8 @@
 }
 
 .loading--s::after {
-  height: 20px !important;
-  width: 20px !important;
+  height: 18px !important;
+  width: 18px !important;
 }
 /** @endgroup */
 
@@ -108,10 +108,10 @@
   30%,
   50%,
   70%,
-  90% { transform: translate3d(-10px, 0, 0); }
+  90% { transform: translate3d(-12px, 0, 0); }
 
   20%,
   40%,
   60%,
-  80% { transform: translate3d(10px, 0, 0); }
+  80% { transform: translate3d(12px, 0, 0); }
 }

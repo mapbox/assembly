@@ -31,7 +31,7 @@ const colors = [
 function ToggleEl(props) {
   const toggleClass = `toggle toggle--${props.color}`;
   return (
-    <div className='toggle-group mr20'>
+    <div className='toggle-group mr18'>
       <label className='toggle-container'>
         <input name={`animal-${props.color}`} value='cow' type='radio' />
         <div className={toggleClass}>
@@ -59,15 +59,15 @@ class Toggles extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb20'>
+        <h1 className='txt-headline mb18'>
           Toggles
         </h1>
 
         {colors.map((c) => <ToggleEl color={c} />)}
 
-        <div className='mt20 mb20'>
+        <div className='mt18 mb18'>
 
-        <div className='toggle-group txt-s mr20'>
+        <div className='toggle-group txt-s mr18'>
           <label className='toggle-container'>
             <input name='animalx' value='cow' type='radio' />
             <div className='toggle toggle--s-label'>
@@ -90,9 +90,9 @@ class Toggles extends React.Component {
 
         </div>
 
-        <div className='mt20 mb20'>
+        <div className='mt18 mb18'>
           An inline toggle.
-          <div className='toggle-group bg-yellow mr10 ml10 pad5'>
+          <div className='toggle-group bg-yellow mr12 ml12 pad6'>
             <label className='toggle-container'>
               <input name='animal2' value='globe' type='radio' />
               <div className='toggle'>
@@ -127,7 +127,7 @@ class Toggles extends React.Component {
           Donec ullamcorper nulla non metus auctor fringilla.
         </div>
 
-        <div className='toggle-group flex-column border border--blue border--2 mr20'>
+        <div className='toggle-group flex-parent--column border border--blue border--2 mr18'>
           <label className='toggle-container'>
             <input name='animal4' value='sheep' type='radio' />
             <div className='toggle'>
@@ -148,7 +148,7 @@ class Toggles extends React.Component {
           </label>
         </div>
 
-        <div className='toggle-group border border--blue border--2 mr20'>
+        <div className='toggle-group border border--blue border--2 mr18'>
           <label className='toggle-container col col--4'>
             <input name='animal5' value='cow' type='radio' />
             <div className='toggle'>
@@ -169,7 +169,7 @@ class Toggles extends React.Component {
           </label>
         </div>
 
-        <div className='toggle-group bg-gray-light mr20'>
+        <div className='toggle-group bg-gray-light mr18'>
           <label className='toggle-container'>
             <input name='animal6' value='cow' type='radio' />
             <div className='toggle'>

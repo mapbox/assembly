@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "copy-assets": "node scripts/copy-assets",
+    "clean-svgs": "node scripts/clean-svgs",
     "build:site": "babel-node scripts/render-site",
     "build:css": "mkdir -p dist && node scripts/process-css && npm run copy-assets",
     "build:svg": "mkdir -p dist && node scripts/create-svg-sprite",
