@@ -159,6 +159,7 @@
   display: inline-block;
   position: relative;
   border-radius: var(--border-radius);
+  transition: color var(--transition), background-color var(--transition);
 }
 
 /* Borders are on the select, but colors are applied
