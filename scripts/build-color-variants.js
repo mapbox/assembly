@@ -203,8 +203,8 @@ variantGenerators.switch = function (color) {
 
     input:not(:checked) + .switch.color-${color}:hover::after,
     :not(input) + .switch.color-${color}:not(.is-active):hover::after,
-    .switch--handle-${color}.is-active::after,
-    input:checked + .switch--handle-${color}::after {
+    .switch--dot-${color}.is-active::after,
+    input:checked + .switch--dot-${color}::after {
       background-color: ${darkerShade} !important;
     }
   `);
