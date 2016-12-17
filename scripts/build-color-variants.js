@@ -242,7 +242,7 @@ variantGenerators.link = function (color) {
   return stripIndent(`
     .txt-link.color-${color}:hover,
     .txt-link.color-${color}.is-active {
-      border-color: ${darkerShade} !important;
+      color: ${darkerShade} !important;
     }
   `);
 };
