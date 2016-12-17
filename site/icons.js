@@ -48,7 +48,7 @@ class Icons extends React.Component {
         <div className='mb20 prose'>
           Below are all available icons. To learn more about how to use icons, look at <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>.
         </div>
-        <div className='flex flex-wrap txt-s'>
+        <div className='flex-parent flex-parent--wrap txt-s'>
           {iconEls}
         </div>
 
