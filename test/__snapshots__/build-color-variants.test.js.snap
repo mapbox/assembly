@@ -994,8 +994,8 @@ input:checked + .radio.color-white,
 
 input:not(:checked) + .switch.color-gray:hover::after,
 :not(input) + .switch.color-gray:not(.is-active):hover::after,
-.switch--handle-gray.is-active::after,
-input:checked + .switch--handle-gray::after {
+.switch--dot-gray.is-active::after,
+input:checked + .switch--dot-gray::after {
   background-color: #333 !important;
 }
   
@@ -1005,8 +1005,8 @@ input:checked + .switch--handle-gray::after {
 
 input:not(:checked) + .switch.color-gray-light:hover::after,
 :not(input) + .switch.color-gray-light:not(.is-active):hover::after,
-.switch--handle-gray-light.is-active::after,
-input:checked + .switch--handle-gray-light::after {
+.switch--dot-gray-light.is-active::after,
+input:checked + .switch--dot-gray-light::after {
   background-color: #666 !important;
 }
   
@@ -1016,8 +1016,8 @@ input:checked + .switch--handle-gray-light::after {
 
 input:not(:checked) + .switch.color-gray-faint:hover::after,
 :not(input) + .switch.color-gray-faint:not(.is-active):hover::after,
-.switch--handle-gray-faint.is-active::after,
-input:checked + .switch--handle-gray-faint::after {
+.switch--dot-gray-faint.is-active::after,
+input:checked + .switch--dot-gray-faint::after {
   background-color: #ccc !important;
 }
   
@@ -1027,8 +1027,8 @@ input:checked + .switch--handle-gray-faint::after {
 
 input:not(:checked) + .switch.color-pink:hover::after,
 :not(input) + .switch.color-pink:not(.is-active):hover::after,
-.switch--handle-pink.is-active::after,
-input:checked + .switch--handle-pink::after {
+.switch--dot-pink.is-active::after,
+input:checked + .switch--dot-pink::after {
   background-color: #C8145A !important;
 }
   
@@ -1038,8 +1038,8 @@ input:checked + .switch--handle-pink::after {
 
 input:not(:checked) + .switch.color-pink-light:hover::after,
 :not(input) + .switch.color-pink-light:not(.is-active):hover::after,
-.switch--handle-pink-light.is-active::after,
-input:checked + .switch--handle-pink-light::after {
+.switch--dot-pink-light.is-active::after,
+input:checked + .switch--dot-pink-light::after {
   background-color: #ff3c96 !important;
 }
   
@@ -1049,8 +1049,8 @@ input:checked + .switch--handle-pink-light::after {
 
 input:not(:checked) + .switch.color-pink-faint:hover::after,
 :not(input) + .switch.color-pink-faint:not(.is-active):hover::after,
-.switch--handle-pink-faint.is-active::after,
-input:checked + .switch--handle-pink-faint::after {
+.switch--dot-pink-faint.is-active::after,
+input:checked + .switch--dot-pink-faint::after {
   background-color: #FF88C0 !important;
 }
   
@@ -1060,8 +1060,8 @@ input:checked + .switch--handle-pink-faint::after {
 
 input:not(:checked) + .switch.color-red:hover::after,
 :not(input) + .switch.color-red:not(.is-active):hover::after,
-.switch--handle-red.is-active::after,
-input:checked + .switch--handle-red::after {
+.switch--dot-red.is-active::after,
+input:checked + .switch--dot-red::after {
   background-color: #BE0014 !important;
 }
   
@@ -1071,8 +1071,8 @@ input:checked + .switch--handle-red::after {
 
 input:not(:checked) + .switch.color-red-light:hover::after,
 :not(input) + .switch.color-red-light:not(.is-active):hover::after,
-.switch--handle-red-light.is-active::after,
-input:checked + .switch--handle-red-light::after {
+.switch--dot-red-light.is-active::after,
+input:checked + .switch--dot-red-light::after {
   background-color: #dc2b28 !important;
 }
   
@@ -1082,8 +1082,8 @@ input:checked + .switch--handle-red-light::after {
 
 input:not(:checked) + .switch.color-red-faint:hover::after,
 :not(input) + .switch.color-red-faint:not(.is-active):hover::after,
-.switch--handle-red-faint.is-active::after,
-input:checked + .switch--handle-red-faint::after {
+.switch--dot-red-faint.is-active::after,
+input:checked + .switch--dot-red-faint::after {
   background-color: #FF8280 !important;
 }
   
@@ -1093,8 +1093,8 @@ input:checked + .switch--handle-red-faint::after {
 
 input:not(:checked) + .switch.color-orange:hover::after,
 :not(input) + .switch.color-orange:not(.is-active):hover::after,
-.switch--handle-orange.is-active::after,
-input:checked + .switch--handle-orange::after {
+.switch--dot-orange.is-active::after,
+input:checked + .switch--dot-orange::after {
   background-color: #DC4600 !important;
 }
   
@@ -1104,8 +1104,8 @@ input:checked + .switch--handle-orange::after {
 
 input:not(:checked) + .switch.color-orange-light:hover::after,
 :not(input) + .switch.color-orange-light:not(.is-active):hover::after,
-.switch--handle-orange-light.is-active::after,
-input:checked + .switch--handle-orange-light::after {
+.switch--dot-orange-light.is-active::after,
+input:checked + .switch--dot-orange-light::after {
   background-color: #ff6e00 !important;
 }
   
@@ -1115,8 +1115,8 @@ input:checked + .switch--handle-orange-light::after {
 
 input:not(:checked) + .switch.color-orange-faint:hover::after,
 :not(input) + .switch.color-orange-faint:not(.is-active):hover::after,
-.switch--handle-orange-faint.is-active::after,
-input:checked + .switch--handle-orange-faint::after {
+.switch--dot-orange-faint.is-active::after,
+input:checked + .switch--dot-orange-faint::after {
   background-color: #FFA950 !important;
 }
   
@@ -1126,8 +1126,8 @@ input:checked + .switch--handle-orange-faint::after {
 
 input:not(:checked) + .switch.color-yellow:hover::after,
 :not(input) + .switch.color-yellow:not(.is-active):hover::after,
-.switch--handle-yellow.is-active::after,
-input:checked + .switch--handle-yellow::after {
+.switch--dot-yellow.is-active::after,
+input:checked + .switch--dot-yellow::after {
   background-color: #FFBD0A !important;
 }
   
@@ -1137,8 +1137,8 @@ input:checked + .switch--handle-yellow::after {
 
 input:not(:checked) + .switch.color-yellow-light:hover::after,
 :not(input) + .switch.color-yellow-light:not(.is-active):hover::after,
-.switch--handle-yellow-light.is-active::after,
-input:checked + .switch--handle-yellow-light::after {
+.switch--dot-yellow-light.is-active::after,
+input:checked + .switch--dot-yellow-light::after {
   background-color: #f0dc00 !important;
 }
   
@@ -1148,8 +1148,8 @@ input:checked + .switch--handle-yellow-light::after {
 
 input:not(:checked) + .switch.color-yellow-faint:hover::after,
 :not(input) + .switch.color-yellow-faint:not(.is-active):hover::after,
-.switch--handle-yellow-faint.is-active::after,
-input:checked + .switch--handle-yellow-faint::after {
+.switch--dot-yellow-faint.is-active::after,
+input:checked + .switch--dot-yellow-faint::after {
   background-color: #F0F062 !important;
 }
   
@@ -1159,8 +1159,8 @@ input:checked + .switch--handle-yellow-faint::after {
 
 input:not(:checked) + .switch.color-green:hover::after,
 :not(input) + .switch.color-green:not(.is-active):hover::after,
-.switch--handle-green.is-active::after,
-input:checked + .switch--handle-green::after {
+.switch--dot-green.is-active::after,
+input:checked + .switch--dot-green::after {
   background-color: #007532 !important;
 }
   
@@ -1170,8 +1170,8 @@ input:checked + .switch--handle-green::after {
 
 input:not(:checked) + .switch.color-green-light:hover::after,
 :not(input) + .switch.color-green-light:not(.is-active):hover::after,
-.switch--handle-green-light.is-active::after,
-input:checked + .switch--handle-green-light::after {
+.switch--dot-green-light.is-active::after,
+input:checked + .switch--dot-green-light::after {
   background-color: #01aa46 !important;
 }
   
@@ -1181,8 +1181,8 @@ input:checked + .switch--handle-green-light::after {
 
 input:not(:checked) + .switch.color-green-faint:hover::after,
 :not(input) + .switch.color-green-faint:not(.is-active):hover::after,
-.switch--handle-green-faint.is-active::after,
-input:checked + .switch--handle-green-faint::after {
+.switch--dot-green-faint.is-active::after,
+input:checked + .switch--dot-green-faint::after {
   background-color: #72C781 !important;
 }
   
@@ -1192,8 +1192,8 @@ input:checked + .switch--handle-green-faint::after {
 
 input:not(:checked) + .switch.color-teal:hover::after,
 :not(input) + .switch.color-teal:not(.is-active):hover::after,
-.switch--handle-teal.is-active::after,
-input:checked + .switch--handle-teal::after {
+.switch--dot-teal.is-active::after,
+input:checked + .switch--dot-teal::after {
   background-color: #00626E !important;
 }
   
@@ -1203,8 +1203,8 @@ input:checked + .switch--handle-teal::after {
 
 input:not(:checked) + .switch.color-teal-light:hover::after,
 :not(input) + .switch.color-teal-light:not(.is-active):hover::after,
-.switch--handle-teal-light.is-active::after,
-input:checked + .switch--handle-teal-light::after {
+.switch--dot-teal-light.is-active::after,
+input:checked + .switch--dot-teal-light::after {
   background-color: #01b5b4 !important;
 }
   
@@ -1214,8 +1214,8 @@ input:checked + .switch--handle-teal-light::after {
 
 input:not(:checked) + .switch.color-teal-faint:hover::after,
 :not(input) + .switch.color-teal-faint:not(.is-active):hover::after,
-.switch--handle-teal-faint.is-active::after,
-input:checked + .switch--handle-teal-faint::after {
+.switch--dot-teal-faint.is-active::after,
+input:checked + .switch--dot-teal-faint::after {
   background-color: #50D2D2 !important;
 }
   
@@ -1225,8 +1225,8 @@ input:checked + .switch--handle-teal-faint::after {
 
 input:not(:checked) + .switch.color-blue:hover::after,
 :not(input) + .switch.color-blue:not(.is-active):hover::after,
-.switch--handle-blue.is-active::after,
-input:checked + .switch--handle-blue::after {
+.switch--dot-blue.is-active::after,
+input:checked + .switch--dot-blue::after {
   background-color: #0014AA !important;
 }
   
@@ -1236,8 +1236,8 @@ input:checked + .switch--handle-blue::after {
 
 input:not(:checked) + .switch.color-blue-light:hover::after,
 :not(input) + .switch.color-blue-light:not(.is-active):hover::after,
-.switch--handle-blue-light.is-active::after,
-input:checked + .switch--handle-blue-light::after {
+.switch--dot-blue-light.is-active::after,
+input:checked + .switch--dot-blue-light::after {
   background-color: #0065fb !important;
 }
   
@@ -1247,8 +1247,8 @@ input:checked + .switch--handle-blue-light::after {
 
 input:not(:checked) + .switch.color-blue-faint:hover::after,
 :not(input) + .switch.color-blue-faint:not(.is-active):hover::after,
-.switch--handle-blue-faint.is-active::after,
-input:checked + .switch--handle-blue-faint::after {
+.switch--dot-blue-faint.is-active::after,
+input:checked + .switch--dot-blue-faint::after {
   background-color: #00B1FF !important;
 }
   
@@ -1258,8 +1258,8 @@ input:checked + .switch--handle-blue-faint::after {
 
 input:not(:checked) + .switch.color-purple:hover::after,
 :not(input) + .switch.color-purple:not(.is-active):hover::after,
-.switch--handle-purple.is-active::after,
-input:checked + .switch--handle-purple::after {
+.switch--dot-purple.is-active::after,
+input:checked + .switch--dot-purple::after {
   background-color: #500078 !important;
 }
   
@@ -1269,8 +1269,8 @@ input:checked + .switch--handle-purple::after {
 
 input:not(:checked) + .switch.color-purple-light:hover::after,
 :not(input) + .switch.color-purple-light:not(.is-active):hover::after,
-.switch--handle-purple-light.is-active::after,
-input:checked + .switch--handle-purple-light::after {
+.switch--dot-purple-light.is-active::after,
+input:checked + .switch--dot-purple-light::after {
   background-color: #8c50c7 !important;
 }
   
@@ -1280,8 +1280,8 @@ input:checked + .switch--handle-purple-light::after {
 
 input:not(:checked) + .switch.color-purple-faint:hover::after,
 :not(input) + .switch.color-purple-faint:not(.is-active):hover::after,
-.switch--handle-purple-faint.is-active::after,
-input:checked + .switch--handle-purple-faint::after {
+.switch--dot-purple-faint.is-active::after,
+input:checked + .switch--dot-purple-faint::after {
   background-color: #C299E3 !important;
 }
   
@@ -1291,8 +1291,8 @@ input:checked + .switch--handle-purple-faint::after {
 
 input:not(:checked) + .switch.color-darken5:hover::after,
 :not(input) + .switch.color-darken5:not(.is-active):hover::after,
-.switch--handle-darken5.is-active::after,
-input:checked + .switch--handle-darken5::after {
+.switch--dot-darken5.is-active::after,
+input:checked + .switch--dot-darken5::after {
   background-color: rgba(0, 0, 0, 0.10) !important;
 }
   
@@ -1302,8 +1302,8 @@ input:checked + .switch--handle-darken5::after {
 
 input:not(:checked) + .switch.color-darken10:hover::after,
 :not(input) + .switch.color-darken10:not(.is-active):hover::after,
-.switch--handle-darken10.is-active::after,
-input:checked + .switch--handle-darken10::after {
+.switch--dot-darken10.is-active::after,
+input:checked + .switch--dot-darken10::after {
   background-color: rgba(0, 0, 0, 0.25) !important;
 }
   
@@ -1313,8 +1313,8 @@ input:checked + .switch--handle-darken10::after {
 
 input:not(:checked) + .switch.color-darken25:hover::after,
 :not(input) + .switch.color-darken25:not(.is-active):hover::after,
-.switch--handle-darken25.is-active::after,
-input:checked + .switch--handle-darken25::after {
+.switch--dot-darken25.is-active::after,
+input:checked + .switch--dot-darken25::after {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
   
@@ -1324,8 +1324,8 @@ input:checked + .switch--handle-darken25::after {
 
 input:not(:checked) + .switch.color-darken50:hover::after,
 :not(input) + .switch.color-darken50:not(.is-active):hover::after,
-.switch--handle-darken50.is-active::after,
-input:checked + .switch--handle-darken50::after {
+.switch--dot-darken50.is-active::after,
+input:checked + .switch--dot-darken50::after {
   background-color: rgba(0, 0, 0, 0.75) !important;
 }
   
@@ -1335,8 +1335,8 @@ input:checked + .switch--handle-darken50::after {
 
 input:not(:checked) + .switch.color-darken75:hover::after,
 :not(input) + .switch.color-darken75:not(.is-active):hover::after,
-.switch--handle-darken75.is-active::after,
-input:checked + .switch--handle-darken75::after {
+.switch--dot-darken75.is-active::after,
+input:checked + .switch--dot-darken75::after {
   background-color: #000 !important;
 }
   
@@ -1346,8 +1346,8 @@ input:checked + .switch--handle-darken75::after {
 
 input:not(:checked) + .switch.color-lighten5:hover::after,
 :not(input) + .switch.color-lighten5:not(.is-active):hover::after,
-.switch--handle-lighten5.is-active::after,
-input:checked + .switch--handle-lighten5::after {
+.switch--dot-lighten5.is-active::after,
+input:checked + .switch--dot-lighten5::after {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
   
@@ -1357,8 +1357,8 @@ input:checked + .switch--handle-lighten5::after {
 
 input:not(:checked) + .switch.color-lighten10:hover::after,
 :not(input) + .switch.color-lighten10:not(.is-active):hover::after,
-.switch--handle-lighten10.is-active::after,
-input:checked + .switch--handle-lighten10::after {
+.switch--dot-lighten10.is-active::after,
+input:checked + .switch--dot-lighten10::after {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }
   
@@ -1368,8 +1368,8 @@ input:checked + .switch--handle-lighten10::after {
 
 input:not(:checked) + .switch.color-lighten25:hover::after,
 :not(input) + .switch.color-lighten25:not(.is-active):hover::after,
-.switch--handle-lighten25.is-active::after,
-input:checked + .switch--handle-lighten25::after {
+.switch--dot-lighten25.is-active::after,
+input:checked + .switch--dot-lighten25::after {
   background-color: rgba(255, 255, 255, 0.5) !important;
 }
   
@@ -1379,8 +1379,8 @@ input:checked + .switch--handle-lighten25::after {
 
 input:not(:checked) + .switch.color-lighten50:hover::after,
 :not(input) + .switch.color-lighten50:not(.is-active):hover::after,
-.switch--handle-lighten50.is-active::after,
-input:checked + .switch--handle-lighten50::after {
+.switch--dot-lighten50.is-active::after,
+input:checked + .switch--dot-lighten50::after {
   background-color: rgba(255, 255, 255, 0.75) !important;
 }
   
@@ -1390,8 +1390,8 @@ input:checked + .switch--handle-lighten50::after {
 
 input:not(:checked) + .switch.color-lighten75:hover::after,
 :not(input) + .switch.color-lighten75:not(.is-active):hover::after,
-.switch--handle-lighten75.is-active::after,
-input:checked + .switch--handle-lighten75::after {
+.switch--dot-lighten75.is-active::after,
+input:checked + .switch--dot-lighten75::after {
   background-color: #fff !important;
 }
   
@@ -1401,8 +1401,8 @@ input:checked + .switch--handle-lighten75::after {
 
 input:not(:checked) + .switch.color-white:hover::after,
 :not(input) + .switch.color-white:not(.is-active):hover::after,
-.switch--handle-white.is-active::after,
-input:checked + .switch--handle-white::after {
+.switch--dot-white.is-active::after,
+input:checked + .switch--dot-white::after {
   background-color: gray-faint !important;
 }
   

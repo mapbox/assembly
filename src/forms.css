@@ -394,7 +394,7 @@ to the `.select` container. */
  * - A `<div>` with the class `switch`.
  *
  * Variations:
- * - Modify the active state of the switch handle with `switch--handle-{color}`.
+ * - Modify the active state of the switch handle with `switch--dot-{color}`.
  * - Modify the color of the dot when inactive, the border when inactive and the background in active state with `color--{color}`
  *
  * The class `switch` and its modifiers can also be used independent

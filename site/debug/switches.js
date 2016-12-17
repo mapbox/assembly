@@ -29,7 +29,7 @@ const colors = [
 ];
 
 function SwitchEl(props) {
-  const switchClass = `switch ${props.handleColor ? 'switch--handle-' + props.handleColor : ''} color-${props.color}`;
+  const switchClass = `switch ${props.handleColor ? 'switch--dot-' + props.handleColor : ''} color-${props.color}`;
   return (
     <div className='mr5 inline-block'>
       <label className='switch-container'>
