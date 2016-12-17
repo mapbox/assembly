@@ -305,7 +305,7 @@ textarea {
 }
 
 /**
- * Ordered and unordered.
+ * Ordered and unordered. `.prose` list items include left margins while `.txt-li` list items do not include left margins.
  *
  * @group
  * @memberof Typography
