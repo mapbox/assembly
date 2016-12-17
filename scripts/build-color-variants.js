@@ -173,6 +173,7 @@ variantGenerators.checkbox = function (color) {
   if (isDark(color)) return '';
   const darkerShade = getDarkerShade(color);
   return stripIndent(`
+    .checkbox-container:hover > .checkbox.color-${color},
     input:checked + .checkbox.color-${color},
     .checkbox.color-${color}.is-active {
       color: ${darkerShade} !important;
@@ -184,6 +185,7 @@ variantGenerators.radio = function (color) {
   if (isDark(color)) return '';
   const darkerShade = getDarkerShade(color);
   return stripIndent(`
+    .radio-container:hover > .radio.color-${color},
     input:checked + .radio.color-${color},
     .radio.color-${color}.is-active {
       color: ${darkerShade} !important;

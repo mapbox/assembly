@@ -522,9 +522,14 @@ to the `.select` container. */
   border-color: currentColor;
 }
 
+.checkbox-container:hover > .checkbox {
+  color: var(--blue-dark);
+}
+
 /* Ensure checkboxes inside buttons look nice */
-.btn:not(.btn--stroke) > .checkbox--stroke {
+.btn:not(.btn--stroke) > .checkbox {
   border-color: transparent;
+  top: 0;
 }
 
 .checkbox > .icon {
@@ -542,6 +547,10 @@ to the `.select` container. */
   border-radius: 50%;
   color: var(--blue);
   border-color: currentColor;
+}
+
+.radio-container:hover > .radio {
+  color: var(--blue-dark);
 }
 
 .radio::before {
