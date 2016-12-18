@@ -13,7 +13,7 @@ class Entry extends React.Component {
     const { props } = this;
 
     const example = !props.parsedComment.example ? null : (
-      <div className='mt10'>
+      <div className='mt24'>
         <HtmlExample code={props.parsedComment.example.description} />
       </div>
     );
@@ -29,16 +29,14 @@ class Entry extends React.Component {
         });
     }
 
-    const selectorEls = selectors !== undefined && selectors.map((m) => <span className='mr5 inline-block' key={m}>
-        <span id={`#${m.trim().replace(/\s+/g, '-').replace(/./g, '')}`} className='pl5 pr5 round bg-blue color-white txt-mono inline-block'>{m.trim()}</span>
+    const selectorEls = selectors !== undefined && selectors.map((m) => <span className='mr6 inline-block' key={m}>
+        <span id={`#${m.trim().replace(/\s+/g, '-').replace(/\./g, '')}`} className='pl6 pr6 pt3 pb3 round bg-blue color-white txt-mono inline-block'>{m.trim()}</span>
       </span>);
 
     return (
-      <div className='mt30 mb20'>
-        <div className='mb5'>
-          {selectorEls}
-        </div>
-        <div className='prose'>
+      <div className='mt24 mb48'>
+        {selectorEls}
+        <div className={`${selectors && 'mt6'} prose`}>
           {remark().use(reactRenderer).process(props.parsedComment.description).contents}
         </div>
         {example}

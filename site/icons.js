@@ -24,8 +24,8 @@ class Icons extends React.Component {
   render() {
     const iconEls = icons.map((icon) => {
       return (
-        <div key={icon} className='round mr5 mb5 border border--gray pl10 pr10 pt5 pb5 flex-parent flex-parent--center-cross'>
-          <div className='mr10'>
+        <div key={icon} className='round mr6 mb6 border border--gray pl12 pr12 pt6 pb6 flex-parent flex-parent--center-cross'>
+          <div className='mr12'>
             {icon}
           </div>
           <svg
@@ -42,20 +42,20 @@ class Icons extends React.Component {
           Icons
         </h1>
 
-        <h2 className='txt-subhead mb10 mt30'>
+        <h2 className='txt-subhead mb12 mt24'>
           Available icons
         </h2>
-        <div className='mb20 prose'>
+        <div className='mb18 prose'>
           Below are all available icons. To learn more about how to use icons, look at <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>.
         </div>
         <div className='flex-parent flex-parent--wrap txt-s'>
           {iconEls}
         </div>
 
-        <h2 className='txt-subhead mb10 mt30'>
+        <h2 className='txt-subhead mb12 mt24'>
           Programmatically adding icons with JavaScript
         </h2>
-        <div className='mb10 prose'>
+        <div className='mb12 prose'>
           To add icons to the page programmatically, you must use special DOM methods that handle XML namespaces. The following function creates an icon element, which you can then add to the DOM where you need it. You can also modify the icon as needed with <a href='/assembly/documentation/#Icons'>icon modifier classes</a>.
         </div>
         <pre className='code-block'>

@@ -8,7 +8,7 @@ const html = fs.readFileSync(path.join(__dirname, 'underline_tabs.html'), 'utf8'
 function UnderlineTabs() {
   return (
     <div>
-      <h2 className='txt-subhead mb10'>
+      <h2 className='txt-subhead mb12'>
         Underline tabs
       </h2>
       <HtmlExample code={html} />

@@ -4,7 +4,7 @@ class Elements extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='txt-headline mb20'>
+        <h1 className='txt-headline mb18'>
           Elements
         </h1>
         <div className='grid'>

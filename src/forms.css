@@ -1,5 +1,6 @@
 /* stylelint-disable selector-no-type, selector-no-combinator */
 /**
+ * Write an overview here.
  * @section Forms
  */
 
@@ -25,7 +26,7 @@
 
 .input:focus,
 .textarea:focus {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.22);
   border: 1px solid var(--darken50);
 }
 
@@ -53,16 +54,15 @@
  * <input class='input input--dark' placeholder='dark' />
  */
 .input {
-  height: 40px;
+  height: 36px;
   line-height: 38px; /* minus border */
   padding: 0 12px;
 }
 
 .input--s {
-  height: 30px;
-  line-height: 28px; /* minus border */
-  padding: 0 10px;
-  font-size: 12px;
+  height: 24px;
+  line-height: 24px; /* minus border */
+  padding: 0 6px;
 }
 
 /**
@@ -81,14 +81,13 @@
  */
 .textarea {
   resize: vertical;
-  padding-top: 8px; /* minus border to match input */
-  padding-bottom: 8px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-top: 10px; /* minus border to match input */
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .textarea--s {
-  font-size: 12px; /* match input--s */
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -110,21 +109,12 @@
  * - A wrapping `<div>` with the class `select`.
  * - A `<select>`.
  *
- * Use `w*` width classes to change widths.
- *
- * The default styling looks kind of like an input.
- *
  * Variations:
  * - Modify `.select` with `select--stroke`.
  * - Modify *non-stroke* `.select` with a `.bg-{color}` class.
  * - Modify *stroke* `.select` with a text color, e.g. `.color-red`.
  *
- * @section Selects
  * @memberof Forms
- */
-
-/**
- * @memberof Selects
  * @example
  * <div class='select'>
  *   <select>
@@ -156,7 +146,6 @@
  * </div>
  */
 .select {
-  display: inline-block;
   position: relative;
   border-radius: var(--border-radius);
   transition: color var(--transition), background-color var(--transition);
@@ -164,20 +153,18 @@
 
 /* Borders are on the select, but colors are applied
 to the `.select` container. */
-
 .select > select {
+  font-size: inherit;
+  line-height: inherit;
   display: block;
   border-width: 2px;
   border-style: solid;
   border-color: var(--gray-light);
   border-radius: var(--border-radius);
   color: currentColor;
-  font-size: 12px;
   font-weight: bold;
   cursor: pointer;
-  height: 40px;
-  line-height: 36px; /* minus border */
-  padding: 0 30px 0 12px; /* plus arrow */
+  padding: 4px 30px 4px 12px; /* plus arrow, minus border */
   /* Needs to be on top of everything but transparent */
   position: relative;
   z-index: 2;
@@ -210,9 +197,9 @@ to the `.select` container. */
 }
 
 .select--s > select {
-  height: 30px;
-  line-height: 26px; /* minus border */
-  padding: 0 40px 0 10px; /* plus arrow */
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 22px 0 12px; /* plus arrow */
 }
 
 .select::after {
@@ -227,15 +214,11 @@ to the `.select` container. */
   position: absolute;
   top: 50%;
   margin-top: -3px;
-  right: 10px;
+  right: 12px;
 }
 
 .select--stroke::after {
   border-top-color: currentColor;
-}
-
-.select--s > select {
-  padding-right: 26px;
 }
 
 .select--s::after {
@@ -319,25 +302,25 @@ to the `.select` container. */
  * <div>
  *   <label class='checkbox-container'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr5'>
+ *     <div class='checkbox mr6'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     More cats
  *   </label>
  * </div>
- * <div class='mb10'>
- *   <label class='checkbox-container mr10'>
+ * <div class='mb12'>
+ *   <label class='checkbox-container mr12'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr5'>
+ *     <div class='checkbox mr6'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci tenetur distinctio provident a, debitis obcaecati ipsam laborum autem suscipit natus repellendus nam cumque ab qui ducimus unde ratione, quisquam nisi.
  *   </label>
  * </div>
  * <div class='txt-s'>
- *   <label class='checkbox-container mr10'>
+ *   <label class='checkbox-container mr12'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr5 checkbox--s-label color-red'>
+ *     <div class='checkbox mr6 checkbox--s-label color-red'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     More zebras
@@ -369,17 +352,17 @@ to the `.select` container. */
 /**
  * @memberof Radio buttons
  * @example
- * <div class='mb10'>
- *   <label class='radio-container mr10'>
+ * <div class='mb12'>
+ *   <label class='radio-container mr12'>
  *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio mr5'></div>
+ *     <div class='radio mr6'></div>
  *     Option 1
  *   </label>
  * </div>
  * <div class='txt-s'>
- *   <label class='radio-container mr10'>
+ *   <label class='radio-container mr12'>
  *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio radio--s-label color-yellow mr5'></div>
+ *     <div class='radio radio--s-label color-yellow mr6'></div>
  *     Magic radio
  *   </label>
  * </div>
@@ -409,7 +392,7 @@ to the `.select` container. */
  * @memberof Switches
  * @example
  * <div>
- *   <label class="switch-container mr10">
+ *   <label class="switch-container mr12">
  *     <input type='checkbox' value='magic'>
  *     <div class="switch"></div>
  *   </label>
@@ -417,7 +400,7 @@ to the `.select` container. */
  * <div>
  *   <label class="switch-container">
  *     <input type='checkbox' value='magic'>
- *     <div class='switch border--pink color-gray mr10'></div>
+ *     <div class='switch border--pink color-gray mr12'></div>
  *     Switch this!
  *   </label>
  * </div>
@@ -447,7 +430,7 @@ to the `.select` container. */
 /**
  * @memberof Toggles
  * @example
- * <div class='toggle-group mr20'>
+ * <div class='toggle-group mr18'>
  *   <label class='toggle-container'>
  *     <input name='pet' value='cat' type='radio' />
  *     <div class='toggle'>
@@ -467,7 +450,7 @@ to the `.select` container. */
  *     </div>
  *   </label>
  * </div>
- * <div class='toggle-group txt-s mr20'>
+ * <div class='toggle-group txt-s mr18'>
  *   <label class='toggle-container'>
  *     <input name='beast' value='cat' type='radio' />
  *     <div class='toggle toggle--purple'>
@@ -519,13 +502,13 @@ to the `.select` container. */
 
 .checkbox,
 .radio {
+  top: 3px;
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: var(--border-radius);
   cursor: pointer;
   position: relative;
-  top: 2px;
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
@@ -564,25 +547,23 @@ to the `.select` container. */
 .radio::before {
   content: '';
   background-color: currentColor;
-  width: 10px;
-  height: 10px;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -5px;
-  margin-left: -5px;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
   display: none;
 }
 
 /* Primary switch styles */
 .switch {
+  top: 3px;
   flex-shrink: 0;
   position: relative;
-  top: 2px;
-  width: 36px;
-  height: 20px;
-  border-radius: 10px;
+  width: 30px;
+  height: 18px;
+  border-radius: 12px;
   cursor: pointer;
   border-width: 2px;
   border-style: solid;
@@ -594,13 +575,13 @@ to the `.select` container. */
 .switch::after {
   content: '';
   background-color: currentColor;
-  position: relative;
+  position: absolute;
   display: block;
   border-radius: 50%;
-  width: 12px;
-  height: 12px;
+  width: calc(50% - 3px);
   left: 2px;
   top: 2px;
+  bottom: 2px;
   transition: left var(--transition), background-color var(--transition);
 }
 
@@ -664,7 +645,8 @@ input:not(:checked) + .switch:not(.is-active):hover::after {
 
 .is-active.switch::after,
 input:checked + .switch::after {
-  left: 18px;
+  left: auto;
+  right: 2px;
   background-color: var(--white);
 }
 

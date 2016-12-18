@@ -41,7 +41,7 @@ If you need more flexibility (e.g. you don't *always* want the element to have a
 class Home extends React.Component {
   render() {
     return (
-      <div className='mt40 prose'>
+      <div className='mt48 prose'>
         {remark().use(reactRenderer).process(text).contents}
       </div>
     );

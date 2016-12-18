@@ -6,7 +6,7 @@ class Page extends React.Component {
     return (
       <div>
         <Navigation navItems={this.props.navItems} />
-        <div className='mb40 ml200 limiter'>{this.props.children}</div>
+        <div className='mb24 ml240 pl18 pr18 wmax960'>{this.props.children}</div>
       </div>
     );
   }

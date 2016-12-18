@@ -1,12 +1,14 @@
 /**
+ * Use buttons as an affordance for JavaScript-powered click behaviors. For links,
+ * use an `a` element with the [`.txt-link`](#txt-link) class.
+ *
  * @section Buttons
  */
 
 /**
- * Use as an affordance for JavaScript-powered click behaviors.  Buttons have a blue background unless
+ * Buttons have a blue background unless
  * combined with [`.bg-*`](#Background) classes. Buttons have white text unless combined with a [`.color-*`](#Color)
- * class. Buttons have fully rounded corners unless combined with a [`.round-*`](#Theming) class. For links,
- * use an a element with the [`.a`](#Links) class.
+ * class. Buttons have fully rounded corners unless combined with a [`.round-*`](#Theming) class.
  *
  * @memberof Buttons
  * @example
@@ -14,7 +16,7 @@
  * <button class='btn bg-red'>Color</button>
  * <button class='btn bg-teal color-blue-dark'>More colors</button>
  * <button class='btn round'>Less rounded</button>
- * <div class='p10 bg-blue inline-block'>
+ * <div class='p12 bg-blue inline-block'>
  *   <button class='btn bg-white color-blue'>Reverse</button>
  * </div>
  */
@@ -24,8 +26,8 @@
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 22px; /* fully round by default */
-  padding: 8px 23px; /* Padding accommodates borders */
+  border-radius: 18px; /* fully round by default */
+  padding: 4px 12px; /* Padding accommodates borders */
   font-weight: bold;
   display: inline-flex;
   align-items: center;
@@ -49,7 +51,7 @@
  * <button class='btn btn--stroke'>Default</button>
  * <button class='btn btn--stroke color-red'>Color</button>
  * <button class='btn btn--stroke round'>Less rounded</button>
- * <div class='p10 bg-blue inline-block'>
+ * <div class='p12 bg-blue inline-block'>
  *   <button class='btn btn--stroke color-white'>Reverse</button>
  * </div>
  */
@@ -76,18 +78,22 @@
  * @memberof Buttons
  * @example
  * <button class='btn txt-s btn--s'>Small</button>
+ * <button class='btn txt-xs btn--xs'>Extra small</button>
  * <button class='btn txt-xs btn--xs btn--stroke'>Extra small</button>
  */
 .btn--s {
+  font-size: 12px;
   padding: 1px 18px;
   border-radius: 15px;
 }
 
 .btn--xs {
+  line-height: 14px; /* Forces height of btn--xs to be 18px */
+  font-size: 10px;
   padding: 0 8px;
   border-radius: 14px;
 }
-/* @endgroup */
+/** @endgroup */
 
 /**
  * Classes to create pill button groups. Every button in a pill group
@@ -111,7 +117,7 @@
  * @memberof Buttons
  * @example
  * <div>
- *   <div class="mr10 flex-parent--inline">
+ *   <div class="mr12 flex-parent--inline">
  *     <button class="btn btn--pill btn--pill-hl">Left</button>
  *     <button class="btn btn--pill btn--pill-hc">Center</button>
  *     <button class="btn btn--pill btn--pill-hr">Right</button>
@@ -122,7 +128,7 @@
  *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hr">Right</button>
  *   </div>
  * </div>
- *  <div class="mr10 flex-parent flex-parent--inline flex-parent--column">
+ *  <div class="mr12 flex-parent flex-parent--inline flex-parent--column">
  *     <button class="btn btn--pill btn--pill-vt bg-purple">Top</button>
  *     <button class="btn btn--pill btn--pill-vc bg-purple">Center</button>
  *     <button class="btn btn--pill btn--pill-vb bg-purple">Bottom</button>

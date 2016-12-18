@@ -6,10 +6,10 @@ Lowlight.registerLanguage('html', xmlLanguage);
 
 function HtmlExample(props) {
   return (
-    <div className='grid grid--gut10'>
+    <div className='grid grid--gut12'>
       <div className='col col--6'>
         <div
-          className='border border--2 border--blue round p20'
+          className='border border--2 border--blue round p18'
           dangerouslySetInnerHTML={{ __html: props.code }}
         />
       </div>

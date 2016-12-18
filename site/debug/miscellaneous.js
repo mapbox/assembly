@@ -5,19 +5,19 @@ class Miscellaneous extends React.Component {
 
     return (
       <div>
-        <h1 tabindex={100} className='txt-headline mb20'>
+        <h1 tabindex={100} className='txt-headline mb18'>
           Miscellaneous
         </h1>
-        <div className='mb20'>
+        <div className='mb18'>
         <a href='#' tabindex={100} className='events-none'>Can't </a>
         </div>
-        <div className='mb20'>
+        <div className='mb18'>
         <a href='#' tabindex={100} className='events-none'><div className='events-all'>Can select</div></a>
         </div>
-        <div className='mb20'>
+        <div className='mb18'>
         <a href='#' tabindex={100} className='select-none'>Can select</a>
         </div>
-        <div className='mb20'>
+        <div className='mb18'>
         <a href='#' tabindex={100} className='select-all'><div className='events-all'>Can select</div></a>
         </div>
       </div>

@@ -15,8 +15,8 @@ class Heading extends React.Component {
       </div>;
     }
 
-    const sectionClass = props.level === 1 ? 'bg-blue-faint p20 mb30 mt40 round' : 'mt40';
-    const levelClass = props.level === 1 ? 'txt-subhead mb5' : 'txt-xl mb5';
+    const sectionClass = props.level === 1 ? 'bg-blue-faint pl24 pr24 pb24 mb48 mt48 round' : 'mt24';
+    const levelClass = props.level === 1 ? 'txt-subhead mb6' : 'txt-xl mb6';
 
     return (
       <div className={sectionClass}>
@@ -24,7 +24,7 @@ class Heading extends React.Component {
           id={id}
           className={`${levelClass}`}
         >
-          <a href={`#${id}`}>
+          <a className='block pt24' href={`#${id}`}>
             {props.title}
           </a>
         </div>

@@ -18,12 +18,12 @@ class Navigation extends React.Component {
     const navEls = props.navItems.main.map((r) =>
       <div key={r.name}>
         <a className={`block txt-link color-blue ${r.name === props.navItems.active && 'is-active'}`} href={`/assembly${r.route}`}>{r.name}</a>
-        <div className='pl10'>{r.name === props.navItems.active ? secondaryEls : ''}</div>
+        <div className='border-l border--2 border--darken10 mt6 mb6 pl12'>{r.name === props.navItems.active ? secondaryEls : ''}</div>
       </div>
     );
 
-    return (<div className='mt40 pl20 pr20 w200 fixed top left'>
-      <div className='txt-m txt-bold mb20'>Assembly</div>
+    return (<div className='pt48 viewport-full scroll-auto pl24 pr18 w240 fixed top left'>
+      <div className='txt-m txt-bold mb12'>Assembly</div>
       {navEls}
     </div>);
   }

@@ -17,43 +17,43 @@ class Debug extends React.Component {
   render() {
     return (
       <div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Spinners />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Toggles />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Switches />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <CheckboxesRadios />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Buttons />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Triangles />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Pills />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Grid />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Typography />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Elements />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <TablesLists />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Miscellaneous />
         </div>
-        <div className='mb40'>
+        <div className='mb48'>
           <Forms />
         </div>
       </div>

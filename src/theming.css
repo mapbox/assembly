@@ -13,9 +13,9 @@
  * @memberof Theming
  * @example
  * <div class='flex-parent'>
- *   <div class='col col--2 bg-gray color-white p10 mr10 round'>.round</div>
- *   <div class='col col--2 bg-gray color-white p10 mr10 round-bold-r'>.round-bold-r</div>
- *   <div class='col col--2 bg-gray color-white p10 round-full'>.round-full</div>
+ *   <div class='col col--2 bg-gray color-white p12 mr12 round'>.round</div>
+ *   <div class='col col--2 bg-gray color-white p12 mr12 round-bold-r'>.round-bold-r</div>
+ *   <div class='col col--2 bg-gray color-white p12 round-full'>.round-full</div>
  * </div>
  */
 .round { border-radius: var(--border-radius) !important; }
@@ -60,9 +60,9 @@
  * @memberof Theming
  * @example
  * <div class='flex-parent'>
- *  <div class='col col--2 p10 mr10 border'>.border</div>
- *  <div class='col col--2 p10 mr10 border-b'>.border-b</div>
- *  <div class='col col--2 p10 border border--dash'>.border.border--dash</div>
+ *  <div class='col col--2 p12 mr12 border'>.border</div>
+ *  <div class='col col--2 p12 mr12 border-b'>.border-b</div>
+ *  <div class='col col--2 p12 border border--dash'>.border.border--dash</div>
  * </div>
  */
 .border { border: 1px solid !important; }
@@ -78,7 +78,7 @@
 
 /**
  * Shadow classes.
- * - Shadows come in `5px`, `10px`, `20px`, and `30px` variants.
+ * - Shadows come in `6px` and `24px` variants.
  * - Append `-bold` for a more opaque shadow.
  * - Add shadows to text with `txt-shadow`.
  *
@@ -90,30 +90,29 @@
  *   <div class='shadow-darken25-bold'>.shadow-darken25-bold</div>
  * </div>
  */
-.shadow-darken5 { box-shadow: 0 0 10px 2px var(--darken5) !important; }
-.shadow-darken10 { box-shadow: 0 0 10px 2px var(--darken10) !important; }
-.shadow-darken25 { box-shadow: 0 0 10px 2px var(--darken25) !important; }
-.shadow-darken50 { box-shadow: 0 0 10px 2px var(--darken50) !important; }
+.shadow-darken5 { box-shadow: 0 0 12px 2px var(--darken5) !important; }
+.shadow-darken10 { box-shadow: 0 0 12px 2px var(--darken10) !important; }
+.shadow-darken25 { box-shadow: 0 0 12px 2px var(--darken25) !important; }
+.shadow-darken50 { box-shadow: 0 0 12px 2px var(--darken50) !important; }
 
-.shadow-lighten5 { box-shadow: 0 0 10px 2px var(--lighten5) !important; }
-.shadow-lighten10 { box-shadow: 0 0 10px 2px var(--lighten10) !important; }
-.shadow-lighten25 { box-shadow: 0 0 10px 2px var(--lighten25) !important; }
-.shadow-lighten50 { box-shadow: 0 0 10px 2px var(--lighten50) !important; }
+.shadow-lighten5 { box-shadow: 0 0 12px 2px var(--lighten5) !important; }
+.shadow-lighten10 { box-shadow: 0 0 12px 2px var(--lighten10) !important; }
+.shadow-lighten25 { box-shadow: 0 0 12px 2px var(--lighten25) !important; }
+.shadow-lighten50 { box-shadow: 0 0 12px 2px var(--lighten50) !important; }
 /** @endgroup */
 
-.shadow-darken5-bold { box-shadow: 0 0 20px 2px var(--darken5) !important; }
-.shadow-darken10-bold { box-shadow: 0 0 20px 2px var(--darken10) !important; }
-.shadow-darken25-bold { box-shadow: 0 0 20px 2px var(--darken25) !important; }
-.shadow-darken50-bold { box-shadow: 0 0 20px 2px var(--darken50) !important; }
+.shadow-darken5-bold { box-shadow: 0 0 24px 2px var(--darken5) !important; }
+.shadow-darken10-bold { box-shadow: 0 0 24px 2px var(--darken10) !important; }
+.shadow-darken25-bold { box-shadow: 0 0 24px 2px var(--darken25) !important; }
+.shadow-darken50-bold { box-shadow: 0 0 24px 2px var(--darken50) !important; }
 
-.shadow-lighten5-bold { box-shadow: 0 0 20px 2px var(--lighten5) !important; }
-.shadow-lighten10-bold { box-shadow: 0 0 20px 2px var(--lighten10) !important; }
-.shadow-lighten25-bold { box-shadow: 0 0 20px 2px var(--lighten25) !important; }
-.shadow-lighten50-bold { box-shadow: 0 0 20px 2px var(--lighten50) !important; }
+.shadow-lighten5-bold { box-shadow: 0 0 24px 2px var(--lighten5) !important; }
+.shadow-lighten10-bold { box-shadow: 0 0 24px 2px var(--lighten10) !important; }
+.shadow-lighten25-bold { box-shadow: 0 0 24px 2px var(--lighten25) !important; }
+.shadow-lighten50-bold { box-shadow: 0 0 24px 2px var(--lighten50) !important; }
 
 /**
  * Opacity classes.
- * - Alpha classes come in `0%`, `25%`, `50%`, `75%`, and `100%` opacity variants.
  *
  * @group
  * @memberof Theming
@@ -131,11 +130,8 @@
 .alpha100 { opacity: 1 !important; }
 /** @endgroup */
 
-.clip { overflow: hidden !important; }
-
 /**
- * Cursor classes.
- * - Cursor is one of `default`, `pointer`, `crosshair`, or `move` on hover.
+ * Cursor is one of `default`, `pointer`, `crosshair`, or `move` on hover.
  *
  * @group
  * @memberof Theming
