@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 'use strict';
 
 const stripIndent = require('strip-indent');

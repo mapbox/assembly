@@ -57,9 +57,9 @@ class Switches extends React.Component {
       </label>
     </div>
 
-        {colors.map((handle) =>
-          <div className='mb12'>
-            {colors.map((c) => <SwitchEl color={c} handleColor={handle} size={null} />)}
+        {colors.map((handle, i) =>
+          <div key={i} className='mb12'>
+            {colors.map((c) => <SwitchEl key={c} color={c} handleColor={handle} size={null} />)}
           </div>)}
 
       </div>

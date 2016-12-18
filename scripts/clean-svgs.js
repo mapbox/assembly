@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 'use strict';
 
 const fs = require('fs');
@@ -80,4 +79,3 @@ function cleanSvg(svg, fileName) {
     console.log(`cleaned ${fileName}`);
   });
 }
-

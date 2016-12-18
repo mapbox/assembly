@@ -63,7 +63,7 @@ class Toggles extends React.Component {
           Toggles
         </h1>
 
-        {colors.map((c) => <ToggleEl color={c} />)}
+        {colors.map((c) => <ToggleEl key={c} color={c} />)}
 
         <div className='mt18 mb18'>
 

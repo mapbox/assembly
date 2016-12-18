@@ -1,12 +1,14 @@
 'use strict';
 
 const path = require('path');
+const mkdirp = require('mkdirp');
+const pify = require('pify');
 const globby = require('globby');
 const cpFile = require('cp-file');
 const timelog = require('./timelog');
 
+const distDir = path.join(__dirname, '../dist');
 const fontsGlob = path.join(__dirname, '../fonts/*.*');
-const distGlob = path.join(__dirname, '../dist/*.*');
 const siteAssetsGlob = path.join(__dirname, '../site/css/*.*');
 
 function copyFile(infile, outdir) {
@@ -17,23 +19,27 @@ function copyFile(infile, outdir) {
 function copyFonts() {
   return globby(fontsGlob).then((fontFiles) => {
     return Promise.all(fontFiles.map((file) => {
-      return copyFile(file, path.join(__dirname, '../dist'));
+      return copyFile(file, distDir);
     }));
   });
 }
 
 function copySiteAssets() {
-  return globby([distGlob, siteAssetsGlob]).then((assetFiles) => {
+  return globby([siteAssetsGlob]).then((assetFiles) => {
     return Promise.all(assetFiles.map((file) => {
-      return copyFile(file, path.join(__dirname, '../dist/assets'));
+      return copyFile(file, distDir);
     }));
   });
 }
 
 function copyAssets() {
   timelog('Copying assets');
-  return copyFonts().then(() => copySiteAssets())
-    .then(() => timelog('Done copying assets'));
+  return pify(mkdirp)(distDir).then(() => {
+    return Promise.all([
+      copyFonts(),
+      copySiteAssets()
+    ]).then(() => timelog('Done copying assets'));
+  });
 }
 
 module.exports = copyAssets;
