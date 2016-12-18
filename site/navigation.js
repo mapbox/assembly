@@ -10,15 +10,15 @@ class Navigation extends React.Component {
 
     let secondaryEls;
     if (props.navItems.secondary) {
-      secondaryEls = props.navItems.secondary.map((r) =>
-        <a key={r.name} className='txt-link color-blue block txt-s' href={r.route}>{r.name}</a>
-      );
+      secondaryEls = <div className='border-l border--2 border--darken10 mt6 mb6 pl12'>{props.navItems.secondary.map((r) =>
+        <a key={r.name} className='txt-link color-blue block txt-s' href={r.route}>{r.name}</a>)}
+      </div>;
     }
 
     const navEls = props.navItems.main.map((r) =>
       <div key={r.name}>
         <a className={`block txt-link color-blue ${r.name === props.navItems.active && 'is-active'}`} href={`/assembly${r.route}`}>{r.name}</a>
-        <div className='border-l border--2 border--darken10 mt6 mb6 pl12'>{r.name === props.navItems.active ? secondaryEls : ''}</div>
+        {r.name === props.navItems.active ? secondaryEls : ''}
       </div>
     );
 
