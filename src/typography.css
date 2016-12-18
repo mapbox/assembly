@@ -23,13 +23,13 @@ textarea {
  * @memberof Typography
  * @group
  * @example
- *   <div class='txt-headline'>.txt-headline</div>
- *   <div class='txt-subhead'>.txt-subhead</div>
- *   <div class='txt-xl'>.txt-xl</div>
- *   <div class='txt-l'>.txt-l</div>
- *   <div class='txt-m'>.txt-m</div>
- *   <div class='txt-s'>.txt-s</div>
- *   <div class='txt-xs'>.txt-xs</div>
+ * <div class='txt-headline'>.txt-headline</div>
+ * <div class='txt-subhead'>.txt-subhead</div>
+ * <div class='txt-xl'>.txt-xl</div>
+ * <div class='txt-l'>.txt-l</div>
+ * <div class='txt-m'>.txt-m</div>
+ * <div class='txt-s'>.txt-s</div>
+ * <div class='txt-xs'>.txt-xs</div>
  */
 .txt-headline {
   font-size: 32px;
@@ -389,6 +389,7 @@ textarea {
   border-radius: 3px;
   padding: 2px 3px;
   box-shadow: 0 1px 0 0 var(--darken10);
+  font-size: 0.9em;
   font-weight: normal;
 }
 
@@ -430,8 +431,7 @@ textarea {
  * @memberof Typography
  * @example
  * Here is some <code class='code'>inline code</code>.
- *
- * <pre class='code-block w180'>
+ * <pre class='code-block w180 mt12'>
  * Here is a code block
  * </pre>
  */
@@ -441,16 +441,16 @@ textarea {
 .prose pre {
   font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   white-space: pre-wrap;
-  font-size: 0.85em; /* mono fonts have naturally large proportions, scale them down to match open sans. */
-  line-height: 1.45em; /* aligns code with 6px baseline grid */
+  font-size: 0.9em; /* mono fonts have naturally large proportions, scale them down to match open sans. */
+  line-height: 1.5em; /* code blocks look better with smaller line height */
   background: var(--darken5);
-  box-shadow: inset 0 0 1px 0 var(--darken25);
   border-radius: 3px;
 }
 
 .code,
 .prose code {
   padding: 2px;
+  box-shadow: inset 0 0 1px 0 var(--darken25);
 }
 
 .code-block,
@@ -511,8 +511,7 @@ textarea {
  */
 .txt-mono {
   font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
-  font-size: 0.85em; /* mono fonts have naturally large proportions, scale them down to match open sans. */
-  line-height: 1.45em; /* aligns txt-mono with 6px baseline grid */
+  font-size: 0.9em; /* mono fonts have naturally large proportions, scale them down to match open sans. */
 }
 
 /**
@@ -597,6 +596,8 @@ textarea {
 /**
  * Text underline
  * @memberof Typography utilities
+ * @example
+ * <div class='txt-underline'>txt-underline</div>
  */
 .txt-underline { text-decoration: underline !important; }
 

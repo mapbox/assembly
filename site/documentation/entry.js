@@ -13,9 +13,7 @@ class Entry extends React.Component {
     const { props } = this;
 
     const example = !props.parsedComment.example ? null : (
-      <div className='mt24'>
-        <HtmlExample code={props.parsedComment.example.description} />
-      </div>
+      <HtmlExample code={props.parsedComment.example.description} />
     );
 
     let selectors = props.referencedSource ? [props.referencedSource.selector] : props.members;
@@ -29,14 +27,18 @@ class Entry extends React.Component {
         });
     }
 
-    const selectorEls = selectors !== undefined && selectors.map((m) => <span className='mr6 inline-block' key={m}>
-        <span id={`#${m.trim().replace(/\s+/g, '-').replace(/\./g, '')}`} className='pl6 pr6 pt3 pb3 round bg-blue color-white txt-mono inline-block'>{m.trim()}</span>
+    const selectorEls = selectors !== undefined && selectors.map((m) =>
+      <span
+        key={m}
+        id={`#${m.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
+        className='mr6 pl6 pr6 round bg-blue color-white txt-mono inline-block mb3'>
+        {m.trim()}
       </span>);
 
     return (
       <div className='mt24 mb48'>
         {selectorEls}
-        <div className={`${selectors && 'mt6'} prose`}>
+        <div className={`${selectors && 'mt3'} prose`}>
           {remark().use(reactRenderer).process(props.parsedComment.description).contents}
         </div>
         {example}

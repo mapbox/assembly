@@ -6,14 +6,12 @@ Lowlight.registerLanguage('html', xmlLanguage);
 
 function HtmlExample(props) {
   return (
-    <div className='grid grid--gut12'>
-      <div className='col col--6'>
+    <div className='mt12'>
         <div
-          className='border border--2 border--blue round p18'
+          className='border-t border-l border-r border--2 border--gray-faint round-t p12'
           dangerouslySetInnerHTML={{ __html: props.code }}
         />
-      </div>
-      <div className='col col--6'>
+      <div className='code-block bg-gray-faint scroll-auto hmax240 round-b'>
         <Lowlight
           language='html'
           value={props.code}

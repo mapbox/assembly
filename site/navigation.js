@@ -10,7 +10,7 @@ class Navigation extends React.Component {
 
     let secondaryEls;
     if (props.navItems.secondary) {
-      secondaryEls = <div className='border-l border--2 border--darken10 mt6 mb6 pl12'>{props.navItems.secondary.map((r) =>
+      secondaryEls = <div className='border-l border--2 border--gray-faint mt6 mb6 pl12'>{props.navItems.secondary.map((r) =>
         <a key={r.name} className='txt-link color-blue block txt-s' href={r.route}>{r.name}</a>)}
       </div>;
     }
@@ -23,7 +23,7 @@ class Navigation extends React.Component {
     );
 
     return (<div className='pt48 viewport-full scroll-auto pl24 pr18 w240 fixed top left'>
-      <div className='txt-m txt-bold mb12'>Assembly</div>
+      <div className='txt-m mb12'>Assembly</div>
       {navEls}
     </div>);
   }

@@ -34,10 +34,10 @@
  * @group
  * @memberof Animations
  * @example
-* <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-fast"></div>
-* <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-slow"></div>
-* <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--delay"></div>
-*/
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-fast"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-slow"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--delay"></div>
+ */
 .animation--speed-fast { animation-duration: 1s; }
 .animation--speed-slow { animation-duration: 2s; }
 .animation--delay { animation-delay: 1s; }
@@ -52,11 +52,9 @@
  * @group
  * @memberof Animations
  * @example
- <div class='flex'>
-   <div class="col col--1 loading p12"></div>
-   <div class="col col--1 loading loading--s p12"></div>
-   <div class="col col--1 loading loading--light bg-gray-dark p12"></div>
- </div>
+ * <div class="loading"></div>
+ * <div class="loading loading--s"></div>
+ * <div class="loading loading--light bg-gray-dark"></div>
 */
 .loading { display: flex; }
 .loading::after,
