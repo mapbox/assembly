@@ -18,7 +18,7 @@ textarea {
 }
 
 /**
- * Standard text scale. All text size classes include `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * Standard text scale. All text size classes include `-ms`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @memberof Typography
  * @group
@@ -67,112 +67,112 @@ textarea {
 }
 /** @endgroup */
 
-@media only (--large-screen) {
-  .txt-headline-media-l {
+@media (--m-screen) {
+  .txt-headline-ms {
     font-size: 32px;
     line-height: 42px;
   }
 
-  .txt-subhead-media-l {
+  .txt-subhead-ms {
     font-size: 28px;
     line-height: 36px;
   }
 
-  .txt-xl-media-l {
+  .txt-xl-ms {
     font-size: 22px;
     line-height: 30px;
   }
 
-  .txt-l-media-l {
+  .txt-l-ms {
     font-size: 18px;
     line-height: 30px;
   }
 
-  .txt-m-media-l {
+  .txt-m-ms {
     font-size: 15px;
     line-height: 24px;
   }
 
-  .txt-s-media-l {
+  .txt-s-ms {
     font-size: 12px;
     line-height: 18px;
   }
 
-  .txt-xs-media-l {
+  .txt-xs-ms {
     font-size: 12px;
     line-height: 15px;
   }
 }
 
-@media only (--medium-screen) {
-  .txt-headline-media-l {
+@media (--l-screen) {
+  .txt-headline-ml {
     font-size: 32px;
     line-height: 42px;
   }
 
-  .txt-subhead-media-l {
+  .txt-subhead-ml {
     font-size: 28px;
     line-height: 36px;
   }
 
-  .txt-xl-media-l {
+  .txt-xl-ml {
     font-size: 22px;
     line-height: 30px;
   }
 
-  .txt-l-media-l {
+  .txt-l-ml {
     font-size: 18px;
     line-height: 30px;
   }
 
-  .txt-m-media-l {
+  .txt-ml-ml {
     font-size: 15px;
     line-height: 24px;
   }
 
-  .txt-s-media-l {
+  .txt-s-ml {
     font-size: 12px;
     line-height: 18px;
   }
 
-  .txt-xs-media-l {
+  .txt-xs-ml {
     font-size: 12px;
     line-height: 15px;
   }
 }
 
-@media only (--small-screen) {
-  .txt-headline-media-s {
+@media (--xl-screen) {
+  .txt-headline-mxl {
     font-size: 32px;
     line-height: 42px;
   }
 
-  .txt-subhead-media-s {
+  .txt-subhead-mxl {
     font-size: 28px;
     line-height: 36px;
   }
 
-  .txt-xl-media-s {
+  .txt-xl-mxl {
     font-size: 22px;
     line-height: 30px;
   }
 
-  .txt-l-media-s {
+  .txt-l-mxl {
     font-size: 18px;
     line-height: 30px;
   }
 
-  .txt-m-media-s {
+  .txt-mlxl {
     font-size: 15px;
     line-height: 24px;
   }
 
-  .txt-s-media-s {
+  .txt-s-mxl {
     font-size: 12px;
     line-height: 18px;
   }
 
-  .txt-xs-media-s {
+  .txt-xs-mxl {
     font-size: 12px;
     line-height: 15px;
   }
