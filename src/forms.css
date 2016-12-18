@@ -563,7 +563,7 @@ to the `.select` container. */
   position: relative;
   width: 30px;
   height: 18px;
-  border-radius: 12px;
+  border-radius: 9999px;
   cursor: pointer;
   border-width: 2px;
   border-style: solid;
@@ -645,8 +645,7 @@ input:not(:checked) + .switch:not(.is-active):hover::after {
 
 .is-active.switch::after,
 input:checked + .switch::after {
-  left: auto;
-  right: 2px;
+  left: calc(50% + 1px);
   background-color: var(--white);
 }
 
