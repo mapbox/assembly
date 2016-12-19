@@ -1,9 +1,5 @@
 import React from 'react';
 
-/*
- * Can't import routes() directly because it would be a
- * circular dependency.
- */
 class Navigation extends React.Component {
   render() {
     const { props } = this;
