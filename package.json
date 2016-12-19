@@ -6,10 +6,11 @@
   "scripts": {
     "copy-assets": "node scripts/copy-assets",
     "clean-svgs": "node scripts/clean-svgs",
+    "minify-css": "cssnano dist/assembly.css > dist/assembly.min.css",
     "build:site": "babel-node scripts/build-site",
-    "build:css": "mkdir -p dist && node scripts/process-css && npm run copy-assets",
+    "build:css": "mkdir -p dist && node scripts/process-css && npm-run-all --parallel copy-assets minify-css",
     "build:svg": "mkdir -p dist && node scripts/create-svg-sprite",
-    "build": "rm -rf dist && npm-run-all --parallel build:css build:svg build:site && cssnano dist/assembly.css > dist/assembly.min.css",
+    "build": "rm -rf dist && npm-run-all --parallel build:css build:svg build:site",
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint .",
     "lint": "npm run lint:css && npm run lint:js",
