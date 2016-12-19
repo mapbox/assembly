@@ -49,7 +49,7 @@
 /** @endgroup */
 
 @media (--m-screen) {
-  .flex-parent-mm { display: flex-parent !important; }
+  .flex-parent-mm { display: flex !important; }
   .flex-parent-none-mm { flex: none !important; }
   .flex-parent--column-mm { flex-direction: column !important; }
   .flex-parent--wrap-mm { flex-wrap: wrap !important; }
@@ -65,7 +65,7 @@
 }
 
 @media (--l-screen) {
-  .flex-parent-ml { display: flex-parent !important; }
+  .flex-parent-ml { display: flex !important; }
   .flex-parent-none-ml { flex: none !important; }
   .flex-parent--column-ml { flex-direction: column !important; }
   .flex-parent--wrap-ml { flex-wrap: wrap !important; }
@@ -81,7 +81,7 @@
 }
 
 @media (--xl-screen) {
-  .flex-parent-mxl { display: flex-parent !important; }
+  .flex-parent-mxl { display: flex !important; }
   .flex-parent-none-mxl { flex: none !important; }
   .flex-parent--column-mxl { flex-direction: column !important; }
   .flex-parent--wrap-mxl { flex-wrap: wrap !important; }
