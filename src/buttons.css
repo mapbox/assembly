@@ -61,11 +61,7 @@
   color: var(--blue);
 }
 
-.btn--stroke:hover {
-  background-color: transparent;
-  color: var(--blue-dark);
-}
-
+.btn--stroke:hover,
 .btn--stroke.is-active {
   background-color: transparent;
   color: var(--blue-dark);

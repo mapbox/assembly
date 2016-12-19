@@ -62,7 +62,9 @@ const allConfig = [
   'lighten75',
 
   'white',
-  'black'
+  'black',
+
+  'transparent'
 ];
 
 // const defaultConfig = {
@@ -86,6 +88,7 @@ function isDark(color) {
 
 function getDarkerShade(color) {
   if (color === 'white') return 'gray-faint';
+  if (color === 'transparent') return 'darken5';
   if (color === 'black') return 'No dark variant for "black"';
 
   const semitransparentMatch = color.match(/(lighten|darken)(\d+$)/);
@@ -130,9 +133,14 @@ const variantGenerators = {};
 
 variantGenerators.buttonFill = function (color) {
   if (isDark(color)) return '';
+  const colorValue = variables[color];
   const darkerShade = getDarkerShade(color);
   return stripIndent(`
-    .btn.bg-${color}:hover {
+    .btn--${color} {
+      background-color: ${colorValue} !important;
+    }
+
+    .btn--${color}:hover {
       background-color: ${darkerShade} !important;
     }
   `);
@@ -142,7 +150,7 @@ variantGenerators.buttonStroke = function (color) {
   if (isDark(color)) return '';
   const darkerShade = getDarkerShade(color);
   return stripIndent(`
-    .btn--stroke.color-${color}:hover {
+    .btn--stroke.btn--${color}:hover {
       color: ${darkerShade} !important;
     }
   `);

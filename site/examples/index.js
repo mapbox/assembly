@@ -1,6 +1,7 @@
 import React from 'react';
 import { UnderlineTabs } from './underline_tabs';
 import { DiverseTiles } from './diverse_tiles';
+import { MenuNav } from './menu_nav';
 
 class Examples extends React.Component {
   render() {
@@ -15,6 +16,9 @@ class Examples extends React.Component {
         </div>
         <div className='mt48'>
           <DiverseTiles />
+        </div>
+        <div className='mt48'>
+          <MenuNav />
         </div>
       </div>
     );
