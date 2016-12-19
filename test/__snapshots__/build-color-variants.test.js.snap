@@ -608,381 +608,457 @@ exports[`buildColorVariants defaults 1`] = `
   color: gray-faint !important;
 }
   
+.checkbox-container:hover > .checkbox.color-gray,
 input:checked + .checkbox.color-gray,
 .checkbox.color-gray.is-active {
   color: #333 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-gray-light,
 input:checked + .checkbox.color-gray-light,
 .checkbox.color-gray-light.is-active {
   color: #666 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-gray-faint,
 input:checked + .checkbox.color-gray-faint,
 .checkbox.color-gray-faint.is-active {
   color: #ccc !important;
 }
   
+.checkbox-container:hover > .checkbox.color-pink,
 input:checked + .checkbox.color-pink,
 .checkbox.color-pink.is-active {
   color: #C8145A !important;
 }
   
+.checkbox-container:hover > .checkbox.color-pink-light,
 input:checked + .checkbox.color-pink-light,
 .checkbox.color-pink-light.is-active {
   color: #ff3c96 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-pink-faint,
 input:checked + .checkbox.color-pink-faint,
 .checkbox.color-pink-faint.is-active {
   color: #FF88C0 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-red,
 input:checked + .checkbox.color-red,
 .checkbox.color-red.is-active {
   color: #BE0014 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-red-light,
 input:checked + .checkbox.color-red-light,
 .checkbox.color-red-light.is-active {
   color: #dc2b28 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-red-faint,
 input:checked + .checkbox.color-red-faint,
 .checkbox.color-red-faint.is-active {
   color: #FF8280 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-orange,
 input:checked + .checkbox.color-orange,
 .checkbox.color-orange.is-active {
   color: #DC4600 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-orange-light,
 input:checked + .checkbox.color-orange-light,
 .checkbox.color-orange-light.is-active {
   color: #ff6e00 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-orange-faint,
 input:checked + .checkbox.color-orange-faint,
 .checkbox.color-orange-faint.is-active {
   color: #FFA950 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-yellow,
 input:checked + .checkbox.color-yellow,
 .checkbox.color-yellow.is-active {
   color: #FFBD0A !important;
 }
   
+.checkbox-container:hover > .checkbox.color-yellow-light,
 input:checked + .checkbox.color-yellow-light,
 .checkbox.color-yellow-light.is-active {
   color: #f0dc00 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-yellow-faint,
 input:checked + .checkbox.color-yellow-faint,
 .checkbox.color-yellow-faint.is-active {
   color: #F0F062 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-green,
 input:checked + .checkbox.color-green,
 .checkbox.color-green.is-active {
   color: #007532 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-green-light,
 input:checked + .checkbox.color-green-light,
 .checkbox.color-green-light.is-active {
   color: #01aa46 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-green-faint,
 input:checked + .checkbox.color-green-faint,
 .checkbox.color-green-faint.is-active {
   color: #72C781 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-teal,
 input:checked + .checkbox.color-teal,
 .checkbox.color-teal.is-active {
   color: #00626E !important;
 }
   
+.checkbox-container:hover > .checkbox.color-teal-light,
 input:checked + .checkbox.color-teal-light,
 .checkbox.color-teal-light.is-active {
   color: #01b5b4 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-teal-faint,
 input:checked + .checkbox.color-teal-faint,
 .checkbox.color-teal-faint.is-active {
   color: #50D2D2 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-blue,
 input:checked + .checkbox.color-blue,
 .checkbox.color-blue.is-active {
   color: #0014AA !important;
 }
   
+.checkbox-container:hover > .checkbox.color-blue-light,
 input:checked + .checkbox.color-blue-light,
 .checkbox.color-blue-light.is-active {
   color: #0065fb !important;
 }
   
+.checkbox-container:hover > .checkbox.color-blue-faint,
 input:checked + .checkbox.color-blue-faint,
 .checkbox.color-blue-faint.is-active {
   color: #00B1FF !important;
 }
   
+.checkbox-container:hover > .checkbox.color-purple,
 input:checked + .checkbox.color-purple,
 .checkbox.color-purple.is-active {
   color: #500078 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-purple-light,
 input:checked + .checkbox.color-purple-light,
 .checkbox.color-purple-light.is-active {
   color: #8c50c7 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-purple-faint,
 input:checked + .checkbox.color-purple-faint,
 .checkbox.color-purple-faint.is-active {
   color: #C299E3 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-darken5,
 input:checked + .checkbox.color-darken5,
 .checkbox.color-darken5.is-active {
   color: rgba(0, 0, 0, 0.10) !important;
 }
   
+.checkbox-container:hover > .checkbox.color-darken10,
 input:checked + .checkbox.color-darken10,
 .checkbox.color-darken10.is-active {
   color: rgba(0, 0, 0, 0.25) !important;
 }
   
+.checkbox-container:hover > .checkbox.color-darken25,
 input:checked + .checkbox.color-darken25,
 .checkbox.color-darken25.is-active {
   color: rgba(0, 0, 0, 0.5) !important;
 }
   
+.checkbox-container:hover > .checkbox.color-darken50,
 input:checked + .checkbox.color-darken50,
 .checkbox.color-darken50.is-active {
   color: rgba(0, 0, 0, 0.75) !important;
 }
   
+.checkbox-container:hover > .checkbox.color-darken75,
 input:checked + .checkbox.color-darken75,
 .checkbox.color-darken75.is-active {
   color: #000 !important;
 }
   
+.checkbox-container:hover > .checkbox.color-lighten5,
 input:checked + .checkbox.color-lighten5,
 .checkbox.color-lighten5.is-active {
   color: rgba(255, 255, 255, 0.1) !important;
 }
   
+.checkbox-container:hover > .checkbox.color-lighten10,
 input:checked + .checkbox.color-lighten10,
 .checkbox.color-lighten10.is-active {
   color: rgba(255, 255, 255, 0.25) !important;
 }
   
+.checkbox-container:hover > .checkbox.color-lighten25,
 input:checked + .checkbox.color-lighten25,
 .checkbox.color-lighten25.is-active {
   color: rgba(255, 255, 255, 0.5) !important;
 }
   
+.checkbox-container:hover > .checkbox.color-lighten50,
 input:checked + .checkbox.color-lighten50,
 .checkbox.color-lighten50.is-active {
   color: rgba(255, 255, 255, 0.75) !important;
 }
   
+.checkbox-container:hover > .checkbox.color-lighten75,
 input:checked + .checkbox.color-lighten75,
 .checkbox.color-lighten75.is-active {
   color: #fff !important;
 }
   
+.checkbox-container:hover > .checkbox.color-white,
 input:checked + .checkbox.color-white,
 .checkbox.color-white.is-active {
   color: gray-faint !important;
 }
   
+.radio-container:hover > .radio.color-gray,
 input:checked + .radio.color-gray,
 .radio.color-gray.is-active {
   color: #333 !important;
 }
   
+.radio-container:hover > .radio.color-gray-light,
 input:checked + .radio.color-gray-light,
 .radio.color-gray-light.is-active {
   color: #666 !important;
 }
   
+.radio-container:hover > .radio.color-gray-faint,
 input:checked + .radio.color-gray-faint,
 .radio.color-gray-faint.is-active {
   color: #ccc !important;
 }
   
+.radio-container:hover > .radio.color-pink,
 input:checked + .radio.color-pink,
 .radio.color-pink.is-active {
   color: #C8145A !important;
 }
   
+.radio-container:hover > .radio.color-pink-light,
 input:checked + .radio.color-pink-light,
 .radio.color-pink-light.is-active {
   color: #ff3c96 !important;
 }
   
+.radio-container:hover > .radio.color-pink-faint,
 input:checked + .radio.color-pink-faint,
 .radio.color-pink-faint.is-active {
   color: #FF88C0 !important;
 }
   
+.radio-container:hover > .radio.color-red,
 input:checked + .radio.color-red,
 .radio.color-red.is-active {
   color: #BE0014 !important;
 }
   
+.radio-container:hover > .radio.color-red-light,
 input:checked + .radio.color-red-light,
 .radio.color-red-light.is-active {
   color: #dc2b28 !important;
 }
   
+.radio-container:hover > .radio.color-red-faint,
 input:checked + .radio.color-red-faint,
 .radio.color-red-faint.is-active {
   color: #FF8280 !important;
 }
   
+.radio-container:hover > .radio.color-orange,
 input:checked + .radio.color-orange,
 .radio.color-orange.is-active {
   color: #DC4600 !important;
 }
   
+.radio-container:hover > .radio.color-orange-light,
 input:checked + .radio.color-orange-light,
 .radio.color-orange-light.is-active {
   color: #ff6e00 !important;
 }
   
+.radio-container:hover > .radio.color-orange-faint,
 input:checked + .radio.color-orange-faint,
 .radio.color-orange-faint.is-active {
   color: #FFA950 !important;
 }
   
+.radio-container:hover > .radio.color-yellow,
 input:checked + .radio.color-yellow,
 .radio.color-yellow.is-active {
   color: #FFBD0A !important;
 }
   
+.radio-container:hover > .radio.color-yellow-light,
 input:checked + .radio.color-yellow-light,
 .radio.color-yellow-light.is-active {
   color: #f0dc00 !important;
 }
   
+.radio-container:hover > .radio.color-yellow-faint,
 input:checked + .radio.color-yellow-faint,
 .radio.color-yellow-faint.is-active {
   color: #F0F062 !important;
 }
   
+.radio-container:hover > .radio.color-green,
 input:checked + .radio.color-green,
 .radio.color-green.is-active {
   color: #007532 !important;
 }
   
+.radio-container:hover > .radio.color-green-light,
 input:checked + .radio.color-green-light,
 .radio.color-green-light.is-active {
   color: #01aa46 !important;
 }
   
+.radio-container:hover > .radio.color-green-faint,
 input:checked + .radio.color-green-faint,
 .radio.color-green-faint.is-active {
   color: #72C781 !important;
 }
   
+.radio-container:hover > .radio.color-teal,
 input:checked + .radio.color-teal,
 .radio.color-teal.is-active {
   color: #00626E !important;
 }
   
+.radio-container:hover > .radio.color-teal-light,
 input:checked + .radio.color-teal-light,
 .radio.color-teal-light.is-active {
   color: #01b5b4 !important;
 }
   
+.radio-container:hover > .radio.color-teal-faint,
 input:checked + .radio.color-teal-faint,
 .radio.color-teal-faint.is-active {
   color: #50D2D2 !important;
 }
   
+.radio-container:hover > .radio.color-blue,
 input:checked + .radio.color-blue,
 .radio.color-blue.is-active {
   color: #0014AA !important;
 }
   
+.radio-container:hover > .radio.color-blue-light,
 input:checked + .radio.color-blue-light,
 .radio.color-blue-light.is-active {
   color: #0065fb !important;
 }
   
+.radio-container:hover > .radio.color-blue-faint,
 input:checked + .radio.color-blue-faint,
 .radio.color-blue-faint.is-active {
   color: #00B1FF !important;
 }
   
+.radio-container:hover > .radio.color-purple,
 input:checked + .radio.color-purple,
 .radio.color-purple.is-active {
   color: #500078 !important;
 }
   
+.radio-container:hover > .radio.color-purple-light,
 input:checked + .radio.color-purple-light,
 .radio.color-purple-light.is-active {
   color: #8c50c7 !important;
 }
   
+.radio-container:hover > .radio.color-purple-faint,
 input:checked + .radio.color-purple-faint,
 .radio.color-purple-faint.is-active {
   color: #C299E3 !important;
 }
   
+.radio-container:hover > .radio.color-darken5,
 input:checked + .radio.color-darken5,
 .radio.color-darken5.is-active {
   color: rgba(0, 0, 0, 0.10) !important;
 }
   
+.radio-container:hover > .radio.color-darken10,
 input:checked + .radio.color-darken10,
 .radio.color-darken10.is-active {
   color: rgba(0, 0, 0, 0.25) !important;
 }
   
+.radio-container:hover > .radio.color-darken25,
 input:checked + .radio.color-darken25,
 .radio.color-darken25.is-active {
   color: rgba(0, 0, 0, 0.5) !important;
 }
   
+.radio-container:hover > .radio.color-darken50,
 input:checked + .radio.color-darken50,
 .radio.color-darken50.is-active {
   color: rgba(0, 0, 0, 0.75) !important;
 }
   
+.radio-container:hover > .radio.color-darken75,
 input:checked + .radio.color-darken75,
 .radio.color-darken75.is-active {
   color: #000 !important;
 }
   
+.radio-container:hover > .radio.color-lighten5,
 input:checked + .radio.color-lighten5,
 .radio.color-lighten5.is-active {
   color: rgba(255, 255, 255, 0.1) !important;
 }
   
+.radio-container:hover > .radio.color-lighten10,
 input:checked + .radio.color-lighten10,
 .radio.color-lighten10.is-active {
   color: rgba(255, 255, 255, 0.25) !important;
 }
   
+.radio-container:hover > .radio.color-lighten25,
 input:checked + .radio.color-lighten25,
 .radio.color-lighten25.is-active {
   color: rgba(255, 255, 255, 0.5) !important;
 }
   
+.radio-container:hover > .radio.color-lighten50,
 input:checked + .radio.color-lighten50,
 .radio.color-lighten50.is-active {
   color: rgba(255, 255, 255, 0.75) !important;
 }
   
+.radio-container:hover > .radio.color-lighten75,
 input:checked + .radio.color-lighten75,
 .radio.color-lighten75.is-active {
   color: #fff !important;
 }
   
+.radio-container:hover > .radio.color-white,
 input:checked + .radio.color-white,
 .radio.color-white.is-active {
   color: gray-faint !important;
