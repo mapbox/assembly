@@ -461,10 +461,6 @@ to the `.select` container. */
  * - Modify `checkbox` with `checkbox--s-label` if the text is small,
  *   for proper vertical alignment.
  *
- * The class `checkbox` and its modifiers can also be used independent
- * of a `<label>` and `<input>` if you are building a custom components.
- * In that case, apply the state class `is-active` when it should be checked.
- *
  * @section Checkboxes
  * @memberof Forms
  */
@@ -514,10 +510,6 @@ to the `.select` container. */
  * - Modify `radio` with `radio--s-label` if the text is small,
  *   for proper vertical alignment.
  *
- * The class `radio` and its modifiers can also be used independent
- * of a `<label>` and `<input>` if you are building a custom components.
- * In that case, apply the state class `is-active` when it should be checked.
- *
  * @section Radio buttons
  * @memberof Forms
  */
@@ -553,10 +545,6 @@ to the `.select` container. */
  * - Modify the active state of the switch handle with `switch--dot-{color}`.
  * - Modify the color of the dot when inactive, the border when inactive and the background in active state with `color--{color}`
  *
- * The class `switch` and its modifiers can also be used independent
- * of a `<label>` and `<input>` if you are building a custom components.
- * In that case, apply the state class `is-active` when it should be checked.
- *
  * @section Switches
  * @memberof Forms
  */
@@ -591,10 +579,6 @@ to the `.select` container. */
  * Variations:
  * - Modify the inactive toggle label text color, and the active toggle background color with `toggle--{color}`.
  * - Modify the border radiuses of toggle groups inside small text with `toggle-group--s` on toggle group element.
- *
- * The Toggle component and its modifiers can be used independent
- * of a `<label>` and `<input>` if you are building a custom components.
- * In that case, apply the state class `is-active` to a `toggle` and it will appear active.
  *
  * @section Toggles
  * @memberof Forms
@@ -642,17 +626,6 @@ to the `.select` container. */
  *     hydra
  *     </div>
  *   </label>
- * </div>
- * <div class='toggle-group'>
- *   <div class='toggle is-active'>
- *   cyrus
- *   </div>
- *   <div class='toggle'>
- *   steve
- *   </div>
- *   <div class='toggle'>
- *   penny
- *   </div>
  * </div>
  */
 
@@ -800,24 +773,20 @@ to the `.select` container. */
 }
 
 /* State management for checkboxes and radio inputs */
-input:checked + .checkbox > .icon,
-.checkbox.is-active > .icon {
+input:checked + .checkbox > .icon {
   display: block;
 }
-input:checked + .radio::before,
-.radio.is-active::before {
+input:checked + .radio::before {
   display: block;
 }
 
 input:checked + .checkbox,
-.checkbox.is-active,
-input:checked + .radio,
-.radio.is-active {
+input:checked + .radio {
   color: var(--blue-dark);
 }
 
 /* state management for switches */
-input:not(:checked) + .switch:not(.is-active):hover::after {
+input:not(:checked) + .switch:hover::after {
   background-color: var(--blue-dark);
 }
 
@@ -825,25 +794,21 @@ input:not(:checked) + .switch:not(.is-active):hover::after {
   color: var(--blue-dark);
 }
 
-.is-active.switch::after,
 input:checked + .switch::after {
   left: calc(50% + 1px);
   background-color: var(--white);
 }
 
-.is-active.switch,
 input:checked + .switch {
   border-color: transparent !important;
   background-color: var(--blue-dark) !important;
 }
 
 /* state management for toggles */
-input:not(:checked) + .toggle:not(.is-active):hover,
-:not(input) + .toggle:not(.is-active):hover {
+input:not(:checked) + .toggle:hover {
   color: var(--blue-dark) !important;
 }
 
-.toggle.is-active,
 input:checked + .toggle {
   background: var(--blue) !important;
   color: var(--white);

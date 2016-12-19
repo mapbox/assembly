@@ -609,458 +609,382 @@ exports[`buildColorVariants defaults 1`] = `
 }
   
 .checkbox-container:hover > .checkbox.color-gray,
-input:checked + .checkbox.color-gray,
-.checkbox.color-gray.is-active {
+input:checked + .checkbox.color-gray {
   color: #333 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-gray-light,
-input:checked + .checkbox.color-gray-light,
-.checkbox.color-gray-light.is-active {
+input:checked + .checkbox.color-gray-light {
   color: #666 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-gray-faint,
-input:checked + .checkbox.color-gray-faint,
-.checkbox.color-gray-faint.is-active {
+input:checked + .checkbox.color-gray-faint {
   color: #ccc !important;
 }
   
 .checkbox-container:hover > .checkbox.color-pink,
-input:checked + .checkbox.color-pink,
-.checkbox.color-pink.is-active {
+input:checked + .checkbox.color-pink {
   color: #C8145A !important;
 }
   
 .checkbox-container:hover > .checkbox.color-pink-light,
-input:checked + .checkbox.color-pink-light,
-.checkbox.color-pink-light.is-active {
+input:checked + .checkbox.color-pink-light {
   color: #ff3c96 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-pink-faint,
-input:checked + .checkbox.color-pink-faint,
-.checkbox.color-pink-faint.is-active {
+input:checked + .checkbox.color-pink-faint {
   color: #FF88C0 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-red,
-input:checked + .checkbox.color-red,
-.checkbox.color-red.is-active {
+input:checked + .checkbox.color-red {
   color: #BE0014 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-red-light,
-input:checked + .checkbox.color-red-light,
-.checkbox.color-red-light.is-active {
+input:checked + .checkbox.color-red-light {
   color: #dc2b28 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-red-faint,
-input:checked + .checkbox.color-red-faint,
-.checkbox.color-red-faint.is-active {
+input:checked + .checkbox.color-red-faint {
   color: #FF8280 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-orange,
-input:checked + .checkbox.color-orange,
-.checkbox.color-orange.is-active {
+input:checked + .checkbox.color-orange {
   color: #DC4600 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-orange-light,
-input:checked + .checkbox.color-orange-light,
-.checkbox.color-orange-light.is-active {
+input:checked + .checkbox.color-orange-light {
   color: #ff6e00 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-orange-faint,
-input:checked + .checkbox.color-orange-faint,
-.checkbox.color-orange-faint.is-active {
+input:checked + .checkbox.color-orange-faint {
   color: #FFA950 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-yellow,
-input:checked + .checkbox.color-yellow,
-.checkbox.color-yellow.is-active {
+input:checked + .checkbox.color-yellow {
   color: #FFBD0A !important;
 }
   
 .checkbox-container:hover > .checkbox.color-yellow-light,
-input:checked + .checkbox.color-yellow-light,
-.checkbox.color-yellow-light.is-active {
+input:checked + .checkbox.color-yellow-light {
   color: #f0dc00 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-yellow-faint,
-input:checked + .checkbox.color-yellow-faint,
-.checkbox.color-yellow-faint.is-active {
+input:checked + .checkbox.color-yellow-faint {
   color: #F0F062 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-green,
-input:checked + .checkbox.color-green,
-.checkbox.color-green.is-active {
+input:checked + .checkbox.color-green {
   color: #007532 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-green-light,
-input:checked + .checkbox.color-green-light,
-.checkbox.color-green-light.is-active {
+input:checked + .checkbox.color-green-light {
   color: #01aa46 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-green-faint,
-input:checked + .checkbox.color-green-faint,
-.checkbox.color-green-faint.is-active {
+input:checked + .checkbox.color-green-faint {
   color: #72C781 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-teal,
-input:checked + .checkbox.color-teal,
-.checkbox.color-teal.is-active {
+input:checked + .checkbox.color-teal {
   color: #00626E !important;
 }
   
 .checkbox-container:hover > .checkbox.color-teal-light,
-input:checked + .checkbox.color-teal-light,
-.checkbox.color-teal-light.is-active {
+input:checked + .checkbox.color-teal-light {
   color: #01b5b4 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-teal-faint,
-input:checked + .checkbox.color-teal-faint,
-.checkbox.color-teal-faint.is-active {
+input:checked + .checkbox.color-teal-faint {
   color: #50D2D2 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-blue,
-input:checked + .checkbox.color-blue,
-.checkbox.color-blue.is-active {
+input:checked + .checkbox.color-blue {
   color: #0014AA !important;
 }
   
 .checkbox-container:hover > .checkbox.color-blue-light,
-input:checked + .checkbox.color-blue-light,
-.checkbox.color-blue-light.is-active {
+input:checked + .checkbox.color-blue-light {
   color: #0065fb !important;
 }
   
 .checkbox-container:hover > .checkbox.color-blue-faint,
-input:checked + .checkbox.color-blue-faint,
-.checkbox.color-blue-faint.is-active {
+input:checked + .checkbox.color-blue-faint {
   color: #00B1FF !important;
 }
   
 .checkbox-container:hover > .checkbox.color-purple,
-input:checked + .checkbox.color-purple,
-.checkbox.color-purple.is-active {
+input:checked + .checkbox.color-purple {
   color: #500078 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-purple-light,
-input:checked + .checkbox.color-purple-light,
-.checkbox.color-purple-light.is-active {
+input:checked + .checkbox.color-purple-light {
   color: #8c50c7 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-purple-faint,
-input:checked + .checkbox.color-purple-faint,
-.checkbox.color-purple-faint.is-active {
+input:checked + .checkbox.color-purple-faint {
   color: #C299E3 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-darken5,
-input:checked + .checkbox.color-darken5,
-.checkbox.color-darken5.is-active {
+input:checked + .checkbox.color-darken5 {
   color: rgba(0, 0, 0, 0.10) !important;
 }
   
 .checkbox-container:hover > .checkbox.color-darken10,
-input:checked + .checkbox.color-darken10,
-.checkbox.color-darken10.is-active {
+input:checked + .checkbox.color-darken10 {
   color: rgba(0, 0, 0, 0.25) !important;
 }
   
 .checkbox-container:hover > .checkbox.color-darken25,
-input:checked + .checkbox.color-darken25,
-.checkbox.color-darken25.is-active {
+input:checked + .checkbox.color-darken25 {
   color: rgba(0, 0, 0, 0.5) !important;
 }
   
 .checkbox-container:hover > .checkbox.color-darken50,
-input:checked + .checkbox.color-darken50,
-.checkbox.color-darken50.is-active {
+input:checked + .checkbox.color-darken50 {
   color: rgba(0, 0, 0, 0.75) !important;
 }
   
 .checkbox-container:hover > .checkbox.color-darken75,
-input:checked + .checkbox.color-darken75,
-.checkbox.color-darken75.is-active {
+input:checked + .checkbox.color-darken75 {
   color: #000 !important;
 }
   
 .checkbox-container:hover > .checkbox.color-lighten5,
-input:checked + .checkbox.color-lighten5,
-.checkbox.color-lighten5.is-active {
+input:checked + .checkbox.color-lighten5 {
   color: rgba(255, 255, 255, 0.1) !important;
 }
   
 .checkbox-container:hover > .checkbox.color-lighten10,
-input:checked + .checkbox.color-lighten10,
-.checkbox.color-lighten10.is-active {
+input:checked + .checkbox.color-lighten10 {
   color: rgba(255, 255, 255, 0.25) !important;
 }
   
 .checkbox-container:hover > .checkbox.color-lighten25,
-input:checked + .checkbox.color-lighten25,
-.checkbox.color-lighten25.is-active {
+input:checked + .checkbox.color-lighten25 {
   color: rgba(255, 255, 255, 0.5) !important;
 }
   
 .checkbox-container:hover > .checkbox.color-lighten50,
-input:checked + .checkbox.color-lighten50,
-.checkbox.color-lighten50.is-active {
+input:checked + .checkbox.color-lighten50 {
   color: rgba(255, 255, 255, 0.75) !important;
 }
   
 .checkbox-container:hover > .checkbox.color-lighten75,
-input:checked + .checkbox.color-lighten75,
-.checkbox.color-lighten75.is-active {
+input:checked + .checkbox.color-lighten75 {
   color: #fff !important;
 }
   
 .checkbox-container:hover > .checkbox.color-white,
-input:checked + .checkbox.color-white,
-.checkbox.color-white.is-active {
+input:checked + .checkbox.color-white {
   color: gray-faint !important;
 }
   
 .radio-container:hover > .radio.color-gray,
-input:checked + .radio.color-gray,
-.radio.color-gray.is-active {
+input:checked + .radio.color-gray {
   color: #333 !important;
 }
   
 .radio-container:hover > .radio.color-gray-light,
-input:checked + .radio.color-gray-light,
-.radio.color-gray-light.is-active {
+input:checked + .radio.color-gray-light {
   color: #666 !important;
 }
   
 .radio-container:hover > .radio.color-gray-faint,
-input:checked + .radio.color-gray-faint,
-.radio.color-gray-faint.is-active {
+input:checked + .radio.color-gray-faint {
   color: #ccc !important;
 }
   
 .radio-container:hover > .radio.color-pink,
-input:checked + .radio.color-pink,
-.radio.color-pink.is-active {
+input:checked + .radio.color-pink {
   color: #C8145A !important;
 }
   
 .radio-container:hover > .radio.color-pink-light,
-input:checked + .radio.color-pink-light,
-.radio.color-pink-light.is-active {
+input:checked + .radio.color-pink-light {
   color: #ff3c96 !important;
 }
   
 .radio-container:hover > .radio.color-pink-faint,
-input:checked + .radio.color-pink-faint,
-.radio.color-pink-faint.is-active {
+input:checked + .radio.color-pink-faint {
   color: #FF88C0 !important;
 }
   
 .radio-container:hover > .radio.color-red,
-input:checked + .radio.color-red,
-.radio.color-red.is-active {
+input:checked + .radio.color-red {
   color: #BE0014 !important;
 }
   
 .radio-container:hover > .radio.color-red-light,
-input:checked + .radio.color-red-light,
-.radio.color-red-light.is-active {
+input:checked + .radio.color-red-light {
   color: #dc2b28 !important;
 }
   
 .radio-container:hover > .radio.color-red-faint,
-input:checked + .radio.color-red-faint,
-.radio.color-red-faint.is-active {
+input:checked + .radio.color-red-faint {
   color: #FF8280 !important;
 }
   
 .radio-container:hover > .radio.color-orange,
-input:checked + .radio.color-orange,
-.radio.color-orange.is-active {
+input:checked + .radio.color-orange {
   color: #DC4600 !important;
 }
   
 .radio-container:hover > .radio.color-orange-light,
-input:checked + .radio.color-orange-light,
-.radio.color-orange-light.is-active {
+input:checked + .radio.color-orange-light {
   color: #ff6e00 !important;
 }
   
 .radio-container:hover > .radio.color-orange-faint,
-input:checked + .radio.color-orange-faint,
-.radio.color-orange-faint.is-active {
+input:checked + .radio.color-orange-faint {
   color: #FFA950 !important;
 }
   
 .radio-container:hover > .radio.color-yellow,
-input:checked + .radio.color-yellow,
-.radio.color-yellow.is-active {
+input:checked + .radio.color-yellow {
   color: #FFBD0A !important;
 }
   
 .radio-container:hover > .radio.color-yellow-light,
-input:checked + .radio.color-yellow-light,
-.radio.color-yellow-light.is-active {
+input:checked + .radio.color-yellow-light {
   color: #f0dc00 !important;
 }
   
 .radio-container:hover > .radio.color-yellow-faint,
-input:checked + .radio.color-yellow-faint,
-.radio.color-yellow-faint.is-active {
+input:checked + .radio.color-yellow-faint {
   color: #F0F062 !important;
 }
   
 .radio-container:hover > .radio.color-green,
-input:checked + .radio.color-green,
-.radio.color-green.is-active {
+input:checked + .radio.color-green {
   color: #007532 !important;
 }
   
 .radio-container:hover > .radio.color-green-light,
-input:checked + .radio.color-green-light,
-.radio.color-green-light.is-active {
+input:checked + .radio.color-green-light {
   color: #01aa46 !important;
 }
   
 .radio-container:hover > .radio.color-green-faint,
-input:checked + .radio.color-green-faint,
-.radio.color-green-faint.is-active {
+input:checked + .radio.color-green-faint {
   color: #72C781 !important;
 }
   
 .radio-container:hover > .radio.color-teal,
-input:checked + .radio.color-teal,
-.radio.color-teal.is-active {
+input:checked + .radio.color-teal {
   color: #00626E !important;
 }
   
 .radio-container:hover > .radio.color-teal-light,
-input:checked + .radio.color-teal-light,
-.radio.color-teal-light.is-active {
+input:checked + .radio.color-teal-light {
   color: #01b5b4 !important;
 }
   
 .radio-container:hover > .radio.color-teal-faint,
-input:checked + .radio.color-teal-faint,
-.radio.color-teal-faint.is-active {
+input:checked + .radio.color-teal-faint {
   color: #50D2D2 !important;
 }
   
 .radio-container:hover > .radio.color-blue,
-input:checked + .radio.color-blue,
-.radio.color-blue.is-active {
+input:checked + .radio.color-blue {
   color: #0014AA !important;
 }
   
 .radio-container:hover > .radio.color-blue-light,
-input:checked + .radio.color-blue-light,
-.radio.color-blue-light.is-active {
+input:checked + .radio.color-blue-light {
   color: #0065fb !important;
 }
   
 .radio-container:hover > .radio.color-blue-faint,
-input:checked + .radio.color-blue-faint,
-.radio.color-blue-faint.is-active {
+input:checked + .radio.color-blue-faint {
   color: #00B1FF !important;
 }
   
 .radio-container:hover > .radio.color-purple,
-input:checked + .radio.color-purple,
-.radio.color-purple.is-active {
+input:checked + .radio.color-purple {
   color: #500078 !important;
 }
   
 .radio-container:hover > .radio.color-purple-light,
-input:checked + .radio.color-purple-light,
-.radio.color-purple-light.is-active {
+input:checked + .radio.color-purple-light {
   color: #8c50c7 !important;
 }
   
 .radio-container:hover > .radio.color-purple-faint,
-input:checked + .radio.color-purple-faint,
-.radio.color-purple-faint.is-active {
+input:checked + .radio.color-purple-faint {
   color: #C299E3 !important;
 }
   
 .radio-container:hover > .radio.color-darken5,
-input:checked + .radio.color-darken5,
-.radio.color-darken5.is-active {
+input:checked + .radio.color-darken5 {
   color: rgba(0, 0, 0, 0.10) !important;
 }
   
 .radio-container:hover > .radio.color-darken10,
-input:checked + .radio.color-darken10,
-.radio.color-darken10.is-active {
+input:checked + .radio.color-darken10 {
   color: rgba(0, 0, 0, 0.25) !important;
 }
   
 .radio-container:hover > .radio.color-darken25,
-input:checked + .radio.color-darken25,
-.radio.color-darken25.is-active {
+input:checked + .radio.color-darken25 {
   color: rgba(0, 0, 0, 0.5) !important;
 }
   
 .radio-container:hover > .radio.color-darken50,
-input:checked + .radio.color-darken50,
-.radio.color-darken50.is-active {
+input:checked + .radio.color-darken50 {
   color: rgba(0, 0, 0, 0.75) !important;
 }
   
 .radio-container:hover > .radio.color-darken75,
-input:checked + .radio.color-darken75,
-.radio.color-darken75.is-active {
+input:checked + .radio.color-darken75 {
   color: #000 !important;
 }
   
 .radio-container:hover > .radio.color-lighten5,
-input:checked + .radio.color-lighten5,
-.radio.color-lighten5.is-active {
+input:checked + .radio.color-lighten5 {
   color: rgba(255, 255, 255, 0.1) !important;
 }
   
 .radio-container:hover > .radio.color-lighten10,
-input:checked + .radio.color-lighten10,
-.radio.color-lighten10.is-active {
+input:checked + .radio.color-lighten10 {
   color: rgba(255, 255, 255, 0.25) !important;
 }
   
 .radio-container:hover > .radio.color-lighten25,
-input:checked + .radio.color-lighten25,
-.radio.color-lighten25.is-active {
+input:checked + .radio.color-lighten25 {
   color: rgba(255, 255, 255, 0.5) !important;
 }
   
 .radio-container:hover > .radio.color-lighten50,
-input:checked + .radio.color-lighten50,
-.radio.color-lighten50.is-active {
+input:checked + .radio.color-lighten50 {
   color: rgba(255, 255, 255, 0.75) !important;
 }
   
 .radio-container:hover > .radio.color-lighten75,
-input:checked + .radio.color-lighten75,
-.radio.color-lighten75.is-active {
+input:checked + .radio.color-lighten75 {
   color: #fff !important;
 }
   
 .radio-container:hover > .radio.color-white,
-input:checked + .radio.color-white,
-.radio.color-white.is-active {
+input:checked + .radio.color-white {
   color: gray-faint !important;
 }
   
@@ -1068,11 +992,8 @@ input:checked + .radio.color-white,
   border-color: #333 !important;
 }
 
-.switch.color-gray.is-active,
 input:checked + .switch.color-gray,
 input:not(:checked) + .switch.color-gray:hover::after,
-:not(input) + .switch.color-gray:not(.is-active):hover::after,
-.switch--dot-gray.is-active::after,
 input:checked + .switch--dot-gray::after {
   background-color: #333 !important;
 }
@@ -1081,11 +1002,8 @@ input:checked + .switch--dot-gray::after {
   border-color: #666 !important;
 }
 
-.switch.color-gray-light.is-active,
 input:checked + .switch.color-gray-light,
 input:not(:checked) + .switch.color-gray-light:hover::after,
-:not(input) + .switch.color-gray-light:not(.is-active):hover::after,
-.switch--dot-gray-light.is-active::after,
 input:checked + .switch--dot-gray-light::after {
   background-color: #666 !important;
 }
@@ -1094,11 +1012,8 @@ input:checked + .switch--dot-gray-light::after {
   border-color: #ccc !important;
 }
 
-.switch.color-gray-faint.is-active,
 input:checked + .switch.color-gray-faint,
 input:not(:checked) + .switch.color-gray-faint:hover::after,
-:not(input) + .switch.color-gray-faint:not(.is-active):hover::after,
-.switch--dot-gray-faint.is-active::after,
 input:checked + .switch--dot-gray-faint::after {
   background-color: #ccc !important;
 }
@@ -1107,11 +1022,8 @@ input:checked + .switch--dot-gray-faint::after {
   border-color: #C8145A !important;
 }
 
-.switch.color-pink.is-active,
 input:checked + .switch.color-pink,
 input:not(:checked) + .switch.color-pink:hover::after,
-:not(input) + .switch.color-pink:not(.is-active):hover::after,
-.switch--dot-pink.is-active::after,
 input:checked + .switch--dot-pink::after {
   background-color: #C8145A !important;
 }
@@ -1120,11 +1032,8 @@ input:checked + .switch--dot-pink::after {
   border-color: #ff3c96 !important;
 }
 
-.switch.color-pink-light.is-active,
 input:checked + .switch.color-pink-light,
 input:not(:checked) + .switch.color-pink-light:hover::after,
-:not(input) + .switch.color-pink-light:not(.is-active):hover::after,
-.switch--dot-pink-light.is-active::after,
 input:checked + .switch--dot-pink-light::after {
   background-color: #ff3c96 !important;
 }
@@ -1133,11 +1042,8 @@ input:checked + .switch--dot-pink-light::after {
   border-color: #FF88C0 !important;
 }
 
-.switch.color-pink-faint.is-active,
 input:checked + .switch.color-pink-faint,
 input:not(:checked) + .switch.color-pink-faint:hover::after,
-:not(input) + .switch.color-pink-faint:not(.is-active):hover::after,
-.switch--dot-pink-faint.is-active::after,
 input:checked + .switch--dot-pink-faint::after {
   background-color: #FF88C0 !important;
 }
@@ -1146,11 +1052,8 @@ input:checked + .switch--dot-pink-faint::after {
   border-color: #BE0014 !important;
 }
 
-.switch.color-red.is-active,
 input:checked + .switch.color-red,
 input:not(:checked) + .switch.color-red:hover::after,
-:not(input) + .switch.color-red:not(.is-active):hover::after,
-.switch--dot-red.is-active::after,
 input:checked + .switch--dot-red::after {
   background-color: #BE0014 !important;
 }
@@ -1159,11 +1062,8 @@ input:checked + .switch--dot-red::after {
   border-color: #dc2b28 !important;
 }
 
-.switch.color-red-light.is-active,
 input:checked + .switch.color-red-light,
 input:not(:checked) + .switch.color-red-light:hover::after,
-:not(input) + .switch.color-red-light:not(.is-active):hover::after,
-.switch--dot-red-light.is-active::after,
 input:checked + .switch--dot-red-light::after {
   background-color: #dc2b28 !important;
 }
@@ -1172,11 +1072,8 @@ input:checked + .switch--dot-red-light::after {
   border-color: #FF8280 !important;
 }
 
-.switch.color-red-faint.is-active,
 input:checked + .switch.color-red-faint,
 input:not(:checked) + .switch.color-red-faint:hover::after,
-:not(input) + .switch.color-red-faint:not(.is-active):hover::after,
-.switch--dot-red-faint.is-active::after,
 input:checked + .switch--dot-red-faint::after {
   background-color: #FF8280 !important;
 }
@@ -1185,11 +1082,8 @@ input:checked + .switch--dot-red-faint::after {
   border-color: #DC4600 !important;
 }
 
-.switch.color-orange.is-active,
 input:checked + .switch.color-orange,
 input:not(:checked) + .switch.color-orange:hover::after,
-:not(input) + .switch.color-orange:not(.is-active):hover::after,
-.switch--dot-orange.is-active::after,
 input:checked + .switch--dot-orange::after {
   background-color: #DC4600 !important;
 }
@@ -1198,11 +1092,8 @@ input:checked + .switch--dot-orange::after {
   border-color: #ff6e00 !important;
 }
 
-.switch.color-orange-light.is-active,
 input:checked + .switch.color-orange-light,
 input:not(:checked) + .switch.color-orange-light:hover::after,
-:not(input) + .switch.color-orange-light:not(.is-active):hover::after,
-.switch--dot-orange-light.is-active::after,
 input:checked + .switch--dot-orange-light::after {
   background-color: #ff6e00 !important;
 }
@@ -1211,11 +1102,8 @@ input:checked + .switch--dot-orange-light::after {
   border-color: #FFA950 !important;
 }
 
-.switch.color-orange-faint.is-active,
 input:checked + .switch.color-orange-faint,
 input:not(:checked) + .switch.color-orange-faint:hover::after,
-:not(input) + .switch.color-orange-faint:not(.is-active):hover::after,
-.switch--dot-orange-faint.is-active::after,
 input:checked + .switch--dot-orange-faint::after {
   background-color: #FFA950 !important;
 }
@@ -1224,11 +1112,8 @@ input:checked + .switch--dot-orange-faint::after {
   border-color: #FFBD0A !important;
 }
 
-.switch.color-yellow.is-active,
 input:checked + .switch.color-yellow,
 input:not(:checked) + .switch.color-yellow:hover::after,
-:not(input) + .switch.color-yellow:not(.is-active):hover::after,
-.switch--dot-yellow.is-active::after,
 input:checked + .switch--dot-yellow::after {
   background-color: #FFBD0A !important;
 }
@@ -1237,11 +1122,8 @@ input:checked + .switch--dot-yellow::after {
   border-color: #f0dc00 !important;
 }
 
-.switch.color-yellow-light.is-active,
 input:checked + .switch.color-yellow-light,
 input:not(:checked) + .switch.color-yellow-light:hover::after,
-:not(input) + .switch.color-yellow-light:not(.is-active):hover::after,
-.switch--dot-yellow-light.is-active::after,
 input:checked + .switch--dot-yellow-light::after {
   background-color: #f0dc00 !important;
 }
@@ -1250,11 +1132,8 @@ input:checked + .switch--dot-yellow-light::after {
   border-color: #F0F062 !important;
 }
 
-.switch.color-yellow-faint.is-active,
 input:checked + .switch.color-yellow-faint,
 input:not(:checked) + .switch.color-yellow-faint:hover::after,
-:not(input) + .switch.color-yellow-faint:not(.is-active):hover::after,
-.switch--dot-yellow-faint.is-active::after,
 input:checked + .switch--dot-yellow-faint::after {
   background-color: #F0F062 !important;
 }
@@ -1263,11 +1142,8 @@ input:checked + .switch--dot-yellow-faint::after {
   border-color: #007532 !important;
 }
 
-.switch.color-green.is-active,
 input:checked + .switch.color-green,
 input:not(:checked) + .switch.color-green:hover::after,
-:not(input) + .switch.color-green:not(.is-active):hover::after,
-.switch--dot-green.is-active::after,
 input:checked + .switch--dot-green::after {
   background-color: #007532 !important;
 }
@@ -1276,11 +1152,8 @@ input:checked + .switch--dot-green::after {
   border-color: #01aa46 !important;
 }
 
-.switch.color-green-light.is-active,
 input:checked + .switch.color-green-light,
 input:not(:checked) + .switch.color-green-light:hover::after,
-:not(input) + .switch.color-green-light:not(.is-active):hover::after,
-.switch--dot-green-light.is-active::after,
 input:checked + .switch--dot-green-light::after {
   background-color: #01aa46 !important;
 }
@@ -1289,11 +1162,8 @@ input:checked + .switch--dot-green-light::after {
   border-color: #72C781 !important;
 }
 
-.switch.color-green-faint.is-active,
 input:checked + .switch.color-green-faint,
 input:not(:checked) + .switch.color-green-faint:hover::after,
-:not(input) + .switch.color-green-faint:not(.is-active):hover::after,
-.switch--dot-green-faint.is-active::after,
 input:checked + .switch--dot-green-faint::after {
   background-color: #72C781 !important;
 }
@@ -1302,11 +1172,8 @@ input:checked + .switch--dot-green-faint::after {
   border-color: #00626E !important;
 }
 
-.switch.color-teal.is-active,
 input:checked + .switch.color-teal,
 input:not(:checked) + .switch.color-teal:hover::after,
-:not(input) + .switch.color-teal:not(.is-active):hover::after,
-.switch--dot-teal.is-active::after,
 input:checked + .switch--dot-teal::after {
   background-color: #00626E !important;
 }
@@ -1315,11 +1182,8 @@ input:checked + .switch--dot-teal::after {
   border-color: #01b5b4 !important;
 }
 
-.switch.color-teal-light.is-active,
 input:checked + .switch.color-teal-light,
 input:not(:checked) + .switch.color-teal-light:hover::after,
-:not(input) + .switch.color-teal-light:not(.is-active):hover::after,
-.switch--dot-teal-light.is-active::after,
 input:checked + .switch--dot-teal-light::after {
   background-color: #01b5b4 !important;
 }
@@ -1328,11 +1192,8 @@ input:checked + .switch--dot-teal-light::after {
   border-color: #50D2D2 !important;
 }
 
-.switch.color-teal-faint.is-active,
 input:checked + .switch.color-teal-faint,
 input:not(:checked) + .switch.color-teal-faint:hover::after,
-:not(input) + .switch.color-teal-faint:not(.is-active):hover::after,
-.switch--dot-teal-faint.is-active::after,
 input:checked + .switch--dot-teal-faint::after {
   background-color: #50D2D2 !important;
 }
@@ -1341,11 +1202,8 @@ input:checked + .switch--dot-teal-faint::after {
   border-color: #0014AA !important;
 }
 
-.switch.color-blue.is-active,
 input:checked + .switch.color-blue,
 input:not(:checked) + .switch.color-blue:hover::after,
-:not(input) + .switch.color-blue:not(.is-active):hover::after,
-.switch--dot-blue.is-active::after,
 input:checked + .switch--dot-blue::after {
   background-color: #0014AA !important;
 }
@@ -1354,11 +1212,8 @@ input:checked + .switch--dot-blue::after {
   border-color: #0065fb !important;
 }
 
-.switch.color-blue-light.is-active,
 input:checked + .switch.color-blue-light,
 input:not(:checked) + .switch.color-blue-light:hover::after,
-:not(input) + .switch.color-blue-light:not(.is-active):hover::after,
-.switch--dot-blue-light.is-active::after,
 input:checked + .switch--dot-blue-light::after {
   background-color: #0065fb !important;
 }
@@ -1367,11 +1222,8 @@ input:checked + .switch--dot-blue-light::after {
   border-color: #00B1FF !important;
 }
 
-.switch.color-blue-faint.is-active,
 input:checked + .switch.color-blue-faint,
 input:not(:checked) + .switch.color-blue-faint:hover::after,
-:not(input) + .switch.color-blue-faint:not(.is-active):hover::after,
-.switch--dot-blue-faint.is-active::after,
 input:checked + .switch--dot-blue-faint::after {
   background-color: #00B1FF !important;
 }
@@ -1380,11 +1232,8 @@ input:checked + .switch--dot-blue-faint::after {
   border-color: #500078 !important;
 }
 
-.switch.color-purple.is-active,
 input:checked + .switch.color-purple,
 input:not(:checked) + .switch.color-purple:hover::after,
-:not(input) + .switch.color-purple:not(.is-active):hover::after,
-.switch--dot-purple.is-active::after,
 input:checked + .switch--dot-purple::after {
   background-color: #500078 !important;
 }
@@ -1393,11 +1242,8 @@ input:checked + .switch--dot-purple::after {
   border-color: #8c50c7 !important;
 }
 
-.switch.color-purple-light.is-active,
 input:checked + .switch.color-purple-light,
 input:not(:checked) + .switch.color-purple-light:hover::after,
-:not(input) + .switch.color-purple-light:not(.is-active):hover::after,
-.switch--dot-purple-light.is-active::after,
 input:checked + .switch--dot-purple-light::after {
   background-color: #8c50c7 !important;
 }
@@ -1406,11 +1252,8 @@ input:checked + .switch--dot-purple-light::after {
   border-color: #C299E3 !important;
 }
 
-.switch.color-purple-faint.is-active,
 input:checked + .switch.color-purple-faint,
 input:not(:checked) + .switch.color-purple-faint:hover::after,
-:not(input) + .switch.color-purple-faint:not(.is-active):hover::after,
-.switch--dot-purple-faint.is-active::after,
 input:checked + .switch--dot-purple-faint::after {
   background-color: #C299E3 !important;
 }
@@ -1419,11 +1262,8 @@ input:checked + .switch--dot-purple-faint::after {
   border-color: rgba(0, 0, 0, 0.10) !important;
 }
 
-.switch.color-darken5.is-active,
 input:checked + .switch.color-darken5,
 input:not(:checked) + .switch.color-darken5:hover::after,
-:not(input) + .switch.color-darken5:not(.is-active):hover::after,
-.switch--dot-darken5.is-active::after,
 input:checked + .switch--dot-darken5::after {
   background-color: rgba(0, 0, 0, 0.10) !important;
 }
@@ -1432,11 +1272,8 @@ input:checked + .switch--dot-darken5::after {
   border-color: rgba(0, 0, 0, 0.25) !important;
 }
 
-.switch.color-darken10.is-active,
 input:checked + .switch.color-darken10,
 input:not(:checked) + .switch.color-darken10:hover::after,
-:not(input) + .switch.color-darken10:not(.is-active):hover::after,
-.switch--dot-darken10.is-active::after,
 input:checked + .switch--dot-darken10::after {
   background-color: rgba(0, 0, 0, 0.25) !important;
 }
@@ -1445,11 +1282,8 @@ input:checked + .switch--dot-darken10::after {
   border-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.switch.color-darken25.is-active,
 input:checked + .switch.color-darken25,
 input:not(:checked) + .switch.color-darken25:hover::after,
-:not(input) + .switch.color-darken25:not(.is-active):hover::after,
-.switch--dot-darken25.is-active::after,
 input:checked + .switch--dot-darken25::after {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
@@ -1458,11 +1292,8 @@ input:checked + .switch--dot-darken25::after {
   border-color: rgba(0, 0, 0, 0.75) !important;
 }
 
-.switch.color-darken50.is-active,
 input:checked + .switch.color-darken50,
 input:not(:checked) + .switch.color-darken50:hover::after,
-:not(input) + .switch.color-darken50:not(.is-active):hover::after,
-.switch--dot-darken50.is-active::after,
 input:checked + .switch--dot-darken50::after {
   background-color: rgba(0, 0, 0, 0.75) !important;
 }
@@ -1471,11 +1302,8 @@ input:checked + .switch--dot-darken50::after {
   border-color: #000 !important;
 }
 
-.switch.color-darken75.is-active,
 input:checked + .switch.color-darken75,
 input:not(:checked) + .switch.color-darken75:hover::after,
-:not(input) + .switch.color-darken75:not(.is-active):hover::after,
-.switch--dot-darken75.is-active::after,
 input:checked + .switch--dot-darken75::after {
   background-color: #000 !important;
 }
@@ -1484,11 +1312,8 @@ input:checked + .switch--dot-darken75::after {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.switch.color-lighten5.is-active,
 input:checked + .switch.color-lighten5,
 input:not(:checked) + .switch.color-lighten5:hover::after,
-:not(input) + .switch.color-lighten5:not(.is-active):hover::after,
-.switch--dot-lighten5.is-active::after,
 input:checked + .switch--dot-lighten5::after {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
@@ -1497,11 +1322,8 @@ input:checked + .switch--dot-lighten5::after {
   border-color: rgba(255, 255, 255, 0.25) !important;
 }
 
-.switch.color-lighten10.is-active,
 input:checked + .switch.color-lighten10,
 input:not(:checked) + .switch.color-lighten10:hover::after,
-:not(input) + .switch.color-lighten10:not(.is-active):hover::after,
-.switch--dot-lighten10.is-active::after,
 input:checked + .switch--dot-lighten10::after {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }
@@ -1510,11 +1332,8 @@ input:checked + .switch--dot-lighten10::after {
   border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.switch.color-lighten25.is-active,
 input:checked + .switch.color-lighten25,
 input:not(:checked) + .switch.color-lighten25:hover::after,
-:not(input) + .switch.color-lighten25:not(.is-active):hover::after,
-.switch--dot-lighten25.is-active::after,
 input:checked + .switch--dot-lighten25::after {
   background-color: rgba(255, 255, 255, 0.5) !important;
 }
@@ -1523,11 +1342,8 @@ input:checked + .switch--dot-lighten25::after {
   border-color: rgba(255, 255, 255, 0.75) !important;
 }
 
-.switch.color-lighten50.is-active,
 input:checked + .switch.color-lighten50,
 input:not(:checked) + .switch.color-lighten50:hover::after,
-:not(input) + .switch.color-lighten50:not(.is-active):hover::after,
-.switch--dot-lighten50.is-active::after,
 input:checked + .switch--dot-lighten50::after {
   background-color: rgba(255, 255, 255, 0.75) !important;
 }
@@ -1536,11 +1352,8 @@ input:checked + .switch--dot-lighten50::after {
   border-color: #fff !important;
 }
 
-.switch.color-lighten75.is-active,
 input:checked + .switch.color-lighten75,
 input:not(:checked) + .switch.color-lighten75:hover::after,
-:not(input) + .switch.color-lighten75:not(.is-active):hover::after,
-.switch--dot-lighten75.is-active::after,
 input:checked + .switch--dot-lighten75::after {
   background-color: #fff !important;
 }
@@ -1549,11 +1362,8 @@ input:checked + .switch--dot-lighten75::after {
   border-color: gray-faint !important;
 }
 
-.switch.color-white.is-active,
 input:checked + .switch.color-white,
 input:not(:checked) + .switch.color-white:hover::after,
-:not(input) + .switch.color-white:not(.is-active):hover::after,
-.switch--dot-white.is-active::after,
 input:checked + .switch--dot-white::after {
   background-color: gray-faint !important;
 }
@@ -1562,12 +1372,10 @@ input:checked + .switch--dot-white::after {
   color: #666 !important;
 }
 
-input:not(:checked) + .toggle.toggle--gray:not(.is-active):hover,
-:not(input) + .toggle.toggle--gray:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--gray:hover {
   color: #333 !important;
 }
 
-.toggle.toggle--gray.is-active,
 input:checked + .toggle.toggle--gray {
   background: #666 !important;
   color: #fff !important;
@@ -1577,12 +1385,10 @@ input:checked + .toggle.toggle--gray {
   color: #ccc !important;
 }
 
-input:not(:checked) + .toggle.toggle--gray-light:not(.is-active):hover,
-:not(input) + .toggle.toggle--gray-light:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--gray-light:hover {
   color: #666 !important;
 }
 
-.toggle.toggle--gray-light.is-active,
 input:checked + .toggle.toggle--gray-light {
   background: #ccc !important;
   color: #fff !important;
@@ -1592,12 +1398,10 @@ input:checked + .toggle.toggle--gray-light {
   color: #f0f0f0 !important;
 }
 
-input:not(:checked) + .toggle.toggle--gray-faint:not(.is-active):hover,
-:not(input) + .toggle.toggle--gray-faint:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--gray-faint:hover {
   color: #ccc !important;
 }
 
-.toggle.toggle--gray-faint.is-active,
 input:checked + .toggle.toggle--gray-faint {
   background: #f0f0f0 !important;
   color: #fff !important;
@@ -1607,12 +1411,10 @@ input:checked + .toggle.toggle--gray-faint {
   color: #ff3c96 !important;
 }
 
-input:not(:checked) + .toggle.toggle--pink:not(.is-active):hover,
-:not(input) + .toggle.toggle--pink:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--pink:hover {
   color: #C8145A !important;
 }
 
-.toggle.toggle--pink.is-active,
 input:checked + .toggle.toggle--pink {
   background: #ff3c96 !important;
   color: #fff !important;
@@ -1622,12 +1424,10 @@ input:checked + .toggle.toggle--pink {
   color: #FF88C0 !important;
 }
 
-input:not(:checked) + .toggle.toggle--pink-light:not(.is-active):hover,
-:not(input) + .toggle.toggle--pink-light:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--pink-light:hover {
   color: #ff3c96 !important;
 }
 
-.toggle.toggle--pink-light.is-active,
 input:checked + .toggle.toggle--pink-light {
   background: #FF88C0 !important;
   color: #fff !important;
@@ -1637,12 +1437,10 @@ input:checked + .toggle.toggle--pink-light {
   color: #ffdbed !important;
 }
 
-input:not(:checked) + .toggle.toggle--pink-faint:not(.is-active):hover,
-:not(input) + .toggle.toggle--pink-faint:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--pink-faint:hover {
   color: #FF88C0 !important;
 }
 
-.toggle.toggle--pink-faint.is-active,
 input:checked + .toggle.toggle--pink-faint {
   background: #ffdbed !important;
   color: #fff !important;
@@ -1652,12 +1450,10 @@ input:checked + .toggle.toggle--pink-faint {
   color: #dc2b28 !important;
 }
 
-input:not(:checked) + .toggle.toggle--red:not(.is-active):hover,
-:not(input) + .toggle.toggle--red:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--red:hover {
   color: #BE0014 !important;
 }
 
-.toggle.toggle--red.is-active,
 input:checked + .toggle.toggle--red {
   background: #dc2b28 !important;
   color: #fff !important;
@@ -1667,12 +1463,10 @@ input:checked + .toggle.toggle--red {
   color: #FF8280 !important;
 }
 
-input:not(:checked) + .toggle.toggle--red-light:not(.is-active):hover,
-:not(input) + .toggle.toggle--red-light:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--red-light:hover {
   color: #dc2b28 !important;
 }
 
-.toggle.toggle--red-light.is-active,
 input:checked + .toggle.toggle--red-light {
   background: #FF8280 !important;
   color: #fff !important;
@@ -1682,12 +1476,10 @@ input:checked + .toggle.toggle--red-light {
   color: #ffdad9 !important;
 }
 
-input:not(:checked) + .toggle.toggle--red-faint:not(.is-active):hover,
-:not(input) + .toggle.toggle--red-faint:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--red-faint:hover {
   color: #FF8280 !important;
 }
 
-.toggle.toggle--red-faint.is-active,
 input:checked + .toggle.toggle--red-faint {
   background: #ffdad9 !important;
   color: #fff !important;
@@ -1697,12 +1489,10 @@ input:checked + .toggle.toggle--red-faint {
   color: #ff6e00 !important;
 }
 
-input:not(:checked) + .toggle.toggle--orange:not(.is-active):hover,
-:not(input) + .toggle.toggle--orange:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--orange:hover {
   color: #DC4600 !important;
 }
 
-.toggle.toggle--orange.is-active,
 input:checked + .toggle.toggle--orange {
   background: #ff6e00 !important;
   color: #fff !important;
@@ -1712,12 +1502,10 @@ input:checked + .toggle.toggle--orange {
   color: #FFA950 !important;
 }
 
-input:not(:checked) + .toggle.toggle--orange-light:not(.is-active):hover,
-:not(input) + .toggle.toggle--orange-light:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--orange-light:hover {
   color: #ff6e00 !important;
 }
 
-.toggle.toggle--orange-light.is-active,
 input:checked + .toggle.toggle--orange-light {
   background: #FFA950 !important;
   color: #fff !important;
@@ -1727,12 +1515,10 @@ input:checked + .toggle.toggle--orange-light {
   color: #FFE5CB !important;
 }
 
-input:not(:checked) + .toggle.toggle--orange-faint:not(.is-active):hover,
-:not(input) + .toggle.toggle--orange-faint:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--orange-faint:hover {
   color: #FFA950 !important;
 }
 
-.toggle.toggle--orange-faint.is-active,
 input:checked + .toggle.toggle--orange-faint {
   background: #FFE5CB !important;
   color: #fff !important;
@@ -1742,12 +1528,10 @@ input:checked + .toggle.toggle--orange-faint {
   color: #f0dc00 !important;
 }
 
-input:not(:checked) + .toggle.toggle--yellow:not(.is-active):hover,
-:not(input) + .toggle.toggle--yellow:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--yellow:hover {
   color: #FFBD0A !important;
 }
 
-.toggle.toggle--yellow.is-active,
 input:checked + .toggle.toggle--yellow {
   background: #f0dc00 !important;
   color: #fff !important;
@@ -1757,12 +1541,10 @@ input:checked + .toggle.toggle--yellow {
   color: #F0F062 !important;
 }
 
-input:not(:checked) + .toggle.toggle--yellow-light:not(.is-active):hover,
-:not(input) + .toggle.toggle--yellow-light:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--yellow-light:hover {
   color: #f0dc00 !important;
 }
 
-.toggle.toggle--yellow-light.is-active,
 input:checked + .toggle.toggle--yellow-light {
   background: #F0F062 !important;
   color: #fff !important;
@@ -1772,12 +1554,10 @@ input:checked + .toggle.toggle--yellow-light {
   color: #fafbd1 !important;
 }
 
-input:not(:checked) + .toggle.toggle--yellow-faint:not(.is-active):hover,
-:not(input) + .toggle.toggle--yellow-faint:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--yellow-faint:hover {
   color: #F0F062 !important;
 }
 
-.toggle.toggle--yellow-faint.is-active,
 input:checked + .toggle.toggle--yellow-faint {
   background: #fafbd1 !important;
   color: #fff !important;
@@ -1787,12 +1567,10 @@ input:checked + .toggle.toggle--yellow-faint {
   color: #01aa46 !important;
 }
 
-input:not(:checked) + .toggle.toggle--green:not(.is-active):hover,
-:not(input) + .toggle.toggle--green:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--green:hover {
   color: #007532 !important;
 }
 
-.toggle.toggle--green.is-active,
 input:checked + .toggle.toggle--green {
   background: #01aa46 !important;
   color: #fff !important;
@@ -1802,12 +1580,10 @@ input:checked + .toggle.toggle--green {
   color: #72C781 !important;
 }
 
-input:not(:checked) + .toggle.toggle--green-light:not(.is-active):hover,
-:not(input) + .toggle.toggle--green-light:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--green-light:hover {
   color: #01aa46 !important;
 }
 
-.toggle.toggle--green-light.is-active,
 input:checked + .toggle.toggle--green-light {
   background: #72C781 !important;
   color: #fff !important;
@@ -1817,12 +1593,10 @@ input:checked + .toggle.toggle--green-light {
   color: #d4edda !important;
 }
 
-input:not(:checked) + .toggle.toggle--green-faint:not(.is-active):hover,
-:not(input) + .toggle.toggle--green-faint:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--green-faint:hover {
   color: #72C781 !important;
 }
 
-.toggle.toggle--green-faint.is-active,
 input:checked + .toggle.toggle--green-faint {
   background: #d4edda !important;
   color: #fff !important;
@@ -1832,12 +1606,10 @@ input:checked + .toggle.toggle--green-faint {
   color: #01b5b4 !important;
 }
 
-input:not(:checked) + .toggle.toggle--teal:not(.is-active):hover,
-:not(input) + .toggle.toggle--teal:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--teal:hover {
   color: #00626E !important;
 }
 
-.toggle.toggle--teal.is-active,
 input:checked + .toggle.toggle--teal {
   background: #01b5b4 !important;
   color: #fff !important;
@@ -1847,12 +1619,10 @@ input:checked + .toggle.toggle--teal {
   color: #50D2D2 !important;
 }
 
-input:not(:checked) + .toggle.toggle--teal-light:not(.is-active):hover,
-:not(input) + .toggle.toggle--teal-light:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--teal-light:hover {
   color: #01b5b4 !important;
 }
 
-.toggle.toggle--teal-light.is-active,
 input:checked + .toggle.toggle--teal-light {
   background: #50D2D2 !important;
   color: #fff !important;
@@ -1862,12 +1632,10 @@ input:checked + .toggle.toggle--teal-light {
   color: #cbf2f1 !important;
 }
 
-input:not(:checked) + .toggle.toggle--teal-faint:not(.is-active):hover,
-:not(input) + .toggle.toggle--teal-faint:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--teal-faint:hover {
   color: #50D2D2 !important;
 }
 
-.toggle.toggle--teal-faint.is-active,
 input:checked + .toggle.toggle--teal-faint {
   background: #cbf2f1 !important;
   color: #fff !important;
@@ -1877,12 +1645,10 @@ input:checked + .toggle.toggle--teal-faint {
   color: #0065fb !important;
 }
 
-input:not(:checked) + .toggle.toggle--blue:not(.is-active):hover,
-:not(input) + .toggle.toggle--blue:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--blue:hover {
   color: #0014AA !important;
 }
 
-.toggle.toggle--blue.is-active,
 input:checked + .toggle.toggle--blue {
   background: #0065fb !important;
   color: #fff !important;
@@ -1892,12 +1658,10 @@ input:checked + .toggle.toggle--blue {
   color: #00B1FF !important;
 }
 
-input:not(:checked) + .toggle.toggle--blue-light:not(.is-active):hover,
-:not(input) + .toggle.toggle--blue-light:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--blue-light:hover {
   color: #0065fb !important;
 }
 
-.toggle.toggle--blue-light.is-active,
 input:checked + .toggle.toggle--blue-light {
   background: #00B1FF !important;
   color: #fff !important;
@@ -1907,12 +1671,10 @@ input:checked + .toggle.toggle--blue-light {
   color: #bae8ff !important;
 }
 
-input:not(:checked) + .toggle.toggle--blue-faint:not(.is-active):hover,
-:not(input) + .toggle.toggle--blue-faint:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--blue-faint:hover {
   color: #00B1FF !important;
 }
 
-.toggle.toggle--blue-faint.is-active,
 input:checked + .toggle.toggle--blue-faint {
   background: #bae8ff !important;
   color: #fff !important;
@@ -1922,12 +1684,10 @@ input:checked + .toggle.toggle--blue-faint {
   color: #8c50c7 !important;
 }
 
-input:not(:checked) + .toggle.toggle--purple:not(.is-active):hover,
-:not(input) + .toggle.toggle--purple:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--purple:hover {
   color: #500078 !important;
 }
 
-.toggle.toggle--purple.is-active,
 input:checked + .toggle.toggle--purple {
   background: #8c50c7 !important;
   color: #fff !important;
@@ -1937,12 +1697,10 @@ input:checked + .toggle.toggle--purple {
   color: #C299E3 !important;
 }
 
-input:not(:checked) + .toggle.toggle--purple-light:not(.is-active):hover,
-:not(input) + .toggle.toggle--purple-light:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--purple-light:hover {
   color: #8c50c7 !important;
 }
 
-.toggle.toggle--purple-light.is-active,
 input:checked + .toggle.toggle--purple-light {
   background: #C299E3 !important;
   color: #fff !important;
@@ -1952,12 +1710,10 @@ input:checked + .toggle.toggle--purple-light {
   color: #ede1f6 !important;
 }
 
-input:not(:checked) + .toggle.toggle--purple-faint:not(.is-active):hover,
-:not(input) + .toggle.toggle--purple-faint:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--purple-faint:hover {
   color: #C299E3 !important;
 }
 
-.toggle.toggle--purple-faint.is-active,
 input:checked + .toggle.toggle--purple-faint {
   background: #ede1f6 !important;
   color: #fff !important;
@@ -1967,12 +1723,10 @@ input:checked + .toggle.toggle--purple-faint {
   color: rgba(0, 0, 0, 0.05) !important;
 }
 
-input:not(:checked) + .toggle.toggle--darken5:not(.is-active):hover,
-:not(input) + .toggle.toggle--darken5:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--darken5:hover {
   color: rgba(0, 0, 0, 0.10) !important;
 }
 
-.toggle.toggle--darken5.is-active,
 input:checked + .toggle.toggle--darken5 {
   background: rgba(0, 0, 0, 0.05) !important;
   color: #fff !important;
@@ -1982,12 +1736,10 @@ input:checked + .toggle.toggle--darken5 {
   color: rgba(0, 0, 0, 0.10) !important;
 }
 
-input:not(:checked) + .toggle.toggle--darken10:not(.is-active):hover,
-:not(input) + .toggle.toggle--darken10:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--darken10:hover {
   color: rgba(0, 0, 0, 0.25) !important;
 }
 
-.toggle.toggle--darken10.is-active,
 input:checked + .toggle.toggle--darken10 {
   background: rgba(0, 0, 0, 0.10) !important;
   color: #fff !important;
@@ -1997,12 +1749,10 @@ input:checked + .toggle.toggle--darken10 {
   color: rgba(0, 0, 0, 0.25) !important;
 }
 
-input:not(:checked) + .toggle.toggle--darken25:not(.is-active):hover,
-:not(input) + .toggle.toggle--darken25:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--darken25:hover {
   color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.toggle.toggle--darken25.is-active,
 input:checked + .toggle.toggle--darken25 {
   background: rgba(0, 0, 0, 0.25) !important;
   color: #fff !important;
@@ -2012,12 +1762,10 @@ input:checked + .toggle.toggle--darken25 {
   color: rgba(0, 0, 0, 0.5) !important;
 }
 
-input:not(:checked) + .toggle.toggle--darken50:not(.is-active):hover,
-:not(input) + .toggle.toggle--darken50:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--darken50:hover {
   color: rgba(0, 0, 0, 0.75) !important;
 }
 
-.toggle.toggle--darken50.is-active,
 input:checked + .toggle.toggle--darken50 {
   background: rgba(0, 0, 0, 0.5) !important;
   color: #fff !important;
@@ -2027,12 +1775,10 @@ input:checked + .toggle.toggle--darken50 {
   color: rgba(0, 0, 0, 0.75) !important;
 }
 
-input:not(:checked) + .toggle.toggle--darken75:not(.is-active):hover,
-:not(input) + .toggle.toggle--darken75:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--darken75:hover {
   color: #000 !important;
 }
 
-.toggle.toggle--darken75.is-active,
 input:checked + .toggle.toggle--darken75 {
   background: rgba(0, 0, 0, 0.75) !important;
   color: #fff !important;
@@ -2042,12 +1788,10 @@ input:checked + .toggle.toggle--darken75 {
   color: rgba(255, 255, 255, 0.05) !important;
 }
 
-input:not(:checked) + .toggle.toggle--lighten5:not(.is-active):hover,
-:not(input) + .toggle.toggle--lighten5:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--lighten5:hover {
   color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.toggle.toggle--lighten5.is-active,
 input:checked + .toggle.toggle--lighten5 {
   background: rgba(255, 255, 255, 0.05) !important;
   color: #fff !important;
@@ -2057,12 +1801,10 @@ input:checked + .toggle.toggle--lighten5 {
   color: rgba(255, 255, 255, 0.1) !important;
 }
 
-input:not(:checked) + .toggle.toggle--lighten10:not(.is-active):hover,
-:not(input) + .toggle.toggle--lighten10:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--lighten10:hover {
   color: rgba(255, 255, 255, 0.25) !important;
 }
 
-.toggle.toggle--lighten10.is-active,
 input:checked + .toggle.toggle--lighten10 {
   background: rgba(255, 255, 255, 0.1) !important;
   color: #fff !important;
@@ -2072,12 +1814,10 @@ input:checked + .toggle.toggle--lighten10 {
   color: rgba(255, 255, 255, 0.25) !important;
 }
 
-input:not(:checked) + .toggle.toggle--lighten25:not(.is-active):hover,
-:not(input) + .toggle.toggle--lighten25:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--lighten25:hover {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.toggle.toggle--lighten25.is-active,
 input:checked + .toggle.toggle--lighten25 {
   background: rgba(255, 255, 255, 0.25) !important;
   color: #fff !important;
@@ -2087,12 +1827,10 @@ input:checked + .toggle.toggle--lighten25 {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-input:not(:checked) + .toggle.toggle--lighten50:not(.is-active):hover,
-:not(input) + .toggle.toggle--lighten50:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--lighten50:hover {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
-.toggle.toggle--lighten50.is-active,
 input:checked + .toggle.toggle--lighten50 {
   background: rgba(255, 255, 255, 0.5) !important;
   color: #fff !important;
@@ -2102,12 +1840,10 @@ input:checked + .toggle.toggle--lighten50 {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
-input:not(:checked) + .toggle.toggle--lighten75:not(.is-active):hover,
-:not(input) + .toggle.toggle--lighten75:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--lighten75:hover {
   color: #fff !important;
 }
 
-.toggle.toggle--lighten75.is-active,
 input:checked + .toggle.toggle--lighten75 {
   background: rgba(255, 255, 255, 0.75) !important;
   color: #fff !important;
@@ -2117,204 +1853,164 @@ input:checked + .toggle.toggle--lighten75 {
   color: #fff !important;
 }
 
-input:not(:checked) + .toggle.toggle--white:not(.is-active):hover,
-:not(input) + .toggle.toggle--white:not(.is-active):hover {
+input:not(:checked) + .toggle.toggle--white:hover {
   color: gray-faint !important;
 }
 
-.toggle.toggle--white.is-active,
 input:checked + .toggle.toggle--white {
   background: #fff !important;
   color: #fff !important;
 }
   
-.txt-link.color-gray:hover,
-.txt-link.color-gray.is-active {
+.txt-link.color-gray:hover {
   color: #333 !important;
 }
   
-.txt-link.color-gray-light:hover,
-.txt-link.color-gray-light.is-active {
+.txt-link.color-gray-light:hover {
   color: #666 !important;
 }
   
-.txt-link.color-gray-faint:hover,
-.txt-link.color-gray-faint.is-active {
+.txt-link.color-gray-faint:hover {
   color: #ccc !important;
 }
   
-.txt-link.color-pink:hover,
-.txt-link.color-pink.is-active {
+.txt-link.color-pink:hover {
   color: #C8145A !important;
 }
   
-.txt-link.color-pink-light:hover,
-.txt-link.color-pink-light.is-active {
+.txt-link.color-pink-light:hover {
   color: #ff3c96 !important;
 }
   
-.txt-link.color-pink-faint:hover,
-.txt-link.color-pink-faint.is-active {
+.txt-link.color-pink-faint:hover {
   color: #FF88C0 !important;
 }
   
-.txt-link.color-red:hover,
-.txt-link.color-red.is-active {
+.txt-link.color-red:hover {
   color: #BE0014 !important;
 }
   
-.txt-link.color-red-light:hover,
-.txt-link.color-red-light.is-active {
+.txt-link.color-red-light:hover {
   color: #dc2b28 !important;
 }
   
-.txt-link.color-red-faint:hover,
-.txt-link.color-red-faint.is-active {
+.txt-link.color-red-faint:hover {
   color: #FF8280 !important;
 }
   
-.txt-link.color-orange:hover,
-.txt-link.color-orange.is-active {
+.txt-link.color-orange:hover {
   color: #DC4600 !important;
 }
   
-.txt-link.color-orange-light:hover,
-.txt-link.color-orange-light.is-active {
+.txt-link.color-orange-light:hover {
   color: #ff6e00 !important;
 }
   
-.txt-link.color-orange-faint:hover,
-.txt-link.color-orange-faint.is-active {
+.txt-link.color-orange-faint:hover {
   color: #FFA950 !important;
 }
   
-.txt-link.color-yellow:hover,
-.txt-link.color-yellow.is-active {
+.txt-link.color-yellow:hover {
   color: #FFBD0A !important;
 }
   
-.txt-link.color-yellow-light:hover,
-.txt-link.color-yellow-light.is-active {
+.txt-link.color-yellow-light:hover {
   color: #f0dc00 !important;
 }
   
-.txt-link.color-yellow-faint:hover,
-.txt-link.color-yellow-faint.is-active {
+.txt-link.color-yellow-faint:hover {
   color: #F0F062 !important;
 }
   
-.txt-link.color-green:hover,
-.txt-link.color-green.is-active {
+.txt-link.color-green:hover {
   color: #007532 !important;
 }
   
-.txt-link.color-green-light:hover,
-.txt-link.color-green-light.is-active {
+.txt-link.color-green-light:hover {
   color: #01aa46 !important;
 }
   
-.txt-link.color-green-faint:hover,
-.txt-link.color-green-faint.is-active {
+.txt-link.color-green-faint:hover {
   color: #72C781 !important;
 }
   
-.txt-link.color-teal:hover,
-.txt-link.color-teal.is-active {
+.txt-link.color-teal:hover {
   color: #00626E !important;
 }
   
-.txt-link.color-teal-light:hover,
-.txt-link.color-teal-light.is-active {
+.txt-link.color-teal-light:hover {
   color: #01b5b4 !important;
 }
   
-.txt-link.color-teal-faint:hover,
-.txt-link.color-teal-faint.is-active {
+.txt-link.color-teal-faint:hover {
   color: #50D2D2 !important;
 }
   
-.txt-link.color-blue:hover,
-.txt-link.color-blue.is-active {
+.txt-link.color-blue:hover {
   color: #0014AA !important;
 }
   
-.txt-link.color-blue-light:hover,
-.txt-link.color-blue-light.is-active {
+.txt-link.color-blue-light:hover {
   color: #0065fb !important;
 }
   
-.txt-link.color-blue-faint:hover,
-.txt-link.color-blue-faint.is-active {
+.txt-link.color-blue-faint:hover {
   color: #00B1FF !important;
 }
   
-.txt-link.color-purple:hover,
-.txt-link.color-purple.is-active {
+.txt-link.color-purple:hover {
   color: #500078 !important;
 }
   
-.txt-link.color-purple-light:hover,
-.txt-link.color-purple-light.is-active {
+.txt-link.color-purple-light:hover {
   color: #8c50c7 !important;
 }
   
-.txt-link.color-purple-faint:hover,
-.txt-link.color-purple-faint.is-active {
+.txt-link.color-purple-faint:hover {
   color: #C299E3 !important;
 }
   
-.txt-link.color-darken5:hover,
-.txt-link.color-darken5.is-active {
+.txt-link.color-darken5:hover {
   color: rgba(0, 0, 0, 0.10) !important;
 }
   
-.txt-link.color-darken10:hover,
-.txt-link.color-darken10.is-active {
+.txt-link.color-darken10:hover {
   color: rgba(0, 0, 0, 0.25) !important;
 }
   
-.txt-link.color-darken25:hover,
-.txt-link.color-darken25.is-active {
+.txt-link.color-darken25:hover {
   color: rgba(0, 0, 0, 0.5) !important;
 }
   
-.txt-link.color-darken50:hover,
-.txt-link.color-darken50.is-active {
+.txt-link.color-darken50:hover {
   color: rgba(0, 0, 0, 0.75) !important;
 }
   
-.txt-link.color-darken75:hover,
-.txt-link.color-darken75.is-active {
+.txt-link.color-darken75:hover {
   color: #000 !important;
 }
   
-.txt-link.color-lighten5:hover,
-.txt-link.color-lighten5.is-active {
+.txt-link.color-lighten5:hover {
   color: rgba(255, 255, 255, 0.1) !important;
 }
   
-.txt-link.color-lighten10:hover,
-.txt-link.color-lighten10.is-active {
+.txt-link.color-lighten10:hover {
   color: rgba(255, 255, 255, 0.25) !important;
 }
   
-.txt-link.color-lighten25:hover,
-.txt-link.color-lighten25.is-active {
+.txt-link.color-lighten25:hover {
   color: rgba(255, 255, 255, 0.5) !important;
 }
   
-.txt-link.color-lighten50:hover,
-.txt-link.color-lighten50.is-active {
+.txt-link.color-lighten50:hover {
   color: rgba(255, 255, 255, 0.75) !important;
 }
   
-.txt-link.color-lighten75:hover,
-.txt-link.color-lighten75.is-active {
+.txt-link.color-lighten75:hover {
   color: #fff !important;
 }
   
-.txt-link.color-white:hover,
-.txt-link.color-white.is-active {
+.txt-link.color-white:hover {
   color: gray-faint !important;
 }
   
