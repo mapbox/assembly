@@ -1,7 +1,7 @@
 import React from 'react';
-import _ from 'lodash';
 import { Entry } from './entry';
 import { Heading } from './heading';
+import { orderSections } from '../order-sections';
 
 class Documentation extends React.Component {
 
@@ -27,9 +27,7 @@ class Documentation extends React.Component {
             {entry.title}
           </a>);
 
-        const sortedMembers = _.sortBy(entry.members, 'title');
-
-        sortedMembers.forEach((member) => addEntryAndMembers(member, level + 1));
+        entry.members.forEach((member) => addEntryAndMembers(member, level + 1));
       } else {
         entryEls.push(
           <Entry
@@ -41,9 +39,7 @@ class Documentation extends React.Component {
       }
     }
 
-    const sortedEntries = _.sortBy(props.documentationData, 'title');
-
-    sortedEntries.forEach((entry) => addEntryAndMembers(entry, 1));
+    orderSections(props.documentationData).forEach((entry) => addEntryAndMembers(entry, 1));
 
     return (
       <div>

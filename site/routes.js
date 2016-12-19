@@ -10,6 +10,7 @@ const { Examples } = require('./examples');
 const { Debug } = require('./debug');
 const fs = require('fs');
 const path = require('path');
+const { orderSections } = require('./order-sections');
 
 /*
  * To add pages to the site, we pass a routes array with
@@ -86,7 +87,8 @@ function buildRoutes() {
           parent.items.push(memberNavDataItem);
           entry.members.forEach((member) => addEntryToNav(member, memberNavDataItem));
         };
-        documentationData.forEach((entry) => addEntryToNav(entry));
+
+        orderSections(documentationData).forEach((entry) => addEntryToNav(entry));
 
         r.component = (
           <Page navData={navData}>

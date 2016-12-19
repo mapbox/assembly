@@ -10,12 +10,12 @@ class Navigation extends React.Component {
       return items.map((member) => {
         let linkClasses = 'txt-link color-blue block txt-s';
         if (level !== 0) {
-          linkClasses += ` ml${6 * level}`;
+          linkClasses += ` ml${12 * level}`;
         }
         if (member.name === props.navData.active) {
           linkClasses += ' is-active';
         }
-        const nestedMembers = listNestedMembers(member.items, level + 1);
+        const nestedItems = listNestedMembers(member.items, level + 1);
         return (
           <div key={member.name}>
             <a
@@ -24,14 +24,17 @@ class Navigation extends React.Component {
             >
               {member.name}
             </a>
-            {nestedMembers}
+            {nestedItems}
           </div>
         );
       });
     }
 
     const navEls = props.navData.items.map((r) => {
-      const nestedMembers = (r.name !== props.navData.active || r.items === undefined) ? null : (
+      const showNestedItems = r.name !== props.navData.active
+        || r.items === undefined
+        || r.items.length === 0;
+      const nestedItems = (showNestedItems) ? null : (
         <div className='border-l border--2 border--gray-faint mt6 mb6 pl12 txt-s'>
           {listNestedMembers(r.items)}
         </div>
@@ -39,7 +42,7 @@ class Navigation extends React.Component {
       return (
         <div key={r.name}>
           <a className={`block txt-link color-blue ${r.name === props.navData.active && 'is-active'}`} href={`/assembly${r.route}`}>{r.name}</a>
-          {nestedMembers}
+          {nestedItems}
         </div>
       );
     });
