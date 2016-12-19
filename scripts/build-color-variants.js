@@ -62,7 +62,8 @@ const allConfig = [
   'lighten75',
 
   'white',
-  'black'
+  'black',
+  'transparent'
 ];
 
 // const defaultConfig = {
@@ -85,7 +86,8 @@ function isDark(color) {
 }
 
 function getDarkerShade(color) {
-  if (color === 'white') return 'gray-faint';
+  if (color === 'white') return variables['gray-faint'];
+  if (color === 'transparent') return variables['darken5'];
   if (color === 'black') return 'No dark variant for "black"';
 
   const semitransparentMatch = color.match(/(lighten|darken)(\d+$)/);
@@ -261,7 +263,7 @@ variantGenerators.link = function (colors) {
 };
 
 variantGenerators.border = function (colors) {
-  let css = `
+  let css = stripIndent(`
   /**
    * For a colored border, add the modifying class \`.border--color\`
    * where color is a [color](#Colors-&-gradients).
@@ -273,7 +275,7 @@ variantGenerators.border = function (colors) {
    *  <div class='col col--2 p12 mr12 border border--red'>.border--red</div>
    *  <div class='col col--2 p12 mr12 border-l border-r border--dash border--yellow'>.border--yellow</div>
    * </div>
-   */`;
+   */`);
   css +=  colors.reduce((result, color) => {
     return result += stripIndent(`
       .border--${color} {
@@ -286,7 +288,7 @@ variantGenerators.border = function (colors) {
 };
 
 variantGenerators.hoverShadow = function (colors) {
-  let css = `
+  let css = stripIndent(`
   /**
    * Control the shadow of elements on hover.
    *
@@ -294,7 +296,7 @@ variantGenerators.hoverShadow = function (colors) {
    * @memberof State modifiers
    * @example
    * <div class='w400 hover-shadow-darken25'>.hover-shadow-darken25</div>
-   */`;
+   */`);
   css += colors.reduce((result, color) => {
     if (!isSemitransparent(color)) return result;
     const colorValue = variables[color];
@@ -312,7 +314,7 @@ variantGenerators.hoverShadow = function (colors) {
 };
 
 variantGenerators.hoverBackground = function (colors) {
-  let css = `
+  let css = stripIndent(`
   /**
    * Control the background of elements on hover.
    *
@@ -320,7 +322,7 @@ variantGenerators.hoverBackground = function (colors) {
    * @memberof State modifiers
    * @example
    * <div class='w400 hover-bg-darken25'>.hover-bg-darken25</div>
-   */`;
+   */`);
   css += colors.reduce((result, color) => {
     return result += stripIndent(`
       .hover-bg-${color}:hover {
@@ -333,7 +335,7 @@ variantGenerators.hoverBackground = function (colors) {
 };
 
 variantGenerators.hoverColor = function (colors) {
-  let css = `
+  let css = stripIndent(`
   /**
    * Control the color of elements on hover.
    *
@@ -341,7 +343,7 @@ variantGenerators.hoverColor = function (colors) {
    * @memberof State modifiers
    * @example
    * <div class='w400 hover-color-red'>.hover-color-red</div>
-   */`;
+   */`);
   css += colors.reduce((result, color) => {
     return result += stripIndent(`
       .hover-color-${color}:hover {
@@ -354,7 +356,7 @@ variantGenerators.hoverColor = function (colors) {
 };
 
 variantGenerators.hoverBorder = function (colors) {
-  let css = `
+  let css = stripIndent(`
   /**
    * Control the border color of elements on hover.
    *
@@ -362,7 +364,7 @@ variantGenerators.hoverBorder = function (colors) {
    * @memberof State modifiers
    * @example
    * <div class='w400 border border--2 border--pink hover-border-blue'>.hover-border-blue</div>
-   */`;
+   */`);
   css += colors.reduce((result, color) => {
     return result += stripIndent(`
       .hover-border-${color}:hover {
