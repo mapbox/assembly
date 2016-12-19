@@ -53,11 +53,6 @@ class Triangles extends React.Component {
           colors.map((c) => <TriangleEl color={c} direction={d} size='l' />)
         )}
 
-        {directions.map((d) =>
-          colors.map((c) => <TriangleEl color={c} direction={d} size='xl' />)
-        )}
-
-
       </div>
     );
   }
