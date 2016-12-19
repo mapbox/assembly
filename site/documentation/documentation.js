@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import { Entry } from './entry';
 import { Heading } from './heading';
 
@@ -26,7 +27,9 @@ class Documentation extends React.Component {
             {entry.title}
           </a>);
 
-        entry.members.forEach((member) => addEntryAndMembers(member, level + 1));
+        const sortedMembers = _.sortBy(entry.members, 'title');
+
+        sortedMembers.forEach((member) => addEntryAndMembers(member, level + 1));
       } else {
         entryEls.push(
           <Entry
@@ -38,7 +41,9 @@ class Documentation extends React.Component {
       }
     }
 
-    props.documentationData.forEach((entry) => addEntryAndMembers(entry, 1));
+    const sortedEntries = _.sortBy(props.documentationData, 'title');
+
+    sortedEntries.forEach((entry) => addEntryAndMembers(entry, 1));
 
     return (
       <div>

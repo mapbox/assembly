@@ -1,0 +1,9 @@
+{
+  "verbose": true,
+  "watch": [
+    "./src/",
+    "./site/"
+  ],
+  "ext": "js css html",
+  "exec": "babel-node"
+}

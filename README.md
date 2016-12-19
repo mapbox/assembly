@@ -15,7 +15,7 @@ Assembly targets IE 11+ and other modern browsers.
 ### Class naming convention
 
 - Keep names as short as possible.
-- Use real number values in utility class names to descibe the value the ulility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.p6` for `padding: 5px` instead of `.p-small` or `.p-1`.
+- Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.p6` for `padding: 5px` instead of `.p-small` or `.p-1`.
 - If the number of utility classes describing a property is limited, Assembly classes use the suffixes, `xl`, `l`, `m`, `s`, `sm`.
 - Unless absolutely necessary, selectors consist of a single class. This means that a class's effect will not vary when combined with different classes.
 - Assembly doesn't have a top level namespace. Assembly is designed to provide fundamental rules that are used frequently and should be easy to type and remember. If you want to use your own css with base, consider namespacing that css.
@@ -41,13 +41,14 @@ Assembly targets IE 11+ and other modern browsers.
   - [svgstore](https://github.com/svgstore/svgstore) compiles our SVGs into a SVG "sprite" of sorts, allowing us to use [the latest and greatest SVG-based icon system](https://css-tricks.com/svg-sprites-use-better-icon-fonts/).
 - Documentation
   - [documentation-css](https://github.com/documentationjs/documentation-css) parses annotation comments in the CSS, outputting objects that can be used to build documentation.
+- [Browsersync](https://browsersync.io) provides a fancy development server.
 
 ### Install and start
 
 ```bash
 yarn # Installs your `node_modules`
 
-npm start # Builds everything, starts a dev server, re-builds on changes
+npm start # Builds everything, starts a dev server, rebuilds & reloads on changes
 
 npm run build:svg # Build SVGs
 ```

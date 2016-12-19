@@ -1,9 +1,9 @@
-#!/usr/bin/env node
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
 const pify = require('pify');
+const mkdirp = require('mkdirp');
 const Concat = require('concat-with-sourcemaps');
 const postcss = require('postcss');
 const reporter = require('postcss-reporter');
@@ -26,7 +26,7 @@ function handlePostcssError(error) {
   if ( error.name === 'CssSyntaxError' ) {
     process.stderr.write(error.message + error.showSourceCode());
   } else {
-    console.error(error);
+    throw error;
   }
 }
 
@@ -90,10 +90,12 @@ function appendColorVariants(concat) {
 
 function writeDistCss(concat) {
   const css = `${concat.content}\n/*# sourceMappingURL=${distCssFilename}.map */`;
-  return Promise.all([
-    pify(fs.writeFile)(distCssPath, css, 'utf8'),
-    pify(fs.writeFile)(`${distCssPath}.map`, concat.sourceMap, 'utf8')
-  ]);
+  return pify(mkdirp)(path.join(__dirname, '../dist')).then(() => {
+    return Promise.all([
+      pify(fs.writeFile)(distCssPath, css, 'utf8'),
+      pify(fs.writeFile)(`${distCssPath}.map`, concat.sourceMap, 'utf8')
+    ]);
+  });
 }
 
 function processCss() {
@@ -101,6 +103,7 @@ function processCss() {
   const concat = new Concat(true, distCssPath, '\n');
 
   return Promise.all(cssFiles.map((file) => postcssifyFile(file, concat)))
+    .catch(handlePostcssError)
     .then(() => appendColorVariants(concat))
     .then(() => writeDistCss(concat))
     .then(() => timelog('Done building CSS'));
@@ -109,5 +112,5 @@ function processCss() {
 module.exports = processCss;
 
 if (require.main === module) {
-  processCss().catch(handlePostcssError);
+  processCss().catch((err) => console.error(err.stack));
 }
