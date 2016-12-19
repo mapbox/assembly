@@ -274,9 +274,9 @@ to the `.select` container. */
  *
  * @memberof Forms
  * @example
- * <input class='range w100' type='range' />
- * <input class='range range--s w100' type='range' />
- * <div class='bg-gray-dark px10 round inline-block'><input class='range range--dark w100' type='range' /></div>
+ * <input class='range w96' type='range' />
+ * <input class='range range--s w96' type='range' />
+ * <div class='bg-gray-dark pl12 pr12 round inline-block'><input class='range range--dark w96' type='range' /></div>
 */
 .range {
   appearance: none;
