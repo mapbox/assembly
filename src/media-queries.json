@@ -1,5 +1,5 @@
 {
-  "--large-screen": "screen and (min-width: 1600px)",
-  "--medium-screen": "screen and (max-width: 800px), screen and (max-height: 600px)",
-  "--small-screen": "screen and (max-width: 640px), screen and (max-height: 420px)"
+  "--xl-screen": "screen and (min-width: 1600px)",
+  "--l-screen": "screen and (min-width: 800px) and (min-height: 640px)",
+  "--m-screen": "screen and (min-width: 640px) and (min-height: 420px)"
 }
