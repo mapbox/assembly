@@ -1,6 +1,7 @@
 import React from 'react';
 import { Entry } from './entry';
 import { Heading } from './heading';
+import { orderSections } from '../order-sections';
 
 class Documentation extends React.Component {
 
@@ -22,7 +23,6 @@ class Documentation extends React.Component {
 
         navEls.push(<a
           key={entryEls.length + 1}
-          className='docs-nav-item'
           href={'#' + entry.title.replace(/\s+/g, '-')}>
             {entry.title}
           </a>);
@@ -39,7 +39,7 @@ class Documentation extends React.Component {
       }
     }
 
-    props.documentationData.forEach((entry) => addEntryAndMembers(entry, 1));
+    orderSections(props.documentationData).forEach((entry) => addEntryAndMembers(entry, 1));
 
     return (
       <div>

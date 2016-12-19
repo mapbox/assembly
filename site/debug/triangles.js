@@ -30,7 +30,7 @@ const directions = [
 function TriangleEl(props) {
   const triangleClass = `triangle${props.size ? '-' + props.size : ''} triangle${props.size ? '-' + props.size : ''}--${props.direction} color-${props.color}`;
   return (
-    <div className='inline-block mr20'>
+    <div className='inline-block mr18'>
       <div className={triangleClass} />
     </div>
   );
@@ -41,7 +41,7 @@ class Triangles extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb20'>
+        <h1 className='txt-headline mb18'>
           Triangles
         </h1>
 
@@ -52,11 +52,6 @@ class Triangles extends React.Component {
         {directions.map((d) =>
           colors.map((c) => <TriangleEl color={c} direction={d} size='l' />)
         )}
-
-        {directions.map((d) =>
-          colors.map((c) => <TriangleEl color={c} direction={d} size='xl' />)
-        )}
-
 
       </div>
     );

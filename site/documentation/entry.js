@@ -1,10 +1,7 @@
 import React from 'react';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
-import Lowlight from 'react-lowlight';
-import xmlLanguage from 'highlight.js/lib/languages/xml';
-
-Lowlight.registerLanguage('html', xmlLanguage);
+import { HtmlExample } from '../html_example';
 
 class Entry extends React.Component {
   constructor(props) {
@@ -16,33 +13,35 @@ class Entry extends React.Component {
     const { props } = this;
 
     const example = !props.parsedComment.example ? null : (
-      <div style={{ marginBottom: '40px' }}>
-        <div style={{ marginBottom: '20px' }}>
-          <div dangerouslySetInnerHTML={{ __html: props.parsedComment.example.description }} />
-        </div>
-        <Lowlight
-          language='html'
-          value={props.parsedComment.example.description} />
-      </div>
+      <HtmlExample code={props.parsedComment.example.description} />
     );
 
-    const selectors = props.referencedSource ? [props.referencedSource.selector] : props.members;
+    let selectors = props.referencedSource ? [props.referencedSource.selector] : props.members;
 
-    const selectorEls = selectors !== undefined && selectors.map((m) => <span key={m}>
-        <span className='docs-group-member'>{m}</span>
+    if (selectors) {
+      selectors = selectors
+        .map((s) => {
+          return s.split(',');
+        }).reduce((a, b) => {
+          return a.concat(b);
+        });
+    }
+
+    const selectorEls = selectors !== undefined && selectors.map((m) =>
+      <span
+        key={m}
+        id={`#${m.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
+        className='mr6 pl6 pr6 round bg-blue color-white txt-mono inline-block mb3'>
+        {m.trim()}
       </span>);
 
     return (
-      <div className='docs-selector-group'>
-        <div className='docs-selector-name'>
-          {selectorEls}
-        </div>
-        <div className='docs-selector-description prose'>
+      <div className='mt24 mb48'>
+        {selectorEls}
+        <div className={`${selectors && 'mt3'} prose`}>
           {remark().use(reactRenderer).process(props.parsedComment.description).contents}
         </div>
-        <div className='docs-example'>
-          {example}
-        </div>
+        {example}
       </div>
     );
   }

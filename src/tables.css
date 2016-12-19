@@ -1,6 +1,7 @@
 /* stylelint-disable selector-no-combinator, selector-no-type */
 
 /**
+ * Use tables to display tabular data.
  * @section Tables
  */
 
@@ -27,7 +28,7 @@
  *     <td>item</td>
  *   </tr>
  * </table>
- * <table class='mt10 table'>
+ * <table class='mt12 table'>
  *   <tr>
  *     <th>Row 1</th>
  *     <td>item</td>
@@ -51,11 +52,11 @@
   background-color: transparent;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #ddd;
+  border: 1px solid var(--gray);
 }
 
 .prose table {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .table th,
@@ -64,8 +65,8 @@
 .prose table td {
   text-align: left;
   vertical-align: top;
-  border-bottom: 1px solid #ddd;
-  padding: 8px;
+  border-bottom: 1px solid var(--gray);
+  padding: 6px;
 }
 
 .table th,
@@ -75,11 +76,11 @@
 
 .table th + td,
 .prose th + td {
-  border-left: 1px solid #ddd;
+  border-left: 1px solid var(--gray);
 }
 
 /**
- * Fix that table layout.
+ * Force all rows in the table to be the same width.
  *
  * @memberof Tables
  */

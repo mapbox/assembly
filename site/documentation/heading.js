@@ -10,18 +10,21 @@ class Heading extends React.Component {
 
     let descriptionEl;
     if (props.description) {
-      descriptionEl = <div className='docs-description prose'>
+      descriptionEl = <div className='prose'>
         {remark().use(reactRenderer).process(props.description).contents}
       </div>;
     }
 
+    const sectionClass = props.level === 1 ? 'mt24 pb18 border--gray' : 'pt12 pb12 mt12 border--gray-faint';
+    const levelClass = props.level === 1 ? 'txt-subhead mb12' : 'txt-xl mb6';
+
     return (
-      <div className='docs-heading-container'>
+      <div className={`mb48 border-b border--2 ${sectionClass}`}>
         <div
           id={id}
-          className={`docs-heading-title-${props.level}`}
+          className={levelClass}
         >
-          <a href={`#${id}`}>
+          <a className='block pt24' href={`#${id}`}>
             {props.title}
           </a>
         </div>

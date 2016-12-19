@@ -4,10 +4,10 @@ class Elements extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='txt-headline mb20'>
+        <h1 className='txt-headline mb18'>
           Elements
         </h1>
-        <div className='grd'>
+        <div className='grid'>
           <div className='col col--4'>
             unstyled
             <p>Lorem <sup>ipsum</sup> dolor <sub>sit</sub> amet, <abbr>consectetur adipisicing elit</abbr>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <code>Cool code</code> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <kbd>T</kbd> aliquip ex ea commodo consequat.</p>

@@ -67,8 +67,8 @@ test('valid svgs ', (t) => {
     if (!svg.$.viewBox) {
       errors.push('must use viewBox sizing');
     } else {
-      if (parseFloat(svg.$.viewBox.split(' ')[2]) !== 20 ||
-        parseFloat(svg.$.viewBox.split(' ')[3]) !== 20) errors.push('invalid viewBox');
+      if (parseFloat(svg.$.viewBox.split(' ')[2]) !== 18 ||
+        parseFloat(svg.$.viewBox.split(' ')[3]) !== 18) errors.push('invalid viewBox');
       if (svg.$.viewBox.split(' ').some((v) => !v.toString().match(pixelUnitRegex))) {
         errors.push('viewBox must use pixel units');
       }

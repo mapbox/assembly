@@ -1,9 +1,9 @@
-#!/usr/bin/env node
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
 const pify = require('pify');
+const mkdirp = require('mkdirp');
 const Concat = require('concat-with-sourcemaps');
 const postcss = require('postcss');
 const reporter = require('postcss-reporter');
@@ -13,6 +13,7 @@ const postcssCustomMedia = require('postcss-custom-media');
 const variableDefinitions = require('../src/variables');
 const customMediaQueries = require('../src/media-queries');
 const timelog = require('./timelog');
+const buildColorVariants = require('./build-color-variants');
 
 const distCssFilename = 'assembly.css';
 const distCssPath = path.join(__dirname, `../dist/${distCssFilename}`);
@@ -25,7 +26,7 @@ function handlePostcssError(error) {
   if ( error.name === 'CssSyntaxError' ) {
     process.stderr.write(error.message + error.showSourceCode());
   } else {
-    console.error(error);
+    throw error;
   }
 }
 
@@ -59,38 +60,51 @@ const postcssPlugins = [
   reporter()
 ];
 
-function processCssFile(cssFile, concat) {
+function postcssify(css, filePath, concat) {
+  return postcss(postcssPlugins)
+    .process(css, {
+      from: filePath,
+      to: filePath,
+      map: {
+        inline: false,
+        annotation: false,
+        sourcesContent: true
+      }
+    })
+    .then((postcssResult) => {
+      concat.add(filePath, postcssResult.css, postcssResult.map.toString());
+    })
+    .catch(handlePostcssError);
+}
+
+function postcssifyFile(cssFile, concat) {
   return pify(fs.readFile)(cssFile, 'utf8').then((css) => {
-    return postcss(postcssPlugins)
-      .process(css, {
-        from: cssFile,
-        to: cssFile,
-        map: {
-          inline: false,
-          annotation: false,
-          sourcesContent: true
-        }
-      })
-      .then((postcssResult) => {
-        concat.add(cssFile, postcssResult.css, postcssResult.map.toString());
-      })
-      .catch(handlePostcssError);
+    return postcssify(css, cssFile, concat);
   });
+}
+
+function appendColorVariants(concat) {
+  const colorVariantsCss = buildColorVariants();
+  return postcssify(colorVariantsCss, 'color-variants.css', concat);
 }
 
 function writeDistCss(concat) {
   const css = `${concat.content}\n/*# sourceMappingURL=${distCssFilename}.map */`;
-  return Promise.all([
-    pify(fs.writeFile)(distCssPath, css, 'utf8'),
-    pify(fs.writeFile)(`${distCssPath}.map`, concat.sourceMap, 'utf8')
-  ]);
+  return pify(mkdirp)(path.join(__dirname, '../dist')).then(() => {
+    return Promise.all([
+      pify(fs.writeFile)(distCssPath, css, 'utf8'),
+      pify(fs.writeFile)(`${distCssPath}.map`, concat.sourceMap, 'utf8')
+    ]);
+  });
 }
 
 function processCss() {
   timelog('Building CSS');
   const concat = new Concat(true, distCssPath, '\n');
 
-  return Promise.all(cssFiles.map((file) => processCssFile(file, concat)))
+  return Promise.all(cssFiles.map((file) => postcssifyFile(file, concat)))
+    .catch(handlePostcssError)
+    .then(() => appendColorVariants(concat))
     .then(() => writeDistCss(concat))
     .then(() => timelog('Done building CSS'));
 }
@@ -98,5 +112,5 @@ function processCss() {
 module.exports = processCss;
 
 if (require.main === module) {
-  processCss().catch(handlePostcssError);
+  processCss().catch((err) => console.error(err.stack));
 }

@@ -12,10 +12,10 @@
  * @group
  * @memberof Theming
  * @example
- * <div class='flex'>
- *   <div class='col col--2 bg-gray color-white p10 mr10 round'>.round</div>
- *   <div class='col col--2 bg-gray color-white p10 mr10 round-bold-r'>.round-bold-r</div>
- *   <div class='col col--2 bg-gray color-white p10 round-full'>.round-full</div>
+ * <div class='flex-parent'>
+ *   <div class='col col--2 bg-gray color-white p12 mr12 round'>.round</div>
+ *   <div class='col col--2 bg-gray color-white p12 mr12 round-bold-r'>.round-bold-r</div>
+ *   <div class='col col--2 bg-gray color-white p12 round-full'>.round-full</div>
  * </div>
  */
 .round { border-radius: var(--border-radius) !important; }
@@ -59,10 +59,10 @@
  * @group
  * @memberof Theming
  * @example
- * <div class='flex'>
- *  <div class='col col--2 p10 mr10 border'>.border</div>
- *  <div class='col col--2 p10 mr10 border-b'>.border-b</div>
- *  <div class='col col--2 p10 border border--dash'>.border.border--dash</div>
+ * <div class='flex-parent'>
+ *  <div class='col col--2 p12 mr12 border'>.border</div>
+ *  <div class='col col--2 p12 mr12 border-b'>.border-b</div>
+ *  <div class='col col--2 p12 border border--dash'>.border.border--dash</div>
  * </div>
  */
 .border { border: 1px solid !important; }
@@ -76,100 +76,51 @@
 .border--2 { border-width: 2px !important; }
 .border--dash { border-style: dashed !important; }
 
-.border--gray-dark { border-color: var(--gray-dark) !important; }
-.border--gray { border-color: var(--gray) !important; }
-.border--gray-light { border-color: var(--gray-light) !important; }
-.border--gray-faint { border-color: var(--gray-faint) !important; }
-.border--pink-dark { border-color: var(--pink-dark) !important; }
-.border--pink { border-color: var(--pink) !important; }
-.border--pink-light { border-color: var(--pink-light) !important; }
-.border--pink-faint { border-color: var(--pink-faint) !important; }
-.border--red-dark { border-color: var(--red-dark) !important; }
-.border--red { border-color: var(--red) !important; }
-.border--red-light { border-color: var(--red-light) !important; }
-.border--red-faint { border-color: var(--red-faint) !important; }
-.border--orange-dark { border-color: var(--orange-dark) !important; }
-.border--orange { border-color: var(--orange) !important; }
-.border--orange-light { border-color: var(--orange-light) !important; }
-.border--orange-faint { border-color: var(--orange-faint) !important; }
-.border--yellow-dark { border-color: var(--yellow-dark) !important; }
-.border--yellow { border-color: var(--yellow) !important; }
-.border--yellow-light { border-color: var(--yellow-light) !important; }
-.border--yellow-faint { border-color: var(--yellow-faint) !important; }
-.border--green-dark { border-color: var(--green-dark) !important; }
-.border--green { border-color: var(--green) !important; }
-.border--green-light { border-color: var(--green-light) !important; }
-.border--green-faint { border-color: var(--green-faint) !important; }
-.border--teal-dark { border-color: var(--teal-dark) !important; }
-.border--teal { border-color: var(--teal) !important; }
-.border--teal-light { border-color: var(--teal-light) !important; }
-.border--teal-faint { border-color: var(--teal-faint) !important; }
-.border--blue-dark { border-color: var(--blue-dark) !important; }
-.border--blue { border-color: var(--blue) !important; }
-.border--blue-light { border-color: var(--blue-light) !important; }
-.border--blue-faint { border-color: var(--blue-faint) !important; }
-.border--purple-dark { border-color: var(--purple-dark) !important; }
-.border--purple { border-color: var(--purple) !important; }
-.border--purple-light { border-color: var(--purple-light) !important; }
-.border--purple-faint { border-color: var(--purple-faint) !important; }
-.border--darken5 { border-color: var(--darken5) !important; }
-.border--darken10 { border-color: var(--darken10) !important; }
-.border--darken25 { border-color: var(--darken25) !important; }
-.border--darken50 { border-color: var(--darken50) !important; }
-.border--darken75 { border-color: var(--darken75) !important; }
-.border--lighten5 { border-color: var(--lighten5) !important; }
-.border--lighten10 { border-color: var(--lighten10) !important; }
-.border--lighten25 { border-color: var(--lighten25) !important; }
-.border--lighten50 { border-color: var(--lighten50) !important; }
-.border--lighten75 { border-color: var(--lighten75) !important; }
-.border--black { border-color: var(--black) !important; }
-.border--white { border-color: var(--white) !important; }
-
 /**
  * Shadow classes.
- * - Shadows come in `5px`, `10px`, `20px`, and `30px` variants.
+ * - Shadows come in `6px` and `24px` variants.
  * - Append `-bold` for a more opaque shadow.
  * - Add shadows to text with `txt-shadow`.
  *
  * @group
  * @memberof Theming
  * @example
- * <div class='flex'>
- *   <div class='col col--2 p10 mr10 txt-shadow5'>.txt-shadow5</div>
- *   <div class='col col--2 p10 mr10 shadow10'>.shadow10</div>
- *   <div class='col col--2 p10 shadow20-bold'>.shadow20-bold</div>
+ * <div class='flex-parent'>
+ *   <div class='shadow-darken25'>.shadow-darken25</div>
+ *   <div class='shadow-darken25-bold'>.shadow-darken25-bold</div>
  * </div>
  */
-.shadow5 { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3) !important; }
-.shadow10 { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3) !important; }
-.shadow20 { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3) !important; }
-.shadow30 { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3) !important; }
-.shadow5-bold { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9) !important; }
-.shadow10-bold { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9) !important; }
-.shadow20-bold { box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9) !important; }
-.shadow30-bold { box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9) !important; }
+.shadow-darken5 { box-shadow: 0 0 12px 2px var(--darken5) !important; }
+.shadow-darken10 { box-shadow: 0 0 12px 2px var(--darken10) !important; }
+.shadow-darken25 { box-shadow: 0 0 12px 2px var(--darken25) !important; }
+.shadow-darken50 { box-shadow: 0 0 12px 2px var(--darken50) !important; }
+
+.shadow-lighten5 { box-shadow: 0 0 12px 2px var(--lighten5) !important; }
+.shadow-lighten10 { box-shadow: 0 0 12px 2px var(--lighten10) !important; }
+.shadow-lighten25 { box-shadow: 0 0 12px 2px var(--lighten25) !important; }
+.shadow-lighten50 { box-shadow: 0 0 12px 2px var(--lighten50) !important; }
 /** @endgroup */
 
-.txt-shadow5 { text-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important; }
-.txt-shadow10 { text-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important; }
-.txt-shadow20 { text-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important; }
-.txt-shadow30 { text-shadow: 0 0 30px rgba(0, 0, 0, 0.3) !important; }
-.txt-shadow5-bold { text-shadow: 0 0 5px rgba(0, 0, 0, 0.9) !important; }
-.txt-shadow10-bold { text-shadow: 0 0 10px rgba(0, 0, 0, 0.9) !important; }
-.txt-shadow20-bold { text-shadow: 0 0 20px rgba(0, 0, 0, 0.9) !important; }
-.txt-shadow30-bold { text-shadow: 0 0 30px rgba(0, 0, 0, 0.9) !important; }
+.shadow-darken5-bold { box-shadow: 0 0 24px 2px var(--darken5) !important; }
+.shadow-darken10-bold { box-shadow: 0 0 24px 2px var(--darken10) !important; }
+.shadow-darken25-bold { box-shadow: 0 0 24px 2px var(--darken25) !important; }
+.shadow-darken50-bold { box-shadow: 0 0 24px 2px var(--darken50) !important; }
+
+.shadow-lighten5-bold { box-shadow: 0 0 24px 2px var(--lighten5) !important; }
+.shadow-lighten10-bold { box-shadow: 0 0 24px 2px var(--lighten10) !important; }
+.shadow-lighten25-bold { box-shadow: 0 0 24px 2px var(--lighten25) !important; }
+.shadow-lighten50-bold { box-shadow: 0 0 24px 2px var(--lighten50) !important; }
 
 /**
  * Opacity classes.
- * - Alpha classes come in `0%`, `25%`, `50%`, `75%`, and `100%` opacity variants.
  *
  * @group
  * @memberof Theming
  * @example
- * <div class='flex'>
- *   <div class='col col--2 bg-gray color-white p10 mr10 alpha25'>.alpha25</div>
- *   <div class='col col--2 bg-gray color-white p10 mr10 alpha50'>.alpha50</div>
- *   <div class='col col--2 bg-gray color-white p10 alpha100'>.alpha100</div>
+ * <div class='flex-parent'>
+ *   <div class='w400 alpha25'>.alpha25</div>
+ *   <div class='w400 alpha50'>.alpha50</div>
+ *   <div class='w400 alpha100'>.alpha100</div>
  * </div>
  */
 .alpha0 { opacity: 0 !important; }
@@ -179,19 +130,16 @@
 .alpha100 { opacity: 1 !important; }
 /** @endgroup */
 
-.clip { overflow: hidden !important; }
-
 /**
- * Cursor classes.
- * - Cursor is one of `default`, `pointer`, `crosshair`, or `move` on hover.
+ * Cursor is one of `default`, `pointer`, `crosshair`, or `move` on hover.
  *
  * @group
  * @memberof Theming
  * @example
- * <div class='flex'>
- *   <div class='col col--2 bg-gray color-white p10 mr10 cursor-pointer'>.cursor-pointer</div>
- *   <div class='col col--2 bg-gray color-white p10 mr10 cursor-crosshair'>.cursor-crosshair</div>
- *   <div class='col col--2 bg-gray color-white p10 cursor-move'>.cursor-move</div>
+ * <div class='flex-parent'>
+ *   <div class='w400 cursor-pointer'>.cursor-pointer</div>
+ *   <div class='w400 cursor-crosshair'>.cursor-crosshair</div>
+ *   <div class='w400 cursor-move'>.cursor-move</div>
  * </div>
  */
 .cursor-default { cursor: default !important; }
@@ -209,78 +157,10 @@
 /**
  * Control the shadow of elements in a hover, focus, or active state.
  *
- * @group
  * @memberof State modifiers
  * @example
  * <div class='w400 hover-shadow-darken25'>.hover-shadow-darken25</div>
- * <div class='w400 is-active active-shadow-darken25'>.active-shadow-darken25.is-active</div>
  */
-.hover-shadow-darken5:hover,
-.focus-shadow-darken5:focus,
-.active-shadow-darken5:active,
-.active-shadow-darken5.is-active { box-shadow: 0 0 10px 2px var(--darken5) !important; }
-.hover-shadow-darken10:hover,
-.focus-shadow-darken10:focus,
-.active-shadow-darken10:active,
-.active-shadow-darken10.is-active { box-shadow: 0 0 10px 2px var(--darken10) !important; }
-.hover-shadow-darken25:hover,
-.focus-shadow-darken25:focus,
-.active-shadow-darken25:active,
-.active-shadow-darken25.is-active { box-shadow: 0 0 10px 2px var(--darken25) !important; }
-.hover-shadow-darken50:hover,
-.focus-shadow-darken50:focus,
-.active-shadow-darken50:active,
-.active-shadow-darken50.is-active { box-shadow: 0 0 10px 2px var(--darken50) !important; }
-
-.hover-shadow-lighten5:hover,
-.focus-shadow-lighten5:focus,
-.active-shadow-lighten5:active,
-.active-shadow-lighten5.is-active { box-shadow: 0 0 10px 2px var(--lighten5) !important; }
-.hover-shadow-lighten10:hover,
-.focus-shadow-lighten10:focus,
-.active-shadow-lighten10:active,
-.active-shadow-lighten10.is-active { box-shadow: 0 0 10px 2px var(--lighten10) !important; }
-.hover-shadow-lighten25:hover,
-.focus-shadow-lighten25:focus,
-.active-shadow-lighten25:active,
-.active-shadow-lighten25.is-active { box-shadow: 0 0 10px 2px var(--lighten25) !important; }
-.hover-shadow-lighten50:hover,
-.focus-shadow-lighten50:focus,
-.active-shadow-lighten50:active,
-.active-shadow-lighten50.is-active { box-shadow: 0 0 10px 2px var(--lighten50) !important; }
-/** @endgroup */
-
-.hover-shadow-darken5-bold:hover,
-.focus-shadow-darken5-bold:focus,
-.active-shadow-darken5-bold.is-active,
-.active-shadow-darken5-bold:active { box-shadow: 0 0 20px 2px var(--darken5) !important; }
-.hover-shadow-darken10-bold:hover,
-.focus-shadow-darken10-bold:focus,
-.active-shadow-darken10-bold.is-active,
-.active-shadow-darken10-bold:active { box-shadow: 0 0 20px 2px var(--darken10) !important; }
-.hover-shadow-darken25-bold:hover,
-.focus-shadow-darken25-bold:focus,
-.active-shadow-darken25-bold.is-active,
-.active-shadow-darken25-bold:active { box-shadow: 0 0 20px 2px var(--darken25) !important; }
-.hover-shadow-darken50-bold:hover,
-.focus-shadow-darken50-bold:focus,
-.active-shadow-darken50-bold.is-active,
-.active-shadow-darken50-bold:active { box-shadow: 0 0 20px 2px var(--darken50) !important; }
-
-.hover-shadow-lighten5-bold:hover,
-.focus-shadow-lighten5-bold:focus,
-.active-shadow-lighten5-bold:active { box-shadow: 0 0 20px 2px var(--lighten5) !important; }
-.hover-shadow-lighten10-bold:hover,
-.focus-shadow-lighten10-bold:focus,
-.active-shadow-lighten10-bold:active { box-shadow: 0 0 20px 2px var(--lighten10) !important; }
-.hover-shadow-lighten25-bold:hover,
-.focus-shadow-lighten25-bold:focus,
-.active-shadow-lighten25-bold.is-active,
-.active-shadow-lighten25-bold:active { box-shadow: 0 0 20px 2px var(--lighten25) !important; }
-.hover-shadow-lighten50-bold:hover,
-.focus-shadow-lighten50-bold:focus,
-.active-shadow-lighten50-bold.is-active,
-.active-shadow-lighten50-bold:active { box-shadow: 0 0 20px 2px var(--lighten50) !important; }
 
 /**
  * Control the opacity of elements in a hover, focus, or active state.

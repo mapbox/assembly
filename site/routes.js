@@ -10,6 +10,7 @@ const { Examples } = require('./examples');
 const { Debug } = require('./debug');
 const fs = require('fs');
 const path = require('path');
+const { orderSections } = require('./order-sections');
 
 /*
  * To add pages to the site, we pass a routes array with
@@ -43,12 +44,16 @@ function buildRoutes() {
 
 
   const routesWithComponents = routes.map((r) => {
-    const navItems = {
-      main: routes,
-      secondary: null,
+    const navData = {
+      items: [],
       // set current route to active.
       active: r.name
     };
+
+    routes.forEach((r) => {
+      const navDataItem = Object.assign({}, r, { items: [] });
+      navData.items.push(navDataItem);
+    });
 
     const props = {};
 
@@ -62,27 +67,31 @@ function buildRoutes() {
         } catch (err) {
           throw new Error('assembly.css must be built');
         }
+
         const documentationData = documentationCss.extract([{
           contents: entryContent,
           path: assemblyCss
         }]);
 
         props.documentationData = documentationData;
-        navItems.secondary = [];
 
-        const buildSecondaryNav = (entry) => {
-          if (entry.type === 'section') {
-            navItems.secondary.push({
-              name: entry.title,
-              route: '#' + entry.title.replace(/\s+/g, '-')
-            });
-            entry.members.forEach((member) => buildSecondaryNav(member));
-          }
+        // Recursively & hierarchically add all entry members to the navigation
+        const addEntryToNav = (entry, parent) => {
+          if (entry.type !== 'section') return;
+          parent = parent || navData.items.find((member) => member.name === r.name);
+          const memberNavDataItem = {
+            name: entry.title,
+            route: '#' + entry.title.replace(/\s+/g, '-'),
+            items: []
+          };
+          parent.items.push(memberNavDataItem);
+          entry.members.forEach((member) => addEntryToNav(member, memberNavDataItem));
         };
-        documentationData.forEach((entry) => buildSecondaryNav(entry));
+
+        orderSections(documentationData).forEach((entry) => addEntryToNav(entry));
 
         r.component = (
-          <Page navItems={navItems}>
+          <Page navData={navData}>
             <Documentation {...props} />
           </Page>
         );
@@ -90,28 +99,28 @@ function buildRoutes() {
       }
       case 'Home':
         r.component = (
-          <Page navItems={navItems}>
+          <Page navData={navData}>
             <Home {...props} />
           </Page>
         );
         break;
       case 'Examples':
         r.component = (
-          <Page navItems={navItems}>
+          <Page navData={navData}>
             <Examples {...props} />
           </Page>
         );
         break;
       case 'Icons':
         r.component = (
-          <Page navItems={navItems}>
+          <Page navData={navData}>
             <Icons {...props} />
           </Page>
         );
         break;
       case 'Debug':
         r.component = (
-          <Page navItems={navItems}>
+          <Page navData={navData}>
             <Debug {...props} />
           </Page>
         );

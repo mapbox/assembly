@@ -15,15 +15,16 @@ Assembly targets IE 11+ and other modern browsers.
 ### Class naming convention
 
 - Keep names as short as possible.
-- Use real number values in utility class names to descibe the value the ulility class applies _in cases where the number of utility classes could be unlimited_. For example, `.p5` for `padding: 5px` instead of `.p-small` or `.p-1`.
+- Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.p6` for `padding: 5px` instead of `.p-small` or `.p-1`.
+- If the number of utility classes describing a property is limited, Assembly classes use the suffixes, `xl`, `l`, `m`, `s`, `sm`.
 - Unless absolutely necessary, selectors consist of a single class. This means that a class's effect will not vary when combined with different classes.
 - Assembly doesn't have a top level namespace. Assembly is designed to provide fundamental rules that are used frequently and should be easy to type and remember. If you want to use your own css with base, consider namespacing that css.
 
 ### Media queries
 
-- Many classes have media query variants. The media query variants follow a naming convention: suffix `-media-{size}` to end of the rule. For example, for the class `.p5`, the variations are: `.p5-media-s`, `.p5-media-m`, `.p5-media-l`,
+- Many classes have media query variants. The media query variants follow a naming convention: suffix `-media-{size}` to end of the rule. For example, for the class `.p6`, the variations are: `.p6-ms`, `.p6-ml`, `.p6-mxl`,
 - If a class has a media query variant for one breakpoint, it must also have a variant for all breakpoints.
-- Order in stylesheet of media query rules is consistent: first the default rule, followed by the `-media-l` rule, followed by the `-media-m` rule, followed by the `-media-s` rule. We do this to guarantee that small rules override medium rules, etc.
+- Order in stylesheet of media query rules is consistent: first the default rule, followed by the `-mm` rule, followed by the `-ml` rule, followed by the `-mxl` rule. We do this to guarantee that as page size gets larger, rules that target larger screens override rules that target small screens, etc.
 
 ## Development
 
@@ -40,13 +41,14 @@ Assembly targets IE 11+ and other modern browsers.
   - [svgstore](https://github.com/svgstore/svgstore) compiles our SVGs into a SVG "sprite" of sorts, allowing us to use [the latest and greatest SVG-based icon system](https://css-tricks.com/svg-sprites-use-better-icon-fonts/).
 - Documentation
   - [documentation-css](https://github.com/documentationjs/documentation-css) parses annotation comments in the CSS, outputting objects that can be used to build documentation.
+- [Browsersync](https://browsersync.io) provides a fancy development server.
 
 ### Install and start
 
 ```bash
 yarn # Installs your `node_modules`
 
-npm start # Builds everything, starts a dev server, re-builds on changes
+npm start # Builds everything, starts a dev server, rebuilds & reloads on changes
 
 npm run build:svg # Build SVGs
 ```

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+// Runs on babel-node only, because it uses React components
 'use strict';
 
 const buildRoutes = require('../site/routes');

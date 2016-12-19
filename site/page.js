@@ -4,9 +4,9 @@ import { Navigation } from './navigation';
 class Page extends React.Component {
   render() {
     return (
-      <div className='docs-container mb60'>
-        <Navigation navItems={this.props.navItems} />
-        {this.props.children}
+      <div className='flex-parent-mm flex-parent--center-main-mm'>
+        <Navigation navData={this.props.navData} />
+        <div className='mb24 ml240-mm pl24 pr24 wmax960'>{this.props.children}</div>
       </div>
     );
   }
@@ -14,11 +14,7 @@ class Page extends React.Component {
 
 Page.propTypes = {
   children: React.PropTypes.node.isRequired,
-  navItems: React.PropTypes.shape({
-    main: React.PropTypes.array.isRequired,
-    secondary: React.PropTypes.array,
-    active: React.PropTypes.string
-  }).isRequired
+  navData: React.PropTypes.object.isRequired
 };
 
 

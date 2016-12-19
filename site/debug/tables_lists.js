@@ -4,10 +4,10 @@ class TablesLists extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='txt-headline mb20'>
+        <h1 className='txt-headline mb18'>
           Tables & Lists
         </h1>
-        <div className='grd grd--gut10'>
+        <div className='grid grid--gut12'>
           <div className='col col--4'>
             Unstyled
             <table>
@@ -17,32 +17,36 @@ class TablesLists extends React.Component {
                   <th>Column 1</th>
                 </tr>
               </thead>
-              <tr>
-                <td>item</td>
-                <td>item</td>
-              </tr>
-              <tr>
-                <td>item</td>
-                <td>item</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+                <tr>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+              </tbody>
             </table>
 
             <table>
-              <tr>
-                <th>Row 1</th>
-                <td>item</td>
-                <td>item</td>
-              </tr>
-              <tr>
-                <th>Row 2</th>
-                <td>item</td>
-                <td>item</td>
-              </tr>
-              <tr>
-                <th>Row 3</th>
-                <td>item</td>
-                <td>item</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th>Row 1</th>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+                <tr>
+                  <th>Row 2</th>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+                <tr>
+                  <th>Row 3</th>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+              </tbody>
             </table>
             <h2>Unordered</h2>
             <ul>
@@ -97,32 +101,36 @@ class TablesLists extends React.Component {
                   <th>Column 1</th>
                 </tr>
               </thead>
-              <tr>
-                <td>item</td>
-                <td>item</td>
-              </tr>
-              <tr>
-                <td>item</td>
-                <td>item</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+                <tr>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+              </tbody>
             </table>
 
             <table className="tbl">
-              <tr>
-                <th>Row 1</th>
-                <td>item</td>
-                <td>item</td>
-              </tr>
-              <tr>
-                <th>Row 2</th>
-                <td>item</td>
-                <td>item</td>
-              </tr>
-              <tr>
-                <th>Row 3</th>
-                <td>item</td>
-                <td>item</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th>Row 1</th>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+                <tr>
+                  <th>Row 2</th>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+                <tr>
+                  <th>Row 3</th>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+              </tbody>
             </table>
             <h2 className='txt-h2'>Unordered (with classes)</h2>
             <ul className='txt-ul'>
@@ -177,32 +185,36 @@ class TablesLists extends React.Component {
                   <th>Column 1</th>
                 </tr>
               </thead>
-              <tr>
-                <td>item</td>
-                <td>item</td>
-              </tr>
-              <tr>
-                <td>item</td>
-                <td>item</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+                <tr>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+              </tbody>
             </table>
 
             <table>
-              <tr>
-                <th>Row 1</th>
-                <td>item</td>
-                <td>item</td>
-              </tr>
-              <tr>
-                <th>Row 2</th>
-                <td>item</td>
-                <td>item</td>
-              </tr>
-              <tr>
-                <th>Row 3</th>
-                <td>item</td>
-                <td>item</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th>Row 1</th>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+                <tr>
+                  <th>Row 2</th>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+                <tr>
+                  <th>Row 3</th>
+                  <td>item</td>
+                  <td>item</td>
+                </tr>
+              </tbody>
             </table>
             <h2>Unordered</h2>
             <ul>

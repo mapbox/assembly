@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 'use strict';
 
 const fs = require('fs');
@@ -22,7 +21,7 @@ fs.readdir('./src/svgs/', (err, files) => {
 });
 
 function cleanSvg(svg, fileName) {
-  svg.$.viewBox = '0 0 20 20';
+  svg.$.viewBox = '0 0 18 18';
   delete svg.metadata;
   delete svg.defs;
   delete svg['sodipodi:namedview'];
@@ -80,4 +79,3 @@ function cleanSvg(svg, fileName) {
     console.log(`cleaned ${fileName}`);
   });
 }
-
