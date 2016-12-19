@@ -420,6 +420,11 @@ to the `.select` container. */
   height: 11px;
 }
 
+.range:focus { box-shadow: none; }
+.range:focus::-webkit-slider-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
+.range:focus::-ms-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
+.range:focus::-moz-range-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
+
 /* range dark */
 /* range dark track */
 .range--dark::-webkit-slider-runnable-track { background: var(--gray); }
