@@ -18,7 +18,7 @@ textarea {
 }
 
 /**
- * Standard text scale. All text size classes include `-ms`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Standard text scale. All text size classes include `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @memberof Typography
  * @group
@@ -68,37 +68,37 @@ textarea {
 /** @endgroup */
 
 @media (--m-screen) {
-  .txt-headline-ms {
+  .txt-headline-mm {
     font-size: 32px;
     line-height: 42px;
   }
 
-  .txt-subhead-ms {
+  .txt-subhead-mm {
     font-size: 28px;
     line-height: 36px;
   }
 
-  .txt-xl-ms {
+  .txt-xl-mm {
     font-size: 22px;
     line-height: 30px;
   }
 
-  .txt-l-ms {
+  .txt-l-mm {
     font-size: 18px;
     line-height: 30px;
   }
 
-  .txt-m-ms {
+  .txt-m-mm {
     font-size: 15px;
     line-height: 24px;
   }
 
-  .txt-s-ms {
+  .txt-s-mm {
     font-size: 12px;
     line-height: 18px;
   }
 
-  .txt-xs-ms {
+  .txt-xs-mm {
     font-size: 12px;
     line-height: 15px;
   }

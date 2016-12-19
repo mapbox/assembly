@@ -24,7 +24,7 @@
 
 /**
  * Flexbox utilities. Check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
- * to learn how the system works. Class set includes `-ms`, `-ml`, and `-mxl` variations to target screen sizes.
+ * to learn how the system works. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @memberof Layout
  * @group
@@ -374,7 +374,7 @@
 /** @endgroup */
 
 /**
- * Use display classes to control the display property of elements. Class set includes `-ms`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Use display classes to control the display property of elements. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @section Display
  * @memberof Layout
@@ -434,7 +434,7 @@
  */
 
 /**
- * Set an element's `position`. Class set includes `-ms`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set an element's `position`. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -467,7 +467,7 @@
 }
 
 /**
- * Set positioned elements flush against a side of their container. Class set includes `-ms`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set positioned elements flush against a side of their container. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -501,7 +501,7 @@
 
 /**
  * Override default stacking order with z-index classes. Whenever possible, rely on
- * built-in stacking order and avoid these rules. Class set includes `-ms`, `-ml`, and `-mxl` variations to target screen sizes.
+ * built-in stacking order and avoid these rules. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -547,7 +547,7 @@
 
 /**
  * All margin classes follow the following pattern:
- * `m<side><margin-size>-<screen-size>`. Screen sizes are *optional* and are `-ms`, `-ml`, and `-mxl`.
+ * `m<side><margin-size>-<screen-size>`. Screen sizes are *optional* and are `-mm`, `-ml`, and `-mxl`.
  *
  * @section Margins
  * @memberof Layout
@@ -652,51 +652,51 @@
 /** @endgroup */
 
 @media (--m-screen) {
-  .mr0-l { margin-right: 0 !important; }
-  .mr3-l { margin-right: 3px !important; }
-  .mr6-l { margin-right: 6px !important; }
-  .mr12-l { margin-right: 12px !important; }
-  .mr18-l { margin-right: 18px !important; }
-  .mr24-l { margin-right: 24px !important; }
-  .mr48-l { margin-right: 48px !important; }
-  .mr72-l { margin-right: 72px !important; }
-  .mr96-l { margin-right: 96px !important; }
-  .mr120-l { margin-right: 120px !important; }
-  .mr180-l { margin-right: 180px !important; }
-  .mr240-l { margin-right: 240px !important; }
-  .mr480-l { margin-right: 480px !important; }
+  .mr0-ml { margin-right: 0 !important; }
+  .mr3-ml { margin-right: 3px !important; }
+  .mr6-ml { margin-right: 6px !important; }
+  .mr12-ml { margin-right: 12px !important; }
+  .mr18-ml { margin-right: 18px !important; }
+  .mr24-ml { margin-right: 24px !important; }
+  .mr48-ml { margin-right: 48px !important; }
+  .mr72-ml { margin-right: 72px !important; }
+  .mr96-ml { margin-right: 96px !important; }
+  .mr120-ml { margin-right: 120px !important; }
+  .mr180-ml { margin-right: 180px !important; }
+  .mr240-ml { margin-right: 240px !important; }
+  .mr480-ml { margin-right: 480px !important; }
 }
 
 @media (--l-screen) {
-  .mr0-m { margin-right: 0 !important; }
-  .mr3-m { margin-right: 3px !important; }
-  .mr6-m { margin-right: 6px !important; }
-  .mr12-m { margin-right: 12px !important; }
-  .mr18-m { margin-right: 18px !important; }
-  .mr24-m { margin-right: 24px !important; }
-  .mr48-m { margin-right: 48px !important; }
-  .mr72-m { margin-right: 72px !important; }
-  .mr96-m { margin-right: 96px !important; }
-  .mr120-m { margin-right: 120px !important; }
-  .mr180-m { margin-right: 180px !important; }
-  .mr240-m { margin-right: 240px !important; }
-  .mr480-m { margin-right: 480px !important; }
+  .mr0-ml { margin-right: 0 !important; }
+  .mr3-ml { margin-right: 3px !important; }
+  .mr6-ml { margin-right: 6px !important; }
+  .mr12-ml { margin-right: 12px !important; }
+  .mr18-ml { margin-right: 18px !important; }
+  .mr24-ml { margin-right: 24px !important; }
+  .mr48-ml { margin-right: 48px !important; }
+  .mr72-ml { margin-right: 72px !important; }
+  .mr96-ml { margin-right: 96px !important; }
+  .mr120-ml { margin-right: 120px !important; }
+  .mr180-ml { margin-right: 180px !important; }
+  .mr240-ml { margin-right: 240px !important; }
+  .mr480-ml { margin-right: 480px !important; }
 }
 
 @media (--xl-screen) {
-  .mr0-s { margin-right: 0 !important; }
-  .mr3-s { margin-right: 3px !important; }
-  .mr6-s { margin-right: 6px !important; }
-  .mr12-s { margin-right: 12px !important; }
-  .mr18-s { margin-right: 18px !important; }
-  .mr24-s { margin-right: 24px !important; }
-  .mr48-s { margin-right: 48px !important; }
-  .mr72-s { margin-right: 72px !important; }
-  .mr96-s { margin-right: 96px !important; }
-  .mr120-s { margin-right: 120px !important; }
-  .mr180-s { margin-right: 180px !important; }
-  .mr240-s { margin-right: 240px !important; }
-  .mr480-s { margin-right: 480px !important; }
+  .mr0-mxl { margin-right: 0 !important; }
+  .mr3-mxl { margin-right: 3px !important; }
+  .mr6-mxl { margin-right: 6px !important; }
+  .mr12-mxl { margin-right: 12px !important; }
+  .mr18-mxl { margin-right: 18px !important; }
+  .mr24-mxl { margin-right: 24px !important; }
+  .mr48-mxl { margin-right: 48px !important; }
+  .mr72-mxl { margin-right: 72px !important; }
+  .mr96-mxl { margin-right: 96px !important; }
+  .mr120-mxl { margin-right: 120px !important; }
+  .mr180-mxl { margin-right: 180px !important; }
+  .mr240-mxl { margin-right: 240px !important; }
+  .mr480-mxl { margin-right: 480px !important; }
 }
 
 /**
@@ -845,7 +845,7 @@
 
 /**
  * All padding classes follow the following pattern:
- * `m<side><padding-size>-<screen-size>`. Screen sizes are *optional* and are `-ms`, `-ml`, and `-mxl`.
+ * `m<side><padding-size>-<screen-size>`. Screen sizes are *optional* and are `-mm`, `-ml`, and `-mxl`.
  *
  * @section Padding
  * @memberof Layout
@@ -1123,7 +1123,7 @@
 
 /**
  * All sizing classes follow the following pattern:
- * `<w|h><min|max><dimension-size>-<screen-size>`. Min/max values are optional. Screen sizes are *optional* and are `-ms`, `-ml`, and `-mxl`.
+ * `<w|h><min|max><dimension-size>-<screen-size>`. Min/max values are optional. Screen sizes are *optional* and are `-mm`, `-ml`, and `-mxl`.
  *
  * @section Sizing
  * @memberof Layout
@@ -1538,7 +1538,7 @@
 }
 
 /**
- * Set the height of an element relative to the viewport. Class set includes `-ms`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set the height of an element relative to the viewport. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Sizing
