@@ -173,8 +173,7 @@ variantGenerators.checkbox = function (color) {
   const darkerShade = getDarkerShade(color);
   return stripIndent(`
     .checkbox-container:hover > .checkbox.color-${color},
-    input:checked + .checkbox.color-${color},
-    .checkbox.color-${color}.is-active {
+    input:checked + .checkbox.color-${color} {
       color: ${darkerShade} !important;
     }
   `);
@@ -185,8 +184,7 @@ variantGenerators.radio = function (color) {
   const darkerShade = getDarkerShade(color);
   return stripIndent(`
     .radio-container:hover > .radio.color-${color},
-    input:checked + .radio.color-${color},
-    .radio.color-${color}.is-active {
+    input:checked + .radio.color-${color} {
       color: ${darkerShade} !important;
     }
   `);
@@ -202,11 +200,8 @@ variantGenerators.switch = function (color) {
       border-color: ${darkerShade} !important;
     }
 
-    .switch.color-${color}.is-active,
     input:checked + .switch.color-${color},
     input:not(:checked) + .switch.color-${color}:hover::after,
-    :not(input) + .switch.color-${color}:not(.is-active):hover::after,
-    .switch--dot-${color}.is-active::after,
     input:checked + .switch--dot-${color}::after {
       background-color: ${darkerShade} !important;
     }
@@ -226,12 +221,10 @@ variantGenerators.toggle = function (color) {
       color: ${colorValue} !important;
     }
 
-    input:not(:checked) + .toggle.toggle--${color}:not(.is-active):hover,
-    :not(input) + .toggle.toggle--${color}:not(.is-active):hover {
+    input:not(:checked) + .toggle.toggle--${color}:hover {
       color: ${darkerShade} !important;
     }
 
-    .toggle.toggle--${color}.is-active,
     input:checked + .toggle.toggle--${color} {
       background: ${colorValue} !important;
       color: #fff !important;
@@ -243,8 +236,7 @@ variantGenerators.link = function (color) {
   if (isDark(color)) return '';
   const darkerShade = getDarkerShade(color);
   return stripIndent(`
-    .txt-link.color-${color}:hover,
-    .txt-link.color-${color}.is-active {
+    .txt-link.color-${color}:hover {
       color: ${darkerShade} !important;
     }
   `);
