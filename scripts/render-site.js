@@ -1,7 +1,7 @@
 // Runs on babel-node only, because it uses React components
 'use strict';
 
-const buildRoutes = require('../site/routes');
+const buildRoutes = require('../site/routes').buildRoutes;
 const ReactDOMServer = require('react-dom/server');
 const fs = require('fs');
 const path = require('path');
