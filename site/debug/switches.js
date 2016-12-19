@@ -29,9 +29,9 @@ const colors = [
 ];
 
 function SwitchEl(props) {
-  const switchClass = `switch ${props.handleColor ? 'switch--handle-' + props.handleColor : ''} color-${props.color}`;
+  const switchClass = `switch ${props.handleColor ? 'switch--dot-' + props.handleColor : ''} color-${props.color}`;
   return (
-    <div className='mr5 inline-block'>
+    <div className='mr6 inline-block'>
       <label className='switch-container'>
        <input type='checkbox' value='magic' />
         <div className={switchClass} />
@@ -45,12 +45,20 @@ class Switches extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb20'>
+        <h1 className='txt-headline mb18'>
           Switches
         </h1>
 
+    <div className='mr6 inline-block'>
+      <label className='switch-container'>
+       <input type='checkbox' value='magic' />
+        <div className='switch mr6' />
+        Hello there
+      </label>
+    </div>
+
         {colors.map((handle) =>
-          <div className='mb10'>
+          <div className='mb12'>
             {colors.map((c) => <SwitchEl color={c} handleColor={handle} size={null} />)}
           </div>)}
 

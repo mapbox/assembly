@@ -22,7 +22,6 @@ class Documentation extends React.Component {
 
         navEls.push(<a
           key={entryEls.length + 1}
-          className='docs-nav-item'
           href={'#' + entry.title.replace(/\s+/g, '-')}>
             {entry.title}
           </a>);

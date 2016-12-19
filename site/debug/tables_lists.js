@@ -4,10 +4,10 @@ class TablesLists extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='txt-headline mb20'>
+        <h1 className='txt-headline mb18'>
           Tables & Lists
         </h1>
-        <div className='grd grd--gut10'>
+        <div className='grid grid--gut12'>
           <div className='col col--4'>
             Unstyled
             <table>

@@ -1,29 +1,25 @@
 import React from 'react';
 
-/*
- * Can't import routes() directly because it would be a
- * circular dependency.
- */
 class Navigation extends React.Component {
   render() {
     const { props } = this;
 
     let secondaryEls;
     if (props.navItems.secondary) {
-      secondaryEls = props.navItems.secondary.map((r) =>
-        <a key={r.name} className='block txt-small' href={r.route}>{r.name}</a>
-      );
+      secondaryEls = <div className='border-l border--2 border--gray-faint mt6 mb6 pl12'>{props.navItems.secondary.map((r) =>
+        <a key={r.name} className='txt-link color-blue block txt-s' href={r.route}>{r.name}</a>)}
+      </div>;
     }
 
     const navEls = props.navItems.main.map((r) =>
       <div key={r.name}>
-        <a className={`block ${r.name === props.navItems.active && 'is-active'}`} href={`/assembly${r.route}`}>{r.name}</a>
+        <a className={`block txt-link color-blue ${r.name === props.navItems.active && 'is-active'}`} href={`/assembly${r.route}`}>{r.name}</a>
         {r.name === props.navItems.active ? secondaryEls : ''}
       </div>
     );
 
-    return (<div className='p20 fixed top left'>
-      <div className='txt-m txt-bold mb20'>Assembly</div>
+    return (<div className='pt48 viewport-full scroll-auto pl24 pr18 w240 fixed top left'>
+      <div className='txt-m mb12'>Assembly</div>
       {navEls}
     </div>);
   }

@@ -4,9 +4,9 @@ import { Navigation } from './navigation';
 class Page extends React.Component {
   render() {
     return (
-      <div className='docs-container mb60'>
+      <div>
         <Navigation navItems={this.props.navItems} />
-        {this.props.children}
+        <div className='mb24 ml240 pl18 pr18 wmax960'>{this.props.children}</div>
       </div>
     );
   }

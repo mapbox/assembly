@@ -24,50 +24,29 @@ class CheckboxesRadios extends React.Component {
    );
 
     const checkboxes = colors.map((color, i) => {
-      let checkboxFillClass = 'checkbox';
-      let checkboxStrokeClass = 'checkbox checkbox--stroke';
+      let checkboxClass = 'checkbox mr6';
       if (color !== null) {
-        checkboxFillClass += ` bg-${color}`;
-        checkboxStrokeClass += ` color-${color}`;
+        checkboxClass += ` color-${color}`;
       }
 
       return (
-        <div key={i} className='mb10'>
-          <div className='inline-block mr30'>
-            <label className='checkbox-container mr10'>
+        <div key={i} className='mb12'>
+          <div className='inline-block mr24'>
+            <label className='checkbox-container mr6'>
               <input type='checkbox' />
-              <div className={checkboxFillClass}>
+              <div className={checkboxClass}>
                 {checkmark}
               </div>
-              Filled
-            </label>
-          </div>
-          <div className='inline-block mr30'>
-            <label className='checkbox-container mr10'>
-              <input type='checkbox' />
-              <div className={checkboxStrokeClass}>
-                {checkmark}
-              </div>
-              Unfilled
+              Check me
             </label>
           </div>
           <div className='inline-block'>
-            <div className={checkboxFillClass}>
+            <div className={checkboxClass}>
               {checkmark}
             </div>
           </div>
           <div className='inline-block'>
-            <div className={`${checkboxFillClass} is-active`}>
-              {checkmark}
-            </div>
-          </div>
-          <div className='inline-block'>
-            <div className={checkboxStrokeClass}>
-              {checkmark}
-            </div>
-          </div>
-          <div className='inline-block'>
-            <div className={`${checkboxStrokeClass} is-active`}>
+            <div className={`${checkboxClass} is-active`}>
               {checkmark}
             </div>
           </div>
@@ -76,7 +55,7 @@ class CheckboxesRadios extends React.Component {
     });
 
     const radios = colors.map((color, i) => {
-      let radioClass = 'radio';
+      let radioClass = 'radio mr6';
       let id = 'radio';
       if (color !== null) {
         radioClass += ` color-${color}`;
@@ -84,18 +63,18 @@ class CheckboxesRadios extends React.Component {
       }
 
       return (
-        <div key={i} className='mb10'>
-          <div className='inline-block mr30'>
-            <label className='radio-container mr10'>
+        <div key={i} className='mb12'>
+          <div className='inline-block mr24'>
+            <label className='radio-container mr6'>
               <input id={id} name='radios' value={id} type='radio' />
               <div className={radioClass}></div>
               Radio
             </label>
           </div>
-          <div className='inline-block mr10'>
+          <div className='inline-block mr6'>
             <div className={radioClass}></div>
           </div>
-          <div className='inline-block mr10'>
+          <div className='inline-block mr6'>
             <div className={`${radioClass} is-active`}></div>
           </div>
         </div>
@@ -104,24 +83,24 @@ class CheckboxesRadios extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb20'>
+        <h1 className='txt-headline mb18'>
           Checkboxes & Radios
         </h1>
 
-        <h2 className='subheadline mb20 mt20'>
+        <h2 className='subheadline mb18 mt18'>
           Checkboxes
         </h2>
-        <div className='mb10'>
+        <div className='mb12'>
           <input id='checkbox-unstyled' type='checkbox' />
           <label for='checkbox-unstyled'>Unstyled</label>
         </div>
 
         {checkboxes}
 
-        <h2 className='subheadline mb20 mt20'>
+        <h2 className='subheadline mb18 mt18'>
           Checkboxes
         </h2>
-        <div className='mb10'>
+        <div className='mb12'>
           <input id='radio-unstyled' type='radio' />
           <label for='radio-unstyled'>Radio</label>
         </div>

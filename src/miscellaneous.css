@@ -24,7 +24,7 @@
  *
  * @memberof Miscellaneous
  * @example
- * <div class='events-none'><div class='events-all'>You can click this</div></div>
+ * <div class='events-none'><div class='events-all'>You can click this.</div></div>
  */
 .events-all {
   -webkit-touch-callout: default;
@@ -54,3 +54,48 @@
 .select-all {
   user-select: auto;
 }
+
+/**
+ * Disable transition on elements like [`btn`](#btn) that have default transitions.
+ *
+ * @memberof Miscellaneous
+ * @example
+ * <div class='btn transition-none'>.transition-none</div>
+ */
+.transition-none {
+  transition: auto;
+}
+
+/**
+ * Always show scrollbars.
+ *
+ * @memberof Miscellaneous
+ * @example
+ *   <div class='scroll-always'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+ */
+.scroll-always {
+  overflow: scroll !important;
+}
+
+/**
+ * Display scrollbars if content would flow beyond the edge of element.
+ *
+ * @memberof Miscellaneous
+ * @example
+ *   <div class='h48 scroll-auto'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+ */
+.scroll-auto {
+  overflow: auto !important;
+}
+
+/**
+ * Clip content if it reaches the edge of element.
+ *
+ * @memberof Miscellaneous
+ * @example
+ *   <div class='h48 clip'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+ */
+.clip {
+  overflow: hidden !important;
+}
+

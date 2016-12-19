@@ -35,7 +35,7 @@ function SemitransparentButtonExample(props) {
   if (props.color && props.stroke) modifiers += ` color-${props.color}`;
   if (props.color && !props.stroke) modifiers += ` bg-${props.color}`;
   return (
-    <div className='inline-block mr10'>
+    <div className='inline-block mr12'>
       <button className={`btn ${modifiers}`}>{props.color}</button>
     </div>
   );
@@ -53,14 +53,14 @@ class Buttons extends React.Component {
 
 
       return (
-        <div key={i} className='mb10'>
-          <div className='inline-block mr20'>
+        <div key={i} className='mb12'>
+          <div className='inline-block mr18'>
             <button className={buttonFillClass}>Fill</button>
           </div>
-          <div className='inline-block mr20'>
+          <div className='inline-block mr18'>
             <button className={buttonStrokeClass}>Stroke</button>
           </div>
-          <div className='inline-block mr20'>
+          <div className='inline-block mr18'>
             <button className={`${buttonFillClass} round`}>Less round</button>
           </div>
         </div>
@@ -82,20 +82,20 @@ class Buttons extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb20'>
+        <h1 className='txt-headline mb18'>
           Buttons
         </h1>
 
         {buttonEls}
 
-        <div className='mt20 p10 bg-blue'>
-          <div className='mb10'>
+        <div className='mt18 p12 bg-blue'>
+          <div className='mb12'>
             {lightenEls}
           </div>
-          <div className='mb10'>
+          <div className='mb12'>
             {lightenStrokeEls}
           </div>
-          <div className='mb10'>
+          <div className='mb12'>
             {darkenEls}
           </div>
           <div>

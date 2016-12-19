@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "copy-assets": "node scripts/copy-assets",
+    "clean-svgs": "node scripts/clean-svgs",
     "build:site": "babel-node scripts/render-site",
     "build:css": "mkdir -p dist && node scripts/process-css && npm run copy-assets",
     "build:svg": "mkdir -p dist && node scripts/create-svg-sprite",
@@ -14,10 +15,11 @@
     "lint:js": "eslint .",
     "lint": "npm run lint:css && npm run lint:js",
     "open": "opn http://localhost:9967/assembly",
-    "serve": "nodemon scripts/serve -w src -w site -e js,css --exec babel-node",
+    "serve": "nodemon scripts/serve -w src -w site -e js,css,html --exec babel-node",
     "start": "npm run build:svg && npm-run-all --parallel serve open",
+    "test:jest": "jest",
     "test:svgs": "tape test/test-icons.js | tap-spec",
-    "test": "npm run lint && npm run test:svgs && npm run build"
+    "test": "npm run lint && npm run test:svgs && npm run test:jest && npm run build"
   },
   "engines": {
     "node": ">4"
@@ -51,6 +53,7 @@
     "express": "^4.14.0",
     "globby": "^6.1.0",
     "highlight.js": "^9.8.0",
+    "jest": "^18.0.0",
     "lodash": "^4.17.2",
     "mkdirp": "^0.5.1",
     "nodemon": "^1.11.0",
@@ -66,11 +69,17 @@
     "react-lowlight": "^1.0.2",
     "remark": "^6.2.0",
     "remark-react": "^3.1.0",
+    "strip-indent": "^2.0.0",
     "stylelint": "^7.6.0",
     "svgo": "^0.7.1",
     "svgstore": "^1.1.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3",
     "xml2js": "^0.4.17"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathDirs": ["test"],
+    "testRegex": ".*\\.test\\.js$"
   }
 }

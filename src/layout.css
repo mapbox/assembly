@@ -4,7 +4,8 @@
  */
 
 /**
- * Limiter classes
+ * Use to apply fluid left and right margins across a variety of screen sizes. Designed to
+ * keep section width similar across a variety of screen sizes.
  */
 .limiter {
   width: 83.3333%;
@@ -13,33 +14,33 @@
   margin-right: auto;
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .limiter {
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
 /**
  * Flexbox utilities. Check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
- * to learn how the system works.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * to learn how the system works. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @memberof Layout
  * @group
  */
-.flex { display: flex !important; }
-.flex-inline { display: inline-flex !important; }
-.flex-column { flex-direction: column !important; }
-.flex-wrap { flex-wrap: wrap !important; }
-.flex-end { justify-content: flex-end !important; }
-.flex-center-x { justify-content: center !important; }
-.flex-center-y { align-items: center !important; }
-.flex-stretch-y { align-items: stretch !important; }
-.flex-noshrink { flex-shrink: 0 !important; }
-.flex-fill {
+.flex-parent { display: flex !important; }
+.flex-parent--inline { display: inline-flex !important; }
+.flex-parent--column { flex-direction: column !important; }
+.flex-parent--wrap { flex-wrap: wrap !important; }
+.flex-parent--justify-end { justify-content: flex-end !important; }
+.flex-parent--center-main { justify-content: center !important; }
+.flex-parent--center-cross { align-items: center !important; }
+.flex-parent--stretch-main { justify-content: stretch !important; }
+.flex-parent--stretch-cross { align-items: stretch !important; }
+
+.flex-child-noshrink { flex-shrink: 0 !important; }
+.flex-child-grow {
   flex-grow: 1;
   /* prevent overflowing chidlren
   clearfix. https://css-tricks.com/flexbox-truncated-text/ */
@@ -48,48 +49,48 @@
 /** @endgroup */
 
 @media only screen and (--large-screen) {
-  .flex-media-l { display: flex !important; }
-  .flex-none-media-l { flex: none !important; }
-  .flex-column-media-l { flex-direction: column !important; }
-  .flex-wrap-media-l { flex-wrap: wrap !important; }
-  .flex-end-media-l { justify-content: flex-end !important; }
-  .flex-center-x-media-l { justify-content: center !important; }
-  .flex-center-y-media-l { align-items: center !important; }
-  .flex-stretch-y-media-l { align-items: stretch !important; }
-  .flex-noshrink-media-l { flex-shrink: 0 !important; }
-  .flex-fill-media-l {
+  .flex-parent-media-l { display: flex-parent !important; }
+  .flex-parent-none-media-l { flex: none !important; }
+  .flex-parent--column-media-l { flex-direction: column !important; }
+  .flex-parent--wrap-media-l { flex-wrap: wrap !important; }
+  .flex-parent--justify-end-media-l { justify-content: flex-end !important; }
+  .flex-parent--center-main-media-l { justify-content: center !important; }
+  .flex-parent--center-cross-media-l { align-items: center !important; }
+  .flex-parent--stretch-cross-media-l { align-items: stretch !important; }
+  .flex-child-noshrink-media-l { flex-shrink: 0 !important; }
+  .flex-child-grow-media-l {
     flex-grow: 1 !important;
     min-width: 0 !important;
   }
 }
 
 @media only screen and (--medium-screen) {
-  .flex-media-m { display: flex !important; }
-  .flex-none-media-m { flex: none !important; }
-  .flex-column-media-m { flex-direction: column !important; }
-  .flex-wrap-media-m { flex-wrap: wrap !important; }
-  .flex-end-media-m { justify-content: flex-end !important; }
-  .flex-center-x-media-m { justify-content: center !important; }
-  .flex-center-y-media-m { align-items: center !important; }
-  .flex-stretch-y-media-m { align-items: stretch !important; }
-  .flex-noshrink-media-m { flex-shrink: 0 !important; }
-  .flex-fill-media-m {
+  .flex-parent-media-m { display: flex-parent !important; }
+  .flex-parent-none-media-m { flex: none !important; }
+  .flex-parent--column-media-m { flex-direction: column !important; }
+  .flex-parent--wrap-media-m { flex-wrap: wrap !important; }
+  .flex-parent--justify-end-media-m { justify-content: flex-end !important; }
+  .flex-parent--center-main-media-m { justify-content: center !important; }
+  .flex-parent--center-cross-media-m { align-items: center !important; }
+  .flex-parent--stretch-cross-media-m { align-items: stretch !important; }
+  .flex-child-noshrink-media-m { flex-shrink: 0 !important; }
+  .flex-child-grow-media-m {
     flex-grow: 1 !important;
     min-width: 0 !important;
   }
 }
 
 @media only screen and (--small-screen) {
-  .flex-media-s { display: flex !important; }
-  .flex-none-media-s { flex: none !important; }
-  .flex-column-media-s { flex-direction: column !important; }
-  .flex-wrap-media-s { flex-wrap: wrap !important; }
-  .flex-end-media-s { justify-content: flex-end !important; }
-  .flex-center-x-media-s { justify-content: center !important; }
-  .flex-center-y-media-s { align-items: center !important; }
-  .flex-stretch-y-media-s { align-items: stretch !important; }
-  .flex-noshrink-media-s { flex-shrink: 0 !important; }
-  .flex-fill-media-s {
+  .flex-parent-media-s { display: flex-parent !important; }
+  .flex-parent-none-media-s { flex: none !important; }
+  .flex-parent--column-media-s { flex-direction: column !important; }
+  .flex-parent--wrap-media-s { flex-wrap: wrap !important; }
+  .flex-parent--justify-end-media-s { justify-content: flex-end !important; }
+  .flex-parent--center-main-media-s { justify-content: center !important; }
+  .flex-parent--center-cross-media-s { align-items: center !important; }
+  .flex-parent--stretch-cross-media-s { align-items: stretch !important; }
+  .flex-child-noshrink-media-s { flex-shrink: 0 !important; }
+  .flex-child-grow-media-s {
     flex-grow: 1 !important;
     min-width: 0 !important;
   }
@@ -97,6 +98,8 @@
 
 /**
  * Column classes
+ * @group
+ * @memberof Layout
  */
 .col { flex-shrink: 0 !important; }
 .col--1 { width: 08.3333% !important; }
@@ -111,8 +114,9 @@
 .col--10 { width: 83.3333% !important; }
 .col--11 { width: 91.6666% !important; }
 .col--12 { width: 100% !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .col--1-media-l { width: 08.3333% !important; }
   .col--2-media-l { width: 16.6666% !important; }
   .col--3-media-l { width: 25% !important; }
@@ -127,7 +131,7 @@
   .col--12-media-l { width: 100% !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .col--1-media-m { width: 08.3333% !important; }
   .col--2-media-m { width: 16.6666% !important; }
   .col--3-media-m { width: 25% !important; }
@@ -142,7 +146,7 @@
   .col--12-media-m { width: 100% !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .col--1-media-s { width: 08.3333% !important; }
   .col--2-media-s { width: 16.6666% !important; }
   .col--3-media-s { width: 25% !important; }
@@ -161,42 +165,46 @@
  * Column container for grids.
  *
  * @example
- * <div class='grd grd--gut10'>
+ * <div class='grid grid--gut12'>
  *  <div class='col col--6'>
- *    <div class='p10 bg-blue-faint'>6</div>
+ *    <div class='p12 bg-blue-faint'>6</div>
  *  </div>
  *  <div class='col col--3'>
- *    <div class='p10 bg-blue-faint'>3</div>
+ *    <div class='p12 bg-blue-faint'>3</div>
  *  </div>
  *  <div class='col col--3'>
- *    <div class='p10 bg-blue-faint'>3</div>
+ *    <div class='p12 bg-blue-faint'>3</div>
  *  </div>
  * </div>
  */
-.grd {
+.grid {
   display: flex !important;
   flex-wrap: wrap !important;
 }
 
 /**
  * Column gutter classes
+ * @group
  */
-.grd--gut5 { margin-left: -5px !important; }
-.grd--gut10 { margin-left: -10px !important; }
-.grd--gut20 { margin-left: -20px !important; }
-.grd--gut40 { margin-left: -40px !important; }
-.grd--gut80 { margin-left: -80px !important; }
+.grid--gut6 { margin-left: -6px !important; }
+.grid--gut12 { margin-left: -12px !important; }
+.grid--gut24 { margin-left: -24px !important; }
+.grid--gut48 { margin-left: -48px !important; }
+.grid--gut96 { margin-left: -96px !important; }
+/** @endgroup */
 
 /* stylelint-disable selector-no-combinator */
-.grd--gut5 > .col { padding-left: 5px !important; }
-.grd--gut10 > .col { padding-left: 10px !important; }
-.grd--gut20 > .col { padding-left: 20px !important; }
-.grd--gut40 > .col { padding-left: 40px !important; }
-.grd--gut80 > .col { padding-left: 80px !important; }
+.grid--gut6 > .col { padding-left: 6px !important; }
+.grid--gut12 > .col { padding-left: 12px !important; }
+.grid--gut24 > .col { padding-left: 24px !important; }
+.grid--gut42 > .col { padding-left: 48px !important; }
+.grid--gut96 > .col { padding-left: 96px !important; }
 /* stylelint-enable selector-no-combinator */
 
 /**
- * Column offset classes
+ * Left column margins.
+ * @group
+ * @memberof Layout
  */
 .col--offl1 { margin-left: 08.3333% !important; }
 .col--offl2 { margin-left: 16.6666% !important; }
@@ -210,8 +218,9 @@
 .col--offl10 { margin-left: 83.3333% !important; }
 .col--offl11 { margin-left: 91.6666% !important; }
 .col--offl12 { margin-left: 100% !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .col--offl1-media-l { margin-left: 08.3333% !important; }
   .col--offl2-media-l { margin-left: 16.6666% !important; }
   .col--offl3-media-l { margin-left: 25% !important; }
@@ -226,7 +235,7 @@
   .col--offl12-media-l { margin-left: 100% !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .col--offl1-media-m { margin-left: 08.3333% !important; }
   .col--offl2-media-m { margin-left: 16.6666% !important; }
   .col--offl3-media-m { margin-left: 25% !important; }
@@ -241,7 +250,7 @@
   .col--offl12-media-m { margin-left: 100% !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .col--offl1-media-s { margin-left: 08.3333% !important; }
   .col--offl2-media-s { margin-left: 16.6666% !important; }
   .col--offl3-media-s { margin-left: 25% !important; }
@@ -256,6 +265,11 @@
   .col--offl12-media-s { margin-left: 100% !important; }
 }
 
+/**
+ * Right column margins.
+ * @group
+ * @memberof Layout
+ */
 .col--offr1 { margin-right: 08.3333% !important; }
 .col--offr2 { margin-right: 16.6666% !important; }
 .col--offr3 { margin-right: 25% !important; }
@@ -268,8 +282,9 @@
 .col--offr10 { margin-right: 83.3333% !important; }
 .col--offr11 { margin-right: 91.6666% !important; }
 .col--offr12 { margin-right: 100% !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .col--offr1-media-l { margin-right: 08.3333% !important; }
   .col--offr2-media-l { margin-right: 16.6666% !important; }
   .col--offr3-media-l { margin-right: 25% !important; }
@@ -284,7 +299,7 @@
   .col--offr12-media-l { margin-right: 100% !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .col--offr1-media-m { margin-right: 08.3333% !important; }
   .col--offr2-media-m { margin-right: 16.6666% !important; }
   .col--offr3-media-m { margin-right: 25% !important; }
@@ -299,7 +314,7 @@
   .col--offr12-media-m { margin-right: 100% !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .col--offr1-media-s { margin-right: 08.3333% !important; }
   .col--offr2-media-s { margin-right: 16.6666% !important; }
   .col--offr3-media-s { margin-right: 25% !important; }
@@ -320,7 +335,9 @@
  * content will overflow from the left and right sides of the screens. It is
  * generally necessary to add a `.clip` class on the parent to avoid overflow
  * with scrollbars.
- *
+ * @group
+ * @example
+ * <div>TODO</div>
  */
 .bleed {
   margin-left: calc(50% - 50vw) !important;
@@ -329,6 +346,7 @@
 
 .bleed-r { flex: 1 !important; margin-right: calc(50% - 50vw) !important; }
 .bleed-l { flex: 1 !important; margin-left: calc(50% - 50vw) !important; }
+/* @endgroup */
 
 /**
  * For non-grid, non-flexbox layouts.
@@ -356,9 +374,7 @@
 /** @endgroup */
 
 /**
- * Use display classes to control the display property of elements.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * Use display classes to control the display property of elements. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @section Display
  * @memberof Layout
@@ -368,20 +384,20 @@
  * @group
  * @memberof Display
  * @example
- * <div class="p10 border mb10">
- *   <div class="inline border border--cyan bor-all">inline</div>
+ * <div class="p12 border mb12">
+ *   <div class="inline border border--blue-light bor-all">inline</div>
  * </div>
- * <div class="p10 border mb10">
- *   <div class="block border border--cyan bor-all">block</div>
+ * <div class="p12 border mb12">
+ *   <div class="block border border--blue-light bor-all">block</div>
  * </div>
- * <div class="p10 border mb10">
- *   <div class="inline-block border border--cyan bor-all">inline-block</div>
+ * <div class="p12 border mb12">
+ *   <div class="inline-block border border--blue-light bor-all">inline-block</div>
  * </div>
- * <div class="p10 border mb10">
- *   <div class="flex border border--cyan bor-all">flex</div>
+ * <div class="p12 border mb12">
+ *   <div class="flex-parent border border--blue-light bor-all">flex</div>
  * </div>
- * <div class="p10 border">
- *   <div class="none border border--cyan bor-all">none</div>
+ * <div class="p12 border">
+ *   <div class="none border border--blue-light bor-all">none</div>
  * </div>
  */
 .inline { display: inline !important; }
@@ -390,21 +406,21 @@
 .none { display: none !important; }
 /** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .inline-media-l { display: inline !important; }
   .block-media-l { display: block !important; }
   .inline-block-media-l { display: inline-block !important; }
   .none-media-l { display: none !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .inline-media-m { display: inline !important; }
   .block-media-m { display: block !important; }
   .inline-block-media-m { display: inline-block !important; }
   .none-media-m { display: none !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .inline-media-s { display: inline !important; }
   .block-media-s { display: block !important; }
   .inline-block-media-s { display: inline-block !important; }
@@ -418,9 +434,7 @@
  */
 
 /**
- * Set an element's `position`.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * Set an element's `position`. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -431,21 +445,21 @@
 .static { position: static !important; }
 /** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .fixed-media-l { position: fixed !important; }
   .absolute-media-l { position: absolute !important; }
   .relative-media-l { position: relative !important; }
   .static-media-l { position: static !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .fixed-media-m { position: fixed !important; }
   .absolute-media-m { position: absolute !important; }
   .relative-media-m { position: relative !important; }
   .static-media-m { position: static !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .fixed-media-s { position: fixed !important; }
   .absolute-media-s { position: absolute !important; }
   .relative-media-s { position: relative !important; }
@@ -453,9 +467,7 @@
 }
 
 /**
- * Set positioned elements flush against a side of their container.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * Set positioned elements flush against a side of their container. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -466,21 +478,21 @@
 .bottom { bottom: 0 !important; }
 /** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .top-media-l { top: 0 !important; }
   .right-media-l { right: 0 !important; }
   .left-media-l { left: 0 !important; }
   .bottom-media-l { bottom: 0 !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .top-media-m { top: 0 !important; }
   .right-media-m { right: 0 !important; }
   .left-media-m { left: 0 !important; }
   .bottom-media-m { bottom: 0 !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .top-media-s { top: 0 !important; }
   .right-media-s { right: 0 !important; }
   .left-media-s { left: 0 !important; }
@@ -489,9 +501,7 @@
 
 /**
  * Override default stacking order with z-index classes. Whenever possible, rely on
- * built-in stacking order and avoid these rules.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * built-in stacking order and avoid these rules. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -505,7 +515,7 @@
 .z5 { z-index: 5 !important; }
 /** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .z-neg1-media-l { z-index: -1 !important; }
   .z0-media-l { z-index: 0 !important; }
   .z1-media-l { z-index: 1 !important; }
@@ -515,7 +525,7 @@
   .z5-media-l { z-index: 5 !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .z-neg1-media-m { z-index: -1 !important; }
   .z0-media-m { z-index: 0 !important; }
   .z1-media-m { z-index: 1 !important; }
@@ -525,7 +535,7 @@
   .z5-media-m { z-index: 5 !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .z-neg1-media-s { z-index: -1 !important; }
   .z0-media-s { z-index: 0 !important; }
   .z1-media-s { z-index: 1 !important; }
@@ -537,23 +547,7 @@
 
 /**
  * All margin classes follow the following pattern:
- * `m<side><margin-size>-<screen-size>`.
- *
- * "Side" is `l`, `t`, `r`, or `b`.
- *
- * All margin sizes increment by `5px` up to `20px`, by `10px` up to `60px`,
- * by `20px` up to `200px`, and by `200px` up to `800px`. This makes the list
- * of sizes:
- * `5`, `10`, `15`, `20`,
- * `30`, `40`, `50`, `60`,
- * `80`, `100`, `120`, `140`, `160`, `180`, `200`, `400`, `600`, `800`.
- *
- * Screen sizes are *optional* and are `-media-s`, `-media-m`, and `-media-l`.
- * These screen-size variations include classes that implement `0px`.
- *
- * Here are some examples that put the pieces together:
- * - `mt20`: margin-top of `20px`.
- * - `ml30-media-s`: margin-left of `30px` on small screens.
+ * `m<side><margin-size>-<screen-size>`. Screen sizes are *optional* and are `-media-s`, `-media-m`, and `-media-l`.
  *
  * @section Margins
  * @memberof Layout
@@ -562,389 +556,296 @@
 /**
  * @memberof Margins
  * @example
- * <div class='border border--gray clearfix'>
- *   <div class='fl mt10 ml30 mb5 mr10 bg-gray'>one</div>
- *   <div class='fl mt5 mb5 mr5 bg-gray'>two</div>
- *   <div class='fl ml30 bg-gray'>three</div>
+ * <div class='border'>
+ *   <div class='mt12 ml24 mb6 mr12 bg-blue-faint'>one</div>
+ *   <div class='mt6 mb6 mr6 bg-blue-faint'>two</div>
+ *   <div class='ml18 bg-blue-faint'>three</div>
  * </div>
  */
 
-/* Top margins */
+/**
+ * Top margins
+ * @group
+ * @memberof Margins
+ */
 .mt0 { margin-top: 0 !important; }
-.mt5 { margin-top: 5px !important; }
-.mt10 { margin-top: 10px !important; }
-.mt15 { margin-top: 15px !important; }
-.mt20 { margin-top: 20px !important; }
-.mt30 { margin-top: 30px !important; }
-.mt40 { margin-top: 40px !important; }
-.mt50 { margin-top: 50px !important; }
-.mt60 { margin-top: 60px !important; }
-.mt80 { margin-top: 80px !important; }
-.mt100 { margin-top: 100px !important; }
+.mt3 { margin-top: 3px !important; }
+.mt6 { margin-top: 6px !important; }
+.mt12 { margin-top: 12px !important; }
+.mt18 { margin-top: 18px !important; }
+.mt24 { margin-top: 24px !important; }
+.mt48 { margin-top: 48px !important; }
+.mt72 { margin-top: 72px !important; }
+.mt96 { margin-top: 96px !important; }
 .mt120 { margin-top: 120px !important; }
-.mt140 { margin-top: 140px !important; }
-.mt160 { margin-top: 160px !important; }
 .mt180 { margin-top: 180px !important; }
-.mt200 { margin-top: 200px !important; }
-.mt400 { margin-top: 400px !important; }
-.mt600 { margin-top: 600px !important; }
-.mt800 { margin-top: 800px !important; }
+.mt240 { margin-top: 240px !important; }
+.mt480 { margin-top: 480px !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .mt0-media-l { margin-top: 0 !important; }
-  .mt5-media-l { margin-top: 5px !important; }
-  .mt10-media-l { margin-top: 10px !important; }
-  .mt15-media-l { margin-top: 15px !important; }
-  .mt20-media-l { margin-top: 20px !important; }
-  .mt30-media-l { margin-top: 30px !important; }
-  .mt40-media-l { margin-top: 40px !important; }
-  .mt50-media-l { margin-top: 50px !important; }
-  .mt60-media-l { margin-top: 60px !important; }
-  .mt80-media-l { margin-top: 80px !important; }
-  .mt100-media-l { margin-top: 100px !important; }
+  .mt3-media-l { margin-top: 3px !important; }
+  .mt6-media-l { margin-top: 6px !important; }
+  .mt12-media-l { margin-top: 12px !important; }
+  .mt18-media-l { margin-top: 18px !important; }
+  .mt24-media-l { margin-top: 24px !important; }
+  .mt48-media-l { margin-top: 48px !important; }
+  .mt72-media-l { margin-top: 72px !important; }
+  .mt96-media-l { margin-top: 96px !important; }
   .mt120-media-l { margin-top: 120px !important; }
-  .mt140-media-l { margin-top: 140px !important; }
-  .mt160-media-l { margin-top: 160px !important; }
   .mt180-media-l { margin-top: 180px !important; }
-  .mt200-media-l { margin-top: 200px !important; }
-  .mt400-media-l { margin-top: 400px !important; }
-  .mt600-media-l { margin-top: 600px !important; }
-  .mt800-media-l { margin-top: 800px !important; }
+  .mt240-media-l { margin-top: 240px !important; }
+  .mt480-media-l { margin-top: 480px !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .mt0-media-m { margin-top: 0 !important; }
-  .mt5-media-m { margin-top: 5px !important; }
-  .mt10-media-m { margin-top: 10px !important; }
-  .mt15-media-m { margin-top: 15px !important; }
-  .mt20-media-m { margin-top: 20px !important; }
-  .mt30-media-m { margin-top: 30px !important; }
-  .mt40-media-m { margin-top: 40px !important; }
-  .mt50-media-m { margin-top: 50px !important; }
-  .mt60-media-m { margin-top: 60px !important; }
-  .mt80-media-m { margin-top: 80px !important; }
-  .mt100-media-m { margin-top: 100px !important; }
+  .mt3-media-m { margin-top: 3px !important; }
+  .mt6-media-m { margin-top: 6px !important; }
+  .mt12-media-m { margin-top: 12px !important; }
+  .mt18-media-m { margin-top: 18px !important; }
+  .mt24-media-m { margin-top: 24px !important; }
+  .mt48-media-m { margin-top: 48px !important; }
+  .mt72-media-m { margin-top: 72px !important; }
+  .mt96-media-m { margin-top: 96px !important; }
   .mt120-media-m { margin-top: 120px !important; }
-  .mt140-media-m { margin-top: 140px !important; }
-  .mt160-media-m { margin-top: 160px !important; }
   .mt180-media-m { margin-top: 180px !important; }
-  .mt200-media-m { margin-top: 200px !important; }
-  .mt400-media-m { margin-top: 400px !important; }
-  .mt600-media-m { margin-top: 600px !important; }
-  .mt800-media-m { margin-top: 800px !important; }
+  .mt240-media-m { margin-top: 240px !important; }
+  .mt480-media-m { margin-top: 480px !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .mt0-media-s { margin-top: 0 !important; }
-  .mt5-media-s { margin-top: 5px !important; }
-  .mt10-media-s { margin-top: 10px !important; }
-  .mt15-media-s { margin-top: 15px !important; }
-  .mt20-media-s { margin-top: 20px !important; }
-  .mt30-media-s { margin-top: 30px !important; }
-  .mt40-media-s { margin-top: 40px !important; }
-  .mt50-media-s { margin-top: 50px !important; }
-  .mt60-media-s { margin-top: 60px !important; }
-  .mt80-media-s { margin-top: 80px !important; }
-  .mt100-media-s { margin-top: 100px !important; }
+  .mt3-media-s { margin-top: 3px !important; }
+  .mt6-media-s { margin-top: 6px !important; }
+  .mt12-media-s { margin-top: 12px !important; }
+  .mt18-media-s { margin-top: 18px !important; }
+  .mt24-media-s { margin-top: 24px !important; }
+  .mt48-media-s { margin-top: 48px !important; }
+  .mt72-media-s { margin-top: 72px !important; }
+  .mt96-media-s { margin-top: 96px !important; }
   .mt120-media-s { margin-top: 120px !important; }
-  .mt140-media-s { margin-top: 140px !important; }
-  .mt160-media-s { margin-top: 160px !important; }
   .mt180-media-s { margin-top: 180px !important; }
-  .mt200-media-s { margin-top: 200px !important; }
-  .mt400-media-s { margin-top: 400px !important; }
-  .mt600-media-s { margin-top: 600px !important; }
-  .mt800-media-s { margin-top: 800px !important; }
+  .mt240-media-s { margin-top: 240px !important; }
+  .mt480-media-s { margin-top: 480px !important; }
 }
 
-/* Right margins */
+/**
+ * Right margins
+ * @group
+ * @memberof Margins
+ */
 .mr0 { margin-right: 0 !important; }
-.mr5 { margin-right: 5px !important; }
-.mr10 { margin-right: 10px !important; }
-.mr15 { margin-right: 15px !important; }
-.mr20 { margin-right: 20px !important; }
-.mr30 { margin-right: 30px !important; }
-.mr40 { margin-right: 40px !important; }
-.mr50 { margin-right: 50px !important; }
-.mr60 { margin-right: 60px !important; }
-.mr80 { margin-right: 80px !important; }
-.mr100 { margin-right: 100px !important; }
+.mr3 { margin-right: 3px !important; }
+.mr6 { margin-right: 6px !important; }
+.mr12 { margin-right: 12px !important; }
+.mr18 { margin-right: 18px !important; }
+.mr24 { margin-right: 24px !important; }
+.mr48 { margin-right: 48px !important; }
+.mr72 { margin-right: 72px !important; }
+.mr96 { margin-right: 96px !important; }
 .mr120 { margin-right: 120px !important; }
-.mr140 { margin-right: 140px !important; }
-.mr160 { margin-right: 160px !important; }
 .mr180 { margin-right: 180px !important; }
-.mr200 { margin-right: 200px !important; }
-.mr400 { margin-right: 400px !important; }
-.mr600 { margin-right: 600px !important; }
-.mr800 { margin-right: 800px !important; }
+.mr240 { margin-right: 240px !important; }
+.mr480 { margin-right: 480px !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
-  .mr0-media-l { margin-right: 0 !important; }
-  .mr5-media-l { margin-right: 5px !important; }
-  .mr10-media-l { margin-right: 10px !important; }
-  .mr15-media-l { margin-right: 15px !important; }
-  .mr20-media-l { margin-right: 20px !important; }
-  .mr30-media-l { margin-right: 30px !important; }
-  .mr40-media-l { margin-right: 40px !important; }
-  .mr50-media-l { margin-right: 50px !important; }
-  .mr60-media-l { margin-right: 60px !important; }
-  .mr80-media-l { margin-right: 80px !important; }
-  .mr100-media-l { margin-right: 100px !important; }
-  .mr120-media-l { margin-right: 120px !important; }
-  .mr140-media-l { margin-right: 140px !important; }
-  .mr160-media-l { margin-right: 160px !important; }
-  .mr180-media-l { margin-right: 180px !important; }
-  .mr200-media-l { margin-right: 200px !important; }
-  .mr400-media-l { margin-right: 400px !important; }
-  .mr600-media-l { margin-right: 600px !important; }
-  .mr800-media-l { margin-right: 800px !important; }
+@media only (--large-screen) {
+  .mr0-l { margin-right: 0 !important; }
+  .mr3-l { margin-right: 3px !important; }
+  .mr6-l { margin-right: 6px !important; }
+  .mr12-l { margin-right: 12px !important; }
+  .mr18-l { margin-right: 18px !important; }
+  .mr24-l { margin-right: 24px !important; }
+  .mr48-l { margin-right: 48px !important; }
+  .mr72-l { margin-right: 72px !important; }
+  .mr96-l { margin-right: 96px !important; }
+  .mr120-l { margin-right: 120px !important; }
+  .mr180-l { margin-right: 180px !important; }
+  .mr240-l { margin-right: 240px !important; }
+  .mr480-l { margin-right: 480px !important; }
 }
 
-@media only screen and (--medium-screen) {
-  .mr0-media-m { margin-right: 0 !important; }
-  .mr5-media-m { margin-right: 5px !important; }
-  .mr10-media-m { margin-right: 10px !important; }
-  .mr15-media-m { margin-right: 15px !important; }
-  .mr20-media-m { margin-right: 20px !important; }
-  .mr30-media-m { margin-right: 30px !important; }
-  .mr40-media-m { margin-right: 40px !important; }
-  .mr50-media-m { margin-right: 50px !important; }
-  .mr60-media-m { margin-right: 60px !important; }
-  .mr80-media-m { margin-right: 80px !important; }
-  .mr100-media-m { margin-right: 100px !important; }
-  .mr120-media-m { margin-right: 120px !important; }
-  .mr140-media-m { margin-right: 140px !important; }
-  .mr160-media-m { margin-right: 160px !important; }
-  .mr180-media-m { margin-right: 180px !important; }
-  .mr200-media-m { margin-right: 200px !important; }
-  .mr400-media-m { margin-right: 400px !important; }
-  .mr600-media-m { margin-right: 600px !important; }
-  .mr800-media-m { margin-right: 800px !important; }
+@media only (--medium-screen) {
+  .mr0-m { margin-right: 0 !important; }
+  .mr3-m { margin-right: 3px !important; }
+  .mr6-m { margin-right: 6px !important; }
+  .mr12-m { margin-right: 12px !important; }
+  .mr18-m { margin-right: 18px !important; }
+  .mr24-m { margin-right: 24px !important; }
+  .mr48-m { margin-right: 48px !important; }
+  .mr72-m { margin-right: 72px !important; }
+  .mr96-m { margin-right: 96px !important; }
+  .mr120-m { margin-right: 120px !important; }
+  .mr180-m { margin-right: 180px !important; }
+  .mr240-m { margin-right: 240px !important; }
+  .mr480-m { margin-right: 480px !important; }
 }
 
-@media only screen and (--small-screen) {
-  .mr0-media-s { margin-right: 0 !important; }
-  .mr5-media-s { margin-right: 5px !important; }
-  .mr10-media-s { margin-right: 10px !important; }
-  .mr15-media-s { margin-right: 15px !important; }
-  .mr20-media-s { margin-right: 20px !important; }
-  .mr30-media-s { margin-right: 30px !important; }
-  .mr40-media-s { margin-right: 40px !important; }
-  .mr50-media-s { margin-right: 50px !important; }
-  .mr60-media-s { margin-right: 60px !important; }
-  .mr80-media-s { margin-right: 80px !important; }
-  .mr100-media-s { margin-right: 100px !important; }
-  .mr120-media-s { margin-right: 120px !important; }
-  .mr140-media-s { margin-right: 140px !important; }
-  .mr160-media-s { margin-right: 160px !important; }
-  .mr180-media-s { margin-right: 180px !important; }
-  .mr200-media-s { margin-right: 200px !important; }
-  .mr400-media-s { margin-right: 400px !important; }
-  .mr600-media-s { margin-right: 600px !important; }
-  .mr800-media-s { margin-right: 800px !important; }
+@media only (--small-screen) {
+  .mr0-s { margin-right: 0 !important; }
+  .mr3-s { margin-right: 3px !important; }
+  .mr6-s { margin-right: 6px !important; }
+  .mr12-s { margin-right: 12px !important; }
+  .mr18-s { margin-right: 18px !important; }
+  .mr24-s { margin-right: 24px !important; }
+  .mr48-s { margin-right: 48px !important; }
+  .mr72-s { margin-right: 72px !important; }
+  .mr96-s { margin-right: 96px !important; }
+  .mr120-s { margin-right: 120px !important; }
+  .mr180-s { margin-right: 180px !important; }
+  .mr240-s { margin-right: 240px !important; }
+  .mr480-s { margin-right: 480px !important; }
 }
 
-/* Bottom margins */
+/**
+ * Bottom margins
+ * @group
+ * @memberof Margins
+ */
 .mb-neg1 { margin-bottom: -1px !important; }
 .mb-neg2 { margin-bottom: -2px !important; }
 .mb0 { margin-bottom: 0 !important; }
-.mb5 { margin-bottom: 5px !important; }
-.mb10 { margin-bottom: 10px !important; }
-.mb15 { margin-bottom: 15px !important; }
-.mb20 { margin-bottom: 20px !important; }
-.mb30 { margin-bottom: 30px !important; }
-.mb40 { margin-bottom: 40px !important; }
-.mb50 { margin-bottom: 50px !important; }
-.mb60 { margin-bottom: 60px !important; }
-.mb80 { margin-bottom: 80px !important; }
-.mb100 { margin-bottom: 100px !important; }
+.mb3 { margin-bottom: 3px !important; }
+.mb6 { margin-bottom: 6px !important; }
+.mb12 { margin-bottom: 12px !important; }
+.mb18 { margin-bottom: 18px !important; }
+.mb24 { margin-bottom: 24px !important; }
+.mb48 { margin-bottom: 48px !important; }
+.mb72 { margin-bottom: 72px !important; }
+.mb96 { margin-bottom: 96px !important; }
 .mb120 { margin-bottom: 120px !important; }
-.mb140 { margin-bottom: 140px !important; }
-.mb160 { margin-bottom: 160px !important; }
 .mb180 { margin-bottom: 180px !important; }
-.mb200 { margin-bottom: 200px !important; }
-.mb400 { margin-bottom: 400px !important; }
-.mb600 { margin-bottom: 600px !important; }
-.mb800 { margin-bottom: 800px !important; }
+.mb240 { margin-bottom: 240px !important; }
+.mb480 { margin-bottom: 480px !important; }
+/* @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .mb-neg1-media-l { margin-bottom: -1px !important; }
   .mb-neg2-media-l { margin-bottom: -2px !important; }
   .mb0-media-l { margin-bottom: 0 !important; }
-  .mb5-media-l { margin-bottom: 5px !important; }
-  .mb10-media-l { margin-bottom: 10px !important; }
-  .mb15-media-l { margin-bottom: 15px !important; }
-  .mb20-media-l { margin-bottom: 20px !important; }
-  .mb30-media-l { margin-bottom: 30px !important; }
-  .mb40-media-l { margin-bottom: 40px !important; }
-  .mb50-media-l { margin-bottom: 50px !important; }
-  .mb60-media-l { margin-bottom: 60px !important; }
-  .mb80-media-l { margin-bottom: 80px !important; }
-  .mb100-media-l { margin-bottom: 100px !important; }
+  .mb3-media-l { margin-bottom: 3px !important; }
+  .mb6-media-l { margin-bottom: 6px !important; }
+  .mb12-media-l { margin-bottom: 12px !important; }
+  .mb18-media-l { margin-bottom: 18px !important; }
+  .mb24-media-l { margin-bottom: 24px !important; }
+  .mb48-media-l { margin-bottom: 48px !important; }
+  .mb72-media-l { margin-bottom: 72px !important; }
+  .mb96-media-l { margin-bottom: 96px !important; }
   .mb120-media-l { margin-bottom: 120px !important; }
-  .mb140-media-l { margin-bottom: 140px !important; }
-  .mb160-media-l { margin-bottom: 160px !important; }
   .mb180-media-l { margin-bottom: 180px !important; }
-  .mb200-media-l { margin-bottom: 200px !important; }
-  .mb400-media-l { margin-bottom: 400px !important; }
-  .mb600-media-l { margin-bottom: 600px !important; }
-  .mb800-media-l { margin-bottom: 800px !important; }
+  .mb240-media-l { margin-bottom: 240px !important; }
+  .mb480-media-l { margin-bottom: 480px !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .mb-neg1-media-m { margin-bottom: -1px !important; }
   .mb-neg2-media-m { margin-bottom: -2px !important; }
   .mb0-media-m { margin-bottom: 0 !important; }
-  .mb5-media-m { margin-bottom: 5px !important; }
-  .mb10-media-m { margin-bottom: 10px !important; }
-  .mb15-media-m { margin-bottom: 15px !important; }
-  .mb20-media-m { margin-bottom: 20px !important; }
-  .mb30-media-m { margin-bottom: 30px !important; }
-  .mb40-media-m { margin-bottom: 40px !important; }
-  .mb50-media-m { margin-bottom: 50px !important; }
-  .mb60-media-m { margin-bottom: 60px !important; }
-  .mb80-media-m { margin-bottom: 80px !important; }
-  .mb100-media-m { margin-bottom: 100px !important; }
+  .mb3-media-m { margin-bottom: 3px !important; }
+  .mb6-media-m { margin-bottom: 6px !important; }
+  .mb12-media-m { margin-bottom: 12px !important; }
+  .mb18-media-m { margin-bottom: 18px !important; }
+  .mb24-media-m { margin-bottom: 24px !important; }
+  .mb48-media-m { margin-bottom: 48px !important; }
+  .mb72-media-m { margin-bottom: 72px !important; }
+  .mb96-media-m { margin-bottom: 96px !important; }
   .mb120-media-m { margin-bottom: 120px !important; }
-  .mb140-media-m { margin-bottom: 140px !important; }
-  .mb160-media-m { margin-bottom: 160px !important; }
   .mb180-media-m { margin-bottom: 180px !important; }
-  .mb200-media-m { margin-bottom: 200px !important; }
-  .mb400-media-m { margin-bottom: 400px !important; }
-  .mb600-media-m { margin-bottom: 600px !important; }
-  .mb800-media-m { margin-bottom: 800px !important; }
+  .mb240-media-m { margin-bottom: 240px !important; }
+  .mb480-media-m { margin-bottom: 480px !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .mb-neg1-media-s { margin-bottom: -1px !important; }
   .mb-neg2-media-s { margin-bottom: -2px !important; }
   .mb0-media-s { margin-bottom: 0 !important; }
-  .mb5-media-s { margin-bottom: 5px !important; }
-  .mb10-media-s { margin-bottom: 10px !important; }
-  .mb15-media-s { margin-bottom: 15px !important; }
-  .mb20-media-s { margin-bottom: 20px !important; }
-  .mb30-media-s { margin-bottom: 30px !important; }
-  .mb40-media-s { margin-bottom: 40px !important; }
-  .mb50-media-s { margin-bottom: 50px !important; }
-  .mb60-media-s { margin-bottom: 60px !important; }
-  .mb80-media-s { margin-bottom: 80px !important; }
-  .mb100-media-s { margin-bottom: 100px !important; }
+  .mb3-media-s { margin-bottom: 3px !important; }
+  .mb6-media-s { margin-bottom: 6px !important; }
+  .mb12-media-s { margin-bottom: 12px !important; }
+  .mb18-media-s { margin-bottom: 18px !important; }
+  .mb24-media-s { margin-bottom: 24px !important; }
+  .mb48-media-s { margin-bottom: 48px !important; }
+  .mb72-media-s { margin-bottom: 72px !important; }
+  .mb96-media-s { margin-bottom: 96px !important; }
   .mb120-media-s { margin-bottom: 120px !important; }
-  .mb140-media-s { margin-bottom: 140px !important; }
-  .mb160-media-s { margin-bottom: 160px !important; }
   .mb180-media-s { margin-bottom: 180px !important; }
-  .mb200-media-s { margin-bottom: 200px !important; }
-  .mb400-media-s { margin-bottom: 400px !important; }
-  .mb600-media-s { margin-bottom: 600px !important; }
-  .mb800-media-s { margin-bottom: 800px !important; }
+  .mb240-media-s { margin-bottom: 240px !important; }
+  .mb480-media-s { margin-bottom: 480px !important; }
 }
 
-/* Left margins */
+/**
+ * Left margins
+ * @group
+ * @memberof Margins
+ */
 .ml0 { margin-left: 0 !important; }
-.ml5 { margin-left: 5px !important; }
-.ml10 { margin-left: 10px !important; }
-.ml15 { margin-left: 15px !important; }
-.ml20 { margin-left: 20px !important; }
-.ml30 { margin-left: 30px !important; }
-.ml40 { margin-left: 40px !important; }
-.ml50 { margin-left: 50px !important; }
-.ml60 { margin-left: 60px !important; }
-.ml80 { margin-left: 80px !important; }
-.ml100 { margin-left: 100px !important; }
+.ml6 { margin-left: 6px !important; }
+.ml3 { margin-left: 3px !important; }
+.ml12 { margin-left: 12px !important; }
+.ml18 { margin-left: 18px !important; }
+.ml24 { margin-left: 24px !important; }
+.ml48 { margin-left: 48px !important; }
+.ml72 { margin-left: 72px !important; }
+.ml96 { margin-left: 96px !important; }
 .ml120 { margin-left: 120px !important; }
-.ml140 { margin-left: 140px !important; }
-.ml160 { margin-left: 160px !important; }
 .ml180 { margin-left: 180px !important; }
-.ml200 { margin-left: 200px !important; }
-.ml400 { margin-left: 400px !important; }
-.ml600 { margin-left: 600px !important; }
-.ml800 { margin-left: 800px !important; }
+.ml240 { margin-left: 240px !important; }
+.ml480 { margin-left: 480px !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .ml0-media-l { margin-left: 0 !important; }
-  .ml5-media-l { margin-left: 5px !important; }
-  .ml10-media-l { margin-left: 10px !important; }
-  .ml15-media-l { margin-left: 15px !important; }
-  .ml20-media-l { margin-left: 20px !important; }
-  .ml30-media-l { margin-left: 30px !important; }
-  .ml40-media-l { margin-left: 40px !important; }
-  .ml50-media-l { margin-left: 50px !important; }
-  .ml60-media-l { margin-left: 60px !important; }
-  .ml80-media-l { margin-left: 80px !important; }
-  .ml100-media-l { margin-left: 100px !important; }
+  .ml3-media-l { margin-left: 3px !important; }
+  .ml6-media-l { margin-left: 6px !important; }
+  .ml12-media-l { margin-left: 12px !important; }
+  .ml18-media-l { margin-left: 18px !important; }
+  .ml24-media-l { margin-left: 24px !important; }
+  .ml48-media-l { margin-left: 48px !important; }
+  .ml72-media-l { margin-left: 72px !important; }
+  .ml96-media-l { margin-left: 96px !important; }
   .ml120-media-l { margin-left: 120px !important; }
-  .ml140-media-l { margin-left: 140px !important; }
-  .ml160-media-l { margin-left: 160px !important; }
   .ml180-media-l { margin-left: 180px !important; }
-  .ml200-media-l { margin-left: 200px !important; }
-  .ml400-media-l { margin-left: 400px !important; }
-  .ml600-media-l { margin-left: 600px !important; }
-  .ml800-media-l { margin-left: 800px !important; }
+  .ml240-media-l { margin-left: 240px !important; }
+  .ml480-media-l { margin-left: 480px !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .ml0-media-m { margin-left: 0 !important; }
-  .ml5-media-m { margin-left: 5px !important; }
-  .ml10-media-m { margin-left: 10px !important; }
-  .ml15-media-m { margin-left: 15px !important; }
-  .ml20-media-m { margin-left: 20px !important; }
-  .ml30-media-m { margin-left: 30px !important; }
-  .ml40-media-m { margin-left: 40px !important; }
-  .ml50-media-m { margin-left: 50px !important; }
-  .ml60-media-m { margin-left: 60px !important; }
-  .ml80-media-m { margin-left: 80px !important; }
-  .ml100-media-m { margin-left: 100px !important; }
+  .ml3-media-m { margin-left: 3px !important; }
+  .ml6-media-m { margin-left: 6px !important; }
+  .ml12-media-m { margin-left: 12px !important; }
+  .ml18-media-m { margin-left: 18px !important; }
+  .ml24-media-m { margin-left: 24px !important; }
+  .ml48-media-m { margin-left: 48px !important; }
+  .ml72-media-m { margin-left: 72px !important; }
+  .ml96-media-m { margin-left: 96px !important; }
   .ml120-media-m { margin-left: 120px !important; }
-  .ml140-media-m { margin-left: 140px !important; }
-  .ml160-media-m { margin-left: 160px !important; }
   .ml180-media-m { margin-left: 180px !important; }
-  .ml200-media-m { margin-left: 200px !important; }
-  .ml400-media-m { margin-left: 400px !important; }
-  .ml600-media-m { margin-left: 600px !important; }
-  .ml800-media-m { margin-left: 800px !important; }
+  .ml240-media-m { margin-left: 240px !important; }
+  .ml480-media-m { margin-left: 480px !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .ml0-media-s { margin-left: 0 !important; }
-  .ml5-media-s { margin-left: 5px !important; }
-  .ml10-media-s { margin-left: 10px !important; }
-  .ml15-media-s { margin-left: 15px !important; }
-  .ml20-media-s { margin-left: 20px !important; }
-  .ml30-media-s { margin-left: 30px !important; }
-  .ml40-media-s { margin-left: 40px !important; }
-  .ml50-media-s { margin-left: 50px !important; }
-  .ml60-media-s { margin-left: 60px !important; }
-  .ml80-media-s { margin-left: 80px !important; }
-  .ml100-media-s { margin-left: 100px !important; }
+  .ml3-media-s { margin-left: 3px !important; }
+  .ml6-media-s { margin-left: 6px !important; }
+  .ml12-media-s { margin-left: 12px !important; }
+  .ml18-media-s { margin-left: 18px !important; }
+  .ml24-media-s { margin-left: 24px !important; }
+  .ml48-media-s { margin-left: 48px !important; }
+  .ml72-media-s { margin-left: 72px !important; }
+  .ml96-media-s { margin-left: 96px !important; }
   .ml120-media-s { margin-left: 120px !important; }
-  .ml140-media-s { margin-left: 140px !important; }
-  .ml160-media-s { margin-left: 160px !important; }
   .ml180-media-s { margin-left: 180px !important; }
-  .ml200-media-s { margin-left: 200px !important; }
-  .ml400-media-s { margin-left: 400px !important; }
-  .ml600-media-s { margin-left: 600px !important; }
-  .ml800-media-s { margin-left: 800px !important; }
+  .ml240-media-s { margin-left: 240px !important; }
+  .ml480-media-s { margin-left: 480px !important; }
 }
 
 /**
  * All padding classes follow the following pattern:
- * `m<side><padding-size>-<screen-size>`.
- *
- * "Side" is `l`, `t`, `r`, `b`, `x` (left-and-right), `y` (top-and-bottom).
- *
- * All padding sizes increment by `5px` up to `20px`, by `10px` up to `60px`,
- * and by `20px` up to `100px`. This makes the list
- * of sizes:
- * `5`, `10`, `15`, `20`,
- * `30`, `40`, `50`, `60`,
- * `80`, `100`.
- *
- * Screen sizes are *optional* and are `-media-s`, `-media-m`, and `-media-l`.
- * These screen-size variations include classes that implement `0px`.
- *
- * Here are some examples that put the pieces together:
- * - `pt20`: padding-top of `20px`.
- * - `py30`: padding-top and -bottom of `20px`.
- * - `pl5-media-s`: padding-left of `5px` on small screens.
+ * `m<side><padding-size>-<screen-size>`. Screen sizes are *optional* and are `-media-s`, `-media-m`, and `-media-l`.
  *
  * @section Padding
  * @memberof Layout
@@ -954,485 +855,275 @@
  * @memberof Padding
  * @example
  * <div class='border border--gray clearfix'>
- *   <div class='fl pt10 pl30 pb5 pr10 bg-gray'>one</div>
- *   <div class='fl py5 pr5 bg-blue'>two</div>
- *   <div class='fl pl30 bg-red'>three</div>
+ *   <div class='fl pt12 pl24 pb6 pr12 bg-blue-faint'>one</div>
+ *   <div class='fl py6 pr6 bg-blue'>two</div>
+ *   <div class='fl pl48 bg-red'>three</div>
  * </div>
  */
 
-/* Padding on all sides */
+/**
+ * Padding on all sides
+ * @group
+ * @memberof Padding
+ */
 .p0 { padding: 0 !important; }
-.p5 { padding: 5px !important; }
-.p10 { padding: 10px !important; }
-.p15 { padding: 15px !important; }
-.p20 { padding: 20px !important; }
-.p30 { padding: 30px !important; }
-.p40 { padding: 40px !important; }
-.p45 { padding: 50px !important; }
-.p60 { padding: 60px !important; }
-.p80 { padding: 80px !important; }
-.p100 { padding: 100px !important; }
+.p3 { padding: 3px !important; }
+.p6 { padding: 6px !important; }
+.p12 { padding: 12px !important; }
+.p18 { padding: 18px !important; }
+.p24 { padding: 24px !important; }
+.p48 { padding: 48px !important; }
+.p72 { padding: 72px !important; }
+.p96 { padding: 96px !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .p0-media-l { padding: 0 !important; }
-  .p5-media-l { padding: 5px !important; }
-  .p10-media-l { padding: 10px !important; }
-  .p15-media-l { padding: 15px !important; }
-  .p20-media-l { padding: 20px !important; }
-  .p30-media-l { padding: 30px !important; }
-  .p40-media-l { padding: 40px !important; }
-  .p45-media-l { padding: 50px !important; }
-  .p60-media-l { padding: 60px !important; }
-  .p80-media-l { padding: 80px !important; }
-  .p100-media-l { padding: 100px !important; }
+  .p3-media-l { padding: 3px !important; }
+  .p6-media-l { padding: 6px !important; }
+  .p12-media-l { padding: 12px !important; }
+  .p18-media-l { padding: 18px !important; }
+  .p24-media-l { padding: 24px !important; }
+  .p48-media-l { padding: 48px !important; }
+  .p72-media-l { padding: 72px !important; }
+  .p96-media-l { padding: 96px !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .p0-media-m { padding: 0 !important; }
-  .p5-media-m { padding: 5px !important; }
-  .p10-media-m { padding: 10px !important; }
-  .p15-media-m { padding: 15px !important; }
-  .p20-media-m { padding: 20px !important; }
-  .p30-media-m { padding: 30px !important; }
-  .p40-media-m { padding: 40px !important; }
-  .p45-media-m { padding: 50px !important; }
-  .p60-media-m { padding: 60px !important; }
-  .p80-media-m { padding: 80px !important; }
-  .p100-media-m { padding: 100px !important; }
+  .p3-media-m { padding: 3px !important; }
+  .p6-media-m { padding: 6px !important; }
+  .p12-media-m { padding: 12px !important; }
+  .p18-media-m { padding: 18px !important; }
+  .p24-media-m { padding: 24px !important; }
+  .p48-media-m { padding: 48px !important; }
+  .p72-media-m { padding: 72px !important; }
+  .p96-media-m { padding: 96px !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .p0-media-s { padding: 0 !important; }
-  .p5-media-s { padding: 5px !important; }
-  .p10-media-s { padding: 10px !important; }
-  .p15-media-s { padding: 15px !important; }
-  .p20-media-s { padding: 20px !important; }
-  .p30-media-s { padding: 30px !important; }
-  .p40-media-s { padding: 40px !important; }
-  .p45-media-s { padding: 50px !important; }
-  .p60-media-s { padding: 60px !important; }
-  .p80-media-s { padding: 80px !important; }
-  .p100-media-s { padding: 100px !important; }
+  .p3-media-s { padding: 3px !important; }
+  .p6-media-s { padding: 6px !important; }
+  .p12-media-s { padding: 12px !important; }
+  .p18-media-s { padding: 18px !important; }
+  .p24-media-s { padding: 24px !important; }
+  .p48-media-s { padding: 48px !important; }
+  .p72-media-s { padding: 72px !important; }
+  .p96-media-s { padding: 96px !important; }
 }
 
-/* Top padding */
-.py0,
+/**
+ * Top padding
+ * @group
+ * @memberof Padding
+ */
 .pt0 { padding-top: 0 !important; }
-.py5,
-.pt5 { padding-top: 5px !important; }
-.py10,
-.pt10 { padding-top: 10px !important; }
-.py15,
-.pt15 { padding-top: 15px !important; }
-.py20,
-.pt20 { padding-top: 20px !important; }
-.py30,
-.pt30 { padding-top: 30px !important; }
-.py40,
-.pt40 { padding-top: 40px !important; }
-.py50,
-.pt50 { padding-top: 50px !important; }
-.py60,
-.pt60 { padding-top: 60px !important; }
-.py80,
-.pt80 { padding-top: 80px !important; }
-.py100,
-.pt100 { padding-top: 100px !important; }
+.pt3 { padding-top: 3px !important; }
+.pt6 { padding-top: 6px !important; }
+.pt12 { padding-top: 12px !important; }
+.pt18 { padding-top: 18px !important; }
+.pt24 { padding-top: 24px !important; }
+.pt48 { padding-top: 48px !important; }
+.pt72 { padding-top: 72px !important; }
+.pt96 { padding-top: 96px !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
-  .pt0-media-l,
-  .py0-media-l { padding-top: 0 !important; }
-  .pt5-media-l,
-  .py5-media-l { padding-top: 5px !important; }
-  .pt10-media-l,
-  .py10-media-l { padding-top: 10px !important; }
-  .pt15-media-l,
-  .py15-media-l { padding-top: 15px !important; }
-  .pt20-media-l,
-  .py20-media-l { padding-top: 20px !important; }
-  .pt30-media-l,
-  .py30-media-l { padding-top: 30px !important; }
-  .pt40-media-l,
-  .py40-media-l { padding-top: 40px !important; }
-  .pt50-media-l,
-  .py50-media-l { padding-top: 50px !important; }
-  .pt60-media-l,
-  .py60-media-l { padding-top: 60px !important; }
-  .pt80-media-l,
-  .py80-media-l { padding-top: 80px !important; }
-  .pt100-media-l,
-  .py100-media-l { padding-top: 100px !important; }
+@media only (--large-screen) {
+  .pt0-media-l { padding-top: 0 !important; }
+  .pt3-media-l { padding-top: 3px !important; }
+  .pt6-media-l { padding-top: 6px !important; }
+  .pt12-media-l { padding-top: 12px !important; }
+  .pt18-media-l { padding-top: 18px !important; }
+  .pt24-media-l { padding-top: 24px !important; }
+  .pt48-media-l { padding-top: 48px !important; }
+  .pt72-media-l { padding-top: 72px !important; }
+  .pt96-media-l { padding-top: 96px !important; }
 }
 
-@media only screen and (--medium-screen) {
-  .pt0-media-m,
-  .py0-media-m { padding-top: 0 !important; }
-  .pt5-media-m,
-  .py5-media-m { padding-top: 5px !important; }
-  .pt10-media-m,
-  .py10-media-m { padding-top: 10px !important; }
-  .pt15-media-m,
-  .py15-media-m { padding-top: 15px !important; }
-  .pt20-media-m,
-  .py20-media-m { padding-top: 20px !important; }
-  .pt30-media-m,
-  .py30-media-m { padding-top: 30px !important; }
-  .pt40-media-m,
-  .py40-media-m { padding-top: 40px !important; }
-  .pt50-media-m,
-  .py50-media-m { padding-top: 50px !important; }
-  .pt60-media-m,
-  .py60-media-m { padding-top: 60px !important; }
-  .pt80-media-m,
-  .py80-media-m { padding-top: 80px !important; }
-  .pt100-media-m,
-  .py100-media-m { padding-top: 100px !important; }
+@media only (--medium-screen) {
+  .pt0-media-m { padding-top: 0 !important; }
+  .pt3-media-m { padding-top: 3px !important; }
+  .pt6-media-m { padding-top: 6px !important; }
+  .pt12-media-m { padding-top: 12px !important; }
+  .pt18-media-m { padding-top: 18px !important; }
+  .pt24-media-m { padding-top: 24px !important; }
+  .pt48-media-m { padding-top: 48px !important; }
+  .pt72-media-m { padding-top: 72px !important; }
+  .pt96-media-m { padding-top: 96px !important; }
 }
 
-@media only screen and (--small-screen) {
-  .pt0-media-s,
-  .py0-media-s { padding-top: 0 !important; }
-  .pt5-media-s,
-  .py5-media-s { padding-top: 5px !important; }
-  .pt10-media-s,
-  .py10-media-s { padding-top: 10px !important; }
-  .pt15-media-s,
-  .py15-media-s { padding-top: 15px !important; }
-  .pt20-media-s,
-  .py20-media-s { padding-top: 20px !important; }
-  .pt30-media-s,
-  .py30-media-s { padding-top: 30px !important; }
-  .pt40-media-s,
-  .py40-media-s { padding-top: 40px !important; }
-  .pt50-media-s,
-  .py50-media-s { padding-top: 50px !important; }
-  .pt60-media-s,
-  .py60-media-s { padding-top: 60px !important; }
-  .pt80-media-s,
-  .py80-media-s { padding-top: 80px !important; }
-  .pt100-media-s,
-  .py100-media-s { padding-top: 100px !important; }
+@media only (--small-screen) {
+  .pt0-media-s { padding-top: 0 !important; }
+  .pt3-media-s { padding-top: 3px !important; }
+  .pt6-media-s { padding-top: 6px !important; }
+  .pt12-media-s { padding-top: 12px !important; }
+  .pt18-media-s { padding-top: 18px !important; }
+  .pt24-media-s { padding-top: 24px !important; }
+  .pt48-media-s { padding-top: 48px !important; }
+  .pt72-media-s { padding-top: 72px !important; }
+  .pt96-media-s { padding-top: 96px !important; }
 }
 
-/* Right padding */
-.pr0,
-.px0 { padding-right: 0 !important; }
-.pr5,
-.px5 { padding-right: 5px !important; }
-.pr10,
-.px10 { padding-right: 10px !important; }
-.pr15,
-.px15 { padding-right: 15px !important; }
-.pr20,
-.px20 { padding-right: 20px !important; }
-.pr30,
-.px30 { padding-right: 30px !important; }
-.pr40,
-.px40 { padding-right: 40px !important; }
-.pr50,
-.px50 { padding-right: 50px !important; }
-.pr60,
-.px60 { padding-right: 60px !important; }
-.pr80,
-.px80 { padding-right: 80px !important; }
-.pr100,
-.px100 { padding-right: 100px !important; }
+/**
+ * Right padding
+ * @group
+ * @memberof Padding
+ **/
+.pr0 { padding-right: 0 !important; }
+.pr3 { padding-top: 3px !important; }
+.pr6 { padding-right: 6px !important; }
+.pr12 { padding-right: 12px !important; }
+.pr18 { padding-right: 18px !important; }
+.pr24 { padding-right: 24px !important; }
+.pr48 { padding-right: 48px !important; }
+.pr72 { padding-right: 72px !important; }
+.pr96 { padding-right: 96px !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
-  .pr0-media-l,
-  .px0-media-l { padding-right: 0 !important; }
-  .pr5-media-l,
-  .px5-media-l { padding-right: 5px !important; }
-  .pr10-media-l,
-  .px10-media-l { padding-right: 10px !important; }
-  .pr15-media-l,
-  .px15-media-l { padding-right: 15px !important; }
-  .pr20-media-l,
-  .px20-media-l { padding-right: 20px !important; }
-  .pr30-media-l,
-  .px30-media-l { padding-right: 30px !important; }
-  .pr40-media-l,
-  .px40-media-l { padding-right: 40px !important; }
-  .pr50-media-l,
-  .px50-media-l { padding-right: 50px !important; }
-  .pr60-media-l,
-  .px60-media-l { padding-right: 60px !important; }
-  .pr80-media-l,
-  .px80-media-l { padding-right: 80px !important; }
-  .pr100-media-l,
-  .px100-media-l { padding-right: 100px !important; }
+@media only (--large-screen) {
+  .pr0-media-l { padding-right: 0 !important; }
+  .pr3-media-l { padding-right: 3px !important; }
+  .pr6-media-l { padding-right: 6px !important; }
+  .pr12-media-l { padding-right: 12px !important; }
+  .pr18-media-l { padding-right: 18px !important; }
+  .pr24-media-l { padding-right: 24px !important; }
+  .pr48-media-l { padding-right: 48px !important; }
+  .pr72-media-l { padding-right: 72px !important; }
+  .pr96-media-l { padding-right: 96px !important; }
 }
 
-@media only screen and (--medium-screen) {
-  .pr0-media-m,
-  .px0-media-m { padding-right: 0 !important; }
-  .pr5-media-m,
-  .px5-media-m { padding-right: 5px !important; }
-  .pr10-media-m,
-  .px10-media-m { padding-right: 10px !important; }
-  .pr15-media-m,
-  .px15-media-m { padding-right: 15px !important; }
-  .pr20-media-m,
-  .px20-media-m { padding-right: 20px !important; }
-  .pr30-media-m,
-  .px30-media-m { padding-right: 30px !important; }
-  .pr40-media-m,
-  .px40-media-m { padding-right: 40px !important; }
-  .pr50-media-m,
-  .px50-media-m { padding-right: 50px !important; }
-  .pr60-media-m,
-  .px60-media-m { padding-right: 60px !important; }
-  .pr80-media-m,
-  .px80-media-m { padding-right: 80px !important; }
-  .pr100-media-m,
-  .px100-media-m { padding-right: 100px !important; }
+@media only (--medium-screen) {
+  .pr0-media-m { padding-right: 0 !important; }
+  .pr3-media-m { padding-right: 3px !important; }
+  .pr6-media-m { padding-right: 6px !important; }
+  .pr12-media-m { padding-right: 12px !important; }
+  .pr18-media-m { padding-right: 18px !important; }
+  .pr24-media-m { padding-right: 24px !important; }
+  .pr48-media-m { padding-right: 48px !important; }
+  .pr72-media-m { padding-right: 72px !important; }
+  .pr96-media-m { padding-right: 96px !important; }
 }
 
-@media only screen and (--small-screen) {
-  .pr0-media-s,
-  .px0-media-s { padding-right: 0 !important; }
-  .pr5-media-s,
-  .px5-media-s { padding-right: 5px !important; }
-  .pr10-media-s,
-  .px10-media-s { padding-right: 10px !important; }
-  .pr15-media-s,
-  .px15-media-s { padding-right: 15px !important; }
-  .pr20-media-s,
-  .px20-media-s { padding-right: 20px !important; }
-  .pr30-media-s,
-  .px30-media-s { padding-right: 30px !important; }
-  .pr40-media-s,
-  .px40-media-s { padding-right: 40px !important; }
-  .pr50-media-s,
-  .px50-media-s { padding-right: 50px !important; }
-  .pr60-media-s,
-  .px60-media-s { padding-right: 60px !important; }
-  .pr80-media-s,
-  .px80-media-s { padding-right: 80px !important; }
-  .pr100-media-s,
-  .px100-media-s { padding-right: 100px !important; }
+@media only (--small-screen) {
+  .pr0-media-s { padding-right: 0 !important; }
+  .pr3-media-s { padding-right: 3px !important; }
+  .pr6-media-s { padding-right: 6px !important; }
+  .pr12-media-s { padding-right: 12px !important; }
+  .pr18-media-s { padding-right: 18px !important; }
+  .pr24-media-s { padding-right: 24px !important; }
+  .pr48-media-s { padding-right: 48px !important; }
+  .pr72-media-s { padding-right: 72px !important; }
+  .pr96-media-s { padding-right: 96px !important; }
 }
 
-/* Bottom padding */
-.pb0,
-.py0 { padding-bottom: 0 !important; }
-.pb5,
-.py5 { padding-bottom: 5px !important; }
-.pb10,
-.py10 { padding-bottom: 10px !important; }
-.pb15,
-.py15 { padding-bottom: 15px !important; }
-.pb20,
-.py20 { padding-bottom: 20px !important; }
-.pb30,
-.py30 { padding-bottom: 30px !important; }
-.pb40,
-.py40 { padding-bottom: 40px !important; }
-.pb50,
-.py50 { padding-bottom: 50px !important; }
-.pb60,
-.py60 { padding-bottom: 60px !important; }
-.pb80,
-.py80 { padding-bottom: 80px !important; }
-.pb100,
-.py100 { padding-bottom: 100px !important; }
+/**
+ * Bottom padding
+ * @group
+ * @memberof Padding
+ */
+.pb0 { padding-bottom: 0 !important; }
+.pb3 { padding-bottom: 3px !important; }
+.pb6 { padding-bottom: 6px !important; }
+.pb12 { padding-bottom: 12px !important; }
+.pb18 { padding-bottom: 18px !important; }
+.pb24 { padding-bottom: 24px !important; }
+.pb48 { padding-bottom: 48px !important; }
+.pb72 { padding-bottom: 72px !important; }
+.pb96 { padding-bottom: 96px !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
-  .pb0-media-l,
-  .py0-media-l { padding-bottom: 0 !important; }
-  .pb5-media-l,
-  .py5-media-l { padding-bottom: 5px !important; }
-  .pb10-media-l,
-  .py10-media-l { padding-bottom: 10px !important; }
-  .pb15-media-l,
-  .py15-media-l { padding-bottom: 15px !important; }
-  .pb20-media-l,
-  .py20-media-l { padding-bottom: 20px !important; }
-  .pb30-media-l,
-  .py30-media-l { padding-bottom: 30px !important; }
-  .pb40-media-l,
-  .py40-media-l { padding-bottom: 40px !important; }
-  .pb50-media-l,
-  .py50-media-l { padding-bottom: 50px !important; }
-  .pb60-media-l,
-  .py60-media-l { padding-bottom: 60px !important; }
-  .pb80-media-l,
-  .py80-media-l { padding-bottom: 80px !important; }
-  .pb100-media-l,
-  .py100-media-l { padding-bottom: 100px !important; }
+@media only (--large-screen) {
+  .pb0-media-l { padding-bottom: 0 !important; }
+  .pb3-media-l { padding-bottom: 3px !important; }
+  .pb6-media-l { padding-bottom: 6px !important; }
+  .pb12-media-l { padding-bottom: 12px !important; }
+  .pb18-media-l { padding-bottom: 18px !important; }
+  .pb24-media-l { padding-bottom: 24px !important; }
+  .pb48-media-l { padding-bottom: 48px !important; }
+  .pb72-media-l { padding-bottom: 72px !important; }
+  .pb96-media-l { padding-bottom: 96px !important; }
 }
 
-@media only screen and (--medium-screen) {
-  .pb0-media-m,
-  .py0-media-m { padding-bottom: 0 !important; }
-  .pb5-media-m,
-  .py5-media-m { padding-bottom: 5px !important; }
-  .pb10-media-m,
-  .py10-media-m { padding-bottom: 10px !important; }
-  .pb15-media-m,
-  .py15-media-m { padding-bottom: 15px !important; }
-  .pb20-media-m,
-  .py20-media-m { padding-bottom: 20px !important; }
-  .pb30-media-m,
-  .py30-media-m { padding-bottom: 30px !important; }
-  .pb40-media-m,
-  .py40-media-m { padding-bottom: 40px !important; }
-  .pb50-media-m,
-  .py50-media-m { padding-bottom: 50px !important; }
-  .pb60-media-m,
-  .py60-media-m { padding-bottom: 60px !important; }
-  .pb80-media-m,
-  .py80-media-m { padding-bottom: 80px !important; }
-  .pb100-media-m,
-  .py100-media-m { padding-bottom: 100px !important; }
+@media only (--medium-screen) {
+  .pb0-media-m { padding-bottom: 0 !important; }
+  .pb3-media-m { padding-bottom: 3px !important; }
+  .pb6-media-m { padding-bottom: 6px !important; }
+  .pb12-media-m { padding-bottom: 12px !important; }
+  .pb18-media-m { padding-bottom: 18px !important; }
+  .pb24-media-m { padding-bottom: 24px !important; }
+  .pb48-media-m { padding-bottom: 48px !important; }
+  .pb72-media-m { padding-bottom: 72px !important; }
+  .pb96-media-m { padding-bottom: 96px !important; }
 }
 
-@media only screen and (--small-screen) {
-  .pb0-media-s,
-  .py0-media-s { padding-bottom: 0 !important; }
-  .pb5-media-s,
-  .py5-media-s { padding-bottom: 5px !important; }
-  .pb10-media-s,
-  .py10-media-s { padding-bottom: 10px !important; }
-  .pb15-media-s,
-  .py15-media-s { padding-bottom: 15px !important; }
-  .pb20-media-s,
-  .py20-media-s { padding-bottom: 20px !important; }
-  .pb30-media-s,
-  .py30-media-s { padding-bottom: 30px !important; }
-  .pb40-media-s,
-  .py40-media-s { padding-bottom: 40px !important; }
-  .pb50-media-s,
-  .py50-media-s { padding-bottom: 50px !important; }
-  .pb60-media-s,
-  .py60-media-s { padding-bottom: 60px !important; }
-  .pb80-media-s,
-  .py80-media-s { padding-bottom: 80px !important; }
-  .pb100-media-s,
-  .py100-media-s { padding-bottom: 100px !important; }
+@media only (--small-screen) {
+  .pb0-media-s { padding-bottom: 0 !important; }
+  .pb3-media-s { padding-bottom: 3px !important; }
+  .pb6-media-s { padding-bottom: 6px !important; }
+  .pb12-media-s { padding-bottom: 12px !important; }
+  .pb18-media-s { padding-bottom: 18px !important; }
+  .pb24-media-s { padding-bottom: 24px !important; }
+  .pb48-media-s { padding-bottom: 48px !important; }
+  .pb72-media-s { padding-bottom: 72px !important; }
+  .pb96-media-s { padding-bottom: 96px !important; }
 }
 
-/* Left padding */
-.pl0,
-.px0 { padding-left: 0 !important; }
-.pl5,
-.px5 { padding-left: 5px !important; }
-.pl10,
-.px10 { padding-left: 10px !important; }
-.pl15,
-.px15 { padding-left: 15px !important; }
-.pl20,
-.px20 { padding-left: 20px !important; }
-.pl30,
-.px30 { padding-left: 30px !important; }
-.pl40,
-.px40 { padding-left: 40px !important; }
-.pl50,
-.px50 { padding-left: 50px !important; }
-.pl60,
-.px60 { padding-left: 60px !important; }
-.pl80,
-.px80 { padding-left: 80px !important; }
-.pl100,
-.px100 { padding-left: 100px !important; }
+/**
+ * Left padding
+ * @group
+ * @memberof Padding
+ */
+.pl0 { padding-left: 0 !important; }
+.pl3 { padding-left: 3px !important; }
+.pl6 { padding-left: 6px !important; }
+.pl12 { padding-left: 12px !important; }
+.pl18 { padding-left: 18px !important; }
+.pl24 { padding-left: 24px !important; }
+.pl48 { padding-left: 48px !important; }
+.pl72 { padding-left: 72px !important; }
+.pl96 { padding-left: 96px !important; }
+/** @endgroup **/
 
-@media only screen and (--large-screen) {
-  .pl0-media-l,
-  .px0-media-l { padding-left: 0 !important; }
-  .pl5-media-l,
-  .px5-media-l { padding-left: 5px !important; }
-  .pl10-media-l,
-  .px10-media-l { padding-left: 10px !important; }
-  .pl15-media-l,
-  .px15-media-l { padding-left: 15px !important; }
-  .pl20-media-l,
-  .px20-media-l { padding-left: 20px !important; }
-  .pl30-media-l,
-  .px30-media-l { padding-left: 30px !important; }
-  .pl40-media-l,
-  .px40-media-l { padding-left: 40px !important; }
-  .pl50-media-l,
-  .px50-media-l { padding-left: 50px !important; }
-  .pl60-media-l,
-  .px60-media-l { padding-left: 60px !important; }
-  .pl80-media-l,
-  .px80-media-l { padding-left: 80px !important; }
-  .pl100-media-l,
-  .px100-media-l { padding-left: 100px !important; }
+@media only (--large-screen) {
+  .pl0-media-l { padding-left: 0 !important; }
+  .pl3-media-l { padding-left: 3px !important; }
+  .pl6-media-l { padding-left: 6px !important; }
+  .pl12-media-l { padding-left: 12px !important; }
+  .pl18-media-l { padding-left: 18px !important; }
+  .pl24-media-l { padding-left: 24px !important; }
+  .pl48-media-l { padding-left: 48px !important; }
+  .pl72-media-l { padding-left: 72px !important; }
+  .pl96-media-l { padding-left: 96px !important; }
 }
 
-@media only screen and (--medium-screen) {
-  .pl0-media-m,
-  .px0-media-m { padding-left: 0 !important; }
-  .pl5-media-m,
-  .px5-media-m { padding-left: 5px !important; }
-  .pl10-media-m,
-  .px10-media-m { padding-left: 10px !important; }
-  .pl15-media-m,
-  .px15-media-m { padding-left: 15px !important; }
-  .pl20-media-m,
-  .px20-media-m { padding-left: 20px !important; }
-  .pl30-media-m,
-  .px30-media-m { padding-left: 30px !important; }
-  .pl40-media-m,
-  .px40-media-m { padding-left: 40px !important; }
-  .pl50-media-m,
-  .px50-media-m { padding-left: 50px !important; }
-  .pl60-media-m,
-  .px60-media-m { padding-left: 60px !important; }
-  .pl80-media-m,
-  .px80-media-m { padding-left: 80px !important; }
-  .pl100-media-m,
-  .px100-media-m { padding-left: 100px !important; }
+@media only (--medium-screen) {
+  .pl0-media-m { padding-left: 0 !important; }
+  .pl3-media-m { padding-left: 3px !important; }
+  .pl6-media-m { padding-left: 6px !important; }
+  .pl12-media-m { padding-left: 12px !important; }
+  .pl18-media-m { padding-left: 18px !important; }
+  .pl24-media-m { padding-left: 24px !important; }
+  .pl48-media-m { padding-left: 48px !important; }
+  .pl72-media-m { padding-left: 72px !important; }
+  .pl96-media-m { padding-left: 96px !important; }
 }
 
-@media only screen and (--small-screen) {
-  .pl0-media-s,
-  .px0-media-s { padding-bottom: 0 !important; }
-  .pl0-media-s,
-  .px0-media-s { padding-left: 0 !important; }
-  .pl5-media-s,
-  .px5-media-s { padding-left: 5px !important; }
-  .pl10-media-s,
-  .px10-media-s { padding-left: 10px !important; }
-  .pl15-media-s,
-  .px15-media-s { padding-left: 15px !important; }
-  .pl20-media-s,
-  .px20-media-s { padding-left: 20px !important; }
-  .pl30-media-s,
-  .px30-media-s { padding-left: 30px !important; }
-  .pl40-media-s,
-  .px40-media-s { padding-left: 40px !important; }
-  .pl50-media-s,
-  .px50-media-s { padding-left: 50px !important; }
-  .pl60-media-s,
-  .px60-media-s { padding-left: 60px !important; }
-  .pl80-media-s,
-  .px80-media-s { padding-left: 80px !important; }
-  .pl100-media-s,
-  .px100-media-s { padding-left: 100px !important; }
+@media only (--small-screen) {
+  .pl0-media-s { padding-left: 0 !important; }
+  .pl3-media-s { padding-left: 3px !important; }
+  .pl6-media-s { padding-left: 6px !important; }
+  .pl12-media-s { padding-left: 12px !important; }
+  .pl18-media-s { padding-left: 18px !important; }
+  .pl24-media-s { padding-left: 24px !important; }
+  .pl48-media-s { padding-left: 48px !important; }
+  .pl72-media-s { padding-left: 72px !important; }
+  .pl96-media-s { padding-left: 96px !important; }
 }
 
 /**
  * All sizing classes follow the following pattern:
- * `<w|h><min|max><dimension-size>-<screen-size>`.
- *
- * Min/max is *optional*.
- *
- * All dimension sizes increment by `5px` up to `20px`, by `10px` up to `60px`,
- * by `20px` up to `200px`, and by `200px` up to `800px`. This makes the list
- * of sizes:
- * `5`, `10`, `15`, `20`,
- * `30`, `40`, `50`, `60`,
- * `80`, `100`, `120`, `140`, `160`, `180`, `200`, `400`, `600`, `800`.
- *
- * Screen sizes are *optional* and are `-media-s`, `-media-m`, and `-media-l`.
- * These screen-size variations include classes that implement `0px`.
- *
- * Here are some examples that put the pieces together:
- * - `w80`: width of `80px`.
- * - `hmin30-media-l`: min-height of `30px` on large screens.
- * - `wmax60`: max-width of `60px`.
+ * `<w|h><min|max><dimension-size>-<screen-size>`. Min/max values are optional. Screen sizes are *optional* and are `-media-s`, `-media-m`, and `-media-l`.
  *
  * @section Sizing
  * @memberof Layout
@@ -1441,503 +1132,413 @@
 /**
  * @memberof Sizing
  * @example
- * <div class='w80 h30 bg-gray'>w80 h30</div>
+ * <div class='w120 h72 bg-blue-faint'>.w72 .h24</div>
  */
 
-/* Widths */
-.w5 { width: 5px !important; }
-.w10 { width: 10px !important; }
-.w20 { width: 20px !important; }
-.w30 { width: 30px !important; }
-.w40 { width: 40px !important; }
-.w50 { width: 50px !important; }
-.w60 { width: 60px !important; }
-.w80 { width: 80px !important; }
-.w100 { width: 100px !important; }
+/**
+ * Widths
+ * @group
+ * @memberof Sizing
+ */
+.w0 { width: 0 !important; }
+.w6 { width: 6px !important; }
+.w12 { width: 12px !important; }
+.w18 { width: 18px !important; }
+.w24 { width: 24px !important; }
+.w48 { width: 48px !important; }
+.w72 { width: 72px !important; }
+.w96 { width: 96px !important; }
 .w120 { width: 120px !important; }
-.w140 { width: 140px !important; }
-.w160 { width: 160px !important; }
 .w180 { width: 180px !important; }
-.w200 { width: 200px !important; }
-.w400 { width: 400px !important; }
-.w600 { width: 600px !important; }
-.w800 { width: 800px !important; }
+.w240 { width: 240px !important; }
+.w480 { width: 480px !important; }
+.w720 { width: 720px !important; }
+.w960 { width: 960px !important; }
+/** @endgroup */
 
-@media only screen and (--large-screen) {
-  .w5-media-l { width: 5px !important; }
-  .w10-media-l { width: 10px !important; }
-  .w20-media-l { width: 20px !important; }
-  .w30-media-l { width: 30px !important; }
-  .w40-media-l { width: 40px !important; }
-  .w50-media-l { width: 50px !important; }
-  .w60-media-l { width: 60px !important; }
-  .w80-media-l { width: 80px !important; }
-  .w100-media-l { width: 100px !important; }
+@media only (--large-screen) {
+  .w0-media-l { width: 0 !important; }
+  .w6-media-l { width: 6px !important; }
+  .w12-media-l { width: 12px !important; }
+  .w18-media-l { width: 18px !important; }
+  .w24-media-l { width: 24px !important; }
+  .w48-media-l { width: 48px !important; }
+  .w72-media-l { width: 72px !important; }
+  .w96-media-l { width: 96px !important; }
   .w120-media-l { width: 120px !important; }
-  .w140-media-l { width: 140px !important; }
-  .w160-media-l { width: 160px !important; }
   .w180-media-l { width: 180px !important; }
-  .w200-media-l { width: 200px !important; }
-  .w400-media-l { width: 400px !important; }
-  .w600-media-l { width: 600px !important; }
-  .w800-media-l { width: 800px !important; }
+  .w240-media-l { width: 240px !important; }
+  .w480-media-l { width: 480px !important; }
+  .w720-media-l { width: 720px !important; }
+  .w960-media-l { width: 960px !important; }
 }
 
-@media only screen and (--medium-screen) {
-  .w5-media-m { width: 5px !important; }
-  .w10-media-m { width: 10px !important; }
-  .w20-media-m { width: 20px !important; }
-  .w30-media-m { width: 30px !important; }
-  .w40-media-m { width: 40px !important; }
-  .w50-media-m { width: 50px !important; }
-  .w60-media-m { width: 60px !important; }
-  .w80-media-m { width: 80px !important; }
-  .w100-media-m { width: 100px !important; }
+@media only (--medium-screen) {
+  .w0-media-m { width: 0 !important; }
+  .w6-media-m { width: 6px !important; }
+  .w12-media-m { width: 12px !important; }
+  .w18-media-m { width: 18px !important; }
+  .w24-media-m { width: 24px !important; }
+  .w48-media-m { width: 48px !important; }
+  .w72-media-m { width: 72px !important; }
+  .w96-media-m { width: 96px !important; }
   .w120-media-m { width: 120px !important; }
-  .w140-media-m { width: 140px !important; }
-  .w160-media-m { width: 160px !important; }
   .w180-media-m { width: 180px !important; }
-  .w200-media-m { width: 200px !important; }
-  .w400-media-m { width: 400px !important; }
-  .w600-media-m { width: 600px !important; }
-  .w800-media-m { width: 800px !important; }
+  .w240-media-m { width: 240px !important; }
+  .w480-media-m { width: 480px !important; }
+  .w720-media-m { width: 720px !important; }
+  .w960-media-m { width: 960px !important; }
 }
 
-@media only screen and (--small-screen) {
-  .w5-media-s { width: 5px !important; }
-  .w10-media-s { width: 10px !important; }
-  .w20-media-s { width: 20px !important; }
-  .w30-media-s { width: 30px !important; }
-  .w40-media-s { width: 40px !important; }
-  .w50-media-s { width: 50px !important; }
-  .w60-media-s { width: 60px !important; }
-  .w80-media-s { width: 80px !important; }
-  .w100-media-s { width: 100px !important; }
+@media only (--small-screen) {
+  .w0-media-s { width: 0 !important; }
+  .w6-media-s { width: 6px !important; }
+  .w12-media-s { width: 12px !important; }
+  .w18-media-s { width: 18px !important; }
+  .w24-media-s { width: 24px !important; }
+  .w48-media-s { width: 48px !important; }
+  .w72-media-s { width: 72px !important; }
+  .w96-media-s { width: 96px !important; }
   .w120-media-s { width: 120px !important; }
-  .w140-media-s { width: 140px !important; }
-  .w160-media-s { width: 160px !important; }
   .w180-media-s { width: 180px !important; }
-  .w200-media-s { width: 200px !important; }
-  .w400-media-s { width: 400px !important; }
-  .w600-media-s { width: 600px !important; }
-  .w800-media-s { width: 800px !important; }
-}
-
-/* Max widths */
-.wmax5 { max-width: 5px !important; }
-.wmax10 { max-width: 10px !important; }
-.wmax20 { max-width: 20px !important; }
-.wmax30 { max-width: 30px !important; }
-.wmax40 { max-width: 40px !important; }
-.wmax50 { max-width: 50px !important; }
-.wmax60 { max-width: 60px !important; }
-.wmax80 { max-width: 80px !important; }
-.wmax100 { max-width: 100px !important; }
-.wmax120 { max-width: 120px !important; }
-.wmax140 { max-width: 140px !important; }
-.wmax160 { max-width: 160px !important; }
-.wmax180 { max-width: 180px !important; }
-.wmax200 { max-width: 200px !important; }
-.wmax400 { max-width: 400px !important; }
-.wmax600 { max-width: 600px !important; }
-.wmax800 { max-width: 800px !important; }
-.wmax1200 { max-width: 1200px !important; }
-.wmax1600 { max-width: 1600px !important; }
-
-@media only screen and (--large-screen) {
-  .wmax5-media-l { max-width: 5px !important; }
-  .wmax10-media-l { max-width: 10px !important; }
-  .wmax20-media-l { max-width: 20px !important; }
-  .wmax30-media-l { max-width: 30px !important; }
-  .wmax40-media-l { max-width: 40px !important; }
-  .wmax50-media-l { max-width: 50px !important; }
-  .wmax60-media-l { max-width: 60px !important; }
-  .wmax80-media-l { max-width: 80px !important; }
-  .wmax100-media-l { max-width: 100px !important; }
-  .wmax120-media-l { max-width: 120px !important; }
-  .wmax140-media-l { max-width: 140px !important; }
-  .wmax160-media-l { max-width: 160px !important; }
-  .wmax180-media-l { max-width: 180px !important; }
-  .wmax200-media-l { max-width: 200px !important; }
-  .wmax400-media-l { max-width: 400px !important; }
-  .wmax600-media-l { max-width: 600px !important; }
-  .wmax800-media-l { max-width: 800px !important; }
-  .wmax1200-media-l { max-width: 1200px !important; }
-  .wmax1600-media-l { max-width: 1600px !important; }
-}
-
-@media only screen and (--medium-screen) {
-  .wmax5-media-m { max-width: 5px !important; }
-  .wmax10-media-m { max-width: 10px !important; }
-  .wmax20-media-m { max-width: 20px !important; }
-  .wmax30-media-m { max-width: 30px !important; }
-  .wmax40-media-m { max-width: 40px !important; }
-  .wmax50-media-m { max-width: 50px !important; }
-  .wmax60-media-m { max-width: 60px !important; }
-  .wmax80-media-m { max-width: 80px !important; }
-  .wmax100-media-m { max-width: 100px !important; }
-  .wmax120-media-m { max-width: 120px !important; }
-  .wmax140-media-m { max-width: 140px !important; }
-  .wmax160-media-m { max-width: 160px !important; }
-  .wmax180-media-m { max-width: 180px !important; }
-  .wmax200-media-m { max-width: 200px !important; }
-  .wmax400-media-m { max-width: 400px !important; }
-  .wmax600-media-m { max-width: 600px !important; }
-  .wmax800-media-m { max-width: 800px !important; }
-  .wmax1200-media-m { max-width: 1200px !important; }
-  .wmax1600-media-m { max-width: 1600px !important; }
-}
-
-@media only screen and (--small-screen) {
-  .wmax5-media-s { max-width: 5px !important; }
-  .wmax10-media-s { max-width: 10px !important; }
-  .wmax20-media-s { max-width: 20px !important; }
-  .wmax30-media-s { max-width: 30px !important; }
-  .wmax40-media-s { max-width: 40px !important; }
-  .wmax50-media-s { max-width: 50px !important; }
-  .wmax60-media-s { max-width: 60px !important; }
-  .wmax80-media-s { max-width: 80px !important; }
-  .wmax100-media-s { max-width: 100px !important; }
-  .wmax120-media-s { max-width: 120px !important; }
-  .wmax140-media-s { max-width: 140px !important; }
-  .wmax160-media-s { max-width: 160px !important; }
-  .wmax180-media-s { max-width: 180px !important; }
-  .wmax200-media-s { max-width: 200px !important; }
-  .wmax400-media-s { max-width: 400px !important; }
-  .wmax600-media-s { max-width: 600px !important; }
-  .wmax800-media-s { max-width: 800px !important; }
-  .wmax1200-media-s { max-width: 1200px !important; }
-  .wmax1600-media-s { max-width: 1600px !important; }
-}
-
-/* Min widths */
-.wmin5 { min-width: 5px !important; }
-.wmin10 { min-width: 10px !important; }
-.wmin20 { min-width: 20px !important; }
-.wmin30 { min-width: 30px !important; }
-.wmin40 { min-width: 40px !important; }
-.wmin50 { min-width: 50px !important; }
-.wmin60 { min-width: 60px !important; }
-.wmin80 { min-width: 80px !important; }
-.wmin100 { min-width: 100px !important; }
-.wmin120 { min-width: 120px !important; }
-.wmin140 { min-width: 140px !important; }
-.wmin160 { min-width: 160px !important; }
-.wmin180 { min-width: 180px !important; }
-.wmin200 { min-width: 200px !important; }
-.wmin400 { min-width: 400px !important; }
-.wmin600 { min-width: 600px !important; }
-.wmin800 { min-width: 800px !important; }
-
-@media only screen and (--large-screen) {
-  .wmin5-media-l { min-width: 5px !important; }
-  .wmin10-media-l { min-width: 10px !important; }
-  .wmin20-media-l { min-width: 20px !important; }
-  .wmin30-media-l { min-width: 30px !important; }
-  .wmin40-media-l { min-width: 40px !important; }
-  .wmin50-media-l { min-width: 50px !important; }
-  .wmin60-media-l { min-width: 60px !important; }
-  .wmin80-media-l { min-width: 80px !important; }
-  .wmin100-media-l { min-width: 100px !important; }
-  .wmin120-media-l { min-width: 120px !important; }
-  .wmin140-media-l { min-width: 140px !important; }
-  .wmin160-media-l { min-width: 160px !important; }
-  .wmin180-media-l { min-width: 180px !important; }
-  .wmin200-media-l { min-width: 200px !important; }
-  .wmin400-media-l { min-width: 400px !important; }
-  .wmin600-media-l { min-width: 600px !important; }
-  .wmin800-media-l { min-width: 800px !important; }
-}
-
-@media only screen and (--medium-screen) {
-  .wmin5-media-m { min-width: 5px !important; }
-  .wmin10-media-m { min-width: 10px !important; }
-  .wmin20-media-m { min-width: 20px !important; }
-  .wmin30-media-m { min-width: 30px !important; }
-  .wmin40-media-m { min-width: 40px !important; }
-  .wmin50-media-m { min-width: 50px !important; }
-  .wmin60-media-m { min-width: 60px !important; }
-  .wmin80-media-m { min-width: 80px !important; }
-  .wmin100-media-m { min-width: 100px !important; }
-  .wmin120-media-m { min-width: 120px !important; }
-  .wmin140-media-m { min-width: 140px !important; }
-  .wmin160-media-m { min-width: 160px !important; }
-  .wmin180-media-m { min-width: 180px !important; }
-  .wmin200-media-m { min-width: 200px !important; }
-  .wmin400-media-m { min-width: 400px !important; }
-  .wmin600-media-m { min-width: 600px !important; }
-  .wmin800-media-m { min-width: 800px !important; }
-}
-
-@media only screen and (--small-screen) {
-  .wmin5-media-s { min-width: 5px !important; }
-  .wmin10-media-s { min-width: 10px !important; }
-  .wmin20-media-s { min-width: 20px !important; }
-  .wmin30-media-s { min-width: 30px !important; }
-  .wmin40-media-s { min-width: 40px !important; }
-  .wmin50-media-s { min-width: 50px !important; }
-  .wmin60-media-s { min-width: 60px !important; }
-  .wmin80-media-s { min-width: 80px !important; }
-  .wmin100-media-s { min-width: 100px !important; }
-  .wmin120-media-s { min-width: 120px !important; }
-  .wmin140-media-s { min-width: 140px !important; }
-  .wmin160-media-s { min-width: 160px !important; }
-  .wmin180-media-s { min-width: 180px !important; }
-  .wmin200-media-s { min-width: 200px !important; }
-  .wmin400-media-s { min-width: 400px !important; }
-  .wmin600-media-s { min-width: 600px !important; }
-  .wmin800-media-s { min-width: 800px !important; }
-}
-
-/* Heights */
-.h5 { height: 5px !important; }
-.h10 { height: 10px !important; }
-.h20 { height: 20px !important; }
-.h30 { height: 30px !important; }
-.h40 { height: 40px !important; }
-.h50 { height: 50px !important; }
-.h60 { height: 60px !important; }
-.h80 { height: 80px !important; }
-.h100 { height: 100px !important; }
-.h120 { height: 120px !important; }
-.h140 { height: 140px !important; }
-.h160 { height: 160px !important; }
-.h180 { height: 180px !important; }
-.h200 { height: 200px !important; }
-.h400 { height: 400px !important; }
-.h600 { height: 600px !important; }
-.h800 { height: 800px !important; }
-
-@media only screen and (--large-screen) {
-  .h5-media-l { height: 5px !important; }
-  .h10-media-l { height: 10px !important; }
-  .h20-media-l { height: 20px !important; }
-  .h30-media-l { height: 30px !important; }
-  .h40-media-l { height: 40px !important; }
-  .h50-media-l { height: 50px !important; }
-  .h60-media-l { height: 60px !important; }
-  .h80-media-l { height: 80px !important; }
-  .h100-media-l { height: 100px !important; }
-  .h120-media-l { height: 120px !important; }
-  .h140-media-l { height: 140px !important; }
-  .h160-media-l { height: 160px !important; }
-  .h180-media-l { height: 180px !important; }
-  .h200-media-l { height: 200px !important; }
-  .h400-media-l { height: 400px !important; }
-  .h600-media-l { height: 600px !important; }
-  .h800-media-l { height: 800px !important; }
-}
-
-@media only screen and (--medium-screen) {
-  .h5-media-m { height: 5px !important; }
-  .h10-media-m { height: 10px !important; }
-  .h20-media-m { height: 20px !important; }
-  .h30-media-m { height: 30px !important; }
-  .h40-media-m { height: 40px !important; }
-  .h50-media-m { height: 50px !important; }
-  .h60-media-m { height: 60px !important; }
-  .h80-media-m { height: 80px !important; }
-  .h100-media-m { height: 100px !important; }
-  .h120-media-m { height: 120px !important; }
-  .h140-media-m { height: 140px !important; }
-  .h160-media-m { height: 160px !important; }
-  .h180-media-m { height: 180px !important; }
-  .h200-media-m { height: 200px !important; }
-  .h400-media-m { height: 400px !important; }
-  .h600-media-m { height: 600px !important; }
-  .h800-media-m { height: 800px !important; }
-}
-
-@media only screen and (--small-screen) {
-  .h5-media-s { height: 5px !important; }
-  .h10-media-s { height: 10px !important; }
-  .h20-media-s { height: 20px !important; }
-  .h30-media-s { height: 30px !important; }
-  .h40-media-s { height: 40px !important; }
-  .h50-media-s { height: 50px !important; }
-  .h60-media-s { height: 60px !important; }
-  .h80-media-s { height: 80px !important; }
-  .h100-media-s { height: 100px !important; }
-  .h120-media-s { height: 120px !important; }
-  .h140-media-s { height: 140px !important; }
-  .h160-media-s { height: 160px !important; }
-  .h180-media-s { height: 180px !important; }
-  .h200-media-s { height: 200px !important; }
-  .h400-media-s { height: 400px !important; }
-  .h600-media-s { height: 600px !important; }
-  .h800-media-s { height: 800px !important; }
-}
-
-/* Max heights */
-.hmax5 { max-height: 5px !important; }
-.hmax10 { max-height: 10px !important; }
-.hmax20 { max-height: 20px !important; }
-.hmax30 { max-height: 30px !important; }
-.hmax40 { max-height: 40px !important; }
-.hmax50 { max-height: 50px !important; }
-.hmax60 { max-height: 60px !important; }
-.hmax80 { max-height: 80px !important; }
-.hmax100 { max-height: 100px !important; }
-.hmax120 { max-height: 120px !important; }
-.hmax140 { max-height: 140px !important; }
-.hmax160 { max-height: 160px !important; }
-.hmax180 { max-height: 180px !important; }
-.hmax200 { max-height: 200px !important; }
-.hmax400 { max-height: 400px !important; }
-.hmax600 { max-height: 600px !important; }
-.hmax800 { max-height: 800px !important; }
-.hmax1200 { max-height: 1200px !important; }
-.hmax1600 { max-height: 1600px !important; }
-
-@media only screen and (--large-screen) {
-  .hmax5-media-l { max-height: 5px !important; }
-  .hmax10-media-l { max-height: 10px !important; }
-  .hmax20-media-l { max-height: 20px !important; }
-  .hmax30-media-l { max-height: 30px !important; }
-  .hmax40-media-l { max-height: 40px !important; }
-  .hmax50-media-l { max-height: 50px !important; }
-  .hmax60-media-l { max-height: 60px !important; }
-  .hmax80-media-l { max-height: 80px !important; }
-  .hmax100-media-l { max-height: 100px !important; }
-  .hmax120-media-l { max-height: 120px !important; }
-  .hmax140-media-l { max-height: 140px !important; }
-  .hmax160-media-l { max-height: 160px !important; }
-  .hmax180-media-l { max-height: 180px !important; }
-  .hmax200-media-l { max-height: 200px !important; }
-  .hmax400-media-l { max-height: 400px !important; }
-  .hmax600-media-l { max-height: 600px !important; }
-  .hmax800-media-l { max-height: 800px !important; }
-  .hmax1200-media-l { max-height: 1200px !important; }
-  .hmax1600-media-l { max-height: 1600px !important; }
-}
-
-@media only screen and (--medium-screen) {
-  .hmax5-media-m { max-height: 5px !important; }
-  .hmax10-media-m { max-height: 10px !important; }
-  .hmax20-media-m { max-height: 20px !important; }
-  .hmax30-media-m { max-height: 30px !important; }
-  .hmax40-media-m { max-height: 40px !important; }
-  .hmax50-media-m { max-height: 50px !important; }
-  .hmax60-media-m { max-height: 60px !important; }
-  .hmax80-media-m { max-height: 80px !important; }
-  .hmax100-media-m { max-height: 100px !important; }
-  .hmax120-media-m { max-height: 120px !important; }
-  .hmax140-media-m { max-height: 140px !important; }
-  .hmax160-media-m { max-height: 160px !important; }
-  .hmax180-media-m { max-height: 180px !important; }
-  .hmax200-media-m { max-height: 200px !important; }
-  .hmax400-media-m { max-height: 400px !important; }
-  .hmax600-media-m { max-height: 600px !important; }
-  .hmax800-media-m { max-height: 800px !important; }
-  .hmax1200-media-m { max-height: 1200px !important; }
-  .hmax1600-media-m { max-height: 1600px !important; }
-}
-
-@media only screen and (--small-screen) {
-  .hmax5-media-s { max-height: 5px !important; }
-  .hmax10-media-s { max-height: 10px !important; }
-  .hmax20-media-s { max-height: 20px !important; }
-  .hmax30-media-s { max-height: 30px !important; }
-  .hmax40-media-s { max-height: 40px !important; }
-  .hmax50-media-s { max-height: 50px !important; }
-  .hmax60-media-s { max-height: 60px !important; }
-  .hmax80-media-s { max-height: 80px !important; }
-  .hmax100-media-s { max-height: 100px !important; }
-  .hmax120-media-s { max-height: 120px !important; }
-  .hmax140-media-s { max-height: 140px !important; }
-  .hmax160-media-s { max-height: 160px !important; }
-  .hmax180-media-s { max-height: 180px !important; }
-  .hmax200-media-s { max-height: 200px !important; }
-  .hmax400-media-s { max-height: 400px !important; }
-  .hmax600-media-s { max-height: 600px !important; }
-  .hmax800-media-s { max-height: 800px !important; }
-  .hmax1200-media-s { max-height: 1200px !important; }
-  .hmax1600-media-s { max-height: 1600px !important; }
-}
-
-/* Min heights */
-.hmin5 { min-height: 5px !important; }
-.hmin10 { min-height: 10px !important; }
-.hmin20 { min-height: 20px !important; }
-.hmin30 { min-height: 30px !important; }
-.hmin40 { min-height: 40px !important; }
-.hmin50 { min-height: 50px !important; }
-.hmin60 { min-height: 60px !important; }
-.hmin80 { min-height: 80px !important; }
-.hmin100 { min-height: 100px !important; }
-.hmin120 { min-height: 120px !important; }
-.hmin140 { min-height: 140px !important; }
-.hmin160 { min-height: 160px !important; }
-.hmin180 { min-height: 180px !important; }
-.hmin200 { min-height: 200px !important; }
-.hmin400 { min-height: 400px !important; }
-.hmin600 { min-height: 600px !important; }
-.hmin800 { min-height: 800px !important; }
-
-@media only screen and (--large-screen) {
-  .hmin5-media-l { min-height: 5px !important; }
-  .hmin10-media-l { min-height: 10px !important; }
-  .hmin20-media-l { min-height: 20px !important; }
-  .hmin30-media-l { min-height: 30px !important; }
-  .hmin40-media-l { min-height: 40px !important; }
-  .hmin50-media-l { min-height: 50px !important; }
-  .hmin60-media-l { min-height: 60px !important; }
-  .hmin80-media-l { min-height: 80px !important; }
-  .hmin100-media-l { min-height: 100px !important; }
-  .hmin120-media-l { min-height: 120px !important; }
-  .hmin140-media-l { min-height: 140px !important; }
-  .hmin160-media-l { min-height: 160px !important; }
-  .hmin180-media-l { min-height: 180px !important; }
-  .hmin200-media-l { min-height: 200px !important; }
-  .hmin400-media-l { min-height: 400px !important; }
-  .hmin600-media-l { min-height: 600px !important; }
-  .hmin800-media-l { min-height: 800px !important; }
-}
-
-@media only screen and (--medium-screen) {
-  .hmin5-media-m { min-height: 5px !important; }
-  .hmin10-media-m { min-height: 10px !important; }
-  .hmin20-media-m { min-height: 20px !important; }
-  .hmin30-media-m { min-height: 30px !important; }
-  .hmin40-media-m { min-height: 40px !important; }
-  .hmin50-media-m { min-height: 50px !important; }
-  .hmin60-media-m { min-height: 60px !important; }
-  .hmin80-media-m { min-height: 80px !important; }
-  .hmin100-media-m { min-height: 100px !important; }
-  .hmin120-media-m { min-height: 120px !important; }
-  .hmin140-media-m { min-height: 140px !important; }
-  .hmin160-media-m { min-height: 160px !important; }
-  .hmin180-media-m { min-height: 180px !important; }
-  .hmin200-media-m { min-height: 200px !important; }
-  .hmin400-media-m { min-height: 400px !important; }
-  .hmin600-media-m { min-height: 600px !important; }
-  .hmin800-media-m { min-height: 800px !important; }
-}
-
-@media only screen and (--small-screen) {
-  .hmin5-media-s { min-height: 5px !important; }
-  .hmin10-media-s { min-height: 10px !important; }
-  .hmin20-media-s { min-height: 20px !important; }
-  .hmin30-media-s { min-height: 30px !important; }
-  .hmin40-media-s { min-height: 40px !important; }
-  .hmin50-media-s { min-height: 50px !important; }
-  .hmin60-media-s { min-height: 60px !important; }
-  .hmin80-media-s { min-height: 80px !important; }
-  .hmin100-media-s { min-height: 100px !important; }
-  .hmin120-media-s { min-height: 120px !important; }
-  .hmin140-media-s { min-height: 140px !important; }
-  .hmin160-media-s { min-height: 160px !important; }
-  .hmin180-media-s { min-height: 180px !important; }
-  .hmin200-media-s { min-height: 200px !important; }
-  .hmin400-media-s { min-height: 400px !important; }
-  .hmin600-media-s { min-height: 600px !important; }
-  .hmin800-media-s { min-height: 800px !important; }
+  .w240-media-s { width: 240px !important; }
+  .w480-media-s { width: 480px !important; }
+  .w720-media-s { width: 720px !important; }
+  .w960-media-s { width: 960px !important; }
 }
 
 /**
- * Set the height of an element relative to the viewport.
- *
- * Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
+ * Max widths
+ * @group
+ * @memberof Sizing
+ */
+.wmax0 { max-width: 0 !important; }
+.wmax6 { max-width: 6px !important; }
+.wmax12 { max-width: 12px !important; }
+.wmax18 { max-width: 18px !important; }
+.wmax24 { max-width: 24px !important; }
+.wmax48 { max-width: 48px !important; }
+.wmax72 { max-width: 72px !important; }
+.wmax96 { max-width: 96px !important; }
+.wmax120 { max-width: 120px !important; }
+.wmax180 { max-width: 180px !important; }
+.wmax240 { max-width: 240px !important; }
+.wmax480 { max-width: 480px !important; }
+.wmax720 { max-width: 720px !important; }
+.wmax960 { max-width: 960px !important; }
+.wmax1200 { max-width: 1200px !important; }
+/** @endgroup */
+
+@media only (--large-screen) {
+  .wmax0-media-l { max-width: 0 !important; }
+  .wmax6-media-l { max-width: 6px !important; }
+  .wmax12-media-l { max-width: 12px !important; }
+  .wmax18-media-l { max-width: 18px !important; }
+  .wmax24-media-l { max-width: 24px !important; }
+  .wmax48-media-l { max-width: 48px !important; }
+  .wmax72-media-l { max-width: 72px !important; }
+  .wmax96-media-l { max-width: 96px !important; }
+  .wmax120-media-l { max-width: 120px !important; }
+  .wmax180-media-l { max-width: 180px !important; }
+  .wmax240-media-l { max-width: 240px !important; }
+  .wmax480-media-l { max-width: 480px !important; }
+  .wmax720-media-l { max-width: 720px !important; }
+  .wmax960-media-l { max-width: 960px !important; }
+  .wmax1200-media-l { max-width: 1200px !important; }
+}
+
+@media only (--medium-screen) {
+  .wmax0-media-m { max-width: 0 !important; }
+  .wmax6-media-m { max-width: 6px !important; }
+  .wmax12-media-m { max-width: 12px !important; }
+  .wmax18-media-m { max-width: 18px !important; }
+  .wmax24-media-m { max-width: 24px !important; }
+  .wmax48-media-m { max-width: 48px !important; }
+  .wmax72-media-m { max-width: 72px !important; }
+  .wmax96-media-m { max-width: 96px !important; }
+  .wmax120-media-m { max-width: 120px !important; }
+  .wmax180-media-m { max-width: 180px !important; }
+  .wmax240-media-m { max-width: 240px !important; }
+  .wmax480-media-m { max-width: 480px !important; }
+  .wmax720-media-m { max-width: 720px !important; }
+  .wmax960-media-m { max-width: 960px !important; }
+}
+
+@media only (--small-screen) {
+  .wmax0-media-s { max-width: 0 !important; }
+  .wmax6-media-s { max-width: 6px !important; }
+  .wmax12-media-s { max-width: 12px !important; }
+  .wmax18-media-s { max-width: 18px !important; }
+  .wmax24-media-s { max-width: 24px !important; }
+  .wmax48-media-s { max-width: 48px !important; }
+  .wmax72-media-s { max-width: 72px !important; }
+  .wmax96-media-s { max-width: 96px !important; }
+  .wmax120-media-s { max-width: 120px !important; }
+  .wmax180-media-s { max-width: 180px !important; }
+  .wmax240-media-s { max-width: 240px !important; }
+  .wmax480-media-s { max-width: 480px !important; }
+  .wmax720-media-s { max-width: 720px !important; }
+  .wmax960-media-s { max-width: 960px !important; }
+}
+
+/**
+ * Min widths
+ * @group
+ * @memberof Sizing
+ */
+.wmin0 { min-width: 0 !important; }
+.wmin6 { min-width: 6px !important; }
+.wmin12 { min-width: 12px !important; }
+.wmin18 { min-width: 18px !important; }
+.wmin24 { min-width: 24px !important; }
+.wmin48 { min-width: 48px !important; }
+.wmin72 { min-width: 72px !important; }
+.wmin96 { min-width: 96px !important; }
+.wmin120 { min-width: 120px !important; }
+.wmin180 { min-width: 180px !important; }
+.wmin240 { min-width: 240px !important; }
+.wmin480 { min-width: 480px !important; }
+/** @endgroup */
+
+@media only (--large-screen) {
+  .wmin-media-l { min-width: 0 !important; }
+  .wmin-media-l { min-width: 6px !important; }
+  .wmin-media-l { min-width: 12px !important; }
+  .wmin-media-l { min-width: 18px !important; }
+  .wmin-media-l { min-width: 24px !important; }
+  .wmin-media-l { min-width: 48px !important; }
+  .wmin-media-l { min-width: 72px !important; }
+  .wmin-media-l { min-width: 96px !important; }
+  .wmin-media-l { min-width: 120px !important; }
+  .wmin-media-l { min-width: 180px !important; }
+  .wmin-media-l { min-width: 240px !important; }
+  .wmin-media-l { min-width: 480px !important; }
+}
+
+@media only (--medium-screen) {
+  .wmin0-media-m { min-width: 0 !important; }
+  .wmin6-media-m { min-width: 6px !important; }
+  .wmin12-media-m { min-width: 12px !important; }
+  .wmin18-media-m { min-width: 18px !important; }
+  .wmin24-media-m { min-width: 24px !important; }
+  .wmin48-media-m { min-width: 48px !important; }
+  .wmin72-media-m { min-width: 72px !important; }
+  .wmin96-media-m { min-width: 96px !important; }
+  .wmin120-media-m { min-width: 120px !important; }
+  .wmin180-media-m { min-width: 180px !important; }
+  .wmin240-media-m { min-width: 240px !important; }
+  .wmin480-media-m { min-width: 480px !important; }
+}
+
+@media only (--small-screen) {
+  .wmin0-media-s { min-width: 0 !important; }
+  .wmin6-media-s { min-width: 6px !important; }
+  .wmin12-media-s { min-width: 12px !important; }
+  .wmin18-media-s { min-width: 18px !important; }
+  .wmin24-media-s { min-width: 24px !important; }
+  .wmin48-media-s { min-width: 48px !important; }
+  .wmin72-media-s { min-width: 72px !important; }
+  .wmin96-media-s { min-width: 96px !important; }
+  .wmin120-media-s { min-width: 120px !important; }
+  .wmin180-media-s { min-width: 180px !important; }
+  .wmin240-media-s { min-width: 240px !important; }
+  .wmin480-media-s { min-width: 480px !important; }
+}
+
+/**
+ * Heights
+ * @group
+ * @memberof Sizing
+ */
+.h0 { height: 0 !important; }
+.h6 { height: 6px !important; }
+.h12 { height: 12px !important; }
+.h18 { height: 18px !important; }
+.h24 { height: 24px !important; }
+.h48 { height: 48px !important; }
+.h72 { height: 72px !important; }
+.h96 { height: 96px !important; }
+.h120 { height: 120px !important; }
+.h180 { height: 180px !important; }
+.h240 { height: 240px !important; }
+.h480 { height: 480px !important; }
+/** @endgroup */
+
+@media only (--large-screen) {
+  .h0-media-l { height: 0 !important; }
+  .h6-media-l { height: 6px !important; }
+  .h12-media-l { height: 12px !important; }
+  .h18-media-l { height: 18px !important; }
+  .h24-media-l { height: 24px !important; }
+  .h48-media-l { height: 48px !important; }
+  .h72-media-l { height: 72px !important; }
+  .h96-media-l { height: 96px !important; }
+  .h120-media-l { height: 120px !important; }
+  .h180-media-l { height: 180px !important; }
+  .h240-media-l { height: 240px !important; }
+  .h480-media-l { height: 480px !important; }
+}
+
+@media only (--medium-screen) {
+  .h0-media-m { height: 0 !important; }
+  .h6-media-m { height: 6px !important; }
+  .h12-media-m { height: 12px !important; }
+  .h18-media-m { height: 18px !important; }
+  .h24-media-m { height: 24px !important; }
+  .h48-media-m { height: 48px !important; }
+  .h72-media-m { height: 72px !important; }
+  .h96-media-m { height: 96px !important; }
+  .h120-media-m { height: 120px !important; }
+  .h180-media-m { height: 180px !important; }
+  .h240-media-m { height: 240px !important; }
+  .h480-media-m { height: 480px !important; }
+}
+
+@media only (--small-screen) {
+  .h0-media-s { height: 0 !important; }
+  .h6-media-s { height: 6px !important; }
+  .h12-media-s { height: 12px !important; }
+  .h18-media-s { height: 18px !important; }
+  .h24-media-s { height: 24px !important; }
+  .h48-media-s { height: 48px !important; }
+  .h72-media-s { height: 72px !important; }
+  .h96-media-s { height: 96px !important; }
+  .h120-media-s { height: 120px !important; }
+  .h180-media-s { height: 180px !important; }
+  .h240-media-s { height: 240px !important; }
+  .h480-media-s { height: 480px !important; }
+}
+
+/**
+ * Max heights
+ * @group
+ * @memberof Sizing
+ */
+.hmax0 { max-height: 0 !important; }
+.hmax6 { max-height: 6px !important; }
+.hmax12 { max-height: 12px !important; }
+.hmax18 { max-height: 18px !important; }
+.hmax24 { max-height: 24px !important; }
+.hmax48 { max-height: 48px !important; }
+.hmax72 { max-height: 72px !important; }
+.hmax96 { max-height: 96px !important; }
+.hmax120 { max-height: 120px !important; }
+.hmax180 { max-height: 180px !important; }
+.hmax240 { max-height: 240px !important; }
+.hmax480 { max-height: 480px !important; }
+/** @endgroup */
+
+@media only (--large-screen) {
+  .hmax0-media-l { max-height: 0 !important; }
+  .hmax6-media-l { max-height: 6px !important; }
+  .hmax12-media-l { max-height: 12px !important; }
+  .hmax18-media-l { max-height: 18px !important; }
+  .hmax24-media-l { max-height: 24px !important; }
+  .hmax48-media-l { max-height: 48px !important; }
+  .hmax72-media-l { max-height: 72px !important; }
+  .hmax96-media-l { max-height: 96px !important; }
+  .hmax120-media-l { max-height: 120px !important; }
+  .hmax180-media-l { max-height: 180px !important; }
+  .hmax240-media-l { max-height: 240px !important; }
+  .hmax480-media-l { max-height: 480px !important; }
+}
+
+@media only (--medium-screen) {
+  .hmax0-media-m { max-height: 0 !important; }
+  .hmax6-media-m { max-height: 6px !important; }
+  .hmax12-media-m { max-height: 12px !important; }
+  .hmax18-media-m { max-height: 18px !important; }
+  .hmax24-media-m { max-height: 24px !important; }
+  .hmax48-media-m { max-height: 48px !important; }
+  .hmax72-media-m { max-height: 72px !important; }
+  .hmax96-media-m { max-height: 96px !important; }
+  .hmax120-media-m { max-height: 120px !important; }
+  .hmax180-media-m { max-height: 180px !important; }
+  .hmax240-media-m { max-height: 240px !important; }
+  .hmax480-media-m { max-height: 480px !important; }
+}
+
+@media only (--small-screen) {
+  .hmax0-media-s { max-height: 0 !important; }
+  .hmax6-media-s { max-height: 6px !important; }
+  .hmax12-media-s { max-height: 12px !important; }
+  .hmax18-media-s { max-height: 18px !important; }
+  .hmax24-media-s { max-height: 24px !important; }
+  .hmax48-media-s { max-height: 48px !important; }
+  .hmax72-media-s { max-height: 72px !important; }
+  .hmax96-media-s { max-height: 96px !important; }
+  .hmax120-media-s { max-height: 120px !important; }
+  .hmax180-media-s { max-height: 180px !important; }
+  .hmax240-media-s { max-height: 240px !important; }
+  .hmax480-media-s { max-height: 480px !important; }
+}
+
+/**
+ * Min heights
+ * @group
+ * @memberof Sizing
+ */
+.hmin0 { min-height: 0 !important; }
+.hmin6 { min-height: 6px !important; }
+.hmin12 { min-height: 12px !important; }
+.hmin18 { min-height: 18px !important; }
+.hmin24 { min-height: 24px !important; }
+.hmin48 { min-height: 48px !important; }
+.hmin72 { min-height: 72px !important; }
+.hmin96 { min-height: 96px !important; }
+.hmin120 { min-height: 120px !important; }
+.hmin180 { min-height: 180px !important; }
+.hmin240 { min-height: 240px !important; }
+.hmin480 { min-height: 480px !important; }
+/** @endgroup */
+
+@media only (--large-screen) {
+  .hmin0-media-l { min-height: 0 !important; }
+  .hmin6-media-l { min-height: 6px !important; }
+  .hmin12-media-l { min-height: 12px !important; }
+  .hmin18-media-l { min-height: 18px !important; }
+  .hmin24-media-l { min-height: 24px !important; }
+  .hmin48-media-l { min-height: 48px !important; }
+  .hmin72-media-l { min-height: 72px !important; }
+  .hmin96-media-l { min-height: 96px !important; }
+  .hmin120-media-l { min-height: 120px !important; }
+  .hmin180-media-l { min-height: 180px !important; }
+  .hmin240-media-l { min-height: 240px !important; }
+  .hmin480-media-l { min-height: 480px !important; }
+}
+
+@media only (--medium-screen) {
+  .hmin0-media-m { min-height: 0 !important; }
+  .hmin6-media-m { min-height: 6px !important; }
+  .hmin12-media-m { min-height: 12px !important; }
+  .hmin18-media-m { min-height: 18px !important; }
+  .hmin24-media-m { min-height: 24px !important; }
+  .hmin48-media-m { min-height: 48px !important; }
+  .hmin72-media-m { min-height: 72px !important; }
+  .hmin96-media-m { min-height: 96px !important; }
+  .hmin120-media-m { min-height: 120px !important; }
+  .hmin180-media-m { min-height: 180px !important; }
+  .hmin240-media-m { min-height: 240px !important; }
+  .hmin480-media-m { min-height: 480px !important; }
+}
+
+@media only (--small-screen) {
+  .hmin0-media-s { min-height: 0 !important; }
+  .hmin6-media-s { min-height: 6px !important; }
+  .hmin12-media-s { min-height: 12px !important; }
+  .hmin18-media-s { min-height: 18px !important; }
+  .hmin24-media-s { min-height: 24px !important; }
+  .hmin48-media-s { min-height: 48px !important; }
+  .hmin72-media-s { min-height: 72px !important; }
+  .hmin96-media-s { min-height: 96px !important; }
+  .hmin120-media-s { min-height: 120px !important; }
+  .hmin180-media-s { min-height: 180px !important; }
+  .hmin240-media-s { min-height: 240px !important; }
+  .hmin480-media-s { min-height: 480px !important; }
+}
+
+/**
+ * Set the height of an element relative to the viewport. Class set includes `-media-s`, `-media-m`, and `-media-l` variations to target screen sizes.
  *
  * @group
  * @memberof Sizing
@@ -1949,7 +1550,7 @@
 .viewport-full { height: 100vh !important; }
 /** @endgroup */
 
-@media only screen and (--large-screen) {
+@media only (--large-screen) {
   .viewport-third-media-l { height: 33.3333vh !important; }
   .viewport-half-media-l { height: 50vh !important; }
   .viewport-twothirds-media-l { height: 66.6666vh !important; }
@@ -1957,7 +1558,7 @@
   .viewport-full-media-l { height: 100vh !important; }
 }
 
-@media only screen and (--medium-screen) {
+@media only (--medium-screen) {
   .viewport-third-media-m { height: 33.3333vh !important; }
   .viewport-half-media-m { height: 50vh !important; }
   .viewport-twothirds-media-m { height: 66.6666vh !important; }
@@ -1965,7 +1566,7 @@
   .viewport-full-media-m { height: 100vh !important; }
 }
 
-@media only screen and (--small-screen) {
+@media only (--small-screen) {
   .viewport-third-media-s { height: 33.3333vh !important; }
   .viewport-half-media-s { height: 50vh !important; }
   .viewport-twothirds-media-s { height: 66.6666vh !important; }

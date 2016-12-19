@@ -13,6 +13,7 @@ const postcssCustomMedia = require('postcss-custom-media');
 const variableDefinitions = require('../src/variables');
 const customMediaQueries = require('../src/media-queries');
 const timelog = require('./timelog');
+const buildColorVariants = require('./build-color-variants');
 
 const distCssFilename = 'assembly.css';
 const distCssPath = path.join(__dirname, `../dist/${distCssFilename}`);
@@ -59,23 +60,32 @@ const postcssPlugins = [
   reporter()
 ];
 
-function processCssFile(cssFile, concat) {
+function postcssify(css, filePath, concat) {
+  return postcss(postcssPlugins)
+    .process(css, {
+      from: filePath,
+      to: filePath,
+      map: {
+        inline: false,
+        annotation: false,
+        sourcesContent: true
+      }
+    })
+    .then((postcssResult) => {
+      concat.add(filePath, postcssResult.css, postcssResult.map.toString());
+    })
+    .catch(handlePostcssError);
+}
+
+function postcssifyFile(cssFile, concat) {
   return pify(fs.readFile)(cssFile, 'utf8').then((css) => {
-    return postcss(postcssPlugins)
-      .process(css, {
-        from: cssFile,
-        to: cssFile,
-        map: {
-          inline: false,
-          annotation: false,
-          sourcesContent: true
-        }
-      })
-      .then((postcssResult) => {
-        concat.add(cssFile, postcssResult.css, postcssResult.map.toString());
-      })
-      .catch(handlePostcssError);
+    return postcssify(css, cssFile, concat);
   });
+}
+
+function appendColorVariants(concat) {
+  const colorVariantsCss = buildColorVariants();
+  return postcssify(colorVariantsCss, 'color-variants.css', concat);
 }
 
 function writeDistCss(concat) {
@@ -90,7 +100,8 @@ function processCss() {
   timelog('Building CSS');
   const concat = new Concat(true, distCssPath, '\n');
 
-  return Promise.all(cssFiles.map((file) => processCssFile(file, concat)))
+  return Promise.all(cssFiles.map((file) => postcssifyFile(file, concat)))
+    .then(() => appendColorVariants(concat))
     .then(() => writeDistCss(concat))
     .then(() => timelog('Done building CSS'));
 }

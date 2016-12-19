@@ -1,5 +1,6 @@
 /* stylelint-disable selector-no-type, selector-no-combinator */
 /**
+ * Write an overview here.
  * @section Forms
  */
 
@@ -17,16 +18,16 @@
 
 .input,
 .textarea {
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid var(--gray-light);
+  border: 1px solid var(--darken50);
   border-radius: var(--border-radius);
   display: inline-block;
+  transition: box-shadow var(--transition), border-color var(--transition);
 }
 
 .input:focus,
 .textarea:focus {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.22);
-  border: 1px solid var(--gray-light);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.22);
+  border: 1px solid var(--darken50);
 }
 
 .input--no-shadow:focus,
@@ -35,7 +36,7 @@
 }
 
 .input::placeholder {
-  color: var(--gray-light);
+  color: var(--darken25);
 }
 
 /**
@@ -53,16 +54,15 @@
  * <input class='input input--dark' placeholder='dark' />
  */
 .input {
-  height: 40px;
+  height: 36px;
   line-height: 38px; /* minus border */
   padding: 0 12px;
 }
 
 .input--s {
-  height: 30px;
-  line-height: 28px; /* minus border */
-  padding: 0 10px;
-  font-size: 12px;
+  height: 24px;
+  line-height: 24px; /* minus border */
+  padding: 0 6px;
 }
 
 /**
@@ -81,14 +81,13 @@
  */
 .textarea {
   resize: vertical;
-  padding-top: 8px; /* minus border to match input */
-  padding-bottom: 8px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-top: 10px; /* minus border to match input */
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .textarea--s {
-  font-size: 12px; /* match input--s */
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -96,8 +95,13 @@
 /* Dark */
 .input--dark,
 .textarea--dark {
-  background-color: var(--gray-dark);
+  background-color: var(--darken75);
   color: var(--white);
+}
+
+.input--dark::placeholder,
+.textarea--dark::placeholder {
+  color: var(--lighten25);
 }
 
 /**
@@ -105,37 +109,28 @@
  * - A wrapping `<div>` with the class `select`.
  * - A `<select>`.
  *
- * Use `w*` width classes to change widths.
- *
- * The default styling looks kind of like an input.
- *
  * Variations:
  * - Modify `.select` with `select--stroke`.
  * - Modify *non-stroke* `.select` with a `.bg-{color}` class.
  * - Modify *stroke* `.select` with a text color, e.g. `.color-red`.
  *
- * @section Selects
  * @memberof Forms
- */
-
-/**
- * @memberof Selects
  * @example
- * <div class='select'>
+ * <div class='select mb6'>
  *   <select>
  *     <option>one</option>
  *     <option>two</option>
  *     <option>three</option>
  *   </select>
  * </div>
- * <div class='select bg-red'>
+ * <div class='select bg-red mb6'>
  *   <select>
  *     <option>one</option>
  *     <option>two</option>
  *     <option>three</option>
  *   </select>
  * </div>
- * <div class='select select--s bg-blue'>
+ * <div class='select select--s bg-blue mb6'>
  *   <select>
  *     <option>one</option>
  *     <option>two</option>
@@ -151,27 +146,25 @@
  * </div>
  */
 .select {
-  display: inline-block;
   position: relative;
   border-radius: var(--border-radius);
+  transition: color var(--transition), background-color var(--transition);
 }
 
 /* Borders are on the select, but colors are applied
 to the `.select` container. */
-
 .select > select {
+  font-size: inherit;
+  line-height: inherit;
   display: block;
   border-width: 2px;
   border-style: solid;
   border-color: var(--gray-light);
   border-radius: var(--border-radius);
   color: currentColor;
-  font-size: 12px;
   font-weight: bold;
   cursor: pointer;
-  height: 40px;
-  line-height: 36px; /* minus border */
-  padding: 0 30px 0 12px; /* plus arrow */
+  padding: 4px 30px 4px 12px; /* plus arrow, minus border */
   /* Needs to be on top of everything but transparent */
   position: relative;
   z-index: 2;
@@ -204,9 +197,9 @@ to the `.select` container. */
 }
 
 .select--s > select {
-  height: 30px;
-  line-height: 26px; /* minus border */
-  padding: 0 40px 0 10px; /* plus arrow */
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 22px 0 12px; /* plus arrow */
 }
 
 .select::after {
@@ -221,15 +214,11 @@ to the `.select` container. */
   position: absolute;
   top: 50%;
   margin-top: -3px;
-  right: 10px;
+  right: 12px;
 }
 
 .select--stroke::after {
   border-top-color: currentColor;
-}
-
-.select--s > select {
-  padding-right: 26px;
 }
 
 .select--s::after {
@@ -247,34 +236,6 @@ to the `.select` container. */
   border-top-color: #fff;
 }
 /* stylelint-enable selector-no-attribute */
-
-/* Color variations */
-.select.bg-gray:hover { background-color: var(--gray-dark) !important; }
-.select--stroke.color-gray:hover { color: var(--gray-dark) !important; }
-
-.select.bg-pink:hover { background-color: var(--pink-dark) !important; }
-.select--stroke.color-pink:hover { color: var(--pink-dark) !important; }
-
-.select.bg-red:hover { background-color: var(--red-dark) !important; }
-.select--stroke.color-red:hover { color: var(--red-dark) !important; }
-
-.select.bg-orange:hover { background-color: var(--orange-dark) !important; }
-.select--stroke.color-orange:hover { color: var(--orange-dark) !important; }
-
-.select.bg-yellow:hover { background-color: var(--yellow-dark) !important; }
-.select--stroke.color-yellow:hover { color: var(--yellow-dark) !important; }
-
-.select.bg-green:hover { background-color: var(--green-dark) !important; }
-.select--stroke.color-green:hover { color: var(--green-dark) !important; }
-
-.select.bg-teal:hover { background-color: var(--teal-dark) !important; }
-.select--stroke.color-teal:hover { color: var(--teal-dark) !important; }
-
-.select.bg-blue:hover { background-color: var(--blue-dark) !important; }
-.select--stroke.color-blue:hover { color: var(--blue-dark) !important; }
-
-.select.bg-purple:hover { background-color: var(--purple-dark) !important; }
-.select--stroke.color-purple:hover { color: var(--purple-dark) !important; }
 
 /* Ranges */
 .range {
@@ -315,24 +276,17 @@ to the `.select` container. */
 /**
  * The checkbox markup must fit the following pattern.
  * - A wrapping `<label>` with the class `checkbox-container`.
- * - An `<input type='checkbox'>`.
+ * - An `<input type='checkbox'>`. You may want to add a `mr*` margin-right
+ *   class to separate the checkbox from its label.
  * - A `<div>` with the class `checkbox`
  *   containing an `<svg>` with the chosen icon.
  * - Text for the label.
  *
  * Variations:
- * - Modify `checkbox` with `checkbox--stroke`.
- * - Modify *non-stroke* `checkbox` with a background color,
- *   e.g. `bg-red`.
- * - Modify *stroke* `checkbox` with a text color, e.g. `color-red`.
+ * - Modify `checkbox` with a text color, e.g. `color-red`.
  * - Use a different icon.
  * - Modify `checkbox` with `checkbox--s-label` if the text is small,
  *   for proper vertical alignment.
- *
- * When placing a checkbox inside a *non-stroke* `.btn`, you should always
- * use `checkbox--stroke`. The checkbox's border will be removed,
- * but the box will be white and the checkmark will be colored as you choose.
- * Inside a `.btn--stroke`, anything goes.
  *
  * The class `checkbox` and its modifiers can also be used independent
  * of a `<label>` and `<input>` if you are building a custom components.
@@ -345,28 +299,28 @@ to the `.select` container. */
 /*
  * @memberof Checkboxes
  * @example
- * <div class='mb10'>
+ * <div>
  *   <label class='checkbox-container'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr5'>
+ *     <div class='checkbox mr6'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     More cats
  *   </label>
  * </div>
- * <div class='mb10'>
- *   <label class='checkbox-container mr10'>
+ * <div class='mb12'>
+ *   <label class='checkbox-container mr12'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr5'>
+ *     <div class='checkbox mr6'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci tenetur distinctio provident a, debitis obcaecati ipsam laborum autem suscipit natus repellendus nam cumque ab qui ducimus unde ratione, quisquam nisi.
  *   </label>
  * </div>
  * <div class='txt-s'>
- *   <label class='checkbox-container mr10'>
+ *   <label class='checkbox-container mr12'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr5 checkbox--stroke checkbox--s-label color-red'>
+ *     <div class='checkbox mr6 checkbox--s-label color-red'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     More zebras
@@ -377,7 +331,8 @@ to the `.select` container. */
 /**
  * The radio markup must fit the following pattern.
  * - A wrapping `<label>` with the class `radio-container`.
- * - An `<input type='radio'>`.
+ * - An `<input type='radio'>`. You may want to add a `mr*` margin-right
+ *   class to separate the radio from its label.
  * - A `<div>` with the class `radio`.
  * - Text for the label.
  *
@@ -391,23 +346,24 @@ to the `.select` container. */
  * In that case, apply the state class `is-active` when it should be checked.
  *
  * @section Radio buttons
+ * @memberof Forms
  */
 
 /**
  * @memberof Radio buttons
  * @example
- * <div class='mb10'>
- *   <label class='radio-container mr10'>
+ * <div class='mb12'>
+ *   <label class='radio-container mr12'>
  *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio mr5'></div>
+ *     <div class='radio mr6'></div>
  *     Option 1
  *   </label>
  * </div>
  * <div class='txt-s'>
- *   <label class='radio-container mr10'>
+ *   <label class='radio-container mr12'>
  *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio radio--s-label color-yellow mr5'></div>
- *     Option 2
+ *     <div class='radio radio--s-label color-yellow mr6'></div>
+ *     Magic radio
  *   </label>
  * </div>
  */
@@ -421,7 +377,7 @@ to the `.select` container. */
  * - A `<div>` with the class `switch`.
  *
  * Variations:
- * - Modify the active state of the switch handle with `switch--handle-{color}`.
+ * - Modify the active state of the switch handle with `switch--dot-{color}`.
  * - Modify the color of the dot when inactive, the border when inactive and the background in active state with `color--{color}`
  *
  * The class `switch` and its modifiers can also be used independent
@@ -429,25 +385,29 @@ to the `.select` container. */
  * In that case, apply the state class `is-active` when it should be checked.
  *
  * @section Switches
+ * @memberof Forms
  */
 
 /**
  * @memberof Switches
  * @example
- * <label class="switch-container mr10">
- *   <input type='checkbox' value='magic'>
- *   <div class="switch">
- *   </div>
- * </label>
- * <label class="switch-container">
- *   <input type='checkbox' value='magic'>
- *   <div class='switch border--pink color-gray'>
- *   </div>
- * </label>
+ * <div>
+ *   <label class="switch-container mr12">
+ *     <input type='checkbox' value='magic'>
+ *     <div class="switch"></div>
+ *   </label>
+ * </div>
+ * <div>
+ *   <label class="switch-container">
+ *     <input type='checkbox' value='magic'>
+ *     <div class='switch border--pink color-gray mr12'></div>
+ *     Switch this!
+ *   </label>
+ * </div>
  */
 
 /**
- * The toggle is an alternative way to style a set of radio inputs. Switch markup must fit the following pattern.
+ * The toggle is an alternative way to style a set of radio inputs. Toggle markup must fit the following pattern.
  *
  * Consists of
  * - A wrapping `<div>` around all your radio options with the class `toggle-group`.
@@ -464,12 +424,13 @@ to the `.select` container. */
  * In that case, apply the state class `is-active` to a `toggle` and it will appear active.
  *
  * @section Toggles
+ * @memberof Forms
  */
 
 /**
  * @memberof Toggles
  * @example
- * <div class='toggle-group mr20'>
+ * <div class='toggle-group mr18'>
  *   <label class='toggle-container'>
  *     <input name='pet' value='cat' type='radio' />
  *     <div class='toggle'>
@@ -489,7 +450,7 @@ to the `.select` container. */
  *     </div>
  *   </label>
  * </div>
- * <div class='toggle-group txt-s mr20'>
+ * <div class='toggle-group txt-s mr18'>
  *   <label class='toggle-container'>
  *     <input name='beast' value='cat' type='radio' />
  *     <div class='toggle toggle--purple'>
@@ -541,44 +502,39 @@ to the `.select` container. */
 
 .checkbox,
 .radio {
+  top: 3px;
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: var(--border-radius);
   cursor: pointer;
   position: relative;
-  top: 2px;
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
-  transition: color 0.125s, background-color 0.125s;
+  transition: color var(--transition), background-color var(--transition);
 }
 
 /* Primary checkbox styles */
 .checkbox {
-  background-color: var(--blue);
-  color: var(--white);
-}
-
-.checkbox--stroke {
-  background-color: var(--white);
-  border-color: currentColor;
+  background-color: #fff;
   color: var(--blue);
-}
-
-/* Unchecked state */
-.checkbox > .icon {
-  display: none;
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
+  border-color: currentColor;
 }
 
 /* Ensure checkboxes inside buttons look nice */
 .btn:not(.btn--stroke) > .checkbox--stroke {
   border-color: transparent;
+}
+
+.checkbox > .icon {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  /* Unchecked state */
+  display: none;
 }
 
 /* Primary radio styles */
@@ -591,44 +547,42 @@ to the `.select` container. */
 .radio::before {
   content: '';
   background-color: currentColor;
-  width: 10px;
-  height: 10px;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -5px;
-  margin-left: -5px;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
   display: none;
 }
 
 /* Primary switch styles */
 .switch {
+  top: 3px;
   flex-shrink: 0;
   position: relative;
-  top: 2px;
-  width: 36px;
-  height: 20px;
-  border-radius: 10px;
+  width: 30px;
+  height: 18px;
+  border-radius: 9999px;
   cursor: pointer;
   border-width: 2px;
   border-style: solid;
   border-color: currentColor;
   color: var(--blue);
-  transition: color 0.125s, background-color 0.125s, border-color 0.125s;
+  transition: color var(--transition), background-color var(--transition), border-color var(--transition);
 }
 
 .switch::after {
   content: '';
   background-color: currentColor;
-  position: relative;
+  position: absolute;
   display: block;
   border-radius: 50%;
-  width: 12px;
-  height: 12px;
+  width: calc(50% - 3px);
   left: 2px;
   top: 2px;
-  transition: left 0.125s, background-color 0.125s;
+  bottom: 2px;
+  transition: left var(--transition), background-color var(--transition);
 }
 
 /* Primary toggle styles */
@@ -648,7 +602,7 @@ to the `.select` container. */
   border-radius: 13px;
   text-decoration: none !important; /* prevent underline when inside .prose */
   background-color: transparent;
-  transition: color 0.125s, background-color 0.125s;
+  transition: color var(--transition), background-color var(--transition);
 }
 
 /* adjust border radiuses with small text */
@@ -673,12 +627,8 @@ input:checked + .radio::before,
   display: block;
 }
 
-input:checked .checkbox:not(.checkbox--stroke),
-.checkbox.is-active:not(.checkbox--stroke) {
-  background-color: var(--blue-dark);
-}
-input:checked + .checkbox--stroke,
-.checkbox--stroke.is-active,
+input:checked + .checkbox,
+.checkbox.is-active,
 input:checked + .radio,
 .radio.is-active {
   color: var(--blue-dark);
@@ -695,7 +645,7 @@ input:not(:checked) + .switch:not(.is-active):hover::after {
 
 .is-active.switch::after,
 input:checked + .switch::after {
-  left: 18px;
+  left: calc(50% + 1px);
   background-color: var(--white);
 }
 
@@ -715,174 +665,4 @@ input:not(:checked) + .toggle:not(.is-active):hover,
 input:checked + .toggle {
   background: var(--blue) !important;
   color: var(--white);
-}
-
-/* Color variations for checkboxes */
-input:checked + .bg-gray-faint:not(.checkbox--stroke),
-.bg-gray-faint.is-active:not(.checkbox--stroke) {
-  background-color: var(--gray-light) !important;
-}
-input:checked + .color-gray-faint.checkbox--stroke,
-.color-gray-faint.checkbox--stroke.is-active,
-input:checked + .color-gray-faint,
-.color-gray-faint.is-active {
-  color: var(--gray-light) !important;
-}
-
-input:checked + .bg-gray-light:not(.checkbox--stroke),
-.bg-gray-light.is-active:not(.checkbox--stroke) {
-  background-color: var(--gray) !important;
-}
-input:checked + .color-gray-light.checkbox--stroke,
-.color-gray-light.checkbox--stroke.is-active,
-input:checked + .color-gray-light,
-.color-gray-light.is-active {
-  color: var(--gray) !important;
-}
-
-input:checked + .bg-gray:not(.checkbox--stroke),
-.bg-gray.is-active:not(.checkbox--stroke) {
-  background-color: var(--gray-dark) !important;
-}
-input:checked + .color-gray.checkbox--stroke,
-.color-gray.checkbox--stroke.is-active,
-input:checked + .color-gray,
-.color-gray.is-active {
-  color: var(--gray-dark) !important;
-}
-
-input:checked + .bg-gray-dark:not(.checkbox--stroke),
-.bg-gray-dark.is-active:not(.checkbox--stroke) {
-  background-color: var(--black) !important;
-}
-input:checked + .color-gray-dark.checkbox--stroke,
-.color-gray-dark.checkbox--stroke.is-active,
-input:checked + .color-gray-dark,
-.color-gray-dark.is-active {
-  color: var(--black) !important;
-}
-
-input:checked + .bg-pink:not(.checkbox--stroke),
-.bg-pink.is-active:not(.checkbox--stroke) {
-  background-color: var(--pink-dark) !important;
-}
-input:checked + .color-pink.checkbox--stroke,
-.color-pink.checkbox--stroke.is-active,
-input:checked + .color-pink,
-.color-pink.is-active {
-  color: var(--pink-dark) !important;
-}
-
-input:checked + .bg-red:not(.checkbox--stroke),
-.bg-red.is-active:not(.checkbox--stroke) {
-  background-color: var(--red-dark) !important;
-}
-input:checked + .color-red.checkbox--stroke,
-.color-red.checkbox--stroke.is-active,
-input:checked + .color-red,
-.color-red.is-active {
-  color: var(--red-dark) !important;
-}
-
-input:checked + .bg-orange:not(.checkbox--stroke),
-.bg-orange.is-active:not(.checkbox--stroke) {
-  background-color: var(--orange-dark) !important;
-}
-input:checked + .color-orange.checkbox--stroke,
-.color-orange.checkbox--stroke.is-active,
-input:checked + .color-orange,
-.color-orange.is-active {
-  color: var(--orange-dark) !important;
-}
-
-input:checked + .bg-yellow:not(.checkbox--stroke),
-.bg-yellow.is-active:not(.checkbox--stroke) {
-  background-color: var(--yellow-dark) !important;
-}
-input:checked + .color-yellow.checkbox--stroke,
-.color-yellow.checkbox--stroke.is-active,
-input:checked + .color-yellow,
-.color-yellow.is-active {
-  color: var(--yellow-dark) !important;
-}
-
-input:checked + .bg-green:not(.checkbox--stroke),
-.bg-green.is-active:not(.checkbox--stroke) {
-  background-color: var(--green-dark) !important;
-}
-input:checked + .color-green.checkbox--stroke,
-.color-green.checkbox--stroke.is-active,
-input:checked + .color-green,
-.color-green.is-active {
-  color: var(--green-dark) !important;
-}
-
-input:checked + .bg-teal:not(.checkbox--stroke),
-.bg-teal.is-active:not(.checkbox--stroke) {
-  background-color: var(--teal-dark) !important;
-}
-input:checked + .color-teal.checkbox--stroke,
-.color-teal.checkbox--stroke.is-active,
-input:checked + .color-teal,
-.color-teal.is-active {
-  color: var(--teal-dark) !important;
-}
-
-input:checked + .bg-purple:not(.checkbox--stroke),
-.bg-purple.is-active:not(.checkbox--stroke) {
-  background-color: var(--purple-dark) !important;
-}
-input:checked + .color-purple.checkbox--stroke,
-.color-purple.checkbox--stroke.is-active,
-input:checked + .color-purple,
-.color-purple.is-active {
-  color: var(--purple-dark) !important;
-}
-
-input:checked + .bg-black:not(.checkbox--stroke),
-.bg-black.is-active:not(.checkbox--stroke) {
-  background-color: var(--black) !important;
-}
-input:checked + .color-black.checkbox--stroke,
-.color-black.checkbox--stroke.is-active,
-input:checked + .color-black,
-.color-black.is-active {
-  color: var(--black) !important;
-}
-
-/* Color variations for switches */
-.switch.color-purple:hover {
-  border-color: var(--purple-dark) !important;
-}
-
-/* make switch background dark purple when active */
-.is-active.switch.color-purple,
-input:checked + .switch.color-purple,
-/* make dot dark purple on hover, if not active  */
-input:not(:checked) + .switch.color-purple:hover::after,
-:not(input) + .switch.color-purple:not(.is-active):hover::after,
-/* use modifier class to make the dot dark purple on hover, if active  */
-.is-active.switch--handle-purple::after,
-input:checked + .switch--handle-purple::after {
-  background-color: var(--purple-dark) !important;
-}
-
-/* Color variations for toggles */
-
-/* set the text color to purple when inactive */
-.toggle--purple {
-  color: var(--purple) !important;
-}
-
-/* set the text color to dark purple when inactive, on hover  */
-input:not(:checked) + .toggle.toggle--purple:not(.is-active):hover,
-:not(input) + .toggle.toggle--purple:not(.is-active):hover {
-  color: var(--purple-dark) !important;
-}
-
-/* set the background color to dark purple and text color to white when active  */
-.toggle.toggle--purple.is-active,
-input:checked + .toggle.toggle--purple {
-  background: var(--purple) !important;
-  color: var(--white) !important;
 }
