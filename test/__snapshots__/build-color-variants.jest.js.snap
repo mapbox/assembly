@@ -1068,6 +1068,8 @@ input:checked + .radio.color-white,
   border-color: #333 !important;
 }
 
+.switch.color-gray.is-active,
+input:checked + .switch.color-gray,
 input:not(:checked) + .switch.color-gray:hover::after,
 :not(input) + .switch.color-gray:not(.is-active):hover::after,
 .switch--dot-gray.is-active::after,
@@ -1079,6 +1081,8 @@ input:checked + .switch--dot-gray::after {
   border-color: #666 !important;
 }
 
+.switch.color-gray-light.is-active,
+input:checked + .switch.color-gray-light,
 input:not(:checked) + .switch.color-gray-light:hover::after,
 :not(input) + .switch.color-gray-light:not(.is-active):hover::after,
 .switch--dot-gray-light.is-active::after,
@@ -1090,6 +1094,8 @@ input:checked + .switch--dot-gray-light::after {
   border-color: #ccc !important;
 }
 
+.switch.color-gray-faint.is-active,
+input:checked + .switch.color-gray-faint,
 input:not(:checked) + .switch.color-gray-faint:hover::after,
 :not(input) + .switch.color-gray-faint:not(.is-active):hover::after,
 .switch--dot-gray-faint.is-active::after,
@@ -1101,6 +1107,8 @@ input:checked + .switch--dot-gray-faint::after {
   border-color: #C8145A !important;
 }
 
+.switch.color-pink.is-active,
+input:checked + .switch.color-pink,
 input:not(:checked) + .switch.color-pink:hover::after,
 :not(input) + .switch.color-pink:not(.is-active):hover::after,
 .switch--dot-pink.is-active::after,
@@ -1112,6 +1120,8 @@ input:checked + .switch--dot-pink::after {
   border-color: #ff3c96 !important;
 }
 
+.switch.color-pink-light.is-active,
+input:checked + .switch.color-pink-light,
 input:not(:checked) + .switch.color-pink-light:hover::after,
 :not(input) + .switch.color-pink-light:not(.is-active):hover::after,
 .switch--dot-pink-light.is-active::after,
@@ -1123,6 +1133,8 @@ input:checked + .switch--dot-pink-light::after {
   border-color: #FF88C0 !important;
 }
 
+.switch.color-pink-faint.is-active,
+input:checked + .switch.color-pink-faint,
 input:not(:checked) + .switch.color-pink-faint:hover::after,
 :not(input) + .switch.color-pink-faint:not(.is-active):hover::after,
 .switch--dot-pink-faint.is-active::after,
@@ -1134,6 +1146,8 @@ input:checked + .switch--dot-pink-faint::after {
   border-color: #BE0014 !important;
 }
 
+.switch.color-red.is-active,
+input:checked + .switch.color-red,
 input:not(:checked) + .switch.color-red:hover::after,
 :not(input) + .switch.color-red:not(.is-active):hover::after,
 .switch--dot-red.is-active::after,
@@ -1145,6 +1159,8 @@ input:checked + .switch--dot-red::after {
   border-color: #dc2b28 !important;
 }
 
+.switch.color-red-light.is-active,
+input:checked + .switch.color-red-light,
 input:not(:checked) + .switch.color-red-light:hover::after,
 :not(input) + .switch.color-red-light:not(.is-active):hover::after,
 .switch--dot-red-light.is-active::after,
@@ -1156,6 +1172,8 @@ input:checked + .switch--dot-red-light::after {
   border-color: #FF8280 !important;
 }
 
+.switch.color-red-faint.is-active,
+input:checked + .switch.color-red-faint,
 input:not(:checked) + .switch.color-red-faint:hover::after,
 :not(input) + .switch.color-red-faint:not(.is-active):hover::after,
 .switch--dot-red-faint.is-active::after,
@@ -1167,6 +1185,8 @@ input:checked + .switch--dot-red-faint::after {
   border-color: #DC4600 !important;
 }
 
+.switch.color-orange.is-active,
+input:checked + .switch.color-orange,
 input:not(:checked) + .switch.color-orange:hover::after,
 :not(input) + .switch.color-orange:not(.is-active):hover::after,
 .switch--dot-orange.is-active::after,
@@ -1178,6 +1198,8 @@ input:checked + .switch--dot-orange::after {
   border-color: #ff6e00 !important;
 }
 
+.switch.color-orange-light.is-active,
+input:checked + .switch.color-orange-light,
 input:not(:checked) + .switch.color-orange-light:hover::after,
 :not(input) + .switch.color-orange-light:not(.is-active):hover::after,
 .switch--dot-orange-light.is-active::after,
@@ -1189,6 +1211,8 @@ input:checked + .switch--dot-orange-light::after {
   border-color: #FFA950 !important;
 }
 
+.switch.color-orange-faint.is-active,
+input:checked + .switch.color-orange-faint,
 input:not(:checked) + .switch.color-orange-faint:hover::after,
 :not(input) + .switch.color-orange-faint:not(.is-active):hover::after,
 .switch--dot-orange-faint.is-active::after,
@@ -1200,6 +1224,8 @@ input:checked + .switch--dot-orange-faint::after {
   border-color: #FFBD0A !important;
 }
 
+.switch.color-yellow.is-active,
+input:checked + .switch.color-yellow,
 input:not(:checked) + .switch.color-yellow:hover::after,
 :not(input) + .switch.color-yellow:not(.is-active):hover::after,
 .switch--dot-yellow.is-active::after,
@@ -1211,6 +1237,8 @@ input:checked + .switch--dot-yellow::after {
   border-color: #f0dc00 !important;
 }
 
+.switch.color-yellow-light.is-active,
+input:checked + .switch.color-yellow-light,
 input:not(:checked) + .switch.color-yellow-light:hover::after,
 :not(input) + .switch.color-yellow-light:not(.is-active):hover::after,
 .switch--dot-yellow-light.is-active::after,
@@ -1222,6 +1250,8 @@ input:checked + .switch--dot-yellow-light::after {
   border-color: #F0F062 !important;
 }
 
+.switch.color-yellow-faint.is-active,
+input:checked + .switch.color-yellow-faint,
 input:not(:checked) + .switch.color-yellow-faint:hover::after,
 :not(input) + .switch.color-yellow-faint:not(.is-active):hover::after,
 .switch--dot-yellow-faint.is-active::after,
@@ -1233,6 +1263,8 @@ input:checked + .switch--dot-yellow-faint::after {
   border-color: #007532 !important;
 }
 
+.switch.color-green.is-active,
+input:checked + .switch.color-green,
 input:not(:checked) + .switch.color-green:hover::after,
 :not(input) + .switch.color-green:not(.is-active):hover::after,
 .switch--dot-green.is-active::after,
@@ -1244,6 +1276,8 @@ input:checked + .switch--dot-green::after {
   border-color: #01aa46 !important;
 }
 
+.switch.color-green-light.is-active,
+input:checked + .switch.color-green-light,
 input:not(:checked) + .switch.color-green-light:hover::after,
 :not(input) + .switch.color-green-light:not(.is-active):hover::after,
 .switch--dot-green-light.is-active::after,
@@ -1255,6 +1289,8 @@ input:checked + .switch--dot-green-light::after {
   border-color: #72C781 !important;
 }
 
+.switch.color-green-faint.is-active,
+input:checked + .switch.color-green-faint,
 input:not(:checked) + .switch.color-green-faint:hover::after,
 :not(input) + .switch.color-green-faint:not(.is-active):hover::after,
 .switch--dot-green-faint.is-active::after,
@@ -1266,6 +1302,8 @@ input:checked + .switch--dot-green-faint::after {
   border-color: #00626E !important;
 }
 
+.switch.color-teal.is-active,
+input:checked + .switch.color-teal,
 input:not(:checked) + .switch.color-teal:hover::after,
 :not(input) + .switch.color-teal:not(.is-active):hover::after,
 .switch--dot-teal.is-active::after,
@@ -1277,6 +1315,8 @@ input:checked + .switch--dot-teal::after {
   border-color: #01b5b4 !important;
 }
 
+.switch.color-teal-light.is-active,
+input:checked + .switch.color-teal-light,
 input:not(:checked) + .switch.color-teal-light:hover::after,
 :not(input) + .switch.color-teal-light:not(.is-active):hover::after,
 .switch--dot-teal-light.is-active::after,
@@ -1288,6 +1328,8 @@ input:checked + .switch--dot-teal-light::after {
   border-color: #50D2D2 !important;
 }
 
+.switch.color-teal-faint.is-active,
+input:checked + .switch.color-teal-faint,
 input:not(:checked) + .switch.color-teal-faint:hover::after,
 :not(input) + .switch.color-teal-faint:not(.is-active):hover::after,
 .switch--dot-teal-faint.is-active::after,
@@ -1299,6 +1341,8 @@ input:checked + .switch--dot-teal-faint::after {
   border-color: #0014AA !important;
 }
 
+.switch.color-blue.is-active,
+input:checked + .switch.color-blue,
 input:not(:checked) + .switch.color-blue:hover::after,
 :not(input) + .switch.color-blue:not(.is-active):hover::after,
 .switch--dot-blue.is-active::after,
@@ -1310,6 +1354,8 @@ input:checked + .switch--dot-blue::after {
   border-color: #0065fb !important;
 }
 
+.switch.color-blue-light.is-active,
+input:checked + .switch.color-blue-light,
 input:not(:checked) + .switch.color-blue-light:hover::after,
 :not(input) + .switch.color-blue-light:not(.is-active):hover::after,
 .switch--dot-blue-light.is-active::after,
@@ -1321,6 +1367,8 @@ input:checked + .switch--dot-blue-light::after {
   border-color: #00B1FF !important;
 }
 
+.switch.color-blue-faint.is-active,
+input:checked + .switch.color-blue-faint,
 input:not(:checked) + .switch.color-blue-faint:hover::after,
 :not(input) + .switch.color-blue-faint:not(.is-active):hover::after,
 .switch--dot-blue-faint.is-active::after,
@@ -1332,6 +1380,8 @@ input:checked + .switch--dot-blue-faint::after {
   border-color: #500078 !important;
 }
 
+.switch.color-purple.is-active,
+input:checked + .switch.color-purple,
 input:not(:checked) + .switch.color-purple:hover::after,
 :not(input) + .switch.color-purple:not(.is-active):hover::after,
 .switch--dot-purple.is-active::after,
@@ -1343,6 +1393,8 @@ input:checked + .switch--dot-purple::after {
   border-color: #8c50c7 !important;
 }
 
+.switch.color-purple-light.is-active,
+input:checked + .switch.color-purple-light,
 input:not(:checked) + .switch.color-purple-light:hover::after,
 :not(input) + .switch.color-purple-light:not(.is-active):hover::after,
 .switch--dot-purple-light.is-active::after,
@@ -1354,6 +1406,8 @@ input:checked + .switch--dot-purple-light::after {
   border-color: #C299E3 !important;
 }
 
+.switch.color-purple-faint.is-active,
+input:checked + .switch.color-purple-faint,
 input:not(:checked) + .switch.color-purple-faint:hover::after,
 :not(input) + .switch.color-purple-faint:not(.is-active):hover::after,
 .switch--dot-purple-faint.is-active::after,
@@ -1365,6 +1419,8 @@ input:checked + .switch--dot-purple-faint::after {
   border-color: rgba(0, 0, 0, 0.10) !important;
 }
 
+.switch.color-darken5.is-active,
+input:checked + .switch.color-darken5,
 input:not(:checked) + .switch.color-darken5:hover::after,
 :not(input) + .switch.color-darken5:not(.is-active):hover::after,
 .switch--dot-darken5.is-active::after,
@@ -1376,6 +1432,8 @@ input:checked + .switch--dot-darken5::after {
   border-color: rgba(0, 0, 0, 0.25) !important;
 }
 
+.switch.color-darken10.is-active,
+input:checked + .switch.color-darken10,
 input:not(:checked) + .switch.color-darken10:hover::after,
 :not(input) + .switch.color-darken10:not(.is-active):hover::after,
 .switch--dot-darken10.is-active::after,
@@ -1387,6 +1445,8 @@ input:checked + .switch--dot-darken10::after {
   border-color: rgba(0, 0, 0, 0.5) !important;
 }
 
+.switch.color-darken25.is-active,
+input:checked + .switch.color-darken25,
 input:not(:checked) + .switch.color-darken25:hover::after,
 :not(input) + .switch.color-darken25:not(.is-active):hover::after,
 .switch--dot-darken25.is-active::after,
@@ -1398,6 +1458,8 @@ input:checked + .switch--dot-darken25::after {
   border-color: rgba(0, 0, 0, 0.75) !important;
 }
 
+.switch.color-darken50.is-active,
+input:checked + .switch.color-darken50,
 input:not(:checked) + .switch.color-darken50:hover::after,
 :not(input) + .switch.color-darken50:not(.is-active):hover::after,
 .switch--dot-darken50.is-active::after,
@@ -1409,6 +1471,8 @@ input:checked + .switch--dot-darken50::after {
   border-color: #000 !important;
 }
 
+.switch.color-darken75.is-active,
+input:checked + .switch.color-darken75,
 input:not(:checked) + .switch.color-darken75:hover::after,
 :not(input) + .switch.color-darken75:not(.is-active):hover::after,
 .switch--dot-darken75.is-active::after,
@@ -1420,6 +1484,8 @@ input:checked + .switch--dot-darken75::after {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
+.switch.color-lighten5.is-active,
+input:checked + .switch.color-lighten5,
 input:not(:checked) + .switch.color-lighten5:hover::after,
 :not(input) + .switch.color-lighten5:not(.is-active):hover::after,
 .switch--dot-lighten5.is-active::after,
@@ -1431,6 +1497,8 @@ input:checked + .switch--dot-lighten5::after {
   border-color: rgba(255, 255, 255, 0.25) !important;
 }
 
+.switch.color-lighten10.is-active,
+input:checked + .switch.color-lighten10,
 input:not(:checked) + .switch.color-lighten10:hover::after,
 :not(input) + .switch.color-lighten10:not(.is-active):hover::after,
 .switch--dot-lighten10.is-active::after,
@@ -1442,6 +1510,8 @@ input:checked + .switch--dot-lighten10::after {
   border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
+.switch.color-lighten25.is-active,
+input:checked + .switch.color-lighten25,
 input:not(:checked) + .switch.color-lighten25:hover::after,
 :not(input) + .switch.color-lighten25:not(.is-active):hover::after,
 .switch--dot-lighten25.is-active::after,
@@ -1453,6 +1523,8 @@ input:checked + .switch--dot-lighten25::after {
   border-color: rgba(255, 255, 255, 0.75) !important;
 }
 
+.switch.color-lighten50.is-active,
+input:checked + .switch.color-lighten50,
 input:not(:checked) + .switch.color-lighten50:hover::after,
 :not(input) + .switch.color-lighten50:not(.is-active):hover::after,
 .switch--dot-lighten50.is-active::after,
@@ -1464,6 +1536,8 @@ input:checked + .switch--dot-lighten50::after {
   border-color: #fff !important;
 }
 
+.switch.color-lighten75.is-active,
+input:checked + .switch.color-lighten75,
 input:not(:checked) + .switch.color-lighten75:hover::after,
 :not(input) + .switch.color-lighten75:not(.is-active):hover::after,
 .switch--dot-lighten75.is-active::after,
@@ -1475,6 +1549,8 @@ input:checked + .switch--dot-lighten75::after {
   border-color: gray-faint !important;
 }
 
+.switch.color-white.is-active,
+input:checked + .switch.color-white,
 input:not(:checked) + .switch.color-white:hover::after,
 :not(input) + .switch.color-white:not(.is-active):hover::after,
 .switch--dot-white.is-active::after,

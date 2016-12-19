@@ -195,13 +195,15 @@ variantGenerators.radio = function (color) {
 variantGenerators.switch = function (color) {
   if (isDark(color)) return '';
   const darkerShade = getDarkerShade(color);
-  // Darken background when active
+  // Darken background when hovered and when active
   // Darken dot on hover when inactive only
   return stripIndent(`
     .switch.color-${color}:hover {
       border-color: ${darkerShade} !important;
     }
 
+    .switch.color-${color}.is-active,
+    input:checked + .switch.color-${color},
     input:not(:checked) + .switch.color-${color}:hover::after,
     :not(input) + .switch.color-${color}:not(.is-active):hover::after,
     .switch--dot-${color}.is-active::after,
