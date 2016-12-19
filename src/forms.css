@@ -147,8 +147,14 @@
  */
 .select {
   position: relative;
+  color: var(--white);
   border-radius: var(--border-radius);
+  background-color: var(--blue); /* match btn default state */
   transition: color var(--transition), background-color var(--transition);
+}
+
+.select:not(.select--stroke):hover {
+  background-color: var(--blue-dark);
 }
 
 /* Borders are on the select, but colors are applied
@@ -159,7 +165,7 @@ to the `.select` container. */
   display: block;
   border-width: 2px;
   border-style: solid;
-  border-color: var(--gray-light);
+  border-color: transparent;
   border-radius: var(--border-radius);
   color: currentColor;
   font-weight: bold;
@@ -192,6 +198,15 @@ to the `.select` container. */
 }
 /* End IE overrides */
 
+.select--stroke {
+  color: var(--blue);
+  background-color: transparent;
+}
+
+.select--stroke:hover {
+  color: var(--blue-dark);
+}
+
 .select--stroke > select {
   border-color: currentColor;
 }
@@ -206,7 +221,7 @@ to the `.select` container. */
   content: '';
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 6px solid var(--gray-light);
+  border-top: 6px solid currentColor;
   width: 8px;
   height: 8px;
   font-size: 0;
@@ -215,6 +230,11 @@ to the `.select` container. */
   top: 50%;
   margin-top: -3px;
   right: 12px;
+}
+
+/* override the box-shadow reset for select elements */
+.select > select:focus {
+  box-shadow: 0 0 2px 2px var(--darken25);
 }
 
 .select--stroke::after {
@@ -686,6 +706,12 @@ to the `.select` container. */
   border-style: solid;
   border-color: transparent;
   transition: color var(--transition), background-color var(--transition);
+}
+
+input:focus + .checkbox,
+input:focus + .radio,
+input:focus + .switch {
+  box-shadow: 0 0 2px 2px var(--darken25);
 }
 
 /* Primary checkbox styles */
