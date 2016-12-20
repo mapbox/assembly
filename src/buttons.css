@@ -92,6 +92,20 @@
 /** @endgroup */
 
 /**
+ * Add the `disabled` property to a button to disable it.
+ *
+ * @memberof Buttons
+ * @example
+ * <button disabled class='btn'>Disabled button</button>
+ */
+.btn:disabled {
+  pointer-events: none;
+  color: var(--darken25) !important;
+  background-color: var(--disabled) !important;
+  border-color: transparent !important;
+}
+
+/**
  * Classes to create pill button groups. Every button in a pill group
  * has a `.btn--pill` class and a modifier specifying its position.
  * Pill groups should be wrapped in a container with a

@@ -110,57 +110,46 @@
  * - A `<select>`.
  *
  * Variations:
- * - Modify `.select` with `select--stroke`.
- * - Modify *non-stroke* `.select` with a `.bg-{color}` class.
- * - Modify *stroke* `.select` with a text color, e.g. `.color-red`.
+ * - Modify `.select` with a `.bg-{color}` class.
+ * - Modify `.select-container` with `select-container--stroke`.
+ * - Modify *stroke* `.select-container` with a text color, e.g. `.color-red`.
  *
  * @memberof Forms
+ * @group
  * @example
- * <div class='select mb6'>
- *   <select>
+ * <div class='select-container mb6'>
+ *   <select class='select'>
  *     <option>one</option>
  *     <option>two</option>
- *     <option>three</option>
  *   </select>
  * </div>
- * <div class='select bg-red mb6'>
- *   <select>
+ * <div class='select-container mb6'>
+ *   <select class='select bg-red'>
  *     <option>one</option>
  *     <option>two</option>
- *     <option>three</option>
  *   </select>
  * </div>
- * <div class='select select--s bg-blue mb6'>
- *   <select>
+ * <div class='select-container select-container--stroke mb6'>
+ *   <select class='select select--s'>
  *     <option>one</option>
  *     <option>two</option>
- *     <option>three</option>
  *   </select>
  * </div>
- * <div class='select select--stroke color-purple'>
- *   <select>
+ * <div class='select-container select-container--stroke color-purple'>
+ *   <select class='select'>
  *     <option>one</option>
  *     <option>two</option>
- *     <option>three</option>
  *   </select>
  * </div>
  */
-.select {
+.select-container {
   position: relative;
   color: var(--white);
-  border-radius: var(--border-radius);
-  background-color: var(--blue); /* match btn default state */
+}
+
+.select {
+  appearance: none;
   transition: color var(--transition), background-color var(--transition);
-  display: inline-block;
-}
-
-.select:not(.select--stroke):hover {
-  background-color: var(--blue-dark);
-}
-
-/* Borders are on the select, but colors are applied
-to the `.select` container. */
-.select > select {
   font-size: inherit;
   line-height: inherit;
   display: block;
@@ -175,8 +164,34 @@ to the `.select` container. */
   /* Needs to be on top of everything but transparent */
   position: relative;
   z-index: 2;
-  background: transparent;
+  background-color: var(--blue); /* match btn default state */
   width: 100%;
+}
+/** @endgroup */
+
+/* default hover state */
+:not(.select-container--stroke) > .select:hover {
+  background-color: var(--blue-dark);
+}
+
+/**
+ * A disabled select input.
+ *
+ * @memberof Forms
+ * @group
+ * @example
+ * <div class='select-container'>
+ *   <select disabled class='select'>
+ *     <option>one</option>
+ *     <option>two</option>
+ *   </select>
+ * </div>
+ */
+.select:disabled {
+  pointer-events: none;
+  color: var(--darken25) !important;
+  background-color: var(--disabled) !important;
+  border-color: transparent !important;
 }
 
 /* Some browsers color the option text and background, so reset that */
@@ -186,47 +201,51 @@ to the `.select` container. */
 }
 
 /* IE overrides */
-.select > select::-ms-expand { display: none; }
+.select::-ms-expand { display: none; }
+/* IE actually colors the options, so they can't be white */
+.select option { color: var(--text-color); }
 /* Remove purple highlight in HC mode */
 @media all and (-ms-high-contrast: active) {
-  .select > select:focus::-ms-value {
+  .select:focus::-ms-value {
     background-color: transparent;
     color: inherit;
   }
 }
 /* Remove blue highlight in Normal mode */
 @media all and (-ms-high-contrast: none) {
-  .select > select:focus::-ms-value {
+  .select:focus::-ms-value {
     background-color: transparent;
     color: inherit;
   }
 }
 /* End IE overrides */
 
-.select--stroke {
+.select-container--stroke {
   color: var(--blue);
-  background-color: transparent;
 }
 
-.select--stroke:hover {
+.select-container--stroke:hover {
   color: var(--blue-dark);
 }
 
-.select--stroke > select {
+.select-container--stroke > .select {
+  background-color: transparent;
   border-color: currentColor;
 }
 
-.select--s > select {
+.select--s {
   font-size: 12px;
   line-height: 20px;
   padding: 0 22px 0 12px; /* plus arrow */
 }
 
-.select::after {
+.select-container::after {
   content: '';
+  pointer-events: none;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 6px solid currentColor;
+  z-index: 3;
   width: 8px;
   height: 8px;
   font-size: 0;
@@ -235,60 +254,17 @@ to the `.select` container. */
   top: 50%;
   margin-top: -3px;
   right: 12px;
+  transition: border-top-color var(--transition);
 }
 
 /* override the box-shadow reset for select elements */
-.select > select:focus {
+.select:focus {
   box-shadow: 0 0 2px 2px var(--darken25);
-}
-
-.select--stroke::after {
-  border-top-color: currentColor;
 }
 
 .select--s::after {
   right: 8px;
 }
-
-/* stylelint-disable selector-no-attribute */
-/* bg- colors */
-.select[class*='bg-']:not(.select--stroke),
-.select[class*='bg-']:not(.select--stroke) > select {
-  border-color: transparent;
-  color: #fff;
-}
-.select[class*='bg-']:not(.select--stroke)::after {
-  border-top-color: #fff;
-}
-/* stylelint-enable selector-no-attribute */
-
-/* Color variations */
-.select.bg-gray:hover { background-color: var(--gray-dark) !important; }
-.select--stroke.color-gray:hover { color: var(--gray-dark) !important; }
-
-.select.bg-pink:hover { background-color: var(--pink-dark) !important; }
-.select--stroke.color-pink:hover { color: var(--pink-dark) !important; }
-
-.select.bg-red:hover { background-color: var(--red-dark) !important; }
-.select--stroke.color-red:hover { color: var(--red-dark) !important; }
-
-.select.bg-orange:hover { background-color: var(--orange-dark) !important; }
-.select--stroke.color-orange:hover { color: var(--orange-dark) !important; }
-
-.select.bg-yellow:hover { background-color: var(--yellow-dark) !important; }
-.select--stroke.color-yellow:hover { color: var(--yellow-dark) !important; }
-
-.select.bg-green:hover { background-color: var(--green-dark) !important; }
-.select--stroke.color-green:hover { color: var(--green-dark) !important; }
-
-.select.bg-teal:hover { background-color: var(--teal-dark) !important; }
-.select--stroke.color-teal:hover { color: var(--teal-dark) !important; }
-
-.select.bg-blue:hover { background-color: var(--blue-dark) !important; }
-.select--stroke.color-blue:hover { color: var(--blue-dark) !important; }
-
-.select.bg-purple:hover { background-color: var(--purple-dark) !important; }
-.select--stroke.color-purple:hover { color: var(--purple-dark) !important; }
 
 /**
  * Range input. The following modifiers are available:
@@ -665,7 +641,6 @@ to the `.select` container. */
 .radio-container {
   user-select: none;
   display: inline-flex;
-  cursor: pointer;
 }
 
 .toggle-container > input,
@@ -678,12 +653,12 @@ to the `.select` container. */
 
 .checkbox,
 .radio {
+  cursor: pointer;
   top: 3px;
   flex-shrink: 0;
   width: 18px;
   height: 18px;
   border-radius: var(--border-radius);
-  cursor: pointer;
   position: relative;
   border-width: 2px;
   border-style: solid;
@@ -695,6 +670,24 @@ input:focus + .checkbox,
 input:focus + .radio,
 input:focus + .switch {
   box-shadow: 0 0 2px 2px var(--darken25);
+}
+
+input:disabled {
+  pointer-events: none;
+}
+
+/* Note, some rules in this list include specificy bumps, to override colored versions of the icons */
+input:disabled + .checkbox,
+input:checked:disabled + .checkbox.checkbox,
+input:checked:disabled + .radio.radio,
+input:disabled + .radio,
+input:disabled + .switch,
+input:checked:disabled + .switch.switch,
+input:checked:disabled + .switch.switch::after {
+  pointer-events: none;
+  color: var(--darken25) !important;
+  background-color: var(--disabled) !important;
+  border-color: transparent !important;
 }
 
 /* Primary checkbox styles */
@@ -849,3 +842,15 @@ input:checked + .toggle {
   background: var(--blue) !important;
   color: var(--white);
 }
+
+input:disabled + .toggle {
+  pointer-events: none;
+  color: var(--darken25) !important;
+  border-color: transparent !important;
+}
+
+input:checked:disabled + .toggle {
+  background-color: var(--disabled) !important;
+  color: var(--darken25) !important;
+}
+
