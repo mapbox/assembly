@@ -187,7 +187,6 @@
   background-color: var(--disabled) !important;
   border-color: transparent !important;
 }
-/** @endgroup */
 
 /* Some browsers color the option text and background, so reset that */
 .select option {
@@ -387,7 +386,7 @@
 
 .range--s::-ms-thumb {
   width: 13px;
-  height: 15px;;
+  height: 15px;
 }
 
 .range--s::-moz-range-thumb {
