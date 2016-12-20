@@ -294,22 +294,22 @@ to the `.select` container. */
  *
  * @memberof Forms
  * @example
- * <input class='range w96' type='range' />
- * <input class='range range--s w96' type='range' />
- * <div class='bg-gray-dark pl12 pr12 round inline-block'><input class='range range--dark w96' type='range' /></div>
+ * <div class='mb12'><label>Range <input class='range w96' type='range' /></label></div>
+ * <div class='mb12'><label>Small range<input class='range range--s w96' type='range' /></label></div>
+ * <div class='bg-gray-dark pl12 pr12 pt3 pb3 round color-white'><label>Dark range<input class='range range--dark w96' type='range' /></label</div>
 */
 .range {
   appearance: none;
-  padding: 5px 0; /* to increase click area for ranges */
+  padding: 7px 0; /* to increase click area for ranges */
   width: 100%;
-  vertical-align: middle;
   background: transparent;
+  vertical-align: text-bottom;
 }
 
 /* range track */
 .range::-webkit-slider-runnable-track {
   width: 100%;
-  height: 3px;
+  height: 4px;
   padding: 0;
   border: 0;
   border-radius: 2px;
@@ -337,7 +337,7 @@ to the `.select` container. */
   cursor: pointer;
   background: transparent;
   border-color: transparent;
-  border-width: 8px 0;
+  border-width: 12px 0;
   color: transparent;
 }
 
@@ -363,18 +363,18 @@ to the `.select` container. */
 .range::-webkit-slider-thumb {
   appearance: none;
   box-shadow: none;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: var(--gray-light);
   border: 0;
   cursor: pointer;
-  margin-top: -7.5px;
+  margin-top: -8px;
 }
 
 .range::-moz-range-thumb {
-  width: 13px;
-  height: 13px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: var(--gray-light);
   border: 0;
@@ -383,8 +383,8 @@ to the `.select` container. */
 }
 
 .range::-ms-thumb {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: var(--gray-light);
   border: 0;
@@ -397,27 +397,28 @@ to the `.select` container. */
 .range:hover::-moz-range-thumb { transform: scale(1.25); background: var(--blue); }
 
 /* range small */
+.range--s { padding: 5px 0; }
 /* range small track */
 .range--s::-webkit-slider-runnable-track { height: 2px; }
 .range--s::-moz-range-track { height: 2px; }
-.range--s::-ms-track { height: 2px; border-width: 7px 0; }
+.range--s::-ms-track { height: 2px; border-width: 9px 0; }
 
 /* range small thumb */
 .range--s::-webkit-slider-thumb {
-  width: 13px;
-  height: 13px;
-  margin-top: -5px;
+  width: 15px;
+  height: 15px;
+  margin-top: -6.5px;
 }
 
 .range--s::-ms-thumb {
-  width: 13px;
-  height: 13px;
-  margin-top: -1px;
+  width: 15px;
+  height: 15px;
 }
 
 .range--s::-moz-range-thumb {
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
+  margin-top: -7.5px;
 }
 
 .range:focus { box-shadow: none; }
