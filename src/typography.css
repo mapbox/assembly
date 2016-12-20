@@ -17,6 +17,10 @@ textarea {
   -webkit-font-smoothing: antialiased;
 }
 
+.prose--dark {
+  color: var(--white);
+}
+
 /**
  * Standard text scale. All text size classes include `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
@@ -287,7 +291,11 @@ textarea {
   margin: 17px 0; /* margin + height = 18px */
   border: 0;
   height: 1px;
-  background: var(--darken5);
+  background: var(--darken10);
+}
+
+.prose--dark hr {
+  background: var(--lighten10);
 }
 
 /* Lists */
@@ -395,6 +403,16 @@ textarea {
   font-weight: normal;
 }
 
+.prose--dark kbd {
+  background: var(--lighten5);
+  color: var(--lighten75);
+  border: 1px solid var(--lighten10);
+  line-height: 18px;
+  border-radius: 3px;
+  padding: 2px 3px;
+  box-shadow: 0 1px 0 0 var(--lighten10);
+}
+
 /**
  * [`<sup>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup)
  * and [`<sub>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub)
@@ -449,10 +467,19 @@ textarea {
   border-radius: 3px;
 }
 
+.prose--dark code,
+.prose--dark pre {
+  background: var(--lighten5);
+}
+
 .code,
 .prose code {
   padding: 2px;
   box-shadow: inset 0 0 1px 0 var(--darken25);
+}
+
+.prose code {
+  box-shadow: inset 0 0 1px 0 var(--lighten25);
 }
 
 .code-block,
