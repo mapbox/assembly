@@ -306,28 +306,30 @@ textarea {
 }
 
 /**
- * Ordered and unordered. `.prose` list items include left margins while `.txt-li` list items do not include left margins.
+ * Ordered and unordered. `.prose` lists include left margins
+ * and margins between items, while `.txt-li` list items do not include
+ * their own margins.
  *
  * @group
  * @memberof Typography
  * @example
- * <ul class='txt-ul'>
+ * <ul class='txt-ul ml6 mb18'>
  *   <li>one</li>
  *   <li>two</li>
  *   <li>three</li>
  * </ul>
- * <ul class='txt-ol'>
+ * <ol class='txt-ol ml6 mb18'>
  *   <li>one</li>
  *   <li>two</li>
  *   <li>three</li>
- * </ul>
+ * </ol>
  * <div class='prose'>
- *   <ul class='txt-ul'>
+ *   <ul>
  *     <li>one</li>
  *     <li>two</li>
  *     <li>three</li>
  *   </ul>
- *   <ul class='txt-ol'>
+ *   <ol>
  *     <li>one</li>
  *     <li>two</li>
  *     <li>three</li>
@@ -544,28 +546,34 @@ textarea {
  * Uppercase text.
  * @memberof Typography utilities
  * @example
- * <div class='uppercase'>uppercase</div>
+ * <div class='uppercase'>UpPeRcAsE</div>
  */
 .uppercase { text-transform: uppercase !important; }
 
 /**
- * All caps.
+ * Lowercase text.
  * @memberof Typography utilities
  * @example
- * <div class='capitalize'>capitalize</div>
+ * <div class='lowercase'>LoWeRcAsE</div>
+ */
+.lowercase { text-transform: lowercase !important; }
+
+/**
+ * Capitalize all words in the element.
+ * @memberof Typography utilities
+ * @example
+ * <div class='capitalize'>all words are capitalized</div>
  */
 .capitalize { text-transform: capitalize !important; }
 
 /**
- * Sentence case.
+ * Capitalize the first letter in the element.
  * @memberof Typography utilities
- * @group
  * @example
- * <div class='sentence-case'>sentence-case</div>
+ * <div class='capitalize-first'>first word only is capitalized</div>
  */
-.sentence-case { text-transform: lowercase !important; }
-.sentence-case::first-letter { text-transform: capitalize !important; }
-/** @endgroup */
+.capitalize-first { text-transform: lowercase !important; }
+.capitalize-first::first-letter { text-transform: capitalize !important; }
 
 /**
  * Text horizontal alignment.
