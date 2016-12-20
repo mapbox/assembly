@@ -151,6 +151,7 @@
   border-radius: var(--border-radius);
   background-color: var(--blue); /* match btn default state */
   transition: color var(--transition), background-color var(--transition);
+  display: inline-block;
 }
 
 .select:not(.select--stroke):hover {
@@ -178,10 +179,14 @@ to the `.select` container. */
   width: 100%;
 }
 
+/* Some browsers color the option text and background, so reset that */
+.select option {
+  background-color: var(--white);
+  color: var(--text-color);
+}
+
 /* IE overrides */
 .select > select::-ms-expand { display: none; }
-/* IE actually colors the options, so they can't be white */
-.select option { color: var(--text-color); }
 /* Remove purple highlight in HC mode */
 @media all and (-ms-high-contrast: active) {
   .select > select:focus::-ms-value {
