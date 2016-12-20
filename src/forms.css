@@ -121,28 +121,24 @@
  *   <select class='select'>
  *     <option>one</option>
  *     <option>two</option>
- *     <option>three</option>
  *   </select>
  * </div>
  * <div class='select-container mb6'>
  *   <select class='select bg-red'>
  *     <option>one</option>
  *     <option>two</option>
- *     <option>three</option>
  *   </select>
  * </div>
  * <div class='select-container select-container--stroke mb6'>
  *   <select class='select select--s'>
  *     <option>one</option>
  *     <option>two</option>
- *     <option>three</option>
  *   </select>
  * </div>
  * <div class='select-container select-container--stroke color-purple'>
  *   <select class='select'>
  *     <option>one</option>
  *     <option>two</option>
- *     <option>three</option>
  *   </select>
  * </div>
  */
@@ -152,8 +148,7 @@
 }
 
 .select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none;
   transition: color var(--transition), background-color var(--transition);
   font-size: inherit;
   line-height: inherit;
@@ -179,9 +174,22 @@
   background-color: var(--blue-dark);
 }
 
+/**
+ * A disabled select input.
+ *
+ * @memberof Forms
+ * @group
+ * @example
+ * <div class='select-container'>
+ *   <select disabled class='select'>
+ *     <option>one</option>
+ *     <option>two</option>
+ *   </select>
+ * </div>
+ */
 .select:disabled {
   pointer-events: none;
-  color: rgba(0,0,0,.25) !important;
+  color: var(--darken25) !important;
   background-color: var(--disabled) !important;
   border-color: transparent !important;
 }
@@ -654,7 +662,6 @@ select:focus {
   width: 18px;
   height: 18px;
   border-radius: var(--border-radius);
-  cursor: pointer;
   position: relative;
   border-width: 2px;
   border-style: solid;
@@ -682,7 +689,7 @@ input:disabled + .switch,
 input:checked:disabled + .switch.switch,
 input:checked:disabled + .switch.switch::after {
   pointer-events: none;
-  color: rgba(0,0,0,.25) !important;
+  color: var(--darken25) !important;
   background-color: var(--disabled) !important;
   border-color: transparent !important;
 }
@@ -842,12 +849,12 @@ input:checked + .toggle {
 
 input:disabled + .toggle {
   pointer-events: none;
-  color: rgba(0,0,0,.25) !important;
+  color: var(--darken25) !important;
   border-color: transparent !important;
 }
 
 input:checked:disabled + .toggle {
   background-color: var(--disabled) !important;
-  color: rgba(0,0,0,.25) !important;
+  color: var(--darken25) !important;
 }
 

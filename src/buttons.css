@@ -100,7 +100,7 @@
  */
 .btn:disabled {
   pointer-events: none;
-  color: rgba(0,0,0,.25) !important;
+  color: var(--darken25) !important;
   background-color: var(--disabled) !important;
   border-color: transparent !important;
 }
