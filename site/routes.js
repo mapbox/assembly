@@ -1,16 +1,14 @@
-#!/usr/bin/env node
-
-const React = require('react');
-const documentationCss = require('documentation-css');
-const { Page } = require('./page');
-const { Documentation } = require('./documentation/documentation');
-const { Home } = require('./home');
-const { Icons } = require('./icons');
-const { Examples } = require('./examples');
-const { Debug } = require('./debug');
-const fs = require('fs');
-const path = require('path');
-const { orderSections } = require('./order-sections');
+import React from 'react';
+import documentationCss from 'documentation-css';
+import { Page } from './page';
+import { Documentation } from './documentation/documentation';
+import { Home } from './home';
+import { Icons } from './icons';
+import { Examples } from './examples';
+import { Debug } from './debug';
+import fs from 'fs';
+import path from 'path';
+import { orderSections } from './order-sections';
 
 /*
  * To add pages to the site, we pass a routes array with
@@ -41,8 +39,6 @@ const routes = [
   }];
 
 function buildRoutes() {
-
-
   const routesWithComponents = routes.map((r) => {
     const navData = {
       items: [],
@@ -135,7 +131,6 @@ function buildRoutes() {
   });
 
   return routesWithComponents;
-
 }
 
-module.exports = buildRoutes;
+export { buildRoutes };

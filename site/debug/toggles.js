@@ -190,18 +190,6 @@ class Toggles extends React.Component {
           </label>
         </div>
 
-        <div className='toggle-group'>
-          <div className='toggle is-active'>
-          simple cow
-          </div>
-          <div className='toggle'>
-          simple horse
-          </div>
-          <div className='toggle'>
-          simple pig
-          </div>
-        </div>
-
       </div>
     );
   }

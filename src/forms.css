@@ -147,8 +147,14 @@
  */
 .select {
   position: relative;
+  color: var(--white);
   border-radius: var(--border-radius);
+  background-color: var(--blue); /* match btn default state */
   transition: color var(--transition), background-color var(--transition);
+}
+
+.select:not(.select--stroke):hover {
+  background-color: var(--blue-dark);
 }
 
 /* Borders are on the select, but colors are applied
@@ -159,7 +165,7 @@ to the `.select` container. */
   display: block;
   border-width: 2px;
   border-style: solid;
-  border-color: var(--gray-light);
+  border-color: transparent;
   border-radius: var(--border-radius);
   color: currentColor;
   font-weight: bold;
@@ -192,6 +198,15 @@ to the `.select` container. */
 }
 /* End IE overrides */
 
+.select--stroke {
+  color: var(--blue);
+  background-color: transparent;
+}
+
+.select--stroke:hover {
+  color: var(--blue-dark);
+}
+
 .select--stroke > select {
   border-color: currentColor;
 }
@@ -206,7 +221,7 @@ to the `.select` container. */
   content: '';
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 6px solid var(--gray-light);
+  border-top: 6px solid currentColor;
   width: 8px;
   height: 8px;
   font-size: 0;
@@ -215,6 +230,11 @@ to the `.select` container. */
   top: 50%;
   margin-top: -3px;
   right: 12px;
+}
+
+/* override the box-shadow reset for select elements */
+.select > select:focus {
+  box-shadow: 0 0 2px 2px var(--darken25);
 }
 
 .select--stroke::after {
@@ -237,41 +257,219 @@ to the `.select` container. */
 }
 /* stylelint-enable selector-no-attribute */
 
-/* Ranges */
+/* Color variations */
+.select.bg-gray:hover { background-color: var(--gray-dark) !important; }
+.select--stroke.color-gray:hover { color: var(--gray-dark) !important; }
+
+.select.bg-pink:hover { background-color: var(--pink-dark) !important; }
+.select--stroke.color-pink:hover { color: var(--pink-dark) !important; }
+
+.select.bg-red:hover { background-color: var(--red-dark) !important; }
+.select--stroke.color-red:hover { color: var(--red-dark) !important; }
+
+.select.bg-orange:hover { background-color: var(--orange-dark) !important; }
+.select--stroke.color-orange:hover { color: var(--orange-dark) !important; }
+
+.select.bg-yellow:hover { background-color: var(--yellow-dark) !important; }
+.select--stroke.color-yellow:hover { color: var(--yellow-dark) !important; }
+
+.select.bg-green:hover { background-color: var(--green-dark) !important; }
+.select--stroke.color-green:hover { color: var(--green-dark) !important; }
+
+.select.bg-teal:hover { background-color: var(--teal-dark) !important; }
+.select--stroke.color-teal:hover { color: var(--teal-dark) !important; }
+
+.select.bg-blue:hover { background-color: var(--blue-dark) !important; }
+.select--stroke.color-blue:hover { color: var(--blue-dark) !important; }
+
+.select.bg-purple:hover { background-color: var(--purple-dark) !important; }
+.select--stroke.color-purple:hover { color: var(--purple-dark) !important; }
+
+/**
+ * Range input. The following modifiers are available:
+ * - `input--s`: Small
+ * - `input--dark`: Dark
+ *
+ * Use `w*` width classes to change widths.
+ *
+ * @memberof Forms
+ * @example
+ * <input class='range w96' type='range' />
+ * <input class='range range--s w96' type='range' />
+ * <div class='bg-gray-dark pl12 pr12 round inline-block'><input class='range range--dark w96' type='range' /></div>
+*/
 .range {
   appearance: none;
-  min-width: 0;
-  height: 4px;
+  padding: 5px 0; /* to increase click area for ranges */
+  width: 100%;
+  vertical-align: middle;
+  background: transparent;
+}
+
+/* range track */
+.range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--gray-light);
+  vertical-align: middle;
+  cursor: pointer;
+  box-shadow: 0;
 }
 
+.range::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: var(--gray-light);
+  vertical-align: middle;
+  cursor: pointer;
+  box-shadow: 0;
+}
+
+.range::-ms-track { /* use fill-lower + fill-upper to set color */
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+
+.range::-ms-fill-lower {
+  background: var(--gray-light);
+  border: 0;
+  box-shadow: 0;
+}
+
+.range::-ms-fill-upper {
+  background: var(--gray-light);
+  border: 0;
+  box-shadow: 0;
+}
+
+/* range track:hover */
+.range:hover::-webkit-slider-runnable-track { background: var(--blue); }
+.range:hover::-moz-range-track { background: var(--blue); }
+.range:hover::-ms-fill-upper { background: var(--blue); }
+.range:hover::-ms-fill-lower { background: var(--blue); }
+
+/* range thumb */
 .range::-webkit-slider-thumb {
   appearance: none;
   box-shadow: none;
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background: #8f8f8f;
-}
-
-.range::-ms-thumb {
-  box-shadow: none;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #8f8f8f;
+  background: var(--gray-light);
+  border: 0;
+  cursor: pointer;
+  margin-top: -7.5px;
 }
 
 .range::-moz-range-thumb {
-  box-shadow: none;
-  width: 8px;
-  height: 8px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
-  background: #8f8f8f;
+  background: var(--gray-light);
+  border: 0;
+  cursor: pointer;
+  margin-top: -7.5px;
 }
+
+.range::-ms-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--gray-light);
+  border: 0;
+  cursor: pointer;
+}
+
+/* range thumb:hover */
+.range:hover::-webkit-slider-thumb { transform: scale(1.25); background: var(--blue); }
+.range:hover::-ms-thumb { transform: scale(1.25); background: var(--blue); }
+.range:hover::-moz-range-thumb { transform: scale(1.25); background: var(--blue); }
+
+/* range small */
+/* range small track */
+.range--s::-webkit-slider-runnable-track { height: 2px; }
+.range--s::-moz-range-track { height: 2px; }
+.range--s::-ms-track { height: 2px; border-width: 7px 0; }
+
+/* range small thumb */
+.range--s::-webkit-slider-thumb {
+  width: 13px;
+  height: 13px;
+  margin-top: -5px;
+}
+
+.range--s::-ms-thumb {
+  width: 13px;
+  height: 13px;
+  margin-top: -1px;
+}
+
+.range--s::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+}
+
+.range:focus { box-shadow: none; }
+.range:focus::-webkit-slider-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
+.range:focus::-ms-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
+.range:focus::-moz-range-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
+
+/* range dark */
+/* range dark track */
+.range--dark::-webkit-slider-runnable-track { background: var(--gray); }
+.range--dark::-moz-range-track { background: var(--gray); }
+.range--dark::-ms-fill-lower { background: var(--gray); }
+.range--dark::-ms-fill-upper { background: var(--gray); }
+
+/* range dark thumb */
+.range--dark::-webkit-slider-thumb { background: var(--gray); }
+.range--dark::-ms-thumb { background: var(--gray); }
+.range--dark::-moz-range-thumb { background: var(--gray); }
+
+/* range dark thumb:hover */
+.range--dark:hover::-webkit-slider-thumb { background: var(--gray-light); }
+.range--dark:hover::-ms-thumb { background: var(--gray-light); }
+.range--dark:hover::-moz-range-thumb { background: var(--gray-light); }
+
+/* range dark track:hover */
+.range--dark:hover::-webkit-slider-runnable-track { background: var(--gray-light); }
+.range--dark:hover::-moz-range-track { background: var(--gray-light); }
+.range--dark:hover::-ms-fill-lower { background: var(--gray-light); }
+.range--dark:hover::-ms-fill-upper { background: var(--gray-light); }
+
+/* range blue - example */
+/* range blue track */
+.range--blue::-webkit-slider-runnable-track { background: var(--blue); }
+.range--blue::-moz-range-track { background: var(--blue); }
+.range--blue::-ms-fill-lower { background: var(--blue); }
+.range--blue::-ms-fill-upper { background: var(--blue); }
+
+/* range blue thumb */
+.range--blue::-webkit-slider-thumb { background: var(--blue); }
+.range--blue::-ms-thumb { background: var(--blue); }
+.range--blue::-moz-range-thumb { background: var(--blue); }
+
+/* range blue track:hover */
+.range--blue:hover::-webkit-slider-runnable-track { background: var(--blue-light); }
+.range--blue:hover::-moz-range-track { background: var(--blue-light); }
+.range--blue:hover::-ms-fill-lower { background: var(--blue-light); }
+.range--blue:hover::-ms-fill-upper { background: var(--blue-light); }
+
+/* range blue thumb:hover */
+.range--blue:hover::-webkit-slider-thumb { background: var(--blue-light); }
+.range--blue:hover::-ms-thumb { background: var(--blue-light); }
+.range--blue:hover::-moz-range-thumb { background: var(--blue-light); }
 
 /**
  * The checkbox markup must fit the following pattern.
@@ -287,10 +485,6 @@ to the `.select` container. */
  * - Use a different icon.
  * - Modify `checkbox` with `checkbox--s-label` if the text is small,
  *   for proper vertical alignment.
- *
- * The class `checkbox` and its modifiers can also be used independent
- * of a `<label>` and `<input>` if you are building a custom components.
- * In that case, apply the state class `is-active` when it should be checked.
  *
  * @section Checkboxes
  * @memberof Forms
@@ -341,10 +535,6 @@ to the `.select` container. */
  * - Modify `radio` with `radio--s-label` if the text is small,
  *   for proper vertical alignment.
  *
- * The class `radio` and its modifiers can also be used independent
- * of a `<label>` and `<input>` if you are building a custom components.
- * In that case, apply the state class `is-active` when it should be checked.
- *
  * @section Radio buttons
  * @memberof Forms
  */
@@ -380,10 +570,6 @@ to the `.select` container. */
  * - Modify the active state of the switch handle with `switch--dot-{color}`.
  * - Modify the color of the dot when inactive, the border when inactive and the background in active state with `color--{color}`
  *
- * The class `switch` and its modifiers can also be used independent
- * of a `<label>` and `<input>` if you are building a custom components.
- * In that case, apply the state class `is-active` when it should be checked.
- *
  * @section Switches
  * @memberof Forms
  */
@@ -418,10 +604,6 @@ to the `.select` container. */
  * Variations:
  * - Modify the inactive toggle label text color, and the active toggle background color with `toggle--{color}`.
  * - Modify the border radiuses of toggle groups inside small text with `toggle-group--s` on toggle group element.
- *
- * The Toggle component and its modifiers can be used independent
- * of a `<label>` and `<input>` if you are building a custom components.
- * In that case, apply the state class `is-active` to a `toggle` and it will appear active.
  *
  * @section Toggles
  * @memberof Forms
@@ -470,17 +652,6 @@ to the `.select` container. */
  *     </div>
  *   </label>
  * </div>
- * <div class='toggle-group'>
- *   <div class='toggle is-active'>
- *   cyrus
- *   </div>
- *   <div class='toggle'>
- *   steve
- *   </div>
- *   <div class='toggle'>
- *   penny
- *   </div>
- * </div>
  */
 
 /* shared form styles */
@@ -513,6 +684,12 @@ to the `.select` container. */
   border-style: solid;
   border-color: transparent;
   transition: color var(--transition), background-color var(--transition);
+}
+
+input:focus + .checkbox,
+input:focus + .radio,
+input:focus + .switch {
+  box-shadow: 0 0 2px 2px var(--darken25);
 }
 
 /* Primary checkbox styles */
@@ -627,24 +804,20 @@ to the `.select` container. */
 }
 
 /* State management for checkboxes and radio inputs */
-input:checked + .checkbox > .icon,
-.checkbox.is-active > .icon {
+input:checked + .checkbox > .icon {
   display: block;
 }
-input:checked + .radio::before,
-.radio.is-active::before {
+input:checked + .radio::before {
   display: block;
 }
 
 input:checked + .checkbox,
-.checkbox.is-active,
-input:checked + .radio,
-.radio.is-active {
+input:checked + .radio {
   color: var(--blue-dark);
 }
 
 /* state management for switches */
-input:not(:checked) + .switch:not(.is-active):hover::after {
+input:not(:checked) + .switch:hover::after {
   background-color: var(--blue-dark);
 }
 
@@ -652,25 +825,21 @@ input:not(:checked) + .switch:not(.is-active):hover::after {
   color: var(--blue-dark);
 }
 
-.is-active.switch::after,
 input:checked + .switch::after {
   left: calc(50% + 1px);
   background-color: var(--white);
 }
 
-.is-active.switch,
 input:checked + .switch {
   border-color: transparent !important;
   background-color: var(--blue-dark) !important;
 }
 
 /* state management for toggles */
-input:not(:checked) + .toggle:not(.is-active):hover,
-:not(input) + .toggle:not(.is-active):hover {
+input:not(:checked) + .toggle:hover {
   color: var(--blue-dark) !important;
 }
 
-.toggle.is-active,
 input:checked + .toggle {
   background: var(--blue) !important;
   color: var(--white);
