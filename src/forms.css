@@ -187,6 +187,7 @@
   background-color: var(--disabled) !important;
   border-color: transparent !important;
 }
+/** @endgroup */
 
 /* Some browsers color the option text and background, so reset that */
 .select option {
@@ -268,16 +269,16 @@
  *
  * @memberof Forms
  * @example
- * <div class='mb12'><label>Range <input class='range w96' type='range' /></label></div>
- * <div class='mb12'><label>Small range<input class='range range--s w96' type='range' /></label></div>
- * <div class='bg-gray-dark pl12 pr12 pt3 pb3 round color-white'><label>Dark range<input class='range range--dark w96' type='range' /></label</div>
+ * <div class='mb12'><label>Range <input class='range w96 ml6' type='range' /></label></div>
+ * <div class='mb12'><label>Small range<input class='range range--s w96 ml6' type='range' /></label></div>
+ * <div class='mb12 bg-black p6 round color-white'><label>Dark range<input class='range range--dark w96 ml6' type='range' /></label</div>
 */
 .range {
   appearance: none;
   padding: 7px 0; /* to increase click area for ranges */
   width: 100%;
   background: transparent;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
 
 /* range track */
@@ -287,7 +288,7 @@
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: var(--gray-light);
+  background: var(--blue);
   vertical-align: middle;
   cursor: pointer;
   box-shadow: 0;
@@ -299,7 +300,7 @@
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: var(--gray-light);
+  background: var(--blue);
   vertical-align: middle;
   cursor: pointer;
   box-shadow: 0;
@@ -316,59 +317,59 @@
 }
 
 .range::-ms-fill-lower {
-  background: var(--gray-light);
+  background: var(--blue);
   border: 0;
   box-shadow: 0;
 }
 
 .range::-ms-fill-upper {
-  background: var(--gray-light);
+  background: var(--blue);
   border: 0;
   box-shadow: 0;
 }
 
 /* range track:hover */
-.range:hover::-webkit-slider-runnable-track { background: var(--blue); }
-.range:hover::-moz-range-track { background: var(--blue); }
-.range:hover::-ms-fill-upper { background: var(--blue); }
-.range:hover::-ms-fill-lower { background: var(--blue); }
+.range:hover::-webkit-slider-runnable-track { background: var(--blue-dark); }
+.range:hover::-moz-range-track { background: var(--blue-dark); }
+.range:hover::-ms-fill-upper { background: var(--blue-dark); }
+.range:hover::-ms-fill-lower { background: var(--blue-dark); }
 
 /* range thumb */
 .range::-webkit-slider-thumb {
   appearance: none;
-  box-shadow: none;
-  width: 20px;
+  box-shadow: 0;
+  width: 15px;
   height: 20px;
-  border-radius: 50%;
-  background: var(--gray-light);
-  border: 0;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  border: 2px solid var(--blue);
   cursor: pointer;
   margin-top: -8px;
 }
 
 .range::-moz-range-thumb {
-  width: 20px;
+  width: 15px;
   height: 20px;
-  border-radius: 50%;
-  background: var(--gray-light);
-  border: 0;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  border: 2px solid var(--blue);
   cursor: pointer;
   margin-top: -7.5px;
 }
 
 .range::-ms-thumb {
-  width: 20px;
+  width: 15px;
   height: 20px;
-  border-radius: 50%;
-  background: var(--gray-light);
-  border: 0;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  border: 2px solid var(--blue);
   cursor: pointer;
 }
 
 /* range thumb:hover */
-.range:hover::-webkit-slider-thumb { transform: scale(1.25); background: var(--blue); }
-.range:hover::-ms-thumb { transform: scale(1.25); background: var(--blue); }
-.range:hover::-moz-range-thumb { transform: scale(1.25); background: var(--blue); }
+.range:hover::-webkit-slider-thumb { border-color: var(--blue-dark); }
+.range:hover::-ms-thumb { border-color: var(--blue-dark); }
+.range:hover::-moz-range-thumb { border-color: var(--blue-dark); }
 
 /* range small */
 .range--s { padding: 5px 0; }
@@ -379,19 +380,19 @@
 
 /* range small thumb */
 .range--s::-webkit-slider-thumb {
-  width: 15px;
+  width: 13px;
   height: 15px;
   margin-top: -6.5px;
 }
 
 .range--s::-ms-thumb {
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 15px;;
 }
 
 .range--s::-moz-range-thumb {
   width: 13px;
-  height: 13px;
+  height: 15px;
   margin-top: -7.5px;
 }
 
@@ -402,49 +403,49 @@
 
 /* range dark */
 /* range dark track */
-.range--dark::-webkit-slider-runnable-track { background: var(--gray); }
-.range--dark::-moz-range-track { background: var(--gray); }
-.range--dark::-ms-fill-lower { background: var(--gray); }
-.range--dark::-ms-fill-upper { background: var(--gray); }
+.range--dark::-webkit-slider-runnable-track { background: var(--gray-light); }
+.range--dark::-moz-range-track { background: var(--gray-light); }
+.range--dark::-ms-fill-lower { background: var(--gray-light); }
+.range--dark::-ms-fill-upper { background: var(--gray-light); }
 
 /* range dark thumb */
-.range--dark::-webkit-slider-thumb { background: var(--gray); }
-.range--dark::-ms-thumb { background: var(--gray); }
-.range--dark::-moz-range-thumb { background: var(--gray); }
+.range--dark::-webkit-slider-thumb { border-color: var(--gray-light); }
+.range--dark::-ms-thumb { border-color: var(--gray-light); }
+.range--dark::-moz-range-thumb { border-color: var(--gray-light); }
 
 /* range dark thumb:hover */
-.range--dark:hover::-webkit-slider-thumb { background: var(--gray-light); }
-.range--dark:hover::-ms-thumb { background: var(--gray-light); }
-.range--dark:hover::-moz-range-thumb { background: var(--gray-light); }
+.range--dark:hover::-webkit-slider-thumb { border-color: var(--gray); }
+.range--dark:hover::-ms-thumb { border-color: var(--gray); }
+.range--dark:hover::-moz-range-thumb { border-color: var(--gray); }
 
 /* range dark track:hover */
-.range--dark:hover::-webkit-slider-runnable-track { background: var(--gray-light); }
-.range--dark:hover::-moz-range-track { background: var(--gray-light); }
-.range--dark:hover::-ms-fill-lower { background: var(--gray-light); }
-.range--dark:hover::-ms-fill-upper { background: var(--gray-light); }
+.range--dark:hover::-webkit-slider-runnable-track { background: var(--gray); }
+.range--dark:hover::-moz-range-track { background: var(--gray); }
+.range--dark:hover::-ms-fill-lower { background: var(--gray); }
+.range--dark:hover::-ms-fill-upper { background: var(--gray); }
 
-/* range blue - example */
-/* range blue track */
-.range--blue::-webkit-slider-runnable-track { background: var(--blue); }
-.range--blue::-moz-range-track { background: var(--blue); }
-.range--blue::-ms-fill-lower { background: var(--blue); }
-.range--blue::-ms-fill-upper { background: var(--blue); }
+/* range purple - example */
+/* range purple track */
+.range--purple::-webkit-slider-runnable-track { background: var(--purple); }
+.range--purple::-moz-range-track { background: var(--purple); }
+.range--purple::-ms-fill-lower { background: var(--purple); }
+.range--purple::-ms-fill-upper { background: var(--purple); }
 
-/* range blue thumb */
-.range--blue::-webkit-slider-thumb { background: var(--blue); }
-.range--blue::-ms-thumb { background: var(--blue); }
-.range--blue::-moz-range-thumb { background: var(--blue); }
+/* range purple thumb */
+.range--purple::-webkit-slider-thumb { border-color: var(--purple); }
+.range--purple::-ms-thumb { border-color: var(--purple); }
+.range--purple::-moz-range-thumb { border-color: var(--purple); }
 
-/* range blue track:hover */
-.range--blue:hover::-webkit-slider-runnable-track { background: var(--blue-light); }
-.range--blue:hover::-moz-range-track { background: var(--blue-light); }
-.range--blue:hover::-ms-fill-lower { background: var(--blue-light); }
-.range--blue:hover::-ms-fill-upper { background: var(--blue-light); }
+/* range purple track:hover */
+.range--purple:hover::-webkit-slider-runnable-track { background: var(--purple-dark); }
+.range--purple:hover::-moz-range-track { background: var(--purple-dark); }
+.range--purple:hover::-ms-fill-lower { background: var(--purple-dark); }
+.range--purple:hover::-ms-fill-upper { background: var(--purple-dark); }
 
 /* range blue thumb:hover */
-.range--blue:hover::-webkit-slider-thumb { background: var(--blue-light); }
-.range--blue:hover::-ms-thumb { background: var(--blue-light); }
-.range--blue:hover::-moz-range-thumb { background: var(--blue-light); }
+.range--purple:hover::-webkit-slider-thumb { border-color: var(--purple-dark); }
+.range--purple:hover::-ms-thumb { border-color: var(--purple-dark); }
+.range--purple:hover::-moz-range-thumb { border-color: var(--purple-dark); }
 
 /**
  * The checkbox markup must fit the following pattern.
