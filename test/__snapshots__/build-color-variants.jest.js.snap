@@ -1,158 +1,313 @@
-exports[`buildColorVariants defaults 1`] = `
-"
-.btn.bg-gray:hover {
+
+.btn--gray {
+  background-color: #666 !important;
+}
+
+.btn--gray:hover {
   background-color: #333 !important;
 }
     
-.btn.bg-gray-light:hover {
+.btn--gray-light {
+  background-color: #ccc !important;
+}
+
+.btn--gray-light:hover {
   background-color: #666 !important;
 }
     
-.btn.bg-gray-faint:hover {
+.btn--gray-faint {
+  background-color: #f0f0f0 !important;
+}
+
+.btn--gray-faint:hover {
   background-color: #ccc !important;
 }
     
-.btn.bg-pink:hover {
+.btn--pink {
+  background-color: #ff3c96 !important;
+}
+
+.btn--pink:hover {
   background-color: #C8145A !important;
 }
     
-.btn.bg-pink-light:hover {
+.btn--pink-light {
+  background-color: #FF88C0 !important;
+}
+
+.btn--pink-light:hover {
   background-color: #ff3c96 !important;
 }
     
-.btn.bg-pink-faint:hover {
+.btn--pink-faint {
+  background-color: #ffdbed !important;
+}
+
+.btn--pink-faint:hover {
   background-color: #FF88C0 !important;
 }
     
-.btn.bg-red:hover {
+.btn--red {
+  background-color: #dc2b28 !important;
+}
+
+.btn--red:hover {
   background-color: #BE0014 !important;
 }
     
-.btn.bg-red-light:hover {
+.btn--red-light {
+  background-color: #FF8280 !important;
+}
+
+.btn--red-light:hover {
   background-color: #dc2b28 !important;
 }
     
-.btn.bg-red-faint:hover {
+.btn--red-faint {
+  background-color: #ffdad9 !important;
+}
+
+.btn--red-faint:hover {
   background-color: #FF8280 !important;
 }
     
-.btn.bg-orange:hover {
+.btn--orange {
+  background-color: #ff6e00 !important;
+}
+
+.btn--orange:hover {
   background-color: #DC4600 !important;
 }
     
-.btn.bg-orange-light:hover {
+.btn--orange-light {
+  background-color: #FFA950 !important;
+}
+
+.btn--orange-light:hover {
   background-color: #ff6e00 !important;
 }
     
-.btn.bg-orange-faint:hover {
+.btn--orange-faint {
+  background-color: #FFE5CB !important;
+}
+
+.btn--orange-faint:hover {
   background-color: #FFA950 !important;
 }
     
-.btn.bg-yellow:hover {
+.btn--yellow {
+  background-color: #f0dc00 !important;
+}
+
+.btn--yellow:hover {
   background-color: #FFBD0A !important;
 }
     
-.btn.bg-yellow-light:hover {
+.btn--yellow-light {
+  background-color: #F0F062 !important;
+}
+
+.btn--yellow-light:hover {
   background-color: #f0dc00 !important;
 }
     
-.btn.bg-yellow-faint:hover {
+.btn--yellow-faint {
+  background-color: #fafbd1 !important;
+}
+
+.btn--yellow-faint:hover {
   background-color: #F0F062 !important;
 }
     
-.btn.bg-green:hover {
+.btn--green {
+  background-color: #01aa46 !important;
+}
+
+.btn--green:hover {
   background-color: #007532 !important;
 }
     
-.btn.bg-green-light:hover {
+.btn--green-light {
+  background-color: #72C781 !important;
+}
+
+.btn--green-light:hover {
   background-color: #01aa46 !important;
 }
     
-.btn.bg-green-faint:hover {
+.btn--green-faint {
+  background-color: #d4edda !important;
+}
+
+.btn--green-faint:hover {
   background-color: #72C781 !important;
 }
     
-.btn.bg-teal:hover {
+.btn--teal {
+  background-color: #01b5b4 !important;
+}
+
+.btn--teal:hover {
   background-color: #00626E !important;
 }
     
-.btn.bg-teal-light:hover {
+.btn--teal-light {
+  background-color: #50D2D2 !important;
+}
+
+.btn--teal-light:hover {
   background-color: #01b5b4 !important;
 }
     
-.btn.bg-teal-faint:hover {
+.btn--teal-faint {
+  background-color: #cbf2f1 !important;
+}
+
+.btn--teal-faint:hover {
   background-color: #50D2D2 !important;
 }
     
-.btn.bg-blue:hover {
+.btn--blue {
+  background-color: #0065fb !important;
+}
+
+.btn--blue:hover {
   background-color: #0014AA !important;
 }
     
-.btn.bg-blue-light:hover {
+.btn--blue-light {
+  background-color: #00B1FF !important;
+}
+
+.btn--blue-light:hover {
   background-color: #0065fb !important;
 }
     
-.btn.bg-blue-faint:hover {
+.btn--blue-faint {
+  background-color: #bae8ff !important;
+}
+
+.btn--blue-faint:hover {
   background-color: #00B1FF !important;
 }
     
-.btn.bg-purple:hover {
+.btn--purple {
+  background-color: #8c50c7 !important;
+}
+
+.btn--purple:hover {
   background-color: #500078 !important;
 }
     
-.btn.bg-purple-light:hover {
+.btn--purple-light {
+  background-color: #C299E3 !important;
+}
+
+.btn--purple-light:hover {
   background-color: #8c50c7 !important;
 }
     
-.btn.bg-purple-faint:hover {
+.btn--purple-faint {
+  background-color: #ede1f6 !important;
+}
+
+.btn--purple-faint:hover {
   background-color: #C299E3 !important;
 }
     
-.btn.bg-darken5:hover {
+.btn--darken5 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.btn--darken5:hover {
   background-color: rgba(0, 0, 0, 0.10) !important;
 }
     
-.btn.bg-darken10:hover {
+.btn--darken10 {
+  background-color: rgba(0, 0, 0, 0.10) !important;
+}
+
+.btn--darken10:hover {
   background-color: rgba(0, 0, 0, 0.25) !important;
 }
     
-.btn.bg-darken25:hover {
+.btn--darken25 {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.btn--darken25:hover {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
     
-.btn.bg-darken50:hover {
+.btn--darken50 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.btn--darken50:hover {
   background-color: rgba(0, 0, 0, 0.75) !important;
 }
     
-.btn.bg-darken75:hover {
+.btn--darken75 {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.btn--darken75:hover {
   background-color: #000 !important;
 }
     
-.btn.bg-lighten5:hover {
+.btn--lighten5 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.btn--lighten5:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
     
-.btn.bg-lighten10:hover {
+.btn--lighten10 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.btn--lighten10:hover {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }
     
-.btn.bg-lighten25:hover {
+.btn--lighten25 {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.btn--lighten25:hover {
   background-color: rgba(255, 255, 255, 0.5) !important;
 }
     
-.btn.bg-lighten50:hover {
+.btn--lighten50 {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.btn--lighten50:hover {
   background-color: rgba(255, 255, 255, 0.75) !important;
 }
     
-.btn.bg-lighten75:hover {
+.btn--lighten75 {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.btn--lighten75:hover {
   background-color: #fff !important;
 }
     
-.btn.bg-white:hover {
+.btn--white {
+  background-color: #fff !important;
+}
+
+.btn--white:hover {
   background-color: #f0f0f0 !important;
 }
     
-.btn.bg-transparent:hover {
+.btn--transparent {
+  background-color: transparent !important;
+}
+
+.btn--transparent:hover {
   background-color: rgba(0, 0, 0, 0.05) !important;
 }
     
@@ -2068,15 +2223,15 @@ input:checked + .toggle.toggle--transparent {
 }
     
 /**
- * For a colored border, add the modifying class \`.border--color\`
+ * For a colored border, add the modifying class `.border--color`
  * where color is a [color](#Colors-&-gradients).
  *
  * @group
  * @memberof Borders
  * @example
- * <div class=\'flex-parent\'>
- *  <div class=\'col col--2 p12 mr12 border border--red\'>.border--red</div>
- *  <div class=\'col col--2 p12 mr12 border-l border-r border--dash border--yellow\'>.border--yellow</div>
+ * <div class='flex-parent'>
+ *  <div class='col col--2 p12 mr12 border border--red'>.border--red</div>
+ *  <div class='col col--2 p12 mr12 border-l border-r border--dash border--yellow'>.border--yellow</div>
  * </div>
  */
 .border--gray-dark {
@@ -2281,7 +2436,7 @@ input:checked + .toggle.toggle--transparent {
  * @group
  * @memberof State modifiers
  * @example
- * <div class=\'w400 hover-shadow-darken25\'>.hover-shadow-darken25</div>
+ * <div class='w400 hover-shadow-darken25'>.hover-shadow-darken25</div>
  */
 .hover-shadow-darken5:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05) !important;
@@ -2359,7 +2514,7 @@ input:checked + .toggle.toggle--transparent {
  * @group
  * @memberof State modifiers
  * @example
- * <div class=\'w400 hover-bg-darken25\'>.hover-bg-darken25</div>
+ * <div class='w400 hover-bg-darken25'>.hover-bg-darken25</div>
  */
 .hover-bg-gray-dark:hover {
   background-color: #333 !important;
@@ -2563,7 +2718,7 @@ input:checked + .toggle.toggle--transparent {
  * @group
  * @memberof State modifiers
  * @example
- * <div class=\'w400 hover-color-red\'>.hover-color-red</div>
+ * <div class='w400 hover-color-red'>.hover-color-red</div>
  */
 .hover-color-gray-dark:hover {
   color: #333 !important;
@@ -2767,7 +2922,7 @@ input:checked + .toggle.toggle--transparent {
  * @group
  * @memberof State modifiers
  * @example
- * <div class=\'w400 border border--2 border--pink hover-border-blue\'>.hover-border-blue</div>
+ * <div class='w400 border border--2 border--pink hover-border-blue'>.hover-border-blue</div>
  */
 .hover-border-gray-dark:hover {
   border-color: #333 !important;
@@ -2964,5 +3119,4 @@ input:checked + .toggle.toggle--transparent {
 .hover-border-transparent:hover {
   border-color: transparent !important;
 }
-    /** @endgroup */"
-`;
+    /** @endgroup */

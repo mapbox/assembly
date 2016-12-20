@@ -134,8 +134,13 @@ variantGenerators.buttonFill = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
     const darkerShade = getDarkerShade(color);
+    const colorValue = variables[color];
     return result += stripIndent(`
-      .btn.bg-${color}:hover {
+      .btn--${color} {
+        background-color: ${colorValue} !important;
+      }
+
+      .btn--${color}:hover {
         background-color: ${darkerShade} !important;
       }
     `);
