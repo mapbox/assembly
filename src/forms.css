@@ -565,68 +565,6 @@
  * </div>
  */
 
-/**
- * The toggle is an alternative way to style a set of radio inputs. Toggle markup must fit the following pattern.
- *
- * Consists of
- * - A wrapping `<div>` around all your radio options with the class `toggle-group`.
- * - A wrapping `<label>` around each radio option with the class `toggle-container`.
- * - An `<input type='radio'>`.
- * - A `<div>` with the class `toggle`.
- *
- * Variations:
- * - Modify the inactive toggle label text color, and the active toggle background color with `toggle--{color}`.
- * - Modify the border radiuses of toggle groups inside small text with `toggle-group--s` on toggle group element.
- *
- * @section Toggles
- * @memberof Forms
- */
-
-/**
- * @memberof Toggles
- * @example
- * <div class='toggle-group mr18'>
- *   <label class='toggle-container'>
- *     <input name='pet' value='cat' type='radio' />
- *     <div class='toggle'>
- *     cat
- *     </div>
- *   </label>
- *   <label class='toggle-container'>
- *     <input name='pet' value='dog' type='radio' />
- *     <div class='toggle'>
- *     dog
- *     </div>
- *   </label>
- *   <label class='toggle-container'>
- *     <input name='pet' value='bird' type='radio' />
- *     <div class='toggle'>
- *     bird
- *     </div>
- *   </label>
- * </div>
- * <div class='toggle-group txt-s mr18'>
- *   <label class='toggle-container'>
- *     <input name='beast' value='cat' type='radio' />
- *     <div class='toggle toggle--purple'>
- *     dragon
- *     </div>
- *   </label>
- *   <label class='toggle-container'>
- *     <input name='beast' value='dog' type='radio' />
- *     <div class='toggle toggle--purple'>
- *     phoenix
- *     </div>
- *   </label>
- *   <label class='toggle-container'>
- *     <input name='beast' value='bird' type='radio' />
- *     <div class='toggle toggle--purple'>
- *     hydra
- *     </div>
- *   </label>
- * </div>
- */
-
 /* shared form styles */
 .checkbox-container,
 .switch-container,
@@ -762,11 +700,68 @@ input:checked:disabled + .switch.switch::after {
   transition: left var(--transition), background-color var(--transition);
 }
 
-/* Primary toggle styles */
+/**
+ * The toggle is an alternative way to style a set of radio inputs. Toggle markup must fit the following pattern.
+ *
+ * Consists of
+ * - A wrapping `<div>` around all your radio options with the class `toggle-group`.
+ * - A wrapping `<label>` around each radio option with the class `toggle-container`.
+ * - An `<input type='radio'>`.
+ * - A `<div>` with the class `toggle`.
+ *
+ * Variations:
+ * - Modify the inactive toggle label text color, and the active toggle background color with `toggle--{color}`.
+ * - Modify the border radiuses of toggle groups inside small text with `toggle-group--s` on toggle group element.
+ * - Add a border to the toggle group with `toggle-group--stroke color-{color}` on toggle group element.
+ * @group
+ * @memberof Forms
+ * @example
+ * <div class='toggle-group mr18'>
+ *   <label class='toggle-container'>
+ *     <input name='pet' value='cat' type='radio' />
+ *     <div class='toggle'>
+ *     cat
+ *     </div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='pet' value='dog' type='radio' />
+ *     <div class='toggle'>
+ *     dog
+ *     </div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='pet' value='bird' type='radio' />
+ *     <div class='toggle'>
+ *     bird
+ *     </div>
+ *   </label>
+ * </div>
+ * <div class='toggle-group txt-s mr18'>
+ *   <label class='toggle-container'>
+ *     <input name='beast' value='cat' type='radio' />
+ *     <div class='toggle toggle--purple'>
+ *     dragon
+ *     </div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='beast' value='dog' type='radio' />
+ *     <div class='toggle toggle--purple'>
+ *     phoenix
+ *     </div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='beast' value='bird' type='radio' />
+ *     <div class='toggle toggle--purple'>
+ *     hydra
+ *     </div>
+ *   </label>
+ * </div>
+ */
 .toggle-group {
   display: inline-flex;
   text-align: center;
-  border-radius: 16px;
+  border-radius: 18px;
+  padding: 6px;
 }
 
 .toggle {
@@ -774,17 +769,30 @@ input:checked:disabled + .switch.switch::after {
   cursor: pointer;
   color: var(--blue);
   font-weight: bold;
-  margin: 2px;
   padding: 0 12px;
   border-radius: 13px;
   text-decoration: none !important; /* prevent underline when inside .prose */
   background-color: transparent;
-  transition: color var(--transition), background-color var(--transition);
+  transition: color var(--transition), background-color var(--transition), box-shadow var(--transition);
+}
+/** @endgroup */
+
+.toggle-group--stroke {
+  padding: 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: currentColor;
 }
 
-/* adjust border radiuses with small text */
+/* Adjust border radiuses with small text */
 .toggle-group--s {
-  border-radius: 13px;
+  border-radius: 12px;
+  padding: 3px;
+}
+
+.toggle-group--s.toggle-group--stroke {
+  padding: 2px;
+  line-height: 16px !important; /* align to baseline grid */
 }
 
 /* align labels with small text */
