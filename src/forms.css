@@ -172,7 +172,6 @@
  * A disabled select input.
  *
  * @memberof Forms
- * @group
  * @example
  * <div class='select-container'>
  *   <select disabled class='select'>
@@ -191,7 +190,7 @@
 /* Some browsers color the option text and background, so reset that */
 .select option {
   background-color: var(--white);
-  color: var(--gray-dark);
+  color: var(--text-color);
 }
 
 /* IE overrides */

@@ -2068,10 +2068,13 @@ input:checked + .toggle--transparent {
 }
     
 /**
- * Text color classes.
- *
- * @group
+ * @section Text colors
  * @memberof Colors & gradients
+ */
+
+/**
+ * @group
+ * @memberof Text colors
  * @example
  * <div class=\'grid\'>
  *   <div class=\'col col--3 color-gray-dark\'>.color-gray-dark</div>
@@ -2123,6 +2126,7 @@ input:checked + .toggle--transparent {
  *   <div class=\'col col--3 color-white\'>.color-white</div>
  *   <div class=\'col col--3 color-black\'>.color-black</div>
  *   <div class=\'col col--3 color-transparent\'>.color-transparent</div>
+ *   <div class=\'col col--3 color-text\'>.color-text</div>
  * </div>
  */
 .color-gray-dark {
@@ -2320,12 +2324,19 @@ input:checked + .toggle--transparent {
 .color-transparent {
   color: transparent !important;
 }
-    /** @endgroup */
+    
+.color-text {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+  /** @endgroup */
 /**
- * Background color classes.
- *
- * @group
+ * @section Background colors
  * @memberof Colors & gradients
+ */
+
+/**
+ * @group
+ * @memberof Background colors
  * @example
  * <div class=\'grid\'>
  *   <div class=\'col col--3 bg-gray-dark p6\'>.bg-gray-dark</div>
