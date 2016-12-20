@@ -45,24 +45,29 @@ class Entry extends React.Component {
       <span
         key={m}
         id={`#${m.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
-        className='mr6 pl6 pr6 round bg-blue color-white txt-mono inline-block mb3'>
+        className='mr3 p3 round bg-blue color-white txt-mono txt-xs inline-block'>
+        {m.trim()}
+      </span>);
+
+    const collapsedSelectorEls = selectors !== undefined && selectors.slice(0,4).map((m) =>
+      <span
+        key={m}
+        id={`#${m.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
+        className='mr3 p3 round bg-blue color-white txt-mono txt-xs inline-block'>
         {m.trim()}
       </span>);
 
     return (
       <div className='border-t border--2 border--gray-faint pt48 pb48 flex-parent'>
-
-        <div className='col col--3 pr6'>
-          {selectorEls}
+        <div className='col col--4 pr12'>
+          {collapsedSelectorEls}
         </div>
-
-        <div className='col col--9'>
-          <div className={`${selectors && 'mt3'} color-gray prose`}>
+        <div className='col col--8'>
+          <div className={`${selectors && 'mt3'} mb48 color-gray prose`}>
             {remark().use(reactRenderer).process(props.parsedComment.description).contents}
           </div>
           {example}
         </div>
-
       </div>
     );
   }
