@@ -1,5 +1,6 @@
 import React from 'react';
 import remark from 'remark';
+import _ from 'lodash';
 import reactRenderer from 'remark-react';
 import { HtmlExample } from '../html_example';
 
@@ -16,7 +17,20 @@ class Entry extends React.Component {
       <HtmlExample code={props.parsedComment.example.description} />
     );
 
-    let selectors = props.referencedSource ? [props.referencedSource.selector] : props.members;
+    let selectors;
+    const selectorsTag = props.parsedComment.tags.find((tag) => tag.title === 'selectors');
+    if (selectorsTag !== undefined) {
+      selectors = selectorsTag.description.split(/\s*,\s*/);
+    } else if (props.referencedSource) {
+      selectors = [props.referencedSource.selector];
+    } else {
+      selectors = props.members;
+    }
+
+    // Remove pseudo-elements
+    if (selectors !== undefined) {
+      selectors = _.uniq(selectors.map((selector) => selector.split(':')[0]));
+    }
 
     if (selectors) {
       selectors = selectors

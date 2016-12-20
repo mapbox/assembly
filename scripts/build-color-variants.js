@@ -62,7 +62,8 @@ const allConfig = [
   'lighten75',
 
   'white',
-  'black'
+  'black',
+  'transparent'
 ];
 
 // const defaultConfig = {
@@ -85,7 +86,8 @@ function isDark(color) {
 }
 
 function getDarkerShade(color) {
-  if (color === 'white') return 'gray-faint';
+  if (color === 'white') return variables['gray-faint'];
+  if (color === 'transparent') return variables['darken5'];
   if (color === 'black') return 'No dark variant for "black"';
 
   const semitransparentMatch = color.match(/(lighten|darken)(\d+$)/);
@@ -128,195 +130,255 @@ function getDarkerShade(color) {
 
 const variantGenerators = {};
 
-variantGenerators.buttonFill = function (color) {
-  if (isDark(color)) return '';
-  const darkerShade = getDarkerShade(color);
-  return stripIndent(`
-    .btn.bg-${color}:hover {
-      background-color: ${darkerShade} !important;
-    }
-  `);
+variantGenerators.buttonFill = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const darkerShade = getDarkerShade(color);
+    const colorValue = variables[color];
+    return result += stripIndent(`
+      .btn--${color} {
+        background-color: ${colorValue} !important;
+      }
+
+      .btn--${color}:hover {
+        background-color: ${darkerShade} !important;
+      }
+    `);
+  }, '');
 };
 
-variantGenerators.buttonStroke = function (color) {
-  if (isDark(color)) return '';
-  const darkerShade = getDarkerShade(color);
-  return stripIndent(`
-    .btn--stroke.color-${color}:hover {
-      color: ${darkerShade} !important;
-    }
-  `);
+variantGenerators.buttonStroke = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const darkerShade = getDarkerShade(color);
+    return result += stripIndent(`
+      .btn--stroke.color-${color}:hover {
+        color: ${darkerShade} !important;
+      }
+    `);
+  }, '');
 };
 
-variantGenerators.selectFill = function (color) {
-  if (isDark(color)) return '';
-  const darkerShade = getDarkerShade(color);
-  return stripIndent(`
-    .select.bg-${color}:hover {
-      background-color: ${darkerShade} !important;
-    }
-  `);
+variantGenerators.selectFill = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const darkerShade = getDarkerShade(color);
+    return result += stripIndent(`
+      .select.bg-${color}:hover {
+        background-color: ${darkerShade} !important;
+      }
+    `);
+  }, '');
 };
 
-variantGenerators.selectStroke = function (color) {
-  if (isDark(color)) return '';
-  const darkerShade = getDarkerShade(color);
-  return stripIndent(`
-    .select--stroke.color-${color}:hover {
-      color: ${darkerShade} !important;
-    }
-  `);
+variantGenerators.selectStroke = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const darkerShade = getDarkerShade(color);
+    return result += stripIndent(`
+      .select-container--stroke.color-${color}:hover {
+        color: ${darkerShade} !important;
+      }
+    `);
+  }, '');
 };
 
-variantGenerators.checkbox = function (color) {
-  if (isDark(color)) return '';
-  const darkerShade = getDarkerShade(color);
-  return stripIndent(`
-    .checkbox-container:hover > .checkbox.color-${color},
-    input:checked + .checkbox.color-${color},
-    .checkbox.color-${color}.is-active {
-      color: ${darkerShade} !important;
-    }
-  `);
+variantGenerators.checkbox = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const darkerShade = getDarkerShade(color);
+    return result += stripIndent(`
+      .checkbox-container:hover > .checkbox.color-${color},
+      input:checked + .checkbox.color-${color} {
+        color: ${darkerShade} !important;
+      }
+    `);
+  }, '');
 };
 
-variantGenerators.radio = function (color) {
-  if (isDark(color)) return '';
-  const darkerShade = getDarkerShade(color);
-  return stripIndent(`
-    .radio-container:hover > .radio.color-${color},
-    input:checked + .radio.color-${color},
-    .radio.color-${color}.is-active {
-      color: ${darkerShade} !important;
-    }
-  `);
+variantGenerators.radio = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const darkerShade = getDarkerShade(color);
+    return result += stripIndent(`
+      .radio-container:hover > .radio.color-${color},
+      input:checked + .radio.color-${color} {
+        color: ${darkerShade} !important;
+      }
+    `);
+  }, '');
 };
 
-variantGenerators.switch = function (color) {
-  if (isDark(color)) return '';
-  const darkerShade = getDarkerShade(color);
-  // Darken background when hovered and when active
-  // Darken dot on hover when inactive only
-  return stripIndent(`
-    .switch.color-${color}:hover {
-      border-color: ${darkerShade} !important;
-    }
+variantGenerators.switch = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const darkerShade = getDarkerShade(color);
+    // Darken background when hovered and when active
+    // Darken dot on hover when inactive only
+    return result += stripIndent(`
+      .switch.color-${color}:hover {
+        border-color: ${darkerShade} !important;
+      }
 
-    .switch.color-${color}.is-active,
-    input:checked + .switch.color-${color},
-    input:not(:checked) + .switch.color-${color}:hover::after,
-    :not(input) + .switch.color-${color}:not(.is-active):hover::after,
-    .switch--dot-${color}.is-active::after,
-    input:checked + .switch--dot-${color}::after {
-      background-color: ${darkerShade} !important;
-    }
-  `);
+      input:checked + .switch.color-${color},
+      input:not(:checked) + .switch.color-${color}:hover::after,
+      input:checked + .switch--dot-${color}::after {
+        background-color: ${darkerShade} !important;
+      }
+    `);
+  }, '');
 };
 
-variantGenerators.toggle = function (color) {
-  if (isDark(color)) return '';
-  const colorValue = variables[color];
-  const darkerShade = getDarkerShade(color);
-  // Set the text color to regular when inactive.
-  // Set the text color to dark when inactive on hover.
-  // Set the background color to dark and text color to white
-  // when active.
-  return stripIndent(`
-    .toggle--${color} {
-      color: ${colorValue} !important;
-    }
+variantGenerators.toggle = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const colorValue = variables[color];
+    const darkerShade = getDarkerShade(color);
+    // Set the text color to regular when inactive.
+    // Set the text color to dark when inactive on hover.
+    // Set the background color to dark and text color to white
+    // when active.
+    return result += stripIndent(`
+      .toggle--${color} {
+        color: ${colorValue} !important;
+      }
 
-    input:not(:checked) + .toggle.toggle--${color}:not(.is-active):hover,
-    :not(input) + .toggle.toggle--${color}:not(.is-active):hover {
-      color: ${darkerShade} !important;
-    }
+      input:not(:checked) + .toggle--${color}:hover {
+        color: ${darkerShade} !important;
+      }
 
-    .toggle.toggle--${color}.is-active,
-    input:checked + .toggle.toggle--${color} {
-      background: ${colorValue} !important;
-      color: #fff !important;
-    }
-  `);
+      input:checked + .toggle--${color} {
+        background: ${colorValue} !important;
+        color: #fff !important;
+      }
+    `);
+  }, '');
 };
 
-variantGenerators.link = function (color) {
-  if (isDark(color)) return '';
-  const darkerShade = getDarkerShade(color);
-  return stripIndent(`
-    .txt-link.color-${color}:hover,
-    .txt-link.color-${color}.is-active {
-      color: ${darkerShade} !important;
-    }
-  `);
+variantGenerators.link = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const darkerShade = getDarkerShade(color);
+    return result += stripIndent(`
+      .txt-link.color-${color}:hover {
+        color: ${darkerShade} !important;
+      }
+    `);
+  }, '');
 };
 
-variantGenerators.border = function (color) {
-  return stripIndent(`
-    .border--${color} {
-      border-color: ${variables[color]} !important;
-    }
-  `);
+variantGenerators.border = function (colors) {
+  let css = stripIndent(`
+  /**
+   * For a colored border, add the modifying class \`.border--color\`
+   * where color is a [color](#Colors-&-gradients).
+   *
+   * @group
+   * @memberof Borders
+   * @example
+   * <div class='flex-parent'>
+   *  <div class='col col--2 p12 mr12 border border--red'>.border--red</div>
+   *  <div class='col col--2 p12 mr12 border-l border-r border--dash border--yellow'>.border--yellow</div>
+   * </div>
+   */`);
+  css +=  colors.reduce((result, color) => {
+    return result += stripIndent(`
+      .border--${color} {
+        border-color: ${variables[color]} !important;
+      }
+    `);
+  }, '');
+  css +=  '/** @endgroup */';
+  return css;
 };
 
-variantGenerators.hoverShadow = function (color) {
-  if (!isSemitransparent(color)) return '';
-  const colorValue = variables[color];
-  return stripIndent(`
-    .hover-shadow-${color}:hover {
-      box-shadow: 0 0 10px 2px ${colorValue} !important;
-    }
-    .hover-shadow-${color}-bold:hover {
-      box-shadow: 0 0 20px 2px ${colorValue} !important;
-    }
-  `);
+variantGenerators.hoverShadow = function (colors) {
+  let css = stripIndent(`
+  /**
+   * Control the shadow of elements on hover.
+   *
+   * @group
+   * @memberof State modifiers
+   * @example
+   * <div class='w400 hover-shadow-darken25'>.hover-shadow-darken25</div>
+   */`);
+  css += colors.reduce((result, color) => {
+    if (!isSemitransparent(color)) return result;
+    const colorValue = variables[color];
+    return result += stripIndent(`
+      .hover-shadow-${color}:hover {
+        box-shadow: 0 0 10px 2px ${colorValue} !important;
+      }
+      .hover-shadow-${color}-bold:hover {
+        box-shadow: 0 0 20px 2px ${colorValue} !important;
+      }
+    `);
+  }, '');
+  css +=  '/** @endgroup */';
+  return css;
 };
 
-variantGenerators.hoverBackground = function (color) {
-  return stripIndent(`
-    .hover-bg-${color}:hover {
-      background-color: ${variables[color]} !important;
-    }
-  `);
+variantGenerators.hoverBackground = function (colors) {
+  let css = stripIndent(`
+  /**
+   * Control the background of elements on hover.
+   *
+   * @group
+   * @memberof State modifiers
+   * @example
+   * <div class='w400 hover-bg-darken25'>.hover-bg-darken25</div>
+   */`);
+  css += colors.reduce((result, color) => {
+    return result += stripIndent(`
+      .hover-bg-${color}:hover {
+        background-color: ${variables[color]} !important;
+      }
+    `);
+  }, '');
+  css +=  '/** @endgroup */';
+  return css;
 };
 
-variantGenerators.hoverColor = function (color) {
-  return stripIndent(`
-    .hover-color-${color}:hover {
-      color: ${variables[color]} !important;
-    }
-  `);
+variantGenerators.hoverColor = function (colors) {
+  let css = stripIndent(`
+  /**
+   * Control the color of elements on hover.
+   *
+   * @group
+   * @memberof State modifiers
+   * @example
+   * <div class='w400 hover-color-red'>.hover-color-red</div>
+   */`);
+  css += colors.reduce((result, color) => {
+    return result += stripIndent(`
+      .hover-color-${color}:hover {
+        color: ${variables[color]} !important;
+      }
+    `);
+  }, '');
+  css +=  '/** @endgroup */';
+  return css;
 };
 
-variantGenerators.activeColor = function (color) {
-  return stripIndent(`
-    .active-color-${color}.is-active {
-      color: ${variables[color]} !important;
-    }
-  `);
-};
-
-variantGenerators.hoverBorder = function (color) {
-  return stripIndent(`
-    .hover-border-${color}:hover {
-      border-color: ${variables[color]} !important;
-    }
-  `);
-};
-
-variantGenerators.activeBackground = function (color) {
-  return stripIndent(`
-    .active-bg-${color}.is-active {
-      background-color: ${variables[color]} !important;
-    }
-  `);
-};
-
-variantGenerators.activeBorder = function (color) {
-  return stripIndent(`
-    .active-border-${color}.is-active {
-      border-color: ${variables[color]} !important;
-    }
-  `);
+variantGenerators.hoverBorder = function (colors) {
+  let css = stripIndent(`
+  /**
+   * Control the border color of elements on hover.
+   *
+   * @group
+   * @memberof State modifiers
+   * @example
+   * <div class='w400 border border--2 border--pink hover-border-blue'>.hover-border-blue</div>
+   */`);
+  css += colors.reduce((result, color) => {
+    return result += stripIndent(`
+      .hover-border-${color}:hover {
+        border-color: ${variables[color]} !important;
+      }
+    `);
+  }, '');
+  css +=  '/** @endgroup */';
+  return css;
 };
 
 function buildColorVariants(config) {
@@ -330,9 +392,7 @@ function buildColorVariants(config) {
   Object.keys(variantGenerators).forEach((coloredThing) => {
     const colors = universalColors || config[coloredThing];
     if (colors === null || colors === undefined) return;
-    colors.forEach((color) => {
-      result += variantGenerators[coloredThing](color);
-    });
+    result += variantGenerators[coloredThing](colors);
   });
 
   return result;

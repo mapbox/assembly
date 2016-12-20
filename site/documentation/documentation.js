@@ -16,8 +16,7 @@ class Documentation extends React.Component {
           <Heading
             key={entryEls.length + 1}
             level={level}
-            title={entry.title}
-            description={entry.parsedComment.description}
+            {...entry}
           />
         );
 

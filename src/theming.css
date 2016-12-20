@@ -51,18 +51,20 @@
 
 /**
  * Border classes.
- * - `.border` will add a `1px` solid border. Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
- * - For a thicker border, add the modifying class `.border--2`
- * - For a dashed border, add the modifying class `.border--dash`
- * - For a colored border, add the modifying class `.border--color` where color is a [color](#Colors-&-gradients).
+ *
+ * @section Borders
+ * @memberof Theming
+ */
+
+/**
+ * `.border` will add a `1px` solid border. Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
  *
  * @group
- * @memberof Theming
+ * @memberof Borders
  * @example
  * <div class='flex-parent'>
  *  <div class='col col--2 p12 mr12 border'>.border</div>
  *  <div class='col col--2 p12 mr12 border-b'>.border-b</div>
- *  <div class='col col--2 p12 border border--dash'>.border.border--dash</div>
  * </div>
  */
 .border { border: 1px solid !important; }
@@ -73,8 +75,20 @@
 .border-b { border-bottom: 1px solid !important; }
 /** @endgroup */
 
+/**
+ * Border modifiers.
+ *
+ * @group
+ * @memberof Borders
+ * @example
+ * <div class='flex-parent'>
+ *  <div class='col col--2 p12 mr12 border border--dash'>.border--dash</div>
+ *  <div class='col col--2 p12 mr12 border-t border--2'>.border--2</div>
+ * </div>
+ */
 .border--2 { border-width: 2px !important; }
 .border--dash { border-style: dashed !important; }
+/** @endgroup */
 
 /**
  * Shadow classes.
@@ -152,14 +166,6 @@
  * Change styling based on element hover, focus, and active states.
  * @section State modifiers
  * @memberof Theming
- */
-
-/**
- * Control the shadow of elements in a hover, focus, or active state.
- *
- * @memberof State modifiers
- * @example
- * <div class='w400 hover-shadow-darken25'>.hover-shadow-darken25</div>
  */
 
 /**
