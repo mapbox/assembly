@@ -47,7 +47,7 @@ class Navigation extends React.Component {
       );
     });
 
-    return (<div className='pt48 viewport-full-mm scroll-auto pl24 pr18 w240-mm fixed-mm top left'>
+    return (<div>
       <div className='txt-m mb12'>Assembly</div>
       {navEls}
     </div>);

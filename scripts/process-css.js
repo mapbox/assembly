@@ -55,7 +55,7 @@ const postcssPlugins = [
     extensions: customMediaQueries
   }),
   autoprefixer({
-    browsers: 'last 2 versions, ie > 11'
+    browsers: 'last 2 versions, not ie < 11'
   }),
   reporter()
 ];
