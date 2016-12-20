@@ -18,7 +18,7 @@ class Miscellaneous extends React.Component {
         <a href='#' tabindex={100} className='select-none'>Can select</a>
         </div>
         <div className='mb18'>
-        <a href='#' tabindex={100} className='select-all'><div className='events-all'>Can select</div></a>
+        <a href='#' tabindex={100} className='select-text'><div className='events-all'>Can select</div></a>
         </div>
       </div>
     );
