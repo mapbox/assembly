@@ -17,19 +17,19 @@ class Heading extends React.Component {
     }
 
     const sectionClass = props.level === 1 ? 'mt24 pb18 border--gray' : 'pt12 pb12 mt12 border--gray-faint';
-    const levelClass = props.level === 1 ? 'txt-subhead mb12' : 'txt-xl mb6';
+    const levelClass = props.level === 1 ? 'txt-subhead mb12' : 'txt-l mb4 uppercase';
 
     const example = !props.parsedComment.example ? null : (
       <HtmlExample code={props.parsedComment.example.description} />
     );
 
     return (
-      <div className={`mb48 border-b border--2 ${sectionClass}`}>
+      <div className={`mb48 color-gray ${sectionClass}`}>
         <div
           id={id}
           className={levelClass}
         >
-          <a className='block pt24' href={`#${id}`}>
+          <a className='block pt24 txt-bold' href={`#${id}`}>
             {props.title}
           </a>
         </div>

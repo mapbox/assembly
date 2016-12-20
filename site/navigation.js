@@ -15,6 +15,9 @@ class Navigation extends React.Component {
         if (member.name === props.navData.active) {
           linkClasses += ' is-active';
         }
+        if (level === 0) {
+          linkClasses += ' txt-bold';
+        }
         const nestedItems = listNestedMembers(member.items, level + 1);
         return (
           <div key={member.name} className='inline-block block-mm'>
@@ -35,20 +38,20 @@ class Navigation extends React.Component {
         || r.items === undefined
         || r.items.length === 0;
       const nestedItems = (showNestedItems) ? null : (
-        <div className='border-l border--2 border--gray-faint mt6 mb6 pl12 txt-s'>
+        <div className='mt6 mb6 txt-s'>
           {listNestedMembers(r.items)}
         </div>
       );
       return (
         <div key={r.name}>
-          <a className={`block txt-link color-blue ${r.name === props.navData.active && 'is-active'}`} href={`/assembly${r.route}`}>{r.name}</a>
+          <a className={`txt-bold block txt-link color-blue ${r.name === props.navData.active && 'is-active'}`} href={`/assembly${r.route}`}>{r.name}</a>
           {nestedItems}
         </div>
       );
     });
 
     return (<div>
-      <div className='txt-m mb12'>Assembly</div>
+      <div className='txt-m mb12 txt-bold'>Assembly</div>
       {navEls}
     </div>);
   }
