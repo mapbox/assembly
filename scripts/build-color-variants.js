@@ -164,7 +164,7 @@ variantGenerators.selectFill = function (colors) {
     if (isDark(color)) return result;
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .select.bg-${color}:hover {
+      select.bg-${color}:hover {
         background-color: ${darkerShade} !important;
       }
     `);
@@ -176,7 +176,7 @@ variantGenerators.selectStroke = function (colors) {
     if (isDark(color)) return result;
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .select--stroke.color-${color}:hover {
+      .select-container--stroke.color-${color}:hover {
         color: ${darkerShade} !important;
       }
     `);
@@ -243,11 +243,11 @@ variantGenerators.toggle = function (colors) {
         color: ${colorValue} !important;
       }
 
-      input:not(:checked) + .toggle.toggle--${color}:hover {
+      input:not(:checked) + .toggle--${color}:hover {
         color: ${darkerShade} !important;
       }
 
-      input:checked + .toggle.toggle--${color} {
+      input:checked + .toggle--${color} {
         background: ${colorValue} !important;
         color: #fff !important;
       }

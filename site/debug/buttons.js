@@ -36,7 +36,7 @@ function SemitransparentButtonExample(props) {
   if (props.color && !props.stroke) modifiers += ` bg-${props.color}`;
   return (
     <div className='inline-block mr12'>
-      <button className={`btn ${modifiers}`}>{props.color}</button>
+      <button disabled={props.disabled} className={`btn ${modifiers} mr18`}>{props.color}</button>
     </div>
   );
 }
@@ -58,11 +58,21 @@ class Buttons extends React.Component {
             <button className={buttonFillClass}>Fill</button>
           </div>
           <div className='inline-block mr18'>
+            <button disabled className={buttonFillClass}>Fill</button>
+          </div>
+          <div className='inline-block mr18'>
             <button className={buttonStrokeClass}>Stroke</button>
+          </div>
+          <div className='inline-block mr18'>
+            <button disabled className={buttonStrokeClass}>Stroke</button>
           </div>
           <div className='inline-block mr18'>
             <button className={`${buttonFillClass} round`}>Less round</button>
           </div>
+          <div className='inline-block mr18'>
+            <button disabled className={`${buttonFillClass} round`}>Less round</button>
+          </div>
+
         </div>
       );
     });
@@ -70,14 +80,26 @@ class Buttons extends React.Component {
     const lightenEls = lightenColors.map((color, i) => {
       return <SemitransparentButtonExample key={i} color={color} />;
     });
+    const lightenElsDisabled = lightenColors.map((color, i) => {
+      return <SemitransparentButtonExample key={i} disabled={true} color={color} />;
+    });
     const lightenStrokeEls = lightenColors.map((color, i) => {
       return <SemitransparentButtonExample key={i} stroke={true} color={color} />;
+    });
+    const lightenStrokeElsDisabled = lightenColors.map((color, i) => {
+      return <SemitransparentButtonExample key={i} disabled={true} stroke={true} color={color} />;
     });
     const darkenEls = darkenColors.map((color, i) => {
       return <SemitransparentButtonExample key={i} color={color} />;
     });
+    const darkenElsDisabled = darkenColors.map((color, i) => {
+      return <SemitransparentButtonExample key={i} disabled={true} color={color} />;
+    });
     const darkenStrokeEls = darkenColors.map((color, i) => {
       return <SemitransparentButtonExample key={i} stroke={true} color={color} />;
+    });
+    const darkenStrokeElsDisabled = darkenColors.map((color, i) => {
+      return <SemitransparentButtonExample key={i} disabled={true} stroke={true} color={color} />;
     });
 
     return (
@@ -93,13 +115,25 @@ class Buttons extends React.Component {
             {lightenEls}
           </div>
           <div className='mb12'>
+            {lightenElsDisabled}
+          </div>
+          <div className='mb12'>
             {lightenStrokeEls}
+          </div>
+          <div className='mb12'>
+            {lightenStrokeElsDisabled}
           </div>
           <div className='mb12'>
             {darkenEls}
           </div>
-          <div>
+          <div className='mb12'>
+            {darkenElsDisabled}
+          </div>
+          <div className='mb12'>
             {darkenStrokeEls}
+          </div>
+          <div>
+            {darkenStrokeElsDisabled}
           </div>
         </div>
       </div>

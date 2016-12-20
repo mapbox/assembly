@@ -119,16 +119,18 @@ class Forms extends React.Component {
 
           {colors.map((color) => {
             let selectClass = 'select';
-            let selectStrokeClass = 'select select--stroke';
+            let selectStrokeContainerClass = 'select-container select-container--stroke';
+            const selectStrokeClass = 'select';
+            const selectContainerClass = 'select-container';
             if (color !== null) {
               selectClass += ` bg-${color}`;
-              selectStrokeClass += ` color-${color}`;
+              selectStrokeContainerClass += ` color-${color}`;
             }
             return (
               <div key={color} className='mb12'>
                 <div className='inline-block mr12'>
-                  <div className={selectClass}>
-                    <select>
+                  <div className={selectContainerClass}>
+                    <select className={selectClass}>
                       <option>firstoption</option>
                       <option>two</option>
                       <option>three</option>
@@ -136,8 +138,8 @@ class Forms extends React.Component {
                   </div>
                 </div>
                 <div className='inline-block mr12'>
-                  <div className={selectStrokeClass}>
-                    <select>
+                  <div className={selectContainerClass}>
+                    <select className={selectClass} disabled>
                       <option>firstoption</option>
                       <option>two</option>
                       <option>three</option>
@@ -145,8 +147,17 @@ class Forms extends React.Component {
                   </div>
                 </div>
                 <div className='inline-block mr12'>
-                  <div className={`${selectClass} select--s`}>
-                    <select>
+                  <div className={selectStrokeContainerClass}>
+                    <select className={selectStrokeClass}>
+                      <option>firstoption</option>
+                      <option>two</option>
+                      <option>three</option>
+                    </select>
+                  </div>
+                </div>
+                <div className='inline-block mr12'>
+                  <div className={selectContainerClass}>
+                    <select className={`${selectClass} select--s`}>
                       <option>firstoption</option>
                       <option>two</option>
                       <option>three</option>

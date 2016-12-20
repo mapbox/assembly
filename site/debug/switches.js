@@ -33,7 +33,7 @@ function SwitchEl(props) {
   return (
     <div className='mr6 inline-block'>
       <label className='switch-container'>
-       <input type='checkbox' value='magic' />
+       <input disabled={props.disabled} type='checkbox' value='magic' />
         <div className={switchClass} />
       </label>
     </div>
@@ -49,18 +49,17 @@ class Switches extends React.Component {
           Switches
         </h1>
 
-    <div className='mr6 inline-block'>
-      <label className='switch-container'>
-       <input type='checkbox' value='magic' />
-        <div className='switch mr6' />
-        Hello there
-      </label>
-    </div>
-
         {colors.map((handle, i) =>
           <div key={i} className='mb12'>
             {colors.map((c) => <SwitchEl key={c} color={c} handleColor={handle} size={null} />)}
           </div>)}
+
+        <div className='mt24'>
+          {colors.map((handle, i) =>
+            <div key={i} className='mb12'>
+              {colors.map((c) => <SwitchEl key={c} color={c} disabled={true} handleColor={handle} size={null} />)}
+            </div>)}
+        </div>
 
       </div>
     );
