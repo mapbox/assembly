@@ -50,11 +50,6 @@ q:before, q:after { content: ''; content: none; }
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-*:focus {
-  outline: 0;
-  box-shadow: 0 0 2px 2px var(--darken25);
-}
-
 hr { margin: 0; border: 0; }
 
 html {
@@ -77,6 +72,14 @@ button {
   appearance: none;
   user-select: none;
   cursor: pointer;
+}
+
+input:focus,
+select:focus,
+button:focus,
+a:focus {
+  outline: 0 !important;
+  box-shadow: var(--focus-shadow) !important;
 }
 
 button::-moz-focus-inner {

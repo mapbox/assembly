@@ -1,4 +1,5 @@
-
+exports[`buildColorVariants defaults 1`] = `
+"
 .btn--gray {
   background-color: #666 !important;
 }
@@ -2223,15 +2224,15 @@ input:checked + .toggle.toggle--transparent {
 }
     
 /**
- * For a colored border, add the modifying class `.border--color`
+ * For a colored border, add the modifying class \`.border--color\`
  * where color is a [color](#Colors-&-gradients).
  *
  * @group
  * @memberof Borders
  * @example
- * <div class='flex-parent'>
- *  <div class='col col--2 p12 mr12 border border--red'>.border--red</div>
- *  <div class='col col--2 p12 mr12 border-l border-r border--dash border--yellow'>.border--yellow</div>
+ * <div class=\'flex-parent\'>
+ *  <div class=\'col col--2 p12 mr12 border border--red\'>.border--red</div>
+ *  <div class=\'col col--2 p12 mr12 border-l border-r border--dash border--yellow\'>.border--yellow</div>
  * </div>
  */
 .border--gray-dark {
@@ -2436,7 +2437,7 @@ input:checked + .toggle.toggle--transparent {
  * @group
  * @memberof State modifiers
  * @example
- * <div class='w400 hover-shadow-darken25'>.hover-shadow-darken25</div>
+ * <div class=\'w400 hover-shadow-darken25\'>.hover-shadow-darken25</div>
  */
 .hover-shadow-darken5:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05) !important;
@@ -2514,7 +2515,7 @@ input:checked + .toggle.toggle--transparent {
  * @group
  * @memberof State modifiers
  * @example
- * <div class='w400 hover-bg-darken25'>.hover-bg-darken25</div>
+ * <div class=\'w400 hover-bg-darken25\'>.hover-bg-darken25</div>
  */
 .hover-bg-gray-dark:hover {
   background-color: #333 !important;
@@ -2718,7 +2719,7 @@ input:checked + .toggle.toggle--transparent {
  * @group
  * @memberof State modifiers
  * @example
- * <div class='w400 hover-color-red'>.hover-color-red</div>
+ * <div class=\'w400 hover-color-red\'>.hover-color-red</div>
  */
 .hover-color-gray-dark:hover {
   color: #333 !important;
@@ -2922,7 +2923,7 @@ input:checked + .toggle.toggle--transparent {
  * @group
  * @memberof State modifiers
  * @example
- * <div class='w400 border border--2 border--pink hover-border-blue'>.hover-border-blue</div>
+ * <div class=\'w400 border border--2 border--pink hover-border-blue\'>.hover-border-blue</div>
  */
 .hover-border-gray-dark:hover {
   border-color: #333 !important;
@@ -3119,4 +3120,5 @@ input:checked + .toggle.toggle--transparent {
 .hover-border-transparent:hover {
   border-color: transparent !important;
 }
-    /** @endgroup */
+    /** @endgroup */"
+`;

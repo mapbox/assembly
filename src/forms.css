@@ -24,12 +24,6 @@
   transition: box-shadow var(--transition), border-color var(--transition);
 }
 
-.input:focus,
-.textarea:focus {
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.22);
-  border: 1px solid var(--darken50);
-}
-
 .input--no-shadow:focus,
 .textarea--no-shadow:focus {
   box-shadow: none;
@@ -257,9 +251,8 @@
   transition: border-top-color var(--transition);
 }
 
-/* override the box-shadow reset for select elements */
-.select:focus {
-  box-shadow: 0 0 2px 2px var(--darken25);
+.select--stroke::after {
+  border-top-color: currentColor;
 }
 
 .select--s::after {
@@ -668,8 +661,9 @@
 
 input:focus + .checkbox,
 input:focus + .radio,
-input:focus + .switch {
-  box-shadow: 0 0 2px 2px var(--darken25);
+input:focus + .switch,
+input:focus + .toggle {
+  box-shadow: var(--focus-shadow);
 }
 
 input:disabled {
@@ -853,4 +847,3 @@ input:checked:disabled + .toggle {
   background-color: var(--disabled) !important;
   color: var(--darken25) !important;
 }
-
