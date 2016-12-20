@@ -49,10 +49,10 @@
  *
  * @memberof Miscellaneous
  * @example
- * <div class='select-none'><div class='select-all'>You can select this.</div></div>
+ * <div class='select-none'><div class='select-text'>You can select this.</div></div>
  */
-.select-all {
-  user-select: auto;
+.select-text {
+  user-select: text;
 }
 
 /**
