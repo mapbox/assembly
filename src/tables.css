@@ -9,10 +9,12 @@
  * `<table>`s are styled inside `.prose` sections and
  * when they have a `table` class.
  *
+ * The following modifier is available: `table--dark`
+ *
  * @memberof Tables
  * @example
  *
- * <table class='table'>
+ * <table class='table mb12'>
  *   <thead>
  *     <tr>
  *       <th>Column 1</th>
@@ -28,23 +30,26 @@
  *     <td>item</td>
  *   </tr>
  * </table>
- * <table class='mt12 table'>
- *   <tr>
- *     <th>Row 1</th>
- *     <td>item</td>
- *     <td>item</td>
- *   </tr>
- *   <tr>
- *     <th>Row 2</th>
- *     <td>item</td>
- *     <td>item</td>
- *   </tr>
- *   <tr>
- *     <th>Row 3</th>
- *     <td>item</td>
- *     <td>item</td>
- *   </tr>
- * </table>
+ *
+ * <div class='bg-gray-dark p12'>
+ *   <table class='table table--dark'>
+ *     <tr>
+ *       <th>Row 1</th>
+ *       <td>item</td>
+ *       <td>item</td>
+ *     </tr>
+ *     <tr>
+ *       <th>Row 2</th>
+ *       <td>item</td>
+ *       <td>item</td>
+ *     </tr>
+ *     <tr>
+ *       <th>Row 3</th>
+ *       <td>item</td>
+ *       <td>item</td>
+ *     </tr>
+ *   </table>
+ * </div>
  */
 .table,
 .prose table {
@@ -52,7 +57,7 @@
   background-color: transparent;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--gray-light);
 }
 
 .prose table {
@@ -65,7 +70,7 @@
 .prose table td {
   text-align: left;
   vertical-align: top;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray-light);
   padding: 6px;
 }
 
@@ -76,7 +81,32 @@
 
 .table th + td,
 .prose th + td {
-  border-left: 1px solid var(--gray);
+  border-left: 1px solid var(--gray-light);
+}
+
+/* table dark */
+
+.table--dark,
+.prose .table--dark {
+  background: transparent;
+  border-color: var(--white);
+  color: var(--white)
+}
+
+.table--dark th,
+.table--dark td,
+.prose .table--dark th,
+.prose .table--dark td {
+  border-bottom-color: var(--white);
+}
+
+.table--dark th,
+.prose .table--dark th {
+  background-color: transparent;
+}
+
+.table--dark th + td {
+  border-left-color: var(--white);
 }
 
 /**

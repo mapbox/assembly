@@ -94,7 +94,7 @@ class TablesLists extends React.Component {
 
           <div className='col col--4'>
             tbl + txt-ol/ul
-            <table className='tbl'>
+            <table className='table'>
               <thead>
                 <tr>
                   <th>Column 1</th>
@@ -113,7 +113,7 @@ class TablesLists extends React.Component {
               </tbody>
             </table>
 
-            <table className="tbl">
+            <table className="table">
               <tbody>
                 <tr>
                   <th>Row 1</th>
@@ -132,6 +132,48 @@ class TablesLists extends React.Component {
                 </tr>
               </tbody>
             </table>
+
+            <div className='bg-gray-dark p12'>
+              <table className='table table--dark'>
+                <thead>
+                  <tr>
+                    <th>Column 1</th>
+                    <th>Column 1</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>item</td>
+                    <td>item</td>
+                  </tr>
+                  <tr>
+                    <td>item</td>
+                    <td>item</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table className='table table--dark'>
+                <tbody>
+                  <tr>
+                    <th>Row 1</th>
+                    <td>item</td>
+                    <td>item</td>
+                  </tr>
+                  <tr>
+                    <th>Row 2</th>
+                    <td>item</td>
+                    <td>item</td>
+                  </tr>
+                  <tr>
+                    <th>Row 3</th>
+                    <td>item</td>
+                    <td>item</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             <h2 className='txt-h2'>Unordered (with classes)</h2>
             <ul className='txt-ul'>
               <li className='txt-li'>Unordered list item</li>
@@ -177,7 +219,7 @@ class TablesLists extends React.Component {
           </div>
 
           <div className='col col--4 prose'>
-            txt
+            prose
             <table>
               <thead>
                 <tr>
@@ -216,6 +258,47 @@ class TablesLists extends React.Component {
                 </tr>
               </tbody>
             </table>
+
+            <div className='bg-gray-dark p12'>
+              <table className='table--dark'>
+                <thead>
+                  <tr>
+                    <th>Column 1</th>
+                    <th>Column 1</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>item</td>
+                    <td>item</td>
+                  </tr>
+                  <tr>
+                    <td>item</td>
+                    <td>item</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table className='table--dark'>
+                <tbody>
+                  <tr>
+                    <th>Row 1</th>
+                    <td>item</td>
+                    <td>item</td>
+                  </tr>
+                  <tr>
+                    <th>Row 2</th>
+                    <td>item</td>
+                    <td>item</td>
+                  </tr>
+                  <tr>
+                    <th>Row 3</th>
+                    <td>item</td>
+                    <td>item</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <h2>Unordered</h2>
             <ul>
               <li>Unordered list item</li>
