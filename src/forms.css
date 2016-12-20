@@ -191,7 +191,7 @@
 /* Some browsers color the option text and background, so reset that */
 .select option {
   background-color: var(--white);
-  color: var(--text-color);
+  color: var(--gray-dark);
 }
 
 /* IE overrides */

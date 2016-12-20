@@ -255,6 +255,54 @@ variantGenerators.toggle = function (colors) {
   }, '');
 };
 
+variantGenerators.color = function (colors) {
+  let css = stripIndent(`
+    /**
+     * Text color classes.
+     *
+     * @group
+     * @memberof Colors & gradients
+     * @example
+     * <div class='grid'>`
+  );
+  colors.forEach((color) => {
+    css += `\n *   <div class=\'col col--3 color-${color}'>.color-${color}</div>`;
+  });
+  css += '\n * </div>\n */';
+  css += colors.reduce((result, color) => {
+    return result += stripIndent(`
+      .color-${color} {
+        color: ${variables[color]} !important;
+      }
+    `);
+  }, '');
+  return css += '/** @endgroup */';
+};
+
+variantGenerators.background = function (colors) {
+  let css = stripIndent(`
+    /**
+     * Background color classes.
+     *
+     * @group
+     * @memberof Colors & gradients
+     * @example
+     * <div class='grid'>`
+  );
+  colors.forEach((color) => {
+    css += `\n *   <div class=\'col col--3 bg-${color} p6'>.bg-${color}</div>`;
+  });
+  css += '\n * </div>\n */';
+  css += colors.reduce((result, color) => {
+    return result += stripIndent(`
+      .bg-${color} {
+        background-color: ${variables[color]} !important;
+      }
+    `);
+  }, '');
+  return css += '/** @endgroup */';
+};
+
 variantGenerators.link = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
