@@ -291,11 +291,11 @@ textarea {
   margin: 17px 0; /* margin + height = 18px */
   border: 0;
   height: 1px;
-  background: var(--darken5);
+  background: var(--darken10);
 }
 
 .prose--dark hr {
-  background: var(--lighten5);
+  background: var(--lighten10);
 }
 
 /* Lists */
@@ -405,7 +405,7 @@ textarea {
 
 .prose--dark kbd {
   background: var(--lighten5);
-  color: var(--lighten50);
+  color: var(--lighten75);
   border: 1px solid var(--lighten10);
   line-height: 18px;
   border-radius: 3px;
