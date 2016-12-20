@@ -40,7 +40,7 @@ class Typography extends React.Component {
           <div className='txt-headline txt-bold mb18'>Inceptos Nullam Venenatis</div>
           <div className='txt-m mb12'>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.</div>
 
-          <div className='txt-ul ml40 mb18'>
+          <div className='txt-ul ml36 mb18'>
             <div className='txt-li mb12'>Nullam quis risus eget urna mollis ornare vel eu leo.</div>
             <div className='txt-li mb12'>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
             <div className='txt-li mb12'>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div>
