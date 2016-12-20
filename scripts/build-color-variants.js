@@ -255,6 +255,67 @@ variantGenerators.toggle = function (colors) {
   }, '');
 };
 
+variantGenerators.color = function (colors) {
+  // Manually adding `color-text`
+  let css = stripIndent(`
+    /**
+     * @section Text colors
+     * @memberof Colors & gradients
+     */
+
+    /**
+     * @group
+     * @memberof Text colors
+     * @example
+     * <div class='grid'>`
+  );
+  colors.forEach((color) => {
+    css += `\n *   <div class='col col--3 color-${color}'>.color-${color}</div>`;
+  });
+  css += `\n *   <div class='col col--3 color-text'>.color-text</div>`; // eslint-disable-line quotes
+  css += '\n * </div>\n */';
+  css += colors.reduce((result, color) => {
+    return result += stripIndent(`
+      .color-${color} {
+        color: ${variables[color]} !important;
+      }
+    `);
+  }, '');
+  css += stripIndent(`
+    .color-text {
+      color: ${variables['text-color']} !important;
+    }
+  `);
+  return css += '/** @endgroup */';
+};
+
+variantGenerators.background = function (colors) {
+  let css = stripIndent(`
+    /**
+     * @section Background colors
+     * @memberof Colors & gradients
+     */
+
+    /**
+     * @group
+     * @memberof Background colors
+     * @example
+     * <div class='grid'>`
+  );
+  colors.forEach((color) => {
+    css += `\n *   <div class='col col--3 bg-${color} p6'>.bg-${color}</div>`;
+  });
+  css += '\n * </div>\n */';
+  css += colors.reduce((result, color) => {
+    return result += stripIndent(`
+      .bg-${color} {
+        background-color: ${variables[color]} !important;
+      }
+    `);
+  }, '');
+  return css += '/** @endgroup */';
+};
+
 variantGenerators.link = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
