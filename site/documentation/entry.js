@@ -50,12 +50,19 @@ class Entry extends React.Component {
       </span>);
 
     return (
-      <div className='mt24 mb48'>
-        {selectorEls}
-        <div className={`${selectors && 'mt3'} prose`}>
-          {remark().use(reactRenderer).process(props.parsedComment.description).contents}
+      <div className='border-t border--2 border--gray-faint pt48 pb48 flex-parent'>
+
+        <div className='col col--3 pr6'>
+          {selectorEls}
         </div>
-        {example}
+
+        <div className='col col--9'>
+          <div className={`${selectors && 'mt3'} color-gray prose`}>
+            {remark().use(reactRenderer).process(props.parsedComment.description).contents}
+          </div>
+          {example}
+        </div>
+
       </div>
     );
   }
