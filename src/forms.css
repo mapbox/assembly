@@ -346,13 +346,13 @@
 }
 
 .range::-moz-range-thumb {
-  width: 15px;
-  height: 20px;
+  width: 13px;
+  height: 17px;
   border-radius: var(--border-radius);
   background: var(--white);
   border: 2px solid var(--blue);
   cursor: pointer;
-  margin-top: -7.5px;
+  margin-top: -6px;
 }
 
 .range::-ms-thumb {
@@ -383,15 +383,15 @@
   margin-top: -6.5px;
 }
 
+.range--s::-moz-range-thumb {
+  width: 10px;
+  height: 12px;
+  margin-top: -7.5px;
+}
+
 .range--s::-ms-thumb {
   width: 13px;
   height: 15px;
-}
-
-.range--s::-moz-range-thumb {
-  width: 13px;
-  height: 15px;
-  margin-top: -7.5px;
 }
 
 .range:focus { box-shadow: none; }
