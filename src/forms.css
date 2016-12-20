@@ -110,7 +110,7 @@
  * - A `<select>`.
  *
  * Variations:
- * - Modify *non-stroke* `.select` with a `.bg-{color}` class.
+ * - Modify `.select` with a `.bg-{color}` class.
  * - Modify `.select-container` with `select-container--stroke`.
  * - Modify *stroke* `.select-container` with a text color, e.g. `.color-red`.
  *
@@ -224,15 +224,12 @@
   color: var(--blue);
 }
 
-.select-container--stroke > select {
-  background-color: transparent;
-}
-
 .select-container--stroke:hover {
   color: var(--blue-dark);
 }
 
-.select-container--stroke > select {
+.select-container--stroke > .select {
+  background-color: transparent;
   border-color: currentColor;
 }
 
@@ -261,7 +258,7 @@
 }
 
 /* override the box-shadow reset for select elements */
-select:focus {
+.select:focus {
   box-shadow: 0 0 2px 2px var(--darken25);
 }
 
@@ -675,12 +672,11 @@ input:focus + .switch {
   box-shadow: 0 0 2px 2px var(--darken25);
 }
 
-input:disabled,
-input:disabled,
 input:disabled {
   pointer-events: none;
 }
 
+/* Note, some rules in this list include specificy bumps, to override colored versions of the icons */
 input:disabled + .checkbox,
 input:checked:disabled + .checkbox.checkbox,
 input:checked:disabled + .radio.radio,

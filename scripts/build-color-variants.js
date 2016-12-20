@@ -164,7 +164,7 @@ variantGenerators.selectFill = function (colors) {
     if (isDark(color)) return result;
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      select.bg-${color}:hover {
+      .select.bg-${color}:hover {
         background-color: ${darkerShade} !important;
       }
     `);
