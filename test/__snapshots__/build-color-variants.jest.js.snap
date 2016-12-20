@@ -149,7 +149,11 @@ exports[`buildColorVariants defaults 1`] = `
 }
     
 .btn.bg-white:hover {
-  background-color: gray-faint !important;
+  background-color: #f0f0f0 !important;
+}
+    
+.btn.bg-transparent:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
 }
     
 .btn--stroke.color-gray:hover {
@@ -301,7 +305,11 @@ exports[`buildColorVariants defaults 1`] = `
 }
     
 .btn--stroke.color-white:hover {
-  color: gray-faint !important;
+  color: #f0f0f0 !important;
+}
+    
+.btn--stroke.color-transparent:hover {
+  color: rgba(0, 0, 0, 0.05) !important;
 }
     
 .select.bg-gray:hover {
@@ -453,7 +461,11 @@ exports[`buildColorVariants defaults 1`] = `
 }
     
 .select.bg-white:hover {
-  background-color: gray-faint !important;
+  background-color: #f0f0f0 !important;
+}
+    
+.select.bg-transparent:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
 }
     
 .select--stroke.color-gray:hover {
@@ -605,7 +617,11 @@ exports[`buildColorVariants defaults 1`] = `
 }
     
 .select--stroke.color-white:hover {
-  color: gray-faint !important;
+  color: #f0f0f0 !important;
+}
+    
+.select--stroke.color-transparent:hover {
+  color: rgba(0, 0, 0, 0.05) !important;
 }
     
 .checkbox-container:hover > .checkbox.color-gray,
@@ -795,7 +811,12 @@ input:checked + .checkbox.color-lighten75 {
     
 .checkbox-container:hover > .checkbox.color-white,
 input:checked + .checkbox.color-white {
-  color: gray-faint !important;
+  color: #f0f0f0 !important;
+}
+    
+.checkbox-container:hover > .checkbox.color-transparent,
+input:checked + .checkbox.color-transparent {
+  color: rgba(0, 0, 0, 0.05) !important;
 }
     
 .radio-container:hover > .radio.color-gray,
@@ -985,7 +1006,12 @@ input:checked + .radio.color-lighten75 {
     
 .radio-container:hover > .radio.color-white,
 input:checked + .radio.color-white {
-  color: gray-faint !important;
+  color: #f0f0f0 !important;
+}
+    
+.radio-container:hover > .radio.color-transparent,
+input:checked + .radio.color-transparent {
+  color: rgba(0, 0, 0, 0.05) !important;
 }
     
 .switch.color-gray:hover {
@@ -1359,13 +1385,23 @@ input:checked + .switch--dot-lighten75::after {
 }
     
 .switch.color-white:hover {
-  border-color: gray-faint !important;
+  border-color: #f0f0f0 !important;
 }
 
 input:checked + .switch.color-white,
 input:not(:checked) + .switch.color-white:hover::after,
 input:checked + .switch--dot-white::after {
-  background-color: gray-faint !important;
+  background-color: #f0f0f0 !important;
+}
+    
+.switch.color-transparent:hover {
+  border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+input:checked + .switch.color-transparent,
+input:not(:checked) + .switch.color-transparent:hover::after,
+input:checked + .switch--dot-transparent::after {
+  background-color: rgba(0, 0, 0, 0.05) !important;
 }
     
 .toggle--gray {
@@ -1854,11 +1890,24 @@ input:checked + .toggle.toggle--lighten75 {
 }
 
 input:not(:checked) + .toggle.toggle--white:hover {
-  color: gray-faint !important;
+  color: #f0f0f0 !important;
 }
 
 input:checked + .toggle.toggle--white {
   background: #fff !important;
+  color: #fff !important;
+}
+    
+.toggle--transparent {
+  color: transparent !important;
+}
+
+input:not(:checked) + .toggle.toggle--transparent:hover {
+  color: rgba(0, 0, 0, 0.05) !important;
+}
+
+input:checked + .toggle.toggle--transparent {
+  background: transparent !important;
   color: #fff !important;
 }
     
@@ -2011,21 +2060,25 @@ input:checked + .toggle.toggle--white {
 }
     
 .txt-link.color-white:hover {
-  color: gray-faint !important;
+  color: #f0f0f0 !important;
 }
     
-  /**
-   * For a colored border, add the modifying class \`.border--color\`
-   * where color is a [color](#Colors-&-gradients).
-   *
-   * @group
-   * @memberof Borders
-   * @example
-   * <div class=\'flex-parent\'>
-   *  <div class=\'col col--2 p12 mr12 border border--red\'>.border--red</div>
-   *  <div class=\'col col--2 p12 mr12 border-l border-r border--dash border--yellow\'>.border--yellow</div>
-   * </div>
-   */
+.txt-link.color-transparent:hover {
+  color: rgba(0, 0, 0, 0.05) !important;
+}
+    
+/**
+ * For a colored border, add the modifying class \`.border--color\`
+ * where color is a [color](#Colors-&-gradients).
+ *
+ * @group
+ * @memberof Borders
+ * @example
+ * <div class=\'flex-parent\'>
+ *  <div class=\'col col--2 p12 mr12 border border--red\'>.border--red</div>
+ *  <div class=\'col col--2 p12 mr12 border-l border-r border--dash border--yellow\'>.border--yellow</div>
+ * </div>
+ */
 .border--gray-dark {
   border-color: #333 !important;
 }
@@ -2217,15 +2270,19 @@ input:checked + .toggle.toggle--white {
 .border--black {
   border-color: #000 !important;
 }
+    
+.border--transparent {
+  border-color: transparent !important;
+}
     /** @endgroup */
-  /**
-   * Control the shadow of elements on hover.
-   *
-   * @group
-   * @memberof State modifiers
-   * @example
-   * <div class=\'w400 hover-shadow-darken25\'>.hover-shadow-darken25</div>
-   */
+/**
+ * Control the shadow of elements on hover.
+ *
+ * @group
+ * @memberof State modifiers
+ * @example
+ * <div class=\'w400 hover-shadow-darken25\'>.hover-shadow-darken25</div>
+ */
 .hover-shadow-darken5:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05) !important;
 }
@@ -2296,14 +2353,14 @@ input:checked + .toggle.toggle--white {
   box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.75) !important;
 }
     /** @endgroup */
-  /**
-   * Control the background of elements on hover.
-   *
-   * @group
-   * @memberof State modifiers
-   * @example
-   * <div class=\'w400 hover-bg-darken25\'>.hover-bg-darken25</div>
-   */
+/**
+ * Control the background of elements on hover.
+ *
+ * @group
+ * @memberof State modifiers
+ * @example
+ * <div class=\'w400 hover-bg-darken25\'>.hover-bg-darken25</div>
+ */
 .hover-bg-gray-dark:hover {
   background-color: #333 !important;
 }
@@ -2495,15 +2552,19 @@ input:checked + .toggle.toggle--white {
 .hover-bg-black:hover {
   background-color: #000 !important;
 }
+    
+.hover-bg-transparent:hover {
+  background-color: transparent !important;
+}
     /** @endgroup */
-  /**
-   * Control the color of elements on hover.
-   *
-   * @group
-   * @memberof State modifiers
-   * @example
-   * <div class=\'w400 hover-color-red\'>.hover-color-red</div>
-   */
+/**
+ * Control the color of elements on hover.
+ *
+ * @group
+ * @memberof State modifiers
+ * @example
+ * <div class=\'w400 hover-color-red\'>.hover-color-red</div>
+ */
 .hover-color-gray-dark:hover {
   color: #333 !important;
 }
@@ -2695,15 +2756,19 @@ input:checked + .toggle.toggle--white {
 .hover-color-black:hover {
   color: #000 !important;
 }
+    
+.hover-color-transparent:hover {
+  color: transparent !important;
+}
     /** @endgroup */
-  /**
-   * Control the border color of elements on hover.
-   *
-   * @group
-   * @memberof State modifiers
-   * @example
-   * <div class=\'w400 border border--2 border--pink hover-border-blue\'>.hover-border-blue</div>
-   */
+/**
+ * Control the border color of elements on hover.
+ *
+ * @group
+ * @memberof State modifiers
+ * @example
+ * <div class=\'w400 border border--2 border--pink hover-border-blue\'>.hover-border-blue</div>
+ */
 .hover-border-gray-dark:hover {
   border-color: #333 !important;
 }
@@ -2894,6 +2959,10 @@ input:checked + .toggle.toggle--white {
     
 .hover-border-black:hover {
   border-color: #000 !important;
+}
+    
+.hover-border-transparent:hover {
+  border-color: transparent !important;
 }
     /** @endgroup */"
 `;
