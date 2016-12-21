@@ -3,23 +3,41 @@ import remark from 'remark';
 import reactRenderer from 'remark-react';
 
 const text = `
-# The Reset
+# Assembly
 
-## Removes default styling on semantic elements
+Assembly is an atomic CSS framework that makes it easy to build up responsive sites.
 
-One goal of Assembly's reset is to allow you to use any semantically appropriate HTML element without battling its browser-default styles.
+## Usage
+
+Include a link to the assembly stylesheet in the head of your HTML.
+
+\`<link href='https://www.mapbox.com/assembly/assembly.css' rel='stylesheet' />\`
+
+## Philosophy
+
+### Class names are short and descriptive
+
+Assembly is designed to provide fundamental rules that are used frequently and should be easy to type and remember. Classes are abbreviated and use actual number values where applicable, such as \`.p6 for padding: 5px\` instead of \`.p-small\` or \`.p-1\`.
+
+### Assembly is not very opinionated or specific.
+
+Unless absolutely necessary, selectors consist of a single class. This means that a class's effect will not vary when combined with different classes.
+
+## How it Works
+
+### Reset default styling on semantic elements
+
+One goal of Assembly's CSS reset is to allow you to use any semantically appropriate HTML element without battling its browser-default styles.
 
 For example, you should use \`<h3>\` for third-level headings, *not* because you want a certain style. Similarly, you should use \`<button>\` when a button is behaviorally and semantically appropriate, instead of \`href\`-less \`<a>\` tags or other elements with click handlers.
 
 To allow for this, Assembly resets all browser-default margins, paddings, borders, and font sizes. It also resets font weights on headings, underlines on links, pretty much everything on buttons, and a few other things.
 
-## \`box-sixing: border-box\`
+### Assembly uses \`box-sixing: border-box\`
 
-[The \`border-box\` box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) allows for more intuitive styling than the default, \`content-box\` model.
+[The \`border-box\` box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) allows for more intuitive styling than the default \`content-box\` model. For example, when you set a \`w300\` class, your element will always be 300 pixels wide, regardless of its padding and borders.
 
-Assembly's use of \`border-box\` means, for example, that when you set a \`w300\` class, your element will always be 300 pixels wide, regardless of its padding and borders.
-
-# Media queries
+### Mobile-first media queries
 
 Assembly uses the following media queries:
 
@@ -29,7 +47,7 @@ Assembly uses the following media queries:
 
 Classes that take affect within certain media queries always end with a \`-media-<size>\` suffix, where "size" is \`s\`, \`m\`, or \`l\`.
 
-# Usage of \`!important\`
+### Usage of \`!important\`
 
 Assembly uses \`!important\` on declarations whose effect directly corresponds to a class name. For example, in the \`.bg-pink\` rule, the \`background-color\` declaration will be \`!important\`.
 
