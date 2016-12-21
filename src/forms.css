@@ -404,28 +404,28 @@
 
 /* range dark */
 /* range dark track */
-.range--dark::-webkit-slider-runnable-track { background: var(--gray-light); }
-.range--dark::-moz-range-track { background: var(--gray-light); }
-.range--dark::-ms-fill-lower { background: var(--gray-light); }
-.range--dark::-ms-fill-upper { background: var(--gray-light); }
+.range--dark::-webkit-slider-runnable-track { background: var(--lighten50); }
+.range--dark::-moz-range-track { background: var(--lighten50); }
+.range--dark::-ms-fill-lower { background: var(--lighten50); }
+.range--dark::-ms-fill-upper { background: var(--lighten50); }
 
 /* range dark thumb */
-.range--dark::-webkit-slider-thumb { border-color: var(--gray-light); }
-.range--dark::-ms-thumb { border-color: var(--gray-light); }
-.range--dark::-moz-range-thumb { border-color: var(--gray-light); }
+.range--dark::-webkit-slider-thumb { border-color: var(--white); }
+.range--dark::-ms-thumb { border-color: var(--white); }
+.range--dark::-moz-range-thumb { border-color: var(--white); }
 
 /* range dark thumb:hover */
-.range--dark:hover::-webkit-slider-thumb { border-color: var(--gray); }
-.range--dark:hover::-ms-thumb { border-color: var(--gray); }
-.range--dark:hover::-moz-range-thumb { border-color: var(--gray); }
+.range--dark:hover::-webkit-slider-thumb { border-color: var(--white); }
+.range--dark:hover::-ms-thumb { border-color: var(--white); }
+.range--dark:hover::-moz-range-thumb { border-color: var(--white); }
 
 /* range dark track:hover */
-.range--dark:hover::-webkit-slider-runnable-track { background: var(--gray); }
-.range--dark:hover::-moz-range-track { background: var(--gray); }
-.range--dark:hover::-ms-fill-lower { background: var(--gray); }
-.range--dark:hover::-ms-fill-upper { background: var(--gray); }
+.range--dark:hover::-webkit-slider-runnable-track { background: var(--lighten75); }
+.range--dark:hover::-moz-range-track { background: var(--lighten75); }
+.range--dark:hover::-ms-fill-lower { background: var(--lighten75); }
+.range--dark:hover::-ms-fill-upper { background: var(--lighten75); }
 
-/* range purple - example */
+/* range purple - color example */
 /* range purple track */
 .range--purple::-webkit-slider-runnable-track { background: var(--purple); }
 .range--purple::-moz-range-track { background: var(--purple); }
