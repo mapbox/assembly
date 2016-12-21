@@ -9,12 +9,10 @@
  * `<table>`s are styled inside `.prose` sections and
  * when they have a `table` class.
  *
- * The following modifier is available: `table--dark`
- *
  * @memberof Tables
  * @example
  *
- * <table class='table mb12'>
+ * <table class='table'>
  *   <thead>
  *     <tr>
  *       <th>Column 1</th>
@@ -31,25 +29,6 @@
  *   </tr>
  * </table>
  *
- * <div class='bg-gray-dark p12'>
- *   <table class='table table--dark'>
- *     <tr>
- *       <th>Row 1</th>
- *       <td>item</td>
- *       <td>item</td>
- *     </tr>
- *     <tr>
- *       <th>Row 2</th>
- *       <td>item</td>
- *       <td>item</td>
- *     </tr>
- *     <tr>
- *       <th>Row 3</th>
- *       <td>item</td>
- *       <td>item</td>
- *     </tr>
- *   </table>
- * </div>
  */
 .table,
 .prose table {
@@ -84,10 +63,35 @@
   border-left: 1px solid var(--gray-light);
 }
 
-/* table dark */
+/**
+ * Invert your table so it is legible against a dark background.
+ *
+ * @example
+ * <div class='bg-darken75 p12'>
+ *   <table class='table table--dark'>
+ *     <thead>
+ *       <tr>
+ *         <th>Column 1</th>
+ *         <th>Column 1</th>
+ *       </tr>
+ *     </thead>
+ *     <tr>
+ *       <td>item</td>
+ *       <td>item</td>
+ *     </tr>
+ *     <tr>
+ *       <td>item</td>
+ *       <td>item</td>
+ *     </tr>
+ *   </table>
+ * </div>
+ *
+ * @memberof Tables
+ *
+ */
 
 .table--dark,
-.prose .table--dark {
+.prose--dark table {
   background: transparent;
   border-color: var(--white);
   color: var(--white);
@@ -95,13 +99,13 @@
 
 .table--dark th,
 .table--dark td,
-.prose .table--dark th,
-.prose .table--dark td {
+.prose--dark th,
+.prose--dark td {
   border-bottom-color: var(--white);
 }
 
 .table--dark th,
-.prose .table--dark th {
+.prose--dark th {
   background-color: transparent;
 }
 
