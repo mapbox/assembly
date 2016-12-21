@@ -22,7 +22,7 @@ Assembly targets IE 11+ and other modern browsers.
 
 ### Media queries
 
-- Many classes have media query variants. The media query variants follow a naming convention: suffix `-media-{size}` to end of the rule. For example, for the class `.p6`, the variations are: `.p6-ms`, `.p6-ml`, `.p6-mxl`,
+- Many classes have media query variants. The media query variants follow a naming convention: suffix `-media-{size}` to end of the rule. For example, for the class `.p6`, the variations are: `.p6-ms`, `.p6-ml`, `.p6-mxl`.
 - If a class has a media query variant for one breakpoint, it must also have a variant for all breakpoints.
 - Order in stylesheet of media query rules is consistent: first the default rule, followed by the `-mm` rule, followed by the `-ml` rule, followed by the `-mxl` rule. We do this to guarantee that as page size gets larger, rules that target larger screens override rules that target small screens, etc.
 
