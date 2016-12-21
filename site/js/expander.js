@@ -1,16 +1,13 @@
 // 	event handlers on each button
 //	on click hide elem, show all
 
-const buttons = document.querySelectorAll('button[id^="expandButton-."]');
-
-console.log(buttons);
-
+const buttons = document.querySelectorAll('button[id^="expandButton-"]');
 let i;
 
 for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function () {
 
-    const classId = this.id.replace('button-', '');
+    const classId = this.id.replace('expandButton-', '');
     const expanded = document.getElementById('expanded-' + classId);
     const collapsed = document.getElementById('collapsed-' + classId);
 

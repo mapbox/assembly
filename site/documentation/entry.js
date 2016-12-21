@@ -55,14 +55,14 @@ class Entry extends React.Component {
     const expandButton = selectors !== undefined && selectors.length > 9 ? (
       <button
         id={`expandButton-${selectors && selectors[0]}`}
-        className='mr3 pt3 pb3 pl6 pr6 round bg-blue-light color-white txt-xs txt-mono inline-block uppercase'>
+        className='mr3 pt3 pb3 pl6 pr6 round bg-blue-dark hover-bg-blue-light color-white txt-xs txt-mono inline-block uppercase'>
         see all
       </button>
     ) : null;
 
     return (
-      <div className='border-t border--2 border--gray-faint pt48 pb48 flex-parent'>
-        <div className='col col--4 pr12'>
+      <div className='border-t border--2 border--gray-faint pt48 pb48 flex-parent flex-parent--wrap'>
+        <div className='col col--12 col--4-ml pr12-ml'>
           <div className='none' id={`expanded-${selectors && selectors[0]}`}>
             {selectorEls}
           </div>
@@ -71,7 +71,7 @@ class Entry extends React.Component {
           </div>
             {expandButton}
         </div>
-        <div className='col col--8'>
+        <div className='col col--12 col--8-ml'>
           <div className={`${selectors && 'mt3'} mb48 prose`}>
             {remark().use(reactRenderer).process(props.parsedComment.description).contents}
           </div>
