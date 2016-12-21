@@ -123,9 +123,9 @@
  * - A `<select>`.
  *
  * Variations:
- * - Modify `.select` with a `.bg-{color}` class.
- * - Modify `.select-container` with `select-container--stroke`.
- * - Modify *stroke* `.select-container` with a text color, e.g. `.color-red`.
+ * - Modify `.select` with a `.select--{color}` modifier.
+ * - Modify `.select-container` with the `.select-container--stroke` modifier
+ *   and an (optional) `.select--stroke-{color}` modifier.
  *
  * @memberof Forms
  * @group
@@ -137,7 +137,7 @@
  *   </select>
  * </div>
  * <div class='select-container mb6'>
- *   <select class='select bg-red'>
+ *   <select class='select select--red'>
  *     <option>one</option>
  *     <option>two</option>
  *   </select>
@@ -148,7 +148,7 @@
  *     <option>two</option>
  *   </select>
  * </div>
- * <div class='select-container select-container--stroke color-purple'>
+ * <div class='select-container select-container--stroke select--stroke-purple'>
  *   <select class='select'>
  *     <option>one</option>
  *     <option>two</option>
@@ -183,7 +183,7 @@
 /** @endgroup */
 
 /* default hover state */
-:not(.select-container--stroke) > .select:hover {
+.select:hover {
   background-color: var(--blue-dark);
 }
 
