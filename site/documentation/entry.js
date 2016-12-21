@@ -41,21 +41,42 @@ class Entry extends React.Component {
         });
     }
 
-    const selectorEls = selectors !== undefined && selectors.map((m) =>
+    const getSelectorEl = (selector) =>
       <span
-        key={m}
-        id={`#${m.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
-        className='mr6 pl6 pr6 round bg-blue color-white txt-mono inline-block mb3'>
-        {m.trim()}
-      </span>);
+        key={selector}
+        id={`#${selector.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
+        className='mr3 p3 round bg-blue color-white txt-mono txt-xs inline-block'>
+        {selector.trim()}
+      </span>;
+
+    const selectorEls = selectors !== undefined && selectors.map(getSelectorEl);
+    const collapsedSelectorEls = selectors !== undefined && selectors.slice(0, 9).map(getSelectorEl);
+
+    const expandButton = selectors !== undefined && selectors.length > 9 ? (
+      <button
+        id={`expandButton-${selectors && selectors[0]}`}
+        className='mr3 pt3 pb3 pl6 pr6 round bg-blue-dark hover-bg-blue-light color-white txt-xs txt-mono inline-block uppercase'>
+        see all
+      </button>
+    ) : null;
 
     return (
-      <div className='mt24 mb48'>
-        {selectorEls}
-        <div className={`${selectors && 'mt3'} prose`}>
-          {remark().use(reactRenderer).process(props.parsedComment.description).contents}
+      <div className='border-t border--2 border--gray-faint pt48 pb48 flex-parent flex-parent--wrap'>
+        <div className='col col--12 col--4-ml pr12-ml'>
+          <div className='none' id={`expanded-${selectors && selectors[0]}`}>
+            {selectorEls}
+          </div>
+          <div className='inline' id={`collapsed-${selectors && selectors[0]}`}>
+            {collapsedSelectorEls}
+          </div>
+            {expandButton}
         </div>
-        {example}
+        <div className='col col--12 col--8-ml'>
+          <div className={`${selectors && 'mt3'} mb48 prose`}>
+            {remark().use(reactRenderer).process(props.parsedComment.description).contents}
+          </div>
+          {example}
+        </div>
       </div>
     );
   }

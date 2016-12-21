@@ -9,7 +9,7 @@ const timelog = require('./timelog');
 
 const distDir = path.join(__dirname, '../dist');
 const fontsGlob = path.join(__dirname, '../fonts/*.*');
-const siteAssetsGlob = path.join(__dirname, '../site/css/*.*');
+const siteAssetsGlob = path.join(__dirname, '../site/+(css|js)/*.*');
 
 function copyFile(infile, outdir) {
   const outfile = path.join(outdir, path.basename(infile));
