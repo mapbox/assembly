@@ -27,19 +27,24 @@ class Entry extends React.Component {
       selectors = props.members;
     }
 
-    // Remove pseudo-elements
     if (selectors !== undefined) {
+      // Remove pseudo-elements
       selectors = _.uniq(selectors.map((selector) => selector.split(':')[0]));
-    }
 
-    if (selectors) {
+      // Break combined comma-separated selectors into multiple elements
       selectors = selectors
         .map((s) => {
           return s.split(',');
         }).reduce((a, b) => {
           return a.concat(b);
         });
+
+      // hide prose selectors from documentation, but special case `.prose` and `.prose--dark` cases
+      if (selectors.length > 1) {
+        selectors = selectors.filter((s) => s !== '.prose' && s !== '.prose--dark' && s.indexOf('.prose') === -1);
+      }
     }
+
 
     const getSelectorEl = (selector) =>
       <span
@@ -72,7 +77,7 @@ class Entry extends React.Component {
             {expandButton}
         </div>
         <div className='col col--12 col--8-ml'>
-          <div className={`${selectors} mb48 prose`}>
+          <div className='mb48 prose'>
             {remark().use(reactRenderer).process(props.parsedComment.description).contents}
           </div>
           {example}

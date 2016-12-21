@@ -8,10 +8,10 @@ function HtmlExample(props) {
   return (
     <div>
         <div
-          className='mb12'
+          className='border mb12 border--dash border--darken10 p12 round'
           dangerouslySetInnerHTML={{ __html: props.code }}
         />
-      <div className='code-block bg-gray-faint scroll-auto hmax180 round'>
+      <div className='pre bg-gray-faint scroll-auto hmax180 round'>
         <Lowlight
           language='html'
           value={props.code}
