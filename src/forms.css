@@ -446,9 +446,8 @@
  * - Text for the label.
  *
  * Variations:
- * - Modify `checkbox` with a text color, e.g. `color-red`.
- * - Use a different icon.
- * - Modify `checkbox` with `checkbox--s-label` if the text is small,
+ * - Modify `.checkbox` with a `.checkbox--{color}` modifier.
+ * - Modify `.checkbox` with `.checkbox--s-label` modifier if the label text is small,
  *   for proper vertical alignment.
  *
  * @section Checkboxes
@@ -479,7 +478,7 @@
  * <div class='txt-s'>
  *   <label class='checkbox-container mr12'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr6 checkbox--s-label color-red'>
+ *     <div class='checkbox mr6 checkbox--s-label checkbox--red'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     More zebras
@@ -496,8 +495,8 @@
  * - Text for the label.
  *
  * Variations:
- * - Modify `radio` with a text color, e.g. `color-purple`.
- * - Modify `radio` with `radio--s-label` if the text is small,
+ * - Modify `.radio` with a `.radio--{color}`.
+ * - Modify `.radio` with `.radio--s-label` modifier if the label text is small,
  *   for proper vertical alignment.
  *
  * @section Radio buttons
@@ -517,7 +516,7 @@
  * <div class='txt-s'>
  *   <label class='radio-container mr12'>
  *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio radio--s-label color-yellow mr6'></div>
+ *     <div class='radio radio--s-label radio--yellow mr6'></div>
  *     Magic radio
  *   </label>
  * </div>

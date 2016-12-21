@@ -217,11 +217,16 @@ variantGenerators.selectStroke = function (colors) {
 variantGenerators.checkbox = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
+    const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .checkbox-container:hover > .checkbox.color-${color},
-      input:checked + .checkbox.color-${color} {
-        color: ${darkerShade} !important;
+      .checkbox--${color} {
+        color: ${colorValue};
+      }
+
+      .checkbox-container:hover > .checkbox--${color},
+      input:checked + .checkbox--${color} {
+        color: ${darkerShade};
       }
     `);
   }, '');
@@ -230,11 +235,16 @@ variantGenerators.checkbox = function (colors) {
 variantGenerators.radio = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
+    const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .radio-container:hover > .radio.color-${color},
-      input:checked + .radio.color-${color} {
-        color: ${darkerShade} !important;
+      .radio--${color} {
+        color: ${colorValue};
+      }
+
+      .radio-container:hover > .radio--${color},
+      input:checked + .radio--${color} {
+        color: ${darkerShade};
       }
     `);
   }, '');
