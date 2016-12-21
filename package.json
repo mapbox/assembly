@@ -6,6 +6,7 @@
   "scripts": {
     "copy-assets": "node scripts/copy-assets",
     "clean-svgs": "node scripts/clean-svgs",
+    "check-size": "node scripts/check-size.js",
     "minify-css": "cssnano dist/assembly.css > dist/assembly.min.css",
     "build:site": "babel-node scripts/build-site",
     "build:css": "mkdir -p dist && node scripts/process-css && npm-run-all --parallel copy-assets minify-css",
@@ -50,6 +51,7 @@
     "eslint-plugin-node": "^3.0.5",
     "eslint-plugin-react": "^6.8.0",
     "globby": "^6.1.0",
+    "gzip-size": "^3.0.0",
     "highlight.js": "^9.8.0",
     "jest": "^18.0.0",
     "lodash": "^4.17.2",
@@ -61,6 +63,7 @@
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.1",
     "postcss-reporter": "^2.0.0",
+    "pretty-bytes": "^4.0.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-lowlight": "^1.0.2",
