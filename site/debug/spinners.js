@@ -12,7 +12,7 @@ class Spinners extends React.Component {
 
           <div className="loading p12"></div>
           <div className="loading loading--s p12"></div>
-          <div className="loading loading--light bg-gray-dark p12"></div>
+          <div className="loading loading--dark bg-gray-dark p12"></div>
 
         </div>
       </div>
