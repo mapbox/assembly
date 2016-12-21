@@ -278,7 +278,9 @@
 /**
  * Range input. The following modifiers are available:
  * - `input--s`: Small
- * - `input--dark`: Dark
+ *
+ * Variations:
+ * - Modify the color of the range track and thumb border with `range--{color}`.
  *
  * Use `w*` width classes to change widths.
  *
@@ -286,10 +288,7 @@
  * @example
  * <label class='mb12 block'>Range <input class='range w96 ml6' type='range' /></label>
  * <label class='mb12 block'>Small range <input class='range range--s w96 ml6' type='range' /></label>
- * <div class='mb12 bg-black p6 round color-white'>
- *  <label class='mb12 block'>Dark range <input class='range range--dark w96 ml6' type='range' /></label>
- *  <label class='block'>Small dark range <input class='range range--dark range--s w96 ml6' type='range' /></label>
- * </div>
+ * <label class='mb12 block'>Disabled range <input class='range range--s w96 ml6' disabled type='range' /></label>
 */
 .range {
   appearance: none;
@@ -414,56 +413,21 @@
   height: 15px;
 }
 
+/* Range focus */
 .range:focus { box-shadow: none; }
 .range:focus::-webkit-slider-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
 .range:focus::-ms-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
 .range:focus::-moz-range-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
 
-/* range dark */
-/* range dark track */
-.range--dark::-webkit-slider-runnable-track { background: var(--lighten50); }
-.range--dark::-moz-range-track { background: var(--lighten50); }
-.range--dark::-ms-fill-lower { background: var(--lighten50); }
-.range--dark::-ms-fill-upper { background: var(--lighten50); }
+/* Range disabled */
+.range:disabled::-webkit-slider-runnable-track { background: var(--disabled); }
+.range:disabled::-moz-range-track { background: var(--disabled); }
+.range:disabled::-ms-fill-upper { background: var(--disabled); }
+.range:disabled::-ms-fill-lower { background: var(--disabled); }
 
-/* range dark thumb */
-.range--dark::-webkit-slider-thumb { border-color: var(--white); }
-.range--dark::-ms-thumb { border-color: var(--white); }
-.range--dark::-moz-range-thumb { border-color: var(--white); }
-
-/* range dark thumb:hover */
-.range--dark:hover::-webkit-slider-thumb { border-color: var(--white); }
-.range--dark:hover::-ms-thumb { border-color: var(--white); }
-.range--dark:hover::-moz-range-thumb { border-color: var(--white); }
-
-/* range dark track:hover */
-.range--dark:hover::-webkit-slider-runnable-track { background: var(--lighten75); }
-.range--dark:hover::-moz-range-track { background: var(--lighten75); }
-.range--dark:hover::-ms-fill-lower { background: var(--lighten75); }
-.range--dark:hover::-ms-fill-upper { background: var(--lighten75); }
-
-/* range purple - color example */
-/* range purple track */
-.range--purple::-webkit-slider-runnable-track { background: var(--purple); }
-.range--purple::-moz-range-track { background: var(--purple); }
-.range--purple::-ms-fill-lower { background: var(--purple); }
-.range--purple::-ms-fill-upper { background: var(--purple); }
-
-/* range purple thumb */
-.range--purple::-webkit-slider-thumb { border-color: var(--purple); }
-.range--purple::-ms-thumb { border-color: var(--purple); }
-.range--purple::-moz-range-thumb { border-color: var(--purple); }
-
-/* range purple track:hover */
-.range--purple:hover::-webkit-slider-runnable-track { background: var(--purple-dark); }
-.range--purple:hover::-moz-range-track { background: var(--purple-dark); }
-.range--purple:hover::-ms-fill-lower { background: var(--purple-dark); }
-.range--purple:hover::-ms-fill-upper { background: var(--purple-dark); }
-
-/* range blue thumb:hover */
-.range--purple:hover::-webkit-slider-thumb { border-color: var(--purple-dark); }
-.range--purple:hover::-ms-thumb { border-color: var(--purple-dark); }
-.range--purple:hover::-moz-range-thumb { border-color: var(--purple-dark); }
+.range:disabled::-webkit-slider-thumb { border-color: var(--disabled); background: var(--gray-faint); }
+.range:disabled::-ms-thumb { border-color: var(--disabled); background: var(--gray-faint); }
+.range:disabled::-moz-range-thumb { border-color: var(--disabled); background: var(--gray-faint); }
 
 /**
  * The checkbox markup must fit the following pattern.
