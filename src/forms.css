@@ -711,6 +711,7 @@ input:checked:disabled + .switch.switch::after {
  *
  * Variations:
  * - Modify the inactive toggle label text color, and the active toggle background color with `toggle--{color}`.
+ * - Modify the active label color with `toggle--active-{color}`.
  * - Modify the border radiuses of toggle groups inside small text with `toggle-group--s` on toggle group element.
  * - Add a border to the toggle group with `toggle-group--stroke color-{color}` on toggle group element.
  * @group
