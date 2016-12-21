@@ -86,27 +86,31 @@ class Forms extends React.Component {
               </label>
             </div>
           </fieldset>
-          <fieldset className='mt30'>
+          <fieldset className='mt24'>
             <legend className='txt-bold'>Range</legend>
-            <div className='mt5'>
+            <div className='mt6'>
               <label className='range-container'>
-                <input className='range' name='range' min='0' max='100' type='range' /> Range
+                Range <input className='range w96' name='range' min='0' max='100' type='range' />
               </label>
             </div>
-            <div className='mt5'>
+            <div className='mt6'>
               <label className='range-container'>
-                <input className='range range--s' name='range' min='0' max='100' type='range' />
-                Range Small
+                Range Small <input className='range range--s w96' name='range' min='0' max='100' type='range' />
               </label>
             </div>
-            <div className='mt5 bg-gray-dark color-white'>
+            <div className='mt6 p6 bg-gray-dark color-white'>
               <label className='range-container'>
-                <input className='range range--dark' name='range' min='0' max='100' type='range' /> Range dark
+                Range dark <input className='range range--dark w96' name='range' min='0' max='100' type='range' />
               </label>
             </div>
-            <div className='mt5'>
+            <div className='mt6 p6 bg-red-dark color-white'>
               <label className='range-container'>
-                <input className='range range--blue' name='range' min='0' max='100' type='range' /> Range color example
+                Range dark <input className='range range--dark w96' name='range' min='0' max='100' type='range' />
+              </label>
+            </div>
+            <div className='mt6'>
+              <label className='range-container'>
+                 Range color example <input className='range range--purple w96' name='range' min='0' max='100' type='range' />
               </label>
             </div>
           </fieldset>
