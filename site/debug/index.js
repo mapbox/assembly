@@ -14,6 +14,7 @@ import { Spinners } from './spinners';
 import { Toggles } from './toggles';
 import { Inputs } from './inputs';
 import { TextAreas } from './textareas';
+import { Ranges } from './ranges';
 
 class Debug extends React.Component {
   render() {
@@ -24,6 +25,9 @@ class Debug extends React.Component {
         </div>
         <div className='mb48'>
           <TextAreas />
+        </div>
+        <div className='mb48'>
+          <Ranges />
         </div>
         <div className='mb48'>
           <Spinners />

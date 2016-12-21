@@ -283,6 +283,34 @@ variantGenerators.toggleActive = function (colors) {
   }, '');
 };
 
+variantGenerators.range = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const colorValue = variables[color];
+    const darkerShade = getDarkerShade(color);
+    // Set the track and thumb color.
+    // Set the track and thumb color to dark on hover.
+    return result += stripIndent(`
+      .range--${color}::-webkit-slider-runnable-track { background: ${colorValue}; }
+      .range--${color}::-moz-range-track { background: ${colorValue}; }
+      .range--${color}::-ms-fill-lower { background: ${colorValue}; }
+      .range--${color}::-ms-fill-upper { background: ${colorValue}; }
+
+      .range--${color}::-webkit-slider-thumb { border-color: ${colorValue}; }
+      .range--${color}::-ms-thumb { border-color: ${colorValue}); }
+      .range--${color}::-moz-range-thumb { border-color: ${colorValue}; }
+
+      .range--${color}:hover::-webkit-slider-runnable-track { background: ${darkerShade}; }
+      .range--${color}:hover::-moz-range-track { background: ${darkerShade}; }
+      .range--${color}:hover::-ms-fill-lower { background: ${darkerShade}; }
+      .range--${color}:hover::-ms-fill-upper { background: ${darkerShade}; }
+
+      .range--${color}:hover::-webkit-slider-thumb { border-color: ${darkerShade}; }
+      .range--${color}:hover::-ms-thumb { border-color: ${darkerShade}; }
+      .range--${color}:hover::-moz-range-thumb { border-color: ${darkerShade}; }
+    `);
+  }, '');
+};
 
 
 
