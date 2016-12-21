@@ -2067,6 +2067,202 @@ input:checked + .toggle--transparent {
   color: #fff !important;
 }
     
+input:checked + .toggle--active-gray-dark {
+  color: #333 !important;
+}
+    
+input:checked + .toggle--active-gray {
+  color: #666 !important;
+}
+    
+input:checked + .toggle--active-gray-light {
+  color: #ccc !important;
+}
+    
+input:checked + .toggle--active-gray-faint {
+  color: #f0f0f0 !important;
+}
+    
+input:checked + .toggle--active-pink-dark {
+  color: #C8145A !important;
+}
+    
+input:checked + .toggle--active-pink {
+  color: #ff3c96 !important;
+}
+    
+input:checked + .toggle--active-pink-light {
+  color: #FF88C0 !important;
+}
+    
+input:checked + .toggle--active-pink-faint {
+  color: #ffdbed !important;
+}
+    
+input:checked + .toggle--active-red-dark {
+  color: #BE0014 !important;
+}
+    
+input:checked + .toggle--active-red {
+  color: #dc2b28 !important;
+}
+    
+input:checked + .toggle--active-red-light {
+  color: #FF8280 !important;
+}
+    
+input:checked + .toggle--active-red-faint {
+  color: #ffdad9 !important;
+}
+    
+input:checked + .toggle--active-orange-dark {
+  color: #DC4600 !important;
+}
+    
+input:checked + .toggle--active-orange {
+  color: #ff6e00 !important;
+}
+    
+input:checked + .toggle--active-orange-light {
+  color: #FFA950 !important;
+}
+    
+input:checked + .toggle--active-orange-faint {
+  color: #FFE5CB !important;
+}
+    
+input:checked + .toggle--active-yellow-dark {
+  color: #FFBD0A !important;
+}
+    
+input:checked + .toggle--active-yellow {
+  color: #f0dc00 !important;
+}
+    
+input:checked + .toggle--active-yellow-light {
+  color: #F0F062 !important;
+}
+    
+input:checked + .toggle--active-yellow-faint {
+  color: #fafbd1 !important;
+}
+    
+input:checked + .toggle--active-green-dark {
+  color: #007532 !important;
+}
+    
+input:checked + .toggle--active-green {
+  color: #01aa46 !important;
+}
+    
+input:checked + .toggle--active-green-light {
+  color: #72C781 !important;
+}
+    
+input:checked + .toggle--active-green-faint {
+  color: #d4edda !important;
+}
+    
+input:checked + .toggle--active-teal-dark {
+  color: #00626E !important;
+}
+    
+input:checked + .toggle--active-teal {
+  color: #01b5b4 !important;
+}
+    
+input:checked + .toggle--active-teal-light {
+  color: #50D2D2 !important;
+}
+    
+input:checked + .toggle--active-teal-faint {
+  color: #cbf2f1 !important;
+}
+    
+input:checked + .toggle--active-blue-dark {
+  color: #0014AA !important;
+}
+    
+input:checked + .toggle--active-blue {
+  color: #0065fb !important;
+}
+    
+input:checked + .toggle--active-blue-light {
+  color: #00B1FF !important;
+}
+    
+input:checked + .toggle--active-blue-faint {
+  color: #bae8ff !important;
+}
+    
+input:checked + .toggle--active-purple-dark {
+  color: #500078 !important;
+}
+    
+input:checked + .toggle--active-purple {
+  color: #8c50c7 !important;
+}
+    
+input:checked + .toggle--active-purple-light {
+  color: #C299E3 !important;
+}
+    
+input:checked + .toggle--active-purple-faint {
+  color: #ede1f6 !important;
+}
+    
+input:checked + .toggle--active-darken5 {
+  color: rgba(0, 0, 0, 0.05) !important;
+}
+    
+input:checked + .toggle--active-darken10 {
+  color: rgba(0, 0, 0, 0.10) !important;
+}
+    
+input:checked + .toggle--active-darken25 {
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+    
+input:checked + .toggle--active-darken50 {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+    
+input:checked + .toggle--active-darken75 {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+    
+input:checked + .toggle--active-lighten5 {
+  color: rgba(255, 255, 255, 0.05) !important;
+}
+    
+input:checked + .toggle--active-lighten10 {
+  color: rgba(255, 255, 255, 0.1) !important;
+}
+    
+input:checked + .toggle--active-lighten25 {
+  color: rgba(255, 255, 255, 0.25) !important;
+}
+    
+input:checked + .toggle--active-lighten50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+    
+input:checked + .toggle--active-lighten75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+    
+input:checked + .toggle--active-white {
+  color: #fff !important;
+}
+    
+input:checked + .toggle--active-black {
+  color: #000 !important;
+}
+    
+input:checked + .toggle--active-transparent {
+  color: transparent !important;
+}
+    
 /**
  * @section Text colors
  * @memberof Colors & gradients

@@ -255,6 +255,22 @@ variantGenerators.toggle = function (colors) {
   }, '');
 };
 
+variantGenerators.toggleActive = function (colors) {
+  return colors.reduce((result, color) => {
+    const colorValue = variables[color];
+    // Set the text color of toggle label when active.
+    // Must be below .toggle group in  stylesheet
+    return result += stripIndent(`
+      input:checked + .toggle--active-${color} {
+        color: ${colorValue} !important;
+      }
+    `);
+  }, '');
+};
+
+
+
+
 variantGenerators.color = function (colors) {
   // Manually adding `color-text`
   let css = stripIndent(`
