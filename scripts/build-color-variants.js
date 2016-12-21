@@ -159,8 +159,8 @@ variantGenerators.buttonStroke = function (colors) {
         color: ${colorValue};
       }
 
-      .btn--stroke.btn--${color}.is-active,
-      .btn--stroke.btn--${color}:hover {
+      .btn--stroke.btn--${color}:hover,
+      .btn--stroke.btn--${color}.is-active {
         color: ${darkerShade};
       }
     `);
@@ -302,7 +302,7 @@ variantGenerators.toggle = function (colors) {
         color: ${colorValue};
       }
 
-      input:not(:checked) + .toggle--${color}:hover {
+      .toggle--${color}:hover {
         color: ${darkerShade};
       }
 
@@ -355,8 +355,6 @@ variantGenerators.range = function (colors) {
     `);
   }, '');
 };
-
-
 
 variantGenerators.color = function (colors) {
   // Manually adding `color-text`

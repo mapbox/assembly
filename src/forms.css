@@ -814,7 +814,7 @@ input:checked + .switch::after {
 }
 
 input:checked + .switch {
-  border-color: transparent ;
+  border-color: transparent;
   background-color: var(--blue-dark);
 }
 
