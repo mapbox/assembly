@@ -29,7 +29,7 @@ class Heading extends React.Component {
           id={id}
           className={levelClass}
         >
-          <a className='block pt24 txt-bold' href={`#${id}`}>
+          <a className='block txt-bold' href={`#${id}`}>
             {props.title}
           </a>
         </div>
