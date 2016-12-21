@@ -532,7 +532,7 @@
  *
  * Variations:
  * - Modify the active state of the switch handle with `switch--dot-{color}`.
- * - Modify the color of the dot when inactive, the border when inactive and the background in active state with `color--{color}`
+ * - Modify the color of the dot when inactive, the border when inactive and the background in active state with `switch--{color}`
  *
  * @section Switches
  * @memberof Forms
@@ -550,7 +550,7 @@
  * <div>
  *   <label class="switch-container">
  *     <input type='checkbox' value='magic'>
- *     <div class='switch border--pink color-gray mr12'></div>
+ *     <div class='switch switch--pink switch--dot-gray mr12'></div>
  *     Switch this!
  *   </label>
  * </div>
@@ -808,10 +808,6 @@ input:checked + .radio {
 }
 
 /* state management for switches */
-input:not(:checked) + .switch:hover::after {
-  background-color: var(--blue-dark);
-}
-
 .switch:hover {
   color: var(--blue-dark);
 }
@@ -822,8 +818,8 @@ input:checked + .switch::after {
 }
 
 input:checked + .switch {
-  border-color: transparent !important;
-  background-color: var(--blue-dark) !important;
+  border-color: transparent ;
+  background-color: var(--blue-dark);
 }
 
 /* state management for toggles */

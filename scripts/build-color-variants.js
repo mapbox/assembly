@@ -253,18 +253,26 @@ variantGenerators.radio = function (colors) {
 variantGenerators.switch = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
+    const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     // Darken background when hovered and when active
     // Darken dot on hover when inactive only
     return result += stripIndent(`
-      .switch.color-${color}:hover {
-        border-color: ${darkerShade} !important;
+      .switch--${color} {
+        color: ${colorValue};
       }
 
-      input:checked + .switch.color-${color},
-      input:not(:checked) + .switch.color-${color}:hover::after,
+      .switch--${color}:hover {
+        color: ${darkerShade};
+      }
+
+      .switch--${color}:hover::after,
+      input:checked + .switch--${color} {
+        background-color: ${darkerShade};
+      }
+
       input:checked + .switch--dot-${color}::after {
-        background-color: ${darkerShade} !important;
+        background-color: ${colorValue};
       }
     `);
   }, '');
