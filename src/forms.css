@@ -426,8 +426,8 @@
 .range:disabled::-ms-fill-lower { background: var(--disabled); }
 
 .range:disabled::-webkit-slider-thumb { border-color: var(--disabled); background: var(--gray-faint); }
-.range:disabled::-ms-thumb { border-color: var(--disabled); background: var(--gray-light); }
-.range:disabled::-moz-range-thumb { border-color: var(--disabled); background: var(--gray-light); }
+.range:disabled::-ms-thumb { border-color: var(--disabled); background: var(--gray-faint); }
+.range:disabled::-moz-range-thumb { border-color: var(--disabled); background: var(--gray-faint); }
 
 /**
  * The checkbox markup must fit the following pattern.
