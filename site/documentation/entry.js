@@ -55,7 +55,7 @@ class Entry extends React.Component {
     const expandButton = selectors !== undefined && selectors.length > 9 ? (
       <button
         id={`expandButton-${selectors && selectors[0]}`}
-        className='mr3 pt3 pb3 pl6 pr6 round bg-blue-dark hover-bg-blue-light color-white txt-xs txt-mono inline-block uppercase'>
+        className='mr3 pt3 pb3 pl6 pr6 round bg-blue-light hover-bg-blue-dark color-white txt-xs txt-mono inline-block uppercase'>
         see all
       </button>
     ) : null;
