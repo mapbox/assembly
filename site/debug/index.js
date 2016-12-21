@@ -12,11 +12,19 @@ import { Forms } from './forms';
 import { Switches } from './switches';
 import { Spinners } from './spinners';
 import { Toggles } from './toggles';
+import { Inputs } from './inputs';
+import { TextAreas } from './textareas';
 
 class Debug extends React.Component {
   render() {
     return (
       <div>
+        <div className='mb48'>
+          <Inputs />
+        </div>
+        <div className='mb48'>
+          <TextAreas />
+        </div>
         <div className='mb48'>
           <Spinners />
         </div>

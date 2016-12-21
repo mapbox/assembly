@@ -9,7 +9,7 @@
 .select > select,
 .textarea {
   appearance: none;
-  background: var(--white);
+  background: var(--transparent);
   border: 0;
   margin: 0;
   padding: 0;
@@ -18,34 +18,28 @@
 
 .input,
 .textarea {
-  border: 1px solid var(--darken50);
+  border: 1px solid var(--blue);
   border-radius: var(--border-radius);
   display: inline-block;
-  transition: box-shadow var(--transition), border-color var(--transition);
+  transition: background-color var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
-.input--no-shadow:focus,
-.textarea--no-shadow:focus {
-  box-shadow: none;
+.input:focus,
+.textarea:focus {
+  border-color: var(--blue-dark);
 }
 
-.input::placeholder {
-  color: var(--darken25);
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--placeholder);
 }
 
 /**
  * Text input. The following modifiers are available:
- * - `input--s`: Small
- * - `input--dark`: Dark
- * - `input--no-shadow`: No shadow on focus
- *
- * Use `w*` width classes to change widths.
  *
  * @memberof Forms
  * @example
  * <input class='input' placeholder='basic' />
- * <input class='input input--s input--no-shadow' placeholder='small' />
- * <input class='input input--dark' placeholder='dark' />
  */
 .input {
   height: 36px;
@@ -53,25 +47,25 @@
   padding: 0 12px;
 }
 
+/**
+ * Small input
+ *
+ * @memberof Forms
+ * @example
+ * <input class='input input--s txt-s' placeholder='basic' />
+ */
 .input--s {
   height: 24px;
-  line-height: 24px; /* minus border */
+  line-height: 22px; /* minus border */
   padding: 0 6px;
 }
 
 /**
- * Textarea. The following modifiers are available:
- * - `textarea--s`: Small
- * - `textarea--dark`: Dark
- * - `textarea--no-shadow`: No shadow on focus
- *
- * Use `w*` width classes to change widths.
+ * Textarea.
  *
  * @memberof Forms
  * @example
- * <textarea class='textarea'>basic</textarea>
- * <textarea class='textarea textarea--s textarea--no-shadow'>small</textarea>
- * <textarea class='textarea textarea--dark'>dark</textarea>
+ * <textarea placeholder='basic' class='textarea'></textarea>
  */
 .textarea {
   resize: vertical;
@@ -81,21 +75,44 @@
   padding-right: 10px;
 }
 
+/**
+ * Small textarea
+ *
+ * @memberof Forms
+ * @example
+ * <textarea class='textarea textarea--s txt-s'>small textarea</textarea>
+ */
 .textarea--s {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 4px;
 }
 
-/* Dark */
-.input--dark,
-.textarea--dark {
-  background-color: var(--darken75);
-  color: var(--white);
+/**
+ * Disabled input and textarea
+ *
+ * @memberof Forms
+ * @example
+ * <input disabled class='input' placeholder='basic' value='Disabled' />
+ * <textarea disabled class='textarea' placeholder='basic' value='Disabled' >Disabled text</textarea>
+ */
+.input:disabled,
+.textarea:disabled {
+  pointer-events: none;
+  color: var(--darken50) !important;
+  background-color: var(--disabled-faint) !important;
+  border-color: var(--disabled) !important;
 }
 
-.input--dark::placeholder,
-.textarea--dark::placeholder {
-  color: var(--lighten25);
+/**
+ * Readonly input and textarea
+ *
+ * @memberof Forms
+ * @example
+ * <input readonly class='input' placeholder='basic' value='Readonly' />
+ * <textarea readonly class='textarea' placeholder='basic' value='Disabled' >Readonly text</textarea>
+ */
+.input:read-only,
+.textarea:read-only {
+  background-color: var(--disabled-faint) !important;
 }
 
 /**
