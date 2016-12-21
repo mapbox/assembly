@@ -57,15 +57,13 @@ class Entry extends React.Component {
         {m.trim()}
       </span>);
 
-    if (selectors !== undefined && selectors.length > 5) {
-      collapsedSelectorEls.push(
-        <button
-          id={`button-${selectors && selectors[0]}`}
-          className='mr3 p3 round bg-blue-dark color-white txt-xs txt-mono inline-block'>
-          ...
-        </button>
-      );
-    }
+    const expandButton = selectors !== undefined && selectors.length > 5 ? (
+      <button
+        id={`button-${selectors && selectors[0]}`}
+        className='mr3 pt3 pb3 pl6 pr6 round bg-blue-light color-white txt-xs txt-mono inline-block txt-bold uppercase'>
+        see all
+      </button>
+    ) : null;
 
     return (
       <div className='border-t border--2 border--gray-faint pt48 pb48 flex-parent'>
@@ -73,9 +71,10 @@ class Entry extends React.Component {
           <div className='none' id={`expanded-${selectors && selectors[0]}`}>
             {selectorEls}
           </div>
-          <div className='' id={`collapsed-${selectors && selectors[0]}`}>
+          <div className='inline' id={`collapsed-${selectors && selectors[0]}`}>
             {collapsedSelectorEls}
           </div>
+            {expandButton}
         </div>
         <div className='col col--8'>
           <div className={`${selectors && 'mt3'} mb48 color-gray prose`}>

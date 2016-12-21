@@ -4,10 +4,23 @@
 const buttons = document.querySelectorAll('button');
 
 let i;
+
 for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function () {
-    let classId = this.id.replace('button-', '');
-    document.getElementById('expanded-' + classId).className = '';
-    document.getElementById('collapsed-' + classId).className = 'none';
+
+    const classId = this.id.replace('button-', '');
+  	const expanded = document.getElementById('expanded-' + classId);
+  	const collapsed = document.getElementById('collapsed-' + classId);
+
+  	if (expanded.className === 'none') {
+  	  expanded.className = 'inline';
+      collapsed.className = 'none';
+  	  this.textContent = 'see fewer';
+  	} else if (expanded.className === 'inline') {
+  	  expanded.className = 'none';
+      collapsed.className = 'inline';
+  	  this.textContent = 'see all';
+    }
+
   });
 }
