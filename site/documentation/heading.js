@@ -24,7 +24,7 @@ class Heading extends React.Component {
     );
 
     return (
-      <div className={`color-gray ${sectionClass}`}>
+      <div className={`${sectionClass}`}>
         <div
           id={id}
           className={levelClass}

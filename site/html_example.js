@@ -11,7 +11,7 @@ function HtmlExample(props) {
           className='mb12'
           dangerouslySetInnerHTML={{ __html: props.code }}
         />
-      <div className='code-block bg-gray-faint scroll-auto hmax96 round'>
+      <div className='code-block bg-gray-faint scroll-auto hmax180 round'>
         <Lowlight
           language='html'
           value={props.code}

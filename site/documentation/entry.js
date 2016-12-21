@@ -41,26 +41,21 @@ class Entry extends React.Component {
         });
     }
 
-    const selectorEls = selectors !== undefined && selectors.map((m) =>
+    const getSelectorEl = (selector) =>
       <span
-        key={m}
-        id={`#${m.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
+        key={selector}
+        id={`#${selector.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
         className='mr3 p3 round bg-blue color-white txt-mono txt-xs inline-block'>
-        {m.trim()}
-      </span>);
+        {selector.trim()}
+      </span>;
 
-    const collapsedSelectorEls = selectors !== undefined && selectors.slice(0, 4).map((m) =>
-      <span
-        key={m}
-        id={`#${m.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
-        className='mr3 p3 round bg-blue color-white txt-mono txt-xs inline-block'>
-        {m.trim()}
-      </span>);
+    const selectorEls = selectors !== undefined && selectors.map(getSelectorEl);
+    const collapsedSelectorEls = selectors !== undefined && selectors.slice(0, 9).map(getSelectorEl);
 
-    const expandButton = selectors !== undefined && selectors.length > 5 ? (
+    const expandButton = selectors !== undefined && selectors.length > 9 ? (
       <button
-        id={`button-${selectors && selectors[0]}`}
-        className='mr3 pt3 pb3 pl6 pr6 round bg-blue-light color-white txt-xs txt-mono inline-block txt-bold uppercase'>
+        id={`expandButton-${selectors && selectors[0]}`}
+        className='mr3 pt3 pb3 pl6 pr6 round bg-blue-light color-white txt-xs txt-mono inline-block uppercase'>
         see all
       </button>
     ) : null;
@@ -77,7 +72,7 @@ class Entry extends React.Component {
             {expandButton}
         </div>
         <div className='col col--8'>
-          <div className={`${selectors && 'mt3'} mb48 color-gray prose`}>
+          <div className={`${selectors && 'mt3'} mb48 prose`}>
             {remark().use(reactRenderer).process(props.parsedComment.description).contents}
           </div>
           {example}

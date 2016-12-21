@@ -1,7 +1,9 @@
 // 	event handlers on each button
 //	on click hide elem, show all
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('button[id^="expandButton-."]');
+
+console.log(buttons);
 
 let i;
 
