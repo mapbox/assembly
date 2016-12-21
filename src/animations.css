@@ -46,7 +46,7 @@
 /**
  * Loading spinners.
  * - Act on their own or on a loading element.
- * - For a light spinner on dark backgrounds, add the modifying class `loading--light`.
+ * - On dark backgrounds, add the modifying class `loading--dark`.
  * - For a smaller spinner, add the modifying class 'loading--s'.
  * - If appending a spinner to an element, that element will take on `display: flex` to center the spinner.
  * @group
@@ -54,7 +54,7 @@
  * @example
  * <div class="loading"></div>
  * <div class="loading loading--s"></div>
- * <div class="loading loading--light bg-gray-dark"></div>
+ * <div class="loading loading--dark bg-gray-dark"></div>
 */
 .loading { display: flex; }
 .loading::after,
@@ -70,7 +70,7 @@
   border-top-color: var(--gray-dark);
 }
 
-.loading--light::after {
+.loading--dark::after {
   border: var(--lighten10) 3px solid !important;
   border-top-color: var(--gray-faint) !important;
 }
