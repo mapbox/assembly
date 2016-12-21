@@ -13,7 +13,7 @@ class Navigation extends React.Component {
           linkClasses += ` ml${6 * level}-mm`;
         }
         if (member.name === props.navData.active) {
-          linkClasses += ' is-active';
+          linkClasses += ' color-blue-dark';
         }
         if (level === 0) {
           linkClasses += ' txt-bold';
@@ -44,7 +44,7 @@ class Navigation extends React.Component {
       );
       return (
         <div key={r.name}>
-          <a className={`txt-s txt-bold block txt-link color-blue mb3 ${r.name === props.navData.active && 'is-active'}`} href={`/assembly${r.route}`}>{r.name}</a>
+          <a className={`txt-s txt-bold block txt-link mb3 ${r.name === props.navData.active ? 'color-blue-dark' : 'color-blue'}`} href={`/assembly${r.route}`}>{r.name}</a>
           {nestedItems}
         </div>
       );
