@@ -49,7 +49,7 @@ class Entry extends React.Component {
         {m.trim()}
       </span>);
 
-    let collapsedSelectorEls = selectors !== undefined && selectors.slice(0,4).map((m) =>
+    const collapsedSelectorEls = selectors !== undefined && selectors.slice(0, 4).map((m) =>
       <span
         key={m}
         id={`#${m.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
@@ -57,13 +57,15 @@ class Entry extends React.Component {
         {m.trim()}
       </span>);
 
-    if (selectors != undefined && selectors.length > 5) { collapsedSelectorEls.push(
-      <button
-        id={`button-${selectors && selectors[0]}`}
-        className='mr3 p3 round bg-blue-dark color-white txt-xs txt-mono inline-block'>
-        ...
-      </button>
-    )};
+    if (selectors !== undefined && selectors.length > 5) {
+      collapsedSelectorEls.push(
+        <button
+          id={`button-${selectors && selectors[0]}`}
+          className='mr3 p3 round bg-blue-dark color-white txt-xs txt-mono inline-block'>
+          ...
+        </button>
+      );
+    }
 
     return (
       <div className='border-t border--2 border--gray-faint pt48 pb48 flex-parent'>
