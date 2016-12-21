@@ -29,10 +29,13 @@ const colors = [
 ];
 
 function TextareaEl(props) {
-  const inputClasses = `textarea textarea--${props.size || ''} border--${props.border} color-${props.color}`;
+  let textareaClasses = 'textarea';
+  if (props.size) textareaClasses += ` textarea--${props.size}`;
+  if (props.border) textareaClasses += ` textarea--border-${props.border}`;
+  if (props.color) textareaClasses += ` color-${props.color}`;
   return (
     <div className='mr6 mb6 inline-block'>
-       <textarea className={inputClasses} readOnly={props.readonly} disabled={props.disabled} value='magic'>Hello.</textarea>
+       <textarea className={textareaClasses} readOnly={props.readonly} disabled={props.disabled} value='magic'>Hello.</textarea>
     </div>
   );
 }

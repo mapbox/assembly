@@ -29,10 +29,19 @@ const colors = [
 ];
 
 function InputEl(props) {
-  const inputClasses = `input input--${props.size || ''} border--${props.border} color-${props.color}`;
+  let inputClasses = 'input';
+  if (props.size) inputClasses += ` input--${props.size}`;
+  if (props.border) inputClasses += ` input--border-${props.border}`;
+  if (props.color) inputClasses += ` color-${props.color}`;
   return (
     <div className='mr6 mb6 inline-block'>
-       <input className={inputClasses} placeholder='name' readOnly={props.readonly} disabled={props.disabled} value='magic' />
+      <input
+        className={inputClasses}
+        placeholder='name'
+        readOnly={props.readonly}
+        disabled={props.disabled}
+        value='magic'
+      />
     </div>
   );
 }

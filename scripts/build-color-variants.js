@@ -170,13 +170,21 @@ variantGenerators.buttonStroke = function (colors) {
 variantGenerators.inputStroke = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
+    const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .textarea.border--${color}:hover,
-      .input.border--${color}:hover,
-      .textarea.border--${color}:focus,
-      .input.border--${color}:focus {
-        border-color: ${darkerShade} !important;
+      .textarea--border-${color},
+      .input--border-${color},
+      .textarea--border-${color},
+      .input--border-${color} {
+        border-color: ${colorValue};
+      }
+
+      .textarea--border-${color}:hover,
+      .input--border-${color}:hover,
+      .textarea--border-${color}:focus,
+      .input--border-${color}:focus {
+        border-color: ${darkerShade};
       }
     `);
   }, '');

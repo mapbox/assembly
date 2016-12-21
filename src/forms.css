@@ -24,6 +24,8 @@
   transition: background-color var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
+.input:hover,
+.textarea:hover,
 .input:focus,
 .textarea:focus {
   border-color: var(--blue-dark);
@@ -35,7 +37,7 @@
 }
 
 /**
- * Text input. The following modifiers are available:
+ * Text input.
  *
  * @memberof Forms
  * @example
