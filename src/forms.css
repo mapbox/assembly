@@ -276,8 +276,10 @@
 */
 .range {
   appearance: none;
-  padding: 7px 0; /* to increase click area for ranges */
   width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
   background: transparent;
   vertical-align: middle;
 }
@@ -355,7 +357,6 @@
   background: var(--white);
   border: 2px solid var(--blue);
   cursor: pointer;
-  margin-top: -6px;
 }
 
 .range::-ms-thumb {
@@ -373,7 +374,6 @@
 .range:hover::-moz-range-thumb { border-color: var(--blue-dark); }
 
 /* range small */
-.range--s { padding: 5px 0; }
 /* range small track */
 .range--s::-webkit-slider-runnable-track { height: 2px; }
 .range--s::-moz-range-track { height: 2px; }
