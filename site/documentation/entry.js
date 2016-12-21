@@ -59,6 +59,7 @@ class Entry extends React.Component {
 
     if (selectors != undefined && selectors.length > 5) { collapsedSelectorEls.push(
       <button
+        id={`button-${selectors && selectors[0]}`}
         className='mr3 p3 round bg-blue-dark color-white txt-xs txt-mono inline-block'>
         ...
       </button>

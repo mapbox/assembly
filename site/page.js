@@ -9,7 +9,7 @@ class Page extends React.Component {
           <Navigation navData={this.props.navData} />
         </div>
         <div className='mb24 ml180-mm flex-parent flex-parent--center-main'>
-          <div className='wmax1200'>
+          <div className='pl24 pr24 wmax1200'>
             {this.props.children}
           </div>
         </div>
