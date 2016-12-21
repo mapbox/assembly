@@ -267,9 +267,12 @@
  *
  * @memberof Forms
  * @example
- * <div class='mb12'><label>Range <input class='range w96 ml6' type='range' /></label></div>
- * <div class='mb12'><label>Small range<input class='range range--s w96 ml6' type='range' /></label></div>
- * <div class='mb12 bg-black p6 round color-white'><label>Dark range<input class='range range--dark w96 ml6' type='range' /></label</div>
+ * <label class='mb12 block'>Range <input class='range w96 ml6' type='range' /></label>
+ * <label class='mb12 block'>Small range <input class='range range--s w96 ml6' type='range' /></label>
+ * <div class='mb12 bg-black p6 round color-white'>
+ *  <label class='mb12 block'>Dark range <input class='range range--dark w96 ml6' type='range' /></label>
+ *  <label class='block'>Small dark range <input class='range range--dark range--s w96 ml6' type='range' /></label>
+ * </div>
 */
 .range {
   appearance: none;
@@ -336,9 +339,9 @@
 .range::-webkit-slider-thumb {
   appearance: none;
   box-shadow: 0;
-  width: 15px;
+  width: 20px;
   height: 20px;
-  border-radius: var(--border-radius);
+  border-radius: 50%;
   background: var(--white);
   border: 2px solid var(--blue);
   cursor: pointer;
@@ -346,9 +349,9 @@
 }
 
 .range::-moz-range-thumb {
-  width: 13px;
+  width: 17px;
   height: 17px;
-  border-radius: var(--border-radius);
+  border-radius: 50%;
   background: var(--white);
   border: 2px solid var(--blue);
   cursor: pointer;
@@ -356,9 +359,9 @@
 }
 
 .range::-ms-thumb {
-  width: 15px;
+  width: 20px;
   height: 20px;
-  border-radius: var(--border-radius);
+  border-radius: 50%;
   background: var(--white);
   border: 2px solid var(--blue);
   cursor: pointer;
@@ -378,19 +381,19 @@
 
 /* range small thumb */
 .range--s::-webkit-slider-thumb {
-  width: 13px;
+  width: 15px;
   height: 15px;
   margin-top: -6.5px;
 }
 
 .range--s::-moz-range-thumb {
-  width: 10px;
+  width: 12px;
   height: 12px;
   margin-top: -7.5px;
 }
 
 .range--s::-ms-thumb {
-  width: 13px;
+  width: 15px;
   height: 15px;
 }
 
