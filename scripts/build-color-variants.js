@@ -289,16 +289,16 @@ variantGenerators.toggle = function (colors) {
     // when active.
     return result += stripIndent(`
       .toggle--${color} {
-        color: ${colorValue} !important;
+        color: ${colorValue};
       }
 
       input:not(:checked) + .toggle--${color}:hover {
-        color: ${darkerShade} !important;
+        color: ${darkerShade};
       }
 
       input:checked + .toggle--${color} {
-        background: ${colorValue} !important;
-        color: #fff !important;
+        background: ${colorValue};
+        color: #fff;
       }
     `);
   }, '');
@@ -311,7 +311,7 @@ variantGenerators.toggleActive = function (colors) {
     // Must be below .toggle group in  stylesheet
     return result += stripIndent(`
       input:checked + .toggle--active-${color} {
-        color: ${colorValue} !important;
+        color: ${colorValue};
       }
     `);
   }, '');
