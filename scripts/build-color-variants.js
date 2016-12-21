@@ -147,6 +147,21 @@ variantGenerators.buttonFill = function (colors) {
   }, '');
 };
 
+variantGenerators.inputStroke = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const darkerShade = getDarkerShade(color);
+    return result += stripIndent(`
+      .textarea.border--${color}:hover,
+      .input.border--${color}:hover,
+      .textarea.border--${color}:focus,
+      .input.border--${color}:focus {
+        border-color: ${darkerShade} !important;
+      }
+    `);
+  }, '');
+};
+
 variantGenerators.buttonStroke = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;

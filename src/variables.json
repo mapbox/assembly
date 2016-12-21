@@ -47,13 +47,13 @@
   "darken5": "rgba(0, 0, 0, 0.05)",
   "darken10": "rgba(0, 0, 0, 0.10)",
   "darken25": "rgba(0, 0, 0, 0.25)",
-  "darken50": "rgba(0, 0, 0, 0.5)",
+  "darken50": "rgba(0, 0, 0, 0.50)",
   "darken75": "rgba(0, 0, 0, 0.75)",
 
   "lighten5": "rgba(255, 255, 255, 0.05)",
   "lighten10": "rgba(255, 255, 255, 0.1)",
   "lighten25": "rgba(255, 255, 255, 0.25)",
-  "lighten50": "rgba(255, 255, 255, 0.5)",
+  "lighten50": "rgba(255, 255, 255, 0.50)",
   "lighten75": "rgba(255, 255, 255, 0.75)",
 
   "black": "#000",
@@ -61,6 +61,8 @@
   "transparent": "transparent",
 
   "disabled": "rgba(127, 127, 127, .25)",
+  "disabled-faint": "rgba(127, 127, 127, .10)",
+  "placeholder": "rgba(127, 127, 127, .50)",
 
   "text-color": "rgba(0, 0, 0, 0.75)",
 
@@ -70,5 +72,5 @@
 
   "transition": "0.125s",
 
-  "focus-shadow": "0 0 2px 2px rgba(0, 0, 0, 0.25)"
+  "focus-shadow": "0 0 12px 0 rgba(0, 0, 0, 0.25)"
 }
