@@ -7,17 +7,17 @@
 
 /**
  * Buttons have a blue background unless
- * combined with [`.bg-*`](#Background) classes. Buttons have white text unless combined with a [`.color-*`](#Color)
+ * combined with `.btn--{color}` modifier. Buttons have white text unless combined with a [`.color-*`](#Color)
  * class. Buttons have fully rounded corners unless combined with a [`.round-*`](#Theming) class.
  *
  * @memberof Buttons
  * @example
  * <button class='btn'>Default</button>
- * <button class='btn bg-red'>Color</button>
- * <button class='btn bg-teal color-blue-dark'>More colors</button>
+ * <button class='btn btn--red'>Color</button>
+ * <button class='btn btn--teal color-blue-dark'>More colors</button>
  * <button class='btn round'>Less rounded</button>
  * <div class='p12 bg-blue inline-block'>
- *   <button class='btn bg-white color-blue'>Reverse</button>
+ *   <button class='btn btn--white color-blue'>Reverse</button>
  * </div>
  */
 .btn {
@@ -44,15 +44,15 @@
 /**
  * A modifier class to create buttons with colored borders.
  * The border color and text color will always match.
- * To change the text & border color, use a [`.color-*`](#Color) class.
+ * To change the text & border color, use a `.btn-{color}` modifier.
  *
  * @memberof Buttons
  * @example
  * <button class='btn btn--stroke'>Default</button>
- * <button class='btn btn--stroke color-red'>Color</button>
+ * <button class='btn btn--stroke btn--red'>Color</button>
  * <button class='btn btn--stroke round'>Less rounded</button>
  * <div class='p12 bg-blue inline-block'>
- *   <button class='btn btn--stroke color-white'>Reverse</button>
+ *   <button class='btn btn--stroke btn--white'>Reverse</button>
  * </div>
  */
 .btn--stroke {
@@ -133,15 +133,15 @@
  *     <button class="btn btn--pill btn--pill-hr">Right</button>
  *   </div>
  *   <div class="flex-parent--inline">
- *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hl">Left</button>
- *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hc">Center</button>
- *     <button class="btn btn--stroke btn--s color-red btn--pill btn--pill-hr">Right</button>
+ *     <button class="btn btn--stroke btn--s btn--red btn--pill btn--pill-hl">Left</button>
+ *     <button class="btn btn--stroke btn--s btn--red btn--pill btn--pill-hc">Center</button>
+ *     <button class="btn btn--stroke btn--s btn--red btn--pill btn--pill-hr">Right</button>
  *   </div>
  * </div>
  *  <div class="mr12 flex-parent flex-parent--inline flex-parent--column">
- *     <button class="btn btn--pill btn--pill-vt bg-purple">Top</button>
- *     <button class="btn btn--pill btn--pill-vc bg-purple">Center</button>
- *     <button class="btn btn--pill btn--pill-vb bg-purple">Bottom</button>
+ *     <button class="btn btn--pill btn--pill-vt btn--purple">Top</button>
+ *     <button class="btn btn--pill btn--pill-vc btn--purple">Center</button>
+ *     <button class="btn btn--pill btn--pill-vb btn--purple">Bottom</button>
  *  </div>
  *  <div class="flex-parent flex-parent--inline flex-parent--column">
  *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vt">Top</button>

@@ -16,18 +16,18 @@ class Pills extends React.Component {
           </div>
 
           <div className='p12 flex-parent--inline'>
-            <button className='btn color-red btn--stroke btn--pill btn--pill-hl round'>Confirm</button>
-            <button className='btn color-red btn--stroke btn--pill btn--pill-hc round'>Confirm</button>
-            <button className='btn color-red btn--stroke btn--pill btn--pill-hc round'>Confirm</button>
-            <button className='btn color-red btn--stroke btn--pill btn--pill-hr round'>Confirm</button>
+            <button className='btn btn--red btn--stroke btn--pill btn--pill-hl round'>Confirm</button>
+            <button className='btn btn--red btn--stroke btn--pill btn--pill-hc round'>Confirm</button>
+            <button className='btn btn--red btn--stroke btn--pill btn--pill-hc round'>Confirm</button>
+            <button className='btn btn--red btn--stroke btn--pill btn--pill-hr round'>Confirm</button>
           </div>
         </div>
 
         <div>
           <div className='p12 flex-parent--inline flex-parent--column'>
-            <button className='btn bg-orange btn--s btn--pill btn--pill-vt'>Confirm</button>
-            <button className='btn bg-orange btn--s btn--pill btn--pill-vc'>Confirm</button>
-            <button className='btn bg-orange btn--s btn--pill btn--pill-vb is-active'>Confirm</button>
+            <button className='btn btn--orange btn--s btn--pill btn--pill-vt'>Confirm</button>
+            <button className='btn btn--orange btn--s btn--pill btn--pill-vc'>Confirm</button>
+            <button className='btn btn--orange btn--s btn--pill btn--pill-vb is-active'>Confirm</button>
           </div>
 
           <div className='p12 flex-parent--inline flex-parent--column'>

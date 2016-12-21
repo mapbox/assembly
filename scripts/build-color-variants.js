@@ -133,15 +133,35 @@ const variantGenerators = {};
 variantGenerators.buttonFill = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
-    const darkerShade = getDarkerShade(color);
     const colorValue = variables[color];
+    const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
       .btn--${color} {
-        background-color: ${colorValue} !important;
+        background-color: ${colorValue};
       }
 
-      .btn--${color}:hover {
-        background-color: ${darkerShade} !important;
+      .btn--${color}:hover,
+      .btn--${color}.is-active {
+        background-color: ${darkerShade};
+      }
+    `);
+  }, '');
+};
+
+variantGenerators.buttonStroke = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const colorValue = variables[color];
+    const darkerShade = getDarkerShade(color);
+    return result += stripIndent(`
+      .btn--stroke.btn--${color} {
+        background-color: transparent;
+        color: ${colorValue};
+      }
+
+      .btn--stroke.btn--${color}.is-active,
+      .btn--stroke.btn--${color}:hover {
+        color: ${darkerShade};
       }
     `);
   }, '');
@@ -157,18 +177,6 @@ variantGenerators.inputStroke = function (colors) {
       .textarea.border--${color}:focus,
       .input.border--${color}:focus {
         border-color: ${darkerShade} !important;
-      }
-    `);
-  }, '');
-};
-
-variantGenerators.buttonStroke = function (colors) {
-  return colors.reduce((result, color) => {
-    if (isDark(color)) return result;
-    const darkerShade = getDarkerShade(color);
-    return result += stripIndent(`
-      .btn--stroke.color-${color}:hover {
-        color: ${darkerShade} !important;
       }
     `);
   }, '');

@@ -32,8 +32,7 @@ const darkenColors = [
 function SemitransparentButtonExample(props) {
   let modifiers = '';
   if (props.stroke) modifiers += ' btn--stroke';
-  if (props.color && props.stroke) modifiers += ` color-${props.color}`;
-  if (props.color && !props.stroke) modifiers += ` bg-${props.color}`;
+  if (props.color) modifiers += ` btn--${props.color}`;
   return (
     <div className='inline-block mr12'>
       <button disabled={props.disabled} className={`btn ${modifiers} mr18`}>{props.color}</button>
@@ -47,10 +46,9 @@ class Buttons extends React.Component {
       let buttonFillClass = 'btn';
       let buttonStrokeClass = 'btn btn--stroke';
       if (color !== null) {
-        buttonFillClass += ` bg-${color}`;
-        buttonStrokeClass += ` color-${color}`;
+        buttonFillClass += ` btn--${color}`;
+        buttonStrokeClass += ` btn--${color}`;
       }
-
 
       return (
         <div key={i} className='mb12'>
