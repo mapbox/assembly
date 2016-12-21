@@ -7,19 +7,12 @@ class Examples extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='txt-headline'>
+        <h1 className='txt-subhead mb12 txt-bold pt48'>
           Examples
         </h1>
-
-        <div className='mt48'>
-          <UnderlineTabs />
-        </div>
-        <div className='mt48'>
-          <DiverseTiles />
-        </div>
-        <div className='mt48'>
-          <MenuNav />
-        </div>
+        <UnderlineTabs />
+        <DiverseTiles />
+        <MenuNav />
       </div>
     );
   }

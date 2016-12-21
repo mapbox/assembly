@@ -8,7 +8,7 @@ const html = fs.readFileSync(path.join(__dirname, 'diverse_tiles.html'), 'utf8')
 function DiverseTiles() {
   return (
     <div>
-      <h2 className='txt-subhead mb12'>
+      <h2 className='pt24 txt-bold uppercase mb12 mt24'>
         Diverse tiles
       </h2>
       <HtmlExample code={html} />

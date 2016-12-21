@@ -7,6 +7,7 @@ import jsLanguage from 'highlight.js/lib/languages/javascript';
 Lowlight.registerLanguage('js', jsLanguage);
 
 const icons = fs.readdirSync(path.join(__dirname, '../src/svgs'))
+  .filter((filename) => filename.endsWith('.svg'))
   .map((filename) => path.basename(filename, '.svg'));
 
 const jsSnippet = `function createIcon(icon) {
@@ -24,38 +25,32 @@ class Icons extends React.Component {
   render() {
     const iconEls = icons.map((icon) => {
       return (
-        <div key={icon} className='round mr6 mb6 border border--gray pl12 pr12 pt6 pb6 flex-parent flex-parent--center-cross'>
-          <div className='mr12'>
-            {icon}
-          </div>
+        <div key={icon} className='col pt6 pb6 col--6 col--4-ml col--3-mxl flex-parent flex-parent--center-cross'>
           <svg
-            className='icon'
+            className='icon mr12'
             dangerouslySetInnerHTML={{ __html: `<use xlink:href="#icon-${icon}"></use>` }}
           />
+          {icon}
         </div>
       );
     });
 
     return (
       <div>
-        <h1 className='txt-headline'>
+        <h1 className='txt-subhead mb12 txt-bold pt48'>
           Icons
         </h1>
-
-        <h2 className='txt-subhead mb12 mt24'>
-          Available icons
-        </h2>
-        <div className='mb18 prose'>
-          Below are all available icons. To learn more about how to use icons, look at <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>.
+        <div className='mb48 prose'>
+          <p>Assembly comes with {icons.length} icons covering most UI design needs. The icons are designed to be used as embedded SVGs. For usage instructions, look at <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>.</p>
         </div>
-        <div className='flex-parent flex-parent--wrap txt-s'>
+        <div className='flex-parent flex-parent--wrap bg-gray-faint round pl24 pr24 pt12 pb12 txt-m'>
           {iconEls}
         </div>
 
-        <h2 className='txt-subhead mb12 mt24'>
+        <h2 className='pt24 txt-bold uppercase mb12 mt24'>
           Programmatically adding icons with JavaScript
         </h2>
-        <div className='mb12 prose'>
+        <div className='mb24'>
           To add icons to the page programmatically, you must use special DOM methods that handle XML namespaces. The following function creates an icon element, which you can then add to the DOM where you need it. You can also modify the icon as needed with <a href='/assembly/documentation/#Icons'>icon modifier classes</a>.
         </div>
         <pre className='code-block'>
