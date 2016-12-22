@@ -607,7 +607,7 @@ input:disabled + .switch {
   border-color: transparent !important;
 }
 
-input:disabled + .switch:after {
+input:disabled + .switch::after {
   background-color: var(--darken25) !important;
 }
 

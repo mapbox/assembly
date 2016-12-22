@@ -213,11 +213,11 @@ variantGenerators.selectStroke = function (colors) {
     const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .select-container--stroke.select--stroke-${color} {
+      .select--stroke-${color} {
         color: ${colorValue};
       }
 
-      .select-container--stroke.select--stroke-${color}:hover {
+      .select--stroke-${color}:hover {
         color: ${darkerShade};
       }
     `);
