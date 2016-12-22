@@ -8,7 +8,7 @@
     "clean-svgs": "node scripts/clean-svgs",
     "check-size": "node scripts/check-size",
     "minify-css": "cssnano dist/assembly.css > dist/assembly.min.css",
-    "build:site": "babel-node scripts/build-site",
+    "build:site": "node scripts/build-site",
     "build:css": "mkdir -p dist && node scripts/build-css && npm-run-all --parallel copy-assets minify-css",
     "build:svg": "mkdir -p dist && node scripts/build-svg-sprite",
     "build": "rm -rf dist && npm-run-all --parallel build:css build:svg build:site",
@@ -36,6 +36,7 @@
   "homepage": "https://github.com/mapbox/assembly#readme",
   "dependencies": {
     "autoprefixer": "^6.5.3",
+    "babel-register": "^6.18.0",
     "concat-with-sourcemaps": "^1.0.4",
     "cp-file": "^4.1.1",
     "cssnano-cli": "^1.0.5",
@@ -54,7 +55,6 @@
     "svgstore": "^2.0.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babelify": "^7.3.0",

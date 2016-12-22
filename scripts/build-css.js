@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 const pify = require('pify');
-const mkdirp = require('mkdirp');
 const Concat = require('concat-with-sourcemaps');
 const postcss = require('postcss');
 const reporter = require('postcss-reporter');
@@ -14,6 +13,7 @@ const variableDefinitions = require('../src/variables');
 const customMediaQueries = require('../src/media-queries');
 const timelog = require('./timelog');
 const buildColorVariants = require('./build-color-variants');
+const ensureDist = require('./ensure-dist');
 
 const distCssFilename = 'assembly.css';
 const distCssPath = path.join(__dirname, `../dist/${distCssFilename}`);
@@ -90,7 +90,7 @@ function appendColorVariants(concat) {
 
 function writeDistCss(concat) {
   const css = `${concat.content}\n/*# sourceMappingURL=${distCssFilename}.map */`;
-  return pify(mkdirp)(path.join(__dirname, '../dist')).then(() => {
+  return ensureDist().then(() => {
     return Promise.all([
       pify(fs.writeFile)(distCssPath, css, 'utf8'),
       pify(fs.writeFile)(`${distCssPath}.map`, concat.sourceMap, 'utf8')

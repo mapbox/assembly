@@ -1,6 +1,7 @@
-// Runs on babel-node only, because render-site uses React components
 'use strict';
 
+// renderSite uses JSX, ES2015
+require('babel-register');
 const renderSite = require('./render-site');
 const buildCss = require('./build-css');
 const copyAssets = require('./copy-assets');

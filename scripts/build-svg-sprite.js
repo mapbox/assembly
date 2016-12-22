@@ -7,6 +7,7 @@ const path = require('path');
 const queue = require('d3-queue').queue;
 const SVGO = require('svgo');
 const timelog = require('./timelog');
+const ensureDist = require('./ensure-dist');
 
 const svgDir = path.join(__dirname, '../src/svgs');
 const svgScript = path.join(__dirname, '../dist/assembly-svg.js');
@@ -75,8 +76,10 @@ function buildSvgSprite() {
 
       const cleanedSprite = sprite.toString().replace(/\n/g, '');
       const jsContent = baseJsTemplate({ svgSprite: cleanedSprite });
-      fs.writeFileSync(svgScript, jsContent);
-      timelog('Done building SVGs');
+      ensureDist().then(() => {
+        fs.writeFileSync(svgScript, jsContent);
+        timelog('Done building SVGs');
+      });
     });
   });
 }

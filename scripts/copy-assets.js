@@ -1,11 +1,10 @@
 'use strict';
 
 const path = require('path');
-const mkdirp = require('mkdirp');
-const pify = require('pify');
 const globby = require('globby');
 const cpFile = require('cp-file');
 const timelog = require('./timelog');
+const ensureDist = require('./ensure-dist');
 
 const distDir = path.join(__dirname, '../dist');
 const fontsGlob = path.join(__dirname, '../fonts/*.*');
@@ -34,7 +33,7 @@ function copySiteAssets() {
 
 function copyAssets() {
   timelog('Copying assets');
-  return pify(mkdirp)(distDir).then(() => {
+  return ensureDist().then(() => {
     return Promise.all([
       copyFonts(),
       copySiteAssets()
