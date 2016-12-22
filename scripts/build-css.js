@@ -29,7 +29,7 @@ function handlePostcssError(error) {
   }
 }
 
-const cssFiles = [
+const assemblyCssFiles = [
   getCssPath('reset'),
   getCssPath('fonts'),
   getCssPath('typography'),
@@ -64,6 +64,10 @@ function buildCss(options) {
 
   const outfile = options.outfile || path.join(__dirname, '../dist/assembly.css');
   const outfileFilename = path.basename(outfile);
+
+  const cssFiles = (options.files === undefined)
+    ? assemblyCssFiles
+    : assemblyCssFiles.concat(options.files);
 
   const concat = new Concat(true, outfile, '\n');
 
