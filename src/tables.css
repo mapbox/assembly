@@ -6,8 +6,7 @@
  */
 
 /**
- * `<table>`s are styled inside `.prose` sections and
- * when they have a `table` class.
+ * Standard table styling.
  *
  * @memberof Tables
  * @example
@@ -15,8 +14,8 @@
  * <table class='table'>
  *   <thead>
  *     <tr>
- *       <th>Column 1</th>
- *       <th>Column 1</th>
+ *       <th>Malesuada Tristique Commodo</th>
+ *       <th>Nibh Commodo</th>
  *     </tr>
  *   </thead>
  *   <tr>
@@ -53,26 +52,21 @@
   padding: 6px;
 }
 
-.table th,
-.prose table th {
-  background-color: var(--darken5);
-}
-
 .table th + td,
 .prose th + td {
   border-left: 1px solid var(--gray-light);
 }
 
 /**
- * Invert your table so it is legible against a dark background.
+ * Invert your table so it is legible on dark backgrounds.
  *
  * @example
  * <div class='bg-darken75 p12'>
  *   <table class='table table--dark'>
  *     <thead>
  *       <tr>
- *         <th>Column 1</th>
- *         <th>Column 1</th>
+ *         <th>Malesuada Tristique Commodo</th>
+ *         <th>Nibh Commodo</th>
  *       </tr>
  *     </thead>
  *     <tr>
@@ -89,7 +83,6 @@
  * @memberof Tables
  *
  */
-
 .table--dark,
 .prose--dark table {
   background: transparent;
@@ -104,11 +97,6 @@
   border-bottom-color: var(--white);
 }
 
-.table--dark th,
-.prose--dark th {
-  background-color: transparent;
-}
-
 .table--dark th + td {
   border-left-color: var(--white);
 }
@@ -117,6 +105,23 @@
  * Force all rows in the table to be the same width.
  *
  * @memberof Tables
+ * @example
+ * <table class='table table--fixed'>
+ *   <thead>
+ *     <tr>
+ *       <th>Malesuada Tristique Commodo</th>
+ *       <th>Nibh Commodo</th>
+ *     </tr>
+ *   </thead>
+ *   <tr>
+ *     <td>item</td>
+ *     <td>item</td>
+ *   </tr>
+ *   <tr>
+ *     <td>item</td>
+ *     <td>item</td>
+ *   </tr>
+ * </table>
  */
 .table--fixed {
   table-layout: fixed;

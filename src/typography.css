@@ -542,12 +542,21 @@ textarea {
  * <a href='#link' class='txt-link txt-link--red'>A red link</a>
  */
 .txt-link {
+  cursor: pointer;
   color: var(--blue);
+  transition: color var(--transition);
 }
 
+/**
+ * Active link. Applies dark variation on primary button color. Depends on the `txt-link` class.
+ *
+ * @memberof Type utils
+ * @example
+ * <a href='#link' class='txt-link txt-link--is-active'>A link</a>
+ * <a href='#link' class='txt-link txt-link--red txt-link--is-active'>A red link</a>
+ */
 .txt-link:hover,
-.txt-link.is-active {
-  cursor: pointer;
+.txt-link--is-active {
   color: var(--blue-dark);
 }
 

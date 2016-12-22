@@ -1,6 +1,5 @@
 import React from 'react';
 import remark from 'remark';
-import _ from 'lodash';
 import reactRenderer from 'remark-react';
 import { HtmlExample } from '../html_example';
 
@@ -28,8 +27,6 @@ class Entry extends React.Component {
     }
 
     if (selectors !== undefined) {
-      // Remove pseudo-elements
-      selectors = _.uniq(selectors.map((selector) => selector.split(':')[0]));
 
       // Break combined comma-separated selectors into multiple elements
       selectors = selectors
@@ -38,6 +35,9 @@ class Entry extends React.Component {
         }).reduce((a, b) => {
           return a.concat(b);
         });
+
+      // Remove some pseudo-elements
+      selectors = selectors.filter((selector) => !(selector.includes(':after') || selector.includes(':hover') || selector.includes(':active') || selector.includes(':checked')));
 
       // hide prose selectors from documentation, but special case `.prose` and `.prose--dark` cases
       if (selectors.length > 1) {
@@ -59,8 +59,8 @@ class Entry extends React.Component {
     const expandButton = selectors !== undefined && selectors.length > 15 ? (
       <button
         id={`expandButton-${selectors && selectors[0]}`}
-        className='mr3 pt3 pb3 pl6 pr6 round bg-blue-light hover-bg-blue-dark color-white txt-xs txt-mono inline-block uppercase'>
-        see all
+        className='ml3 color-darken50 round btn txt-s btn--xs btn--darken10'>
+        See all
       </button>
     ) : null;
 

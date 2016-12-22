@@ -34,7 +34,7 @@ function LinkEl(props) {
     <div>
       <div className={linkClasses}>Click me!</div>
       <div className={`txt-underline ${linkClasses}`}>Click me!</div>
-      <div className={`is-active ${linkClasses}`}>Active</div>
+      <div className={`txt-link--is-active ${linkClasses}`}>Active</div>
     </div>
   );
 }

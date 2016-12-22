@@ -43,44 +43,6 @@
 .animation--delay { animation-delay: 1s; }
 /** @endgroup */
 
-/**
- * Loading spinners.
- * - Act on their own or on a loading element.
- * - On dark backgrounds, add the modifying class `loading--dark`.
- * - For a smaller spinner, add the modifying class 'loading--s'.
- * - If appending a spinner to an element, that element will take on `display: flex` to center the spinner.
- * @group
- * @memberof Animations
- * @example
- * <div class="loading"></div>
- * <div class="loading loading--s"></div>
- * <div class="loading loading--dark bg-gray-dark"></div>
-*/
-.loading { display: flex; }
-.loading::after,
-.loading::after {
-  content: '';
-  display: block;
-  margin: auto;
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  animation: spin 0.8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
-  border: var(--darken10) 3px solid;
-  border-top-color: var(--gray-dark);
-}
-
-.loading--dark::after {
-  border: var(--lighten10) 3px solid !important;
-  border-top-color: var(--gray-faint) !important;
-}
-
-.loading--s::after {
-  height: 18px !important;
-  width: 18px !important;
-}
-/** @endgroup */
-
 @keyframes pulse {
   0% { transform: scale(0.5); opacity: 0; }
   45% { opacity: 0.5; }

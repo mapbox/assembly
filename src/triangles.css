@@ -4,15 +4,15 @@
  */
 
 /**
- * Simple small triangle
+ * Simple small triangles.
  *
  * @memberof Triangles
  * @group
  * @example
- * <span class='triangle triangle--u color-blue'></span>
- * <span class='triangle triangle--r color-green'></span>
- * <span class='triangle triangle--d color-teal'></span>
- * <span class='triangle triangle--l color-pink'></span>
+ * <div class='triangle--u triangle color-blue inline-block'></div>
+ * <div class='triangle--r triangle color-green inline-block'></div>
+ * <div class='triangle--d triangle color-teal inline-block'></div>
+ * <div class='triangle--l triangle color-pink inline-block'></div>
  * @memberof Triangles
  */
 .triangle {
@@ -51,10 +51,10 @@
  * Large triangles.
  * @group
  * @example
- * <span class='triangle-l triangle-l--u color-blue'></span>
- * <span class='triangle-l triangle-l--r color-green'></span>
- * <span class='triangle-l triangle-l--d color-teal'></span>
- * <span class='triangle-l triangle-l--l color-pink'></span>
+ * <span class='triangle-l triangle-l--u color-blue inline-block'></span>
+ * <span class='triangle-l triangle-l--r color-green inline-block'></span>
+ * <span class='triangle-l triangle-l--d color-teal inline-block'></span>
+ * <span class='triangle-l triangle-l--l color-pink inline-block'></span>
  * @memberof Triangles
  */
 .triangle-l {

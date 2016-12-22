@@ -1,13 +1,13 @@
 /**
- * Use buttons as an affordance for JavaScript-powered click behaviors. For links,
- * use an `a` element with the [`.txt-link`](#txt-link) class.
+ * Use buttons to trigger click events. For links,
+ * we recommend using an `a` element with the [`.txt-link`](#txt-link) class.
  *
  * @section Buttons
  */
 
 /**
- * Buttons have a blue background unless
- * combined with `.btn--{color}` modifier. Buttons have white text unless combined with a [`.color-*`](#Color)
+ * By default, buttons have a blue background. Use the
+ * `.btn--{color}` modifier to change the color of a button. Buttons have white text unless combined with a [`.color-*`](#Color)
  * class. Buttons have fully rounded corners unless combined with a [`.round-*`](#Theming) class.
  *
  * @memberof Buttons
@@ -36,8 +36,15 @@
   transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 }
 
+/**
+ * Apply an active state to buttons.
+ *
+ * @memberof Buttons
+ * @example
+ * <button class='btn btn--is-active'>Default</button>
+ */
 .btn:hover,
-.btn.is-active {
+.btn--is-active {
   background-color: var(--blue-dark);
 }
 
@@ -61,21 +68,25 @@
   color: var(--blue);
 }
 
+/**
+ * Apply an active state to stroked buttons.
+ *
+ * @memberof Buttons
+ * @example
+ * <button class='btn btn--stroke btn--stroke--is-active'>Default</button>
+ */
 .btn--stroke:hover,
-.btn--stroke.is-active {
+.btn--stroke--is-active {
   background-color: transparent;
   color: var(--blue-dark);
 }
 
 /**
- * Modifier classes to create smaller buttons. Combine with [.txt-{s}](#txt-s) and [.txt-{s}](#txt-xs)
+ * Small button.
  *
- * @group
  * @memberof Buttons
  * @example
  * <button class='btn txt-s btn--s'>Small</button>
- * <button class='btn txt-xs btn--xs'>Extra small</button>
- * <button class='btn txt-xs btn--xs btn--stroke'>Extra small</button>
  */
 .btn--s {
   font-size: 12px;
@@ -83,16 +94,22 @@
   border-radius: 15px;
 }
 
+/**
+ * Extra small button.
+ *
+ * @memberof Buttons
+ * @example
+ * <button class='btn txt-s btn--s'>Small</button>
+ */
 .btn--xs {
   line-height: 14px; /* Forces height of btn--xs to be 18px */
   font-size: 10px;
   padding: 0 8px;
   border-radius: 14px;
 }
-/** @endgroup */
 
 /**
- * Add the `disabled` property to a button to disable it.
+ * Disabled button. Add the `disabled` property to a button to disable it.
  *
  * @memberof Buttons
  * @example
@@ -132,21 +149,11 @@
  *     <button class="btn btn--pill btn--pill-hc">Center</button>
  *     <button class="btn btn--pill btn--pill-hr">Right</button>
  *   </div>
- *   <div class="flex-parent--inline">
- *     <button class="btn btn--stroke btn--s btn--red btn--pill btn--pill-hl">Left</button>
- *     <button class="btn btn--stroke btn--s btn--red btn--pill btn--pill-hc">Center</button>
- *     <button class="btn btn--stroke btn--s btn--red btn--pill btn--pill-hr">Right</button>
- *   </div>
  * </div>
- *  <div class="mr12 flex-parent flex-parent--inline flex-parent--column">
- *     <button class="btn btn--pill btn--pill-vt btn--purple">Top</button>
- *     <button class="btn btn--pill btn--pill-vc btn--purple">Center</button>
- *     <button class="btn btn--pill btn--pill-vb btn--purple">Bottom</button>
- *  </div>
- *  <div class="flex-parent flex-parent--inline flex-parent--column">
- *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vt">Top</button>
- *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vc">Center</button>
- *     <button class="btn btn--stroke btn--xs btn--pill btn--pill-vb">Bottom</button>
+ *  <div class="flex-parent flex-parent--inline flex-parent--column mt12">
+ *     <button class="btn btn--pill btn--pill-vt">Top</button>
+ *     <button class="btn btn--pill btn--pill-vc">Center</button>
+ *     <button class="btn btn--pill btn--pill-vb">Bottom</button>
  *  </div>
  */
 .btn--pill {
@@ -156,7 +163,8 @@
 /* Put the active pill on top, so if they're stroke pills its
 active color is visible on all borders */
 .btn--pill:hover,
-.btn--pill.is-active {
+.btn--pill.btn--is-active,
+.btn--pill.btn--stroke--is-active {
   z-index: 2;
 }
 
@@ -171,7 +179,6 @@ against .round class */
   margin-right: 1px;
 }
 
-/* !importants here to override .round classes */
 .btn.btn--pill-hl {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;

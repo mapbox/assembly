@@ -7,7 +7,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--gray:hover,
-.btn--gray.is-active {
+.btn--gray.btn--is-active {
   background-color: #333;
 }
       
@@ -16,7 +16,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--gray-light:hover,
-.btn--gray-light.is-active {
+.btn--gray-light.btn--is-active {
   background-color: #666;
 }
       
@@ -25,7 +25,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--gray-faint:hover,
-.btn--gray-faint.is-active {
+.btn--gray-faint.btn--is-active {
   background-color: #ccc;
 }
       
@@ -34,7 +34,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--pink:hover,
-.btn--pink.is-active {
+.btn--pink.btn--is-active {
   background-color: #C8145A;
 }
       
@@ -43,7 +43,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--pink-light:hover,
-.btn--pink-light.is-active {
+.btn--pink-light.btn--is-active {
   background-color: #ff3c96;
 }
       
@@ -52,7 +52,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--pink-faint:hover,
-.btn--pink-faint.is-active {
+.btn--pink-faint.btn--is-active {
   background-color: #FF88C0;
 }
       
@@ -61,7 +61,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--red:hover,
-.btn--red.is-active {
+.btn--red.btn--is-active {
   background-color: #BE0014;
 }
       
@@ -70,7 +70,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--red-light:hover,
-.btn--red-light.is-active {
+.btn--red-light.btn--is-active {
   background-color: #dc2b28;
 }
       
@@ -79,7 +79,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--red-faint:hover,
-.btn--red-faint.is-active {
+.btn--red-faint.btn--is-active {
   background-color: #FF8280;
 }
       
@@ -88,7 +88,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--orange:hover,
-.btn--orange.is-active {
+.btn--orange.btn--is-active {
   background-color: #DC4600;
 }
       
@@ -97,7 +97,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--orange-light:hover,
-.btn--orange-light.is-active {
+.btn--orange-light.btn--is-active {
   background-color: #ff6e00;
 }
       
@@ -106,7 +106,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--orange-faint:hover,
-.btn--orange-faint.is-active {
+.btn--orange-faint.btn--is-active {
   background-color: #FFA950;
 }
       
@@ -115,7 +115,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--yellow:hover,
-.btn--yellow.is-active {
+.btn--yellow.btn--is-active {
   background-color: #FFBD0A;
 }
       
@@ -124,7 +124,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--yellow-light:hover,
-.btn--yellow-light.is-active {
+.btn--yellow-light.btn--is-active {
   background-color: #f0dc00;
 }
       
@@ -133,7 +133,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--yellow-faint:hover,
-.btn--yellow-faint.is-active {
+.btn--yellow-faint.btn--is-active {
   background-color: #F0F062;
 }
       
@@ -142,7 +142,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--green:hover,
-.btn--green.is-active {
+.btn--green.btn--is-active {
   background-color: #007532;
 }
       
@@ -151,7 +151,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--green-light:hover,
-.btn--green-light.is-active {
+.btn--green-light.btn--is-active {
   background-color: #01aa46;
 }
       
@@ -160,7 +160,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--green-faint:hover,
-.btn--green-faint.is-active {
+.btn--green-faint.btn--is-active {
   background-color: #72C781;
 }
       
@@ -169,7 +169,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--teal:hover,
-.btn--teal.is-active {
+.btn--teal.btn--is-active {
   background-color: #00626E;
 }
       
@@ -178,7 +178,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--teal-light:hover,
-.btn--teal-light.is-active {
+.btn--teal-light.btn--is-active {
   background-color: #01b5b4;
 }
       
@@ -187,7 +187,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--teal-faint:hover,
-.btn--teal-faint.is-active {
+.btn--teal-faint.btn--is-active {
   background-color: #50D2D2;
 }
       
@@ -196,7 +196,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--blue:hover,
-.btn--blue.is-active {
+.btn--blue.btn--is-active {
   background-color: #0014AA;
 }
       
@@ -205,7 +205,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--blue-light:hover,
-.btn--blue-light.is-active {
+.btn--blue-light.btn--is-active {
   background-color: #0065fb;
 }
       
@@ -214,7 +214,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--blue-faint:hover,
-.btn--blue-faint.is-active {
+.btn--blue-faint.btn--is-active {
   background-color: #00B1FF;
 }
       
@@ -223,7 +223,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--purple:hover,
-.btn--purple.is-active {
+.btn--purple.btn--is-active {
   background-color: #500078;
 }
       
@@ -232,7 +232,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--purple-light:hover,
-.btn--purple-light.is-active {
+.btn--purple-light.btn--is-active {
   background-color: #8c50c7;
 }
       
@@ -241,7 +241,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--purple-faint:hover,
-.btn--purple-faint.is-active {
+.btn--purple-faint.btn--is-active {
   background-color: #C299E3;
 }
       
@@ -250,7 +250,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--darken5:hover,
-.btn--darken5.is-active {
+.btn--darken5.btn--is-active {
   background-color: rgba(0, 0, 0, 0.10);
 }
       
@@ -259,7 +259,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--darken10:hover,
-.btn--darken10.is-active {
+.btn--darken10.btn--is-active {
   background-color: rgba(0, 0, 0, 0.25);
 }
       
@@ -268,7 +268,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--darken25:hover,
-.btn--darken25.is-active {
+.btn--darken25.btn--is-active {
   background-color: rgba(0, 0, 0, 0.50);
 }
       
@@ -277,7 +277,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--darken50:hover,
-.btn--darken50.is-active {
+.btn--darken50.btn--is-active {
   background-color: rgba(0, 0, 0, 0.75);
 }
       
@@ -286,7 +286,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--darken75:hover,
-.btn--darken75.is-active {
+.btn--darken75.btn--is-active {
   background-color: #000;
 }
       
@@ -295,7 +295,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--lighten5:hover,
-.btn--lighten5.is-active {
+.btn--lighten5.btn--is-active {
   background-color: rgba(255, 255, 255, 0.1);
 }
       
@@ -304,7 +304,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--lighten10:hover,
-.btn--lighten10.is-active {
+.btn--lighten10.btn--is-active {
   background-color: rgba(255, 255, 255, 0.25);
 }
       
@@ -313,7 +313,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--lighten25:hover,
-.btn--lighten25.is-active {
+.btn--lighten25.btn--is-active {
   background-color: rgba(255, 255, 255, 0.50);
 }
       
@@ -322,7 +322,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--lighten50:hover,
-.btn--lighten50.is-active {
+.btn--lighten50.btn--is-active {
   background-color: rgba(255, 255, 255, 0.75);
 }
       
@@ -331,7 +331,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--lighten75:hover,
-.btn--lighten75.is-active {
+.btn--lighten75.btn--is-active {
   background-color: #fff;
 }
       
@@ -340,7 +340,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--white:hover,
-.btn--white.is-active {
+.btn--white.btn--is-active {
   background-color: #f0f0f0;
 }
       
@@ -349,7 +349,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--transparent:hover,
-.btn--transparent.is-active {
+.btn--transparent.btn--is-active {
   background-color: rgba(0, 0, 0, 0.05);
 }
       
@@ -359,7 +359,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--gray:hover,
-.btn--stroke.btn--gray.is-active {
+.btn--stroke--is-active.btn--gray {
   color: #333;
 }
       
@@ -369,7 +369,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--gray-light:hover,
-.btn--stroke.btn--gray-light.is-active {
+.btn--stroke--is-active.btn--gray-light {
   color: #666;
 }
       
@@ -379,7 +379,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--gray-faint:hover,
-.btn--stroke.btn--gray-faint.is-active {
+.btn--stroke--is-active.btn--gray-faint {
   color: #ccc;
 }
       
@@ -389,7 +389,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--pink:hover,
-.btn--stroke.btn--pink.is-active {
+.btn--stroke--is-active.btn--pink {
   color: #C8145A;
 }
       
@@ -399,7 +399,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--pink-light:hover,
-.btn--stroke.btn--pink-light.is-active {
+.btn--stroke--is-active.btn--pink-light {
   color: #ff3c96;
 }
       
@@ -409,7 +409,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--pink-faint:hover,
-.btn--stroke.btn--pink-faint.is-active {
+.btn--stroke--is-active.btn--pink-faint {
   color: #FF88C0;
 }
       
@@ -419,7 +419,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--red:hover,
-.btn--stroke.btn--red.is-active {
+.btn--stroke--is-active.btn--red {
   color: #BE0014;
 }
       
@@ -429,7 +429,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--red-light:hover,
-.btn--stroke.btn--red-light.is-active {
+.btn--stroke--is-active.btn--red-light {
   color: #dc2b28;
 }
       
@@ -439,7 +439,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--red-faint:hover,
-.btn--stroke.btn--red-faint.is-active {
+.btn--stroke--is-active.btn--red-faint {
   color: #FF8280;
 }
       
@@ -449,7 +449,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--orange:hover,
-.btn--stroke.btn--orange.is-active {
+.btn--stroke--is-active.btn--orange {
   color: #DC4600;
 }
       
@@ -459,7 +459,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--orange-light:hover,
-.btn--stroke.btn--orange-light.is-active {
+.btn--stroke--is-active.btn--orange-light {
   color: #ff6e00;
 }
       
@@ -469,7 +469,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--orange-faint:hover,
-.btn--stroke.btn--orange-faint.is-active {
+.btn--stroke--is-active.btn--orange-faint {
   color: #FFA950;
 }
       
@@ -479,7 +479,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--yellow:hover,
-.btn--stroke.btn--yellow.is-active {
+.btn--stroke--is-active.btn--yellow {
   color: #FFBD0A;
 }
       
@@ -489,7 +489,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--yellow-light:hover,
-.btn--stroke.btn--yellow-light.is-active {
+.btn--stroke--is-active.btn--yellow-light {
   color: #f0dc00;
 }
       
@@ -499,7 +499,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--yellow-faint:hover,
-.btn--stroke.btn--yellow-faint.is-active {
+.btn--stroke--is-active.btn--yellow-faint {
   color: #F0F062;
 }
       
@@ -509,7 +509,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--green:hover,
-.btn--stroke.btn--green.is-active {
+.btn--stroke--is-active.btn--green {
   color: #007532;
 }
       
@@ -519,7 +519,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--green-light:hover,
-.btn--stroke.btn--green-light.is-active {
+.btn--stroke--is-active.btn--green-light {
   color: #01aa46;
 }
       
@@ -529,7 +529,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--green-faint:hover,
-.btn--stroke.btn--green-faint.is-active {
+.btn--stroke--is-active.btn--green-faint {
   color: #72C781;
 }
       
@@ -539,7 +539,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--teal:hover,
-.btn--stroke.btn--teal.is-active {
+.btn--stroke--is-active.btn--teal {
   color: #00626E;
 }
       
@@ -549,7 +549,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--teal-light:hover,
-.btn--stroke.btn--teal-light.is-active {
+.btn--stroke--is-active.btn--teal-light {
   color: #01b5b4;
 }
       
@@ -559,7 +559,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--teal-faint:hover,
-.btn--stroke.btn--teal-faint.is-active {
+.btn--stroke--is-active.btn--teal-faint {
   color: #50D2D2;
 }
       
@@ -569,7 +569,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--blue:hover,
-.btn--stroke.btn--blue.is-active {
+.btn--stroke--is-active.btn--blue {
   color: #0014AA;
 }
       
@@ -579,7 +579,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--blue-light:hover,
-.btn--stroke.btn--blue-light.is-active {
+.btn--stroke--is-active.btn--blue-light {
   color: #0065fb;
 }
       
@@ -589,7 +589,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--blue-faint:hover,
-.btn--stroke.btn--blue-faint.is-active {
+.btn--stroke--is-active.btn--blue-faint {
   color: #00B1FF;
 }
       
@@ -599,7 +599,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--purple:hover,
-.btn--stroke.btn--purple.is-active {
+.btn--stroke--is-active.btn--purple {
   color: #500078;
 }
       
@@ -609,7 +609,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--purple-light:hover,
-.btn--stroke.btn--purple-light.is-active {
+.btn--stroke--is-active.btn--purple-light {
   color: #8c50c7;
 }
       
@@ -619,7 +619,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--purple-faint:hover,
-.btn--stroke.btn--purple-faint.is-active {
+.btn--stroke--is-active.btn--purple-faint {
   color: #C299E3;
 }
       
@@ -629,7 +629,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--darken5:hover,
-.btn--stroke.btn--darken5.is-active {
+.btn--stroke--is-active.btn--darken5 {
   color: rgba(0, 0, 0, 0.10);
 }
       
@@ -639,7 +639,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--darken10:hover,
-.btn--stroke.btn--darken10.is-active {
+.btn--stroke--is-active.btn--darken10 {
   color: rgba(0, 0, 0, 0.25);
 }
       
@@ -649,7 +649,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--darken25:hover,
-.btn--stroke.btn--darken25.is-active {
+.btn--stroke--is-active.btn--darken25 {
   color: rgba(0, 0, 0, 0.50);
 }
       
@@ -659,7 +659,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--darken50:hover,
-.btn--stroke.btn--darken50.is-active {
+.btn--stroke--is-active.btn--darken50 {
   color: rgba(0, 0, 0, 0.75);
 }
       
@@ -669,7 +669,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--darken75:hover,
-.btn--stroke.btn--darken75.is-active {
+.btn--stroke--is-active.btn--darken75 {
   color: #000;
 }
       
@@ -679,7 +679,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--lighten5:hover,
-.btn--stroke.btn--lighten5.is-active {
+.btn--stroke--is-active.btn--lighten5 {
   color: rgba(255, 255, 255, 0.1);
 }
       
@@ -689,7 +689,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--lighten10:hover,
-.btn--stroke.btn--lighten10.is-active {
+.btn--stroke--is-active.btn--lighten10 {
   color: rgba(255, 255, 255, 0.25);
 }
       
@@ -699,7 +699,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--lighten25:hover,
-.btn--stroke.btn--lighten25.is-active {
+.btn--stroke--is-active.btn--lighten25 {
   color: rgba(255, 255, 255, 0.50);
 }
       
@@ -709,7 +709,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--lighten50:hover,
-.btn--stroke.btn--lighten50.is-active {
+.btn--stroke--is-active.btn--lighten50 {
   color: rgba(255, 255, 255, 0.75);
 }
       
@@ -719,7 +719,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--lighten75:hover,
-.btn--stroke.btn--lighten75.is-active {
+.btn--stroke--is-active.btn--lighten75 {
   color: #fff;
 }
       
@@ -729,7 +729,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--white:hover,
-.btn--stroke.btn--white.is-active {
+.btn--stroke--is-active.btn--white {
   color: #f0f0f0;
 }
       
@@ -739,7 +739,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--transparent:hover,
-.btn--stroke.btn--transparent.is-active {
+.btn--stroke--is-active.btn--transparent {
   color: rgba(0, 0, 0, 0.05);
 }
       
@@ -4693,55 +4693,55 @@ input:checked + .toggle--active-transparent {
  * @memberof Text colors
  * @example
  * <div class=\'grid\'>
- *   <div class=\'col col--3 color-gray-dark\'>.color-gray-dark</div>
- *   <div class=\'col col--3 color-gray\'>.color-gray</div>
- *   <div class=\'col col--3 color-gray-light\'>.color-gray-light</div>
- *   <div class=\'col col--3 color-gray-faint\'>.color-gray-faint</div>
- *   <div class=\'col col--3 color-pink-dark\'>.color-pink-dark</div>
- *   <div class=\'col col--3 color-pink\'>.color-pink</div>
- *   <div class=\'col col--3 color-pink-light\'>.color-pink-light</div>
- *   <div class=\'col col--3 color-pink-faint\'>.color-pink-faint</div>
- *   <div class=\'col col--3 color-red-dark\'>.color-red-dark</div>
- *   <div class=\'col col--3 color-red\'>.color-red</div>
- *   <div class=\'col col--3 color-red-light\'>.color-red-light</div>
- *   <div class=\'col col--3 color-red-faint\'>.color-red-faint</div>
- *   <div class=\'col col--3 color-orange-dark\'>.color-orange-dark</div>
- *   <div class=\'col col--3 color-orange\'>.color-orange</div>
- *   <div class=\'col col--3 color-orange-light\'>.color-orange-light</div>
- *   <div class=\'col col--3 color-orange-faint\'>.color-orange-faint</div>
- *   <div class=\'col col--3 color-yellow-dark\'>.color-yellow-dark</div>
- *   <div class=\'col col--3 color-yellow\'>.color-yellow</div>
- *   <div class=\'col col--3 color-yellow-light\'>.color-yellow-light</div>
- *   <div class=\'col col--3 color-yellow-faint\'>.color-yellow-faint</div>
- *   <div class=\'col col--3 color-green-dark\'>.color-green-dark</div>
- *   <div class=\'col col--3 color-green\'>.color-green</div>
- *   <div class=\'col col--3 color-green-light\'>.color-green-light</div>
- *   <div class=\'col col--3 color-green-faint\'>.color-green-faint</div>
- *   <div class=\'col col--3 color-teal-dark\'>.color-teal-dark</div>
- *   <div class=\'col col--3 color-teal\'>.color-teal</div>
- *   <div class=\'col col--3 color-teal-light\'>.color-teal-light</div>
- *   <div class=\'col col--3 color-teal-faint\'>.color-teal-faint</div>
- *   <div class=\'col col--3 color-blue-dark\'>.color-blue-dark</div>
- *   <div class=\'col col--3 color-blue\'>.color-blue</div>
- *   <div class=\'col col--3 color-blue-light\'>.color-blue-light</div>
- *   <div class=\'col col--3 color-blue-faint\'>.color-blue-faint</div>
- *   <div class=\'col col--3 color-purple-dark\'>.color-purple-dark</div>
- *   <div class=\'col col--3 color-purple\'>.color-purple</div>
- *   <div class=\'col col--3 color-purple-light\'>.color-purple-light</div>
- *   <div class=\'col col--3 color-purple-faint\'>.color-purple-faint</div>
- *   <div class=\'col col--3 color-darken5\'>.color-darken5</div>
- *   <div class=\'col col--3 color-darken10\'>.color-darken10</div>
- *   <div class=\'col col--3 color-darken25\'>.color-darken25</div>
- *   <div class=\'col col--3 color-darken50\'>.color-darken50</div>
- *   <div class=\'col col--3 color-darken75\'>.color-darken75</div>
- *   <div class=\'col col--3 color-lighten5\'>.color-lighten5</div>
- *   <div class=\'col col--3 color-lighten10\'>.color-lighten10</div>
- *   <div class=\'col col--3 color-lighten25\'>.color-lighten25</div>
- *   <div class=\'col col--3 color-lighten50\'>.color-lighten50</div>
- *   <div class=\'col col--3 color-lighten75\'>.color-lighten75</div>
- *   <div class=\'col col--3 color-white\'>.color-white</div>
- *   <div class=\'col col--3 color-black\'>.color-black</div>
- *   <div class=\'col col--3 color-transparent\'>.color-transparent</div>
+ *   <div class=\'col col--3 color-gray-dark\'>color-gray-dark</div>
+ *   <div class=\'col col--3 color-gray\'>color-gray</div>
+ *   <div class=\'col col--3 color-gray-light\'>color-gray-light</div>
+ *   <div class=\'col col--3 color-gray-faint\'>color-gray-faint</div>
+ *   <div class=\'col col--3 color-pink-dark\'>color-pink-dark</div>
+ *   <div class=\'col col--3 color-pink\'>color-pink</div>
+ *   <div class=\'col col--3 color-pink-light\'>color-pink-light</div>
+ *   <div class=\'col col--3 color-pink-faint\'>color-pink-faint</div>
+ *   <div class=\'col col--3 color-red-dark\'>color-red-dark</div>
+ *   <div class=\'col col--3 color-red\'>color-red</div>
+ *   <div class=\'col col--3 color-red-light\'>color-red-light</div>
+ *   <div class=\'col col--3 color-red-faint\'>color-red-faint</div>
+ *   <div class=\'col col--3 color-orange-dark\'>color-orange-dark</div>
+ *   <div class=\'col col--3 color-orange\'>color-orange</div>
+ *   <div class=\'col col--3 color-orange-light\'>color-orange-light</div>
+ *   <div class=\'col col--3 color-orange-faint\'>color-orange-faint</div>
+ *   <div class=\'col col--3 color-yellow-dark\'>color-yellow-dark</div>
+ *   <div class=\'col col--3 color-yellow\'>color-yellow</div>
+ *   <div class=\'col col--3 color-yellow-light\'>color-yellow-light</div>
+ *   <div class=\'col col--3 color-yellow-faint\'>color-yellow-faint</div>
+ *   <div class=\'col col--3 color-green-dark\'>color-green-dark</div>
+ *   <div class=\'col col--3 color-green\'>color-green</div>
+ *   <div class=\'col col--3 color-green-light\'>color-green-light</div>
+ *   <div class=\'col col--3 color-green-faint\'>color-green-faint</div>
+ *   <div class=\'col col--3 color-teal-dark\'>color-teal-dark</div>
+ *   <div class=\'col col--3 color-teal\'>color-teal</div>
+ *   <div class=\'col col--3 color-teal-light\'>color-teal-light</div>
+ *   <div class=\'col col--3 color-teal-faint\'>color-teal-faint</div>
+ *   <div class=\'col col--3 color-blue-dark\'>color-blue-dark</div>
+ *   <div class=\'col col--3 color-blue\'>color-blue</div>
+ *   <div class=\'col col--3 color-blue-light\'>color-blue-light</div>
+ *   <div class=\'col col--3 color-blue-faint\'>color-blue-faint</div>
+ *   <div class=\'col col--3 color-purple-dark\'>color-purple-dark</div>
+ *   <div class=\'col col--3 color-purple\'>color-purple</div>
+ *   <div class=\'col col--3 color-purple-light\'>color-purple-light</div>
+ *   <div class=\'col col--3 color-purple-faint\'>color-purple-faint</div>
+ *   <div class=\'col col--3 color-darken5\'>color-darken5</div>
+ *   <div class=\'col col--3 color-darken10\'>color-darken10</div>
+ *   <div class=\'col col--3 color-darken25\'>color-darken25</div>
+ *   <div class=\'col col--3 color-darken50\'>color-darken50</div>
+ *   <div class=\'col col--3 color-darken75\'>color-darken75</div>
+ *   <div class=\'col col--3 color-lighten5\'>color-lighten5</div>
+ *   <div class=\'col col--3 color-lighten10\'>color-lighten10</div>
+ *   <div class=\'col col--3 color-lighten25\'>color-lighten25</div>
+ *   <div class=\'col col--3 color-lighten50\'>color-lighten50</div>
+ *   <div class=\'col col--3 color-lighten75\'>color-lighten75</div>
+ *   <div class=\'col col--3 color-white\'>color-white</div>
+ *   <div class=\'col col--3 color-black\'>color-black</div>
+ *   <div class=\'col col--3 color-transparent\'>color-transparent</div>
  *   <div class=\'col col--3 color-text\'>.color-text</div>
  * </div>
  */
@@ -4955,55 +4955,55 @@ input:checked + .toggle--active-transparent {
  * @memberof Background colors
  * @example
  * <div class=\'grid\'>
- *   <div class=\'col col--3 bg-gray-dark p6\'>.bg-gray-dark</div>
- *   <div class=\'col col--3 bg-gray p6\'>.bg-gray</div>
- *   <div class=\'col col--3 bg-gray-light p6\'>.bg-gray-light</div>
- *   <div class=\'col col--3 bg-gray-faint p6\'>.bg-gray-faint</div>
- *   <div class=\'col col--3 bg-pink-dark p6\'>.bg-pink-dark</div>
- *   <div class=\'col col--3 bg-pink p6\'>.bg-pink</div>
- *   <div class=\'col col--3 bg-pink-light p6\'>.bg-pink-light</div>
- *   <div class=\'col col--3 bg-pink-faint p6\'>.bg-pink-faint</div>
- *   <div class=\'col col--3 bg-red-dark p6\'>.bg-red-dark</div>
- *   <div class=\'col col--3 bg-red p6\'>.bg-red</div>
- *   <div class=\'col col--3 bg-red-light p6\'>.bg-red-light</div>
- *   <div class=\'col col--3 bg-red-faint p6\'>.bg-red-faint</div>
- *   <div class=\'col col--3 bg-orange-dark p6\'>.bg-orange-dark</div>
- *   <div class=\'col col--3 bg-orange p6\'>.bg-orange</div>
- *   <div class=\'col col--3 bg-orange-light p6\'>.bg-orange-light</div>
- *   <div class=\'col col--3 bg-orange-faint p6\'>.bg-orange-faint</div>
- *   <div class=\'col col--3 bg-yellow-dark p6\'>.bg-yellow-dark</div>
- *   <div class=\'col col--3 bg-yellow p6\'>.bg-yellow</div>
- *   <div class=\'col col--3 bg-yellow-light p6\'>.bg-yellow-light</div>
- *   <div class=\'col col--3 bg-yellow-faint p6\'>.bg-yellow-faint</div>
- *   <div class=\'col col--3 bg-green-dark p6\'>.bg-green-dark</div>
- *   <div class=\'col col--3 bg-green p6\'>.bg-green</div>
- *   <div class=\'col col--3 bg-green-light p6\'>.bg-green-light</div>
- *   <div class=\'col col--3 bg-green-faint p6\'>.bg-green-faint</div>
- *   <div class=\'col col--3 bg-teal-dark p6\'>.bg-teal-dark</div>
- *   <div class=\'col col--3 bg-teal p6\'>.bg-teal</div>
- *   <div class=\'col col--3 bg-teal-light p6\'>.bg-teal-light</div>
- *   <div class=\'col col--3 bg-teal-faint p6\'>.bg-teal-faint</div>
- *   <div class=\'col col--3 bg-blue-dark p6\'>.bg-blue-dark</div>
- *   <div class=\'col col--3 bg-blue p6\'>.bg-blue</div>
- *   <div class=\'col col--3 bg-blue-light p6\'>.bg-blue-light</div>
- *   <div class=\'col col--3 bg-blue-faint p6\'>.bg-blue-faint</div>
- *   <div class=\'col col--3 bg-purple-dark p6\'>.bg-purple-dark</div>
- *   <div class=\'col col--3 bg-purple p6\'>.bg-purple</div>
- *   <div class=\'col col--3 bg-purple-light p6\'>.bg-purple-light</div>
- *   <div class=\'col col--3 bg-purple-faint p6\'>.bg-purple-faint</div>
- *   <div class=\'col col--3 bg-darken5 p6\'>.bg-darken5</div>
- *   <div class=\'col col--3 bg-darken10 p6\'>.bg-darken10</div>
- *   <div class=\'col col--3 bg-darken25 p6\'>.bg-darken25</div>
- *   <div class=\'col col--3 bg-darken50 p6\'>.bg-darken50</div>
- *   <div class=\'col col--3 bg-darken75 p6\'>.bg-darken75</div>
- *   <div class=\'col col--3 bg-lighten5 p6\'>.bg-lighten5</div>
- *   <div class=\'col col--3 bg-lighten10 p6\'>.bg-lighten10</div>
- *   <div class=\'col col--3 bg-lighten25 p6\'>.bg-lighten25</div>
- *   <div class=\'col col--3 bg-lighten50 p6\'>.bg-lighten50</div>
- *   <div class=\'col col--3 bg-lighten75 p6\'>.bg-lighten75</div>
- *   <div class=\'col col--3 bg-white p6\'>.bg-white</div>
- *   <div class=\'col col--3 bg-black p6\'>.bg-black</div>
- *   <div class=\'col col--3 bg-transparent p6\'>.bg-transparent</div>
+ *   <div class=\'col col--3 bg-gray-dark p6\'>bg-gray-dark</div>
+ *   <div class=\'col col--3 bg-gray p6\'>bg-gray</div>
+ *   <div class=\'col col--3 bg-gray-light p6\'>bg-gray-light</div>
+ *   <div class=\'col col--3 bg-gray-faint p6\'>bg-gray-faint</div>
+ *   <div class=\'col col--3 bg-pink-dark p6\'>bg-pink-dark</div>
+ *   <div class=\'col col--3 bg-pink p6\'>bg-pink</div>
+ *   <div class=\'col col--3 bg-pink-light p6\'>bg-pink-light</div>
+ *   <div class=\'col col--3 bg-pink-faint p6\'>bg-pink-faint</div>
+ *   <div class=\'col col--3 bg-red-dark p6\'>bg-red-dark</div>
+ *   <div class=\'col col--3 bg-red p6\'>bg-red</div>
+ *   <div class=\'col col--3 bg-red-light p6\'>bg-red-light</div>
+ *   <div class=\'col col--3 bg-red-faint p6\'>bg-red-faint</div>
+ *   <div class=\'col col--3 bg-orange-dark p6\'>bg-orange-dark</div>
+ *   <div class=\'col col--3 bg-orange p6\'>bg-orange</div>
+ *   <div class=\'col col--3 bg-orange-light p6\'>bg-orange-light</div>
+ *   <div class=\'col col--3 bg-orange-faint p6\'>bg-orange-faint</div>
+ *   <div class=\'col col--3 bg-yellow-dark p6\'>bg-yellow-dark</div>
+ *   <div class=\'col col--3 bg-yellow p6\'>bg-yellow</div>
+ *   <div class=\'col col--3 bg-yellow-light p6\'>bg-yellow-light</div>
+ *   <div class=\'col col--3 bg-yellow-faint p6\'>bg-yellow-faint</div>
+ *   <div class=\'col col--3 bg-green-dark p6\'>bg-green-dark</div>
+ *   <div class=\'col col--3 bg-green p6\'>bg-green</div>
+ *   <div class=\'col col--3 bg-green-light p6\'>bg-green-light</div>
+ *   <div class=\'col col--3 bg-green-faint p6\'>bg-green-faint</div>
+ *   <div class=\'col col--3 bg-teal-dark p6\'>bg-teal-dark</div>
+ *   <div class=\'col col--3 bg-teal p6\'>bg-teal</div>
+ *   <div class=\'col col--3 bg-teal-light p6\'>bg-teal-light</div>
+ *   <div class=\'col col--3 bg-teal-faint p6\'>bg-teal-faint</div>
+ *   <div class=\'col col--3 bg-blue-dark p6\'>bg-blue-dark</div>
+ *   <div class=\'col col--3 bg-blue p6\'>bg-blue</div>
+ *   <div class=\'col col--3 bg-blue-light p6\'>bg-blue-light</div>
+ *   <div class=\'col col--3 bg-blue-faint p6\'>bg-blue-faint</div>
+ *   <div class=\'col col--3 bg-purple-dark p6\'>bg-purple-dark</div>
+ *   <div class=\'col col--3 bg-purple p6\'>bg-purple</div>
+ *   <div class=\'col col--3 bg-purple-light p6\'>bg-purple-light</div>
+ *   <div class=\'col col--3 bg-purple-faint p6\'>bg-purple-faint</div>
+ *   <div class=\'col col--3 bg-darken5 p6\'>bg-darken5</div>
+ *   <div class=\'col col--3 bg-darken10 p6\'>bg-darken10</div>
+ *   <div class=\'col col--3 bg-darken25 p6\'>bg-darken25</div>
+ *   <div class=\'col col--3 bg-darken50 p6\'>bg-darken50</div>
+ *   <div class=\'col col--3 bg-darken75 p6\'>bg-darken75</div>
+ *   <div class=\'col col--3 bg-lighten5 p6\'>bg-lighten5</div>
+ *   <div class=\'col col--3 bg-lighten10 p6\'>bg-lighten10</div>
+ *   <div class=\'col col--3 bg-lighten25 p6\'>bg-lighten25</div>
+ *   <div class=\'col col--3 bg-lighten50 p6\'>bg-lighten50</div>
+ *   <div class=\'col col--3 bg-lighten75 p6\'>bg-lighten75</div>
+ *   <div class=\'col col--3 bg-white p6\'>bg-white</div>
+ *   <div class=\'col col--3 bg-black p6\'>bg-black</div>
+ *   <div class=\'col col--3 bg-transparent p6\'>bg-transparent</div>
  * </div>
  */
 .bg-gray-dark {
@@ -5205,7 +5205,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--gray {
   color: #666;
 }
-.txt-link--gray.is-active,
+.txt-link--gray.txt-link--is-active,
 .txt-link--gray:hover {
   color: #333;
 }
@@ -5213,7 +5213,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--gray-light {
   color: #ccc;
 }
-.txt-link--gray-light.is-active,
+.txt-link--gray-light.txt-link--is-active,
 .txt-link--gray-light:hover {
   color: #666;
 }
@@ -5221,7 +5221,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--gray-faint {
   color: #f0f0f0;
 }
-.txt-link--gray-faint.is-active,
+.txt-link--gray-faint.txt-link--is-active,
 .txt-link--gray-faint:hover {
   color: #ccc;
 }
@@ -5229,7 +5229,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--pink {
   color: #ff3c96;
 }
-.txt-link--pink.is-active,
+.txt-link--pink.txt-link--is-active,
 .txt-link--pink:hover {
   color: #C8145A;
 }
@@ -5237,7 +5237,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--pink-light {
   color: #FF88C0;
 }
-.txt-link--pink-light.is-active,
+.txt-link--pink-light.txt-link--is-active,
 .txt-link--pink-light:hover {
   color: #ff3c96;
 }
@@ -5245,7 +5245,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--pink-faint {
   color: #ffdbed;
 }
-.txt-link--pink-faint.is-active,
+.txt-link--pink-faint.txt-link--is-active,
 .txt-link--pink-faint:hover {
   color: #FF88C0;
 }
@@ -5253,7 +5253,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--red {
   color: #dc2b28;
 }
-.txt-link--red.is-active,
+.txt-link--red.txt-link--is-active,
 .txt-link--red:hover {
   color: #BE0014;
 }
@@ -5261,7 +5261,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--red-light {
   color: #FF8280;
 }
-.txt-link--red-light.is-active,
+.txt-link--red-light.txt-link--is-active,
 .txt-link--red-light:hover {
   color: #dc2b28;
 }
@@ -5269,7 +5269,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--red-faint {
   color: #ffdad9;
 }
-.txt-link--red-faint.is-active,
+.txt-link--red-faint.txt-link--is-active,
 .txt-link--red-faint:hover {
   color: #FF8280;
 }
@@ -5277,7 +5277,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--orange {
   color: #ff6e00;
 }
-.txt-link--orange.is-active,
+.txt-link--orange.txt-link--is-active,
 .txt-link--orange:hover {
   color: #DC4600;
 }
@@ -5285,7 +5285,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--orange-light {
   color: #FFA950;
 }
-.txt-link--orange-light.is-active,
+.txt-link--orange-light.txt-link--is-active,
 .txt-link--orange-light:hover {
   color: #ff6e00;
 }
@@ -5293,7 +5293,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--orange-faint {
   color: #FFE5CB;
 }
-.txt-link--orange-faint.is-active,
+.txt-link--orange-faint.txt-link--is-active,
 .txt-link--orange-faint:hover {
   color: #FFA950;
 }
@@ -5301,7 +5301,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--yellow {
   color: #f0dc00;
 }
-.txt-link--yellow.is-active,
+.txt-link--yellow.txt-link--is-active,
 .txt-link--yellow:hover {
   color: #FFBD0A;
 }
@@ -5309,7 +5309,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--yellow-light {
   color: #F0F062;
 }
-.txt-link--yellow-light.is-active,
+.txt-link--yellow-light.txt-link--is-active,
 .txt-link--yellow-light:hover {
   color: #f0dc00;
 }
@@ -5317,7 +5317,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--yellow-faint {
   color: #fafbd1;
 }
-.txt-link--yellow-faint.is-active,
+.txt-link--yellow-faint.txt-link--is-active,
 .txt-link--yellow-faint:hover {
   color: #F0F062;
 }
@@ -5325,7 +5325,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--green {
   color: #01aa46;
 }
-.txt-link--green.is-active,
+.txt-link--green.txt-link--is-active,
 .txt-link--green:hover {
   color: #007532;
 }
@@ -5333,7 +5333,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--green-light {
   color: #72C781;
 }
-.txt-link--green-light.is-active,
+.txt-link--green-light.txt-link--is-active,
 .txt-link--green-light:hover {
   color: #01aa46;
 }
@@ -5341,7 +5341,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--green-faint {
   color: #d4edda;
 }
-.txt-link--green-faint.is-active,
+.txt-link--green-faint.txt-link--is-active,
 .txt-link--green-faint:hover {
   color: #72C781;
 }
@@ -5349,7 +5349,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--teal {
   color: #01b5b4;
 }
-.txt-link--teal.is-active,
+.txt-link--teal.txt-link--is-active,
 .txt-link--teal:hover {
   color: #00626E;
 }
@@ -5357,7 +5357,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--teal-light {
   color: #50D2D2;
 }
-.txt-link--teal-light.is-active,
+.txt-link--teal-light.txt-link--is-active,
 .txt-link--teal-light:hover {
   color: #01b5b4;
 }
@@ -5365,7 +5365,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--teal-faint {
   color: #cbf2f1;
 }
-.txt-link--teal-faint.is-active,
+.txt-link--teal-faint.txt-link--is-active,
 .txt-link--teal-faint:hover {
   color: #50D2D2;
 }
@@ -5373,7 +5373,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--blue {
   color: #0065fb;
 }
-.txt-link--blue.is-active,
+.txt-link--blue.txt-link--is-active,
 .txt-link--blue:hover {
   color: #0014AA;
 }
@@ -5381,7 +5381,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--blue-light {
   color: #00B1FF;
 }
-.txt-link--blue-light.is-active,
+.txt-link--blue-light.txt-link--is-active,
 .txt-link--blue-light:hover {
   color: #0065fb;
 }
@@ -5389,7 +5389,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--blue-faint {
   color: #bae8ff;
 }
-.txt-link--blue-faint.is-active,
+.txt-link--blue-faint.txt-link--is-active,
 .txt-link--blue-faint:hover {
   color: #00B1FF;
 }
@@ -5397,7 +5397,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--purple {
   color: #8c50c7;
 }
-.txt-link--purple.is-active,
+.txt-link--purple.txt-link--is-active,
 .txt-link--purple:hover {
   color: #500078;
 }
@@ -5405,7 +5405,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--purple-light {
   color: #C299E3;
 }
-.txt-link--purple-light.is-active,
+.txt-link--purple-light.txt-link--is-active,
 .txt-link--purple-light:hover {
   color: #8c50c7;
 }
@@ -5413,7 +5413,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--purple-faint {
   color: #ede1f6;
 }
-.txt-link--purple-faint.is-active,
+.txt-link--purple-faint.txt-link--is-active,
 .txt-link--purple-faint:hover {
   color: #C299E3;
 }
@@ -5421,7 +5421,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--darken5 {
   color: rgba(0, 0, 0, 0.05);
 }
-.txt-link--darken5.is-active,
+.txt-link--darken5.txt-link--is-active,
 .txt-link--darken5:hover {
   color: rgba(0, 0, 0, 0.10);
 }
@@ -5429,7 +5429,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--darken10 {
   color: rgba(0, 0, 0, 0.10);
 }
-.txt-link--darken10.is-active,
+.txt-link--darken10.txt-link--is-active,
 .txt-link--darken10:hover {
   color: rgba(0, 0, 0, 0.25);
 }
@@ -5437,7 +5437,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--darken25 {
   color: rgba(0, 0, 0, 0.25);
 }
-.txt-link--darken25.is-active,
+.txt-link--darken25.txt-link--is-active,
 .txt-link--darken25:hover {
   color: rgba(0, 0, 0, 0.50);
 }
@@ -5445,7 +5445,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--darken50 {
   color: rgba(0, 0, 0, 0.50);
 }
-.txt-link--darken50.is-active,
+.txt-link--darken50.txt-link--is-active,
 .txt-link--darken50:hover {
   color: rgba(0, 0, 0, 0.75);
 }
@@ -5453,7 +5453,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--darken75 {
   color: rgba(0, 0, 0, 0.75);
 }
-.txt-link--darken75.is-active,
+.txt-link--darken75.txt-link--is-active,
 .txt-link--darken75:hover {
   color: #000;
 }
@@ -5461,7 +5461,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--lighten5 {
   color: rgba(255, 255, 255, 0.05);
 }
-.txt-link--lighten5.is-active,
+.txt-link--lighten5.txt-link--is-active,
 .txt-link--lighten5:hover {
   color: rgba(255, 255, 255, 0.1);
 }
@@ -5469,7 +5469,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--lighten10 {
   color: rgba(255, 255, 255, 0.1);
 }
-.txt-link--lighten10.is-active,
+.txt-link--lighten10.txt-link--is-active,
 .txt-link--lighten10:hover {
   color: rgba(255, 255, 255, 0.25);
 }
@@ -5477,7 +5477,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--lighten25 {
   color: rgba(255, 255, 255, 0.25);
 }
-.txt-link--lighten25.is-active,
+.txt-link--lighten25.txt-link--is-active,
 .txt-link--lighten25:hover {
   color: rgba(255, 255, 255, 0.50);
 }
@@ -5485,7 +5485,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--lighten50 {
   color: rgba(255, 255, 255, 0.50);
 }
-.txt-link--lighten50.is-active,
+.txt-link--lighten50.txt-link--is-active,
 .txt-link--lighten50:hover {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -5493,7 +5493,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--lighten75 {
   color: rgba(255, 255, 255, 0.75);
 }
-.txt-link--lighten75.is-active,
+.txt-link--lighten75.txt-link--is-active,
 .txt-link--lighten75:hover {
   color: #fff;
 }
@@ -5501,7 +5501,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--white {
   color: #fff;
 }
-.txt-link--white.is-active,
+.txt-link--white.txt-link--is-active,
 .txt-link--white:hover {
   color: #f0f0f0;
 }
@@ -5509,22 +5509,18 @@ input:checked + .toggle--active-transparent {
 .txt-link--transparent {
   color: transparent;
 }
-.txt-link--transparent.is-active,
+.txt-link--transparent.txt-link--is-active,
 .txt-link--transparent:hover {
   color: rgba(0, 0, 0, 0.05);
 }
       
 /**
- * For a colored border, add the modifying class \`.border--color\`
- * where color is a [color](#Colors-&-gradients).
+ * Modify your border with a [color](#Colors-&-gradients). Depends on a \`border\` or \`border-{direction}\` class.
  *
  * @group
  * @memberof Borders
  * @example
- * <div class=\'flex-parent\'>
- *  <div class=\'col col--2 p12 mr12 border border--red\'>.border--red</div>
- *  <div class=\'col col--2 p12 mr12 border-l border-r border--dash border--yellow\'>.border--yellow</div>
- * </div>
+ * <div class=\'border border--red\'>border--red</div>
  */
 .border--gray-dark {
   border-color: #333 !important;
@@ -5723,90 +5719,90 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Control the shadow of elements on hover.
+ * Add shadows to elements on hover.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Shadows
  * @example
- * <div class=\'w400 hover-shadow-darken25\'>.hover-shadow-darken25</div>
+ * <div class=\'hover-shadow-darken25\'>hover-shadow-darken25</div>
  */
 .hover-shadow-darken5:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05) !important;
 }
-.hover-shadow-darken5-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.05) !important;
+.hover-shadow-bold-darken5:hover {
+  box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.05) !important;
 }
       
 .hover-shadow-darken10:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.10) !important;
 }
-.hover-shadow-darken10-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.10) !important;
+.hover-shadow-bold-darken10:hover {
+  box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.10) !important;
 }
       
 .hover-shadow-darken25:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25) !important;
 }
-.hover-shadow-darken25-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.25) !important;
+.hover-shadow-bold-darken25:hover {
+  box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.25) !important;
 }
       
 .hover-shadow-darken50:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.50) !important;
 }
-.hover-shadow-darken50-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.50) !important;
+.hover-shadow-bold-darken50:hover {
+  box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.50) !important;
 }
       
 .hover-shadow-darken75:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.75) !important;
 }
-.hover-shadow-darken75-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75) !important;
+.hover-shadow-bold-darken75:hover {
+  box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.75) !important;
 }
       
 .hover-shadow-lighten5:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.05) !important;
 }
-.hover-shadow-lighten5-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.05) !important;
+.hover-shadow-bold-lighten5:hover {
+  box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.05) !important;
 }
       
 .hover-shadow-lighten10:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.1) !important;
 }
-.hover-shadow-lighten10-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.1) !important;
+.hover-shadow-bold-lighten10:hover {
+  box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.1) !important;
 }
       
 .hover-shadow-lighten25:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.25) !important;
 }
-.hover-shadow-lighten25-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.25) !important;
+.hover-shadow-bold-lighten25:hover {
+  box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.25) !important;
 }
       
 .hover-shadow-lighten50:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.50) !important;
 }
-.hover-shadow-lighten50-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.50) !important;
+.hover-shadow-bold-lighten50:hover {
+  box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.50) !important;
 }
       
 .hover-shadow-lighten75:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.75) !important;
 }
-.hover-shadow-lighten75-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.75) !important;
+.hover-shadow-bold-lighten75:hover {
+  box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.75) !important;
 }
       /** @endgroup */
 /**
  * Control the background of elements on hover.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Colors & gradients
  * @example
- * <div class=\'w400 hover-bg-darken25\'>.hover-bg-darken25</div>
+ * <div class=\'hover-bg-darken25\'>hover-bg-darken25</div>
  */
 .hover-bg-gray-dark:hover {
   background-color: #333 !important;
@@ -6008,9 +6004,9 @@ input:checked + .toggle--active-transparent {
  * Control the color of elements on hover.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Colors & gradients
  * @example
- * <div class=\'w400 hover-color-red\'>.hover-color-red</div>
+ * <div class=\'hover-color-red\'>hover-color-red</div>
  */
 .hover-color-gray-dark:hover {
   color: #333 !important;
@@ -6209,206 +6205,206 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Control the border color of elements on hover.
+ * Set the border color of an element on hover. Depends on a \`border\` or \`border-{direction}\` class.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Borders
  * @example
- * <div class=\'w400 border border--2 border--pink hover-border-blue\'>.hover-border-blue</div>
+ * <div class=\'border hover-border--red\'>hover-border-red</div>
  */
-.hover-border-gray-dark:hover {
+.hover-border--gray-dark:hover {
   border-color: #333 !important;
 }
       
-.hover-border-gray:hover {
+.hover-border--gray:hover {
   border-color: #666 !important;
 }
       
-.hover-border-gray-light:hover {
+.hover-border--gray-light:hover {
   border-color: #ccc !important;
 }
       
-.hover-border-gray-faint:hover {
+.hover-border--gray-faint:hover {
   border-color: #f0f0f0 !important;
 }
       
-.hover-border-pink-dark:hover {
+.hover-border--pink-dark:hover {
   border-color: #C8145A !important;
 }
       
-.hover-border-pink:hover {
+.hover-border--pink:hover {
   border-color: #ff3c96 !important;
 }
       
-.hover-border-pink-light:hover {
+.hover-border--pink-light:hover {
   border-color: #FF88C0 !important;
 }
       
-.hover-border-pink-faint:hover {
+.hover-border--pink-faint:hover {
   border-color: #ffdbed !important;
 }
       
-.hover-border-red-dark:hover {
+.hover-border--red-dark:hover {
   border-color: #BE0014 !important;
 }
       
-.hover-border-red:hover {
+.hover-border--red:hover {
   border-color: #dc2b28 !important;
 }
       
-.hover-border-red-light:hover {
+.hover-border--red-light:hover {
   border-color: #FF8280 !important;
 }
       
-.hover-border-red-faint:hover {
+.hover-border--red-faint:hover {
   border-color: #ffdad9 !important;
 }
       
-.hover-border-orange-dark:hover {
+.hover-border--orange-dark:hover {
   border-color: #DC4600 !important;
 }
       
-.hover-border-orange:hover {
+.hover-border--orange:hover {
   border-color: #ff6e00 !important;
 }
       
-.hover-border-orange-light:hover {
+.hover-border--orange-light:hover {
   border-color: #FFA950 !important;
 }
       
-.hover-border-orange-faint:hover {
+.hover-border--orange-faint:hover {
   border-color: #FFE5CB !important;
 }
       
-.hover-border-yellow-dark:hover {
+.hover-border--yellow-dark:hover {
   border-color: #FFBD0A !important;
 }
       
-.hover-border-yellow:hover {
+.hover-border--yellow:hover {
   border-color: #f0dc00 !important;
 }
       
-.hover-border-yellow-light:hover {
+.hover-border--yellow-light:hover {
   border-color: #F0F062 !important;
 }
       
-.hover-border-yellow-faint:hover {
+.hover-border--yellow-faint:hover {
   border-color: #fafbd1 !important;
 }
       
-.hover-border-green-dark:hover {
+.hover-border--green-dark:hover {
   border-color: #007532 !important;
 }
       
-.hover-border-green:hover {
+.hover-border--green:hover {
   border-color: #01aa46 !important;
 }
       
-.hover-border-green-light:hover {
+.hover-border--green-light:hover {
   border-color: #72C781 !important;
 }
       
-.hover-border-green-faint:hover {
+.hover-border--green-faint:hover {
   border-color: #d4edda !important;
 }
       
-.hover-border-teal-dark:hover {
+.hover-border--teal-dark:hover {
   border-color: #00626E !important;
 }
       
-.hover-border-teal:hover {
+.hover-border--teal:hover {
   border-color: #01b5b4 !important;
 }
       
-.hover-border-teal-light:hover {
+.hover-border--teal-light:hover {
   border-color: #50D2D2 !important;
 }
       
-.hover-border-teal-faint:hover {
+.hover-border--teal-faint:hover {
   border-color: #cbf2f1 !important;
 }
       
-.hover-border-blue-dark:hover {
+.hover-border--blue-dark:hover {
   border-color: #0014AA !important;
 }
       
-.hover-border-blue:hover {
+.hover-border--blue:hover {
   border-color: #0065fb !important;
 }
       
-.hover-border-blue-light:hover {
+.hover-border--blue-light:hover {
   border-color: #00B1FF !important;
 }
       
-.hover-border-blue-faint:hover {
+.hover-border--blue-faint:hover {
   border-color: #bae8ff !important;
 }
       
-.hover-border-purple-dark:hover {
+.hover-border--purple-dark:hover {
   border-color: #500078 !important;
 }
       
-.hover-border-purple:hover {
+.hover-border--purple:hover {
   border-color: #8c50c7 !important;
 }
       
-.hover-border-purple-light:hover {
+.hover-border--purple-light:hover {
   border-color: #C299E3 !important;
 }
       
-.hover-border-purple-faint:hover {
+.hover-border--purple-faint:hover {
   border-color: #ede1f6 !important;
 }
       
-.hover-border-darken5:hover {
+.hover-border--darken5:hover {
   border-color: rgba(0, 0, 0, 0.05) !important;
 }
       
-.hover-border-darken10:hover {
+.hover-border--darken10:hover {
   border-color: rgba(0, 0, 0, 0.10) !important;
 }
       
-.hover-border-darken25:hover {
+.hover-border--darken25:hover {
   border-color: rgba(0, 0, 0, 0.25) !important;
 }
       
-.hover-border-darken50:hover {
+.hover-border--darken50:hover {
   border-color: rgba(0, 0, 0, 0.50) !important;
 }
       
-.hover-border-darken75:hover {
+.hover-border--darken75:hover {
   border-color: rgba(0, 0, 0, 0.75) !important;
 }
       
-.hover-border-lighten5:hover {
+.hover-border--lighten5:hover {
   border-color: rgba(255, 255, 255, 0.05) !important;
 }
       
-.hover-border-lighten10:hover {
+.hover-border--lighten10:hover {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
       
-.hover-border-lighten25:hover {
+.hover-border--lighten25:hover {
   border-color: rgba(255, 255, 255, 0.25) !important;
 }
       
-.hover-border-lighten50:hover {
+.hover-border--lighten50:hover {
   border-color: rgba(255, 255, 255, 0.50) !important;
 }
       
-.hover-border-lighten75:hover {
+.hover-border--lighten75:hover {
   border-color: rgba(255, 255, 255, 0.75) !important;
 }
       
-.hover-border-white:hover {
+.hover-border--white:hover {
   border-color: #fff !important;
 }
       
-.hover-border-black:hover {
+.hover-border--black:hover {
   border-color: #000 !important;
 }
       
-.hover-border-transparent:hover {
+.hover-border--transparent:hover {
   border-color: transparent !important;
 }
       /** @endgroup */"
@@ -6423,7 +6419,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--gray:hover,
-.btn--gray.is-active {
+.btn--gray.btn--is-active {
   background-color: #000;
 }
       
@@ -6432,7 +6428,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--gray-light:hover,
-.btn--gray-light.is-active {
+.btn--gray-light.btn--is-active {
   background-color: undefined;
 }
       
@@ -6441,7 +6437,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--gray-faint:hover,
-.btn--gray-faint.is-active {
+.btn--gray-faint.btn--is-active {
   background-color: undefined;
 }
       
@@ -6450,7 +6446,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--pink:hover,
-.btn--pink.is-active {
+.btn--pink.btn--is-active {
   background-color: undefined;
 }
       
@@ -6459,7 +6455,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--pink-light:hover,
-.btn--pink-light.is-active {
+.btn--pink-light.btn--is-active {
   background-color: pink;
 }
       
@@ -6468,7 +6464,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--pink-faint:hover,
-.btn--pink-faint.is-active {
+.btn--pink-faint.btn--is-active {
   background-color: undefined;
 }
       
@@ -6477,7 +6473,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--red:hover,
-.btn--red.is-active {
+.btn--red.btn--is-active {
   background-color: undefined;
 }
       
@@ -6486,7 +6482,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--red-light:hover,
-.btn--red-light.is-active {
+.btn--red-light.btn--is-active {
   background-color: #fff;
 }
       
@@ -6495,7 +6491,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--red-faint:hover,
-.btn--red-faint.is-active {
+.btn--red-faint.btn--is-active {
   background-color: undefined;
 }
       
@@ -6504,7 +6500,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--orange:hover,
-.btn--orange.is-active {
+.btn--orange.btn--is-active {
   background-color: undefined;
 }
       
@@ -6513,7 +6509,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--orange-light:hover,
-.btn--orange-light.is-active {
+.btn--orange-light.btn--is-active {
   background-color: undefined;
 }
       
@@ -6522,7 +6518,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--orange-faint:hover,
-.btn--orange-faint.is-active {
+.btn--orange-faint.btn--is-active {
   background-color: undefined;
 }
       
@@ -6531,7 +6527,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--yellow:hover,
-.btn--yellow.is-active {
+.btn--yellow.btn--is-active {
   background-color: undefined;
 }
       
@@ -6540,7 +6536,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--yellow-light:hover,
-.btn--yellow-light.is-active {
+.btn--yellow-light.btn--is-active {
   background-color: undefined;
 }
       
@@ -6549,7 +6545,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--yellow-faint:hover,
-.btn--yellow-faint.is-active {
+.btn--yellow-faint.btn--is-active {
   background-color: undefined;
 }
       
@@ -6558,7 +6554,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--green:hover,
-.btn--green.is-active {
+.btn--green.btn--is-active {
   background-color: undefined;
 }
       
@@ -6567,7 +6563,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--green-light:hover,
-.btn--green-light.is-active {
+.btn--green-light.btn--is-active {
   background-color: undefined;
 }
       
@@ -6576,7 +6572,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--green-faint:hover,
-.btn--green-faint.is-active {
+.btn--green-faint.btn--is-active {
   background-color: undefined;
 }
       
@@ -6585,7 +6581,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--teal:hover,
-.btn--teal.is-active {
+.btn--teal.btn--is-active {
   background-color: undefined;
 }
       
@@ -6594,7 +6590,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--teal-light:hover,
-.btn--teal-light.is-active {
+.btn--teal-light.btn--is-active {
   background-color: undefined;
 }
       
@@ -6603,7 +6599,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--teal-faint:hover,
-.btn--teal-faint.is-active {
+.btn--teal-faint.btn--is-active {
   background-color: undefined;
 }
       
@@ -6612,7 +6608,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--blue:hover,
-.btn--blue.is-active {
+.btn--blue.btn--is-active {
   background-color: undefined;
 }
       
@@ -6621,7 +6617,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--blue-light:hover,
-.btn--blue-light.is-active {
+.btn--blue-light.btn--is-active {
   background-color: undefined;
 }
       
@@ -6630,7 +6626,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--blue-faint:hover,
-.btn--blue-faint.is-active {
+.btn--blue-faint.btn--is-active {
   background-color: undefined;
 }
       
@@ -6639,7 +6635,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--purple:hover,
-.btn--purple.is-active {
+.btn--purple.btn--is-active {
   background-color: undefined;
 }
       
@@ -6648,7 +6644,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--purple-light:hover,
-.btn--purple-light.is-active {
+.btn--purple-light.btn--is-active {
   background-color: undefined;
 }
       
@@ -6657,7 +6653,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--purple-faint:hover,
-.btn--purple-faint.is-active {
+.btn--purple-faint.btn--is-active {
   background-color: undefined;
 }
       
@@ -6666,7 +6662,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--darken5:hover,
-.btn--darken5.is-active {
+.btn--darken5.btn--is-active {
   background-color: undefined;
 }
       
@@ -6675,7 +6671,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--darken10:hover,
-.btn--darken10.is-active {
+.btn--darken10.btn--is-active {
   background-color: undefined;
 }
       
@@ -6684,7 +6680,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--darken25:hover,
-.btn--darken25.is-active {
+.btn--darken25.btn--is-active {
   background-color: undefined;
 }
       
@@ -6693,7 +6689,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--darken50:hover,
-.btn--darken50.is-active {
+.btn--darken50.btn--is-active {
   background-color: undefined;
 }
       
@@ -6702,7 +6698,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--darken75:hover,
-.btn--darken75.is-active {
+.btn--darken75.btn--is-active {
   background-color: #000;
 }
       
@@ -6711,7 +6707,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--lighten5:hover,
-.btn--lighten5.is-active {
+.btn--lighten5.btn--is-active {
   background-color: undefined;
 }
       
@@ -6720,7 +6716,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--lighten10:hover,
-.btn--lighten10.is-active {
+.btn--lighten10.btn--is-active {
   background-color: undefined;
 }
       
@@ -6729,7 +6725,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--lighten25:hover,
-.btn--lighten25.is-active {
+.btn--lighten25.btn--is-active {
   background-color: undefined;
 }
       
@@ -6738,7 +6734,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--lighten50:hover,
-.btn--lighten50.is-active {
+.btn--lighten50.btn--is-active {
   background-color: undefined;
 }
       
@@ -6747,7 +6743,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--lighten75:hover,
-.btn--lighten75.is-active {
+.btn--lighten75.btn--is-active {
   background-color: #fff;
 }
       
@@ -6756,7 +6752,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--white:hover,
-.btn--white.is-active {
+.btn--white.btn--is-active {
   background-color: undefined;
 }
       
@@ -6765,7 +6761,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--transparent:hover,
-.btn--transparent.is-active {
+.btn--transparent.btn--is-active {
   background-color: undefined;
 }
       
@@ -6775,7 +6771,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--gray:hover,
-.btn--stroke.btn--gray.is-active {
+.btn--stroke--is-active.btn--gray {
   color: #000;
 }
       
@@ -6785,7 +6781,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--gray-light:hover,
-.btn--stroke.btn--gray-light.is-active {
+.btn--stroke--is-active.btn--gray-light {
   color: undefined;
 }
       
@@ -6795,7 +6791,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--gray-faint:hover,
-.btn--stroke.btn--gray-faint.is-active {
+.btn--stroke--is-active.btn--gray-faint {
   color: undefined;
 }
       
@@ -6805,7 +6801,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--pink:hover,
-.btn--stroke.btn--pink.is-active {
+.btn--stroke--is-active.btn--pink {
   color: undefined;
 }
       
@@ -6815,7 +6811,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--pink-light:hover,
-.btn--stroke.btn--pink-light.is-active {
+.btn--stroke--is-active.btn--pink-light {
   color: pink;
 }
       
@@ -6825,7 +6821,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--pink-faint:hover,
-.btn--stroke.btn--pink-faint.is-active {
+.btn--stroke--is-active.btn--pink-faint {
   color: undefined;
 }
       
@@ -6835,7 +6831,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--red:hover,
-.btn--stroke.btn--red.is-active {
+.btn--stroke--is-active.btn--red {
   color: undefined;
 }
       
@@ -6845,7 +6841,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--red-light:hover,
-.btn--stroke.btn--red-light.is-active {
+.btn--stroke--is-active.btn--red-light {
   color: #fff;
 }
       
@@ -6855,7 +6851,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--red-faint:hover,
-.btn--stroke.btn--red-faint.is-active {
+.btn--stroke--is-active.btn--red-faint {
   color: undefined;
 }
       
@@ -6865,7 +6861,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--orange:hover,
-.btn--stroke.btn--orange.is-active {
+.btn--stroke--is-active.btn--orange {
   color: undefined;
 }
       
@@ -6875,7 +6871,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--orange-light:hover,
-.btn--stroke.btn--orange-light.is-active {
+.btn--stroke--is-active.btn--orange-light {
   color: undefined;
 }
       
@@ -6885,7 +6881,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--orange-faint:hover,
-.btn--stroke.btn--orange-faint.is-active {
+.btn--stroke--is-active.btn--orange-faint {
   color: undefined;
 }
       
@@ -6895,7 +6891,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--yellow:hover,
-.btn--stroke.btn--yellow.is-active {
+.btn--stroke--is-active.btn--yellow {
   color: undefined;
 }
       
@@ -6905,7 +6901,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--yellow-light:hover,
-.btn--stroke.btn--yellow-light.is-active {
+.btn--stroke--is-active.btn--yellow-light {
   color: undefined;
 }
       
@@ -6915,7 +6911,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--yellow-faint:hover,
-.btn--stroke.btn--yellow-faint.is-active {
+.btn--stroke--is-active.btn--yellow-faint {
   color: undefined;
 }
       
@@ -6925,7 +6921,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--green:hover,
-.btn--stroke.btn--green.is-active {
+.btn--stroke--is-active.btn--green {
   color: undefined;
 }
       
@@ -6935,7 +6931,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--green-light:hover,
-.btn--stroke.btn--green-light.is-active {
+.btn--stroke--is-active.btn--green-light {
   color: undefined;
 }
       
@@ -6945,7 +6941,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--green-faint:hover,
-.btn--stroke.btn--green-faint.is-active {
+.btn--stroke--is-active.btn--green-faint {
   color: undefined;
 }
       
@@ -6955,7 +6951,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--teal:hover,
-.btn--stroke.btn--teal.is-active {
+.btn--stroke--is-active.btn--teal {
   color: undefined;
 }
       
@@ -6965,7 +6961,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--teal-light:hover,
-.btn--stroke.btn--teal-light.is-active {
+.btn--stroke--is-active.btn--teal-light {
   color: undefined;
 }
       
@@ -6975,7 +6971,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--teal-faint:hover,
-.btn--stroke.btn--teal-faint.is-active {
+.btn--stroke--is-active.btn--teal-faint {
   color: undefined;
 }
       
@@ -6985,7 +6981,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--blue:hover,
-.btn--stroke.btn--blue.is-active {
+.btn--stroke--is-active.btn--blue {
   color: undefined;
 }
       
@@ -6995,7 +6991,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--blue-light:hover,
-.btn--stroke.btn--blue-light.is-active {
+.btn--stroke--is-active.btn--blue-light {
   color: undefined;
 }
       
@@ -7005,7 +7001,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--blue-faint:hover,
-.btn--stroke.btn--blue-faint.is-active {
+.btn--stroke--is-active.btn--blue-faint {
   color: undefined;
 }
       
@@ -7015,7 +7011,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--purple:hover,
-.btn--stroke.btn--purple.is-active {
+.btn--stroke--is-active.btn--purple {
   color: undefined;
 }
       
@@ -7025,7 +7021,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--purple-light:hover,
-.btn--stroke.btn--purple-light.is-active {
+.btn--stroke--is-active.btn--purple-light {
   color: undefined;
 }
       
@@ -7035,7 +7031,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--purple-faint:hover,
-.btn--stroke.btn--purple-faint.is-active {
+.btn--stroke--is-active.btn--purple-faint {
   color: undefined;
 }
       
@@ -7045,7 +7041,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--darken5:hover,
-.btn--stroke.btn--darken5.is-active {
+.btn--stroke--is-active.btn--darken5 {
   color: undefined;
 }
       
@@ -7055,7 +7051,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--darken10:hover,
-.btn--stroke.btn--darken10.is-active {
+.btn--stroke--is-active.btn--darken10 {
   color: undefined;
 }
       
@@ -7065,7 +7061,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--darken25:hover,
-.btn--stroke.btn--darken25.is-active {
+.btn--stroke--is-active.btn--darken25 {
   color: undefined;
 }
       
@@ -7075,7 +7071,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--darken50:hover,
-.btn--stroke.btn--darken50.is-active {
+.btn--stroke--is-active.btn--darken50 {
   color: undefined;
 }
       
@@ -7085,7 +7081,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--darken75:hover,
-.btn--stroke.btn--darken75.is-active {
+.btn--stroke--is-active.btn--darken75 {
   color: #000;
 }
       
@@ -7095,7 +7091,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--lighten5:hover,
-.btn--stroke.btn--lighten5.is-active {
+.btn--stroke--is-active.btn--lighten5 {
   color: undefined;
 }
       
@@ -7105,7 +7101,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--lighten10:hover,
-.btn--stroke.btn--lighten10.is-active {
+.btn--stroke--is-active.btn--lighten10 {
   color: undefined;
 }
       
@@ -7115,7 +7111,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--lighten25:hover,
-.btn--stroke.btn--lighten25.is-active {
+.btn--stroke--is-active.btn--lighten25 {
   color: undefined;
 }
       
@@ -7125,7 +7121,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--lighten50:hover,
-.btn--stroke.btn--lighten50.is-active {
+.btn--stroke--is-active.btn--lighten50 {
   color: undefined;
 }
       
@@ -7135,7 +7131,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--lighten75:hover,
-.btn--stroke.btn--lighten75.is-active {
+.btn--stroke--is-active.btn--lighten75 {
   color: #fff;
 }
       
@@ -7145,7 +7141,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--white:hover,
-.btn--stroke.btn--white.is-active {
+.btn--stroke--is-active.btn--white {
   color: undefined;
 }
       
@@ -7155,7 +7151,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--transparent:hover,
-.btn--stroke.btn--transparent.is-active {
+.btn--stroke--is-active.btn--transparent {
   color: undefined;
 }
       
@@ -11109,55 +11105,55 @@ input:checked + .toggle--active-transparent {
  * @memberof Text colors
  * @example
  * <div class=\'grid\'>
- *   <div class=\'col col--3 color-gray-dark\'>.color-gray-dark</div>
- *   <div class=\'col col--3 color-gray\'>.color-gray</div>
- *   <div class=\'col col--3 color-gray-light\'>.color-gray-light</div>
- *   <div class=\'col col--3 color-gray-faint\'>.color-gray-faint</div>
- *   <div class=\'col col--3 color-pink-dark\'>.color-pink-dark</div>
- *   <div class=\'col col--3 color-pink\'>.color-pink</div>
- *   <div class=\'col col--3 color-pink-light\'>.color-pink-light</div>
- *   <div class=\'col col--3 color-pink-faint\'>.color-pink-faint</div>
- *   <div class=\'col col--3 color-red-dark\'>.color-red-dark</div>
- *   <div class=\'col col--3 color-red\'>.color-red</div>
- *   <div class=\'col col--3 color-red-light\'>.color-red-light</div>
- *   <div class=\'col col--3 color-red-faint\'>.color-red-faint</div>
- *   <div class=\'col col--3 color-orange-dark\'>.color-orange-dark</div>
- *   <div class=\'col col--3 color-orange\'>.color-orange</div>
- *   <div class=\'col col--3 color-orange-light\'>.color-orange-light</div>
- *   <div class=\'col col--3 color-orange-faint\'>.color-orange-faint</div>
- *   <div class=\'col col--3 color-yellow-dark\'>.color-yellow-dark</div>
- *   <div class=\'col col--3 color-yellow\'>.color-yellow</div>
- *   <div class=\'col col--3 color-yellow-light\'>.color-yellow-light</div>
- *   <div class=\'col col--3 color-yellow-faint\'>.color-yellow-faint</div>
- *   <div class=\'col col--3 color-green-dark\'>.color-green-dark</div>
- *   <div class=\'col col--3 color-green\'>.color-green</div>
- *   <div class=\'col col--3 color-green-light\'>.color-green-light</div>
- *   <div class=\'col col--3 color-green-faint\'>.color-green-faint</div>
- *   <div class=\'col col--3 color-teal-dark\'>.color-teal-dark</div>
- *   <div class=\'col col--3 color-teal\'>.color-teal</div>
- *   <div class=\'col col--3 color-teal-light\'>.color-teal-light</div>
- *   <div class=\'col col--3 color-teal-faint\'>.color-teal-faint</div>
- *   <div class=\'col col--3 color-blue-dark\'>.color-blue-dark</div>
- *   <div class=\'col col--3 color-blue\'>.color-blue</div>
- *   <div class=\'col col--3 color-blue-light\'>.color-blue-light</div>
- *   <div class=\'col col--3 color-blue-faint\'>.color-blue-faint</div>
- *   <div class=\'col col--3 color-purple-dark\'>.color-purple-dark</div>
- *   <div class=\'col col--3 color-purple\'>.color-purple</div>
- *   <div class=\'col col--3 color-purple-light\'>.color-purple-light</div>
- *   <div class=\'col col--3 color-purple-faint\'>.color-purple-faint</div>
- *   <div class=\'col col--3 color-darken5\'>.color-darken5</div>
- *   <div class=\'col col--3 color-darken10\'>.color-darken10</div>
- *   <div class=\'col col--3 color-darken25\'>.color-darken25</div>
- *   <div class=\'col col--3 color-darken50\'>.color-darken50</div>
- *   <div class=\'col col--3 color-darken75\'>.color-darken75</div>
- *   <div class=\'col col--3 color-lighten5\'>.color-lighten5</div>
- *   <div class=\'col col--3 color-lighten10\'>.color-lighten10</div>
- *   <div class=\'col col--3 color-lighten25\'>.color-lighten25</div>
- *   <div class=\'col col--3 color-lighten50\'>.color-lighten50</div>
- *   <div class=\'col col--3 color-lighten75\'>.color-lighten75</div>
- *   <div class=\'col col--3 color-white\'>.color-white</div>
- *   <div class=\'col col--3 color-black\'>.color-black</div>
- *   <div class=\'col col--3 color-transparent\'>.color-transparent</div>
+ *   <div class=\'col col--3 color-gray-dark\'>color-gray-dark</div>
+ *   <div class=\'col col--3 color-gray\'>color-gray</div>
+ *   <div class=\'col col--3 color-gray-light\'>color-gray-light</div>
+ *   <div class=\'col col--3 color-gray-faint\'>color-gray-faint</div>
+ *   <div class=\'col col--3 color-pink-dark\'>color-pink-dark</div>
+ *   <div class=\'col col--3 color-pink\'>color-pink</div>
+ *   <div class=\'col col--3 color-pink-light\'>color-pink-light</div>
+ *   <div class=\'col col--3 color-pink-faint\'>color-pink-faint</div>
+ *   <div class=\'col col--3 color-red-dark\'>color-red-dark</div>
+ *   <div class=\'col col--3 color-red\'>color-red</div>
+ *   <div class=\'col col--3 color-red-light\'>color-red-light</div>
+ *   <div class=\'col col--3 color-red-faint\'>color-red-faint</div>
+ *   <div class=\'col col--3 color-orange-dark\'>color-orange-dark</div>
+ *   <div class=\'col col--3 color-orange\'>color-orange</div>
+ *   <div class=\'col col--3 color-orange-light\'>color-orange-light</div>
+ *   <div class=\'col col--3 color-orange-faint\'>color-orange-faint</div>
+ *   <div class=\'col col--3 color-yellow-dark\'>color-yellow-dark</div>
+ *   <div class=\'col col--3 color-yellow\'>color-yellow</div>
+ *   <div class=\'col col--3 color-yellow-light\'>color-yellow-light</div>
+ *   <div class=\'col col--3 color-yellow-faint\'>color-yellow-faint</div>
+ *   <div class=\'col col--3 color-green-dark\'>color-green-dark</div>
+ *   <div class=\'col col--3 color-green\'>color-green</div>
+ *   <div class=\'col col--3 color-green-light\'>color-green-light</div>
+ *   <div class=\'col col--3 color-green-faint\'>color-green-faint</div>
+ *   <div class=\'col col--3 color-teal-dark\'>color-teal-dark</div>
+ *   <div class=\'col col--3 color-teal\'>color-teal</div>
+ *   <div class=\'col col--3 color-teal-light\'>color-teal-light</div>
+ *   <div class=\'col col--3 color-teal-faint\'>color-teal-faint</div>
+ *   <div class=\'col col--3 color-blue-dark\'>color-blue-dark</div>
+ *   <div class=\'col col--3 color-blue\'>color-blue</div>
+ *   <div class=\'col col--3 color-blue-light\'>color-blue-light</div>
+ *   <div class=\'col col--3 color-blue-faint\'>color-blue-faint</div>
+ *   <div class=\'col col--3 color-purple-dark\'>color-purple-dark</div>
+ *   <div class=\'col col--3 color-purple\'>color-purple</div>
+ *   <div class=\'col col--3 color-purple-light\'>color-purple-light</div>
+ *   <div class=\'col col--3 color-purple-faint\'>color-purple-faint</div>
+ *   <div class=\'col col--3 color-darken5\'>color-darken5</div>
+ *   <div class=\'col col--3 color-darken10\'>color-darken10</div>
+ *   <div class=\'col col--3 color-darken25\'>color-darken25</div>
+ *   <div class=\'col col--3 color-darken50\'>color-darken50</div>
+ *   <div class=\'col col--3 color-darken75\'>color-darken75</div>
+ *   <div class=\'col col--3 color-lighten5\'>color-lighten5</div>
+ *   <div class=\'col col--3 color-lighten10\'>color-lighten10</div>
+ *   <div class=\'col col--3 color-lighten25\'>color-lighten25</div>
+ *   <div class=\'col col--3 color-lighten50\'>color-lighten50</div>
+ *   <div class=\'col col--3 color-lighten75\'>color-lighten75</div>
+ *   <div class=\'col col--3 color-white\'>color-white</div>
+ *   <div class=\'col col--3 color-black\'>color-black</div>
+ *   <div class=\'col col--3 color-transparent\'>color-transparent</div>
  *   <div class=\'col col--3 color-text\'>.color-text</div>
  * </div>
  */
@@ -11371,55 +11367,55 @@ input:checked + .toggle--active-transparent {
  * @memberof Background colors
  * @example
  * <div class=\'grid\'>
- *   <div class=\'col col--3 bg-gray-dark p6\'>.bg-gray-dark</div>
- *   <div class=\'col col--3 bg-gray p6\'>.bg-gray</div>
- *   <div class=\'col col--3 bg-gray-light p6\'>.bg-gray-light</div>
- *   <div class=\'col col--3 bg-gray-faint p6\'>.bg-gray-faint</div>
- *   <div class=\'col col--3 bg-pink-dark p6\'>.bg-pink-dark</div>
- *   <div class=\'col col--3 bg-pink p6\'>.bg-pink</div>
- *   <div class=\'col col--3 bg-pink-light p6\'>.bg-pink-light</div>
- *   <div class=\'col col--3 bg-pink-faint p6\'>.bg-pink-faint</div>
- *   <div class=\'col col--3 bg-red-dark p6\'>.bg-red-dark</div>
- *   <div class=\'col col--3 bg-red p6\'>.bg-red</div>
- *   <div class=\'col col--3 bg-red-light p6\'>.bg-red-light</div>
- *   <div class=\'col col--3 bg-red-faint p6\'>.bg-red-faint</div>
- *   <div class=\'col col--3 bg-orange-dark p6\'>.bg-orange-dark</div>
- *   <div class=\'col col--3 bg-orange p6\'>.bg-orange</div>
- *   <div class=\'col col--3 bg-orange-light p6\'>.bg-orange-light</div>
- *   <div class=\'col col--3 bg-orange-faint p6\'>.bg-orange-faint</div>
- *   <div class=\'col col--3 bg-yellow-dark p6\'>.bg-yellow-dark</div>
- *   <div class=\'col col--3 bg-yellow p6\'>.bg-yellow</div>
- *   <div class=\'col col--3 bg-yellow-light p6\'>.bg-yellow-light</div>
- *   <div class=\'col col--3 bg-yellow-faint p6\'>.bg-yellow-faint</div>
- *   <div class=\'col col--3 bg-green-dark p6\'>.bg-green-dark</div>
- *   <div class=\'col col--3 bg-green p6\'>.bg-green</div>
- *   <div class=\'col col--3 bg-green-light p6\'>.bg-green-light</div>
- *   <div class=\'col col--3 bg-green-faint p6\'>.bg-green-faint</div>
- *   <div class=\'col col--3 bg-teal-dark p6\'>.bg-teal-dark</div>
- *   <div class=\'col col--3 bg-teal p6\'>.bg-teal</div>
- *   <div class=\'col col--3 bg-teal-light p6\'>.bg-teal-light</div>
- *   <div class=\'col col--3 bg-teal-faint p6\'>.bg-teal-faint</div>
- *   <div class=\'col col--3 bg-blue-dark p6\'>.bg-blue-dark</div>
- *   <div class=\'col col--3 bg-blue p6\'>.bg-blue</div>
- *   <div class=\'col col--3 bg-blue-light p6\'>.bg-blue-light</div>
- *   <div class=\'col col--3 bg-blue-faint p6\'>.bg-blue-faint</div>
- *   <div class=\'col col--3 bg-purple-dark p6\'>.bg-purple-dark</div>
- *   <div class=\'col col--3 bg-purple p6\'>.bg-purple</div>
- *   <div class=\'col col--3 bg-purple-light p6\'>.bg-purple-light</div>
- *   <div class=\'col col--3 bg-purple-faint p6\'>.bg-purple-faint</div>
- *   <div class=\'col col--3 bg-darken5 p6\'>.bg-darken5</div>
- *   <div class=\'col col--3 bg-darken10 p6\'>.bg-darken10</div>
- *   <div class=\'col col--3 bg-darken25 p6\'>.bg-darken25</div>
- *   <div class=\'col col--3 bg-darken50 p6\'>.bg-darken50</div>
- *   <div class=\'col col--3 bg-darken75 p6\'>.bg-darken75</div>
- *   <div class=\'col col--3 bg-lighten5 p6\'>.bg-lighten5</div>
- *   <div class=\'col col--3 bg-lighten10 p6\'>.bg-lighten10</div>
- *   <div class=\'col col--3 bg-lighten25 p6\'>.bg-lighten25</div>
- *   <div class=\'col col--3 bg-lighten50 p6\'>.bg-lighten50</div>
- *   <div class=\'col col--3 bg-lighten75 p6\'>.bg-lighten75</div>
- *   <div class=\'col col--3 bg-white p6\'>.bg-white</div>
- *   <div class=\'col col--3 bg-black p6\'>.bg-black</div>
- *   <div class=\'col col--3 bg-transparent p6\'>.bg-transparent</div>
+ *   <div class=\'col col--3 bg-gray-dark p6\'>bg-gray-dark</div>
+ *   <div class=\'col col--3 bg-gray p6\'>bg-gray</div>
+ *   <div class=\'col col--3 bg-gray-light p6\'>bg-gray-light</div>
+ *   <div class=\'col col--3 bg-gray-faint p6\'>bg-gray-faint</div>
+ *   <div class=\'col col--3 bg-pink-dark p6\'>bg-pink-dark</div>
+ *   <div class=\'col col--3 bg-pink p6\'>bg-pink</div>
+ *   <div class=\'col col--3 bg-pink-light p6\'>bg-pink-light</div>
+ *   <div class=\'col col--3 bg-pink-faint p6\'>bg-pink-faint</div>
+ *   <div class=\'col col--3 bg-red-dark p6\'>bg-red-dark</div>
+ *   <div class=\'col col--3 bg-red p6\'>bg-red</div>
+ *   <div class=\'col col--3 bg-red-light p6\'>bg-red-light</div>
+ *   <div class=\'col col--3 bg-red-faint p6\'>bg-red-faint</div>
+ *   <div class=\'col col--3 bg-orange-dark p6\'>bg-orange-dark</div>
+ *   <div class=\'col col--3 bg-orange p6\'>bg-orange</div>
+ *   <div class=\'col col--3 bg-orange-light p6\'>bg-orange-light</div>
+ *   <div class=\'col col--3 bg-orange-faint p6\'>bg-orange-faint</div>
+ *   <div class=\'col col--3 bg-yellow-dark p6\'>bg-yellow-dark</div>
+ *   <div class=\'col col--3 bg-yellow p6\'>bg-yellow</div>
+ *   <div class=\'col col--3 bg-yellow-light p6\'>bg-yellow-light</div>
+ *   <div class=\'col col--3 bg-yellow-faint p6\'>bg-yellow-faint</div>
+ *   <div class=\'col col--3 bg-green-dark p6\'>bg-green-dark</div>
+ *   <div class=\'col col--3 bg-green p6\'>bg-green</div>
+ *   <div class=\'col col--3 bg-green-light p6\'>bg-green-light</div>
+ *   <div class=\'col col--3 bg-green-faint p6\'>bg-green-faint</div>
+ *   <div class=\'col col--3 bg-teal-dark p6\'>bg-teal-dark</div>
+ *   <div class=\'col col--3 bg-teal p6\'>bg-teal</div>
+ *   <div class=\'col col--3 bg-teal-light p6\'>bg-teal-light</div>
+ *   <div class=\'col col--3 bg-teal-faint p6\'>bg-teal-faint</div>
+ *   <div class=\'col col--3 bg-blue-dark p6\'>bg-blue-dark</div>
+ *   <div class=\'col col--3 bg-blue p6\'>bg-blue</div>
+ *   <div class=\'col col--3 bg-blue-light p6\'>bg-blue-light</div>
+ *   <div class=\'col col--3 bg-blue-faint p6\'>bg-blue-faint</div>
+ *   <div class=\'col col--3 bg-purple-dark p6\'>bg-purple-dark</div>
+ *   <div class=\'col col--3 bg-purple p6\'>bg-purple</div>
+ *   <div class=\'col col--3 bg-purple-light p6\'>bg-purple-light</div>
+ *   <div class=\'col col--3 bg-purple-faint p6\'>bg-purple-faint</div>
+ *   <div class=\'col col--3 bg-darken5 p6\'>bg-darken5</div>
+ *   <div class=\'col col--3 bg-darken10 p6\'>bg-darken10</div>
+ *   <div class=\'col col--3 bg-darken25 p6\'>bg-darken25</div>
+ *   <div class=\'col col--3 bg-darken50 p6\'>bg-darken50</div>
+ *   <div class=\'col col--3 bg-darken75 p6\'>bg-darken75</div>
+ *   <div class=\'col col--3 bg-lighten5 p6\'>bg-lighten5</div>
+ *   <div class=\'col col--3 bg-lighten10 p6\'>bg-lighten10</div>
+ *   <div class=\'col col--3 bg-lighten25 p6\'>bg-lighten25</div>
+ *   <div class=\'col col--3 bg-lighten50 p6\'>bg-lighten50</div>
+ *   <div class=\'col col--3 bg-lighten75 p6\'>bg-lighten75</div>
+ *   <div class=\'col col--3 bg-white p6\'>bg-white</div>
+ *   <div class=\'col col--3 bg-black p6\'>bg-black</div>
+ *   <div class=\'col col--3 bg-transparent p6\'>bg-transparent</div>
  * </div>
  */
 .bg-gray-dark {
@@ -11621,7 +11617,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--gray {
   color: undefined;
 }
-.txt-link--gray.is-active,
+.txt-link--gray.txt-link--is-active,
 .txt-link--gray:hover {
   color: #000;
 }
@@ -11629,7 +11625,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--gray-light {
   color: undefined;
 }
-.txt-link--gray-light.is-active,
+.txt-link--gray-light.txt-link--is-active,
 .txt-link--gray-light:hover {
   color: undefined;
 }
@@ -11637,7 +11633,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--gray-faint {
   color: undefined;
 }
-.txt-link--gray-faint.is-active,
+.txt-link--gray-faint.txt-link--is-active,
 .txt-link--gray-faint:hover {
   color: undefined;
 }
@@ -11645,7 +11641,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--pink {
   color: pink;
 }
-.txt-link--pink.is-active,
+.txt-link--pink.txt-link--is-active,
 .txt-link--pink:hover {
   color: undefined;
 }
@@ -11653,7 +11649,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--pink-light {
   color: undefined;
 }
-.txt-link--pink-light.is-active,
+.txt-link--pink-light.txt-link--is-active,
 .txt-link--pink-light:hover {
   color: pink;
 }
@@ -11661,7 +11657,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--pink-faint {
   color: undefined;
 }
-.txt-link--pink-faint.is-active,
+.txt-link--pink-faint.txt-link--is-active,
 .txt-link--pink-faint:hover {
   color: undefined;
 }
@@ -11669,7 +11665,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--red {
   color: #fff;
 }
-.txt-link--red.is-active,
+.txt-link--red.txt-link--is-active,
 .txt-link--red:hover {
   color: undefined;
 }
@@ -11677,7 +11673,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--red-light {
   color: undefined;
 }
-.txt-link--red-light.is-active,
+.txt-link--red-light.txt-link--is-active,
 .txt-link--red-light:hover {
   color: #fff;
 }
@@ -11685,7 +11681,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--red-faint {
   color: undefined;
 }
-.txt-link--red-faint.is-active,
+.txt-link--red-faint.txt-link--is-active,
 .txt-link--red-faint:hover {
   color: undefined;
 }
@@ -11693,7 +11689,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--orange {
   color: undefined;
 }
-.txt-link--orange.is-active,
+.txt-link--orange.txt-link--is-active,
 .txt-link--orange:hover {
   color: undefined;
 }
@@ -11701,7 +11697,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--orange-light {
   color: undefined;
 }
-.txt-link--orange-light.is-active,
+.txt-link--orange-light.txt-link--is-active,
 .txt-link--orange-light:hover {
   color: undefined;
 }
@@ -11709,7 +11705,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--orange-faint {
   color: undefined;
 }
-.txt-link--orange-faint.is-active,
+.txt-link--orange-faint.txt-link--is-active,
 .txt-link--orange-faint:hover {
   color: undefined;
 }
@@ -11717,7 +11713,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--yellow {
   color: undefined;
 }
-.txt-link--yellow.is-active,
+.txt-link--yellow.txt-link--is-active,
 .txt-link--yellow:hover {
   color: undefined;
 }
@@ -11725,7 +11721,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--yellow-light {
   color: undefined;
 }
-.txt-link--yellow-light.is-active,
+.txt-link--yellow-light.txt-link--is-active,
 .txt-link--yellow-light:hover {
   color: undefined;
 }
@@ -11733,7 +11729,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--yellow-faint {
   color: undefined;
 }
-.txt-link--yellow-faint.is-active,
+.txt-link--yellow-faint.txt-link--is-active,
 .txt-link--yellow-faint:hover {
   color: undefined;
 }
@@ -11741,7 +11737,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--green {
   color: undefined;
 }
-.txt-link--green.is-active,
+.txt-link--green.txt-link--is-active,
 .txt-link--green:hover {
   color: undefined;
 }
@@ -11749,7 +11745,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--green-light {
   color: undefined;
 }
-.txt-link--green-light.is-active,
+.txt-link--green-light.txt-link--is-active,
 .txt-link--green-light:hover {
   color: undefined;
 }
@@ -11757,7 +11753,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--green-faint {
   color: undefined;
 }
-.txt-link--green-faint.is-active,
+.txt-link--green-faint.txt-link--is-active,
 .txt-link--green-faint:hover {
   color: undefined;
 }
@@ -11765,7 +11761,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--teal {
   color: undefined;
 }
-.txt-link--teal.is-active,
+.txt-link--teal.txt-link--is-active,
 .txt-link--teal:hover {
   color: undefined;
 }
@@ -11773,7 +11769,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--teal-light {
   color: undefined;
 }
-.txt-link--teal-light.is-active,
+.txt-link--teal-light.txt-link--is-active,
 .txt-link--teal-light:hover {
   color: undefined;
 }
@@ -11781,7 +11777,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--teal-faint {
   color: undefined;
 }
-.txt-link--teal-faint.is-active,
+.txt-link--teal-faint.txt-link--is-active,
 .txt-link--teal-faint:hover {
   color: undefined;
 }
@@ -11789,7 +11785,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--blue {
   color: undefined;
 }
-.txt-link--blue.is-active,
+.txt-link--blue.txt-link--is-active,
 .txt-link--blue:hover {
   color: undefined;
 }
@@ -11797,7 +11793,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--blue-light {
   color: undefined;
 }
-.txt-link--blue-light.is-active,
+.txt-link--blue-light.txt-link--is-active,
 .txt-link--blue-light:hover {
   color: undefined;
 }
@@ -11805,7 +11801,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--blue-faint {
   color: undefined;
 }
-.txt-link--blue-faint.is-active,
+.txt-link--blue-faint.txt-link--is-active,
 .txt-link--blue-faint:hover {
   color: undefined;
 }
@@ -11813,7 +11809,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--purple {
   color: undefined;
 }
-.txt-link--purple.is-active,
+.txt-link--purple.txt-link--is-active,
 .txt-link--purple:hover {
   color: undefined;
 }
@@ -11821,7 +11817,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--purple-light {
   color: undefined;
 }
-.txt-link--purple-light.is-active,
+.txt-link--purple-light.txt-link--is-active,
 .txt-link--purple-light:hover {
   color: undefined;
 }
@@ -11829,7 +11825,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--purple-faint {
   color: undefined;
 }
-.txt-link--purple-faint.is-active,
+.txt-link--purple-faint.txt-link--is-active,
 .txt-link--purple-faint:hover {
   color: undefined;
 }
@@ -11837,7 +11833,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--darken5 {
   color: undefined;
 }
-.txt-link--darken5.is-active,
+.txt-link--darken5.txt-link--is-active,
 .txt-link--darken5:hover {
   color: undefined;
 }
@@ -11845,7 +11841,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--darken10 {
   color: undefined;
 }
-.txt-link--darken10.is-active,
+.txt-link--darken10.txt-link--is-active,
 .txt-link--darken10:hover {
   color: undefined;
 }
@@ -11853,7 +11849,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--darken25 {
   color: undefined;
 }
-.txt-link--darken25.is-active,
+.txt-link--darken25.txt-link--is-active,
 .txt-link--darken25:hover {
   color: undefined;
 }
@@ -11861,7 +11857,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--darken50 {
   color: undefined;
 }
-.txt-link--darken50.is-active,
+.txt-link--darken50.txt-link--is-active,
 .txt-link--darken50:hover {
   color: undefined;
 }
@@ -11869,7 +11865,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--darken75 {
   color: undefined;
 }
-.txt-link--darken75.is-active,
+.txt-link--darken75.txt-link--is-active,
 .txt-link--darken75:hover {
   color: #000;
 }
@@ -11877,7 +11873,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--lighten5 {
   color: undefined;
 }
-.txt-link--lighten5.is-active,
+.txt-link--lighten5.txt-link--is-active,
 .txt-link--lighten5:hover {
   color: undefined;
 }
@@ -11885,7 +11881,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--lighten10 {
   color: undefined;
 }
-.txt-link--lighten10.is-active,
+.txt-link--lighten10.txt-link--is-active,
 .txt-link--lighten10:hover {
   color: undefined;
 }
@@ -11893,7 +11889,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--lighten25 {
   color: undefined;
 }
-.txt-link--lighten25.is-active,
+.txt-link--lighten25.txt-link--is-active,
 .txt-link--lighten25:hover {
   color: undefined;
 }
@@ -11901,7 +11897,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--lighten50 {
   color: undefined;
 }
-.txt-link--lighten50.is-active,
+.txt-link--lighten50.txt-link--is-active,
 .txt-link--lighten50:hover {
   color: undefined;
 }
@@ -11909,7 +11905,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--lighten75 {
   color: undefined;
 }
-.txt-link--lighten75.is-active,
+.txt-link--lighten75.txt-link--is-active,
 .txt-link--lighten75:hover {
   color: #fff;
 }
@@ -11917,7 +11913,7 @@ input:checked + .toggle--active-transparent {
 .txt-link--white {
   color: undefined;
 }
-.txt-link--white.is-active,
+.txt-link--white.txt-link--is-active,
 .txt-link--white:hover {
   color: undefined;
 }
@@ -11925,22 +11921,18 @@ input:checked + .toggle--active-transparent {
 .txt-link--transparent {
   color: undefined;
 }
-.txt-link--transparent.is-active,
+.txt-link--transparent.txt-link--is-active,
 .txt-link--transparent:hover {
   color: undefined;
 }
       
 /**
- * For a colored border, add the modifying class \`.border--color\`
- * where color is a [color](#Colors-&-gradients).
+ * Modify your border with a [color](#Colors-&-gradients). Depends on a \`border\` or \`border-{direction}\` class.
  *
  * @group
  * @memberof Borders
  * @example
- * <div class=\'flex-parent\'>
- *  <div class=\'col col--2 p12 mr12 border border--red\'>.border--red</div>
- *  <div class=\'col col--2 p12 mr12 border-l border-r border--dash border--yellow\'>.border--yellow</div>
- * </div>
+ * <div class=\'border border--red\'>border--red</div>
  */
 .border--gray-dark {
   border-color: #000 !important;
@@ -12139,90 +12131,90 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Control the shadow of elements on hover.
+ * Add shadows to elements on hover.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Shadows
  * @example
- * <div class=\'w400 hover-shadow-darken25\'>.hover-shadow-darken25</div>
+ * <div class=\'hover-shadow-darken25\'>hover-shadow-darken25</div>
  */
 .hover-shadow-darken5:hover {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-darken5-bold:hover {
-  box-shadow: 0 0 20px 2px undefined !important;
+.hover-shadow-bold-darken5:hover {
+  box-shadow: 0 0 30px 6px undefined !important;
 }
       
 .hover-shadow-darken10:hover {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-darken10-bold:hover {
-  box-shadow: 0 0 20px 2px undefined !important;
+.hover-shadow-bold-darken10:hover {
+  box-shadow: 0 0 30px 6px undefined !important;
 }
       
 .hover-shadow-darken25:hover {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-darken25-bold:hover {
-  box-shadow: 0 0 20px 2px undefined !important;
+.hover-shadow-bold-darken25:hover {
+  box-shadow: 0 0 30px 6px undefined !important;
 }
       
 .hover-shadow-darken50:hover {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-darken50-bold:hover {
-  box-shadow: 0 0 20px 2px undefined !important;
+.hover-shadow-bold-darken50:hover {
+  box-shadow: 0 0 30px 6px undefined !important;
 }
       
 .hover-shadow-darken75:hover {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-darken75-bold:hover {
-  box-shadow: 0 0 20px 2px undefined !important;
+.hover-shadow-bold-darken75:hover {
+  box-shadow: 0 0 30px 6px undefined !important;
 }
       
 .hover-shadow-lighten5:hover {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-lighten5-bold:hover {
-  box-shadow: 0 0 20px 2px undefined !important;
+.hover-shadow-bold-lighten5:hover {
+  box-shadow: 0 0 30px 6px undefined !important;
 }
       
 .hover-shadow-lighten10:hover {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-lighten10-bold:hover {
-  box-shadow: 0 0 20px 2px undefined !important;
+.hover-shadow-bold-lighten10:hover {
+  box-shadow: 0 0 30px 6px undefined !important;
 }
       
 .hover-shadow-lighten25:hover {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-lighten25-bold:hover {
-  box-shadow: 0 0 20px 2px undefined !important;
+.hover-shadow-bold-lighten25:hover {
+  box-shadow: 0 0 30px 6px undefined !important;
 }
       
 .hover-shadow-lighten50:hover {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-lighten50-bold:hover {
-  box-shadow: 0 0 20px 2px undefined !important;
+.hover-shadow-bold-lighten50:hover {
+  box-shadow: 0 0 30px 6px undefined !important;
 }
       
 .hover-shadow-lighten75:hover {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-lighten75-bold:hover {
-  box-shadow: 0 0 20px 2px undefined !important;
+.hover-shadow-bold-lighten75:hover {
+  box-shadow: 0 0 30px 6px undefined !important;
 }
       /** @endgroup */
 /**
  * Control the background of elements on hover.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Colors & gradients
  * @example
- * <div class=\'w400 hover-bg-darken25\'>.hover-bg-darken25</div>
+ * <div class=\'hover-bg-darken25\'>hover-bg-darken25</div>
  */
 .hover-bg-gray-dark:hover {
   background-color: #000 !important;
@@ -12424,9 +12416,9 @@ input:checked + .toggle--active-transparent {
  * Control the color of elements on hover.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Colors & gradients
  * @example
- * <div class=\'w400 hover-color-red\'>.hover-color-red</div>
+ * <div class=\'hover-color-red\'>hover-color-red</div>
  */
 .hover-color-gray-dark:hover {
   color: #000 !important;
@@ -12625,206 +12617,206 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Control the border color of elements on hover.
+ * Set the border color of an element on hover. Depends on a \`border\` or \`border-{direction}\` class.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Borders
  * @example
- * <div class=\'w400 border border--2 border--pink hover-border-blue\'>.hover-border-blue</div>
+ * <div class=\'border hover-border--red\'>hover-border-red</div>
  */
-.hover-border-gray-dark:hover {
+.hover-border--gray-dark:hover {
   border-color: #000 !important;
 }
       
-.hover-border-gray:hover {
+.hover-border--gray:hover {
   border-color: undefined !important;
 }
       
-.hover-border-gray-light:hover {
+.hover-border--gray-light:hover {
   border-color: undefined !important;
 }
       
-.hover-border-gray-faint:hover {
+.hover-border--gray-faint:hover {
   border-color: undefined !important;
 }
       
-.hover-border-pink-dark:hover {
+.hover-border--pink-dark:hover {
   border-color: undefined !important;
 }
       
-.hover-border-pink:hover {
+.hover-border--pink:hover {
   border-color: pink !important;
 }
       
-.hover-border-pink-light:hover {
+.hover-border--pink-light:hover {
   border-color: undefined !important;
 }
       
-.hover-border-pink-faint:hover {
+.hover-border--pink-faint:hover {
   border-color: undefined !important;
 }
       
-.hover-border-red-dark:hover {
+.hover-border--red-dark:hover {
   border-color: undefined !important;
 }
       
-.hover-border-red:hover {
+.hover-border--red:hover {
   border-color: #fff !important;
 }
       
-.hover-border-red-light:hover {
+.hover-border--red-light:hover {
   border-color: undefined !important;
 }
       
-.hover-border-red-faint:hover {
+.hover-border--red-faint:hover {
   border-color: undefined !important;
 }
       
-.hover-border-orange-dark:hover {
+.hover-border--orange-dark:hover {
   border-color: undefined !important;
 }
       
-.hover-border-orange:hover {
+.hover-border--orange:hover {
   border-color: undefined !important;
 }
       
-.hover-border-orange-light:hover {
+.hover-border--orange-light:hover {
   border-color: undefined !important;
 }
       
-.hover-border-orange-faint:hover {
+.hover-border--orange-faint:hover {
   border-color: undefined !important;
 }
       
-.hover-border-yellow-dark:hover {
+.hover-border--yellow-dark:hover {
   border-color: undefined !important;
 }
       
-.hover-border-yellow:hover {
+.hover-border--yellow:hover {
   border-color: undefined !important;
 }
       
-.hover-border-yellow-light:hover {
+.hover-border--yellow-light:hover {
   border-color: undefined !important;
 }
       
-.hover-border-yellow-faint:hover {
+.hover-border--yellow-faint:hover {
   border-color: undefined !important;
 }
       
-.hover-border-green-dark:hover {
+.hover-border--green-dark:hover {
   border-color: undefined !important;
 }
       
-.hover-border-green:hover {
+.hover-border--green:hover {
   border-color: undefined !important;
 }
       
-.hover-border-green-light:hover {
+.hover-border--green-light:hover {
   border-color: undefined !important;
 }
       
-.hover-border-green-faint:hover {
+.hover-border--green-faint:hover {
   border-color: undefined !important;
 }
       
-.hover-border-teal-dark:hover {
+.hover-border--teal-dark:hover {
   border-color: undefined !important;
 }
       
-.hover-border-teal:hover {
+.hover-border--teal:hover {
   border-color: undefined !important;
 }
       
-.hover-border-teal-light:hover {
+.hover-border--teal-light:hover {
   border-color: undefined !important;
 }
       
-.hover-border-teal-faint:hover {
+.hover-border--teal-faint:hover {
   border-color: undefined !important;
 }
       
-.hover-border-blue-dark:hover {
+.hover-border--blue-dark:hover {
   border-color: undefined !important;
 }
       
-.hover-border-blue:hover {
+.hover-border--blue:hover {
   border-color: undefined !important;
 }
       
-.hover-border-blue-light:hover {
+.hover-border--blue-light:hover {
   border-color: undefined !important;
 }
       
-.hover-border-blue-faint:hover {
+.hover-border--blue-faint:hover {
   border-color: undefined !important;
 }
       
-.hover-border-purple-dark:hover {
+.hover-border--purple-dark:hover {
   border-color: undefined !important;
 }
       
-.hover-border-purple:hover {
+.hover-border--purple:hover {
   border-color: undefined !important;
 }
       
-.hover-border-purple-light:hover {
+.hover-border--purple-light:hover {
   border-color: undefined !important;
 }
       
-.hover-border-purple-faint:hover {
+.hover-border--purple-faint:hover {
   border-color: undefined !important;
 }
       
-.hover-border-darken5:hover {
+.hover-border--darken5:hover {
   border-color: undefined !important;
 }
       
-.hover-border-darken10:hover {
+.hover-border--darken10:hover {
   border-color: undefined !important;
 }
       
-.hover-border-darken25:hover {
+.hover-border--darken25:hover {
   border-color: undefined !important;
 }
       
-.hover-border-darken50:hover {
+.hover-border--darken50:hover {
   border-color: undefined !important;
 }
       
-.hover-border-darken75:hover {
+.hover-border--darken75:hover {
   border-color: undefined !important;
 }
       
-.hover-border-lighten5:hover {
+.hover-border--lighten5:hover {
   border-color: undefined !important;
 }
       
-.hover-border-lighten10:hover {
+.hover-border--lighten10:hover {
   border-color: undefined !important;
 }
       
-.hover-border-lighten25:hover {
+.hover-border--lighten25:hover {
   border-color: undefined !important;
 }
       
-.hover-border-lighten50:hover {
+.hover-border--lighten50:hover {
   border-color: undefined !important;
 }
       
-.hover-border-lighten75:hover {
+.hover-border--lighten75:hover {
   border-color: undefined !important;
 }
       
-.hover-border-white:hover {
+.hover-border--white:hover {
   border-color: undefined !important;
 }
       
-.hover-border-black:hover {
+.hover-border--black:hover {
   border-color: undefined !important;
 }
       
-.hover-border-transparent:hover {
+.hover-border--transparent:hover {
   border-color: undefined !important;
 }
       /** @endgroup */"
@@ -12839,7 +12831,7 @@ exports[`buildColorVariants with granular colors 1`] = `
 }
 
 .btn--green:hover,
-.btn--green.is-active {
+.btn--green.btn--is-active {
   background-color: #007532;
 }
       
@@ -12848,7 +12840,7 @@ exports[`buildColorVariants with granular colors 1`] = `
 }
 
 .btn--purple:hover,
-.btn--purple.is-active {
+.btn--purple.btn--is-active {
   background-color: #500078;
 }
       
@@ -12870,9 +12862,9 @@ exports[`buildColorVariants with granular colors 1`] = `
  * @memberof Background colors
  * @example
  * <div class=\'grid\'>
- *   <div class=\'col col--3 bg-orange p6\'>.bg-orange</div>
- *   <div class=\'col col--3 bg-yellow p6\'>.bg-yellow</div>
- *   <div class=\'col col--3 bg-pink p6\'>.bg-pink</div>
+ *   <div class=\'col col--3 bg-orange p6\'>bg-orange</div>
+ *   <div class=\'col col--3 bg-yellow p6\'>bg-yellow</div>
+ *   <div class=\'col col--3 bg-pink p6\'>bg-pink</div>
  * </div>
  */
 .bg-orange {
@@ -12890,24 +12882,24 @@ exports[`buildColorVariants with granular colors 1`] = `
 .txt-link--orange {
   color: #ff6e00;
 }
-.txt-link--orange.is-active,
+.txt-link--orange.txt-link--is-active,
 .txt-link--orange:hover {
   color: #DC4600;
 }
       
 /**
- * Control the shadow of elements on hover.
+ * Add shadows to elements on hover.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Shadows
  * @example
- * <div class=\'w400 hover-shadow-darken25\'>.hover-shadow-darken25</div>
+ * <div class=\'hover-shadow-darken25\'>hover-shadow-darken25</div>
  */
 .hover-shadow-lighten50:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.50) !important;
 }
-.hover-shadow-lighten50-bold:hover {
-  box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.50) !important;
+.hover-shadow-bold-lighten50:hover {
+  box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.50) !important;
 }
       /** @endgroup */"
 `;
@@ -12921,7 +12913,7 @@ exports[`buildColorVariants with universal colors 1`] = `
 }
 
 .btn--red:hover,
-.btn--red.is-active {
+.btn--red.btn--is-active {
   background-color: #BE0014;
 }
       
@@ -12930,7 +12922,7 @@ exports[`buildColorVariants with universal colors 1`] = `
 }
 
 .btn--teal:hover,
-.btn--teal.is-active {
+.btn--teal.btn--is-active {
   background-color: #00626E;
 }
       
@@ -12939,7 +12931,7 @@ exports[`buildColorVariants with universal colors 1`] = `
 }
 
 .btn--green-light:hover,
-.btn--green-light.is-active {
+.btn--green-light.btn--is-active {
   background-color: #01aa46;
 }
       
@@ -12949,7 +12941,7 @@ exports[`buildColorVariants with universal colors 1`] = `
 }
 
 .btn--stroke.btn--red:hover,
-.btn--stroke.btn--red.is-active {
+.btn--stroke--is-active.btn--red {
   color: #BE0014;
 }
       
@@ -12959,7 +12951,7 @@ exports[`buildColorVariants with universal colors 1`] = `
 }
 
 .btn--stroke.btn--teal:hover,
-.btn--stroke.btn--teal.is-active {
+.btn--stroke--is-active.btn--teal {
   color: #00626E;
 }
       
@@ -12969,7 +12961,7 @@ exports[`buildColorVariants with universal colors 1`] = `
 }
 
 .btn--stroke.btn--green-light:hover,
-.btn--stroke.btn--green-light.is-active {
+.btn--stroke--is-active.btn--green-light {
   color: #01aa46;
 }
       
@@ -13287,10 +13279,10 @@ input:checked + .toggle--active-green-light {
  * @memberof Text colors
  * @example
  * <div class=\'grid\'>
- *   <div class=\'col col--3 color-red\'>.color-red</div>
- *   <div class=\'col col--3 color-teal\'>.color-teal</div>
- *   <div class=\'col col--3 color-teal-dark\'>.color-teal-dark</div>
- *   <div class=\'col col--3 color-green-light\'>.color-green-light</div>
+ *   <div class=\'col col--3 color-red\'>color-red</div>
+ *   <div class=\'col col--3 color-teal\'>color-teal</div>
+ *   <div class=\'col col--3 color-teal-dark\'>color-teal-dark</div>
+ *   <div class=\'col col--3 color-green-light\'>color-green-light</div>
  *   <div class=\'col col--3 color-text\'>.color-text</div>
  * </div>
  */
@@ -13324,10 +13316,10 @@ input:checked + .toggle--active-green-light {
  * @memberof Background colors
  * @example
  * <div class=\'grid\'>
- *   <div class=\'col col--3 bg-red p6\'>.bg-red</div>
- *   <div class=\'col col--3 bg-teal p6\'>.bg-teal</div>
- *   <div class=\'col col--3 bg-teal-dark p6\'>.bg-teal-dark</div>
- *   <div class=\'col col--3 bg-green-light p6\'>.bg-green-light</div>
+ *   <div class=\'col col--3 bg-red p6\'>bg-red</div>
+ *   <div class=\'col col--3 bg-teal p6\'>bg-teal</div>
+ *   <div class=\'col col--3 bg-teal-dark p6\'>bg-teal-dark</div>
+ *   <div class=\'col col--3 bg-green-light p6\'>bg-green-light</div>
  * </div>
  */
 .bg-red {
@@ -13349,7 +13341,7 @@ input:checked + .toggle--active-green-light {
 .txt-link--red {
   color: #dc2b28;
 }
-.txt-link--red.is-active,
+.txt-link--red.txt-link--is-active,
 .txt-link--red:hover {
   color: #BE0014;
 }
@@ -13357,7 +13349,7 @@ input:checked + .toggle--active-green-light {
 .txt-link--teal {
   color: #01b5b4;
 }
-.txt-link--teal.is-active,
+.txt-link--teal.txt-link--is-active,
 .txt-link--teal:hover {
   color: #00626E;
 }
@@ -13365,22 +13357,18 @@ input:checked + .toggle--active-green-light {
 .txt-link--green-light {
   color: #72C781;
 }
-.txt-link--green-light.is-active,
+.txt-link--green-light.txt-link--is-active,
 .txt-link--green-light:hover {
   color: #01aa46;
 }
       
 /**
- * For a colored border, add the modifying class \`.border--color\`
- * where color is a [color](#Colors-&-gradients).
+ * Modify your border with a [color](#Colors-&-gradients). Depends on a \`border\` or \`border-{direction}\` class.
  *
  * @group
  * @memberof Borders
  * @example
- * <div class=\'flex-parent\'>
- *  <div class=\'col col--2 p12 mr12 border border--red\'>.border--red</div>
- *  <div class=\'col col--2 p12 mr12 border-l border-r border--dash border--yellow\'>.border--yellow</div>
- * </div>
+ * <div class=\'border border--red\'>border--red</div>
  */
 .border--red {
   border-color: #dc2b28 !important;
@@ -13399,20 +13387,20 @@ input:checked + .toggle--active-green-light {
 }
       /** @endgroup */
 /**
- * Control the shadow of elements on hover.
+ * Add shadows to elements on hover.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Shadows
  * @example
- * <div class=\'w400 hover-shadow-darken25\'>.hover-shadow-darken25</div>
+ * <div class=\'hover-shadow-darken25\'>hover-shadow-darken25</div>
  *//** @endgroup */
 /**
  * Control the background of elements on hover.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Colors & gradients
  * @example
- * <div class=\'w400 hover-bg-darken25\'>.hover-bg-darken25</div>
+ * <div class=\'hover-bg-darken25\'>hover-bg-darken25</div>
  */
 .hover-bg-red:hover {
   background-color: #dc2b28 !important;
@@ -13434,9 +13422,9 @@ input:checked + .toggle--active-green-light {
  * Control the color of elements on hover.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Colors & gradients
  * @example
- * <div class=\'w400 hover-color-red\'>.hover-color-red</div>
+ * <div class=\'hover-color-red\'>hover-color-red</div>
  */
 .hover-color-red:hover {
   color: #dc2b28 !important;
@@ -13455,26 +13443,26 @@ input:checked + .toggle--active-green-light {
 }
       /** @endgroup */
 /**
- * Control the border color of elements on hover.
+ * Set the border color of an element on hover. Depends on a \`border\` or \`border-{direction}\` class.
  *
  * @group
- * @memberof State modifiers
+ * @memberof Borders
  * @example
- * <div class=\'w400 border border--2 border--pink hover-border-blue\'>.hover-border-blue</div>
+ * <div class=\'border hover-border--red\'>hover-border-red</div>
  */
-.hover-border-red:hover {
+.hover-border--red:hover {
   border-color: #dc2b28 !important;
 }
       
-.hover-border-teal:hover {
+.hover-border--teal:hover {
   border-color: #01b5b4 !important;
 }
       
-.hover-border-teal-dark:hover {
+.hover-border--teal-dark:hover {
   border-color: #00626E !important;
 }
       
-.hover-border-green-light:hover {
+.hover-border--green-light:hover {
   border-color: #72C781 !important;
 }
       /** @endgroup */"
