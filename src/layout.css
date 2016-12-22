@@ -1,106 +1,31 @@
 /**
- * Layout
+ * Define the size, shape and content flow of your markup.
  * @section Layout
  */
 
 /**
- * Use to apply fluid left and right margins across a variety of screen sizes. Designed to
- * keep section width similar across a variety of screen sizes.
- */
-.limiter {
-  width: 83.3333%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (--l-screen) {
-  .limiter {
-    width: 100%;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
-/**
- * Flexbox utilities. Check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
- * to learn how the system works. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Assembly uses a 12-column flexible grid with optional [gutters](#grid--gut6) and left and right [column offsets](#col--offl1).
  *
+ * @section Grid
  * @memberof Layout
- * @group
  */
-.flex-parent { display: flex !important; }
-.flex-parent--inline { display: inline-flex !important; }
-.flex-parent--column { flex-direction: column !important; }
-.flex-parent--wrap { flex-wrap: wrap !important; }
-.flex-parent--justify-end { justify-content: flex-end !important; }
-.flex-parent--center-main { justify-content: center !important; }
-.flex-parent--center-cross { align-items: center !important; }
-.flex-parent--stretch-main { justify-content: stretch !important; }
-.flex-parent--stretch-cross { align-items: stretch !important; }
-
-.flex-child-noshrink { flex-shrink: 0 !important; }
-.flex-child-grow {
-  flex-grow: 1;
-  /* prevent overflowing chidlren
-  clearfix. https://css-tricks.com/flexbox-truncated-text/ */
-  min-width: 0 !important;
-}
-/** @endgroup */
-
-@media (--m-screen) {
-  .flex-parent-mm { display: flex !important; }
-  .flex-parent-none-mm { flex: none !important; }
-  .flex-parent--column-mm { flex-direction: column !important; }
-  .flex-parent--wrap-mm { flex-wrap: wrap !important; }
-  .flex-parent--justify-end-mm { justify-content: flex-end !important; }
-  .flex-parent--center-main-mm { justify-content: center !important; }
-  .flex-parent--center-cross-mm { align-items: center !important; }
-  .flex-parent--stretch-cross-mm { align-items: stretch !important; }
-  .flex-child-noshrink-mm { flex-shrink: 0 !important; }
-  .flex-child-grow-mm {
-    flex-grow: 1 !important;
-    min-width: 0 !important;
-  }
-}
-
-@media (--l-screen) {
-  .flex-parent-ml { display: flex !important; }
-  .flex-parent-none-ml { flex: none !important; }
-  .flex-parent--column-ml { flex-direction: column !important; }
-  .flex-parent--wrap-ml { flex-wrap: wrap !important; }
-  .flex-parent--justify-end-ml { justify-content: flex-end !important; }
-  .flex-parent--center-main-ml { justify-content: center !important; }
-  .flex-parent--center-cross-ml { align-items: center !important; }
-  .flex-parent--stretch-cross-ml { align-items: stretch !important; }
-  .flex-child-noshrink-ml { flex-shrink: 0 !important; }
-  .flex-child-grow-ml {
-    flex-grow: 1 !important;
-    min-width: 0 !important;
-  }
-}
-
-@media (--xl-screen) {
-  .flex-parent-mxl { display: flex !important; }
-  .flex-parent-none-mxl { flex: none !important; }
-  .flex-parent--column-mxl { flex-direction: column !important; }
-  .flex-parent--wrap-mxl { flex-wrap: wrap !important; }
-  .flex-parent--justify-end-mxl { justify-content: flex-end !important; }
-  .flex-parent--center-main-mxl { justify-content: center !important; }
-  .flex-parent--center-cross-mxl { align-items: center !important; }
-  .flex-parent--stretch-cross-mxl { align-items: stretch !important; }
-  .flex-child-noshrink-mxl { flex-shrink: 0 !important; }
-  .flex-child-grow-mxl {
-    flex-grow: 1 !important;
-    min-width: 0 !important;
-  }
-}
 
 /**
- * Column classes
+ * Grids are made by adding the `grid` class to a parent, followed by the `col–{size}` class to a child element. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
- * @memberof Layout
+ * @memberof Grid
+ * @example
+ * <div class='grid'>
+ *   <div class='col col--2 border border--darken10'>col--2</div>
+ *   <div class='col col--4 border border--darken10'>col--4</div>
+ *   <div class='col col--6 border border--darken10'>col--6</div>
+ * </div>
  */
+.grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
 .col { flex-shrink: 0 !important; }
 .col--1 { width: 08.3333% !important; }
 .col--2 { width: 16.6666% !important; }
@@ -162,28 +87,20 @@
 }
 
 /**
- * Column container for grids.
- *
+ * Appy column gutters to all columns in a grid by adding a `grid--{size}` modifier class to the `grid` element.
  * @example
  * <div class='grid grid--gut12'>
- *  <div class='col col--6'>
- *    <div class='p12 bg-blue-faint'>6</div>
- *  </div>
- *  <div class='col col--3'>
- *    <div class='p12 bg-blue-faint'>3</div>
- *  </div>
- *  <div class='col col--3'>
- *    <div class='p12 bg-blue-faint'>3</div>
- *  </div>
+ *   <div class='col col--2'>
+ *     <div class='border border--darken10'>col--2</div>
+ *   </div>
+ *   <div class='col col--4'>
+ *     <div class='border border--darken10'>col--4</div>
+ *   </div>
+ *   <div class='col col--6'>
+ *     <div class='border border--darken10'>col--6</div>
+ *   </div>
  * </div>
- */
-.grid {
-  display: flex !important;
-  flex-wrap: wrap !important;
-}
-
-/**
- * Column gutter classes
+ * @memberof Grid
  * @group
  */
 .grid--gut6 { margin-left: -6px !important; }
@@ -202,9 +119,13 @@
 /* stylelint-enable selector-no-combinator */
 
 /**
- * Left column margins.
+ * Left grid offsets. Add offsets directly to columns. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * @example
+ * <div class='grid'>
+ *   <div class='col col--6 col--offl6 border border--darken10'>col--6</div>
+ * </div>
+ * @memberof Grid
  * @group
- * @memberof Layout
  */
 .col--offl1 { margin-left: 08.3333% !important; }
 .col--offl2 { margin-left: 16.6666% !important; }
@@ -266,9 +187,14 @@
 }
 
 /**
- * Right column margins.
+ * Right grid offsets. Add offsets directly to columns. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * @example
+ * <div class='grid'>
+ *   <div class='col col--3 border border--darken10'>col--3</div>
+ *   <div class='col col--6 col--offl3 border border--darken10'>col6 with offset</div>
+ * </div>
+ * @memberof Grid
  * @group
- * @memberof Layout
  */
 .col--offr1 { margin-right: 08.3333% !important; }
 .col--offr2 { margin-right: 16.6666% !important; }
@@ -330,75 +256,22 @@
 }
 
 /**
- * Bleed classes
- * One caveat with using bleed rules is that there are certain occasisons where
- * content will overflow from the left and right sides of the screens. It is
- * generally necessary to add a `.clip` class on the parent to avoid overflow
- * with scrollbars.
- * @group
- * @example
- * <div>TODO</div>
- */
-.bleed {
-  margin-left: calc(50% - 50vw) !important;
-  margin-right: calc(50% - 50vw) !important;
-}
-
-.bleed-r { flex: 1 !important; margin-right: calc(50% - 50vw) !important; }
-.bleed-l { flex: 1 !important; margin-left: calc(50% - 50vw) !important; }
-/* @endgroup */
-
-/**
- * For non-grid, non-flexbox layouts.
- *
- * @section Floats and clearfix
- * @memberof Layout
- */
-
-/**
- * @group
- * @memberof Floats and clearfix
- * @example
- * <div class='clearfix border border--gray'>
- *   <div class='fl'>left</div>
- *   <div class='fr'>right</div>
- * </div>
- */
-.fl { float: left !important; }
-.fr { float: right !important; }
-.clearfix::after {
-  content: '' !important;
-  display: block !important;
-  clear: both !important;
-}
-/** @endgroup */
-
-/**
- * Use display classes to control the display property of elements. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Control the display style of elements.
  *
  * @section Display
  * @memberof Layout
  */
 
 /**
- * @group
+ * Set display style to inline, block, inline-block, or none. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ *
  * @memberof Display
+ * @group
  * @example
- * <div class="p12 border mb12">
- *   <div class="inline border border--blue-light bor-all">inline</div>
- * </div>
- * <div class="p12 border mb12">
- *   <div class="block border border--blue-light bor-all">block</div>
- * </div>
- * <div class="p12 border mb12">
- *   <div class="inline-block border border--blue-light bor-all">inline-block</div>
- * </div>
- * <div class="p12 border mb12">
- *   <div class="flex-parent border border--blue-light bor-all">flex</div>
- * </div>
- * <div class="p12 border">
- *   <div class="none border border--blue-light bor-all">none</div>
- * </div>
+ * <div class="inline bg-darken10">inline</div>
+ * <div class="block bg-darken10">block</div>
+ * <div class="inline-block bg-darken10">inline-block</div>
+ * <div class="none bg-darken10">none</div>
  */
 .inline { display: inline !important; }
 .block { display: block !important; }
@@ -428,16 +301,26 @@
 }
 
 /**
- * Positioning
+ * Basic Positioning. For flexbox-specific positioning rules, see documentation for [flex](#flex-parent) utilities.
  * @section Positioning
  * @memberof Layout
  */
 
 /**
- * Set an element's `position`. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set an element's position. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
+ * @example
+ * <div class="relative">
+ *   <div class="absolute bg-darken10 right">absolute</div>
+ *   <div class="relative bg-darken10">relative</div>
+ *   <div class="static bg-darken10">static</div>
+ *   <!--
+ *    Fixed positioning would interfere with page
+ *    <div class="fixed bg-darken10">fixed</div>
+ *   -->
+ * </div>
  */
 .fixed { position: fixed !important; }
 .absolute { position: absolute !important; }
@@ -467,10 +350,17 @@
 }
 
 /**
- * Set positioned elements flush against a side of their container. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Pin positioned elements against a side of their container. Positioning classes can be combined to stretch elements across the top, bottom, left, or right of their container. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
+ * @example
+  * <div class="relative h72">
+ *   <div class="absolute bg-darken10 right">right</div>
+ *   <div class="absolute bg-darken10 bottom">bottom</div>
+ *   <div class="absolute bg-darken10 left">left</div>
+ *   <div class="absolute bg-darken10 top left right txt-align-center">top left right</div>
+ * </div>
  */
 .top { top: 0 !important; }
 .right { right: 0 !important; }
@@ -505,6 +395,12 @@
  *
  * @group
  * @memberof Positioning
+ * @example
+ * <div class="relative h72">
+ *   <div class="absolute z5 bg-pink p6">z5</div>
+ *   <div class="absolute z1 bg-blue p6 mt12 ml24">z1</div>
+ *   <div class="absolute z1-neg1 bg-teal p6 mt24 ml48">z-neg1</div>
+ * </div>
  */
 .z-neg1 { z-index: -1 !important; }
 .z0 { z-index: 0 !important; }
@@ -547,25 +443,109 @@
 
 /**
  * All margin classes follow the following pattern:
- * `m<side><margin-size>-<screen-size>`. Screen sizes are *optional* and are `-mm`, `-ml`, and `-mxl`.
+ * `m<side><margin-size>`.
  *
  * @section Margins
  * @memberof Layout
  */
 
 /**
- * @memberof Margins
+ * Margins on all sides. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * @group
  * @example
- * <div class='border'>
- *   <div class='mt12 ml24 mb6 mr12 bg-blue-faint'>one</div>
- *   <div class='mt6 mb6 mr6 bg-blue-faint'>two</div>
- *   <div class='ml18 bg-blue-faint'>three</div>
- * </div>
+ * <div class='m24 bg-darken10'>m24</div>
+ * @memberof Margins
  */
+.m0 { margin: 0 !important; }
+.m3 { margin: 3px !important; }
+.m6 { margin: 6px !important; }
+.m12 { margin: 12px !important; }
+.m18 { margin: 18px !important; }
+.m24 { margin: 24px !important; }
+.m48 { margin: 48px !important; }
+.m72 { margin: 72px !important; }
+.m96 { margin: 96px !important; }
+.m120 { margin: 120px !important; }
+.m180 { margin: 180px !important; }
+.m240 { margin: 240px !important; }
+.m480 { margin: 480px !important; }
+/** @endgroup */
+
+@media (--m-screen) {
+  .m0-mm { margin: 0 !important; }
+  .m3-mm { margin: 3px !important; }
+  .m6-mm { margin: 6px !important; }
+  .m12-mm { margin: 12px !important; }
+  .m18-mm { margin: 18px !important; }
+  .m24-mm { margin: 24px !important; }
+  .m48-mm { margin: 48px !important; }
+  .m72-mm { margin: 72px !important; }
+  .m96-mm { margin: 96px !important; }
+  .m120-mm { margin: 120px !important; }
+  .m180-mm { margin: 180px !important; }
+  .m240-mm { margin: 240px !important; }
+  .m480-mm { margin: 480px !important; }
+}
+
+@media (--l-screen) {
+  .m0-ml { margin: 0 !important; }
+  .m3-ml { margin: 3px !important; }
+  .m6-ml { margin: 6px !important; }
+  .m12-ml { margin: 12px !important; }
+  .m18-ml { margin: 18px !important; }
+  .m24-ml { margin: 24px !important; }
+  .m48-ml { margin: 48px !important; }
+  .m72-ml { margin: 72px !important; }
+  .m96-ml { margin: 96px !important; }
+  .m120-ml { margin: 120px !important; }
+  .m180-ml { margin: 180px !important; }
+  .m240-ml { margin: 240px !important; }
+  .m480-ml { margin: 480px !important; }
+}
+
+@media (--xl-screen) {
+  .m0-mxl { margin: 0 !important; }
+  .m3-mxl { margin: 3px !important; }
+  .m6-mxl { margin: 6px !important; }
+  .m12-mxl { margin: 12px !important; }
+  .m18-mxl { margin: 18px !important; }
+  .m24-mxl { margin: 24px !important; }
+  .m48-mxl { margin: 48px !important; }
+  .m72-mxl { margin: 72px !important; }
+  .m96-mxl { margin: 96px !important; }
+  .m120-mxl { margin: 120px !important; }
+  .m180-mxl { margin: 180px !important; }
+  .m240-mxl { margin: 240px !important; }
+  .m480-mxl { margin: 480px !important; }
+}
 
 /**
- * Top margins
+ * Auto margins on left and right. Useful for horizontally centering content Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
+ * @example
+ * <div class='mx-auto w72 bg-darken10'>mx-auto</div>
+ * @memberof Margins
+ */
+.mx-auto { margin-left: auto !important; margin-right: auto !important; }
+/** @endgroup */
+
+@media (--m-screen) {
+  .mx-auto { margin-left: auto !important; margin-right: auto !important; }
+}
+
+@media (--l-screen) {
+  .mx-auto { margin-left: auto !important; margin-right: auto !important; }
+}
+
+@media (--xl-screen) {
+  .mx-auto { margin-left: auto !important; margin-right: auto !important; }
+}
+
+/**
+ * Margins on top. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * @group
+ * @example
+ * <div class='mt24 bg-darken10'>mt24</div>
  * @memberof Margins
  */
 .mt0 { margin-top: 0 !important; }
@@ -632,8 +612,12 @@
 }
 
 /**
- * Right margins
+ * Margins to the right. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
+ * @example
+ * <div class='border border--darken10'>
+ *   <div class='mr24 bg-darken10'>mt24</div>
+ * </div>
  * @memberof Margins
  */
 .mr0 { margin-right: 0 !important; }
@@ -700,8 +684,10 @@
 }
 
 /**
- * Bottom margins
+ * Margins on the bottom. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
+ * @example
+ * <div class='mb24 bg-darken10'>mb24</div>
  * @memberof Margins
  */
 .mb-neg1 { margin-bottom: -1px !important; }
@@ -776,8 +762,10 @@
 }
 
 /**
- * Left margins
+ * Margins to the left. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
+ * @example
+ * <div class='ml24 bg-darken10'>ml24</div>
  * @memberof Margins
  */
 .ml0 { margin-left: 0 !important; }
@@ -845,26 +833,18 @@
 
 /**
  * All padding classes follow the following pattern:
- * `m<side><padding-size>-<screen-size>`. Screen sizes are *optional* and are `-mm`, `-ml`, and `-mxl`.
+ * `m<side><padding-size>`.
  *
  * @section Padding
  * @memberof Layout
  */
 
 /**
- * @memberof Padding
- * @example
- * <div class='border border--gray clearfix'>
- *   <div class='fl pt12 pl24 pb6 pr12 bg-blue-faint'>one</div>
- *   <div class='fl py6 pr6 bg-blue'>two</div>
- *   <div class='fl pl48 bg-red'>three</div>
- * </div>
- */
-
-/**
- * Padding on all sides
+ * Padding on all sides. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Padding
+ * @example
+ * <div class='p24 bg-darken10'>p24</div>
  */
 .p0 { padding: 0 !important; }
 .p3 { padding: 3px !important; }
@@ -914,9 +894,11 @@
 }
 
 /**
- * Top padding
+ * Padding on top. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Padding
+ * @example
+ * <div class='pt24 bg-darken10'>pt24</div>
  */
 .pt0 { padding-top: 0 !important; }
 .pt3 { padding-top: 3px !important; }
@@ -966,10 +948,14 @@
 }
 
 /**
- * Right padding
+ * Padding to the right. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Padding
- **/
+ * @example
+ * <div class='pr24 bg-darken10'>
+ *   <div class='bg-blue-faint'>pr24</div>
+ * </div>
+ */
 .pr0 { padding-right: 0 !important; }
 .pr3 { padding-right: 3px !important; }
 .pr6 { padding-right: 6px !important; }
@@ -1018,9 +1004,11 @@
 }
 
 /**
- * Bottom padding
+ * Padding on the bottom. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Padding
+ * @example
+ * <div class='pb24 bg-darken10'>pb24</div>
  */
 .pb0 { padding-bottom: 0 !important; }
 .pb3 { padding-bottom: 3px !important; }
@@ -1070,9 +1058,11 @@
 }
 
 /**
- * Left padding
+ * Padding to the left. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Padding
+ * @example
+ * <div class='pl24 bg-darken10'>pl24</div>
  */
 .pl0 { padding-left: 0 !important; }
 .pl3 { padding-left: 3px !important; }
@@ -1123,22 +1113,18 @@
 
 /**
  * All sizing classes follow the following pattern:
- * `<w|h><min|max><dimension-size>-<screen-size>`. Min/max values are optional. Screen sizes are *optional* and are `-mm`, `-ml`, and `-mxl`.
+ * `<w|h><min|max><dimension-size>`. Min/max values are optional.
  *
  * @section Sizing
  * @memberof Layout
  */
 
 /**
- * @memberof Sizing
- * @example
- * <div class='w120 h72 bg-blue-faint'>.w72 .h24</div>
- */
-
-/**
- * Widths
+ * Widths. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Sizing
+ * @example
+ * <div class='w96 bg-darken10'>w96</div>
  */
 .w0 { width: 0 !important; }
 .w6 { width: 6px !important; }
@@ -1208,9 +1194,11 @@
 }
 
 /**
- * Max widths
+ * Max widths. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Sizing
+ * @example
+ * <div class='wmax6 bg-darken10'>wmax6</div>
  */
 .wmax0 { max-width: 0 !important; }
 .wmax6 { max-width: 6px !important; }
@@ -1282,9 +1270,11 @@
 }
 
 /**
- * Min widths
+ * Min widths. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Sizing
+ * @example
+ * <div class='wmin96 bg-darken10'>wmin96</div>
  */
 .wmin0 { min-width: 0 !important; }
 .wmin6 { min-width: 6px !important; }
@@ -1346,9 +1336,11 @@
 }
 
 /**
- * Heights
+ * Heights. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Sizing
+ * @example
+ * <div class='h24 bg-darken10'>h24</div>
  */
 .h0 { height: 0 !important; }
 .h6 { height: 6px !important; }
@@ -1410,9 +1402,11 @@
 }
 
 /**
- * Max heights
+ * Max heights. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Sizing
+ * @example
+ * <div class='hmax12 bg-darken10'>hmax12</div>
  */
 .hmax0 { max-height: 0 !important; }
 .hmax6 { max-height: 6px !important; }
@@ -1474,9 +1468,11 @@
 }
 
 /**
- * Min heights
+ * Min heights. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Sizing
+ * @example
+ * <div class='hmin bg-darken10'>hmin12</div>
  */
 .hmin0 { min-height: 0 !important; }
 .hmin6 { min-height: 6px !important; }
@@ -1538,10 +1534,11 @@
 }
 
 /**
- * Set the height of an element relative to the viewport. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
- *
+ * Viewport-based heights. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Sizing
+ * @example
+ * <div class='viewport-third bg-darken10'>viewport-third</div>
  */
 .viewport-third { height: 33.3333vh !important; }
 .viewport-half { height: 50vh !important; }
@@ -1573,3 +1570,127 @@
   .viewport-almost-mxl { height: 90vh !important; }
   .viewport-full-mxl { height: 100vh !important; }
 }
+
+/**
+ * Extra layout utilities.
+ *
+ * @memberof Layout
+ * @section Layout utils
+ */
+
+/**
+ * Flexbox utilities. Check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+ * to learn how the system works. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ *
+ * @memberof Layout utils
+ * @group
+ */
+.flex-parent { display: flex !important; }
+.flex-parent--inline { display: inline-flex !important; }
+.flex-parent--column { flex-direction: column !important; }
+.flex-parent--wrap { flex-wrap: wrap !important; }
+.flex-parent--justify-end { justify-content: flex-end !important; }
+.flex-parent--center-main { justify-content: center !important; }
+.flex-parent--center-cross { align-items: center !important; }
+.flex-parent--stretch-main { justify-content: stretch !important; }
+.flex-parent--stretch-cross { align-items: stretch !important; }
+
+.flex-child-noshrink { flex-shrink: 0 !important; }
+.flex-child-grow {
+  flex-grow: 1;
+  /* prevent overflowing chidlren
+  clearfix. https://css-tricks.com/flexbox-truncated-text/ */
+  min-width: 0 !important;
+}
+/** @endgroup */
+
+@media (--m-screen) {
+  .flex-parent-mm { display: flex !important; }
+  .flex-parent-none-mm { flex: none !important; }
+  .flex-parent--column-mm { flex-direction: column !important; }
+  .flex-parent--wrap-mm { flex-wrap: wrap !important; }
+  .flex-parent--justify-end-mm { justify-content: flex-end !important; }
+  .flex-parent--center-main-mm { justify-content: center !important; }
+  .flex-parent--center-cross-mm { align-items: center !important; }
+  .flex-parent--stretch-cross-mm { align-items: stretch !important; }
+  .flex-child-noshrink-mm { flex-shrink: 0 !important; }
+  .flex-child-grow-mm {
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+  }
+}
+
+@media (--l-screen) {
+  .flex-parent-ml { display: flex !important; }
+  .flex-parent-none-ml { flex: none !important; }
+  .flex-parent--column-ml { flex-direction: column !important; }
+  .flex-parent--wrap-ml { flex-wrap: wrap !important; }
+  .flex-parent--justify-end-ml { justify-content: flex-end !important; }
+  .flex-parent--center-main-ml { justify-content: center !important; }
+  .flex-parent--center-cross-ml { align-items: center !important; }
+  .flex-parent--stretch-cross-ml { align-items: stretch !important; }
+  .flex-child-noshrink-ml { flex-shrink: 0 !important; }
+  .flex-child-grow-ml {
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+  }
+}
+
+@media (--xl-screen) {
+  .flex-parent-mxl { display: flex !important; }
+  .flex-parent-none-mxl { flex: none !important; }
+  .flex-parent--column-mxl { flex-direction: column !important; }
+  .flex-parent--wrap-mxl { flex-wrap: wrap !important; }
+  .flex-parent--justify-end-mxl { justify-content: flex-end !important; }
+  .flex-parent--center-main-mxl { justify-content: center !important; }
+  .flex-parent--center-cross-mxl { align-items: center !important; }
+  .flex-parent--stretch-cross-mxl { align-items: stretch !important; }
+  .flex-child-noshrink-mxl { flex-shrink: 0 !important; }
+  .flex-child-grow-mxl {
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+  }
+}
+
+/**
+ * Bleed utilities. Bleed classes allow an element inside a centered container to escape the container and meet the edge of the screen.
+ * When using the bleed classes, consider adding the `.clip` class on a parent element to horizontal overflow.
+ * @group
+ * @example
+ * <div class='bg-darken10 bleed-l'>Left bleed</div>
+ * @memberof Layout utils
+ */
+.bleed {
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+}
+.bleed-r {
+  flex: 1 !important;
+  margin-right: calc(50% - 50vw) !important;
+}
+.bleed-l {
+  flex: 1 !important;
+  margin-left: calc(50% - 50vw) !important;
+}
+/* @endgroup */
+
+/**
+ * For non-grid, non-flexbox layouts.
+ * @group
+ * @memberof Layout utils
+ * @example
+ * <div class='clearfix'>
+ *   <div class='fl'>left</div>
+ *   <div class='fr'>right</div>
+ * </div>
+ * <div class='fl'>left</div>
+ * <div class='fr'>right</div>
+ */
+.fl { float: left !important; }
+.fr { float: right !important; }
+.clearfix::after {
+  content: '' !important;
+  display: block !important;
+  clear: both !important;
+}
+/** @endgroup */

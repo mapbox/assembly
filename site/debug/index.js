@@ -16,11 +16,15 @@ import { Inputs } from './inputs';
 import { TextAreas } from './textareas';
 import { Ranges } from './ranges';
 import { Links } from './links';
+import { Grids } from './grids';
 
 class Debug extends React.Component {
   render() {
     return (
-      <div>
+      <div className='mt48'>
+        <div className='mb48'>
+          <Grids />
+        </div>
         <div className='mb48'>
           <Links />
         </div>

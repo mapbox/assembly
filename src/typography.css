@@ -18,14 +18,14 @@ textarea {
 
 /**
  * Classes for font size and line height, lists, block quotes, code blocks, and more.
- * @section Basics
+ * @section Type basics
  * @memberof Typography
  */
 
 /**
  * Standard text scale. All text size classes include `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
- * @memberof Basics
+ * @memberof Type basics
  * @group
  * @example
  * <div class='txt-headline'>Malesuada Pharetra Ridiculus</div>
@@ -186,7 +186,7 @@ textarea {
 /**
  * Style for an abrreviation or acronym.
  *
- * @memberof Basics
+ * @memberof Type basics
  * @example
  * How do you feel about <abbr title='Cascading Style Sheets' class='txt-abbr'>CSS</abbr>?
  */
@@ -199,7 +199,7 @@ textarea {
 /**
  * Style for a break between two blocks of text.
  *
- * @memberof Basics
+ * @memberof Type basics
  * @example
  * <hr class='txt-hr'>
  */
@@ -239,7 +239,7 @@ textarea {
 /**
  * Unordered list. Works with any element type if children use the `.txt-li` class.
  *
- * @memberof Basics
+ * @memberof Type basics
  * @example
  * <div class='txt-ul'>
  *   <div class='txt-li'>one</div>
@@ -255,7 +255,7 @@ textarea {
 /**
  * Ordered list. Works with any element type if children use the `.txt-li` class.
  *
- * @memberof Basics
+ * @memberof Type basics
  * @example
  * <div class='txt-ol'>
  *   <div class='txt-li'>one</div>
@@ -279,7 +279,7 @@ textarea {
 
 /**
  * Basic quote styling.
- * @memberof Basics
+ * @memberof Type basics
  * @example
  * <div class='txt-blockquote'>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.</div>
  */
@@ -297,7 +297,7 @@ textarea {
 /**
  * Style text like a keyboard button.
  *
- * @memberof Basics
+ * @memberof Type basics
  * @example
  * You entered <kbd class='txt-kbd'>Flamingo</kbd>.
  */
@@ -337,7 +337,7 @@ textarea {
 /**
  * Place small text above the standard line height.
  *
- * @memberof Basics
+ * @memberof Type basics
  * @example
  * Planet earth is seven years old. <sup class='txt-sup'>citation needed</sup>
  */
@@ -349,7 +349,7 @@ textarea {
 /**
  * Place small text below the standard line height.
  *
- * @memberof Basics
+ * @memberof Type basics
  * @example
  * The chemical formula of water is H<sub class='txt-sub'>2</sub>O.
  */
@@ -378,7 +378,7 @@ textarea {
 /**
  * Style inline code.
  *
- * @memberof Basics
+ * @memberof Type basics
  * @example
  * Make sure you <code class='code'>git checkout</code> the repository.
  */
@@ -390,7 +390,7 @@ textarea {
 /**
  * Style blocks of code.
  *
- * @memberof Basics
+ * @memberof Type basics
  * @example
  * <pre class='pre'>
  * for each
@@ -414,13 +414,13 @@ textarea {
 
 /**
  * Single-purpose classes for customizing text.
- * @section Utilities
+ * @section Type utils
  * @memberof Typography
  */
 
 /**
  * Monospaced text.
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='txt-mono'>txt-mono</div>
  */
@@ -431,7 +431,7 @@ textarea {
 
 /**
  * Light font weight.
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='txt-light'>txt-light</div>
  */
@@ -441,7 +441,7 @@ textarea {
 
 /**
  * Normal font weight.
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='txt-normal'>txt-normal</div>
  */
@@ -451,7 +451,7 @@ textarea {
 
 /**
  * Bold font weight.
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='txt-bold'>txt-bold</div>
  */
@@ -459,7 +459,7 @@ textarea {
 
 /**
  * Italic text.
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='em'>em</div>
  */
@@ -467,7 +467,7 @@ textarea {
 
 /**
  * Uppercase text.
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='uppercase'>UpPeRcAsE</div>
  */
@@ -475,7 +475,7 @@ textarea {
 
 /**
  * Lowercase text.
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='lowercase'>LoWeRcAsE</div>
  */
@@ -483,7 +483,7 @@ textarea {
 
 /**
  * Capitalize all words in the element.
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='capitalize'>all words are capitalized</div>
  */
@@ -491,7 +491,7 @@ textarea {
 
 /**
  * Capitalize the first letter in the element.
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='capitalize-first'>first word only is capitalized</div>
  */
@@ -500,7 +500,7 @@ textarea {
 
 /**
  * Text horizontal alignment.
- * @memberof Utilities
+ * @memberof Type utils
  * @group
  * @example
  * <div class='txt-align-l'>.txt-align-l</div>
@@ -514,7 +514,7 @@ textarea {
 
 /**
  * Text vertical alignment.
- * @memberof Utilities
+ * @memberof Type utils
  * @group
  * @example
  * <div class='txt-align-t'>txt-align-t</div>
@@ -526,7 +526,7 @@ textarea {
 
 /**
  * Text underline
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='txt-underline'>txt-underline</div>
  */
@@ -536,7 +536,7 @@ textarea {
  * By default, the `txt-link` class turn text blue, and provides a dark blue `:hover` state.
  * Combine with any `color-*` class for similar `:hover` and `is-active` behavior.
  *
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <a href='#link' class='txt-link'>A link</a>
  * <a href='#link' class='txt-link txt-link--red'>A red link</a>
@@ -554,7 +554,7 @@ textarea {
 /**
  * Prevents text from wrapping.
  *
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='border border--gray w96 txt-nowrap'>
  *   This text is too long for its container
@@ -567,7 +567,7 @@ textarea {
 /**
  * Allows words to be broken across lines.
  *
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='border border--gray w96 txt-break-word'>
  *   Thiswordistoolongforitscontainer
@@ -581,7 +581,7 @@ textarea {
  * Truncates text to a single line contained within the width
  * of its container, ending with an ellipsis if it overflows.
  *
- * @memberof Utilities
+ * @memberof Type utils
  * @example
  * <div class='border border--gray w96 txt-truncate'>
  *   This text is too long for its container
