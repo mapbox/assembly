@@ -8,7 +8,7 @@ class Navigation extends React.Component {
       level = level || 0;
       if (!items || items.length === 0) return null;
       return items.map((member) => {
-        let linkClasses = 'txt-link color-blue mr12 mb3 inline-block block-mm txt-s';
+        let linkClasses = 'txt-link color-blue mr12 inline-block block-mm txt-s';
         if (level !== 0) {
           linkClasses += ` ml${6 * level}-mm`;
         }
@@ -38,7 +38,7 @@ class Navigation extends React.Component {
         || r.items === undefined
         || r.items.length === 0;
       const nestedItems = (showNestedItems) ? null : (
-        <div className='pl6 txt-s'>
+        <div className='pl6 txt-s mb3'>
           {listNestedMembers(r.items)}
         </div>
       );

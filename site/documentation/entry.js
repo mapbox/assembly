@@ -49,14 +49,14 @@ class Entry extends React.Component {
       <span
         key={selector}
         id={`${selector.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
-        className='mr3 mb3 p3 round bg-blue color-white txt-mono txt-xs inline-block'>
+        className='mr3 p3 round bg-blue color-white txt-mono txt-xs inline-block'>
         {selector.trim()}
       </span>;
 
     const selectorEls = selectors !== undefined && selectors.map(getSelectorEl);
-    const collapsedSelectorEls = selectors !== undefined && selectors.slice(0, 9).map(getSelectorEl);
+    const collapsedSelectorEls = selectors !== undefined && selectors.slice(0, 15).map(getSelectorEl);
 
-    const expandButton = selectors !== undefined && selectors.length > 9 ? (
+    const expandButton = selectors !== undefined && selectors.length > 15 ? (
       <button
         id={`expandButton-${selectors && selectors[0]}`}
         className='mr3 pt3 pb3 pl6 pr6 round bg-blue-light hover-bg-blue-dark color-white txt-xs txt-mono inline-block uppercase'>
