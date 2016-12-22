@@ -430,7 +430,7 @@ textarea {
 }
 
 /**
- * Light text.
+ * Light font weight.
  * @memberof Utilities
  * @example
  * <div class='txt-light'>txt-light</div>
@@ -440,7 +440,17 @@ textarea {
 }
 
 /**
- * Bold text.
+ * Normal font weight.
+ * @memberof Utilities
+ * @example
+ * <div class='txt-normal'>txt-normal</div>
+ */
+.txt-normal {
+  font-weight: lighter !important;
+}
+
+/**
+ * Bold font weight.
  * @memberof Utilities
  * @example
  * <div class='txt-bold'>txt-bold</div>
