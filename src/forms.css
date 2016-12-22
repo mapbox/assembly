@@ -413,14 +413,14 @@
 }
 
 /* Range focus */
-.range:focus { box-shadow: none !important; }
-.range:focus::-webkit-slider-runnable-track { box-shadow: 0 0 2px 2px var(--darken25); }
-.range:focus::-webkit-slider-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
-.range:focus::-ms-fill-upper { box-shadow: 0 0 2px 2px var(--darken25); }
-.range:focus::-ms-fill-lower { box-shadow: 0 0 2px 2px var(--darken25); }
-.range:focus::-ms-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
-.range:focus::-moz-range-track { box-shadow: 0 0 2px 2px var(--darken25); }
-.range:focus::-moz-range-thumb { box-shadow: 0 0 2px 2px var(--darken25); }
+.range:focus {
+  box-shadow: none !important;
+}
+.range:focus::-webkit-slider-thumb { box-shadow: var(--focus-shadow); }
+.range:focus::-ms-fill-upper { box-shadow: var(--focus-shadow); }
+.range:focus::-ms-fill-lower { box-shadow: var(--focus-shadow); }
+.range:focus::-ms-thumb { box-shadow: var(--focus-shadow); }
+.range:focus::-moz-range-thumb { box-shadow: var(--focus-shadow); }
 .range::-moz-focus-outer { border: 0; }
 
 /* Range disabled */
