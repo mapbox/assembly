@@ -53,7 +53,7 @@ class Icons extends React.Component {
         <div className='mb24'>
           To add icons to the page programmatically, you must use special DOM methods that handle XML namespaces. The following function creates an icon element, which you can then add to the DOM where you need it. You can also modify the icon as needed with <a href='/assembly/documentation/#Icons'>icon modifier classes</a>.
         </div>
-        <pre className='code-block'>
+        <pre className='pre'>
           <code>
             <Lowlight
               language='js'
