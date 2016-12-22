@@ -99,8 +99,8 @@ class Forms extends React.Component {
             const selectStrokeClass = 'select';
             const selectContainerClass = 'select-container';
             if (color !== null) {
-              selectClass += ` bg-${color}`;
-              selectStrokeContainerClass += ` color-${color}`;
+              selectClass += ` select--${color}`;
+              selectStrokeContainerClass += ` select--stroke-${color}`;
             }
             return (
               <div key={color} className='mb12'>

@@ -26,7 +26,7 @@ class CheckboxesRadios extends React.Component {
     const checkboxes = colors.map((color, i) => {
       let checkboxClass = 'checkbox mr6';
       if (color !== null) {
-        checkboxClass += ` color-${color}`;
+        checkboxClass += ` checkbox--${color}`;
       }
 
       return (
@@ -53,7 +53,7 @@ class CheckboxesRadios extends React.Component {
       let radioClass = 'radio mr6';
       let id = 'radio';
       if (color !== null) {
-        radioClass += ` color-${color}`;
+        radioClass += ` radio--${color}`;
         id += `-${color}`;
       }
 
@@ -65,7 +65,7 @@ class CheckboxesRadios extends React.Component {
             Radio
           </label>
           <label className='radio-container'>
-            <input checked disabled id={id} name='radios' value={id} type='radio' />
+            <input checked disabled id={id} name={id} value={id} type='radio' />
             <div className={radioClass}></div>
             Radio
           </label>

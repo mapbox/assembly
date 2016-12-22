@@ -29,11 +29,13 @@ const colors = [
 ];
 
 function SwitchEl(props) {
-  const switchClass = `switch ${props.handleColor ? 'switch--dot-' + props.handleColor : ''} color-${props.color}`;
+  let switchClass = 'switch';
+  if (props.handleColor) switchClass += ` switch--dot-${props.handleColor}`;
+  if (props.color) switchClass += ` switch--${props.color}`;
   return (
     <div className='mr6 inline-block'>
       <label className='switch-container'>
-       <input disabled={props.disabled} type='checkbox' value='magic' />
+        <input disabled={props.disabled} type='checkbox' value='magic' />
         <div className={switchClass} />
       </label>
     </div>

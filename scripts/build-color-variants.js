@@ -133,30 +133,16 @@ const variantGenerators = {};
 variantGenerators.buttonFill = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
-    const darkerShade = getDarkerShade(color);
     const colorValue = variables[color];
+    const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
       .btn--${color} {
-        background-color: ${colorValue} !important;
+        background-color: ${colorValue};
       }
 
-      .btn--${color}:hover {
-        background-color: ${darkerShade} !important;
-      }
-    `);
-  }, '');
-};
-
-variantGenerators.inputStroke = function (colors) {
-  return colors.reduce((result, color) => {
-    if (isDark(color)) return result;
-    const darkerShade = getDarkerShade(color);
-    return result += stripIndent(`
-      .textarea.border--${color}:hover,
-      .input.border--${color}:hover,
-      .textarea.border--${color}:focus,
-      .input.border--${color}:focus {
-        border-color: ${darkerShade} !important;
+      .btn--${color}:hover,
+      .btn--${color}.is-active {
+        background-color: ${darkerShade};
       }
     `);
   }, '');
@@ -165,10 +151,40 @@ variantGenerators.inputStroke = function (colors) {
 variantGenerators.buttonStroke = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
+    const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .btn--stroke.color-${color}:hover {
-        color: ${darkerShade} !important;
+      .btn--stroke.btn--${color} {
+        background-color: transparent;
+        color: ${colorValue};
+      }
+
+      .btn--stroke.btn--${color}:hover,
+      .btn--stroke.btn--${color}.is-active {
+        color: ${darkerShade};
+      }
+    `);
+  }, '');
+};
+
+variantGenerators.inputStroke = function (colors) {
+  return colors.reduce((result, color) => {
+    if (isDark(color)) return result;
+    const colorValue = variables[color];
+    const darkerShade = getDarkerShade(color);
+    return result += stripIndent(`
+      .textarea--border-${color},
+      .input--border-${color},
+      .textarea--border-${color},
+      .input--border-${color} {
+        border-color: ${colorValue};
+      }
+
+      .textarea--border-${color}:hover,
+      .input--border-${color}:hover,
+      .textarea--border-${color}:focus,
+      .input--border-${color}:focus {
+        border-color: ${darkerShade};
       }
     `);
   }, '');
@@ -177,10 +193,15 @@ variantGenerators.buttonStroke = function (colors) {
 variantGenerators.selectFill = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
+    const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .select.bg-${color}:hover {
-        background-color: ${darkerShade} !important;
+      .select--${color} {
+        background-color: ${colorValue};
+      }
+
+      .select--${color}:hover {
+        background-color: ${darkerShade};
       }
     `);
   }, '');
@@ -189,10 +210,15 @@ variantGenerators.selectFill = function (colors) {
 variantGenerators.selectStroke = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
+    const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .select-container--stroke.color-${color}:hover {
-        color: ${darkerShade} !important;
+      .select--stroke-${color} {
+        color: ${colorValue};
+      }
+
+      .select--stroke-${color}:hover {
+        color: ${darkerShade};
       }
     `);
   }, '');
@@ -201,11 +227,16 @@ variantGenerators.selectStroke = function (colors) {
 variantGenerators.checkbox = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
+    const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .checkbox-container:hover > .checkbox.color-${color},
-      input:checked + .checkbox.color-${color} {
-        color: ${darkerShade} !important;
+      .checkbox--${color} {
+        color: ${colorValue};
+      }
+
+      .checkbox-container:hover > .checkbox--${color},
+      input:checked + .checkbox--${color} {
+        color: ${darkerShade};
       }
     `);
   }, '');
@@ -214,11 +245,16 @@ variantGenerators.checkbox = function (colors) {
 variantGenerators.radio = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
+    const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .radio-container:hover > .radio.color-${color},
-      input:checked + .radio.color-${color} {
-        color: ${darkerShade} !important;
+      .radio--${color} {
+        color: ${colorValue};
+      }
+
+      .radio-container:hover > .radio--${color},
+      input:checked + .radio--${color} {
+        color: ${darkerShade};
       }
     `);
   }, '');
@@ -227,18 +263,26 @@ variantGenerators.radio = function (colors) {
 variantGenerators.switch = function (colors) {
   return colors.reduce((result, color) => {
     if (isDark(color)) return result;
+    const colorValue = variables[color];
     const darkerShade = getDarkerShade(color);
     // Darken background when hovered and when active
     // Darken dot on hover when inactive only
     return result += stripIndent(`
-      .switch.color-${color}:hover {
-        border-color: ${darkerShade} !important;
+      .switch--${color} {
+        color: ${colorValue};
       }
 
-      input:checked + .switch.color-${color},
-      input:not(:checked) + .switch.color-${color}:hover::after,
+      .switch--${color}:hover {
+        color: ${darkerShade};
+      }
+
+      .switch--${color}:hover::after,
+      input:checked + .switch--${color} {
+        background-color: ${darkerShade};
+      }
+
       input:checked + .switch--dot-${color}::after {
-        background-color: ${darkerShade} !important;
+        background-color: ${colorValue};
       }
     `);
   }, '');
@@ -255,16 +299,16 @@ variantGenerators.toggle = function (colors) {
     // when active.
     return result += stripIndent(`
       .toggle--${color} {
-        color: ${colorValue} !important;
+        color: ${colorValue};
       }
 
-      input:not(:checked) + .toggle--${color}:hover {
-        color: ${darkerShade} !important;
+      .toggle--${color}:hover {
+        color: ${darkerShade};
       }
 
       input:checked + .toggle--${color} {
-        background: ${colorValue} !important;
-        color: #fff !important;
+        background: ${colorValue};
+        color: #fff;
       }
     `);
   }, '');
@@ -277,7 +321,7 @@ variantGenerators.toggleActive = function (colors) {
     // Must be below .toggle group in  stylesheet
     return result += stripIndent(`
       input:checked + .toggle--active-${color} {
-        color: ${colorValue} !important;
+        color: ${colorValue};
       }
     `);
   }, '');
@@ -311,8 +355,6 @@ variantGenerators.range = function (colors) {
     `);
   }, '');
 };
-
-
 
 variantGenerators.color = function (colors) {
   // Manually adding `color-text`

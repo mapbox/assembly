@@ -24,6 +24,8 @@
   transition: background-color var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
+.input:hover,
+.textarea:hover,
 .input:focus,
 .textarea:focus {
   border-color: var(--blue-dark);
@@ -35,7 +37,7 @@
 }
 
 /**
- * Text input. The following modifiers are available:
+ * Text input.
  *
  * @memberof Forms
  * @example
@@ -121,9 +123,9 @@
  * - A `<select>`.
  *
  * Variations:
- * - Modify `.select` with a `.bg-{color}` class.
- * - Modify `.select-container` with `select-container--stroke`.
- * - Modify *stroke* `.select-container` with a text color, e.g. `.color-red`.
+ * - Modify `.select` with a `.select--{color}` modifier.
+ * - Modify `.select-container` with the `.select-container--stroke` modifier
+ *   and an (optional) `.select--stroke-{color}` modifier.
  *
  * @memberof Forms
  * @group
@@ -135,7 +137,7 @@
  *   </select>
  * </div>
  * <div class='select-container mb6'>
- *   <select class='select bg-red'>
+ *   <select class='select select--red'>
  *     <option>one</option>
  *     <option>two</option>
  *   </select>
@@ -146,7 +148,7 @@
  *     <option>two</option>
  *   </select>
  * </div>
- * <div class='select-container select-container--stroke color-purple'>
+ * <div class='select-container select-container--stroke select--stroke-purple'>
  *   <select class='select'>
  *     <option>one</option>
  *     <option>two</option>
@@ -181,7 +183,7 @@
 /** @endgroup */
 
 /* default hover state */
-:not(.select-container--stroke) > .select:hover {
+.select:hover {
   background-color: var(--blue-dark);
 }
 
@@ -444,9 +446,8 @@
  * - Text for the label.
  *
  * Variations:
- * - Modify `checkbox` with a text color, e.g. `color-red`.
- * - Use a different icon.
- * - Modify `checkbox` with `checkbox--s-label` if the text is small,
+ * - Modify `.checkbox` with a `.checkbox--{color}` modifier.
+ * - Modify `.checkbox` with `.checkbox--s-label` modifier if the label text is small,
  *   for proper vertical alignment.
  *
  * @section Checkboxes
@@ -477,7 +478,7 @@
  * <div class='txt-s'>
  *   <label class='checkbox-container mr12'>
  *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr6 checkbox--s-label color-red'>
+ *     <div class='checkbox mr6 checkbox--s-label checkbox--red'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     More zebras
@@ -494,8 +495,8 @@
  * - Text for the label.
  *
  * Variations:
- * - Modify `radio` with a text color, e.g. `color-purple`.
- * - Modify `radio` with `radio--s-label` if the text is small,
+ * - Modify `.radio` with a `.radio--{color}`.
+ * - Modify `.radio` with `.radio--s-label` modifier if the label text is small,
  *   for proper vertical alignment.
  *
  * @section Radio buttons
@@ -515,7 +516,7 @@
  * <div class='txt-s'>
  *   <label class='radio-container mr12'>
  *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio radio--s-label color-yellow mr6'></div>
+ *     <div class='radio radio--s-label radio--yellow mr6'></div>
  *     Magic radio
  *   </label>
  * </div>
@@ -531,7 +532,7 @@
  *
  * Variations:
  * - Modify the active state of the switch handle with `switch--dot-{color}`.
- * - Modify the color of the dot when inactive, the border when inactive and the background in active state with `color--{color}`
+ * - Modify the color of the dot when inactive, the border when inactive and the background in active state with `switch--{color}`
  *
  * @section Switches
  * @memberof Forms
@@ -549,7 +550,7 @@
  * <div>
  *   <label class="switch-container">
  *     <input type='checkbox' value='magic'>
- *     <div class='switch border--pink color-gray mr12'></div>
+ *     <div class='switch switch--pink switch--dot-gray mr12'></div>
  *     Switch this!
  *   </label>
  * </div>
@@ -597,18 +598,17 @@ input:disabled {
   pointer-events: none;
 }
 
-/* Note, some rules in this list include specificy bumps, to override colored versions of the icons */
 input:disabled + .checkbox,
-input:checked:disabled + .checkbox.checkbox,
-input:checked:disabled + .radio.radio,
 input:disabled + .radio,
-input:disabled + .switch,
-input:checked:disabled + .switch.switch,
-input:checked:disabled + .switch.switch::after {
+input:disabled + .switch {
   pointer-events: none;
   color: var(--darken25) !important;
   background-color: var(--disabled) !important;
   border-color: transparent !important;
+}
+
+input:disabled + .switch::after {
+  background-color: var(--darken25) !important;
 }
 
 /* Primary checkbox styles */
@@ -807,10 +807,6 @@ input:checked + .radio {
 }
 
 /* state management for switches */
-input:not(:checked) + .switch:hover::after {
-  background-color: var(--blue-dark);
-}
-
 .switch:hover {
   color: var(--blue-dark);
 }
@@ -821,17 +817,17 @@ input:checked + .switch::after {
 }
 
 input:checked + .switch {
-  border-color: transparent !important;
-  background-color: var(--blue-dark) !important;
+  border-color: transparent;
+  background-color: var(--blue-dark);
 }
 
 /* state management for toggles */
-input:not(:checked) + .toggle:hover {
-  color: var(--blue-dark) !important;
+.toggle:hover {
+  color: var(--blue-dark);
 }
 
 input:checked + .toggle {
-  background: var(--blue) !important;
+  background: var(--blue);
   color: var(--white);
 }
 
