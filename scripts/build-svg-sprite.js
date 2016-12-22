@@ -4,13 +4,12 @@ const svgstore = require('svgstore');
 const fs = require('fs');
 const _ = require('lodash');
 const pify = require('pify');
+const mkdirp = require('mkdirp');
 const path = require('path');
 const SVGO = require('svgo');
 const timelog = require('./timelog');
-const ensureDist = require('./ensure-dist');
 
 const svgDir = path.join(__dirname, '../src/svgs');
-const svgScript = path.join(__dirname, '../dist/assembly-svg.js');
 const svgo = new SVGO({
   plugins: [
     {
@@ -57,7 +56,9 @@ function addFileToSprite(filename, sprite) {
   });
 }
 
-function buildSvgSprite() {
+function buildSvgSprite(outfile) {
+  outfile = outfile || path.join(__dirname, '../dist/assembly-svg.js');
+
   timelog('Building SVGs');
   const sprite = svgstore();
 
@@ -74,8 +75,8 @@ function buildSvgSprite() {
 
       const cleanedSprite = sprite.toString().replace(/\n/g, '');
       const jsContent = baseJsTemplate({ svgSprite: cleanedSprite });
-      return ensureDist().then(() => {
-        return pify(fs.writeFile)(svgScript, jsContent);
+      return pify(mkdirp)(path.dirname(outfile)).then(() => {
+        return pify(fs.writeFile)(outfile, jsContent);
       });
     })
     .then(() => {
