@@ -422,8 +422,12 @@ variantGenerators.link = function (colors) {
     if (isDark(color)) return result;
     const darkerShade = getDarkerShade(color);
     return result += stripIndent(`
-      .txt-link.color-${color}:hover {
-        color: ${darkerShade} !important;
+      .txt-link--${color} {
+        color: ${variables[color]};
+      }
+      .txt-link--${color}.is-active,
+      .txt-link--${color}:hover {
+        color: ${darkerShade};
       }
     `);
   }, '');
