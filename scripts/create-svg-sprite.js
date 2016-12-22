@@ -21,10 +21,10 @@ const svgo = new SVGO({
 });
 
 const baseJsTemplate = _.template(
-`var svgDocument = (new DOMParser()).parseFromString('<%= svgSprite %>', 'text/xml');
+`(function() { var svgDocument = (new DOMParser()).parseFromString('<%= svgSprite %>', 'text/xml');
 document.addEventListener("DOMContentLoaded", function() {
   document.body.appendChild(svgDocument.getElementById("svg-symbols"));
-});`
+});}());`
 );
 
 function addFileToSprite(filename, sprite, callback) {
