@@ -18,8 +18,7 @@ const colors = [
   'darken10',
   'darken25',
   'darken50',
-  'darken75',
-  'black'
+  'darken75'
 ];
 
 const lightenColors = [

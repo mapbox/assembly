@@ -598,7 +598,6 @@ input:disabled {
   pointer-events: none;
 }
 
-/* Note, some rules in this list include specificy bumps, to override colored versions of the icons */
 input:disabled + .checkbox,
 input:disabled + .radio,
 input:disabled + .switch {
@@ -606,6 +605,10 @@ input:disabled + .switch {
   color: var(--darken25) !important;
   background-color: var(--disabled) !important;
   border-color: transparent !important;
+}
+
+input:disabled + .switch:after {
+  background-color: var(--darken25) !important;
 }
 
 /* Primary checkbox styles */
@@ -819,12 +822,12 @@ input:checked + .switch {
 }
 
 /* state management for toggles */
-input:not(:checked) + .toggle:hover {
-  color: var(--blue-dark) !important;
+.toggle:hover {
+  color: var(--blue-dark);
 }
 
 input:checked + .toggle {
-  background: var(--blue) !important;
+  background: var(--blue);
   color: var(--white);
 }
 
