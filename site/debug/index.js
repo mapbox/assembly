@@ -15,11 +15,15 @@ import { Toggles } from './toggles';
 import { Inputs } from './inputs';
 import { TextAreas } from './textareas';
 import { Ranges } from './ranges';
+import { Links } from './links';
 
 class Debug extends React.Component {
   render() {
     return (
       <div>
+        <div className='mb48'>
+          <Links />
+        </div>
         <div className='mb48'>
           <Inputs />
         </div>

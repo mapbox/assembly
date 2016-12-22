@@ -5200,160 +5200,316 @@ input:checked + .toggle--active-transparent {
   background-color: transparent !important;
 }
     /** @endgroup */
-.txt-link.color-gray:hover {
-  color: #333 !important;
+.txt-link--gray {
+  color: #666;
+}
+.txt-link--gray.is-active,
+.txt-link--gray:hover {
+  color: #333;
 }
     
-.txt-link.color-gray-light:hover {
-  color: #666 !important;
+.txt-link--gray-light {
+  color: #ccc;
+}
+.txt-link--gray-light.is-active,
+.txt-link--gray-light:hover {
+  color: #666;
 }
     
-.txt-link.color-gray-faint:hover {
-  color: #ccc !important;
+.txt-link--gray-faint {
+  color: #f0f0f0;
+}
+.txt-link--gray-faint.is-active,
+.txt-link--gray-faint:hover {
+  color: #ccc;
 }
     
-.txt-link.color-pink:hover {
-  color: #C8145A !important;
+.txt-link--pink {
+  color: #ff3c96;
+}
+.txt-link--pink.is-active,
+.txt-link--pink:hover {
+  color: #C8145A;
 }
     
-.txt-link.color-pink-light:hover {
-  color: #ff3c96 !important;
+.txt-link--pink-light {
+  color: #FF88C0;
+}
+.txt-link--pink-light.is-active,
+.txt-link--pink-light:hover {
+  color: #ff3c96;
 }
     
-.txt-link.color-pink-faint:hover {
-  color: #FF88C0 !important;
+.txt-link--pink-faint {
+  color: #ffdbed;
+}
+.txt-link--pink-faint.is-active,
+.txt-link--pink-faint:hover {
+  color: #FF88C0;
 }
     
-.txt-link.color-red:hover {
-  color: #BE0014 !important;
+.txt-link--red {
+  color: #dc2b28;
+}
+.txt-link--red.is-active,
+.txt-link--red:hover {
+  color: #BE0014;
 }
     
-.txt-link.color-red-light:hover {
-  color: #dc2b28 !important;
+.txt-link--red-light {
+  color: #FF8280;
+}
+.txt-link--red-light.is-active,
+.txt-link--red-light:hover {
+  color: #dc2b28;
 }
     
-.txt-link.color-red-faint:hover {
-  color: #FF8280 !important;
+.txt-link--red-faint {
+  color: #ffdad9;
+}
+.txt-link--red-faint.is-active,
+.txt-link--red-faint:hover {
+  color: #FF8280;
 }
     
-.txt-link.color-orange:hover {
-  color: #DC4600 !important;
+.txt-link--orange {
+  color: #ff6e00;
+}
+.txt-link--orange.is-active,
+.txt-link--orange:hover {
+  color: #DC4600;
 }
     
-.txt-link.color-orange-light:hover {
-  color: #ff6e00 !important;
+.txt-link--orange-light {
+  color: #FFA950;
+}
+.txt-link--orange-light.is-active,
+.txt-link--orange-light:hover {
+  color: #ff6e00;
 }
     
-.txt-link.color-orange-faint:hover {
-  color: #FFA950 !important;
+.txt-link--orange-faint {
+  color: #FFE5CB;
+}
+.txt-link--orange-faint.is-active,
+.txt-link--orange-faint:hover {
+  color: #FFA950;
 }
     
-.txt-link.color-yellow:hover {
-  color: #FFBD0A !important;
+.txt-link--yellow {
+  color: #f0dc00;
+}
+.txt-link--yellow.is-active,
+.txt-link--yellow:hover {
+  color: #FFBD0A;
 }
     
-.txt-link.color-yellow-light:hover {
-  color: #f0dc00 !important;
+.txt-link--yellow-light {
+  color: #F0F062;
+}
+.txt-link--yellow-light.is-active,
+.txt-link--yellow-light:hover {
+  color: #f0dc00;
 }
     
-.txt-link.color-yellow-faint:hover {
-  color: #F0F062 !important;
+.txt-link--yellow-faint {
+  color: #fafbd1;
+}
+.txt-link--yellow-faint.is-active,
+.txt-link--yellow-faint:hover {
+  color: #F0F062;
 }
     
-.txt-link.color-green:hover {
-  color: #007532 !important;
+.txt-link--green {
+  color: #01aa46;
+}
+.txt-link--green.is-active,
+.txt-link--green:hover {
+  color: #007532;
 }
     
-.txt-link.color-green-light:hover {
-  color: #01aa46 !important;
+.txt-link--green-light {
+  color: #72C781;
+}
+.txt-link--green-light.is-active,
+.txt-link--green-light:hover {
+  color: #01aa46;
 }
     
-.txt-link.color-green-faint:hover {
-  color: #72C781 !important;
+.txt-link--green-faint {
+  color: #d4edda;
+}
+.txt-link--green-faint.is-active,
+.txt-link--green-faint:hover {
+  color: #72C781;
 }
     
-.txt-link.color-teal:hover {
-  color: #00626E !important;
+.txt-link--teal {
+  color: #01b5b4;
+}
+.txt-link--teal.is-active,
+.txt-link--teal:hover {
+  color: #00626E;
 }
     
-.txt-link.color-teal-light:hover {
-  color: #01b5b4 !important;
+.txt-link--teal-light {
+  color: #50D2D2;
+}
+.txt-link--teal-light.is-active,
+.txt-link--teal-light:hover {
+  color: #01b5b4;
 }
     
-.txt-link.color-teal-faint:hover {
-  color: #50D2D2 !important;
+.txt-link--teal-faint {
+  color: #cbf2f1;
+}
+.txt-link--teal-faint.is-active,
+.txt-link--teal-faint:hover {
+  color: #50D2D2;
 }
     
-.txt-link.color-blue:hover {
-  color: #0014AA !important;
+.txt-link--blue {
+  color: #0065fb;
+}
+.txt-link--blue.is-active,
+.txt-link--blue:hover {
+  color: #0014AA;
 }
     
-.txt-link.color-blue-light:hover {
-  color: #0065fb !important;
+.txt-link--blue-light {
+  color: #00B1FF;
+}
+.txt-link--blue-light.is-active,
+.txt-link--blue-light:hover {
+  color: #0065fb;
 }
     
-.txt-link.color-blue-faint:hover {
-  color: #00B1FF !important;
+.txt-link--blue-faint {
+  color: #bae8ff;
+}
+.txt-link--blue-faint.is-active,
+.txt-link--blue-faint:hover {
+  color: #00B1FF;
 }
     
-.txt-link.color-purple:hover {
-  color: #500078 !important;
+.txt-link--purple {
+  color: #8c50c7;
+}
+.txt-link--purple.is-active,
+.txt-link--purple:hover {
+  color: #500078;
 }
     
-.txt-link.color-purple-light:hover {
-  color: #8c50c7 !important;
+.txt-link--purple-light {
+  color: #C299E3;
+}
+.txt-link--purple-light.is-active,
+.txt-link--purple-light:hover {
+  color: #8c50c7;
 }
     
-.txt-link.color-purple-faint:hover {
-  color: #C299E3 !important;
+.txt-link--purple-faint {
+  color: #ede1f6;
+}
+.txt-link--purple-faint.is-active,
+.txt-link--purple-faint:hover {
+  color: #C299E3;
 }
     
-.txt-link.color-darken5:hover {
-  color: rgba(0, 0, 0, 0.10) !important;
+.txt-link--darken5 {
+  color: rgba(0, 0, 0, 0.05);
+}
+.txt-link--darken5.is-active,
+.txt-link--darken5:hover {
+  color: rgba(0, 0, 0, 0.10);
 }
     
-.txt-link.color-darken10:hover {
-  color: rgba(0, 0, 0, 0.25) !important;
+.txt-link--darken10 {
+  color: rgba(0, 0, 0, 0.10);
+}
+.txt-link--darken10.is-active,
+.txt-link--darken10:hover {
+  color: rgba(0, 0, 0, 0.25);
 }
     
-.txt-link.color-darken25:hover {
-  color: rgba(0, 0, 0, 0.50) !important;
+.txt-link--darken25 {
+  color: rgba(0, 0, 0, 0.25);
+}
+.txt-link--darken25.is-active,
+.txt-link--darken25:hover {
+  color: rgba(0, 0, 0, 0.50);
 }
     
-.txt-link.color-darken50:hover {
-  color: rgba(0, 0, 0, 0.75) !important;
+.txt-link--darken50 {
+  color: rgba(0, 0, 0, 0.50);
+}
+.txt-link--darken50.is-active,
+.txt-link--darken50:hover {
+  color: rgba(0, 0, 0, 0.75);
 }
     
-.txt-link.color-darken75:hover {
-  color: #000 !important;
+.txt-link--darken75 {
+  color: rgba(0, 0, 0, 0.75);
+}
+.txt-link--darken75.is-active,
+.txt-link--darken75:hover {
+  color: #000;
 }
     
-.txt-link.color-lighten5:hover {
-  color: rgba(255, 255, 255, 0.1) !important;
+.txt-link--lighten5 {
+  color: rgba(255, 255, 255, 0.05);
+}
+.txt-link--lighten5.is-active,
+.txt-link--lighten5:hover {
+  color: rgba(255, 255, 255, 0.1);
 }
     
-.txt-link.color-lighten10:hover {
-  color: rgba(255, 255, 255, 0.25) !important;
+.txt-link--lighten10 {
+  color: rgba(255, 255, 255, 0.1);
+}
+.txt-link--lighten10.is-active,
+.txt-link--lighten10:hover {
+  color: rgba(255, 255, 255, 0.25);
 }
     
-.txt-link.color-lighten25:hover {
-  color: rgba(255, 255, 255, 0.50) !important;
+.txt-link--lighten25 {
+  color: rgba(255, 255, 255, 0.25);
+}
+.txt-link--lighten25.is-active,
+.txt-link--lighten25:hover {
+  color: rgba(255, 255, 255, 0.50);
 }
     
-.txt-link.color-lighten50:hover {
-  color: rgba(255, 255, 255, 0.75) !important;
+.txt-link--lighten50 {
+  color: rgba(255, 255, 255, 0.50);
+}
+.txt-link--lighten50.is-active,
+.txt-link--lighten50:hover {
+  color: rgba(255, 255, 255, 0.75);
 }
     
-.txt-link.color-lighten75:hover {
-  color: #fff !important;
+.txt-link--lighten75 {
+  color: rgba(255, 255, 255, 0.75);
+}
+.txt-link--lighten75.is-active,
+.txt-link--lighten75:hover {
+  color: #fff;
 }
     
-.txt-link.color-white:hover {
-  color: #f0f0f0 !important;
+.txt-link--white {
+  color: #fff;
+}
+.txt-link--white.is-active,
+.txt-link--white:hover {
+  color: #f0f0f0;
 }
     
-.txt-link.color-transparent:hover {
-  color: rgba(0, 0, 0, 0.05) !important;
+.txt-link--transparent {
+  color: transparent;
+}
+.txt-link--transparent.is-active,
+.txt-link--transparent:hover {
+  color: rgba(0, 0, 0, 0.05);
 }
     
 /**
