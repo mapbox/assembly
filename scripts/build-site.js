@@ -2,11 +2,11 @@
 'use strict';
 
 const renderSite = require('./render-site');
-const processCss = require('./process-css');
+const buildCss = require('./build-css');
 const copyAssets = require('./copy-assets');
 
 function buildSite() {
-  return processCss()
+  return buildCss()
     .then(() => Promise.all([renderSite(), copyAssets()]));
 }
 

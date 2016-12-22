@@ -60,7 +60,7 @@ const postcssPlugins = [
   reporter()
 ];
 
-function postcssify(css, filePath, concat) {
+function processCss(css, filePath, concat) {
   return postcss(postcssPlugins)
     .process(css, {
       from: filePath,
@@ -77,15 +77,15 @@ function postcssify(css, filePath, concat) {
     .catch(handlePostcssError);
 }
 
-function postcssifyFile(cssFile, concat) {
+function processFile(cssFile, concat) {
   return pify(fs.readFile)(cssFile, 'utf8').then((css) => {
-    return postcssify(css, cssFile, concat);
+    return processCss(css, cssFile, concat);
   });
 }
 
 function appendColorVariants(concat) {
   const colorVariantsCss = buildColorVariants();
-  return postcssify(colorVariantsCss, 'color-variants.css', concat);
+  return processCss(colorVariantsCss, 'color-variants.css', concat);
 }
 
 function writeDistCss(concat) {
@@ -98,19 +98,19 @@ function writeDistCss(concat) {
   });
 }
 
-function processCss() {
+function buildCss() {
   timelog('Building CSS');
   const concat = new Concat(true, distCssPath, '\n');
 
-  return Promise.all(cssFiles.map((file) => postcssifyFile(file, concat)))
+  return Promise.all(cssFiles.map((file) => processFile(file, concat)))
     .catch(handlePostcssError)
     .then(() => appendColorVariants(concat))
     .then(() => writeDistCss(concat))
     .then(() => timelog('Done building CSS'));
 }
 
-module.exports = processCss;
+module.exports = buildCss;
 
 if (require.main === module) {
-  processCss().catch((err) => console.error(err.stack));
+  buildCss().catch((err) => console.error(err.stack));
 }

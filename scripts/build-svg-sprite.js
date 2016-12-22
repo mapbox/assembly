@@ -54,7 +54,7 @@ function addFileToSprite(filename, sprite, callback) {
   });
 }
 
-function createSvgSprite() {
+function buildSvgSprite() {
   timelog('Building SVGs');
   const sprite = svgstore();
 
@@ -81,8 +81,8 @@ function createSvgSprite() {
   });
 }
 
-module.exports = createSvgSprite;
+module.exports = buildSvgSprite;
 
 if (require.main === module) {
-  createSvgSprite();
+  buildSvgSprite();
 }
