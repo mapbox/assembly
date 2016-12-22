@@ -50,7 +50,7 @@ class Entry extends React.Component {
       <span
         key={selector}
         id={`#${selector.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
-        className='mr3 p3 round bg-blue color-white txt-mono txt-xs inline-block'>
+        className='mr3 mb3 p3 round bg-blue color-white txt-mono txt-xs inline-block'>
         {selector.trim()}
       </span>;
 
