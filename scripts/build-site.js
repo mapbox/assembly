@@ -4,11 +4,11 @@
 require('babel-register');
 const renderSite = require('./render-site');
 const buildCss = require('./build-css');
-const copyAssets = require('./copy-assets');
+const copySiteAssets = require('./copy-site-assets');
 
 function buildSite() {
   return buildCss()
-    .then(() => Promise.all([renderSite(), copyAssets()]));
+    .then(() => Promise.all([renderSite(), copySiteAssets()]));
 }
 
 module.exports = buildSite;

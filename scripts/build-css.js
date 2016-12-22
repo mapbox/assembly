@@ -3,20 +3,19 @@
 const fs = require('fs');
 const path = require('path');
 const pify = require('pify');
+const mkdirp = require('mkdirp');
+const PQueue = require('p-queue');
 const Concat = require('concat-with-sourcemaps');
 const postcss = require('postcss');
+const cssnano = require('cssnano');
 const reporter = require('postcss-reporter');
 const autoprefixer = require('autoprefixer');
 const initPostcssCustomProperties = require('postcss-custom-properties');
 const postcssCustomMedia = require('postcss-custom-media');
-const variableDefinitions = require('../src/variables');
-const customMediaQueries = require('../src/media-queries');
+const defaultVariables = require('../src/variables');
+const defaultMediaQueries = require('../src/media-queries');
 const timelog = require('./timelog');
 const buildColorVariants = require('./build-color-variants');
-const ensureDist = require('./ensure-dist');
-
-const distCssFilename = 'assembly.css';
-const distCssPath = path.join(__dirname, `../dist/${distCssFilename}`);
 
 function getCssPath(name) {
   return path.join(__dirname, `../src/${name}.css`);
@@ -46,67 +45,110 @@ const cssFiles = [
   getCssPath('miscellaneous')
 ];
 
-const customProperties = initPostcssCustomProperties();
-customProperties.setVariables(variableDefinitions);
+/**
+ * Build CSS.
+ *
+ * @param {Object} options
+ * @param {string} [options.outfile] - Path to which built CSS should be written.
+ * @param {Object} [options.variables] - Variables to override the defaults.
+ * @param {Object} [options.mediaQueries] - Media queries to override the defaults.
+ * @param {Object} [options.colorVariants] - Color variant config to override
+ * @param {Object} [options.quiet] - Suppress logs
+ *   the defaults. See `build-color-variants.js` for details.
+ * @return {Promise<void>}
+ */
+function buildCss(options) {
+  options = options || {};
 
-const postcssPlugins = [
-  customProperties,
-  postcssCustomMedia({
-    extensions: customMediaQueries
-  }),
-  autoprefixer({
-    browsers: 'last 2 versions, not ie < 11'
-  }),
-  reporter()
-];
+  if (!options.quiet) timelog('Building CSS');
 
-function processCss(css, filePath, concat) {
-  return postcss(postcssPlugins)
-    .process(css, {
-      from: filePath,
-      to: filePath,
-      map: {
-        inline: false,
-        annotation: false,
-        sourcesContent: true
-      }
-    })
-    .then((postcssResult) => {
-      concat.add(filePath, postcssResult.css, postcssResult.map.toString());
-    })
-    .catch(handlePostcssError);
-}
+  const outfile = options.outfile || path.join(__dirname, '../dist/assembly.css');
+  const outfileFilename = path.basename(outfile);
 
-function processFile(cssFile, concat) {
-  return pify(fs.readFile)(cssFile, 'utf8').then((css) => {
-    return processCss(css, cssFile, concat);
+  const concat = new Concat(true, outfile, '\n');
+
+  const variableDefinitions = (options.variables)
+    ? Object.assign({}, defaultVariables, options.variables)
+    : defaultVariables;
+
+  const mediaQueryDefinitions = (options.mediaQueries)
+    ? Object.assign({}, defaultMediaQueries, options.mediaQueries)
+    : defaultMediaQueries;
+
+  const customProperties = initPostcssCustomProperties();
+  customProperties.setVariables(variableDefinitions);
+
+  const postcssPlugins = [
+    customProperties,
+    postcssCustomMedia({
+      extensions: mediaQueryDefinitions
+    }),
+    autoprefixer({
+      browsers: 'last 2 versions, not ie < 11'
+    }),
+    reporter()
+  ];
+
+  function processCss(css, filePath, concat) {
+    return postcss(postcssPlugins)
+      .process(css, {
+        from: filePath,
+        to: filePath,
+        map: {
+          inline: false,
+          annotation: false,
+          sourcesContent: true
+        }
+      })
+      .then((postcssResult) => {
+        concat.add(filePath, postcssResult.css, postcssResult.map.toString());
+      })
+      .catch(handlePostcssError);
+  }
+
+  function processFile(cssFile, concat) {
+    return pify(fs.readFile)(cssFile, 'utf8').then((css) => {
+      return processCss(css, cssFile, concat);
+    });
+  }
+
+  function appendColorVariants(concat) {
+    const colorVariantsCss = buildColorVariants(variableDefinitions, options.colorVariants);
+    return processCss(colorVariantsCss, 'color-variants.css', concat);
+  }
+
+  function writeDistCss(concat) {
+    const css = `${concat.content}\n/*# sourceMappingURL=${outfileFilename}.map */`;
+
+    function writeMinifiedCss() {
+      return cssnano.process(css).then((minifiedCss) => {
+        pify(fs.writeFile)(outfile.replace('.css', '.min.css'), minifiedCss, 'utf8');
+      });
+    }
+
+    return pify(mkdirp)(path.dirname(outfile)).then(() => {
+      return Promise.all([
+        pify(fs.writeFile)(outfile, css, 'utf8'),
+        pify(fs.writeFile)(`${outfile}.map`, concat.sourceMap, 'utf8'),
+        writeMinifiedCss()
+      ]);
+    });
+  }
+
+  // Read these one at a time to ensure deterministic
+  // stylesheet ordering based on the array above
+  const queue = new PQueue({ concurrency: 1 });
+  const processCssFiles = cssFiles.map((file) => {
+    return queue.add(() => processFile(file, concat));
   });
-}
 
-function appendColorVariants(concat) {
-  const colorVariantsCss = buildColorVariants();
-  return processCss(colorVariantsCss, 'color-variants.css', concat);
-}
-
-function writeDistCss(concat) {
-  const css = `${concat.content}\n/*# sourceMappingURL=${distCssFilename}.map */`;
-  return ensureDist().then(() => {
-    return Promise.all([
-      pify(fs.writeFile)(distCssPath, css, 'utf8'),
-      pify(fs.writeFile)(`${distCssPath}.map`, concat.sourceMap, 'utf8')
-    ]);
-  });
-}
-
-function buildCss() {
-  timelog('Building CSS');
-  const concat = new Concat(true, distCssPath, '\n');
-
-  return Promise.all(cssFiles.map((file) => processFile(file, concat)))
+  return Promise.all(processCssFiles)
     .catch(handlePostcssError)
     .then(() => appendColorVariants(concat))
     .then(() => writeDistCss(concat))
-    .then(() => timelog('Done building CSS'));
+    .then(() => {
+      if (!options.quiet) timelog('Done building CSS');
+    });
 }
 
 module.exports = buildCss;

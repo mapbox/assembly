@@ -8,7 +8,6 @@ const path = require('path');
 const mkdirp = require('mkdirp');
 const pify = require('pify');
 const timelog = require('./timelog');
-const ensureDist = require('./ensure-dist');
 
 const siteDistDir = path.join(__dirname, '../dist');
 const pageTemplatePath = path.join(__dirname, '../site/template.html');
@@ -35,7 +34,7 @@ function renderSite() {
 
   return Promise.all([
     readTemplate,
-    ensureDist()
+    mkdirp(siteDistDir)
   ])
     .then(() => {
       const buildPages = buildRoutes().map((pageData) => {
