@@ -3,8 +3,8 @@
 const svgstore = require('svgstore');
 const fs = require('fs');
 const _ = require('lodash');
+const pify = require('pify');
 const path = require('path');
-const queue = require('d3-queue').queue;
 const SVGO = require('svgo');
 const timelog = require('./timelog');
 const ensureDist = require('./ensure-dist');
@@ -28,30 +28,32 @@ document.addEventListener("DOMContentLoaded", function() {
 });}());`
 );
 
-function addFileToSprite(filename, sprite, callback) {
-  const extname = path.extname(filename);
-  if (extname !== '.svg') return callback();
+function addFileToSprite(filename, sprite) {
+  return new Promise((resolve, reject) => {
+    const extname = path.extname(filename);
+    if (extname !== '.svg') return resolve();
 
-  const basename = path.basename(filename, extname);
-  const handleError = (err) => {
-    console.log(`Error with icon "${basename}"`);
-    callback(err);
-  };
+    const basename = path.basename(filename, extname);
+    const handleError = (err) => {
+      console.log(`Error with icon "${basename}"`);
+      reject(err);
+    };
 
-  fs.readFile(filename, 'utf8', (err, content) => {
-    if (err) return callback(err);
-    try {
-      svgo.optimize(content, (optimizedContent) => {
-        try {
-          sprite.add(`icon-${basename}`, optimizedContent.data);
-          callback();
-        } catch (e) {
-          handleError(e);
-        }
-      });
-    } catch (e) {
-      handleError(e);
-    }
+    fs.readFile(filename, 'utf8', (readError, content) => {
+      if (readError) return handleError(readError);
+      try {
+        svgo.optimize(content, (optimizedContent) => {
+          try {
+            sprite.add(`icon-${basename}`, optimizedContent.data);
+            resolve();
+          } catch (e) {
+            handleError(e);
+          }
+        });
+      } catch (e) {
+        handleError(e);
+      }
+    });
   });
 }
 
@@ -59,29 +61,26 @@ function buildSvgSprite() {
   timelog('Building SVGs');
   const sprite = svgstore();
 
-  fs.readdir(svgDir, (err, filenames) => {
-    if (err) throw err;
-
-    const q = queue();
-    filenames.forEach((filename) => {
-      q.defer(addFileToSprite, path.join(svgDir, filename), sprite);
-    });
-
-    q.awaitAll((err) => {
-      if (err) throw err;
-
+  return pify(fs.readdir)(svgDir)
+    .then((filenames) => {
+      return Promise.all(filenames.map((filename) => {
+        return addFileToSprite(path.join(svgDir, filename), sprite);
+      }));
+    })
+    .then(() => {
       sprite.element('svg')
         .attr('id', 'svg-symbols')
         .attr('style', 'display:none');
 
       const cleanedSprite = sprite.toString().replace(/\n/g, '');
       const jsContent = baseJsTemplate({ svgSprite: cleanedSprite });
-      ensureDist().then(() => {
-        fs.writeFileSync(svgScript, jsContent);
-        timelog('Done building SVGs');
+      return ensureDist().then(() => {
+        return pify(fs.writeFile)(svgScript, jsContent);
       });
+    })
+    .then(() => {
+      timelog('Done building SVGs');
     });
-  });
 }
 
 module.exports = buildSvgSprite;
