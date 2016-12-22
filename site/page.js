@@ -5,7 +5,7 @@ class Page extends React.Component {
   render() {
     return (
       <div>
-        <div className='pt24 pt48-ml viewport-full-mm scroll-auto pl24 pr18 w180-mm fixed-mm top left'>
+        <div className='pt24 viewport-full-mm scroll-auto pl24 pr18 w180-mm fixed-mm top left'>
           <Navigation navData={this.props.navData} />
         </div>
         <div className='mb24 ml180-mm flex-parent flex-parent--center-main'>
