@@ -1572,15 +1572,17 @@
 }
 
 /**
- * Flexbox utilities. `Flex-parent-*` rules control the parent behavior, while `flex-child-*` rules control the child behavior.
- * Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
- * Check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox) to learn how the system works.
+ * Flexbox utilities. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes. Usage must fit the following pattern:
+ * - `Flex-parent-*` rules control the parent behavior, while `flex-child-*` rules control the child behavior.
+ * - By default, the `main` axis is horizontal and the `cross` axis is vertical. The axes can be inverted with the use of `flex-parent--column`.
+ * - To learn more about how the flexbox system works, check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox).
  * @section Flexbox
  * @memberof Layout
  */
 
 /**
- * Set display style to flex or inline-flex.
+ * To use flexbox utilities, set display style to flex or inline-flex.
+ * This allows use of dependent `flex-parent--*` classes, and `flex-child-*` classes on children.
  * @group
  * @memberof Flexbox
  * @example
@@ -1592,7 +1594,19 @@
 /** @endgroup */
 
 /**
- * Center an element's children on the main axis. By default, this is the horizontal axis.
+ * Set the direction of the main axis as top-to-bottom.
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 flex-parent flex-parent--column'>
+ *  <span>1</span>
+ *  <span>2</span>
+ *  <span>3</span>
+ * </div>
+ */
+.flex-parent--column { flex-direction: column !important; }
+
+/**
+ * Center an element's children on the main axis.
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 flex-parent flex-parent--center-main'>
@@ -1602,7 +1616,7 @@
 .flex-parent--center-main { justify-content: center !important; }
 
 /**
- * Center an element's children on the cross axis. By default, this is the vertical axis.
+ * Center an element's children on the cross axis.
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 h96 flex-parent flex-parent--center-cross'>
@@ -1622,22 +1636,10 @@
 .flex-parent--justify-end { justify-content: flex-end !important; }
 
 /**
- * Set the direction of the main axis as top-to-bottom.
+ * Children will wrap, rather than fitting all on one line.
  * @memberof Flexbox
  * @example
- * <div class='bg-darken10 flex-parent flex-parent--column'>
- *  <span>1</span>
- *  <span>2</span>
- *  <span>3</span>
- * </div>
- */
-.flex-parent--column { flex-direction: column !important; }
-
-/**
- * Allow the children elements to wrap, rather than fitting all on one line.
- * @memberof Flexbox
- * @example
- * <div class='bg-darken10 flex-parent flex-parent--wrap'>
+ * <div class='bg-darken10 clip flex-parent flex-parent--wrap'>
  *  <div class='bg-darken10 w480'>child</div>
  *  <div class='bg-darken10 w480'>child</div>
  * </div>
@@ -1655,13 +1657,13 @@
 .flex-parent--stretch-cross { align-items: stretch !important; }
 
 /**
- * Prevent the child from the default behavior of shrinking.
+ * By default, flex children (even with specified widths) will shrink as needed to accommodate sibling elements.
+ * This class prevents that default shrinkage, forcing siblings to accommodate the parent's width.
+ * Prevent the child from shrinking below its width value.
  * @memberof Flexbox
  * @example
- * <div class='bg-darken10 flex-parent'>
+ * <div class='bg-darken10 w480 flex-parent'>
  *  <div class='border w240 flex-child-noshrink'>child</div>
- *  <div class='border w240'>child</div>
- *  <div class='border w240'>child</div>
  *  <div class='border w240'>child</div>
  *  <div class='border w240'>child</div>
  * </div>
@@ -1669,12 +1671,13 @@
 .flex-child-noshrink { flex-shrink: 0 !important; }
 
 /**
- * Specify that a child will grow to fill the container.
+ * Specify that a child will grow to fill the container. This is useful when you have one or more elements of
+ * fixed width, and another element that should take up the remaining space in the row.
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 flex-parent'>
- *  <div class='border w240 flex-child-grow'>child</div>
  *  <div class='border w240'>child</div>
+ *  <div class='border flex-child-grow'>child</div>
  * </div>
  */
 .flex-child-grow {
