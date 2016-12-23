@@ -126,7 +126,7 @@
  * Classes to create pill button groups. Every button in a pill group
  * has a `.btn--pill` class and a modifier specifying its position.
  * Pill groups should be wrapped in a container with a
- * `flex-parent flex-parent--inline` container.
+ * `flex-parent flex-parent-inline` container.
  *
  * For *horizontal* pills, use
  * - `btn--pill-hc` (center)
@@ -144,13 +144,13 @@
  * @memberof Buttons
  * @example
  * <div>
- *   <div class="mr12 flex-parent--inline">
+ *   <div class="mr12 flex-parent-inline">
  *     <button class="btn btn--pill btn--pill-hl">Left</button>
  *     <button class="btn btn--pill btn--pill-hc">Center</button>
  *     <button class="btn btn--pill btn--pill-hr">Right</button>
  *   </div>
  * </div>
- *  <div class="flex-parent flex-parent--inline flex-parent--column mt12">
+ *  <div class="flex-parent flex-parent-inline flex-parent--column mt12">
  *     <button class="btn btn--pill btn--pill-vt">Top</button>
  *     <button class="btn btn--pill btn--pill-vc">Center</button>
  *     <button class="btn btn--pill btn--pill-vb">Bottom</button>
