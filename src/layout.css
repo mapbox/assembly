@@ -1215,6 +1215,7 @@
 .wmax720 { max-width: 720px !important; }
 .wmax960 { max-width: 960px !important; }
 .wmax1200 { max-width: 1200px !important; }
+.wmax1500 { max-width: 1500px !important; }
 /** @endgroup */
 
 @media (--m-screen) {
@@ -1232,7 +1233,6 @@
   .wmax480-mm { max-width: 480px !important; }
   .wmax720-mm { max-width: 720px !important; }
   .wmax960-mm { max-width: 960px !important; }
-  .wmax1200-mm { max-width: 1200px !important; }
 }
 
 @media (--l-screen) {
@@ -1267,6 +1267,8 @@
   .wmax480-mxl { max-width: 480px !important; }
   .wmax720-mxl { max-width: 720px !important; }
   .wmax960-mxl { max-width: 960px !important; }
+  .wmax1200-mxl { max-width: 1200px !important; }
+  .wmax1500-mxl { max-width: 1500px !important; }
 }
 
 /**
