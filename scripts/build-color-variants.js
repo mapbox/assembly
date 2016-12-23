@@ -196,7 +196,7 @@ function buildColorVariants(variables, config) {
           background-color: ${colorValue};
         }
 
-        .select-container:hover > .select--${color} {
+        .select--${color}:hover {
           background-color: ${darkerShade};
         }
       `);
@@ -212,9 +212,14 @@ function buildColorVariants(variables, config) {
         .select--stroke-${color} {
           color: ${colorValue};
         }
-
-        .select-container:hover > .select--stroke-${color} {
+        .select--stroke-${color} + .select-arrow {
+          border-top-color: ${colorValue};
+        }
+        .select--stroke-${color}:hover {
           color: ${darkerShade};
+        }
+        .select--stroke-${color}:hover + .select-arrow {
+          border-top-color: ${darkerShade};
         }
       `);
     }, '');
