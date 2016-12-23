@@ -55,7 +55,7 @@ class Navigation extends React.Component {
     });
 
     return (<div>
-      <div className='txt-m mb12'>Assembly</div>
+      <div className='animation-rainbow animation--speed-8 color-teal mb12 txt-xl alpha75'><span className='txt-mono'>Assembly</span></div>
       {navEls}
     </div>);
   }
