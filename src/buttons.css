@@ -6,7 +6,7 @@
  */
 
 /**
- * By default, buttons have a blue background. Use the
+ * A button. Use the
  * `.btn--{color}` modifier to change the color of a button. Buttons have white text unless combined with a [`.color-*`](#Color)
  * class. Buttons have fully rounded corners unless combined with a [`.round-*`](#Theming) class.
  *
@@ -14,9 +14,9 @@
  * @example
  * <button class='btn'>Default</button>
  * <button class='btn btn--red'>Color</button>
- * <button class='btn btn--teal color-blue-dark'>More colors</button>
+ * <button class='btn btn--teal color-yellow'>More colors</button>
  * <button class='btn round'>Less rounded</button>
- * <div class='p12 bg-blue inline-block'>
+ * <div class='p6 bg-blue inline-block'>
  *   <button class='btn btn--white color-blue'>Reverse</button>
  * </div>
  */
@@ -58,7 +58,7 @@
  * <button class='btn btn--stroke'>Default</button>
  * <button class='btn btn--stroke btn--red'>Color</button>
  * <button class='btn btn--stroke round'>Less rounded</button>
- * <div class='p12 bg-blue inline-block'>
+ * <div class='p6 bg-blue inline-block'>
  *   <button class='btn btn--stroke btn--white'>Reverse</button>
  * </div>
  */
@@ -86,7 +86,7 @@
  *
  * @memberof Buttons
  * @example
- * <button class='btn txt-s btn--s'>Small</button>
+ * <button class='btn btn--s'>Small</button>
  */
 .btn--s {
   font-size: 12px;
@@ -99,7 +99,7 @@
  *
  * @memberof Buttons
  * @example
- * <button class='btn txt-s btn--s'>Small</button>
+ * <button class='btn btn--xs'>Extra small</button>
  */
 .btn--xs {
   line-height: 14px; /* Forces height of btn--xs to be 18px */

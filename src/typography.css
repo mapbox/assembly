@@ -642,6 +642,7 @@ textarea {
  * `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `table`, `small`, `ul`, `ol`, `a`, `abbr`, `hr`, `blockquote`, `kbd`, `sub`, `sup`, `code`, `pre`, `img`, and `video`.
  *
  * @memberof Prose
+ * @selectors .prose
  * @example
  * <div class="prose">
  *   <h1>Tortor Porta</h1>
@@ -650,7 +651,6 @@ textarea {
  *   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
  * </div>
  */
-.prose { /* for documentation purposes only */ }
 
 /**
  * Invert styling of everything inside the prose class so content stays legible on dark backgrounds.
