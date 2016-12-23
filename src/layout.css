@@ -1574,41 +1574,122 @@
 }
 
 /**
- * Extra layout utilities.
- *
+ * Flexbox utilities. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes. Usage must fit the following pattern:
+ * - `Flex-parent-*` rules control the parent behavior, while `flex-child-*` rules control the child behavior.
+ * - By default, the `main` axis is horizontal and the `cross` axis is vertical. The axes can be inverted with the use of `flex-parent--column`.
+ * - To learn more about how the flexbox system works, check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox).
+ * @section Flexbox
  * @memberof Layout
- * @section Layout utils
  */
 
 /**
- * Flexbox utilities. Check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
- * to learn how the system works. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
- *
- * @memberof Layout utils
+ * To use flexbox utilities, set display style to flex or inline-flex.
+ * This allows use of dependent `flex-parent--*` classes, and `flex-child-*` classes on children.
  * @group
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 flex-parent'>flex-parent</div>
+ * <div class='bg-darken10 flex-parent-inline'>flex-parent-inline</div>
  */
 .flex-parent { display: flex !important; }
-.flex-parent--inline { display: inline-flex !important; }
+.flex-parent-inline { display: inline-flex !important; }
+/** @endgroup */
+
+/**
+ * Set the direction of the main axis as top-to-bottom.
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 flex-parent flex-parent--column'>
+ *  <span>1</span>
+ *  <span>2</span>
+ *  <span>3</span>
+ * </div>
+ */
 .flex-parent--column { flex-direction: column !important; }
-.flex-parent--wrap { flex-wrap: wrap !important; }
-.flex-parent--justify-end { justify-content: flex-end !important; }
+
+/**
+ * Center an element's children on the main axis.
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 flex-parent flex-parent--center-main'>
+ *  <div class='bg-darken10'>child</div>
+ * </div>
+ */
 .flex-parent--center-main { justify-content: center !important; }
+
+/**
+ * Center an element's children on the cross axis.
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 h96 flex-parent flex-parent--center-cross'>
+ *  <div class='bg-darken10'>child</div>
+ * </div>
+ */
 .flex-parent--center-cross { align-items: center !important; }
-.flex-parent--stretch-main { justify-content: stretch !important; }
+
+/**
+ * Justify an element's children to the end of the main axis.
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 flex-parent flex-parent--justify-end'>
+ *  <div class='bg-darken10'>child</div>
+ * </div>
+ */
+.flex-parent--justify-end { justify-content: flex-end !important; }
+
+/**
+ * Children will wrap, rather than fitting all on one line.
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 clip flex-parent flex-parent--wrap'>
+ *  <div class='bg-darken10 w480'>child</div>
+ *  <div class='bg-darken10 w480'>child</div>
+ * </div>
+ */
+.flex-parent--wrap { flex-wrap: wrap !important; }
+
+/**
+ * Children will stretch to fill the parent container along the cross axis.
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 h96 flex-parent flex-parent--stretch-cross'>
+ *  <div class='bg-darken10'>child</div>
+ * </div>
+ */
 .flex-parent--stretch-cross { align-items: stretch !important; }
 
+/**
+ * By default, flex children (even with specified widths) will shrink as needed to accommodate sibling elements.
+ * This class prevents that default shrinkage, forcing siblings to accommodate the parent's width.
+ * Prevent the child from shrinking below its width value.
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 w480 flex-parent'>
+ *  <div class='border w240 flex-child-noshrink'>child</div>
+ *  <div class='border w240'>child</div>
+ *  <div class='border w240'>child</div>
+ * </div>
+ */
 .flex-child-noshrink { flex-shrink: 0 !important; }
+
+/**
+ * Specify that a child will grow to fill the container. This is useful when you have one or more elements of
+ * fixed width, and another element that should take up the remaining space in the row.
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 flex-parent'>
+ *  <div class='border w240'>child</div>
+ *  <div class='border flex-child-grow'>child</div>
+ * </div>
+ */
 .flex-child-grow {
-  flex-grow: 1;
-  /* prevent overflowing chidlren
-  clearfix. https://css-tricks.com/flexbox-truncated-text/ */
+  flex-grow: 1 !important;
   min-width: 0 !important;
 }
-/** @endgroup */
 
 @media (--m-screen) {
   .flex-parent-mm { display: flex !important; }
-  .flex-parent-none-mm { flex: none !important; }
+  .flex-parent-inline-mm { display: inline-flex !important; }
   .flex-parent--column-mm { flex-direction: column !important; }
   .flex-parent--wrap-mm { flex-wrap: wrap !important; }
   .flex-parent--justify-end-mm { justify-content: flex-end !important; }
@@ -1624,7 +1705,7 @@
 
 @media (--l-screen) {
   .flex-parent-ml { display: flex !important; }
-  .flex-parent-none-ml { flex: none !important; }
+  .flex-parent-inline-ml { display: inline-flex !important; }
   .flex-parent--column-ml { flex-direction: column !important; }
   .flex-parent--wrap-ml { flex-wrap: wrap !important; }
   .flex-parent--justify-end-ml { justify-content: flex-end !important; }
@@ -1640,7 +1721,7 @@
 
 @media (--xl-screen) {
   .flex-parent-mxl { display: flex !important; }
-  .flex-parent-none-mxl { flex: none !important; }
+  .flex-parent-inline-mxl { display: inline-flex !important; }
   .flex-parent--column-mxl { flex-direction: column !important; }
   .flex-parent--wrap-mxl { flex-wrap: wrap !important; }
   .flex-parent--justify-end-mxl { justify-content: flex-end !important; }
@@ -1653,6 +1734,14 @@
     min-width: 0 !important;
   }
 }
+/* end flex */
+
+/**
+ * Extra layout utilities.
+ *
+ * @memberof Layout
+ * @section Layout utils
+ */
 
 /**
  * Bleed utilities. Bleed classes allow an element inside a centered container to escape the container and meet the edge of the screen.
