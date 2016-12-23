@@ -2,7 +2,6 @@ import React from 'react';
 import { CheckboxesRadios } from './checkboxes_radios';
 import { Buttons } from './buttons';
 import { Pills } from './pills';
-import { Grid } from './grid';
 import { Typography } from './typography';
 import { Elements } from './elements';
 import { TablesLists } from './tables_lists';
@@ -57,9 +56,6 @@ class Debug extends React.Component {
         </div>
         <div className='mb48'>
           <Pills />
-        </div>
-        <div className='mb48'>
-          <Grid />
         </div>
         <div className='mb48'>
           <Typography />
