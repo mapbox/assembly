@@ -2,7 +2,7 @@
 
 /**
  * Font styles, sizes, and utilities. There are two ways to style text with Assembly. All typographic styles can be applied individually with classes that have a
- * `.txt-` prefix. Alternatively, the [`.prose`](#Prose) class can be used to apply opinionated typographic styling and margins to all child elements.
+ * `.txt-` prefix. Alternatively, the [`.prose`](#Prose) class can be used to apply sensible default styling for semantic elements.
  *
  * @section Typography
 */
@@ -610,7 +610,7 @@ textarea {
  */
 
 /**
- * Apply opinionated styles to large sections of text by wrapping text in a container with the prose class. `.prose` applies styles to
+ * Apply appropriate styles based on semantic markup. Supported elements are:
  * `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `table`, `small`, `ul`, `ol`, `a`, `abbr`, `hr`, `blockquote`, `kbd`, `sub`, `sup`, `code`, `pre`, `img`, and `video`.
  *
  * @memberof Prose
