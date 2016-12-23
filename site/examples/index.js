@@ -9,7 +9,7 @@ class Examples extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='txt-subhead mb12 txt-bold pt48'>
+        <h1 className='txt-subhead mb12 txt-bold pt24'>
           Examples
         </h1>
         <UnderlineTabs />

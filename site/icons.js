@@ -37,7 +37,7 @@ class Icons extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-subhead mb12 txt-bold pt48'>
+        <h1 className='txt-subhead mb12 txt-bold pt24'>
           Icons
         </h1>
         <div className='mb48 prose'>

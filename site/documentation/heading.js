@@ -16,8 +16,8 @@ class Heading extends React.Component {
       </div>;
     }
 
-    const sectionClass = props.level === 1 ? 'mt24 pb18 border--gray' : 'pt12 pb12 mt12 border--gray-faint';
-    const levelClass = props.level === 1 ? 'txt-subhead mb12' : 'txt-l uppercase';
+    const sectionClass = props.level === 1 ? 'pb18 border--gray' : 'pb12 mt12 border--gray-faint';
+    const levelClass = props.level === 1 ? 'txt-subhead mb12 pt24' : 'pt12 txt-l uppercase';
 
     const example = !props.parsedComment.example ? null : (
       <HtmlExample code={props.parsedComment.example.description} />
