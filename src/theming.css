@@ -20,34 +20,73 @@
  * <div class='mt12 border-b'>border-b</div>
  */
 .border { border: 1px solid !important; }
-.border-l { border-left: 1px solid !important; }
 .border-t { border-top: 1px solid !important; }
 .border-r { border-right: 1px solid !important; }
 .border-b { border-bottom: 1px solid !important; }
+.border-l { border-left: 1px solid !important; }
 /** @endgroup */
 
 @media (--m-screen) {
   .border-mm { border: 1px solid !important; }
-  .border-l-mm { border-left: 1px solid !important; }
   .border-t-mm { border-top: 1px solid !important; }
   .border-r-mm { border-right: 1px solid !important; }
   .border-b-mm { border-bottom: 1px solid !important; }
+  .border-l-mm { border-left: 1px solid !important; }
 }
 
 @media (--l-screen) {
   .border-ml { border: 1px solid !important; }
-  .border-l-ml { border-left: 1px solid !important; }
   .border-t-ml { border-top: 1px solid !important; }
   .border-r-ml { border-right: 1px solid !important; }
   .border-b-ml { border-bottom: 1px solid !important; }
+  .border-l-ml { border-left: 1px solid !important; }
 }
 
 @media (--xl-screen) {
   .border-mxl { border: 1px solid !important; }
-  .border-l-mxl { border-left: 1px solid !important; }
   .border-t-mxl { border-top: 1px solid !important; }
   .border-r-mxl { border-right: 1px solid !important; }
   .border-b-mxl { border-bottom: 1px solid !important; }
+  .border-l-mxl { border-left: 1px solid !important; }
+}
+
+/**
+ * Modify a border to be zero pixels wide. Depends on a `border` or `border-{direction}` class.
+ *
+ * @group
+ * @memberof Borders
+ * @example
+ * <div class='border border-r--0'>border--0</div>
+ */
+.border--0 { border-width: 0 !important; }
+.border-t--0 { border-top-width: 0 !important; }
+.border-r--0 { border-right-width: 0 !important; }
+.border-b--0 { border-bottom-width: 0 !important; }
+.border-l--0 { border-left-width: 0 !important; }
+/** @endgroup */
+
+@media (--m-screen) {
+  .border--0-mm { border-width: 0 !important; }
+  .border-t--0-mm { border-top-width: 0 !important; }
+  .border-r--0-mm { border-right-width: 0 !important; }
+  .border-b--0-mm { border-bottom-width: 0 !important; }
+  .border-l--0-mm { border-left-width: 0 !important; }
+}
+
+@media (--l-screen) {
+  .border--0-ml { border-width: 0 !important; }
+  .border-t--0-ml { border-top-width: 0 !important; }
+  .border-r--0-ml { border-right-width: 0 !important; }
+  .border-b--0-ml { border-bottom-width: 0 !important; }
+  .border-l--0-ml { border-left-width: 0 !important; }
+}
+
+@media (--xl-screen) {
+  .border--0-mxl { border-width: 0 !important; }
+  .border-t--0-mxl { border-top-width: 0 !important; }
+  .border-r--0-mxl { border-right-width: 0 !important; }
+  .border-b--0-mxl { border-bottom-width: 0 !important; }
+  .border-l--0-mxl { border-left-width: 0 !important; }
 }
 
 /**
