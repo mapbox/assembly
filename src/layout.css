@@ -1675,7 +1675,7 @@
 /* @endgroup */
 
 /**
- * For non-grid, non-flexbox layouts.
+ * Float elements. Unfloat removes existing flats. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Layout utils
  * @example
@@ -1688,9 +1688,28 @@
  */
 .fl { float: left !important; }
 .fr { float: right !important; }
+.unfloat { float: none !important; }
 .clearfix::after {
   content: '' !important;
   display: block !important;
   clear: both !important;
 }
 /** @endgroup */
+
+@media (--m-screen) {
+  .fl-mm { float: left !important; }
+  .fr-mm { float: right !important; }
+  .unfloat-mm { float: none !important; }
+}
+
+@media (--l-screen) {
+  .fl-ml { float: left !important; }
+  .fr-ml { float: right !important; }
+  .unfloat-ml { float: none !important; }
+}
+
+@media (--xl-screen) {
+  .fl-mxl { float: left !important; }
+  .fr-mxl { float: right !important; }
+  .unfloat-mxl { float: none !important; }
+}
