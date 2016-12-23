@@ -4,7 +4,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className='mt24 mb96 wmax960'>
-        <div className='txt-subhead'>
+        <div className='txt-headline'>
         <h1 className='animation-rainbow animation--speed-8 color-teal inline code uppercase txt-headline pl6 pr6'>
           Assembly.css
         </h1>
@@ -18,7 +18,7 @@ class Home extends React.Component {
           <p>
             Include a link to the assembly stylesheet in the head of your HTML.
           </p>
-          <pre className='mt12 code-block'>
+          <pre className='mt12 code'>
             {'<link href="https://www.mapbox.com/assembly/assembly.css" rel="stylesheet" />'}
           </pre>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l uppercase txt-bold'>

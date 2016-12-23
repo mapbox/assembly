@@ -37,25 +37,27 @@ class Navigation extends React.Component {
       });
     }
 
-    const navEls = props.navData.items.map((r) => {
+    function nameIsNotHome(n) { return n.name !== 'Home' }
+    const filteredNavData = props.navData.items.filter(nameIsNotHome);
+    const navEls = filteredNavData.map((r) => {
       const showNestedItems = r.name !== props.navData.active
         || r.items === undefined
         || r.items.length === 0;
       const nestedItems = (showNestedItems) ? null : (
-        <div className='pl6 txt-s mb3'>
+        <div className='pl6 txt-s mb6'>
           {listNestedMembers(r.items)}
         </div>
       );
       return (
         <div key={r.name}>
-          <a className={`txt-s txt-bold block txt-link mb3 ${r.name === props.navData.active ? 'is-active' : ''}`} href={`/assembly${r.route}`}>{r.name}</a>
+          <a className={`txt-s txt-bold block txt-link mb6 ${r.name === props.navData.active ? 'is-active' : ''}`} href={`/assembly${r.route}`}>{r.name}</a>
           {nestedItems}
         </div>
       );
     });
 
     return (<div>
-      <div className='mb12 txt-l'>Assembly</div>
+      <div className='mb24 txt-mono txt-link uppercase'><a href='/assembly/'>Assembly</a></div>
       {navEls}
     </div>);
   }
