@@ -1,6 +1,6 @@
 import React from 'react';
 
-const headInclues = `<link href="https://www.mapbox.com/assembly/assembly.css" rel="stylesheet"
+const headIncludes = `<link href="https://www.mapbox.com/assembly/assembly.css" rel="stylesheet"
 <script src="https://www.mapbox.com/assembly/assembly-svg.js"></script>`;
 
 class Home extends React.Component {
@@ -21,7 +21,7 @@ class Home extends React.Component {
           </p>
           <pre className='mt12 pre'>
             <code>
-              {headInclues}
+              {headIncludes}
             </code>
           </pre>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l uppercase txt-bold'>
