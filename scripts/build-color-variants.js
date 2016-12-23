@@ -137,7 +137,7 @@ function buildColorVariants(variables, config) {
         }
 
         .btn--${color}:hover,
-        .btn--${color}.is-active {
+        .btn--${color}.btn--is-active {
           background-color: ${darkerShade};
         }
       `);
@@ -156,7 +156,7 @@ function buildColorVariants(variables, config) {
         }
 
         .btn--stroke.btn--${color}:hover,
-        .btn--stroke.btn--${color}.is-active {
+        .btn--stroke--is-active.btn--${color} {
           color: ${darkerShade};
         }
       `);
@@ -367,7 +367,7 @@ function buildColorVariants(variables, config) {
        * <div class='grid'>`
     );
     colors.forEach((color) => {
-      css += `\n *   <div class='col col--3 color-${color}'>.color-${color}</div>`;
+      css += `\n *   <div class='col col--3 color-${color}'>color-${color}</div>`;
     });
     css += `\n *   <div class='col col--3 color-text'>.color-text</div>`; // eslint-disable-line quotes
     css += '\n * </div>\n */';
@@ -400,7 +400,7 @@ function buildColorVariants(variables, config) {
        * <div class='grid'>`
     );
     colors.forEach((color) => {
-      css += `\n *   <div class='col col--3 bg-${color} p6'>.bg-${color}</div>`;
+      css += `\n *   <div class='col col--3 bg-${color} p6'>bg-${color}</div>`;
     });
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
@@ -421,7 +421,7 @@ function buildColorVariants(variables, config) {
         .txt-link--${color} {
           color: ${variables[color]};
         }
-        .txt-link--${color}.is-active,
+        .txt-link--${color}.txt-link--is-active,
         .txt-link--${color}:hover {
           color: ${darkerShade};
         }
@@ -432,16 +432,12 @@ function buildColorVariants(variables, config) {
   variantGenerators.border = function (colors) {
     let css = stripIndent(`
       /**
-       * For a colored border, add the modifying class \`.border--color\`
-       * where color is a [color](#Colors-&-gradients).
+       * Modify your border with a [color](#Colors-&-gradients). Depends on a \`border\` or \`border-{direction}\` class.
        *
        * @group
        * @memberof Borders
        * @example
-       * <div class='flex-parent'>
-       *  <div class='col col--2 p12 mr12 border border--red'>.border--red</div>
-       *  <div class='col col--2 p12 mr12 border-l border-r border--dash border--yellow'>.border--yellow</div>
-       * </div>
+       * <div class='border border--red'>border--red</div>
        */`);
     css +=  colors.reduce((result, color) => {
       return result += stripIndent(`
@@ -457,12 +453,12 @@ function buildColorVariants(variables, config) {
   variantGenerators.hoverShadow = function (colors) {
     let css = stripIndent(`
       /**
-       * Control the shadow of elements on hover.
+       * Add shadows to elements on hover.
        *
        * @group
-       * @memberof State modifiers
+       * @memberof Shadows
        * @example
-       * <div class='w400 hover-shadow-darken25'>.hover-shadow-darken25</div>
+       * <div class='hover-shadow-darken25'>hover-shadow-darken25</div>
        */`);
     css += colors.reduce((result, color) => {
       if (!isSemitransparent(color)) return result;
@@ -471,8 +467,8 @@ function buildColorVariants(variables, config) {
         .hover-shadow-${color}:hover {
           box-shadow: 0 0 10px 2px ${colorValue} !important;
         }
-        .hover-shadow-${color}-bold:hover {
-          box-shadow: 0 0 20px 2px ${colorValue} !important;
+        .hover-shadow-bold-${color}:hover {
+          box-shadow: 0 0 30px 6px ${colorValue} !important;
         }
       `);
     }, '');
@@ -486,9 +482,9 @@ function buildColorVariants(variables, config) {
        * Control the background of elements on hover.
        *
        * @group
-       * @memberof State modifiers
+       * @memberof Colors & gradients
        * @example
-       * <div class='w400 hover-bg-darken25'>.hover-bg-darken25</div>
+       * <div class='hover-bg-darken25'>hover-bg-darken25</div>
        */`);
     css += colors.reduce((result, color) => {
       return result += stripIndent(`
@@ -507,9 +503,9 @@ function buildColorVariants(variables, config) {
        * Control the color of elements on hover.
        *
        * @group
-       * @memberof State modifiers
+       * @memberof Colors & gradients
        * @example
-       * <div class='w400 hover-color-red'>.hover-color-red</div>
+       * <div class='hover-color-red'>hover-color-red</div>
        */`);
     css += colors.reduce((result, color) => {
       return result += stripIndent(`
@@ -525,16 +521,16 @@ function buildColorVariants(variables, config) {
   variantGenerators.hoverBorder = function (colors) {
     let css = stripIndent(`
       /**
-       * Control the border color of elements on hover.
+       * Set the border color of an element on hover. Depends on a \`border\` or \`border-{direction}\` class.
        *
        * @group
-       * @memberof State modifiers
+       * @memberof Borders
        * @example
-       * <div class='w400 border border--2 border--pink hover-border-blue'>.hover-border-blue</div>
+       * <div class='border hover-border--red'>hover-border-red</div>
        */`);
     css += colors.reduce((result, color) => {
       return result += stripIndent(`
-        .hover-border-${color}:hover {
+        .hover-border--${color}:hover {
           border-color: ${variables[color]} !important;
         }
       `);

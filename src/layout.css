@@ -953,7 +953,7 @@
  * @memberof Padding
  * @example
  * <div class='pr24 bg-darken10'>
- *   <div class='bg-blue-faint'>pr24</div>
+ *   <div class=' bg-darken10'>pr24</div>
  * </div>
  */
 .pr0 { padding-right: 0 !important; }
@@ -1675,7 +1675,7 @@
 /* @endgroup */
 
 /**
- * For non-grid, non-flexbox layouts.
+ * Float elements. Unfloat removes existing flats. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @memberof Layout utils
  * @example
@@ -1688,9 +1688,28 @@
  */
 .fl { float: left !important; }
 .fr { float: right !important; }
+.unfloat { float: none !important; }
 .clearfix::after {
   content: '' !important;
   display: block !important;
   clear: both !important;
 }
 /** @endgroup */
+
+@media (--m-screen) {
+  .fl-mm { float: left !important; }
+  .fr-mm { float: right !important; }
+  .unfloat-mm { float: none !important; }
+}
+
+@media (--l-screen) {
+  .fl-ml { float: left !important; }
+  .fr-ml { float: right !important; }
+  .unfloat-ml { float: none !important; }
+}
+
+@media (--xl-screen) {
+  .fl-mxl { float: left !important; }
+  .fr-mxl { float: right !important; }
+  .unfloat-mxl { float: none !important; }
+}

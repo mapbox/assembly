@@ -14,11 +14,11 @@ for (i = 0; i < buttons.length; i++) {
     if (expanded.className === 'none') {
       expanded.className = 'inline';
       collapsed.className = 'none';
-      this.textContent = 'see fewer';
+      this.textContent = 'See fewer';
     } else if (expanded.className === 'inline') {
       expanded.className = 'none';
       collapsed.className = 'inline';
-      this.textContent = 'see all';
+      this.textContent = 'See all';
     }
 
   });

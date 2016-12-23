@@ -1,22 +1,87 @@
 /**
- * Utility classes for theming.
+ * Decorate elements with borders, shadows, opacity adjustments, and more.
  * @section Theming
 */
 
 /**
- * Round classes.
- * - Choose the size of a border radius with `*-bold` and `*-full`.
- * - Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
- * - Target corners with `*-tl`, `*-tr`, `*-bl`, `*-br`.
+ * Add borders to elements.
+ *
+ * @section Borders
+ * @memberof Theming
+ */
+
+/**
+ * Add a basic 1px border. Target sides with `border-t`, `border-r`, `border-b`, and `border-l`. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @group
- * @memberof Theming
+ * @memberof Borders
  * @example
- * <div class='flex-parent'>
- *   <div class='col col--2 bg-gray color-white p12 mr12 round'>.round</div>
- *   <div class='col col--2 bg-gray color-white p12 mr12 round-bold-r'>.round-bold-r</div>
- *   <div class='col col--2 bg-gray color-white p12 round-full'>.round-full</div>
- * </div>
+ * <div class='border'>border</div>
+ * <div class='mt12 border-b'>border-b</div>
+ */
+.border { border: 1px solid !important; }
+.border-l { border-left: 1px solid !important; }
+.border-t { border-top: 1px solid !important; }
+.border-r { border-right: 1px solid !important; }
+.border-b { border-bottom: 1px solid !important; }
+/** @endgroup */
+
+@media (--m-screen) {
+  .border-mm { border: 1px solid !important; }
+  .border-l-mm { border-left: 1px solid !important; }
+  .border-t-mm { border-top: 1px solid !important; }
+  .border-r-mm { border-right: 1px solid !important; }
+  .border-b-mm { border-bottom: 1px solid !important; }
+}
+
+@media (--l-screen) {
+  .border-ml { border: 1px solid !important; }
+  .border-l-ml { border-left: 1px solid !important; }
+  .border-t-ml { border-top: 1px solid !important; }
+  .border-r-ml { border-right: 1px solid !important; }
+  .border-b-ml { border-bottom: 1px solid !important; }
+}
+
+@media (--xl-screen) {
+  .border-mxl { border: 1px solid !important; }
+  .border-l-mxl { border-left: 1px solid !important; }
+  .border-t-mxl { border-top: 1px solid !important; }
+  .border-r-mxl { border-right: 1px solid !important; }
+  .border-b-mxl { border-bottom: 1px solid !important; }
+}
+
+/**
+ * Modify a border to be two pixels wide. Depends on a `border` or `border-{direction}` class.
+ *
+ * @memberof Borders
+ * @example
+ * <div class='border border--2'>border--2</div>
+ */
+.border--2 { border-width: 2px !important; }
+
+/**
+ * Modify a border to be be dashed instead of solid. Depends on a `border` or `border-{direction}` class.
+ *
+ * @memberof Borders
+ * @example
+ * <div class='border border--dash'>border--dash</div>
+ */
+.border--dash { border-style: dashed !important; }
+
+/**
+ * Adjust the radius of element's borders.
+ * @memberof Theming
+ * @section Border radius
+ */
+
+/**
+ * Round the corners of elements. Target sides with `*-t`, `*-r`, `*-b`, `*-l`. Target corners with `*-tl`, `*-tr`, `*-bl`, `*-br`.
+ *
+ * @group
+ * @memberof Border radius
+ * @example
+ * <div class='bg-teal inline-block round'>round</div>
+ * <div class='bg-teal inline-block ml6 round-tr'>round-tr</div>
  */
 .round { border-radius: var(--border-radius) !important; }
 .round-t { border-radius: var(--border-radius) var(--border-radius) 0 0 !important; }
@@ -29,113 +94,128 @@
 .round-bl { border-bottom-left-radius: var(--border-radius) !important; }
 /** @endgroup */
 
+/**
+ * Like `round`, but with twice the border radius.
+ *
+ * @group
+ * @memberof Border radius
+ * @example
+ * <div class='bg-teal inline-block round-bold'>round-bold</div>
+ * <div class='bg-teal inline-block ml6 round-tr-bold'>round-tr-bold</div>
+ */
 .round-bold { border-radius: var(--border-radius-bold) !important; }
-.round-bold-t { border-radius: var(--border-radius-bold) var(--border-radius-bold) 0 0 !important; }
-.round-bold-r { border-radius: 0 var(--border-radius-bold) var(--border-radius-bold) 0 !important; }
-.round-bold-b { border-radius: 0 0 var(--border-radius-bold) var(--border-radius-bold) !important; }
-.round-bold-l { border-radius: var(--border-radius-bold) 0 0 var(--border-radius-bold) !important; }
-.round-bold-tl { border-top-left-radius: var(--border-radius-bold) !important; }
-.round-bold-tr { border-top-right-radius: var(--border-radius-bold) !important; }
-.round-bold-br { border-bottom-right-radius: var(--border-radius-bold) !important; }
-.round-bold-bl { border-bottom-left-radius: var(--border-radius-bold) !important; }
+.round-t-bold { border-radius: var(--border-radius-bold) var(--border-radius-bold) 0 0 !important; }
+.round-r-bold { border-radius: 0 var(--border-radius-bold) var(--border-radius-bold) 0 !important; }
+.round-b-bold { border-radius: 0 0 var(--border-radius-bold) var(--border-radius-bold) !important; }
+.round-l-bold { border-radius: var(--border-radius-bold) 0 0 var(--border-radius-bold) !important; }
+.round-tl-bold { border-top-left-radius: var(--border-radius-bold) !important; }
+.round-tr-bold { border-top-right-radius: var(--border-radius-bold) !important; }
+.round-br-bold { border-bottom-right-radius: var(--border-radius-bold) !important; }
+.round-bl-bold { border-bottom-left-radius: var(--border-radius-bold) !important; }
+/** @endgroup */
 
+/**
+ * Fully-round border radiuses of elements.
+ *
+ * @group
+ * @memberof Border radius
+ * @example
+ * <div class='bg-teal inline-block round-full'>round-full</div>
+ * <div class='bg-teal inline-block ml6 round-tr-full'>round-tr-full</div>
+ */
 .round-full { border-radius: var(--border-radius-full) !important; }
-.round-full-t { border-radius: var(--border-radius-full) var(--border-radius-full) 0 0 !important; }
-.round-full-r { border-radius: 0 var(--border-radius-full) var(--border-radius-full) 0 !important; }
-.round-full-b { border-radius: 0 0 var(--border-radius-full) var(--border-radius-full) !important; }
-.round-full-l { border-radius: var(--border-radius-full) 0 0 var(--border-radius-full) !important; }
-.round-full-tl { border-top-left-radius: var(--border-radius-full) !important; }
-.round-full-tr { border-top-right-radius: var(--border-radius-full) !important; }
-.round-full-br { border-bottom-right-radius: var(--border-radius-full) !important; }
-.round-full-bl { border-bottom-left-radius: var(--border-radius-full) !important; }
+.round-t-full { border-radius: var(--border-radius-full) var(--border-radius-full) 0 0 !important; }
+.round-r-full { border-radius: 0 var(--border-radius-full) var(--border-radius-full) 0 !important; }
+.round-b-full { border-radius: 0 0 var(--border-radius-full) var(--border-radius-full) !important; }
+.round-l-full { border-radius: var(--border-radius-full) 0 0 var(--border-radius-full) !important; }
+.round-tl-full { border-top-left-radius: var(--border-radius-full) !important; }
+.round-tr-full { border-top-right-radius: var(--border-radius-full) !important; }
+.round-br-full { border-bottom-right-radius: var(--border-radius-full) !important; }
+.round-bl-full { border-bottom-left-radius: var(--border-radius-full) !important; }
+/** @endgroup */
 
 /**
- * Border classes.
- *
- * @section Borders
+ * Outer shadows that add emphasis to elements or add structure to layouts. Class naming follows the pattern `shadow-<lighten|darken><alpha>`
+ * @section Shadows
  * @memberof Theming
  */
 
 /**
- * `.border` will add a `1px` solid border. Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
+ * Add box shadows to elements.
  *
  * @group
- * @memberof Borders
+ * @memberof Shadows
  * @example
- * <div class='flex-parent'>
- *  <div class='col col--2 p12 mr12 border'>.border</div>
- *  <div class='col col--2 p12 mr12 border-b'>.border-b</div>
- * </div>
+ * <div class='shadow-darken25'>shadow-darken25</div>
  */
-.border { border: 1px solid !important; }
+.shadow-darken5 { box-shadow: 0 0 10px 2px var(--darken5) !important; }
+.shadow-darken10 { box-shadow: 0 0 10px 2px var(--darken10) !important; }
+.shadow-darken25 { box-shadow: 0 0 10px 2px var(--darken25) !important; }
+.shadow-darken50 { box-shadow: 0 0 10px 2px var(--darken50) !important; }
 
-.border-l { border-left: 1px solid !important; }
-.border-t { border-top: 1px solid !important; }
-.border-r { border-right: 1px solid !important; }
-.border-b { border-bottom: 1px solid !important; }
+.shadow-lighten5 { box-shadow: 0 0 10px 2px var(--lighten5) !important; }
+.shadow-lighten10 { box-shadow: 0 0 10px 2px var(--lighten10) !important; }
+.shadow-lighten25 { box-shadow: 0 0 10px 2px var(--lighten25) !important; }
+.shadow-lighten50 { box-shadow: 0 0 10px 2px var(--lighten50) !important; }
 /** @endgroup */
 
 /**
- * Border modifiers.
+ * Add larger shadows to elements.
  *
  * @group
- * @memberof Borders
+ * @memberof Shadows
  * @example
- * <div class='flex-parent'>
- *  <div class='col col--2 p12 mr12 border border--dash'>.border--dash</div>
- *  <div class='col col--2 p12 mr12 border-t border--2'>.border--2</div>
- * </div>
- */
-.border--2 { border-width: 2px !important; }
-.border--dash { border-style: dashed !important; }
+ * <div class='mt6 shadow-darken25-bold'>shadow-darken25-bold</div> */
+.shadow-darken5-bold { box-shadow: 0 0 30px 6px var(--darken5) !important; }
+.shadow-darken10-bold { box-shadow: 0 0 30px 6px var(--darken10) !important; }
+.shadow-darken25-bold { box-shadow: 0 0 30px 6px var(--darken25) !important; }
+.shadow-darken50-bold { box-shadow: 0 0 30px 6px var(--darken50) !important; }
+
+.shadow-lighten5-bold { box-shadow: 0 0 30px 6px var(--lighten5) !important; }
+.shadow-lighten10-bold { box-shadow: 0 0 30px 6px var(--lighten10) !important; }
+.shadow-lighten25-bold { box-shadow: 0 0 30px 6px var(--lighten25) !important; }
+.shadow-lighten50-bold { box-shadow: 0 0 30px 6px var(--lighten50) !important; }
 /** @endgroup */
 
 /**
- * Shadow classes.
- * - Shadows come in `6px` and `24px` variants.
- * - Append `-bold` for a more opaque shadow.
- * - Add shadows to text with `txt-shadow`.
- *
- * @group
+ * Set cursor style when hovering over an element.
+ * @section Cursors
  * @memberof Theming
- * @example
- * <div class='flex-parent'>
- *   <div class='shadow-darken25'>.shadow-darken25</div>
- *   <div class='shadow-darken25-bold'>.shadow-darken25-bold</div>
- * </div>
  */
-.shadow-darken5 { box-shadow: 0 0 12px 2px var(--darken5) !important; }
-.shadow-darken10 { box-shadow: 0 0 12px 2px var(--darken10) !important; }
-.shadow-darken25 { box-shadow: 0 0 12px 2px var(--darken25) !important; }
-.shadow-darken50 { box-shadow: 0 0 12px 2px var(--darken50) !important; }
-
-.shadow-lighten5 { box-shadow: 0 0 12px 2px var(--lighten5) !important; }
-.shadow-lighten10 { box-shadow: 0 0 12px 2px var(--lighten10) !important; }
-.shadow-lighten25 { box-shadow: 0 0 12px 2px var(--lighten25) !important; }
-.shadow-lighten50 { box-shadow: 0 0 12px 2px var(--lighten50) !important; }
-/** @endgroup */
-
-.shadow-darken5-bold { box-shadow: 0 0 24px 2px var(--darken5) !important; }
-.shadow-darken10-bold { box-shadow: 0 0 24px 2px var(--darken10) !important; }
-.shadow-darken25-bold { box-shadow: 0 0 24px 2px var(--darken25) !important; }
-.shadow-darken50-bold { box-shadow: 0 0 24px 2px var(--darken50) !important; }
-
-.shadow-lighten5-bold { box-shadow: 0 0 24px 2px var(--lighten5) !important; }
-.shadow-lighten10-bold { box-shadow: 0 0 24px 2px var(--lighten10) !important; }
-.shadow-lighten25-bold { box-shadow: 0 0 24px 2px var(--lighten25) !important; }
-.shadow-lighten50-bold { box-shadow: 0 0 24px 2px var(--lighten50) !important; }
 
 /**
- * Opacity classes.
+ * Cursor is one of `default`, `pointer`, `crosshair`, or `move` on hover.
  *
  * @group
- * @memberof Theming
+ * @memberof Cursors
  * @example
- * <div class='flex-parent'>
- *   <div class='w400 alpha25'>.alpha25</div>
- *   <div class='w400 alpha50'>.alpha50</div>
- *   <div class='w400 alpha100'>.alpha100</div>
- * </div>
+ * <div class='cursor-pointer'>cursor-pointer</div>
+ * <div class='cursor-crosshair'>cursor-crosshair</div>
+ * <div class='cursor-move'>cursor-move</div>
+ * <div class='cursor-notallowed'>cursor-notallowed</div>
+ */
+.cursor-default { cursor: default !important; }
+.cursor-pointer { cursor: pointer !important; }
+.cursor-crosshair { cursor: crosshair !important; }
+.cursor-move { cursor: move !important; }
+.cursor-notallowed { cursor: not-allowed !important; }
+/** @endgroup */
+
+/**
+ * Dim or hide elements without removing them from the document flow with opacity.
+ * @section Opacity
+ * @memberof Theming
+ */
+
+/**
+ * Control the opacity of elements.
+ *
+ * @group
+ * @memberof Opacity
+ * @example
+ * <div class='alpha25'>alpha25</div>
+ * <div class='alpha50'>alpha50</div>
+ * <div class='alpha100'>alpha100</div>
  */
 .alpha0 { opacity: 0 !important; }
 .alpha25 { opacity: 0.25 !important; }
@@ -145,36 +225,12 @@
 /** @endgroup */
 
 /**
- * Cursor is one of `default`, `pointer`, `crosshair`, or `move` on hover.
+ * Control the opacity of elements in a hover, focus, active state, or when an element has a `is-active` class.
  *
  * @group
- * @memberof Theming
+ * @memberof Opacity
  * @example
- * <div class='flex-parent'>
- *   <div class='w400 cursor-pointer'>.cursor-pointer</div>
- *   <div class='w400 cursor-crosshair'>.cursor-crosshair</div>
- *   <div class='w400 cursor-move'>.cursor-move</div>
- * </div>
- */
-.cursor-default { cursor: default !important; }
-.cursor-pointer { cursor: pointer !important; }
-.cursor-crosshair { cursor: crosshair !important; }
-.cursor-move { cursor: move !important; }
-/** @endgroup */
-
-/**
- * Change styling based on element hover, focus, and active states.
- * @section State modifiers
- * @memberof Theming
- */
-
-/**
- * Control the opacity of elements in a hover, focus, or active state.
- *
- * @group
- * @memberof State modifiers
- * @example
- * <div class='w400 hover-alpha25'>.hover-alpha25</div>
+ * <div class='hover-alpha25'>hover-alpha25</div>
  */
 .hover-alpha0:hover,
 .focus-alpha0:focus,

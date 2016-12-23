@@ -1,23 +1,20 @@
 /**
- * To use icons, you must include `assembly-svg.js` on your page.
+ * Assembly uses an SVG icon sprite. To load the sprite, you must must include [assembly-svg.js](https://www.mapbox.com/assembly/assembly-svg.js) on your page.
  *
  * @section Icons
  */
 
 /**
- * Apply the `.icon` class and an optional size modifier to an `<svg>` element.
+ * The `.icon` must be appled to an `<svg>` element.
  * Inside the `<svg>`, insert a `<use>` element whose `xlink:href` attribute
  * points to an icon loaded by `assembldy-svg.js`. All icons are referenced
  * by the string `#icon-<name>`.
  *
  * To see a list of all available icons, visit [the icons page](/assembly/icons).
  *
- * @group
  * @memberof Icons
  * @example
- * <svg class='icon'><use xlink:href='#icon-account'/></svg>
- * <svg class='icon icon--s'><use xlink:href='#icon-account'/></svg>
- * <svg class='icon icon--l'><use xlink:href='#icon-account'/></svg>
+ * <svg class='icon'><use xlink:href='#icon-bike'/></svg>
  */
 .icon {
   fill: currentColor;
@@ -26,13 +23,26 @@
   width: 18px;
 }
 
+/**
+ * Small icon. Depends on the `icon` class.
+ *
+ * @memberof Icons
+ * @example
+ * <svg class='icon icon--s'><use xlink:href='#icon-bike'/></svg>
+ */
 .icon--s {
   height: 12px !important;
   width: 12px !important;
 }
 
+/**
+ * Large icon. Depends on the `icon` class.
+ *
+ * @memberof Icons
+ * @example
+ * <svg class='icon icon--l'><use xlink:href='#icon-bike'/></svg>
+ */
 .icon--l {
   height: 36px !important;
   width: 36px !important;
 }
-/** @endgroup */
