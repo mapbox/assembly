@@ -212,9 +212,14 @@ function buildColorVariants(variables, config) {
         .select--stroke-${color} {
           color: ${colorValue};
         }
-
+        .select--stroke-${color} + .select-arrow {
+          border-top-color: ${colorValue};
+        }
         .select--stroke-${color}:hover {
           color: ${darkerShade};
+        }
+        .select--stroke-${color}:hover + .select-arrow {
+          border-top-color: ${darkerShade};
         }
       `);
     }, '');
