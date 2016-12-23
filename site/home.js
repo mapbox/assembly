@@ -3,11 +3,13 @@ import React from 'react';
 class Home extends React.Component {
   render() {
     return (
-      <div className='mt24 mb120'>
-        <h1 className='txt-headline txt-bold mb12'>
-          Assembly
+      <div className='mt24 mb96 wmax960'>
+        <div className='txt-subhead'>
+        <h1 className='animation-rainbow animation--speed-8 color-teal inline code uppercase txt-headline pl6 pr6'>
+          Assembly.css
         </h1>
-          <p className='txt-l'>
+        </div>
+          <p className='txt-l mt12'>
             Assembly is an atomic CSS framework that makes it easy to build up responsive sites.
           </p>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l uppercase txt-bold'>
