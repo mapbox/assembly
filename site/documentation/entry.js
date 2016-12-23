@@ -54,7 +54,7 @@ class Entry extends React.Component {
       <span
         key={selector}
         id={`${selector.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
-        className='mr3 p3 round bg-blue color-white txt-mono txt-xs inline-block'>
+        className='mr3 pl3 pr3 round bg-blue color-white txt-mono inline-block'>
         {selector.trim()}
       </span>;
 
@@ -71,14 +71,14 @@ class Entry extends React.Component {
 
     return (
       <div className='border-t border--2 border--gray-faint pt48 pb48 flex-parent flex-parent--wrap'>
-        <div className='col col--12 col--4-ml pr12-ml mb6'>
+        <div className='txt-s txt-m-mxl col col--12 col--4-ml pr12-ml mb6'>
           <div className='none' id={`expanded-${selectors && selectors[0]}`}>
             {selectorEls}
           </div>
           <div className='inline' id={`collapsed-${selectors && selectors[0]}`}>
             {collapsedSelectorEls}
           </div>
-            {expandButton}
+          {expandButton}
         </div>
         <div className='col col--12 col--8-ml'>
           <div className='mb48 prose'>
