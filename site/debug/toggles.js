@@ -42,7 +42,7 @@ function ToggleEl(props) {
         </div>
       </label>
       <label className='toggle-container'>
-        <input checked disabled={props.disabled} name={`animal-${props.color}-${props.stroke}-${props.small}-${props.disabled}-${props.activeColor}`} value='horse' type='radio' />
+        <input defaultChecked disabled={props.disabled} name={`animal-${props.color}-${props.stroke}-${props.small}-${props.disabled}-${props.activeColor}`} value='horse' type='radio' />
         <div className={toggleClass}>
         horse
         </div>

@@ -32,7 +32,7 @@ function RangesEl(props) {
   const inputClasses = `range range--${props.size || ''} range--${props.color}`;
   return (
     <div className='mr6 mb6 inline-block'>
-       <input type='range' className={inputClasses} readOnly={props.readonly} disabled={props.disabled} value='magic'/>
+       <input type='range' className={inputClasses} readOnly={props.readonly} disabled={props.disabled} defaultValue='magic'/>
     </div>
   );
 }

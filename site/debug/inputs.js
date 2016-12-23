@@ -40,7 +40,7 @@ function InputEl(props) {
         placeholder='name'
         readOnly={props.readonly}
         disabled={props.disabled}
-        value='magic'
+        defaultValue='magic'
       />
     </div>
   );

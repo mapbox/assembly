@@ -35,7 +35,7 @@ function TextareaEl(props) {
   if (props.color) textareaClasses += ` color-${props.color}`;
   return (
     <div className='mr6 mb6 inline-block'>
-       <textarea className={textareaClasses} readOnly={props.readonly} disabled={props.disabled} value='magic'>Hello.</textarea>
+       <textarea className={textareaClasses} readOnly={props.readonly} disabled={props.disabled} defaultValue='Hello' />
     </div>
   );
 }
