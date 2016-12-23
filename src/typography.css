@@ -609,16 +609,14 @@ textarea {
  * @group
  * @memberof Type utils
  * @example
- * <div class='bg-gray-light'>
- *   <div class='txt-shadow-darken5'>ghost world</div>
- *   <div class='txt-shadow-darken10'>ghost world</div>
- *   <div class='txt-shadow-darken25'>ghost world</div>
- *   <div class='txt-shadow-darken50'>ghost world</div>
- *   <div class='txt-shadow-lighten5'>ghost world</div>
- *   <div class='txt-shadow-lighten10'>ghost world</div>
- *   <div class='txt-shadow-lighten25'>ghost world</div>
- *   <div class='txt-shadow-lighten50'>ghost world</div>
- * </div>
+ * <div class='txt-shadow-darken5'>ghost world</div>
+ * <div class='txt-shadow-darken10'>ghost world</div>
+ * <div class='txt-shadow-darken25'>ghost world</div>
+ * <div class='txt-shadow-darken50'>ghost world</div>
+ * <div class='txt-shadow-lighten5 bg-darken75'>ghost world</div>
+ * <div class='txt-shadow-lighten10 bg-darken75'>ghost world</div>
+ * <div class='txt-shadow-lighten25 bg-darken75'>ghost world</div>
+ * <div class='txt-shadow-lighten50 bg-darken75'>ghost world</div>
  */
 .txt-shadow-darken5 { text-shadow: 1px 1px 1px var(--darken5); }
 .txt-shadow-darken10 { text-shadow: 1px 1px 1px var(--darken10); }
