@@ -37,7 +37,12 @@ class Entry extends React.Component {
         });
 
       // Remove some pseudo-elements
-      selectors = selectors.filter((selector) => !(selector.includes(':after') || selector.includes(':hover') || selector.includes(':active') || selector.includes(':checked')));
+      selectors = selectors.filter((selector) => !(
+        selector.includes(':after') ||
+        selector.includes(':checked') ||
+        (selector.includes(':hover') && !selector.includes('.hover')) ||
+        (selector.includes(':focus') && !selector.includes('.focus')) ||
+        (selector.includes(':active') && !selector.includes('.active'))));
 
       // hide prose selectors from documentation, but special case `.prose` and `.prose--dark` cases
       if (selectors.length > 1) {

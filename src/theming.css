@@ -225,7 +225,7 @@
 /** @endgroup */
 
 /**
- * Control the opacity of elements in a hover, focus, active state, or when an element has a `is-active` class.
+ * Control the opacity of elements in a hover, focus, active state, or when an element has an `is-active` class.
  *
  * @group
  * @memberof Opacity
@@ -234,22 +234,22 @@
  */
 .hover-alpha0:hover,
 .focus-alpha0:focus,
-.focus-alpha0.is-active,
+.is-active-alpha0.is-active,
 .active-alpha0:active { opacity: 0 !important; }
 .hover-alpha25:hover,
 .focus-alpha25:focus,
-.focus-alpha25.is-active,
+.is-active-alpha25.is-active,
 .active-alpha25:active { opacity: 0.25 !important; }
 .hover-alpha50:hover,
 .focus-alpha50:focus,
-.focus-alpha50.is-active,
+.is-active-alpha50.is-active,
 .active-alpha50:active { opacity: 0.5 !important; }
 .hover-alpha75:hover,
 .focus-alpha75:focus,
-.focus-alpha75.is-active,
+.is-active-alpha75.is-active,
 .active-alpha75:active { opacity: 0.75 !important; }
 .hover-alpha100:hover,
 .focus-alpha100:focus,
-.focus-alpha100.is-active,
+.is-active-alpha100.is-active,
 .active-alpha100:active { opacity: 1 !important; }
 /** @endgroup */
