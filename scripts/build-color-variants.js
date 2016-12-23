@@ -196,7 +196,7 @@ function buildColorVariants(variables, config) {
           background-color: ${colorValue};
         }
 
-        .select--${color}:hover {
+        .select-container:hover > .select--${color} {
           background-color: ${darkerShade};
         }
       `);
@@ -213,7 +213,7 @@ function buildColorVariants(variables, config) {
           color: ${colorValue};
         }
 
-        .select--stroke-${color}:hover {
+        .select-container:hover > .select--stroke-${color} {
           color: ${darkerShade};
         }
       `);

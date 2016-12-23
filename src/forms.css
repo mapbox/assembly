@@ -127,8 +127,9 @@
 
 /**
  * The select component styles `<input type='select'>`. The markup must fit the following pattern:
- * - A wrapping `<div>` with the class `select`.
- * - A `<select>`.
+ * - A wrapping `<div>` with the class `select-container`.
+* - A div with the `select` class.
+ * - A `<select>` element.
  *
  * @section Selects
  * @memberof Forms
@@ -141,13 +142,15 @@
  * @group
  * @example
  * <div class='select-container'>
- *   <select class='select'>
+ *   <div class='select'></div>
+ *   <select>
  *     <option>one</option>
  *     <option>two</option>
  *   </select>
  * </div>
  * <div class='select-container mt6'>
- *   <select class='select select--red'>
+ *   <div class='select select--red'></div>
+ *   <select>
  *     <option>one</option>
  *     <option>two</option>
  *   </select>
@@ -159,49 +162,59 @@
   color: var(--white);
 }
 
-.select {
+.select-container > select {
   appearance: none;
-  transition: color var(--transition), background-color var(--transition);
-  font-size: inherit;
   line-height: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  color: currentColor;
+  padding: 4px 30px 4px 12px; /* plus arrow, minus border */
+  cursor: pointer;
   display: inline-block;
+  background-color: transparent;
+  border: none;
+}
+
+.select {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: color var(--transition), background-color var(--transition);
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
   border-radius: var(--border-radius);
-  color: currentColor;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 4px 30px 4px 12px; /* plus arrow, minus border */
   background-color: var(--blue); /* match btn default state */
 }
 /** @endgroup */
 
 /* default hover state */
-.select:hover {
+.select-container:hover > .select {
   background-color: var(--blue-dark);
 }
 
 /* Some browsers color the option text and background, so reset that */
-.select option {
+.select-container option {
   background-color: var(--white);
   color: var(--text-color);
 }
 
 /* IE overrides */
-.select::-ms-expand { display: none; }
+.select-container > select::-ms-expand { display: none; }
 /* IE actually colors the options, so they can't be white */
-.select option { color: var(--text-color); }
+.select-container > select option { color: var(--text-color); }
 /* Remove purple highlight in HC mode */
 @media all and (-ms-high-contrast: active) {
-  .select:focus::-ms-value {
+  .select-container > select:focus::-ms-value {
     background-color: transparent;
     color: inherit;
   }
 }
 /* Remove blue highlight in Normal mode */
 @media all and (-ms-high-contrast: none) {
-  .select:focus::-ms-value {
+  .select-container > select:focus::-ms-value {
     background-color: transparent;
     color: inherit;
   }
@@ -220,11 +233,11 @@
  *   </select>
  * </div>
  */
-.select-container--stroke {
+.select--stroke + select {
   color: var(--blue);
 }
 
-.select-container--stroke:hover {
+.select-container:hover > .select--stroke + select {
   color: var(--blue-dark);
 }
 
