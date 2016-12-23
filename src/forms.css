@@ -1,6 +1,6 @@
 /* stylelint-disable selector-no-type, selector-no-combinator */
 /**
- * Styles for HTML5 input and textarea elements.
+ * Styles for HTML5 input and textarea elements. All form elements on Assembly's 6px baseline grid.
  * @section Forms
  */
 
@@ -16,6 +16,13 @@
   box-shadow: none;
 }
 
+/**
+ * The `input` class styles input types `text`, `password`, `email`,
+ * `datetime`, `search`, `tel`, `url`, and `number`. The `textarea` class styles the `<textarea>` element.
+ *
+ * @section Inputs & textareas
+ * @memberof Forms
+ */
 .input,
 .textarea {
   border: 1px solid var(--blue);
@@ -37,11 +44,12 @@
 }
 
 /**
- * Text input.
+ * A basic text input. Set the color of the border with `input--border-{color}`.
  *
- * @memberof Forms
+ * @memberof Inputs & textareas
  * @example
  * <input class='input' placeholder='basic' />
+ * <input class='input input--border-teal' placeholder='basic' />
  */
 .input {
   height: 36px;
@@ -52,7 +60,7 @@
 /**
  * Small input
  *
- * @memberof Forms
+ * @memberof Inputs & textareas
  * @example
  * <input class='input input--s txt-s' placeholder='basic' />
  */
@@ -65,7 +73,7 @@
 /**
  * Textarea.
  *
- * @memberof Forms
+ * @memberof Inputs & textareas
  * @example
  * <textarea placeholder='basic' class='textarea'></textarea>
  */
@@ -78,9 +86,9 @@
 }
 
 /**
- * Small textarea
+ * Small textarea.
  *
- * @memberof Forms
+ * @memberof Inputs & textareas
  * @example
  * <textarea class='textarea textarea--s txt-s'>small textarea</textarea>
  */
@@ -89,12 +97,12 @@
 }
 
 /**
- * Disabled input and textarea
+ * Disabled input and textarea.
  *
- * @memberof Forms
+ * @memberof Inputs & textareas
  * @example
- * <input disabled class='input' placeholder='basic' value='Disabled' />
- * <textarea disabled class='textarea' placeholder='basic' value='Disabled' >Disabled text</textarea>
+ * <input disabled class='input' placeholder='basic' />
+ * <textarea disabled class='textarea' placeholder='basic' value='Disabled'>Disabled text</textarea>
  */
 .input:disabled,
 .textarea:disabled {
@@ -105,9 +113,9 @@
 }
 
 /**
- * Readonly input and textarea
+ * Read-only input and textarea.
  *
- * @memberof Forms
+ * @memberof Inputs & textareas
  * @example
  * <input readonly class='input' placeholder='basic' value='Readonly' />
  * <textarea readonly class='textarea' placeholder='basic' value='Disabled' >Readonly text</textarea>
@@ -118,38 +126,28 @@
 }
 
 /**
- * The select markup must fit the following pattern.
+ * The select component styles `<input type='select'>`. The markup must fit the following pattern:
  * - A wrapping `<div>` with the class `select`.
  * - A `<select>`.
  *
- * Variations:
- * - Modify `.select` with a `.select--{color}` modifier.
- * - Modify `.select-container` with the `.select-container--stroke` modifier
- *   and an (optional) `.select--stroke-{color}` modifier.
- *
+ * @section Selects
  * @memberof Forms
+ */
+
+/*
+ * A select component. Vary color with the `.select--{color}` modifier.
+ *
+ * @memberof Selects
  * @group
  * @example
- * <div class='select-container mb6'>
+ * <div class='select-container'>
  *   <select class='select'>
  *     <option>one</option>
  *     <option>two</option>
  *   </select>
  * </div>
- * <div class='select-container mb6'>
+ * <div class='select-container mt6'>
  *   <select class='select select--red'>
- *     <option>one</option>
- *     <option>two</option>
- *   </select>
- * </div>
- * <div class='select-container select-container--stroke mb6'>
- *   <select class='select select--s'>
- *     <option>one</option>
- *     <option>two</option>
- *   </select>
- * </div>
- * <div class='select-container select-container--stroke select--stroke-purple'>
- *   <select class='select'>
  *     <option>one</option>
  *     <option>two</option>
  *   </select>
@@ -184,25 +182,6 @@
   background-color: var(--blue-dark);
 }
 
-/**
- * A disabled select input.
- *
- * @memberof Forms
- * @example
- * <div class='select-container'>
- *   <select disabled class='select'>
- *     <option>one</option>
- *     <option>two</option>
- *   </select>
- * </div>
- */
-.select:disabled {
-  pointer-events: none;
-  color: var(--darken25) !important;
-  background-color: var(--disabled) !important;
-  border-color: transparent !important;
-}
-
 /* Some browsers color the option text and background, so reset that */
 .select option {
   background-color: var(--white);
@@ -229,6 +208,18 @@
 }
 /* End IE overrides */
 
+/**
+ * A stroked select input. Depends on the `select-container` class.
+ *
+ * @memberof Selects
+ * @example
+ * <div class='select-container select-container--stroke'>
+ *   <select class='select'>
+ *     <option>one</option>
+ *     <option>two</option>
+ *   </select>
+ * </div>
+ */
 .select-container--stroke {
   color: var(--blue);
 }
@@ -242,10 +233,41 @@
   border-color: currentColor;
 }
 
+/**
+ * A small select input. Depends on the `select` class.
+ *
+ * @memberof Selects
+ * @example
+ * <div class='select-container'>
+ *   <select class='select select--s'>
+ *     <option>one</option>
+ *     <option>two</option>
+ *   </select>
+ * </div>
+ */
 .select--s {
   font-size: 12px;
   line-height: 20px;
   padding: 0 22px 0 12px; /* plus arrow */
+}
+
+/**
+ * A disabled select input.
+ *
+ * @memberof Selects
+ * @example
+ * <div class='select-container'>
+ *   <select disabled class='select'>
+ *     <option>one</option>
+ *     <option>two</option>
+ *   </select>
+ * </div>
+ */
+.select:disabled {
+  pointer-events: none;
+  color: var(--darken25) !important;
+  background-color: var(--disabled) !important;
+  border-color: transparent !important;
 }
 
 .select-container::after {
@@ -275,19 +297,19 @@
 }
 
 /**
- * Range input. The following modifiers are available:
- * - `input--s`: Small
+ * The `range` class styles `<input type='range'>`.
  *
- * Variations:
- * - Modify the color of the range track and thumb border with `range--{color}`.
- *
- * Use `w*` width classes to change widths.
- *
+ * @section Ranges
  * @memberof Forms
+ */
+
+/**
+ *
+ * A range element. Vary color with the `.range--{color}` modifier.
+ *
+ * @memberof Ranges
  * @example
- * <label class='mb12 block'>Range <input class='range w96 ml6' type='range' /></label>
- * <label class='mb12 block'>Small range <input class='range range--s w96 ml6' type='range' /></label>
- * <label class='mb12 block'>Disabled range <input class='range range--s w96 ml6' disabled type='range' /></label>
+ * <input class='range' type='range' />
 */
 .range {
   appearance: none;
@@ -296,7 +318,6 @@
   margin: 0;
   border: 0;
   background: transparent;
-  vertical-align: middle;
 }
 
 /* range track */
@@ -388,6 +409,15 @@
 .range:hover::-ms-thumb { border-color: var(--blue-dark); }
 .range:hover::-moz-range-thumb { border-color: var(--blue-dark); }
 
+/*
+ * A small range element. Depends on the `range` class.
+ *
+ * @memberof Ranges
+ * @selectors .range--s
+ * @example
+ * <input class='range range--s' type='range' />
+*/
+
 /* range small */
 /* range small track */
 .range--s::-webkit-slider-runnable-track { height: 2px; }
@@ -423,7 +453,14 @@
 .range:focus::-moz-range-thumb { box-shadow: var(--focus-shadow); }
 .range::-moz-focus-outer { border: 0; }
 
-/* Range disabled */
+/*
+ * A disabled range element.
+ *
+ * @memberof Ranges
+ * @selectors .range:disabled
+ * @example
+ * <input disabled class='range' type='range' />
+*/
 .range:disabled::-webkit-slider-runnable-track { background: var(--disabled); }
 .range:disabled::-moz-range-track { background: var(--disabled); }
 .range:disabled::-ms-fill-upper { background: var(--disabled); }
@@ -432,126 +469,6 @@
 .range:disabled::-webkit-slider-thumb { border-color: var(--disabled); background: var(--gray-faint); }
 .range:disabled::-ms-thumb { border-color: var(--disabled); background: var(--gray-faint); }
 .range:disabled::-moz-range-thumb { border-color: var(--disabled); background: var(--gray-faint); }
-
-/**
- * The checkbox markup must fit the following pattern.
- * - A wrapping `<label>` with the class `checkbox-container`.
- * - An `<input type='checkbox'>`. You may want to add a `mr*` margin-right
- *   class to separate the checkbox from its label.
- * - A `<div>` with the class `checkbox`
- *   containing an `<svg>` with the chosen icon.
- * - Text for the label.
- *
- * Variations:
- * - Modify `.checkbox` with a `.checkbox--{color}` modifier.
- * - Modify `.checkbox` with `.checkbox--s-label` modifier if the label text is small,
- *   for proper vertical alignment.
- *
- * @section Checkboxes
- * @memberof Forms
- */
-
-/*
- * @memberof Checkboxes
- * @example
- * <div>
- *   <label class='checkbox-container'>
- *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr6'>
- *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
- *     </div>
- *     More cats
- *   </label>
- * </div>
- * <div class='mb12'>
- *   <label class='checkbox-container mr12'>
- *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr6'>
- *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
- *     </div>
- *     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci tenetur distinctio provident a, debitis obcaecati ipsam laborum autem suscipit natus repellendus nam cumque ab qui ducimus unde ratione, quisquam nisi.
- *   </label>
- * </div>
- * <div class='txt-s'>
- *   <label class='checkbox-container mr12'>
- *     <input type='checkbox' value='magic'>
- *     <div class='checkbox mr6 checkbox--s-label checkbox--red'>
- *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
- *     </div>
- *     More zebras
- *   </label>
- * </div>
- */
-
-/**
- * The radio markup must fit the following pattern.
- * - A wrapping `<label>` with the class `radio-container`.
- * - An `<input type='radio'>`. You may want to add a `mr*` margin-right
- *   class to separate the radio from its label.
- * - A `<div>` with the class `radio`.
- * - Text for the label.
- *
- * Variations:
- * - Modify `.radio` with a `.radio--{color}`.
- * - Modify `.radio` with `.radio--s-label` modifier if the label text is small,
- *   for proper vertical alignment.
- *
- * @section Radio buttons
- * @memberof Forms
- */
-
-/**
- * @memberof Radio buttons
- * @example
- * <div class='mb12'>
- *   <label class='radio-container mr12'>
- *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio mr6'></div>
- *     Option 1
- *   </label>
- * </div>
- * <div class='txt-s'>
- *   <label class='radio-container mr12'>
- *     <input name='radio-basic' value='magic' type='radio'>
- *     <div class='radio radio--s-label radio--yellow mr6'></div>
- *     Magic radio
- *   </label>
- * </div>
- */
-
-/**
- * The switch markup must fit the following pattern.
- *
- * Consists of
- * - A wrapping `<label>` with the class `switch-container`.
- * - An `<input type='checkbox'>`.
- * - A `<div>` with the class `switch`.
- *
- * Variations:
- * - Modify the active state of the switch handle with `switch--dot-{color}`.
- * - Modify the color of the dot when inactive, the border when inactive and the background in active state with `switch--{color}`
- *
- * @section Switches
- * @memberof Forms
- */
-
-/**
- * @memberof Switches
- * @example
- * <div>
- *   <label class="switch-container mr12">
- *     <input type='checkbox' value='magic'>
- *     <div class="switch"></div>
- *   </label>
- * </div>
- * <div>
- *   <label class="switch-container">
- *     <input type='checkbox' value='magic'>
- *     <div class='switch switch--pink switch--dot-gray mr12'></div>
- *     Switch this!
- *   </label>
- * </div>
- */
 
 /* shared form styles */
 .checkbox-container,
@@ -584,31 +501,39 @@
   transition: color var(--transition), background-color var(--transition);
 }
 
-input:focus + .checkbox,
-input:focus + .radio,
-input:focus + .switch,
-input:focus + .toggle {
-  box-shadow: var(--focus-shadow);
-}
+/**
+ * The checkbox component enhances the `<input type='checkbox'>` element. Markup must fit the following pattern:
+ * - A wrapping `<label>` with the class `checkbox-container`.
+ * - An `<input type='checkbox'>`. You may want to add a `mr*` margin-right
+ *   class to separate the checkbox from its label.
+ * - A `<div>` with the class `checkbox`
+ *   containing an `<svg>` with the chosen icon.
+ *
+ * @section Checkboxes
+ * @memberof Forms
+ */
 
-input:disabled {
-  pointer-events: none;
-}
-
-input:disabled + .checkbox,
-input:disabled + .radio,
-input:disabled + .switch {
-  pointer-events: none;
-  color: var(--darken25) !important;
-  background-color: var(--disabled) !important;
-  border-color: transparent !important;
-}
-
-input:disabled + .switch::after {
-  background-color: var(--darken25) !important;
-}
-
-/* Primary checkbox styles */
+/*
+ * A checkbox with a label. Change the color of the checkbox with `.checkbox--{color}`.
+ * Adjust the line height of the checkbox with `.checkbox--s-label`.
+ *
+ * @memberof Checkboxes
+ * @example
+ *   <label class='checkbox-container'>
+ *     <input type='checkbox'>
+ *     <div class='checkbox mr6'>
+ *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
+ *     </div>
+ *     More cats
+ *   </label>
+ *   <label class='txt-s checkbox-container ml24'>
+ *     <input type='checkbox'>
+ *     <div class='checkbox mr6 checkbox--s-label checkbox--red'>
+ *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
+ *     </div>
+ *     More mice
+ *   </label>
+ */
 .checkbox {
   background-color: #fff;
   color: var(--blue);
@@ -635,7 +560,34 @@ input:disabled + .switch::after {
   display: none;
 }
 
-/* Primary radio styles */
+/**
+ * The radio component enhances the `<input type='radio'>` element. The radio markup must fit the following pattern:
+ * - A wrapping `<label>` with the class `radio-container`.
+ * - An `<input type='radio'>`. You may want to add a `mr*` margin-right
+ *   class to separate the radio from its label.
+ * - A `<div>` with the class `radio`.
+ *
+ * @section Radio buttons
+ * @memberof Forms
+ */
+
+/**
+ * A radio button. Change the color of the radio button with a `radio--{color}` class.
+ * Adjust the line height of the checkbox with `.radio--s-label`.
+ *
+ * @memberof Radio buttons
+ * @example
+ * <label class='radio-container'>
+ *   <input name='radio-basic' type='radio'>
+ *   <div class='radio mr6'></div>
+ *   Orange
+ * </label>
+ * <label class='txt-s ml24 radio-container'>
+ *   <input name='radio-basic' type='radio'>
+ *   <div class='radio radio--s-label radio--yellow mr6'></div>
+ *   Apple
+ * </label>
+ */
 .radio {
   border-radius: 50%;
   color: var(--blue);
@@ -658,7 +610,31 @@ input:disabled + .switch::after {
   display: none;
 }
 
-/* Primary switch styles */
+/**
+ * The switch component enhances the `<input type='checkbox'>`. The switch markup must fit the following pattern:
+ * - A wrapping `<label>` with the class `switch-container`.
+ * - An `<input type='checkbox'>`.
+ * - A `<div>` with the class `switch`.
+ *
+ * @section Switches
+ * @memberof Forms
+ */
+
+/**
+ * A switch with on and off states. Modify the color of the dot when inactive, the border when inactive and
+ * the background in active state with `switch--{color}`. Set the color of switch handle when switch is active with `switch--dot-{color}`.
+ * @memberof Switches
+ * @example
+ * <label class="switch-container">
+ *   <input type='checkbox'>
+ *   <div class="switch"></div>
+ * </label>
+ * <label class="switch-container">
+ *   <input type='checkbox'>
+ *   <div class='switch switch--pink switch--dot-yellow mr6'></div>
+ *   Enbabled
+ * </label>
+ */
 .switch {
   top: 3px;
   flex-shrink: 0;
@@ -687,61 +663,41 @@ input:disabled + .switch::after {
   transition: left var(--transition), background-color var(--transition);
 }
 
-/**
- * The toggle is an alternative way to style a set of radio inputs. Toggle markup must fit the following pattern.
- *
- * Consists of
+/*
+ * The toggle group component enhances a set of `<input type=radio'>` inputs. Toggle markup must fit the following pattern:
  * - A wrapping `<div>` around all your radio options with the class `toggle-group`.
  * - A wrapping `<label>` around each radio option with the class `toggle-container`.
  * - An `<input type='radio'>`.
  * - A `<div>` with the class `toggle`.
  *
- * Variations:
- * - Modify the inactive toggle label text color, and the active toggle background color with `toggle--{color}`.
- * - Modify the active label color with `toggle--active-{color}`.
- * - Modify the border radiuses of toggle groups inside small text with `toggle-group--s` on toggle group element.
- * - Add a border to the toggle group with `toggle-group--stroke color-{color}` on toggle group element.
- * @group
+ * @section Toggle group
  * @memberof Forms
+ */
+
+/**
+ * A toggle group. Modify the inactive toggle label text color, and the active toggle background color with `toggle--{color}`.
+ * Modify the active label color with `toggle--active-{color}`. Modify the border radiuses of toggle groups inside small text with `toggle-group--s` on toggle group element.
+ * @group
+ * @memberof Toggle group
  * @example
  * <div class='toggle-group mr18'>
  *   <label class='toggle-container'>
- *     <input name='pet' value='cat' type='radio' />
- *     <div class='toggle'>
- *     cat
- *     </div>
+ *     <input checked name='toggle' type='radio' />
+ *     <div class='toggle'>cat</div>
  *   </label>
  *   <label class='toggle-container'>
- *     <input name='pet' value='dog' type='radio' />
- *     <div class='toggle'>
- *     dog
- *     </div>
- *   </label>
- *   <label class='toggle-container'>
- *     <input name='pet' value='bird' type='radio' />
- *     <div class='toggle'>
- *     bird
- *     </div>
+ *     <input name='toggle' type='radio' />
+ *     <div class='toggle'>dog</div>
  *   </label>
  * </div>
  * <div class='toggle-group txt-s mr18'>
  *   <label class='toggle-container'>
- *     <input name='beast' value='cat' type='radio' />
- *     <div class='toggle toggle--purple'>
- *     dragon
- *     </div>
+ *     <input checked name='toggle-2' type='radio' />
+ *     <div class='toggle toggle--purple'>dragon</div>
  *   </label>
  *   <label class='toggle-container'>
- *     <input name='beast' value='dog' type='radio' />
- *     <div class='toggle toggle--purple'>
- *     phoenix
- *     </div>
- *   </label>
- *   <label class='toggle-container'>
- *     <input name='beast' value='bird' type='radio' />
- *     <div class='toggle toggle--purple'>
- *     hydra
- *     </div>
+ *     <input name='toggle-2' type='radio' />
+ *     <div class='toggle toggle--purple'>phoenix</div>
  *   </label>
  * </div>
  */
@@ -765,14 +721,30 @@ input:disabled + .switch::after {
 }
 /** @endgroup */
 
+/*
+ * A stroked toggle group
+ *
+ * @memberof Toggle group
+ * @example
+ * <div class='toggle-group toggle-group--stroke'>
+ *   <label class='toggle-container'>
+ *     <input checked name='stroked' type='radio' />
+ *     <div class='toggle'>cat</div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input checked  name='stroked' type='radio' />
+ *     <div class='toggle'>dog</div>
+ *   </label>
+ * </div>
+ */
 .toggle-group--stroke {
   padding: 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: currentColor;
+  border-color: var(--blue);
 }
 
-/* Adjust border radiuses with small text */
+/* Adjust border radiuses with small text – only necessary for vertical toggle groups */
 .toggle-group--s {
   border-radius: 12px;
   padding: 3px;
@@ -788,6 +760,73 @@ input:disabled + .switch::after {
 .checkbox--s-label,
 .radio--s-label {
   top: 0;
+}
+
+/* Shared disabled states */
+input:focus + .checkbox,
+input:focus + .radio,
+input:focus + .switch,
+input:focus + .toggle {
+  box-shadow: var(--focus-shadow);
+}
+
+input:disabled {
+  pointer-events: none;
+}
+
+/**
+ * Disabled checkbox.
+ *
+ * @memberof Checkboxes
+ * @selectors input:disabled + .checkbox
+ * @example
+ * <label class="checkbox-container">
+ *   <input type='checkbox'>
+ *   <div class='checkbox mr6 checkbox--s-label checkbox--red'>
+ *     <svg class='icon'><use xlink:href='#icon-check' /></svg>
+ *   </div>
+ * </label>
+ */
+
+/**
+ * Disabled radio button.
+ *
+ * @memberof Radio buttons
+ * @selectors input:disabled + .radio
+ * @example
+ * <label class='radio-container'>
+ *   <input disabled type='radio'>
+ *   <div class='radio'></div>
+ * </label>
+ * <label class='radio-container'>
+ *   <input disabled checked type='radio'>
+ *   <div class='radio'></div>
+ * </label>
+ */
+
+/**
+ * Disabled switch.
+ *
+ * @memberof Switches
+ * @selectors input:disabled + .switch
+ * @example
+ * <label class="switch-container">
+ *   <input disabled type='checkbox'>
+ *   <div class="switch"></div>
+ * </label>
+ */
+
+input:disabled + .checkbox,
+input:disabled + .radio,
+input:disabled + .switch {
+  pointer-events: none;
+  color: var(--darken25) !important;
+  background-color: var(--disabled) !important;
+  border-color: transparent !important;
+}
+
+input:disabled + .switch::after {
+  background-color: var(--darken25) !important;
 }
 
 /* State management for checkboxes and radio inputs */
@@ -828,6 +867,22 @@ input:checked + .toggle {
   color: var(--white);
 }
 
+/**
+ * Disabled toggle.
+ *
+ * @memberof Toggle group
+ * @example
+ * <div class='toggle-group'>
+ *   <label class='toggle-container'>
+ *     <input disabled name='pet' type='radio' />
+ *     <div class='toggle'>cat</div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input disabled checked name='pet' type='radio' />
+ *     <div class='toggle'>dog</div>
+ *   </label>
+ * </div>
+ */
 input:disabled + .toggle {
   pointer-events: none;
   color: var(--darken25) !important;
