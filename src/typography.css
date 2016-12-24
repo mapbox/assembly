@@ -446,7 +446,7 @@ textarea {
  * <div class='txt-normal'>txt-normal</div>
  */
 .txt-normal {
-  font-weight: lighter !important;
+  font-weight: normal !important;
 }
 
 /**
@@ -525,7 +525,7 @@ textarea {
 /** @endgroup */
 
 /**
- * Text underline
+ * Text underline.
  * @memberof Type utils
  * @example
  * <div class='txt-underline'>txt-underline</div>
@@ -602,6 +602,18 @@ textarea {
   white-space: nowrap;
   overflow: hidden;
 }
+
+/**
+ * Letter spacing.
+ * @memberof Type utils
+ * @group
+ * @example
+ * <div class='txt-spacing2'>spaced out</div>
+ * <div class='txt-spacing2'>way spaced out</div>
+ */
+.txt-spacing2 { letter-spacing: 0.2em !important; }
+.txt-spacing4 { letter-spacing: 0.4em !important; }
+/** @endgroup */
 
 /**
  * Add text shadow shadows to elements.

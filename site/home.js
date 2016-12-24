@@ -8,7 +8,7 @@ class Home extends React.Component {
     return (
       <div className='mt24 mb96 wmax960'>
         <div className='txt-headline'>
-          <h1 className='animation-rainbow animation--speed-8 color-teal inline code uppercase txt-headline pl6 pr6'>Assembly.css</h1>
+          <h1 className='animation-rainbow animation--speed-8 color-teal inline code uppercase txt-headline txt-spacing2 pl6 pr6'>Assembly.css</h1>
         </div>
           <p className='txt-l mt12'>
             Assembly is an atomic CSS framework that makes it easy to build up responsive sites.
