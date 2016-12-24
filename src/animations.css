@@ -10,9 +10,11 @@
  * @example
  * <div class="bg-blue inline-block mr18 w48 h48 round animation-pulse"></div>
  * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-rainbow"></div>
 */
 .animation-pulse { animation: pulse 1.5s infinite ease-in-out; }
 .animation-spin { animation: spin 1.5s infinite linear; }
+.animation-rainbow { animation: rainbow 1.5s infinite linear; }
 /** @endgroup */
 
 /**
@@ -30,18 +32,25 @@
 /** @endgroup */
 
 /**
- * Animation modifiers. Speed up the animation duration from 1.5 seconds to 1 second with `animation--speed-fast` or slow it down to 2 seconds with `animation--speed-slow`. Add a 1 second delay with `animation--delay`.
+ * Animation modifiers. Change animation duration with `animation--speed-<seconds>`. Add a 1 second delay with `animation--delay`.
  * @group
  * @memberof Animations
  * @example
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-fast"></div>
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-slow"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-1"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-4"></div>
  * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--delay"></div>
  */
-.animation--speed-fast { animation-duration: 1s; }
-.animation--speed-slow { animation-duration: 2s; }
+.animation--speed-1 { animation-duration: 1s; }
+.animation--speed-2 { animation-duration: 2s; }
+.animation--speed-4 { animation-duration: 4s; }
+.animation--speed-8 { animation-duration: 4s; }
 .animation--delay { animation-delay: 1s; }
 /** @endgroup */
+
+@keyframes rainbow {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(360deg); }
+}
 
 @keyframes pulse {
   0% { transform: scale(0.5); opacity: 0; }
