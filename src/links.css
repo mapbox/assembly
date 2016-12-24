@@ -35,3 +35,8 @@
 .link.is-active {
   color: var(--blue-dark);
 }
+
+.link:focus {
+  outline: 0;
+  text-decoration: underline;
+}

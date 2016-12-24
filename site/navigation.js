@@ -58,7 +58,7 @@ class Navigation extends React.Component {
     });
 
     return (<div>
-      <div className='mb24 txt-mono link txt-spacing2 uppercase'><a href='/assembly/'>Assembly</a></div>
+      <a href='/assembly/' className='mb24 txt-mono link txt-spacing2 uppercase block'>Assembly</a>
       {navEls}
     </div>);
   }
