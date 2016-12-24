@@ -1,13 +1,14 @@
 import React from 'react';
 
+const headIncludes = `<link href="https://www.mapbox.com/assembly/assembly.css" rel="stylesheet"
+<script src="https://www.mapbox.com/assembly/assembly-svg.js"></script>`;
+
 class Home extends React.Component {
   render() {
     return (
       <div className='mt24 mb96 wmax960'>
         <div className='txt-headline'>
-        <h1 className='animation-rainbow animation--speed-8 color-teal inline code uppercase txt-headline pl6 pr6'>
-          Assembly.css
-        </h1>
+          <h1 className='animation-rainbow animation--speed-8 color-teal inline code uppercase txt-headline pl6 pr6'>Assembly.css</h1>
         </div>
           <p className='txt-l mt12'>
             Assembly is an atomic CSS framework that makes it easy to build up responsive sites.
@@ -16,42 +17,49 @@ class Home extends React.Component {
           Usage
         </h2>
           <p>
-            Include a link to the assembly stylesheet in the head of your HTML.
+            Include in the head of your HTML the Assembly stylesheet and icon-loading JavaScript.
           </p>
-          <pre className='mt12 code'>
-            {'<link href="https://www.mapbox.com/assembly/assembly.css" rel="stylesheet" />'}
+          <pre className='mt12 pre'>
+            <code>
+              {headIncludes}
+            </code>
           </pre>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l uppercase txt-bold'>
           Philosophy
         </h2>
-          <h3 className='mb6 txt-bold'>
-            Class names are short and descriptive
-          </h3>
+          <h3 className='mb6 txt-bold'>Comprehensive</h3>
             <p className='mb24'>
-              Assembly is designed to provide fundamental rules that are used frequently and should be easy to type and remember.
-              Classes are abbreviated and use actual number values where applicable.
+              Using Assembly alone, with no additional CSS, you can implement a wide variety of fully responsive, colorful designs.
             </p>
-          <h3 className='mb6 txt-bold'>
-            Assembly is not very opinionated or specific
-          </h3>
-            <p>
-              Unless absolutely necessary, selectors consist of a single class. This means that a class's effect will not vary when combined with different classes.
+          <h3 className='mb6 txt-bold'>Balance of flexibility, usability, and consistency</h3>
+            <p className='mb24'>
+              Assembly's audience spans the range from dedicated designers, who want total control, to programmers who want their projects to look great but don't want to think too much about design. For these users, atomic utility classes are essential but not enough: complete reliance on them can slow down development and foster inconsistency. Assembly strives to strike a balance between these needs, inserting the right opinions in the right places.
+            </p>
+          <h3 className='mb6 txt-bold'>Beautiful forms</h3>
+            <p className='mb24'>
+              Assembly provides beautiful and customizable form components without sacrificing any features of native browser elements.
+            </p>
+          <h3 className='mb6 txt-bold'>Customizable</h3>
+            <p className='mb24'>
+              Assembly exposes its build process in a public API, so you can use the standard build or create your own version. You can customize colors, fonts, and media queries; append your own stylesheets; and specify color variants to reduce file size.
             </p>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l uppercase txt-bold'>
-          How it works
+          Details
         </h2>
           <h3 className='mb6 txt-bold'>
             Assembly resets default styling on semantic elements
           </h3>
-            <p className='mb24'>
-              One goal of Assembly's CSS reset is to allow you to use any semantically appropriate HTML element without battling its browser-default styles.
+            <p className='mb6'>
+              Assembly's reset allows you to use semantically appropriate HTML without battling browser-default styles.
+              And its CSS rules are built to behave the same regardless of which element they're applied to.
+            </p>
+            <p className='mb6'>
               For example, you should use <code className='code'>{'<h3>'}</code> for third-level headings, not because you want a certain style.
               Similarly, you should use <code className='code'>{'<button>'}</code> when a button is behaviorally and semantically appropriate,
               instead of <code className='code'>href</code>-less <code className='code'>{'<a>'}</code> tags or other elements with click handlers.
-              To allow for this, Assembly resets all browser-default margins, paddings, borders, and font sizes. It also resets font weights on headings,
-              underlines on links, pretty much everything on buttons, and a few other things.
+              A heading <em>style</em>, or a button <em>style</em>, can be applied to any element by applying the appropriate classes.
             </p>
-          <h3 className='mb6 txt-bold'>
+          <h3 className='mb6 mt24 txt-bold'>
             Elements are sized according to <code className='code'>box-sizing: border-box</code>
           </h3>
             <p className='mb24'>
@@ -76,12 +84,15 @@ class Home extends React.Component {
           <h3 className='mb6 txt-bold'>
             <code className='code'>!important</code> guarantees utility class behavior
           </h3>
-            <p>
+            <p className='mb6'>
               Assembly uses <code className='code'>!important</code> on declarations whose effect directly corresponds to a class name.
-              For example, in the <code className='code'>.bg-pink</code> rule, the <code className='code'>background-color</code> declaration will be <code className='code'>!important</code>.
-              This ensures that these classes always behave the same. If you see the class <code className='code'>bg-pink</code> on an element,
-              you should be able to assume that that element will always have a pink background, regardless of its context or the other rules that apply.
-              If you need more flexibility (e.g. you don't always want the element to have a pink background) you should use custom CSS instead of a utility class.
+            </p>
+            <p>
+              For example, in the <code className='code'>.bg-pink</code> rule, the <code className='code'>background-color</code> declaration is <code className='code'>!important</code>.
+              This ensures that such classes always behave the same. If you see the class <code className='code'>bg-pink</code> on an element,
+              you should be able to assume that the element will have a pink background, regardless of its context or the other rules that apply.
+              Responsive classes (described above) provide some additional flexibility.
+              But if you need even more, you should use custom CSS instead of a utility class.
             </p>
       </div>
     );

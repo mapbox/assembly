@@ -95,12 +95,11 @@ class Forms extends React.Component {
 
           {colors.map((color) => {
             let selectClass = 'select';
-            let selectStrokeContainerClass = 'select-container select-container--stroke';
-            const selectStrokeClass = 'select';
+            let selectStrokeClass = 'select select--stroke';
             const selectContainerClass = 'select-container';
             if (color !== null) {
               selectClass += ` select--${color}`;
-              selectStrokeContainerClass += ` select--stroke-${color}`;
+              selectStrokeClass += ` select--stroke-${color}`;
             }
             return (
               <div key={color} className='mb12'>
@@ -111,6 +110,7 @@ class Forms extends React.Component {
                       <option>two</option>
                       <option>three</option>
                     </select>
+                    <div className='select-arrow'></div>
                   </div>
                 </div>
                 <div className='inline-block mr12'>
@@ -120,15 +120,17 @@ class Forms extends React.Component {
                       <option>two</option>
                       <option>three</option>
                     </select>
+                    <div className='select-arrow'></div>
                   </div>
                 </div>
                 <div className='inline-block mr12'>
-                  <div className={selectStrokeContainerClass}>
+                  <div className={selectContainerClass}>
                     <select className={selectStrokeClass}>
                       <option>firstoption</option>
                       <option>two</option>
                       <option>three</option>
                     </select>
+                    <div className='select-arrow'></div>
                   </div>
                 </div>
                 <div className='inline-block mr12'>
@@ -138,6 +140,7 @@ class Forms extends React.Component {
                       <option>two</option>
                       <option>three</option>
                     </select>
+                    <div className='select-arrow'></div>
                   </div>
                 </div>
               </div>

@@ -37,8 +37,9 @@ class Navigation extends React.Component {
       });
     }
 
-    function nameIsNotHome(n) { return n.name !== 'Home' }
-    const filteredNavData = props.navData.items.filter(nameIsNotHome);
+    const filteredNavData = props.navData.items.filter((n) => {
+      return n.name !== 'Home';
+    });
     const navEls = filteredNavData.map((r) => {
       const showNestedItems = r.name !== props.navData.active
         || r.items === undefined
