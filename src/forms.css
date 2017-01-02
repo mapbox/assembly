@@ -41,7 +41,7 @@
 
 .input:focus,
 .textarea:focus {
-  box-shadow: inset 0 0 0 3px var(--neutral25);
+  box-shadow: inset 0 0 0 2px var(--neutral25);
 }
 
 .input::placeholder,
@@ -412,6 +412,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 
 /* range thumb */
 .range::-webkit-slider-thumb {
+  transition: box-shadow var(--transition), background var(--transition);
   appearance: none;
   box-shadow: 0;
   width: 20px;
@@ -424,6 +425,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 }
 
 .range::-moz-range-thumb {
+  transition: box-shadow var(--transition), background var(--transition);
   width: 17px;
   height: 17px;
   border-radius: 50%;
@@ -433,6 +435,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 }
 
 .range::-ms-thumb {
+  transition: box-shadow var(--transition), background var(--transition);
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -817,24 +820,12 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 
 /* Shared focus states */
 input:focus + .checkbox,
-input:focus + .radio {
-  outline: 0;
-  box-shadow: inset 0 0 0 100px var(--neutral45), 0 0 0 2px var(--neutral45);
-}
-
+input:focus + .radio,
 input:focus + .switch,
 input:focus + .toggle,
-.select--stroke:focus {
+.select:focus {
   outline: 0;
-  box-shadow: inset 0 0 0 2px var(--neutral45), 0 0 0 2px var(--neutral45);
-}
-
-/* filled switches and selects need a border color instead of inner shadow */
-.select:not(.select--stroke):focus,
-input:checked:focus + .switch {
-  outline: 0;
-  border-color: var(--neutral45);
-  box-shadow: 0 0 0 2px var(--neutral45);
+  box-shadow: 0 0 0 3px var(--neutral45);
 }
 
 input:disabled {
