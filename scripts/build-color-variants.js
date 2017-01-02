@@ -75,7 +75,7 @@ function isDark(color) {
 }
 
 function buildColorVariants(variables, config) {
-  variables = variables || defaultVariables;
+  variables = Object.assign({}, defaultVariables, variables);
   config = config || allConfig;
   const universalColors = (Array.isArray(config))
     ? config
