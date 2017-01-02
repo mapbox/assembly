@@ -35,6 +35,7 @@ const assemblyCssFiles = [
   getCssPath('typography'),
   getCssPath('tables'),
   getCssPath('buttons'),
+  getCssPath('links'),
   getCssPath('forms'),
   getCssPath('theming'),
   getCssPath('icons'),

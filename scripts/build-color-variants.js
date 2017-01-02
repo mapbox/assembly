@@ -75,7 +75,7 @@ function isDark(color) {
 }
 
 function buildColorVariants(variables, config) {
-  variables = variables || defaultVariables;
+  variables = Object.assign({}, defaultVariables, variables);
   config = config || allConfig;
   const universalColors = (Array.isArray(config))
     ? config
@@ -137,7 +137,7 @@ function buildColorVariants(variables, config) {
         }
 
         .btn--${color}:hover,
-        .btn--${color}.btn--is-active {
+        .btn--${color}.is-active {
           background-color: ${darkerShade};
         }
       `);
@@ -156,7 +156,7 @@ function buildColorVariants(variables, config) {
         }
 
         .btn--stroke.btn--${color}:hover,
-        .btn--stroke--is-active.btn--${color} {
+        .btn--stroke.btn--${color}.is-active {
           color: ${darkerShade};
         }
       `);
@@ -423,11 +423,12 @@ function buildColorVariants(variables, config) {
       if (isDark(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
-        .txt-link--${color} {
+        .link--${color} {
           color: ${variables[color]};
         }
-        .txt-link--${color}.txt-link--is-active,
-        .txt-link--${color}:hover {
+
+        .link--${color}:hover,
+        .link--${color}.is-active {
           color: ${darkerShade};
         }
       `);
@@ -458,21 +459,25 @@ function buildColorVariants(variables, config) {
   variantGenerators.hoverShadow = function (colors) {
     let css = stripIndent(`
       /**
-       * Add shadows to elements on hover.
+       * Add shadows to elements on hover and active states.
        *
        * @group
        * @memberof Shadows
        * @example
-       * <div class='hover-shadow-darken25'>hover-shadow-darken25</div>
+       * <div class='shadow-darken25-on-hover'>shadow-darken25-on-hover</div>
+       * <div class='shadow-darken25-on-active'>shadow-darken25-on-active (not active)</div>
+       * <div class='shadow-darken25-on-active is-active'>shadow-darken25-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
       if (!isSemitransparent(color)) return result;
       const colorValue = variables[color];
       return result += stripIndent(`
-        .hover-shadow-${color}:hover {
+        .shadow-${color}-on-hover:hover,
+        .shadow-${color}-on-active.is-active {
           box-shadow: 0 0 10px 2px ${colorValue} !important;
         }
-        .hover-shadow-bold-${color}:hover {
+        .shadow-bold-${color}-on-hover:hover,
+        .shadow-bold-${color}-on-active.is-active {
           box-shadow: 0 0 30px 6px ${colorValue} !important;
         }
       `);
@@ -484,16 +489,19 @@ function buildColorVariants(variables, config) {
   variantGenerators.hoverBackground = function (colors) {
     let css = stripIndent(`
       /**
-       * Control the background of elements on hover.
+       * Control the background of elements on hover and active states.
        *
        * @group
        * @memberof Colors
        * @example
-       * <div class='hover-bg-darken25'>hover-bg-darken25</div>
+       * <div class='bg-darken25-on-hover'>bg-darken25-on-hover</div>
+       * <div class='bg-darken25-on-active'>bg-darken25-on-active (not active)</div>
+       * <div class='bg-darken25-on-active is-active'>bg-darken25-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
       return result += stripIndent(`
-        .hover-bg-${color}:hover {
+        .bg-${color}-on-hover:hover,
+        .bg-${color}-on-active.is-active {
           background-color: ${variables[color]} !important;
         }
       `);
@@ -505,16 +513,19 @@ function buildColorVariants(variables, config) {
   variantGenerators.hoverColor = function (colors) {
     let css = stripIndent(`
       /**
-       * Control the color of elements on hover.
+       * Control the color of elements on hover and active states.
        *
        * @group
        * @memberof Colors
        * @example
-       * <div class='hover-color-red'>hover-color-red</div>
+       * <div class='color-red-on-hover'>color-red-on-hover</div>
+       * <div class='color-red-on-active'>color-red-on-active (not active)</div>
+       * <div class='color-red-on-active is-active'>color-red-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
       return result += stripIndent(`
-        .hover-color-${color}:hover {
+        .color-${color}-on-hover:hover,
+        .color-${color}-on-active.is-active {
           color: ${variables[color]} !important;
         }
       `);
@@ -526,16 +537,19 @@ function buildColorVariants(variables, config) {
   variantGenerators.hoverBorder = function (colors) {
     let css = stripIndent(`
       /**
-       * Set the border color of an element on hover. Depends on a \`border\` or \`border-{direction}\` class.
+       * Control the border color of an element on hover and active states. Depends on a \`border\` or \`border-{direction}\` class.
        *
        * @group
        * @memberof Borders
        * @example
-       * <div class='border hover-border--red'>hover-border-red</div>
+       * <div class='border border--red-on-hover'>border--red-on-hover</div>
+       * <div class='border border--red-on-active'>border--red-on-active (not active)</div>
+       * <div class='border border--red-on-active is-active'>border--red-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
       return result += stripIndent(`
-        .hover-border--${color}:hover {
+        .border--${color}-on-hover:hover,
+        .border--${color}-on-active.is-active {
           border-color: ${variables[color]} !important;
         }
       `);

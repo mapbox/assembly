@@ -28,13 +28,13 @@ const colors = [
 ];
 
 function LinkEl(props) {
-  let linkClasses = 'txt-link inline mr12 mb6';
-  if (props.color) linkClasses += ` txt-link--${props.color}`;
+  let linkClasses = 'link inline mr12 mb6';
+  if (props.color) linkClasses += ` link--${props.color}`;
   return (
     <div>
       <div className={linkClasses}>Click me!</div>
       <div className={`txt-underline ${linkClasses}`}>Click me!</div>
-      <div className={`txt-link--is-active ${linkClasses}`}>Active</div>
+      <div className={`link is-active ${linkClasses}`}>Active</div>
     </div>
   );
 }

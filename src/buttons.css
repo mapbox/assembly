@@ -1,6 +1,6 @@
 /**
  * Use buttons to trigger click events. For links,
- * we recommend using an `a` element with the [`.txt-link`](#txt-link) class.
+ * we recommend using an `a` element with the [`.link`](#Links) class.
  *
  * @section Buttons
  */
@@ -37,16 +37,14 @@
 }
 
 /**
- * Apply an active state to buttons.
+ * Apply a darker active state to buttons by adding the `is-active` class.
  *
  * @memberof Buttons
+ * @selectors .btn.is-active
  * @example
- * <button class='btn btn--is-active'>Default</button>
+ * <button class='btn is-active'>Active</button>
+ * <button class='btn btn--red is-active'>Red and active</button>
  */
-.btn:hover,
-.btn--is-active {
-  background-color: var(--blue-dark);
-}
 
 /**
  * A modifier class to create buttons with colored borders.
@@ -66,19 +64,6 @@
   background-color: transparent;
   border-color: currentColor;
   color: var(--blue);
-}
-
-/**
- * Apply an active state to stroked buttons.
- *
- * @memberof Buttons
- * @example
- * <button class='btn btn--stroke btn--stroke--is-active'>Default</button>
- */
-.btn--stroke:hover,
-.btn--stroke--is-active {
-  background-color: transparent;
-  color: var(--blue-dark);
 }
 
 /**
@@ -106,6 +91,28 @@
   font-size: 10px;
   padding: 0 8px;
   border-radius: 14px;
+}
+
+/**
+ * Apply a darker active state to buttons by adding the `is-active` class.
+ *
+ * @memberof Buttons
+ * @selectors .btn.is-active, .btn--stroke.is-active
+ * @example
+ * <button class='btn is-active'>Active</button>
+ * <button class='btn btn--red is-active'>Red and active</button>
+ * <button class='btn btn--stroke is-active'>Active</button>
+ * <button class='btn btn--stroke btn--red is-active'>Red and active</button>
+ */
+.btn:hover,
+.btn.is-active {
+  background-color: var(--blue-dark);
+}
+
+.btn--stroke:hover,
+.btn--stroke.is-active {
+  background-color: transparent;
+  color: var(--blue-dark);
 }
 
 /**
@@ -152,7 +159,7 @@
  * </div>
  *  <div class="flex-parent flex-parent-inline flex-parent--column mt12">
  *     <button class="btn btn--pill btn--pill-vt">Top</button>
- *     <button class="btn btn--pill btn--pill-vc">Center</button>
+ *     <button class="btn btn--pill btn--pill-vc is-active">Center</button>
  *     <button class="btn btn--pill btn--pill-vb">Bottom</button>
  *  </div>
  */
@@ -163,8 +170,7 @@
 /* Put the active pill on top, so if they're stroke pills its
 active color is visible on all borders */
 .btn--pill:hover,
-.btn--pill.btn--is-active,
-.btn--pill.btn--stroke--is-active {
+.btn--pill.is-active {
   z-index: 2;
 }
 

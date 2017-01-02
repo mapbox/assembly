@@ -535,34 +535,6 @@ textarea {
 .txt-underline { text-decoration: underline !important; }
 
 /**
- * By default, the `txt-link` class turn text blue, and provides a dark blue `:hover` state.
- * Combine with any `color-*` class for similar `:hover` and `is-active` behavior.
- *
- * @memberof Type utils
- * @example
- * <a href='#link' class='txt-link'>A link</a>
- * <a href='#link' class='txt-link txt-link--red'>A red link</a>
- */
-.txt-link {
-  cursor: pointer;
-  color: var(--blue);
-  transition: color var(--transition);
-}
-
-/**
- * Active link. Applies dark variation on primary button color. Depends on the `txt-link` class.
- *
- * @memberof Type utils
- * @example
- * <a href='#link' class='txt-link txt-link--is-active'>A link</a>
- * <a href='#link' class='txt-link txt-link--red txt-link--is-active'>A red link</a>
- */
-.txt-link:hover,
-.txt-link--is-active {
-  color: var(--blue-dark);
-}
-
-/**
  * Prevents text from wrapping.
  *
  * @memberof Type utils

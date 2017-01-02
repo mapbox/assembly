@@ -264,31 +264,27 @@
 /** @endgroup */
 
 /**
- * Control the opacity of elements in a hover, focus, active state, or when an element has an `is-active` class.
+ * Control the opacity of elements on hover and active states.
+ *
+ * `.alpha100-on-focus` is also available to make an element opaque on focus.
  *
  * @group
  * @memberof Opacity
  * @example
- * <div class='hover-alpha25'>hover-alpha25</div>
+ * <div class='alpha25-on-hover'>alpha25-on-hover</div>
+ * <div class='alpha25-on-active'>alpha25-on-active (inactive)</div>
+ * <div class='alpha25-on-active is-active'>alpha25-on-active (active)</div>
+ * <button class='alpha0 alpha100-on-focus'>alpha100-on-focus</button>
  */
-.hover-alpha0:hover,
-.focus-alpha0:focus,
-.is-active-alpha0.is-active,
-.active-alpha0:active { opacity: 0 !important; }
-.hover-alpha25:hover,
-.focus-alpha25:focus,
-.is-active-alpha25.is-active,
-.active-alpha25:active { opacity: 0.25 !important; }
-.hover-alpha50:hover,
-.focus-alpha50:focus,
-.is-active-alpha50.is-active,
-.active-alpha50:active { opacity: 0.5 !important; }
-.hover-alpha75:hover,
-.focus-alpha75:focus,
-.is-active-alpha75.is-active,
-.active-alpha75:active { opacity: 0.75 !important; }
-.hover-alpha100:hover,
-.focus-alpha100:focus,
-.is-active-alpha100.is-active,
-.active-alpha100:active { opacity: 1 !important; }
+.alpha0-on-hover:hover,
+.alpha0-on-active.is-active { opacity: 0 !important; }
+.alpha25-on-hover:hover,
+.alpha25-on-active.is-active { opacity: 0.25 !important; }
+.alpha50-on-hover:hover,
+.alpha50-on-active.is-active { opacity: 0.5 !important; }
+.alpha75-on-hover:hover,
+.alpha75-on-active.is-active { opacity: 0.75 !important; }
+.alpha100-on-hover:hover,
+.alpha100-on-active.is-active,
+.alpha100-on-focus:focus { opacity: 1 !important; }
 /** @endgroup */
