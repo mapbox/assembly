@@ -222,13 +222,7 @@ against .round class */
 /* focus states */
 
 /* unstroked buttons need a border color instead of inner shadow */
-.btn:not(.btn--stroke):focus {
+.btn:focus {
   outline: none;
-  border-color: var(--neutral45);
-  box-shadow: 0 0 0 2px var(--neutral45);
-}
-
-.btn--stroke:focus {
-  outline: none;
-  box-shadow: inset 0 0 0 2px var(--neutral45), 0 0 0 2px var(--neutral45);
+  box-shadow: var(--focus-shadow);
 }

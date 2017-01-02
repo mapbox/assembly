@@ -819,14 +819,14 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 input:focus + .checkbox,
 input:focus + .radio {
   outline: 0;
-  box-shadow: inset 0 0 0 100px var(--neutral45), 0 0 0 2px var(--neutral45);
+  box-shadow: var(--focus-shadow);
 }
 
 input:focus + .switch,
 input:focus + .toggle,
 .select--stroke:focus {
   outline: 0;
-  box-shadow: inset 0 0 0 2px var(--neutral45), 0 0 0 2px var(--neutral45);
+  box-shadow: var(--focus-shadow);
 }
 
 /* filled switches and selects need a border color instead of inner shadow */
@@ -834,7 +834,7 @@ input:focus + .toggle,
 input:checked:focus + .switch {
   outline: 0;
   border-color: var(--neutral45);
-  box-shadow: 0 0 0 2px var(--neutral45);
+  box-shadow: var(--focus-shadow);
 }
 
 input:disabled {
