@@ -43,6 +43,13 @@
   color: var(--placeholder);
 }
 
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 /**
  * A basic text input. Set the color of the border with `input--border-{color}`.
  *
@@ -53,7 +60,7 @@
  */
 .input {
   height: 36px;
-  line-height: 38px; /* minus border */
+  line-height: 34px; /* minus border */
   padding: 0 12px;
 }
 
