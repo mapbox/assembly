@@ -362,7 +362,7 @@ function buildColorVariants(variables, config) {
     let css = stripIndent(`
       /**
        * @section Text colors
-       * @memberof Colors & gradients
+       * @memberof Colors
        */
 
       /**
@@ -395,7 +395,7 @@ function buildColorVariants(variables, config) {
     let css = stripIndent(`
       /**
        * @section Background colors
-       * @memberof Colors & gradients
+       * @memberof Colors
        */
 
       /**
@@ -487,7 +487,7 @@ function buildColorVariants(variables, config) {
        * Control the background of elements on hover.
        *
        * @group
-       * @memberof Colors & gradients
+       * @memberof Colors
        * @example
        * <div class='hover-bg-darken25'>hover-bg-darken25</div>
        */`);
@@ -508,7 +508,7 @@ function buildColorVariants(variables, config) {
        * Control the color of elements on hover.
        *
        * @group
-       * @memberof Colors & gradients
+       * @memberof Colors
        * @example
        * <div class='hover-color-red'>hover-color-red</div>
        */`);
