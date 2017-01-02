@@ -27,6 +27,7 @@ function orderSections(entries) {
     getSection('Colors'),
     getSection('icons'),
     getSection('buttons'),
+    getSection('links'),
     getSection('forms'),
     getSection('tables'),
     getSection('animations'),

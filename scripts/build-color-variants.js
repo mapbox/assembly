@@ -423,11 +423,12 @@ function buildColorVariants(variables, config) {
       if (isDark(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
-        .txt-link--${color} {
+        .link--${color} {
           color: ${variables[color]};
         }
-        .txt-link--${color}.txt-link--is-active,
-        .txt-link--${color}:hover {
+
+        .link--${color}:hover,
+        .link--${color}.is-active {
           color: ${darkerShade};
         }
       `);
