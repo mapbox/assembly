@@ -10,12 +10,9 @@
  * `.btn--{color}` modifier to change the color of a button. Buttons have white text unless combined with a [`.color-*`](#Color)
  * class. Buttons have fully rounded corners unless combined with a [`.round-*`](#Theming) class.
  *
- * Button colors darken on `:hover` and `.is-active` states.
- *
  * @memberof Buttons
  * @example
  * <button class='btn'>Default</button>
- * <button class='btn is-active'>Active</button>
  * <button class='btn btn--red'>Color</button>
  * <button class='btn btn--teal color-yellow'>More colors</button>
  * <button class='btn round'>Less rounded</button>
@@ -39,10 +36,15 @@
   transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 }
 
-.btn:hover,
-.btn.is-active {
-  background-color: var(--blue-dark);
-}
+/**
+ * Apply a darker active state to buttons by adding the `is-active` class.
+ *
+ * @memberof Buttons
+ * @selectors .btn.is-active
+ * @example
+ * <button class='btn is-active'>Active</button>
+ * <button class='btn btn--red is-active'>Red and active</button>
+ */
 
 /**
  * A modifier class to create buttons with colored borders.
@@ -52,7 +54,6 @@
  * @memberof Buttons
  * @example
  * <button class='btn btn--stroke'>Default</button>
- * <button class='btn btn--stroke is-active'>Active</button>
  * <button class='btn btn--stroke btn--red'>Color</button>
  * <button class='btn btn--stroke round'>Less rounded</button>
  * <div class='p6 bg-blue inline-block'>
@@ -63,12 +64,6 @@
   background-color: transparent;
   border-color: currentColor;
   color: var(--blue);
-}
-
-.btn--stroke:hover,
-.btn--stroke.is-active {
-  background-color: transparent;
-  color: var(--blue-dark);
 }
 
 /**
@@ -96,6 +91,28 @@
   font-size: 10px;
   padding: 0 8px;
   border-radius: 14px;
+}
+
+/**
+ * Apply a darker active state to buttons by adding the `is-active` class.
+ *
+ * @memberof Buttons
+ * @selectors .btn.is-active, .btn--stroke.is-active
+ * @example
+ * <button class='btn is-active'>Active</button>
+ * <button class='btn btn--red is-active'>Red and active</button>
+ * <button class='btn btn--stroke is-active'>Active</button>
+ * <button class='btn btn--stroke btn--red is-active'>Red and active</button>
+ */
+.btn:hover,
+.btn.is-active {
+  background-color: var(--blue-dark);
+}
+
+.btn--stroke:hover,
+.btn--stroke.is-active {
+  background-color: transparent;
+  color: var(--blue-dark);
 }
 
 /**
@@ -142,7 +159,7 @@
  * </div>
  *  <div class="flex-parent flex-parent-inline flex-parent--column mt12">
  *     <button class="btn btn--pill btn--pill-vt">Top</button>
- *     <button class="btn btn--pill btn--pill-vc">Center</button>
+ *     <button class="btn btn--pill btn--pill-vc is-active">Center</button>
  *     <button class="btn btn--pill btn--pill-vb">Bottom</button>
  *  </div>
  */

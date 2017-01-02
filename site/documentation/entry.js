@@ -1,6 +1,7 @@
 import React from 'react';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
+import _ from 'lodash';
 import { HtmlExample } from '../html_example';
 
 class Entry extends React.Component {
@@ -28,21 +29,20 @@ class Entry extends React.Component {
 
     if (selectors !== undefined) {
 
-      // Break combined comma-separated selectors into multiple elements
-      selectors = selectors
-        .map((s) => {
-          return s.split(',');
-        }).reduce((a, b) => {
-          return a.concat(b);
+      // Break combined comma-separated selectors into multiple elements,
+      // remove all pseudo-elements except `:disabled`,
+      // remove `is-active` when it is combined with a `*-on-active` class.
+      selectors = selectors.reduce((fullList, ruleSelector) => {
+        const ruleSelectors = ruleSelector.split(',').map((selector) => {
+          if (/:disabled/.test(selector)) return selector;
+          return selector.split(':')[0]
+            .trim()
+            .replace(/on-active\.is-active/, 'on-active');
         });
+        return fullList.concat(ruleSelectors);
+      }, []);
 
-      // Remove some pseudo-elements
-      selectors = selectors.filter((selector) => !(
-        selector.includes(':after') ||
-        selector.includes(':checked') ||
-        (selector.includes(':hover') && !selector.includes('.hover')) ||
-        (selector.includes(':focus') && !selector.includes('.focus')) ||
-        (selector.includes(':active') && !selector.includes('.active'))));
+      selectors = _.uniq(selectors);
 
       // hide prose selectors from documentation, but special case `.prose` and `.prose--dark` cases
       if (selectors.length > 1) {

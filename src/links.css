@@ -15,9 +15,6 @@
  * @example
  * <a href='#link' class='link'>A link</a>
  * <a href='#link' class='link link--red'>A red link</a>
- * <div>
- *   <button href='#link' class='link link--red is-active'>An active red link (button element)</button>
- * </div>
  */
 .link {
   cursor: pointer;
@@ -25,6 +22,15 @@
   transition: color var(--transition);
 }
 
+/**
+ * Apply a darker active state to links by adding the `is-active` class.
+ *
+ * @memberof Links
+ * @selectors .link.is-active
+ * @example
+ * <a class='link is-active'>Active</a>
+ * <a class='link link--red is-active'>Red and active</a>
+ */
 .link:hover,
 .link.is-active {
   color: var(--blue-dark);
