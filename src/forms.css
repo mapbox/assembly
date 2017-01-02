@@ -36,11 +36,17 @@
 .input:focus,
 .textarea:focus {
   border-color: var(--blue-dark);
+  outline: none;
+}
+
+.input:focus,
+.textarea:focus {
+  box-shadow: inset 0 0 0 3px var(--neutral25);
 }
 
 .input::placeholder,
 .textarea::placeholder {
-  color: var(--placeholder);
+  color: var(--neutral45);
 }
 
 /**
@@ -108,8 +114,8 @@
 .textarea:disabled {
   pointer-events: none;
   color: var(--darken50) !important;
-  background-color: var(--disabled-faint) !important;
-  border-color: var(--disabled) !important;
+  background-color: var(--neutral10) !important;
+  border-color: var(--neutral25) !important;
 }
 
 /**
@@ -122,7 +128,7 @@
  */
 .input:read-only,
 .textarea:read-only {
-  background-color: var(--disabled-faint) !important;
+  background-color: var(--neutral10) !important;
 }
 
 /**
@@ -172,7 +178,7 @@
   padding: 4px 30px 4px 12px; /* plus arrow, minus border */
   cursor: pointer;
   display: inline-block;
-  transition: color var(--transition), background-color var(--transition);
+  transition: box-shadow var(--transition), color var(--transition), background-color var(--transition);
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
@@ -298,7 +304,7 @@
 .select:disabled {
   pointer-events: none;
   color: var(--darken25) !important;
-  background-color: var(--disabled) !important;
+  background-color: var(--neutral25) !important;
   border-color: transparent !important;
 }
 
@@ -454,13 +460,29 @@
 
 /* Range focus */
 .range:focus {
-  box-shadow: none !important;
+  outline: none;
 }
-.range:focus::-webkit-slider-thumb { box-shadow: var(--focus-shadow); }
-.range:focus::-ms-fill-upper { box-shadow: var(--focus-shadow); }
-.range:focus::-ms-fill-lower { box-shadow: var(--focus-shadow); }
-.range:focus::-ms-thumb { box-shadow: var(--focus-shadow); }
-.range:focus::-moz-range-thumb { box-shadow: var(--focus-shadow); }
+.range:focus::-webkit-slider-thumb {
+  transform: box-shadow var(--transition);
+  box-shadow: 0 0 0 3px var(--neutral45);
+}
+.range:focus::-ms-fill-upper {
+  transform: box-shadow var(--transition);
+  box-shadow: 0 0 0 3px var(--neutral45);
+}
+.range:focus::-ms-fill-lower {
+  transform: box-shadow var(--transition);
+  box-shadow: 0 0 0 3px var(--neutral45);
+}
+.range:focus::-ms-thumb {
+  transform: box-shadow var(--transition);
+  box-shadow: 0 0 0 3px var(--neutral45);
+}
+.range:focus::-moz-range-thumb {
+  transform: box-shadow var(--transition);
+  box-shadow: 0 0 0 3px var(--neutral45);
+}
+
 .range::-moz-focus-outer { border: 0; }
 
 /*
@@ -471,14 +493,14 @@
  * @example
  * <input disabled class='range' type='range' />
 */
-.range:disabled::-webkit-slider-runnable-track { background: var(--disabled); }
-.range:disabled::-moz-range-track { background: var(--disabled); }
-.range:disabled::-ms-fill-upper { background: var(--disabled); }
-.range:disabled::-ms-fill-lower { background: var(--disabled); }
+.range:disabled::-webkit-slider-runnable-track { background: var(--neutral45); }
+.range:disabled::-moz-range-track { background: var(--neutral45); }
+.range:disabled::-ms-fill-upper { background: var(--neutral45); }
+.range:disabled::-ms-fill-lower { background: var(--neutral45); }
 
-.range:disabled::-webkit-slider-thumb { border-color: var(--disabled); background: var(--gray-faint); }
-.range:disabled::-ms-thumb { border-color: var(--disabled); background: var(--gray-faint); }
-.range:disabled::-moz-range-thumb { border-color: var(--disabled); background: var(--gray-faint); }
+.range:disabled::-webkit-slider-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
+.range:disabled::-ms-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
+.range:disabled::-moz-range-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
 
 /* shared form styles */
 .checkbox-container,
@@ -508,7 +530,7 @@
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
-  transition: color var(--transition), background-color var(--transition);
+  transition: box-shadow var(--transition), color var(--transition), background-color var(--transition);
 }
 
 /**
@@ -583,7 +605,7 @@
 
 /**
  * A radio button. Change the color of the radio button with a `radio--{color}` class.
- * Adjust the line height of the checkbox with `.radio--s-label`.
+ * Adjust the line height of the radio button with `.radio--s-label`.
  *
  * @memberof Radio buttons
  * @example
@@ -657,7 +679,7 @@
   border-style: solid;
   border-color: currentColor;
   color: var(--blue);
-  transition: color var(--transition), background-color var(--transition), border-color var(--transition);
+  transition: box-shadow var(--transition), color var(--transition), background-color var(--transition), border-color var(--transition);
 }
 
 .switch::after {
@@ -772,12 +794,26 @@
   top: 0;
 }
 
-/* Shared disabled states */
+/* Shared focus states */
 input:focus + .checkbox,
-input:focus + .radio,
+input:focus + .radio {
+  outline: 0;
+  box-shadow: inset 0 0 0 100px var(--neutral45), 0 0 0 2px var(--neutral45);
+}
+
 input:focus + .switch,
-input:focus + .toggle {
-  box-shadow: var(--focus-shadow);
+input:focus + .toggle,
+.select--stroke:focus {
+  outline: 0;
+  box-shadow: inset 0 0 0 2px var(--neutral45), 0 0 0 2px var(--neutral45);
+}
+
+/* filled switches and selects need a border color instead of inner shadow */
+.select:not(.select--stroke):focus,
+input:checked:focus + .switch {
+  outline: 0;
+  border-color: var(--neutral45);
+  box-shadow: 0 0 0 2px var(--neutral45);
 }
 
 input:disabled {
@@ -790,9 +826,15 @@ input:disabled {
  * @memberof Checkboxes
  * @selectors input:disabled + .checkbox
  * @example
+ * <label class="checkbox-container mr6">
+ *   <input disabled type='checkbox'>
+ *   <div class='checkbox'>
+ *     <svg class='icon'><use xlink:href='#icon-check' /></svg>
+ *   </div>
+ * </label>
  * <label class="checkbox-container">
- *   <input type='checkbox'>
- *   <div class='checkbox mr6 checkbox--s-label checkbox--red'>
+ *   <input checked disabled type='checkbox'>
+ *   <div class='checkbox'>
  *     <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *   </div>
  * </label>
@@ -831,7 +873,7 @@ input:disabled + .radio,
 input:disabled + .switch {
   pointer-events: none;
   color: var(--darken25) !important;
-  background-color: var(--disabled) !important;
+  background-color: var(--neutral25) !important;
   border-color: transparent !important;
 }
 
@@ -900,6 +942,6 @@ input:disabled + .toggle {
 }
 
 input:checked:disabled + .toggle {
-  background-color: var(--disabled) !important;
+  background-color: var(--neutral25) !important;
   color: var(--darken25) !important;
 }

@@ -74,17 +74,13 @@ button {
   cursor: pointer;
 }
 
-input:focus,
-textarea:focus,
-select:focus,
-button:focus,
-a:focus {
-  outline: 0 !important;
-  box-shadow: var(--focus-shadow) !important;
+*:hover,
+*:active {
+  outline: 0;
 }
 
 a:hover {
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 button::-moz-focus-inner {

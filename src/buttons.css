@@ -37,16 +37,6 @@
 }
 
 /**
- * Apply a darker active state to buttons by adding the `is-active` class.
- *
- * @memberof Buttons
- * @selectors .btn.is-active
- * @example
- * <button class='btn is-active'>Active</button>
- * <button class='btn btn--red is-active'>Red and active</button>
- */
-
-/**
  * A modifier class to create buttons with colored borders.
  * The border color and text color will always match.
  * To change the text & border color, use a `.btn-{color}` modifier.
@@ -125,7 +115,7 @@
 .btn:disabled {
   pointer-events: none;
   color: var(--darken25) !important;
-  background-color: var(--disabled) !important;
+  background-color: var(--neutral25) !important;
   border-color: transparent !important;
 }
 
@@ -227,4 +217,18 @@ against .round class */
 
 .btn--stroke.btn--pill-vb {
   margin-top: -2px;
+}
+
+/* focus states */
+
+/* unstroked buttons need a border color instead of inner shadow */
+.btn:not(.btn--stroke):focus {
+  outline: none;
+  border-color: var(--neutral45);
+  box-shadow: 0 0 0 2px var(--neutral45);
+}
+
+.btn--stroke:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--neutral45), 0 0 0 2px var(--neutral45);
 }
