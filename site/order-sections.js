@@ -24,7 +24,7 @@ function orderSections(entries) {
     getSection('typography'),
     getSection('layout'),
     getSection('theming'),
-    getSection('colors & gradients'),
+    getSection('Colors'),
     getSection('icons'),
     getSection('buttons'),
     getSection('forms'),
