@@ -10,9 +10,12 @@
  * `.btn--{color}` modifier to change the color of a button. Buttons have white text unless combined with a [`.color-*`](#Color)
  * class. Buttons have fully rounded corners unless combined with a [`.round-*`](#Theming) class.
  *
+ * Button colors darken on `:hover` and `.is-active` states.
+ *
  * @memberof Buttons
  * @example
  * <button class='btn'>Default</button>
+ * <button class='btn is-active'>Active</button>
  * <button class='btn btn--red'>Color</button>
  * <button class='btn btn--teal color-yellow'>More colors</button>
  * <button class='btn round'>Less rounded</button>
@@ -36,15 +39,8 @@
   transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 }
 
-/**
- * Apply an active state to buttons.
- *
- * @memberof Buttons
- * @example
- * <button class='btn btn--is-active'>Default</button>
- */
 .btn:hover,
-.btn--is-active {
+.btn.is-active {
   background-color: var(--blue-dark);
 }
 
@@ -56,6 +52,7 @@
  * @memberof Buttons
  * @example
  * <button class='btn btn--stroke'>Default</button>
+ * <button class='btn btn--stroke is-active'>Active</button>
  * <button class='btn btn--stroke btn--red'>Color</button>
  * <button class='btn btn--stroke round'>Less rounded</button>
  * <div class='p6 bg-blue inline-block'>
@@ -68,15 +65,8 @@
   color: var(--blue);
 }
 
-/**
- * Apply an active state to stroked buttons.
- *
- * @memberof Buttons
- * @example
- * <button class='btn btn--stroke btn--stroke--is-active'>Default</button>
- */
 .btn--stroke:hover,
-.btn--stroke--is-active {
+.btn--stroke.is-active {
   background-color: transparent;
   color: var(--blue-dark);
 }
@@ -163,8 +153,7 @@
 /* Put the active pill on top, so if they're stroke pills its
 active color is visible on all borders */
 .btn--pill:hover,
-.btn--pill.btn--is-active,
-.btn--pill.btn--stroke--is-active {
+.btn--pill.is-active {
   z-index: 2;
 }
 

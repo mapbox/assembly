@@ -137,7 +137,7 @@ function buildColorVariants(variables, config) {
         }
 
         .btn--${color}:hover,
-        .btn--${color}.btn--is-active {
+        .btn--${color}.is-active {
           background-color: ${darkerShade};
         }
       `);
