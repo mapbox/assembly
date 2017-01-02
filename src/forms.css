@@ -183,13 +183,14 @@
 .select-arrow {
   position: absolute;
   right: 12px;
+  top: 50%;
   pointer-events: none;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 6px solid currentColor;
   width: 8px;
   height: 8px;
-  margin-top: 2px;
+  margin-top: -3px;
   transition: border-top-color var(--transition);
 }
 
