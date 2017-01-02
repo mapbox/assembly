@@ -75,6 +75,43 @@ class Inputs extends React.Component {
             {colors.map((c) => <InputEl key={c} color={c} border={c} readonly={true} />)}
           </div>
 
+          <div className='mb12'>
+            <div className='mr6 mb6 inline-block'>
+              <input
+                className='input'
+                placeholder='date'
+                type='date'
+              />
+            </div>
+            <div className='mr6 mb6 inline-block'>
+              <input
+                className='input'
+                placeholder='number'
+                type='number'
+              />
+            </div>
+            <div className='mr6 mb6 inline-block'>
+              <input
+                className='input'
+                placeholder='search'
+                type='search'
+              />
+            </div>
+            <div className='mr6 mb6 inline-block txt-align-t'>
+              <input
+                className='input'
+                type='color'
+              />
+            </div>
+            <div className='mr6 mb6 inline-block'>
+              <input
+                className='input'
+                placeholder='datetime'
+                type='datetime'
+              />
+            </div>
+          </div>
+
       </div>
     );
   }
