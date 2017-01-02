@@ -1664,10 +1664,10 @@
  * Prevent the child from shrinking below its width value.
  * @memberof Flexbox
  * @example
- * <div class='bg-darken10 w480 flex-parent'>
- *  <div class='border w240 flex-child-noshrink'>child</div>
- *  <div class='border w240'>child</div>
- *  <div class='border w240'>child</div>
+ * <div class='bg-darken10 w240 flex-parent'>
+ *  <div class='border w120 flex-child-noshrink'>child</div>
+ *  <div class='border w120'>child</div>
+ *  <div class='border w120'>child</div>
  * </div>
  */
 .flex-child-noshrink { flex-shrink: 0 !important; }
