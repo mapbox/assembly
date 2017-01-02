@@ -49,12 +49,22 @@
   color: var(--neutral45);
 }
 
-input::-ms-clear,
-input::-ms-reveal {
+/* Remove bad padding and unique cancel button from IE and Safari inputs */
+/* stylelint-disable selector-no-attribute */
+.input::-ms-clear,
+.input::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
+.input[type='search'] {
+  appearance: textfield;
+}
+.input[type='search']::-webkit-search-decoration,
+.input[type='search']::-webkit-search-cancel-button {
+  appearance: none;
+}
+/* stylelint-enable selector-no-attribute */
 
 /**
  * A basic text input. Set the color of the border with `input--border-{color}`.
@@ -125,6 +135,9 @@ input::-ms-reveal {
   border-color: var(--neutral25) !important;
 }
 
+/* stylelint-disable selector-no-attribute */
+/* Using the attribute selector instead of the pseudo-class `:read-only`
+because it seems to be more cross-browser consistent with HTML5 input types */
 /**
  * Read-only input and textarea.
  *
@@ -133,10 +146,11 @@ input::-ms-reveal {
  * <input readonly class='input' placeholder='basic' value='Readonly' />
  * <textarea readonly class='textarea' placeholder='basic' value='Disabled' >Readonly text</textarea>
  */
-.input:read-only,
-.textarea:read-only {
+.input[readonly],
+.textarea[readonly] {
   background-color: var(--neutral10) !important;
 }
+/* stylelint-enable selector-no-attribute */
 
 /**
  * The select component styles `<input type='select'>`. The markup must fit the following pattern:
