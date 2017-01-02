@@ -359,7 +359,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--gray:hover,
-.btn--stroke--is-active.btn--gray {
+.btn--stroke.btn--gray.is-active {
   color: #333;
 }
       
@@ -369,7 +369,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--gray-light:hover,
-.btn--stroke--is-active.btn--gray-light {
+.btn--stroke.btn--gray-light.is-active {
   color: #666;
 }
       
@@ -379,7 +379,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--gray-faint:hover,
-.btn--stroke--is-active.btn--gray-faint {
+.btn--stroke.btn--gray-faint.is-active {
   color: #ccc;
 }
       
@@ -389,7 +389,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--pink:hover,
-.btn--stroke--is-active.btn--pink {
+.btn--stroke.btn--pink.is-active {
   color: #C8145A;
 }
       
@@ -399,7 +399,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--pink-light:hover,
-.btn--stroke--is-active.btn--pink-light {
+.btn--stroke.btn--pink-light.is-active {
   color: #ff3c96;
 }
       
@@ -409,7 +409,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--pink-faint:hover,
-.btn--stroke--is-active.btn--pink-faint {
+.btn--stroke.btn--pink-faint.is-active {
   color: #FF88C0;
 }
       
@@ -419,7 +419,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--red:hover,
-.btn--stroke--is-active.btn--red {
+.btn--stroke.btn--red.is-active {
   color: #BE0014;
 }
       
@@ -429,7 +429,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--red-light:hover,
-.btn--stroke--is-active.btn--red-light {
+.btn--stroke.btn--red-light.is-active {
   color: #dc2b28;
 }
       
@@ -439,7 +439,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--red-faint:hover,
-.btn--stroke--is-active.btn--red-faint {
+.btn--stroke.btn--red-faint.is-active {
   color: #FF8280;
 }
       
@@ -449,7 +449,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--orange:hover,
-.btn--stroke--is-active.btn--orange {
+.btn--stroke.btn--orange.is-active {
   color: #DC4600;
 }
       
@@ -459,7 +459,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--orange-light:hover,
-.btn--stroke--is-active.btn--orange-light {
+.btn--stroke.btn--orange-light.is-active {
   color: #ff6e00;
 }
       
@@ -469,7 +469,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--orange-faint:hover,
-.btn--stroke--is-active.btn--orange-faint {
+.btn--stroke.btn--orange-faint.is-active {
   color: #FFA950;
 }
       
@@ -479,7 +479,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--yellow:hover,
-.btn--stroke--is-active.btn--yellow {
+.btn--stroke.btn--yellow.is-active {
   color: #FFBD0A;
 }
       
@@ -489,7 +489,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--yellow-light:hover,
-.btn--stroke--is-active.btn--yellow-light {
+.btn--stroke.btn--yellow-light.is-active {
   color: #f0dc00;
 }
       
@@ -499,7 +499,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--yellow-faint:hover,
-.btn--stroke--is-active.btn--yellow-faint {
+.btn--stroke.btn--yellow-faint.is-active {
   color: #F0F062;
 }
       
@@ -509,7 +509,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--green:hover,
-.btn--stroke--is-active.btn--green {
+.btn--stroke.btn--green.is-active {
   color: #007532;
 }
       
@@ -519,7 +519,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--green-light:hover,
-.btn--stroke--is-active.btn--green-light {
+.btn--stroke.btn--green-light.is-active {
   color: #01aa46;
 }
       
@@ -529,7 +529,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--green-faint:hover,
-.btn--stroke--is-active.btn--green-faint {
+.btn--stroke.btn--green-faint.is-active {
   color: #72C781;
 }
       
@@ -539,7 +539,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--teal:hover,
-.btn--stroke--is-active.btn--teal {
+.btn--stroke.btn--teal.is-active {
   color: #00626E;
 }
       
@@ -549,7 +549,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--teal-light:hover,
-.btn--stroke--is-active.btn--teal-light {
+.btn--stroke.btn--teal-light.is-active {
   color: #01b5b4;
 }
       
@@ -559,7 +559,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--teal-faint:hover,
-.btn--stroke--is-active.btn--teal-faint {
+.btn--stroke.btn--teal-faint.is-active {
   color: #50D2D2;
 }
       
@@ -569,7 +569,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--blue:hover,
-.btn--stroke--is-active.btn--blue {
+.btn--stroke.btn--blue.is-active {
   color: #0014AA;
 }
       
@@ -579,7 +579,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--blue-light:hover,
-.btn--stroke--is-active.btn--blue-light {
+.btn--stroke.btn--blue-light.is-active {
   color: #0065fb;
 }
       
@@ -589,7 +589,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--blue-faint:hover,
-.btn--stroke--is-active.btn--blue-faint {
+.btn--stroke.btn--blue-faint.is-active {
   color: #00B1FF;
 }
       
@@ -599,7 +599,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--purple:hover,
-.btn--stroke--is-active.btn--purple {
+.btn--stroke.btn--purple.is-active {
   color: #500078;
 }
       
@@ -609,7 +609,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--purple-light:hover,
-.btn--stroke--is-active.btn--purple-light {
+.btn--stroke.btn--purple-light.is-active {
   color: #8c50c7;
 }
       
@@ -619,7 +619,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--purple-faint:hover,
-.btn--stroke--is-active.btn--purple-faint {
+.btn--stroke.btn--purple-faint.is-active {
   color: #C299E3;
 }
       
@@ -629,7 +629,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--darken5:hover,
-.btn--stroke--is-active.btn--darken5 {
+.btn--stroke.btn--darken5.is-active {
   color: rgba(0, 0, 0, 0.10);
 }
       
@@ -639,7 +639,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--darken10:hover,
-.btn--stroke--is-active.btn--darken10 {
+.btn--stroke.btn--darken10.is-active {
   color: rgba(0, 0, 0, 0.25);
 }
       
@@ -649,7 +649,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--darken25:hover,
-.btn--stroke--is-active.btn--darken25 {
+.btn--stroke.btn--darken25.is-active {
   color: rgba(0, 0, 0, 0.50);
 }
       
@@ -659,7 +659,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--darken50:hover,
-.btn--stroke--is-active.btn--darken50 {
+.btn--stroke.btn--darken50.is-active {
   color: rgba(0, 0, 0, 0.75);
 }
       
@@ -669,7 +669,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--darken75:hover,
-.btn--stroke--is-active.btn--darken75 {
+.btn--stroke.btn--darken75.is-active {
   color: #000;
 }
       
@@ -679,7 +679,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--lighten5:hover,
-.btn--stroke--is-active.btn--lighten5 {
+.btn--stroke.btn--lighten5.is-active {
   color: rgba(255, 255, 255, 0.1);
 }
       
@@ -689,7 +689,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--lighten10:hover,
-.btn--stroke--is-active.btn--lighten10 {
+.btn--stroke.btn--lighten10.is-active {
   color: rgba(255, 255, 255, 0.25);
 }
       
@@ -699,7 +699,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--lighten25:hover,
-.btn--stroke--is-active.btn--lighten25 {
+.btn--stroke.btn--lighten25.is-active {
   color: rgba(255, 255, 255, 0.50);
 }
       
@@ -709,7 +709,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--lighten50:hover,
-.btn--stroke--is-active.btn--lighten50 {
+.btn--stroke.btn--lighten50.is-active {
   color: rgba(255, 255, 255, 0.75);
 }
       
@@ -719,7 +719,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--lighten75:hover,
-.btn--stroke--is-active.btn--lighten75 {
+.btn--stroke.btn--lighten75.is-active {
   color: #fff;
 }
       
@@ -729,7 +729,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--white:hover,
-.btn--stroke--is-active.btn--white {
+.btn--stroke.btn--white.is-active {
   color: #f0f0f0;
 }
       
@@ -739,7 +739,7 @@ exports[`buildColorVariants defaults 1`] = `
 }
 
 .btn--stroke.btn--transparent:hover,
-.btn--stroke--is-active.btn--transparent {
+.btn--stroke.btn--transparent.is-active {
   color: rgba(0, 0, 0, 0.05);
 }
       
@@ -5914,692 +5914,867 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Add shadows to elements on hover.
+ * Add shadows to elements on hover and active states.
  *
  * @group
  * @memberof Shadows
  * @example
- * <div class=\'hover-shadow-darken25\'>hover-shadow-darken25</div>
+ * <div class=\'shadow-darken25-on-hover\'>shadow-darken25-on-hover</div>
+ * <div class=\'shadow-darken25-on-active\'>shadow-darken25-on-active (not active)</div>
+ * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
  */
-.hover-shadow-darken5:hover {
+.shadow-darken5-on-hover:hover,
+.shadow-darken5-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05) !important;
 }
-.hover-shadow-bold-darken5:hover {
+.shadow-bold-darken5-on-hover:hover,
+.shadow-bold-darken5-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.05) !important;
 }
       
-.hover-shadow-darken10:hover {
+.shadow-darken10-on-hover:hover,
+.shadow-darken10-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.10) !important;
 }
-.hover-shadow-bold-darken10:hover {
+.shadow-bold-darken10-on-hover:hover,
+.shadow-bold-darken10-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.10) !important;
 }
       
-.hover-shadow-darken25:hover {
+.shadow-darken25-on-hover:hover,
+.shadow-darken25-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25) !important;
 }
-.hover-shadow-bold-darken25:hover {
+.shadow-bold-darken25-on-hover:hover,
+.shadow-bold-darken25-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.25) !important;
 }
       
-.hover-shadow-darken50:hover {
+.shadow-darken50-on-hover:hover,
+.shadow-darken50-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.50) !important;
 }
-.hover-shadow-bold-darken50:hover {
+.shadow-bold-darken50-on-hover:hover,
+.shadow-bold-darken50-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.50) !important;
 }
       
-.hover-shadow-darken75:hover {
+.shadow-darken75-on-hover:hover,
+.shadow-darken75-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.75) !important;
 }
-.hover-shadow-bold-darken75:hover {
+.shadow-bold-darken75-on-hover:hover,
+.shadow-bold-darken75-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.75) !important;
 }
       
-.hover-shadow-lighten5:hover {
+.shadow-lighten5-on-hover:hover,
+.shadow-lighten5-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.05) !important;
 }
-.hover-shadow-bold-lighten5:hover {
+.shadow-bold-lighten5-on-hover:hover,
+.shadow-bold-lighten5-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.05) !important;
 }
       
-.hover-shadow-lighten10:hover {
+.shadow-lighten10-on-hover:hover,
+.shadow-lighten10-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.1) !important;
 }
-.hover-shadow-bold-lighten10:hover {
+.shadow-bold-lighten10-on-hover:hover,
+.shadow-bold-lighten10-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.1) !important;
 }
       
-.hover-shadow-lighten25:hover {
+.shadow-lighten25-on-hover:hover,
+.shadow-lighten25-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.25) !important;
 }
-.hover-shadow-bold-lighten25:hover {
+.shadow-bold-lighten25-on-hover:hover,
+.shadow-bold-lighten25-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.25) !important;
 }
       
-.hover-shadow-lighten50:hover {
+.shadow-lighten50-on-hover:hover,
+.shadow-lighten50-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.50) !important;
 }
-.hover-shadow-bold-lighten50:hover {
+.shadow-bold-lighten50-on-hover:hover,
+.shadow-bold-lighten50-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.50) !important;
 }
       
-.hover-shadow-lighten75:hover {
+.shadow-lighten75-on-hover:hover,
+.shadow-lighten75-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.75) !important;
 }
-.hover-shadow-bold-lighten75:hover {
+.shadow-bold-lighten75-on-hover:hover,
+.shadow-bold-lighten75-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.75) !important;
 }
       /** @endgroup */
 /**
- * Control the background of elements on hover.
+ * Control the background of elements on hover and active states.
  *
  * @group
  * @memberof Colors
  * @example
- * <div class=\'hover-bg-darken25\'>hover-bg-darken25</div>
+ * <div class=\'bg-darken25-on-hover\'>bg-darken25-on-hover</div>
+ * <div class=\'bg-darken25-on-active\'>bg-darken25-on-active (not active)</div>
+ * <div class=\'bg-darken25-on-active is-active\'>bg-darken25-on-active (active)</div>
  */
-.hover-bg-gray-dark:hover {
+.bg-gray-dark-on-hover:hover,
+.bg-gray-dark-on-active.is-active {
   background-color: #333 !important;
 }
       
-.hover-bg-gray:hover {
+.bg-gray-on-hover:hover,
+.bg-gray-on-active.is-active {
   background-color: #666 !important;
 }
       
-.hover-bg-gray-light:hover {
+.bg-gray-light-on-hover:hover,
+.bg-gray-light-on-active.is-active {
   background-color: #ccc !important;
 }
       
-.hover-bg-gray-faint:hover {
+.bg-gray-faint-on-hover:hover,
+.bg-gray-faint-on-active.is-active {
   background-color: #f0f0f0 !important;
 }
       
-.hover-bg-pink-dark:hover {
+.bg-pink-dark-on-hover:hover,
+.bg-pink-dark-on-active.is-active {
   background-color: #C8145A !important;
 }
       
-.hover-bg-pink:hover {
+.bg-pink-on-hover:hover,
+.bg-pink-on-active.is-active {
   background-color: #ff3c96 !important;
 }
       
-.hover-bg-pink-light:hover {
+.bg-pink-light-on-hover:hover,
+.bg-pink-light-on-active.is-active {
   background-color: #FF88C0 !important;
 }
       
-.hover-bg-pink-faint:hover {
+.bg-pink-faint-on-hover:hover,
+.bg-pink-faint-on-active.is-active {
   background-color: #ffdbed !important;
 }
       
-.hover-bg-red-dark:hover {
+.bg-red-dark-on-hover:hover,
+.bg-red-dark-on-active.is-active {
   background-color: #BE0014 !important;
 }
       
-.hover-bg-red:hover {
+.bg-red-on-hover:hover,
+.bg-red-on-active.is-active {
   background-color: #dc2b28 !important;
 }
       
-.hover-bg-red-light:hover {
+.bg-red-light-on-hover:hover,
+.bg-red-light-on-active.is-active {
   background-color: #FF8280 !important;
 }
       
-.hover-bg-red-faint:hover {
+.bg-red-faint-on-hover:hover,
+.bg-red-faint-on-active.is-active {
   background-color: #ffdad9 !important;
 }
       
-.hover-bg-orange-dark:hover {
+.bg-orange-dark-on-hover:hover,
+.bg-orange-dark-on-active.is-active {
   background-color: #DC4600 !important;
 }
       
-.hover-bg-orange:hover {
+.bg-orange-on-hover:hover,
+.bg-orange-on-active.is-active {
   background-color: #ff6e00 !important;
 }
       
-.hover-bg-orange-light:hover {
+.bg-orange-light-on-hover:hover,
+.bg-orange-light-on-active.is-active {
   background-color: #FFA950 !important;
 }
       
-.hover-bg-orange-faint:hover {
+.bg-orange-faint-on-hover:hover,
+.bg-orange-faint-on-active.is-active {
   background-color: #FFE5CB !important;
 }
       
-.hover-bg-yellow-dark:hover {
+.bg-yellow-dark-on-hover:hover,
+.bg-yellow-dark-on-active.is-active {
   background-color: #FFBD0A !important;
 }
       
-.hover-bg-yellow:hover {
+.bg-yellow-on-hover:hover,
+.bg-yellow-on-active.is-active {
   background-color: #f0dc00 !important;
 }
       
-.hover-bg-yellow-light:hover {
+.bg-yellow-light-on-hover:hover,
+.bg-yellow-light-on-active.is-active {
   background-color: #F0F062 !important;
 }
       
-.hover-bg-yellow-faint:hover {
+.bg-yellow-faint-on-hover:hover,
+.bg-yellow-faint-on-active.is-active {
   background-color: #fafbd1 !important;
 }
       
-.hover-bg-green-dark:hover {
+.bg-green-dark-on-hover:hover,
+.bg-green-dark-on-active.is-active {
   background-color: #007532 !important;
 }
       
-.hover-bg-green:hover {
+.bg-green-on-hover:hover,
+.bg-green-on-active.is-active {
   background-color: #01aa46 !important;
 }
       
-.hover-bg-green-light:hover {
+.bg-green-light-on-hover:hover,
+.bg-green-light-on-active.is-active {
   background-color: #72C781 !important;
 }
       
-.hover-bg-green-faint:hover {
+.bg-green-faint-on-hover:hover,
+.bg-green-faint-on-active.is-active {
   background-color: #d4edda !important;
 }
       
-.hover-bg-teal-dark:hover {
+.bg-teal-dark-on-hover:hover,
+.bg-teal-dark-on-active.is-active {
   background-color: #00626E !important;
 }
       
-.hover-bg-teal:hover {
+.bg-teal-on-hover:hover,
+.bg-teal-on-active.is-active {
   background-color: #01b5b4 !important;
 }
       
-.hover-bg-teal-light:hover {
+.bg-teal-light-on-hover:hover,
+.bg-teal-light-on-active.is-active {
   background-color: #50D2D2 !important;
 }
       
-.hover-bg-teal-faint:hover {
+.bg-teal-faint-on-hover:hover,
+.bg-teal-faint-on-active.is-active {
   background-color: #cbf2f1 !important;
 }
       
-.hover-bg-blue-dark:hover {
+.bg-blue-dark-on-hover:hover,
+.bg-blue-dark-on-active.is-active {
   background-color: #0014AA !important;
 }
       
-.hover-bg-blue:hover {
+.bg-blue-on-hover:hover,
+.bg-blue-on-active.is-active {
   background-color: #0065fb !important;
 }
       
-.hover-bg-blue-light:hover {
+.bg-blue-light-on-hover:hover,
+.bg-blue-light-on-active.is-active {
   background-color: #00B1FF !important;
 }
       
-.hover-bg-blue-faint:hover {
+.bg-blue-faint-on-hover:hover,
+.bg-blue-faint-on-active.is-active {
   background-color: #bae8ff !important;
 }
       
-.hover-bg-purple-dark:hover {
+.bg-purple-dark-on-hover:hover,
+.bg-purple-dark-on-active.is-active {
   background-color: #500078 !important;
 }
       
-.hover-bg-purple:hover {
+.bg-purple-on-hover:hover,
+.bg-purple-on-active.is-active {
   background-color: #8c50c7 !important;
 }
       
-.hover-bg-purple-light:hover {
+.bg-purple-light-on-hover:hover,
+.bg-purple-light-on-active.is-active {
   background-color: #C299E3 !important;
 }
       
-.hover-bg-purple-faint:hover {
+.bg-purple-faint-on-hover:hover,
+.bg-purple-faint-on-active.is-active {
   background-color: #ede1f6 !important;
 }
       
-.hover-bg-darken5:hover {
+.bg-darken5-on-hover:hover,
+.bg-darken5-on-active.is-active {
   background-color: rgba(0, 0, 0, 0.05) !important;
 }
       
-.hover-bg-darken10:hover {
+.bg-darken10-on-hover:hover,
+.bg-darken10-on-active.is-active {
   background-color: rgba(0, 0, 0, 0.10) !important;
 }
       
-.hover-bg-darken25:hover {
+.bg-darken25-on-hover:hover,
+.bg-darken25-on-active.is-active {
   background-color: rgba(0, 0, 0, 0.25) !important;
 }
       
-.hover-bg-darken50:hover {
+.bg-darken50-on-hover:hover,
+.bg-darken50-on-active.is-active {
   background-color: rgba(0, 0, 0, 0.50) !important;
 }
       
-.hover-bg-darken75:hover {
+.bg-darken75-on-hover:hover,
+.bg-darken75-on-active.is-active {
   background-color: rgba(0, 0, 0, 0.75) !important;
 }
       
-.hover-bg-lighten5:hover {
+.bg-lighten5-on-hover:hover,
+.bg-lighten5-on-active.is-active {
   background-color: rgba(255, 255, 255, 0.05) !important;
 }
       
-.hover-bg-lighten10:hover {
+.bg-lighten10-on-hover:hover,
+.bg-lighten10-on-active.is-active {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
       
-.hover-bg-lighten25:hover {
+.bg-lighten25-on-hover:hover,
+.bg-lighten25-on-active.is-active {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }
       
-.hover-bg-lighten50:hover {
+.bg-lighten50-on-hover:hover,
+.bg-lighten50-on-active.is-active {
   background-color: rgba(255, 255, 255, 0.50) !important;
 }
       
-.hover-bg-lighten75:hover {
+.bg-lighten75-on-hover:hover,
+.bg-lighten75-on-active.is-active {
   background-color: rgba(255, 255, 255, 0.75) !important;
 }
       
-.hover-bg-white:hover {
+.bg-white-on-hover:hover,
+.bg-white-on-active.is-active {
   background-color: #fff !important;
 }
       
-.hover-bg-black:hover {
+.bg-black-on-hover:hover,
+.bg-black-on-active.is-active {
   background-color: #000 !important;
 }
       
-.hover-bg-transparent:hover {
+.bg-transparent-on-hover:hover,
+.bg-transparent-on-active.is-active {
   background-color: transparent !important;
 }
       /** @endgroup */
 /**
- * Control the color of elements on hover.
+ * Control the color of elements on hover and active states.
  *
  * @group
  * @memberof Colors
  * @example
- * <div class=\'hover-color-red\'>hover-color-red</div>
+ * <div class=\'color-red-on-hover\'>color-red-on-hover</div>
+ * <div class=\'color-red-on-active\'>color-red-on-active (not active)</div>
+ * <div class=\'color-red-on-active is-active\'>color-red-on-active (active)</div>
  */
-.hover-color-gray-dark:hover {
+.color-gray-dark-on-hover:hover,
+.color-gray-dark-on-active.is-active {
   color: #333 !important;
 }
       
-.hover-color-gray:hover {
+.color-gray-on-hover:hover,
+.color-gray-on-active.is-active {
   color: #666 !important;
 }
       
-.hover-color-gray-light:hover {
+.color-gray-light-on-hover:hover,
+.color-gray-light-on-active.is-active {
   color: #ccc !important;
 }
       
-.hover-color-gray-faint:hover {
+.color-gray-faint-on-hover:hover,
+.color-gray-faint-on-active.is-active {
   color: #f0f0f0 !important;
 }
       
-.hover-color-pink-dark:hover {
+.color-pink-dark-on-hover:hover,
+.color-pink-dark-on-active.is-active {
   color: #C8145A !important;
 }
       
-.hover-color-pink:hover {
+.color-pink-on-hover:hover,
+.color-pink-on-active.is-active {
   color: #ff3c96 !important;
 }
       
-.hover-color-pink-light:hover {
+.color-pink-light-on-hover:hover,
+.color-pink-light-on-active.is-active {
   color: #FF88C0 !important;
 }
       
-.hover-color-pink-faint:hover {
+.color-pink-faint-on-hover:hover,
+.color-pink-faint-on-active.is-active {
   color: #ffdbed !important;
 }
       
-.hover-color-red-dark:hover {
+.color-red-dark-on-hover:hover,
+.color-red-dark-on-active.is-active {
   color: #BE0014 !important;
 }
       
-.hover-color-red:hover {
+.color-red-on-hover:hover,
+.color-red-on-active.is-active {
   color: #dc2b28 !important;
 }
       
-.hover-color-red-light:hover {
+.color-red-light-on-hover:hover,
+.color-red-light-on-active.is-active {
   color: #FF8280 !important;
 }
       
-.hover-color-red-faint:hover {
+.color-red-faint-on-hover:hover,
+.color-red-faint-on-active.is-active {
   color: #ffdad9 !important;
 }
       
-.hover-color-orange-dark:hover {
+.color-orange-dark-on-hover:hover,
+.color-orange-dark-on-active.is-active {
   color: #DC4600 !important;
 }
       
-.hover-color-orange:hover {
+.color-orange-on-hover:hover,
+.color-orange-on-active.is-active {
   color: #ff6e00 !important;
 }
       
-.hover-color-orange-light:hover {
+.color-orange-light-on-hover:hover,
+.color-orange-light-on-active.is-active {
   color: #FFA950 !important;
 }
       
-.hover-color-orange-faint:hover {
+.color-orange-faint-on-hover:hover,
+.color-orange-faint-on-active.is-active {
   color: #FFE5CB !important;
 }
       
-.hover-color-yellow-dark:hover {
+.color-yellow-dark-on-hover:hover,
+.color-yellow-dark-on-active.is-active {
   color: #FFBD0A !important;
 }
       
-.hover-color-yellow:hover {
+.color-yellow-on-hover:hover,
+.color-yellow-on-active.is-active {
   color: #f0dc00 !important;
 }
       
-.hover-color-yellow-light:hover {
+.color-yellow-light-on-hover:hover,
+.color-yellow-light-on-active.is-active {
   color: #F0F062 !important;
 }
       
-.hover-color-yellow-faint:hover {
+.color-yellow-faint-on-hover:hover,
+.color-yellow-faint-on-active.is-active {
   color: #fafbd1 !important;
 }
       
-.hover-color-green-dark:hover {
+.color-green-dark-on-hover:hover,
+.color-green-dark-on-active.is-active {
   color: #007532 !important;
 }
       
-.hover-color-green:hover {
+.color-green-on-hover:hover,
+.color-green-on-active.is-active {
   color: #01aa46 !important;
 }
       
-.hover-color-green-light:hover {
+.color-green-light-on-hover:hover,
+.color-green-light-on-active.is-active {
   color: #72C781 !important;
 }
       
-.hover-color-green-faint:hover {
+.color-green-faint-on-hover:hover,
+.color-green-faint-on-active.is-active {
   color: #d4edda !important;
 }
       
-.hover-color-teal-dark:hover {
+.color-teal-dark-on-hover:hover,
+.color-teal-dark-on-active.is-active {
   color: #00626E !important;
 }
       
-.hover-color-teal:hover {
+.color-teal-on-hover:hover,
+.color-teal-on-active.is-active {
   color: #01b5b4 !important;
 }
       
-.hover-color-teal-light:hover {
+.color-teal-light-on-hover:hover,
+.color-teal-light-on-active.is-active {
   color: #50D2D2 !important;
 }
       
-.hover-color-teal-faint:hover {
+.color-teal-faint-on-hover:hover,
+.color-teal-faint-on-active.is-active {
   color: #cbf2f1 !important;
 }
       
-.hover-color-blue-dark:hover {
+.color-blue-dark-on-hover:hover,
+.color-blue-dark-on-active.is-active {
   color: #0014AA !important;
 }
       
-.hover-color-blue:hover {
+.color-blue-on-hover:hover,
+.color-blue-on-active.is-active {
   color: #0065fb !important;
 }
       
-.hover-color-blue-light:hover {
+.color-blue-light-on-hover:hover,
+.color-blue-light-on-active.is-active {
   color: #00B1FF !important;
 }
       
-.hover-color-blue-faint:hover {
+.color-blue-faint-on-hover:hover,
+.color-blue-faint-on-active.is-active {
   color: #bae8ff !important;
 }
       
-.hover-color-purple-dark:hover {
+.color-purple-dark-on-hover:hover,
+.color-purple-dark-on-active.is-active {
   color: #500078 !important;
 }
       
-.hover-color-purple:hover {
+.color-purple-on-hover:hover,
+.color-purple-on-active.is-active {
   color: #8c50c7 !important;
 }
       
-.hover-color-purple-light:hover {
+.color-purple-light-on-hover:hover,
+.color-purple-light-on-active.is-active {
   color: #C299E3 !important;
 }
       
-.hover-color-purple-faint:hover {
+.color-purple-faint-on-hover:hover,
+.color-purple-faint-on-active.is-active {
   color: #ede1f6 !important;
 }
       
-.hover-color-darken5:hover {
+.color-darken5-on-hover:hover,
+.color-darken5-on-active.is-active {
   color: rgba(0, 0, 0, 0.05) !important;
 }
       
-.hover-color-darken10:hover {
+.color-darken10-on-hover:hover,
+.color-darken10-on-active.is-active {
   color: rgba(0, 0, 0, 0.10) !important;
 }
       
-.hover-color-darken25:hover {
+.color-darken25-on-hover:hover,
+.color-darken25-on-active.is-active {
   color: rgba(0, 0, 0, 0.25) !important;
 }
       
-.hover-color-darken50:hover {
+.color-darken50-on-hover:hover,
+.color-darken50-on-active.is-active {
   color: rgba(0, 0, 0, 0.50) !important;
 }
       
-.hover-color-darken75:hover {
+.color-darken75-on-hover:hover,
+.color-darken75-on-active.is-active {
   color: rgba(0, 0, 0, 0.75) !important;
 }
       
-.hover-color-lighten5:hover {
+.color-lighten5-on-hover:hover,
+.color-lighten5-on-active.is-active {
   color: rgba(255, 255, 255, 0.05) !important;
 }
       
-.hover-color-lighten10:hover {
+.color-lighten10-on-hover:hover,
+.color-lighten10-on-active.is-active {
   color: rgba(255, 255, 255, 0.1) !important;
 }
       
-.hover-color-lighten25:hover {
+.color-lighten25-on-hover:hover,
+.color-lighten25-on-active.is-active {
   color: rgba(255, 255, 255, 0.25) !important;
 }
       
-.hover-color-lighten50:hover {
+.color-lighten50-on-hover:hover,
+.color-lighten50-on-active.is-active {
   color: rgba(255, 255, 255, 0.50) !important;
 }
       
-.hover-color-lighten75:hover {
+.color-lighten75-on-hover:hover,
+.color-lighten75-on-active.is-active {
   color: rgba(255, 255, 255, 0.75) !important;
 }
       
-.hover-color-white:hover {
+.color-white-on-hover:hover,
+.color-white-on-active.is-active {
   color: #fff !important;
 }
       
-.hover-color-black:hover {
+.color-black-on-hover:hover,
+.color-black-on-active.is-active {
   color: #000 !important;
 }
       
-.hover-color-transparent:hover {
+.color-transparent-on-hover:hover,
+.color-transparent-on-active.is-active {
   color: transparent !important;
 }
       /** @endgroup */
 /**
- * Set the border color of an element on hover. Depends on a \`border\` or \`border-{direction}\` class.
+ * Control the border color of an element on hover and active states. Depends on a \`border\` or \`border-{direction}\` class.
  *
  * @group
  * @memberof Borders
  * @example
- * <div class=\'border hover-border--red\'>hover-border-red</div>
+ * <div class=\'border border--red-on-hover\'>border--red-on-hover</div>
+ * <div class=\'border border--red-on-active\'>border--red-on-active (not active)</div>
+ * <div class=\'border border--red-on-active is-active\'>border--red-on-active (active)</div>
  */
-.hover-border--gray-dark:hover {
+.border--gray-dark-on-hover:hover,
+.border--gray-dark-on-active.is-active {
   border-color: #333 !important;
 }
       
-.hover-border--gray:hover {
+.border--gray-on-hover:hover,
+.border--gray-on-active.is-active {
   border-color: #666 !important;
 }
       
-.hover-border--gray-light:hover {
+.border--gray-light-on-hover:hover,
+.border--gray-light-on-active.is-active {
   border-color: #ccc !important;
 }
       
-.hover-border--gray-faint:hover {
+.border--gray-faint-on-hover:hover,
+.border--gray-faint-on-active.is-active {
   border-color: #f0f0f0 !important;
 }
       
-.hover-border--pink-dark:hover {
+.border--pink-dark-on-hover:hover,
+.border--pink-dark-on-active.is-active {
   border-color: #C8145A !important;
 }
       
-.hover-border--pink:hover {
+.border--pink-on-hover:hover,
+.border--pink-on-active.is-active {
   border-color: #ff3c96 !important;
 }
       
-.hover-border--pink-light:hover {
+.border--pink-light-on-hover:hover,
+.border--pink-light-on-active.is-active {
   border-color: #FF88C0 !important;
 }
       
-.hover-border--pink-faint:hover {
+.border--pink-faint-on-hover:hover,
+.border--pink-faint-on-active.is-active {
   border-color: #ffdbed !important;
 }
       
-.hover-border--red-dark:hover {
+.border--red-dark-on-hover:hover,
+.border--red-dark-on-active.is-active {
   border-color: #BE0014 !important;
 }
       
-.hover-border--red:hover {
+.border--red-on-hover:hover,
+.border--red-on-active.is-active {
   border-color: #dc2b28 !important;
 }
       
-.hover-border--red-light:hover {
+.border--red-light-on-hover:hover,
+.border--red-light-on-active.is-active {
   border-color: #FF8280 !important;
 }
       
-.hover-border--red-faint:hover {
+.border--red-faint-on-hover:hover,
+.border--red-faint-on-active.is-active {
   border-color: #ffdad9 !important;
 }
       
-.hover-border--orange-dark:hover {
+.border--orange-dark-on-hover:hover,
+.border--orange-dark-on-active.is-active {
   border-color: #DC4600 !important;
 }
       
-.hover-border--orange:hover {
+.border--orange-on-hover:hover,
+.border--orange-on-active.is-active {
   border-color: #ff6e00 !important;
 }
       
-.hover-border--orange-light:hover {
+.border--orange-light-on-hover:hover,
+.border--orange-light-on-active.is-active {
   border-color: #FFA950 !important;
 }
       
-.hover-border--orange-faint:hover {
+.border--orange-faint-on-hover:hover,
+.border--orange-faint-on-active.is-active {
   border-color: #FFE5CB !important;
 }
       
-.hover-border--yellow-dark:hover {
+.border--yellow-dark-on-hover:hover,
+.border--yellow-dark-on-active.is-active {
   border-color: #FFBD0A !important;
 }
       
-.hover-border--yellow:hover {
+.border--yellow-on-hover:hover,
+.border--yellow-on-active.is-active {
   border-color: #f0dc00 !important;
 }
       
-.hover-border--yellow-light:hover {
+.border--yellow-light-on-hover:hover,
+.border--yellow-light-on-active.is-active {
   border-color: #F0F062 !important;
 }
       
-.hover-border--yellow-faint:hover {
+.border--yellow-faint-on-hover:hover,
+.border--yellow-faint-on-active.is-active {
   border-color: #fafbd1 !important;
 }
       
-.hover-border--green-dark:hover {
+.border--green-dark-on-hover:hover,
+.border--green-dark-on-active.is-active {
   border-color: #007532 !important;
 }
       
-.hover-border--green:hover {
+.border--green-on-hover:hover,
+.border--green-on-active.is-active {
   border-color: #01aa46 !important;
 }
       
-.hover-border--green-light:hover {
+.border--green-light-on-hover:hover,
+.border--green-light-on-active.is-active {
   border-color: #72C781 !important;
 }
       
-.hover-border--green-faint:hover {
+.border--green-faint-on-hover:hover,
+.border--green-faint-on-active.is-active {
   border-color: #d4edda !important;
 }
       
-.hover-border--teal-dark:hover {
+.border--teal-dark-on-hover:hover,
+.border--teal-dark-on-active.is-active {
   border-color: #00626E !important;
 }
       
-.hover-border--teal:hover {
+.border--teal-on-hover:hover,
+.border--teal-on-active.is-active {
   border-color: #01b5b4 !important;
 }
       
-.hover-border--teal-light:hover {
+.border--teal-light-on-hover:hover,
+.border--teal-light-on-active.is-active {
   border-color: #50D2D2 !important;
 }
       
-.hover-border--teal-faint:hover {
+.border--teal-faint-on-hover:hover,
+.border--teal-faint-on-active.is-active {
   border-color: #cbf2f1 !important;
 }
       
-.hover-border--blue-dark:hover {
+.border--blue-dark-on-hover:hover,
+.border--blue-dark-on-active.is-active {
   border-color: #0014AA !important;
 }
       
-.hover-border--blue:hover {
+.border--blue-on-hover:hover,
+.border--blue-on-active.is-active {
   border-color: #0065fb !important;
 }
       
-.hover-border--blue-light:hover {
+.border--blue-light-on-hover:hover,
+.border--blue-light-on-active.is-active {
   border-color: #00B1FF !important;
 }
       
-.hover-border--blue-faint:hover {
+.border--blue-faint-on-hover:hover,
+.border--blue-faint-on-active.is-active {
   border-color: #bae8ff !important;
 }
       
-.hover-border--purple-dark:hover {
+.border--purple-dark-on-hover:hover,
+.border--purple-dark-on-active.is-active {
   border-color: #500078 !important;
 }
       
-.hover-border--purple:hover {
+.border--purple-on-hover:hover,
+.border--purple-on-active.is-active {
   border-color: #8c50c7 !important;
 }
       
-.hover-border--purple-light:hover {
+.border--purple-light-on-hover:hover,
+.border--purple-light-on-active.is-active {
   border-color: #C299E3 !important;
 }
       
-.hover-border--purple-faint:hover {
+.border--purple-faint-on-hover:hover,
+.border--purple-faint-on-active.is-active {
   border-color: #ede1f6 !important;
 }
       
-.hover-border--darken5:hover {
+.border--darken5-on-hover:hover,
+.border--darken5-on-active.is-active {
   border-color: rgba(0, 0, 0, 0.05) !important;
 }
       
-.hover-border--darken10:hover {
+.border--darken10-on-hover:hover,
+.border--darken10-on-active.is-active {
   border-color: rgba(0, 0, 0, 0.10) !important;
 }
       
-.hover-border--darken25:hover {
+.border--darken25-on-hover:hover,
+.border--darken25-on-active.is-active {
   border-color: rgba(0, 0, 0, 0.25) !important;
 }
       
-.hover-border--darken50:hover {
+.border--darken50-on-hover:hover,
+.border--darken50-on-active.is-active {
   border-color: rgba(0, 0, 0, 0.50) !important;
 }
       
-.hover-border--darken75:hover {
+.border--darken75-on-hover:hover,
+.border--darken75-on-active.is-active {
   border-color: rgba(0, 0, 0, 0.75) !important;
 }
       
-.hover-border--lighten5:hover {
+.border--lighten5-on-hover:hover,
+.border--lighten5-on-active.is-active {
   border-color: rgba(255, 255, 255, 0.05) !important;
 }
       
-.hover-border--lighten10:hover {
+.border--lighten10-on-hover:hover,
+.border--lighten10-on-active.is-active {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
       
-.hover-border--lighten25:hover {
+.border--lighten25-on-hover:hover,
+.border--lighten25-on-active.is-active {
   border-color: rgba(255, 255, 255, 0.25) !important;
 }
       
-.hover-border--lighten50:hover {
+.border--lighten50-on-hover:hover,
+.border--lighten50-on-active.is-active {
   border-color: rgba(255, 255, 255, 0.50) !important;
 }
       
-.hover-border--lighten75:hover {
+.border--lighten75-on-hover:hover,
+.border--lighten75-on-active.is-active {
   border-color: rgba(255, 255, 255, 0.75) !important;
 }
       
-.hover-border--white:hover {
+.border--white-on-hover:hover,
+.border--white-on-active.is-active {
   border-color: #fff !important;
 }
       
-.hover-border--black:hover {
+.border--black-on-hover:hover,
+.border--black-on-active.is-active {
   border-color: #000 !important;
 }
       
-.hover-border--transparent:hover {
+.border--transparent-on-hover:hover,
+.border--transparent-on-active.is-active {
   border-color: transparent !important;
 }
       /** @endgroup */"
@@ -6966,7 +7141,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--gray:hover,
-.btn--stroke--is-active.btn--gray {
+.btn--stroke.btn--gray.is-active {
   color: #000;
 }
       
@@ -6976,7 +7151,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--gray-light:hover,
-.btn--stroke--is-active.btn--gray-light {
+.btn--stroke.btn--gray-light.is-active {
   color: undefined;
 }
       
@@ -6986,7 +7161,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--gray-faint:hover,
-.btn--stroke--is-active.btn--gray-faint {
+.btn--stroke.btn--gray-faint.is-active {
   color: undefined;
 }
       
@@ -6996,7 +7171,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--pink:hover,
-.btn--stroke--is-active.btn--pink {
+.btn--stroke.btn--pink.is-active {
   color: undefined;
 }
       
@@ -7006,7 +7181,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--pink-light:hover,
-.btn--stroke--is-active.btn--pink-light {
+.btn--stroke.btn--pink-light.is-active {
   color: pink;
 }
       
@@ -7016,7 +7191,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--pink-faint:hover,
-.btn--stroke--is-active.btn--pink-faint {
+.btn--stroke.btn--pink-faint.is-active {
   color: undefined;
 }
       
@@ -7026,7 +7201,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--red:hover,
-.btn--stroke--is-active.btn--red {
+.btn--stroke.btn--red.is-active {
   color: undefined;
 }
       
@@ -7036,7 +7211,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--red-light:hover,
-.btn--stroke--is-active.btn--red-light {
+.btn--stroke.btn--red-light.is-active {
   color: #fff;
 }
       
@@ -7046,7 +7221,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--red-faint:hover,
-.btn--stroke--is-active.btn--red-faint {
+.btn--stroke.btn--red-faint.is-active {
   color: undefined;
 }
       
@@ -7056,7 +7231,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--orange:hover,
-.btn--stroke--is-active.btn--orange {
+.btn--stroke.btn--orange.is-active {
   color: undefined;
 }
       
@@ -7066,7 +7241,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--orange-light:hover,
-.btn--stroke--is-active.btn--orange-light {
+.btn--stroke.btn--orange-light.is-active {
   color: undefined;
 }
       
@@ -7076,7 +7251,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--orange-faint:hover,
-.btn--stroke--is-active.btn--orange-faint {
+.btn--stroke.btn--orange-faint.is-active {
   color: undefined;
 }
       
@@ -7086,7 +7261,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--yellow:hover,
-.btn--stroke--is-active.btn--yellow {
+.btn--stroke.btn--yellow.is-active {
   color: undefined;
 }
       
@@ -7096,7 +7271,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--yellow-light:hover,
-.btn--stroke--is-active.btn--yellow-light {
+.btn--stroke.btn--yellow-light.is-active {
   color: undefined;
 }
       
@@ -7106,7 +7281,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--yellow-faint:hover,
-.btn--stroke--is-active.btn--yellow-faint {
+.btn--stroke.btn--yellow-faint.is-active {
   color: undefined;
 }
       
@@ -7116,7 +7291,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--green:hover,
-.btn--stroke--is-active.btn--green {
+.btn--stroke.btn--green.is-active {
   color: undefined;
 }
       
@@ -7126,7 +7301,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--green-light:hover,
-.btn--stroke--is-active.btn--green-light {
+.btn--stroke.btn--green-light.is-active {
   color: undefined;
 }
       
@@ -7136,7 +7311,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--green-faint:hover,
-.btn--stroke--is-active.btn--green-faint {
+.btn--stroke.btn--green-faint.is-active {
   color: undefined;
 }
       
@@ -7146,7 +7321,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--teal:hover,
-.btn--stroke--is-active.btn--teal {
+.btn--stroke.btn--teal.is-active {
   color: undefined;
 }
       
@@ -7156,7 +7331,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--teal-light:hover,
-.btn--stroke--is-active.btn--teal-light {
+.btn--stroke.btn--teal-light.is-active {
   color: undefined;
 }
       
@@ -7166,7 +7341,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--teal-faint:hover,
-.btn--stroke--is-active.btn--teal-faint {
+.btn--stroke.btn--teal-faint.is-active {
   color: undefined;
 }
       
@@ -7176,7 +7351,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--blue:hover,
-.btn--stroke--is-active.btn--blue {
+.btn--stroke.btn--blue.is-active {
   color: undefined;
 }
       
@@ -7186,7 +7361,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--blue-light:hover,
-.btn--stroke--is-active.btn--blue-light {
+.btn--stroke.btn--blue-light.is-active {
   color: undefined;
 }
       
@@ -7196,7 +7371,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--blue-faint:hover,
-.btn--stroke--is-active.btn--blue-faint {
+.btn--stroke.btn--blue-faint.is-active {
   color: undefined;
 }
       
@@ -7206,7 +7381,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--purple:hover,
-.btn--stroke--is-active.btn--purple {
+.btn--stroke.btn--purple.is-active {
   color: undefined;
 }
       
@@ -7216,7 +7391,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--purple-light:hover,
-.btn--stroke--is-active.btn--purple-light {
+.btn--stroke.btn--purple-light.is-active {
   color: undefined;
 }
       
@@ -7226,7 +7401,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--purple-faint:hover,
-.btn--stroke--is-active.btn--purple-faint {
+.btn--stroke.btn--purple-faint.is-active {
   color: undefined;
 }
       
@@ -7236,7 +7411,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--darken5:hover,
-.btn--stroke--is-active.btn--darken5 {
+.btn--stroke.btn--darken5.is-active {
   color: undefined;
 }
       
@@ -7246,7 +7421,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--darken10:hover,
-.btn--stroke--is-active.btn--darken10 {
+.btn--stroke.btn--darken10.is-active {
   color: undefined;
 }
       
@@ -7256,7 +7431,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--darken25:hover,
-.btn--stroke--is-active.btn--darken25 {
+.btn--stroke.btn--darken25.is-active {
   color: undefined;
 }
       
@@ -7266,7 +7441,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--darken50:hover,
-.btn--stroke--is-active.btn--darken50 {
+.btn--stroke.btn--darken50.is-active {
   color: undefined;
 }
       
@@ -7276,7 +7451,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--darken75:hover,
-.btn--stroke--is-active.btn--darken75 {
+.btn--stroke.btn--darken75.is-active {
   color: #000;
 }
       
@@ -7286,7 +7461,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--lighten5:hover,
-.btn--stroke--is-active.btn--lighten5 {
+.btn--stroke.btn--lighten5.is-active {
   color: undefined;
 }
       
@@ -7296,7 +7471,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--lighten10:hover,
-.btn--stroke--is-active.btn--lighten10 {
+.btn--stroke.btn--lighten10.is-active {
   color: undefined;
 }
       
@@ -7306,7 +7481,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--lighten25:hover,
-.btn--stroke--is-active.btn--lighten25 {
+.btn--stroke.btn--lighten25.is-active {
   color: undefined;
 }
       
@@ -7316,7 +7491,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--lighten50:hover,
-.btn--stroke--is-active.btn--lighten50 {
+.btn--stroke.btn--lighten50.is-active {
   color: undefined;
 }
       
@@ -7326,7 +7501,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--lighten75:hover,
-.btn--stroke--is-active.btn--lighten75 {
+.btn--stroke.btn--lighten75.is-active {
   color: #fff;
 }
       
@@ -7336,7 +7511,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--white:hover,
-.btn--stroke--is-active.btn--white {
+.btn--stroke.btn--white.is-active {
   color: undefined;
 }
       
@@ -7346,7 +7521,7 @@ exports[`buildColorVariants handles custom variables 1`] = `
 }
 
 .btn--stroke.btn--transparent:hover,
-.btn--stroke--is-active.btn--transparent {
+.btn--stroke.btn--transparent.is-active {
   color: undefined;
 }
       
@@ -12521,692 +12696,867 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Add shadows to elements on hover.
+ * Add shadows to elements on hover and active states.
  *
  * @group
  * @memberof Shadows
  * @example
- * <div class=\'hover-shadow-darken25\'>hover-shadow-darken25</div>
+ * <div class=\'shadow-darken25-on-hover\'>shadow-darken25-on-hover</div>
+ * <div class=\'shadow-darken25-on-active\'>shadow-darken25-on-active (not active)</div>
+ * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
  */
-.hover-shadow-darken5:hover {
+.shadow-darken5-on-hover:hover,
+.shadow-darken5-on-active.is-active {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-bold-darken5:hover {
+.shadow-bold-darken5-on-hover:hover,
+.shadow-bold-darken5-on-active.is-active {
   box-shadow: 0 0 30px 6px undefined !important;
 }
       
-.hover-shadow-darken10:hover {
+.shadow-darken10-on-hover:hover,
+.shadow-darken10-on-active.is-active {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-bold-darken10:hover {
+.shadow-bold-darken10-on-hover:hover,
+.shadow-bold-darken10-on-active.is-active {
   box-shadow: 0 0 30px 6px undefined !important;
 }
       
-.hover-shadow-darken25:hover {
+.shadow-darken25-on-hover:hover,
+.shadow-darken25-on-active.is-active {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-bold-darken25:hover {
+.shadow-bold-darken25-on-hover:hover,
+.shadow-bold-darken25-on-active.is-active {
   box-shadow: 0 0 30px 6px undefined !important;
 }
       
-.hover-shadow-darken50:hover {
+.shadow-darken50-on-hover:hover,
+.shadow-darken50-on-active.is-active {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-bold-darken50:hover {
+.shadow-bold-darken50-on-hover:hover,
+.shadow-bold-darken50-on-active.is-active {
   box-shadow: 0 0 30px 6px undefined !important;
 }
       
-.hover-shadow-darken75:hover {
+.shadow-darken75-on-hover:hover,
+.shadow-darken75-on-active.is-active {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-bold-darken75:hover {
+.shadow-bold-darken75-on-hover:hover,
+.shadow-bold-darken75-on-active.is-active {
   box-shadow: 0 0 30px 6px undefined !important;
 }
       
-.hover-shadow-lighten5:hover {
+.shadow-lighten5-on-hover:hover,
+.shadow-lighten5-on-active.is-active {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-bold-lighten5:hover {
+.shadow-bold-lighten5-on-hover:hover,
+.shadow-bold-lighten5-on-active.is-active {
   box-shadow: 0 0 30px 6px undefined !important;
 }
       
-.hover-shadow-lighten10:hover {
+.shadow-lighten10-on-hover:hover,
+.shadow-lighten10-on-active.is-active {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-bold-lighten10:hover {
+.shadow-bold-lighten10-on-hover:hover,
+.shadow-bold-lighten10-on-active.is-active {
   box-shadow: 0 0 30px 6px undefined !important;
 }
       
-.hover-shadow-lighten25:hover {
+.shadow-lighten25-on-hover:hover,
+.shadow-lighten25-on-active.is-active {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-bold-lighten25:hover {
+.shadow-bold-lighten25-on-hover:hover,
+.shadow-bold-lighten25-on-active.is-active {
   box-shadow: 0 0 30px 6px undefined !important;
 }
       
-.hover-shadow-lighten50:hover {
+.shadow-lighten50-on-hover:hover,
+.shadow-lighten50-on-active.is-active {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-bold-lighten50:hover {
+.shadow-bold-lighten50-on-hover:hover,
+.shadow-bold-lighten50-on-active.is-active {
   box-shadow: 0 0 30px 6px undefined !important;
 }
       
-.hover-shadow-lighten75:hover {
+.shadow-lighten75-on-hover:hover,
+.shadow-lighten75-on-active.is-active {
   box-shadow: 0 0 10px 2px undefined !important;
 }
-.hover-shadow-bold-lighten75:hover {
+.shadow-bold-lighten75-on-hover:hover,
+.shadow-bold-lighten75-on-active.is-active {
   box-shadow: 0 0 30px 6px undefined !important;
 }
       /** @endgroup */
 /**
- * Control the background of elements on hover.
+ * Control the background of elements on hover and active states.
  *
  * @group
  * @memberof Colors
  * @example
- * <div class=\'hover-bg-darken25\'>hover-bg-darken25</div>
+ * <div class=\'bg-darken25-on-hover\'>bg-darken25-on-hover</div>
+ * <div class=\'bg-darken25-on-active\'>bg-darken25-on-active (not active)</div>
+ * <div class=\'bg-darken25-on-active is-active\'>bg-darken25-on-active (active)</div>
  */
-.hover-bg-gray-dark:hover {
+.bg-gray-dark-on-hover:hover,
+.bg-gray-dark-on-active.is-active {
   background-color: #000 !important;
 }
       
-.hover-bg-gray:hover {
+.bg-gray-on-hover:hover,
+.bg-gray-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-gray-light:hover {
+.bg-gray-light-on-hover:hover,
+.bg-gray-light-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-gray-faint:hover {
+.bg-gray-faint-on-hover:hover,
+.bg-gray-faint-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-pink-dark:hover {
+.bg-pink-dark-on-hover:hover,
+.bg-pink-dark-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-pink:hover {
+.bg-pink-on-hover:hover,
+.bg-pink-on-active.is-active {
   background-color: pink !important;
 }
       
-.hover-bg-pink-light:hover {
+.bg-pink-light-on-hover:hover,
+.bg-pink-light-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-pink-faint:hover {
+.bg-pink-faint-on-hover:hover,
+.bg-pink-faint-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-red-dark:hover {
+.bg-red-dark-on-hover:hover,
+.bg-red-dark-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-red:hover {
+.bg-red-on-hover:hover,
+.bg-red-on-active.is-active {
   background-color: #fff !important;
 }
       
-.hover-bg-red-light:hover {
+.bg-red-light-on-hover:hover,
+.bg-red-light-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-red-faint:hover {
+.bg-red-faint-on-hover:hover,
+.bg-red-faint-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-orange-dark:hover {
+.bg-orange-dark-on-hover:hover,
+.bg-orange-dark-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-orange:hover {
+.bg-orange-on-hover:hover,
+.bg-orange-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-orange-light:hover {
+.bg-orange-light-on-hover:hover,
+.bg-orange-light-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-orange-faint:hover {
+.bg-orange-faint-on-hover:hover,
+.bg-orange-faint-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-yellow-dark:hover {
+.bg-yellow-dark-on-hover:hover,
+.bg-yellow-dark-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-yellow:hover {
+.bg-yellow-on-hover:hover,
+.bg-yellow-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-yellow-light:hover {
+.bg-yellow-light-on-hover:hover,
+.bg-yellow-light-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-yellow-faint:hover {
+.bg-yellow-faint-on-hover:hover,
+.bg-yellow-faint-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-green-dark:hover {
+.bg-green-dark-on-hover:hover,
+.bg-green-dark-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-green:hover {
+.bg-green-on-hover:hover,
+.bg-green-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-green-light:hover {
+.bg-green-light-on-hover:hover,
+.bg-green-light-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-green-faint:hover {
+.bg-green-faint-on-hover:hover,
+.bg-green-faint-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-teal-dark:hover {
+.bg-teal-dark-on-hover:hover,
+.bg-teal-dark-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-teal:hover {
+.bg-teal-on-hover:hover,
+.bg-teal-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-teal-light:hover {
+.bg-teal-light-on-hover:hover,
+.bg-teal-light-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-teal-faint:hover {
+.bg-teal-faint-on-hover:hover,
+.bg-teal-faint-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-blue-dark:hover {
+.bg-blue-dark-on-hover:hover,
+.bg-blue-dark-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-blue:hover {
+.bg-blue-on-hover:hover,
+.bg-blue-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-blue-light:hover {
+.bg-blue-light-on-hover:hover,
+.bg-blue-light-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-blue-faint:hover {
+.bg-blue-faint-on-hover:hover,
+.bg-blue-faint-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-purple-dark:hover {
+.bg-purple-dark-on-hover:hover,
+.bg-purple-dark-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-purple:hover {
+.bg-purple-on-hover:hover,
+.bg-purple-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-purple-light:hover {
+.bg-purple-light-on-hover:hover,
+.bg-purple-light-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-purple-faint:hover {
+.bg-purple-faint-on-hover:hover,
+.bg-purple-faint-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-darken5:hover {
+.bg-darken5-on-hover:hover,
+.bg-darken5-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-darken10:hover {
+.bg-darken10-on-hover:hover,
+.bg-darken10-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-darken25:hover {
+.bg-darken25-on-hover:hover,
+.bg-darken25-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-darken50:hover {
+.bg-darken50-on-hover:hover,
+.bg-darken50-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-darken75:hover {
+.bg-darken75-on-hover:hover,
+.bg-darken75-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-lighten5:hover {
+.bg-lighten5-on-hover:hover,
+.bg-lighten5-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-lighten10:hover {
+.bg-lighten10-on-hover:hover,
+.bg-lighten10-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-lighten25:hover {
+.bg-lighten25-on-hover:hover,
+.bg-lighten25-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-lighten50:hover {
+.bg-lighten50-on-hover:hover,
+.bg-lighten50-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-lighten75:hover {
+.bg-lighten75-on-hover:hover,
+.bg-lighten75-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-white:hover {
+.bg-white-on-hover:hover,
+.bg-white-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-black:hover {
+.bg-black-on-hover:hover,
+.bg-black-on-active.is-active {
   background-color: undefined !important;
 }
       
-.hover-bg-transparent:hover {
+.bg-transparent-on-hover:hover,
+.bg-transparent-on-active.is-active {
   background-color: undefined !important;
 }
       /** @endgroup */
 /**
- * Control the color of elements on hover.
+ * Control the color of elements on hover and active states.
  *
  * @group
  * @memberof Colors
  * @example
- * <div class=\'hover-color-red\'>hover-color-red</div>
+ * <div class=\'color-red-on-hover\'>color-red-on-hover</div>
+ * <div class=\'color-red-on-active\'>color-red-on-active (not active)</div>
+ * <div class=\'color-red-on-active is-active\'>color-red-on-active (active)</div>
  */
-.hover-color-gray-dark:hover {
+.color-gray-dark-on-hover:hover,
+.color-gray-dark-on-active.is-active {
   color: #000 !important;
 }
       
-.hover-color-gray:hover {
+.color-gray-on-hover:hover,
+.color-gray-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-gray-light:hover {
+.color-gray-light-on-hover:hover,
+.color-gray-light-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-gray-faint:hover {
+.color-gray-faint-on-hover:hover,
+.color-gray-faint-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-pink-dark:hover {
+.color-pink-dark-on-hover:hover,
+.color-pink-dark-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-pink:hover {
+.color-pink-on-hover:hover,
+.color-pink-on-active.is-active {
   color: pink !important;
 }
       
-.hover-color-pink-light:hover {
+.color-pink-light-on-hover:hover,
+.color-pink-light-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-pink-faint:hover {
+.color-pink-faint-on-hover:hover,
+.color-pink-faint-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-red-dark:hover {
+.color-red-dark-on-hover:hover,
+.color-red-dark-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-red:hover {
+.color-red-on-hover:hover,
+.color-red-on-active.is-active {
   color: #fff !important;
 }
       
-.hover-color-red-light:hover {
+.color-red-light-on-hover:hover,
+.color-red-light-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-red-faint:hover {
+.color-red-faint-on-hover:hover,
+.color-red-faint-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-orange-dark:hover {
+.color-orange-dark-on-hover:hover,
+.color-orange-dark-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-orange:hover {
+.color-orange-on-hover:hover,
+.color-orange-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-orange-light:hover {
+.color-orange-light-on-hover:hover,
+.color-orange-light-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-orange-faint:hover {
+.color-orange-faint-on-hover:hover,
+.color-orange-faint-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-yellow-dark:hover {
+.color-yellow-dark-on-hover:hover,
+.color-yellow-dark-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-yellow:hover {
+.color-yellow-on-hover:hover,
+.color-yellow-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-yellow-light:hover {
+.color-yellow-light-on-hover:hover,
+.color-yellow-light-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-yellow-faint:hover {
+.color-yellow-faint-on-hover:hover,
+.color-yellow-faint-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-green-dark:hover {
+.color-green-dark-on-hover:hover,
+.color-green-dark-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-green:hover {
+.color-green-on-hover:hover,
+.color-green-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-green-light:hover {
+.color-green-light-on-hover:hover,
+.color-green-light-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-green-faint:hover {
+.color-green-faint-on-hover:hover,
+.color-green-faint-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-teal-dark:hover {
+.color-teal-dark-on-hover:hover,
+.color-teal-dark-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-teal:hover {
+.color-teal-on-hover:hover,
+.color-teal-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-teal-light:hover {
+.color-teal-light-on-hover:hover,
+.color-teal-light-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-teal-faint:hover {
+.color-teal-faint-on-hover:hover,
+.color-teal-faint-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-blue-dark:hover {
+.color-blue-dark-on-hover:hover,
+.color-blue-dark-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-blue:hover {
+.color-blue-on-hover:hover,
+.color-blue-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-blue-light:hover {
+.color-blue-light-on-hover:hover,
+.color-blue-light-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-blue-faint:hover {
+.color-blue-faint-on-hover:hover,
+.color-blue-faint-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-purple-dark:hover {
+.color-purple-dark-on-hover:hover,
+.color-purple-dark-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-purple:hover {
+.color-purple-on-hover:hover,
+.color-purple-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-purple-light:hover {
+.color-purple-light-on-hover:hover,
+.color-purple-light-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-purple-faint:hover {
+.color-purple-faint-on-hover:hover,
+.color-purple-faint-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-darken5:hover {
+.color-darken5-on-hover:hover,
+.color-darken5-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-darken10:hover {
+.color-darken10-on-hover:hover,
+.color-darken10-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-darken25:hover {
+.color-darken25-on-hover:hover,
+.color-darken25-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-darken50:hover {
+.color-darken50-on-hover:hover,
+.color-darken50-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-darken75:hover {
+.color-darken75-on-hover:hover,
+.color-darken75-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-lighten5:hover {
+.color-lighten5-on-hover:hover,
+.color-lighten5-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-lighten10:hover {
+.color-lighten10-on-hover:hover,
+.color-lighten10-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-lighten25:hover {
+.color-lighten25-on-hover:hover,
+.color-lighten25-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-lighten50:hover {
+.color-lighten50-on-hover:hover,
+.color-lighten50-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-lighten75:hover {
+.color-lighten75-on-hover:hover,
+.color-lighten75-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-white:hover {
+.color-white-on-hover:hover,
+.color-white-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-black:hover {
+.color-black-on-hover:hover,
+.color-black-on-active.is-active {
   color: undefined !important;
 }
       
-.hover-color-transparent:hover {
+.color-transparent-on-hover:hover,
+.color-transparent-on-active.is-active {
   color: undefined !important;
 }
       /** @endgroup */
 /**
- * Set the border color of an element on hover. Depends on a \`border\` or \`border-{direction}\` class.
+ * Control the border color of an element on hover and active states. Depends on a \`border\` or \`border-{direction}\` class.
  *
  * @group
  * @memberof Borders
  * @example
- * <div class=\'border hover-border--red\'>hover-border-red</div>
+ * <div class=\'border border--red-on-hover\'>border--red-on-hover</div>
+ * <div class=\'border border--red-on-active\'>border--red-on-active (not active)</div>
+ * <div class=\'border border--red-on-active is-active\'>border--red-on-active (active)</div>
  */
-.hover-border--gray-dark:hover {
+.border--gray-dark-on-hover:hover,
+.border--gray-dark-on-active.is-active {
   border-color: #000 !important;
 }
       
-.hover-border--gray:hover {
+.border--gray-on-hover:hover,
+.border--gray-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--gray-light:hover {
+.border--gray-light-on-hover:hover,
+.border--gray-light-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--gray-faint:hover {
+.border--gray-faint-on-hover:hover,
+.border--gray-faint-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--pink-dark:hover {
+.border--pink-dark-on-hover:hover,
+.border--pink-dark-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--pink:hover {
+.border--pink-on-hover:hover,
+.border--pink-on-active.is-active {
   border-color: pink !important;
 }
       
-.hover-border--pink-light:hover {
+.border--pink-light-on-hover:hover,
+.border--pink-light-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--pink-faint:hover {
+.border--pink-faint-on-hover:hover,
+.border--pink-faint-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--red-dark:hover {
+.border--red-dark-on-hover:hover,
+.border--red-dark-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--red:hover {
+.border--red-on-hover:hover,
+.border--red-on-active.is-active {
   border-color: #fff !important;
 }
       
-.hover-border--red-light:hover {
+.border--red-light-on-hover:hover,
+.border--red-light-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--red-faint:hover {
+.border--red-faint-on-hover:hover,
+.border--red-faint-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--orange-dark:hover {
+.border--orange-dark-on-hover:hover,
+.border--orange-dark-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--orange:hover {
+.border--orange-on-hover:hover,
+.border--orange-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--orange-light:hover {
+.border--orange-light-on-hover:hover,
+.border--orange-light-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--orange-faint:hover {
+.border--orange-faint-on-hover:hover,
+.border--orange-faint-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--yellow-dark:hover {
+.border--yellow-dark-on-hover:hover,
+.border--yellow-dark-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--yellow:hover {
+.border--yellow-on-hover:hover,
+.border--yellow-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--yellow-light:hover {
+.border--yellow-light-on-hover:hover,
+.border--yellow-light-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--yellow-faint:hover {
+.border--yellow-faint-on-hover:hover,
+.border--yellow-faint-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--green-dark:hover {
+.border--green-dark-on-hover:hover,
+.border--green-dark-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--green:hover {
+.border--green-on-hover:hover,
+.border--green-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--green-light:hover {
+.border--green-light-on-hover:hover,
+.border--green-light-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--green-faint:hover {
+.border--green-faint-on-hover:hover,
+.border--green-faint-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--teal-dark:hover {
+.border--teal-dark-on-hover:hover,
+.border--teal-dark-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--teal:hover {
+.border--teal-on-hover:hover,
+.border--teal-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--teal-light:hover {
+.border--teal-light-on-hover:hover,
+.border--teal-light-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--teal-faint:hover {
+.border--teal-faint-on-hover:hover,
+.border--teal-faint-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--blue-dark:hover {
+.border--blue-dark-on-hover:hover,
+.border--blue-dark-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--blue:hover {
+.border--blue-on-hover:hover,
+.border--blue-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--blue-light:hover {
+.border--blue-light-on-hover:hover,
+.border--blue-light-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--blue-faint:hover {
+.border--blue-faint-on-hover:hover,
+.border--blue-faint-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--purple-dark:hover {
+.border--purple-dark-on-hover:hover,
+.border--purple-dark-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--purple:hover {
+.border--purple-on-hover:hover,
+.border--purple-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--purple-light:hover {
+.border--purple-light-on-hover:hover,
+.border--purple-light-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--purple-faint:hover {
+.border--purple-faint-on-hover:hover,
+.border--purple-faint-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--darken5:hover {
+.border--darken5-on-hover:hover,
+.border--darken5-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--darken10:hover {
+.border--darken10-on-hover:hover,
+.border--darken10-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--darken25:hover {
+.border--darken25-on-hover:hover,
+.border--darken25-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--darken50:hover {
+.border--darken50-on-hover:hover,
+.border--darken50-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--darken75:hover {
+.border--darken75-on-hover:hover,
+.border--darken75-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--lighten5:hover {
+.border--lighten5-on-hover:hover,
+.border--lighten5-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--lighten10:hover {
+.border--lighten10-on-hover:hover,
+.border--lighten10-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--lighten25:hover {
+.border--lighten25-on-hover:hover,
+.border--lighten25-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--lighten50:hover {
+.border--lighten50-on-hover:hover,
+.border--lighten50-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--lighten75:hover {
+.border--lighten75-on-hover:hover,
+.border--lighten75-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--white:hover {
+.border--white-on-hover:hover,
+.border--white-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--black:hover {
+.border--black-on-hover:hover,
+.border--black-on-active.is-active {
   border-color: undefined !important;
 }
       
-.hover-border--transparent:hover {
+.border--transparent-on-hover:hover,
+.border--transparent-on-active.is-active {
   border-color: undefined !important;
 }
       /** @endgroup */"
@@ -13278,17 +13628,21 @@ exports[`buildColorVariants with granular colors 1`] = `
 }
       
 /**
- * Add shadows to elements on hover.
+ * Add shadows to elements on hover and active states.
  *
  * @group
  * @memberof Shadows
  * @example
- * <div class=\'hover-shadow-darken25\'>hover-shadow-darken25</div>
+ * <div class=\'shadow-darken25-on-hover\'>shadow-darken25-on-hover</div>
+ * <div class=\'shadow-darken25-on-active\'>shadow-darken25-on-active (not active)</div>
+ * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
  */
-.hover-shadow-lighten50:hover {
+.shadow-lighten50-on-hover:hover,
+.shadow-lighten50-on-active.is-active {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.50) !important;
 }
-.hover-shadow-bold-lighten50:hover {
+.shadow-bold-lighten50-on-hover:hover,
+.shadow-bold-lighten50-on-active.is-active {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.50) !important;
 }
       /** @endgroup */"
@@ -13331,7 +13685,7 @@ exports[`buildColorVariants with universal colors 1`] = `
 }
 
 .btn--stroke.btn--red:hover,
-.btn--stroke--is-active.btn--red {
+.btn--stroke.btn--red.is-active {
   color: #BE0014;
 }
       
@@ -13341,7 +13695,7 @@ exports[`buildColorVariants with universal colors 1`] = `
 }
 
 .btn--stroke.btn--teal:hover,
-.btn--stroke--is-active.btn--teal {
+.btn--stroke.btn--teal.is-active {
   color: #00626E;
 }
       
@@ -13351,7 +13705,7 @@ exports[`buildColorVariants with universal colors 1`] = `
 }
 
 .btn--stroke.btn--green-light:hover,
-.btn--stroke--is-active.btn--green-light {
+.btn--stroke.btn--green-light.is-active {
   color: #01aa46;
 }
       
@@ -13792,82 +14146,102 @@ input:checked + .toggle--active-green-light {
 }
       /** @endgroup */
 /**
- * Add shadows to elements on hover.
+ * Add shadows to elements on hover and active states.
  *
  * @group
  * @memberof Shadows
  * @example
- * <div class=\'hover-shadow-darken25\'>hover-shadow-darken25</div>
+ * <div class=\'shadow-darken25-on-hover\'>shadow-darken25-on-hover</div>
+ * <div class=\'shadow-darken25-on-active\'>shadow-darken25-on-active (not active)</div>
+ * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
  *//** @endgroup */
 /**
- * Control the background of elements on hover.
+ * Control the background of elements on hover and active states.
  *
  * @group
  * @memberof Colors
  * @example
- * <div class=\'hover-bg-darken25\'>hover-bg-darken25</div>
+ * <div class=\'bg-darken25-on-hover\'>bg-darken25-on-hover</div>
+ * <div class=\'bg-darken25-on-active\'>bg-darken25-on-active (not active)</div>
+ * <div class=\'bg-darken25-on-active is-active\'>bg-darken25-on-active (active)</div>
  */
-.hover-bg-red:hover {
+.bg-red-on-hover:hover,
+.bg-red-on-active.is-active {
   background-color: #dc2b28 !important;
 }
       
-.hover-bg-teal:hover {
+.bg-teal-on-hover:hover,
+.bg-teal-on-active.is-active {
   background-color: #01b5b4 !important;
 }
       
-.hover-bg-teal-dark:hover {
+.bg-teal-dark-on-hover:hover,
+.bg-teal-dark-on-active.is-active {
   background-color: #00626E !important;
 }
       
-.hover-bg-green-light:hover {
+.bg-green-light-on-hover:hover,
+.bg-green-light-on-active.is-active {
   background-color: #72C781 !important;
 }
       /** @endgroup */
 /**
- * Control the color of elements on hover.
+ * Control the color of elements on hover and active states.
  *
  * @group
  * @memberof Colors
  * @example
- * <div class=\'hover-color-red\'>hover-color-red</div>
+ * <div class=\'color-red-on-hover\'>color-red-on-hover</div>
+ * <div class=\'color-red-on-active\'>color-red-on-active (not active)</div>
+ * <div class=\'color-red-on-active is-active\'>color-red-on-active (active)</div>
  */
-.hover-color-red:hover {
+.color-red-on-hover:hover,
+.color-red-on-active.is-active {
   color: #dc2b28 !important;
 }
       
-.hover-color-teal:hover {
+.color-teal-on-hover:hover,
+.color-teal-on-active.is-active {
   color: #01b5b4 !important;
 }
       
-.hover-color-teal-dark:hover {
+.color-teal-dark-on-hover:hover,
+.color-teal-dark-on-active.is-active {
   color: #00626E !important;
 }
       
-.hover-color-green-light:hover {
+.color-green-light-on-hover:hover,
+.color-green-light-on-active.is-active {
   color: #72C781 !important;
 }
       /** @endgroup */
 /**
- * Set the border color of an element on hover. Depends on a \`border\` or \`border-{direction}\` class.
+ * Control the border color of an element on hover and active states. Depends on a \`border\` or \`border-{direction}\` class.
  *
  * @group
  * @memberof Borders
  * @example
- * <div class=\'border hover-border--red\'>hover-border-red</div>
+ * <div class=\'border border--red-on-hover\'>border--red-on-hover</div>
+ * <div class=\'border border--red-on-active\'>border--red-on-active (not active)</div>
+ * <div class=\'border border--red-on-active is-active\'>border--red-on-active (active)</div>
  */
-.hover-border--red:hover {
+.border--red-on-hover:hover,
+.border--red-on-active.is-active {
   border-color: #dc2b28 !important;
 }
       
-.hover-border--teal:hover {
+.border--teal-on-hover:hover,
+.border--teal-on-active.is-active {
   border-color: #01b5b4 !important;
 }
       
-.hover-border--teal-dark:hover {
+.border--teal-dark-on-hover:hover,
+.border--teal-dark-on-active.is-active {
   border-color: #00626E !important;
 }
       
-.hover-border--green-light:hover {
+.border--green-light-on-hover:hover,
+.border--green-light-on-active.is-active {
   border-color: #72C781 !important;
 }
       /** @endgroup */"
