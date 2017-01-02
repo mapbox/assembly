@@ -542,6 +542,146 @@
 }
 
 /**
+ * Margins on top & bottom. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * @group
+ * @example
+ * <div class='my24 bg-darken10'>my24</div>
+ * @memberof Margins
+ */
+.my0 { margin-top: 0 !important; margin-bottom: 0 !important; }
+.my3 { margin-top: 3px !important; margin-bottom: 3px !important; }
+.my6 { margin-top: 6px !important; margin-bottom: 6px !important; }
+.my12 { margin-top: 12px !important; margin-bottom: 12px !important; }
+.my18 { margin-top: 18px !important; margin-bottom: 18px !important; }
+.my24 { margin-top: 24px !important; margin-bottom: 24px !important; }
+.my48 { margin-top: 48px !important; margin-bottom: 48px !important; }
+.my72 { margin-top: 72px !important; margin-bottom: 72px !important; }
+.my96 { margin-top: 96px !important; margin-bottom: 96px !important; }
+.my120 { margin-top: 120px !important; margin-bottom: 120px !important; }
+.my180 { margin-top: 180px !important; margin-bottom: 180px !important; }
+.my240 { margin-top: 240px !important; margin-bottom: 240px !important; }
+.my480 { margin-top: 480px !important; margin-bottom: 480px !important; }
+/** @endgroup */
+
+@media (--m-screen) {
+  .my0-mm { margin-top: 0 !important; margin-bottom: 0 !important; }
+  .my3-mm { margin-top: 3px !important; margin-bottom: 3px !important; }
+  .my6-mm { margin-top: 6px !important; margin-bottom: 6px !important; }
+  .my12-mm { margin-top: 12px !important; margin-bottom: 12px !important; }
+  .my18-mm { margin-top: 18px !important; margin-bottom: 18px !important; }
+  .my24-mm { margin-top: 24px !important; margin-bottom: 24px !important; }
+  .my48-mm { margin-top: 48px !important; margin-bottom: 48px !important; }
+  .my72-mm { margin-top: 72px !important; margin-bottom: 72px !important; }
+  .my96-mm { margin-top: 96px !important; margin-bottom: 96px !important; }
+  .my120-mm { margin-top: 120px !important; margin-bottom: 120px !important; }
+  .my180-mm { margin-top: 180px !important; margin-bottom: 180px !important; }
+  .my240-mm { margin-top: 240px !important; margin-bottom: 240px !important; }
+  .my480-mm { margin-top: 480px !important; margin-bottom: 480px !important; }
+}
+
+@media (--l-screen) {
+  .my0-ml { margin-top: 0 !important; margin-bottom: 0 !important; }
+  .my3-ml { margin-top: 3px !important; margin-bottom: 3px !important; }
+  .my6-ml { margin-top: 6px !important; margin-bottom: 6px !important; }
+  .my12-ml { margin-top: 12px !important; margin-bottom: 12px !important; }
+  .my18-ml { margin-top: 18px !important; margin-bottom: 18px !important; }
+  .my24-ml { margin-top: 24px !important; margin-bottom: 24px !important; }
+  .my48-ml { margin-top: 48px !important; margin-bottom: 48px !important; }
+  .my72-ml { margin-top: 72px !important; margin-bottom: 72px !important; }
+  .my96-ml { margin-top: 96px !important; margin-bottom: 96px !important; }
+  .my120-ml { margin-top: 120px !important; margin-bottom: 120px !important; }
+  .my180-ml { margin-top: 180px !important; margin-bottom: 180px !important; }
+  .my240-ml { margin-top: 240px !important; margin-bottom: 240px !important; }
+  .my480-ml { margin-top: 480px !important; margin-bottom: 480px !important; }
+}
+
+@media (--xl-screen) {
+  .my0-mxl { margin-top: 0 !important; margin-bottom: 0 !important; }
+  .my3-mxl { margin-top: 3px !important; margin-bottom: 3px !important; }
+  .my6-mxl { margin-top: 6px !important; margin-bottom: 6px !important; }
+  .my12-mxl { margin-top: 12px !important; margin-bottom: 12px !important; }
+  .my18-mxl { margin-top: 18px !important; margin-bottom: 18px !important; }
+  .my24-mxl { margin-top: 24px !important; margin-bottom: 24px !important; }
+  .my48-mxl { margin-top: 48px !important; margin-bottom: 48px !important; }
+  .my72-mxl { margin-top: 72px !important; margin-bottom: 72px !important; }
+  .my96-mxl { margin-top: 96px !important; margin-bottom: 96px !important; }
+  .my120-mxl { margin-top: 120px !important; margin-bottom: 120px !important; }
+  .my180-mxl { margin-top: 180px !important; margin-bottom: 180px !important; }
+  .my240-mxl { margin-top: 240px !important; margin-bottom: 240px !important; }
+  .my480-mxl { margin-top: 480px !important; margin-bottom: 480px !important; }
+}
+
+/**
+ * Margins on left & right. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * @group
+ * @example
+ * <div class='mx24 bg-darken10'>mx24</div>
+ * @memberof Margins
+ */
+.mx0 { margin-left: 0 !important; margin-right: 0 !important; }
+.mx3 { margin-left: 3px !important; margin-right: 3px !important; }
+.mx6 { margin-left: 6px !important; margin-right: 6px !important; }
+.mx12 { margin-left: 12px !important; margin-right: 12px !important; }
+.mx18 { margin-left: 18px !important; margin-right: 18px !important; }
+.mx24 { margin-left: 24px !important; margin-right: 24px !important; }
+.mx48 { margin-left: 48px !important; margin-right: 48px !important; }
+.mx72 { margin-left: 72px !important; margin-right: 72px !important; }
+.mx96 { margin-left: 96px !important; margin-right: 96px !important; }
+.mx120 { margin-left: 120px !important; margin-right: 120px !important; }
+.mx180 { margin-left: 180px !important; margin-right: 180px !important; }
+.mx240 { margin-left: 240px !important; margin-right: 240px !important; }
+.mx480 { margin-left: 480px !important; margin-right: 480px !important; }
+/** @endgroup */
+
+@media (--m-screen) {
+  .mx0-mm { margin-left: 0 !important; margin-right: 0 !important; }
+  .mx3-mm { margin-left: 3px !important; margin-right: 3px !important; }
+  .mx6-mm { margin-left: 6px !important; margin-right: 6px !important; }
+  .mx12-mm { margin-left: 12px !important; margin-right: 12px !important; }
+  .mx18-mm { margin-left: 18px !important; margin-right: 18px !important; }
+  .mx24-mm { margin-left: 24px !important; margin-right: 24px !important; }
+  .mx48-mm { margin-left: 48px !important; margin-right: 48px !important; }
+  .mx72-mm { margin-left: 72px !important; margin-right: 72px !important; }
+  .mx96-mm { margin-left: 96px !important; margin-right: 96px !important; }
+  .mx120-mm { margin-left: 120px !important; margin-right: 120px !important; }
+  .mx180-mm { margin-left: 180px !important; margin-right: 180px !important; }
+  .mx240-mm { margin-left: 240px !important; margin-right: 240px !important; }
+  .mx480-mm { margin-left: 480px !important; margin-right: 480px !important; }
+}
+
+@media (--l-screen) {
+  .mx0-ml { margin-left: 0 !important; margin-right: 0 !important; }
+  .mx3-ml { margin-left: 3px !important; margin-right: 3px !important; }
+  .mx6-ml { margin-left: 6px !important; margin-right: 6px !important; }
+  .mx12-ml { margin-left: 12px !important; margin-right: 12px !important; }
+  .mx18-ml { margin-left: 18px !important; margin-right: 18px !important; }
+  .mx24-ml { margin-left: 24px !important; margin-right: 24px !important; }
+  .mx48-ml { margin-left: 48px !important; margin-right: 48px !important; }
+  .mx72-ml { margin-left: 72px !important; margin-right: 72px !important; }
+  .mx96-ml { margin-left: 96px !important; margin-right: 96px !important; }
+  .mx120-ml { margin-left: 120px !important; margin-right: 120px !important; }
+  .mx180-ml { margin-left: 180px !important; margin-right: 180px !important; }
+  .mx240-ml { margin-left: 240px !important; margin-right: 240px !important; }
+  .mx480-ml { margin-left: 480px !important; margin-right: 480px !important; }
+}
+
+@media (--xl-screen) {
+  .mx0-mxl { margin-left: 0 !important; margin-right: 0 !important; }
+  .mx3-mxl { margin-left: 3px !important; margin-right: 3px !important; }
+  .mx6-mxl { margin-left: 6px !important; margin-right: 6px !important; }
+  .mx12-mxl { margin-left: 12px !important; margin-right: 12px !important; }
+  .mx18-mxl { margin-left: 18px !important; margin-right: 18px !important; }
+  .mx24-mxl { margin-left: 24px !important; margin-right: 24px !important; }
+  .mx48-mxl { margin-left: 48px !important; margin-right: 48px !important; }
+  .mx72-mxl { margin-left: 72px !important; margin-right: 72px !important; }
+  .mx96-mxl { margin-left: 96px !important; margin-right: 96px !important; }
+  .mx120-mxl { margin-left: 120px !important; margin-right: 120px !important; }
+  .mx180-mxl { margin-left: 180px !important; margin-right: 180px !important; }
+  .mx240-mxl { margin-left: 240px !important; margin-right: 240px !important; }
+  .mx480-mxl { margin-left: 480px !important; margin-right: 480px !important; }
+}
+
+/**
  * Margins on top. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  * @group
  * @example
@@ -891,6 +1031,114 @@
   .p48-mxl { padding: 48px !important; }
   .p72-mxl { padding: 72px !important; }
   .p96-mxl { padding: 96px !important; }
+}
+
+/**
+ * Padding on top & bottom. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * @group
+ * @memberof Padding
+ * @example
+ * <div class='py24 bg-darken10'>py24</div>
+ */
+.py0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+.py3 { padding-top: 3px !important; padding-bottom: 3px !important; }
+.py6 { padding-top: 6px !important; padding-bottom: 6px !important; }
+.py12 { padding-top: 12px !important; padding-bottom: 12px !important; }
+.py18 { padding-top: 18px !important; padding-bottom: 18px !important; }
+.py24 { padding-top: 24px !important; padding-bottom: 24px !important; }
+.py48 { padding-top: 48px !important; padding-bottom: 48px !important; }
+.py72 { padding-top: 72px !important; padding-bottom: 72px !important; }
+.py96 { padding-top: 96px !important; padding-bottom: 96px !important; }
+/** @endgroup */
+
+@media (--m-screen) {
+  .py0-mm { padding-top: 0 !important; padding-bottom: 0 !important; }
+  .py3-mm { padding-top: 3px !important; padding-bottom: 3px !important; }
+  .py6-mm { padding-top: 6px !important; padding-bottom: 6px !important; }
+  .py12-mm { padding-top: 12px !important; padding-bottom: 12px !important; }
+  .py18-mm { padding-top: 18px !important; padding-bottom: 18px !important; }
+  .py24-mm { padding-top: 24px !important; padding-bottom: 24px !important; }
+  .py48-mm { padding-top: 48px !important; padding-bottom: 48px !important; }
+  .py72-mm { padding-top: 72px !important; padding-bottom: 72px !important; }
+  .py96-mm { padding-top: 96px !important; padding-bottom: 96px !important; }
+}
+
+@media (--l-screen) {
+  .py0-ml { padding-top: 0 !important; padding-bottom: 0 !important; }
+  .py3-ml { padding-top: 3px !important; padding-bottom: 3px !important; }
+  .py6-ml { padding-top: 6px !important; padding-bottom: 6px !important; }
+  .py12-ml { padding-top: 12px !important; padding-bottom: 12px !important; }
+  .py18-ml { padding-top: 18px !important; padding-bottom: 18px !important; }
+  .py24-ml { padding-top: 24px !important; padding-bottom: 24px !important; }
+  .py48-ml { padding-top: 48px !important; padding-bottom: 48px !important; }
+  .py72-ml { padding-top: 72px !important; padding-bottom: 72px !important; }
+  .py96-ml { padding-top: 96px !important; padding-bottom: 96px !important; }
+}
+
+@media (--xl-screen) {
+  .py0-mxl { padding-top: 0 !important; padding-bottom: 0 !important; }
+  .py3-mxl { padding-top: 3px !important; padding-bottom: 3px !important; }
+  .py6-mxl { padding-top: 6px !important; padding-bottom: 6px !important; }
+  .py12-mxl { padding-top: 12px !important; padding-bottom: 12px !important; }
+  .py18-mxl { padding-top: 18px !important; padding-bottom: 18px !important; }
+  .py24-mxl { padding-top: 24px !important; padding-bottom: 24px !important; }
+  .py48-mxl { padding-top: 48px !important; padding-bottom: 48px !important; }
+  .py72-mxl { padding-top: 72px !important; padding-bottom: 72px !important; }
+  .py96-mxl { padding-top: 96px !important; padding-bottom: 96px !important; }
+}
+
+/**
+ * Padding on left & right. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * @group
+ * @memberof Padding
+ * @example
+ * <div class='px24 bg-darken10'>px24</div>
+ */
+.px0 { padding-left: 0 !important; padding-right: 0 !important; }
+.px3 { padding-left: 3px !important; padding-right: 3px !important; }
+.px6 { padding-left: 6px !important; padding-right: 6px !important; }
+.px12 { padding-left: 12px !important; padding-right: 12px !important; }
+.px18 { padding-left: 18px !important; padding-right: 18px !important; }
+.px24 { padding-left: 24px !important; padding-right: 24px !important; }
+.px48 { padding-left: 48px !important; padding-right: 48px !important; }
+.px72 { padding-left: 72px !important; padding-right: 72px !important; }
+.px96 { padding-left: 96px !important; padding-right: 96px !important; }
+/** @endgroup */
+
+@media (--m-screen) {
+  .px0-mm { padding-left: 0 !important; padding-right: 0 !important; }
+  .px3-mm { padding-left: 3px !important; padding-right: 3px !important; }
+  .px6-mm { padding-left: 6px !important; padding-right: 6px !important; }
+  .px12-mm { padding-left: 12px !important; padding-right: 12px !important; }
+  .px18-mm { padding-left: 18px !important; padding-right: 18px !important; }
+  .px24-mm { padding-left: 24px !important; padding-right: 24px !important; }
+  .px48-mm { padding-left: 48px !important; padding-right: 48px !important; }
+  .px72-mm { padding-left: 72px !important; padding-right: 72px !important; }
+  .px96-mm { padding-left: 96px !important; padding-right: 96px !important; }
+}
+
+@media (--l-screen) {
+  .px0-ml { padding-left: 0 !important; padding-right: 0 !important; }
+  .px3-ml { padding-left: 3px !important; padding-right: 3px !important; }
+  .px6-ml { padding-left: 6px !important; padding-right: 6px !important; }
+  .px12-ml { padding-left: 12px !important; padding-right: 12px !important; }
+  .px18-ml { padding-left: 18px !important; padding-right: 18px !important; }
+  .px24-ml { padding-left: 24px !important; padding-right: 24px !important; }
+  .px48-ml { padding-left: 48px !important; padding-right: 48px !important; }
+  .px72-ml { padding-left: 72px !important; padding-right: 72px !important; }
+  .px96-ml { padding-left: 96px !important; padding-right: 96px !important; }
+}
+
+@media (--xl-screen) {
+  .px0-mxl { padding-left: 0 !important; padding-right: 0 !important; }
+  .px3-mxl { padding-left: 3px !important; padding-right: 3px !important; }
+  .px6-mxl { padding-left: 6px !important; padding-right: 6px !important; }
+  .px12-mxl { padding-left: 12px !important; padding-right: 12px !important; }
+  .px18-mxl { padding-left: 18px !important; padding-right: 18px !important; }
+  .px24-mxl { padding-left: 24px !important; padding-right: 24px !important; }
+  .px48-mxl { padding-left: 48px !important; padding-right: 48px !important; }
+  .px72-mxl { padding-left: 72px !important; padding-right: 72px !important; }
+  .px96-mxl { padding-left: 96px !important; padding-right: 96px !important; }
 }
 
 /**
