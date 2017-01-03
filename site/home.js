@@ -2,7 +2,7 @@ import React from 'react';
 const defaultMediaQueries = require('../src/media-queries');
 
 const headIncludes = `<link href="https://www.mapbox.com/assembly/assembly.css" rel="stylesheet"
-<script src="https://www.mapbox.com/assembly/assembly-svg.js"></script>`;
+<script src="https://www.mapbox.com/assembly/assembly.js"></script>`;
 
 class Home extends React.Component {
   render() {

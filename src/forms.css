@@ -28,7 +28,8 @@
   border: 1px solid var(--blue);
   border-radius: var(--border-radius);
   display: inline-block;
-  transition: background-color var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: background-color var(--transition),
+    border-color var(--transition);
 }
 
 .input:hover,
@@ -36,12 +37,6 @@
 .input:focus,
 .textarea:focus {
   border-color: var(--blue-dark);
-  outline: none;
-}
-
-.input:focus,
-.textarea:focus {
-  box-shadow: inset 0 0 0 2px var(--neutral25);
 }
 
 .input::placeholder,
@@ -201,7 +196,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 4px 30px 4px 12px; /* plus arrow, minus border */
   cursor: pointer;
   display: inline-block;
-  transition: box-shadow var(--transition), color var(--transition), background-color var(--transition);
+  transition: color var(--transition),
+    background-color var(--transition);
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
@@ -415,7 +411,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /* range thumb */
 .range::-webkit-slider-thumb {
-  transition: box-shadow var(--transition), background var(--transition);
+  transition: background var(--transition);
   appearance: none;
   box-shadow: 0;
   width: 20px;
@@ -428,7 +424,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .range::-moz-range-thumb {
-  transition: box-shadow var(--transition), background var(--transition);
+  transition: background var(--transition);
   width: 17px;
   height: 17px;
   border-radius: 50%;
@@ -438,7 +434,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .range::-ms-thumb {
-  transition: box-shadow var(--transition), background var(--transition);
+  transition: background var(--transition);
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -485,33 +481,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 15px;
 }
 
-/* Range focus */
-.range:focus {
-  outline: none;
-}
-.range:focus::-webkit-slider-thumb {
-  transform: box-shadow var(--transition);
-  box-shadow: 0 0 0 3px var(--neutral45);
-}
-.range:focus::-ms-fill-upper {
-  transform: box-shadow var(--transition);
-  box-shadow: 0 0 0 3px var(--neutral45);
-}
-.range:focus::-ms-fill-lower {
-  transform: box-shadow var(--transition);
-  box-shadow: 0 0 0 3px var(--neutral45);
-}
-.range:focus::-ms-thumb {
-  transform: box-shadow var(--transition);
-  box-shadow: 0 0 0 3px var(--neutral45);
-}
-.range:focus::-moz-range-thumb {
-  transform: box-shadow var(--transition);
-  box-shadow: 0 0 0 3px var(--neutral45);
-}
-
-.range::-moz-focus-outer { border: 0; }
-
 /*
  * When a range element has the `disabled` attribute, it will be styled accordingly.
  *
@@ -557,7 +526,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
-  transition: box-shadow var(--transition), color var(--transition), background-color var(--transition);
+  transition: color var(--transition),
+    background-color var(--transition);
 }
 
 /**
@@ -710,7 +680,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-style: solid;
   border-color: currentColor;
   color: var(--blue);
-  transition: box-shadow var(--transition), color var(--transition), background-color var(--transition), border-color var(--transition);
+  transition: color var(--transition),
+    background-color var(--transition),
+    border-color var(--transition);
 }
 
 .switch::after {
@@ -783,7 +755,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-radius: 13px;
   text-decoration: none !important; /* prevent underline when inside .prose */
   background-color: transparent;
-  transition: color var(--transition), background-color var(--transition), box-shadow var(--transition);
+  transition: color var(--transition),
+    background-color var(--transition);
 }
 /** @endgroup */
 
@@ -826,16 +799,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .checkbox--s-label,
 .radio--s-label {
   top: 0;
-}
-
-/* Shared focus states */
-input:focus + .checkbox,
-input:focus + .radio,
-input:focus + .switch,
-input:focus + .toggle,
-.select:focus {
-  outline: 0;
-  box-shadow: 0 0 0 3px var(--neutral45);
 }
 
 input:disabled {

@@ -2,7 +2,7 @@
 
 const path = require('path');
 const buildCss = require('./build-css');
-const buildSvgSprite = require('./build-svg-sprite');
+const buildJs = require('./build-js');
 const copyFonts = require('./copy-fonts');
 
 function buildUserAssets(outdir, options) {
@@ -12,11 +12,11 @@ function buildUserAssets(outdir, options) {
     outfile: path.join(outdir, 'assembly.css')
   }, options);
 
-  const svgOutfile = path.join(outdir, 'assembly-svg.js');
+  const jsOutfile = path.join(outdir, 'assembly.js');
 
   return Promise.all([
     buildCss(buildCssOptions),
-    buildSvgSprite(svgOutfile),
+    buildJs(jsOutfile),
     copyFonts(outdir)
   ]);
 }

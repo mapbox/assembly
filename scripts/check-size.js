@@ -7,19 +7,19 @@ const child_process = require('child_process');
 const prettyBytes = require('pretty-bytes');
 const gzipSize = require('gzip-size');
 
-child_process.execSync('node_modules/.bin/npm-run-all --parallel build:svg build:css');
+child_process.execSync('node_modules/.bin/npm-run-all --parallel build:js build:css');
 
 const readCss = pify(fs.readFile)(path.join(__dirname, '../dist/assembly.min.css'));
-const readSvg = pify(fs.readFile)(path.join(__dirname, '../dist/assembly-svg.js'));
+const readJs = pify(fs.readFile)(path.join(__dirname, '../dist/assembly.js'));
 
-Promise.all([readCss, readSvg]).then((data) => {
+Promise.all([readCss, readJs]).then((data) => {
   const cssBuffer = data[0];
-  const svgBuffer = data[1];
+  const jsBuffer = data[1];
   const cssSize = prettyBytes(Buffer.byteLength(cssBuffer, 'utf8'));
-  const svgSize = prettyBytes(Buffer.byteLength(svgBuffer, 'utf8'));
+  const jsSize = prettyBytes(Buffer.byteLength(jsBuffer, 'utf8'));
   const cssGzipSize = prettyBytes(gzipSize.sync(cssBuffer));
-  const svgGzipSize = prettyBytes(gzipSize.sync(svgBuffer));
+  const jsGzipSize = prettyBytes(gzipSize.sync(jsBuffer));
 
   console.log(`CSS: ${cssSize} (minified) => ${cssGzipSize} (gzipped)`);
-  console.log(`SVG: ${svgSize} => ${svgGzipSize} (gzipped)`);
+  console.log(`SVG: ${jsSize} => ${jsGzipSize} (gzipped)`);
 });

@@ -2,12 +2,9 @@
 
 const svgstore = require('svgstore');
 const fs = require('fs');
-const _ = require('lodash');
 const pify = require('pify');
-const mkdirp = require('mkdirp');
 const path = require('path');
 const SVGO = require('svgo');
-const timelog = require('./timelog');
 
 const svgDir = path.join(__dirname, '../src/svgs');
 const svgo = new SVGO({
@@ -20,12 +17,16 @@ const svgo = new SVGO({
   ]
 });
 
-const baseJsTemplate = _.template(
-`(function() { var svgDocument = (new DOMParser()).parseFromString('<%= svgSprite %>', 'text/xml');
-document.addEventListener("DOMContentLoaded", function() {
-  document.body.appendChild(svgDocument.getElementById("svg-symbols"));
-});}());`
-);
+const baseJsTemplate = (options) => {
+  return `
+    (function () {
+      var svgDocument = (new DOMParser()).parseFromString('${options.svgSprite}', 'text/xml');
+      document.addEventListener('DOMContentLoaded', function () {
+        document.body.appendChild(svgDocument.getElementById('svg-symbols'));
+      });
+    }());
+  `;
+};
 
 function addFileToSprite(filename, sprite) {
   return new Promise((resolve, reject) => {
@@ -56,10 +57,7 @@ function addFileToSprite(filename, sprite) {
   });
 }
 
-function buildSvgSprite(outfile) {
-  outfile = outfile || path.join(__dirname, '../dist/assembly-svg.js');
-
-  timelog('Building SVGs');
+function buildSvgLoader() {
   const sprite = svgstore();
 
   return pify(fs.readdir)(svgDir)
@@ -75,17 +73,8 @@ function buildSvgSprite(outfile) {
 
       const cleanedSprite = sprite.toString().replace(/\n/g, '');
       const jsContent = baseJsTemplate({ svgSprite: cleanedSprite });
-      return pify(mkdirp)(path.dirname(outfile)).then(() => {
-        return pify(fs.writeFile)(outfile, jsContent);
-      });
-    })
-    .then(() => {
-      timelog('Done building SVGs');
+      return jsContent;
     });
 }
 
-module.exports = buildSvgSprite;
-
-if (require.main === module) {
-  buildSvgSprite();
-}
+module.exports = buildSvgLoader;

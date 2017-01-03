@@ -1,5 +1,5 @@
 /**
- * Assembly uses an SVG icon sprite. To load the sprite, you must must include [assembly-svg.js](https://www.mapbox.com/assembly/assembly-svg.js) on your page.
+ * Assembly uses an SVG icon sprite. To load the sprite, you must must include [assembly.js](https://www.mapbox.com/assembly/assembly.js) on your page.
  *
  * @section Icons
  */
@@ -7,7 +7,7 @@
 /**
  * The `icon` class must be appled to an `<svg>` element.
  * Inside the `<svg>`, insert a `<use>` element whose `xlink:href` attribute
- * points to an icon loaded by `assembly-svg.js`. All icons are referenced
+ * points to an icon loaded by `assembly.js`. All icons are referenced
  * by the string `#icon-{name}`.
  *
  * To see a list of all available icons, visit [the icons page](/assembly/icons).
