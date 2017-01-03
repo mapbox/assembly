@@ -725,22 +725,9 @@ textarea {
 }
 
 /* Clear bottom margins if element is last in container */
-.prose h1:last-child,
-.prose h2:last-child,
-.prose h3:last-child,
-.prose h4:last-child,
-.prose h5:last-child,
-.prose h6:last-child,
-.prose p:last-child,
-.prose pre:last-child,
-.prose ol:last-child,
-.prose ul:last-child,
-.prose ol ol:last-child,
-.prose ul ul:last-child,
-.prose ol ol ol:last-child,
-.prose ul ul ul:last-child,
-.prose img:last-child,
-.prose video:last-child {
+/* stylelint-disable selector-no-universal */
+.prose *:last-child {
   margin-bottom: 0;
 }
+/* stylelint-enable selector-no-universal */
 /* end prose-specific rules */
