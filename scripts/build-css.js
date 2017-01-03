@@ -52,11 +52,12 @@ const assemblyCssFiles = [
  *
  * @param {Object} options
  * @param {string} [options.outfile] - Path to which built CSS should be written.
+ * @param {Array<string>} [options.files] - Paths to stylesheets that should be
+ *   processed and appended.
  * @param {Object} [options.variables] - Variables to override the defaults.
  * @param {Object} [options.mediaQueries] - Media queries to override the defaults.
- * @param {Object} [options.colorVariants] - Color variant config to override
- * @param {Object} [options.quiet] - Suppress logs
- *   the defaults. See `build-color-variants.js` for details.
+ * @param {Object} [options.colorVariants] - Color variant config to override.
+ * @param {Object} [options.quiet] - Suppress logs.
  * @return {Promise<void>}
  */
 function buildCss(options) {

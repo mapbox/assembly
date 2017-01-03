@@ -1,14 +1,92 @@
-Assembly
----
+# Assembly
 
 A CSS framework that makes the hard parts of building anything on the web easy. We define the hard parts as: managing class specificity, designing cross-browser form components that work well with each other, creating a harmonious typographic scale, maintaining a baseline grid, and keeping responsive designs simple.
 
 [![Build Status](https://travis-ci.com/mapbox/assembly.svg?token=FB2dZNVWaGo68KZnwz9M&branch=mb-pages)](https://travis-ci.com/mapbox/assembly)
 
-Browser support
----
+## Browser support
 
 Assembly targets IE 11+ and other modern browsers.
+
+## Custom Builds
+
+Assembly exposes a JS module for creating custom builds. Why might you want to create a custom build?
+
+- You want to customize variables (like colors and font stacks) or media queries.
+- You want to append extra stylesheets that also use Assembly's variables and media queries.
+- You want to reduce file-size by picking and choosing the color variants you need.
+
+### buildUserAssets(outdir[, options])
+
+Returns a Promise that resolves when all assets have been written to `outdir`.
+
+```js
+const Assembly = require('assembly');
+buildUserAssets('path/to/my/outdir', myOptions)
+  .then(() => /* something */)
+  .catch((err) => /* handle error */);
+```
+
+**Options**, all of which are optional:
+
+- **`files`**: An array of file paths to stylesheets you would like to append to `assembly.css`. These will be processed through Assembly's PostCSS pipeline.
+- **`variables`**: An object whose properties will override and add to `src/variables.json`. Use this option to change or add variables.
+  These variables are accessible in any stylesheets you append via the CSS custom properties syntax, e.g. `var(--property-name)`.
+- **`mediaQueries`**: An object whose properties will override and add to `src/mediaQueries.json`. Use this option to change or add media queries.
+  These media queries are accessible in any stylesheets you append via the CSS custom media query syntax, e.g. `@media --media-query-name`.
+- **`colorVariants`**: An object or array specifying the color variants you would like added to `assembly.css`. This is documented in detail below.
+- **`quiet`**: Suppress logs.
+
+### `colorVariants` option
+
+If the `colorVariants` value is an array, it must be an array of color names corresponding to variables. All components will have color variants generated for all colors in the array.
+
+The following configuration specifies an array of universal colors. All components will have these (and *only these*) color variants.
+
+```json
+[
+  "red",
+  "teal",
+  "teal-dark",
+  "green-light"
+]
+```
+
+If the `colorVariants` value is an object, each property value must be an array of color names corresponding to variables. The property names designate which component each color array applies to:
+  - `universal`: These colors apply to all components that are not otherwise specified.
+  - `buttonFill`: `*-dark` colors will not be used.
+  - `buttonStroke`: `*-dark` colors will not be used.
+  - `inputTextarea`: `*-dark` colors will not be used.
+  - `selectFill`: `*-dark` colors will not be used.
+  - `selectStroke`: `*-dark` colors will not be used.
+  - `checkbox`: `*-dark` colors will not be used.
+  - `radio`: `*-dark` colors will not be used.
+  - `switch`: `*-dark` colors will not be used.
+  - `toggle`: `*-dark` colors will not be used.
+  - `range`: `*-dark` colors will not be used.
+  - `color`
+  - `background`
+  - `link`: `*-dark` colors will not be used.
+  - `border`
+  - `hoverShadow`: Only `lighten*` and `darken*` colors will be used.
+  - `hoverBackground`
+  - `hoverColor`
+  - `hoverBorder`
+
+The following configuration specifies colors for individual components. In this configuration, every component not specified will have the `universal` color variants; specified components will have their specified color variants; and `switch` and `range` components will have no color variants (only the default will be available).
+
+```json
+{
+  "universal": ["lighten50", "lighten25", "gray"],
+  "buttonFill": ["green", "purple"],
+  "selectFill": ["green"],
+  "background": ["orange", "yellow", "pink"],
+  "link": ["orange"],
+  "hoverShadow": ["lighten50"],
+  "switch": [],
+  "range": []
+}
+```
 
 ## Development principles
 
