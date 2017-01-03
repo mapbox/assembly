@@ -30,51 +30,51 @@ class Home extends React.Component {
         </h2>
         <div className='grid grid--gut24'>
           <div className='col col--6'>
-          <h3 className='mt24 mb6 txt-bold'>Comprehensive</h3>
-          <p>
-            Assembly includes everything you need to fully implement responsive, colorful web pages, web apps, dashboards, and more.
-          </p>
-          </div>
-          <div className='col col--6'>
-          <h3 className='mt24 mb6 txt-bold'>Flexible</h3>
-          <p>
-            The core of Assembly is a set of composable, atomic utility classes covering most of your styling needs.
-          </p>
-          </div>
-          <div className='col col--6'>
-          <h3 className='mt24 mb6 txt-bold'>Practical</h3>
-          <p>
-            Complete reliance on atomic design can slow down development, and foster inconsistency and bad UX. Assembly inserts the right opinions in the right places.
-          </p>
-          </div>
-          <div className='col col--6'>
-          <h3 className='mt24 mb6 txt-bold'>Customizable</h3>
-          <p>
-            Assembly exposes its build process in a public API. Customize colors, fonts, and media queries; append your own stylesheets; and specify color variants to reduce file size.
-          </p>
+            <h3 className='mt24 mb6 txt-bold'>Comprehensive</h3>
+            <p>
+              Assembly includes everything you need to fully implement responsive, colorful web pages, web apps, dashboards, and more.
+            </p>
+            </div>
+            <div className='col col--6'>
+            <h3 className='mt24 mb6 txt-bold'>Flexible</h3>
+            <p>
+              The core of Assembly is a set of composable, atomic utility classes covering most of your styling needs.
+            </p>
+            </div>
+            <div className='col col--6'>
+            <h3 className='mt24 mb6 txt-bold'>Practical</h3>
+            <p>
+              Complete reliance on atomic design can slow down development and foster inconsistency and bad UX. Assembly inserts the right opinions in the right places.
+            </p>
+            </div>
+            <div className='col col--6'>
+            <h3 className='mt24 mb6 txt-bold'>Customizable</h3>
+            <p>
+              Assembly exposes its build process in a public API. Customize colors, fonts, and media queries; append your own stylesheets; and specify color variants to reduce file size.
+            </p>
           </div>
         </div>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l uppercase txt-bold'>
           Overview
         </h2>
         <h3 className='mt24 txt-bold'>
-          6px baseline grid
+          <code className='code'>6px</code> baseline grid
         </h3>
         <p className='mt6'>
-          Every element in Assembly is designed according to a 6px baseline grid, even buttons and forms. Baseline grids don't just make your site look and feel better, they also make development more convenient: all the pieces naturally fit together without fiddling with line height or vertical alignment.
+          Every element in Assembly is designed according to a <code className='code'>6px</code> baseline grid, even buttons and form components. Baseline grids don't just make your site look and feel better: they also make development more convenient. All the pieces naturally fit together without fiddling with line height or vertical alignment.
         </p>
         <h3 className='mt24 txt-bold'>
           No default styling for semantic elements
         </h3>
         <p className='mt6'>
-          Assembly's reset allows you to use semantically appropriate HTML without battling browser-default styles.
-          And its CSS rules are built to behave the same regardless of which element they're applied to.
-        </p>
-        <p className='mt6'>
-          For example, you should use <code className='code'>{'<h3>'}</code> for third-level headings, not because you want a certain style.
+          You should use <code className='code'>{'<h3>'}</code> for third-level headings, not because you want a certain style.
           Similarly, you should use <code className='code'>{'<button>'}</code> when a button is behaviorally and semantically appropriate,
           instead of <code className='code'>href</code>-less <code className='code'>{'<a>'}</code> tags or other elements with click handlers.
-          A heading <em>style</em>, or a button <em>style</em>, can be applied to any element by applying the appropriate classes.
+        </p>
+        <p className='mt6'>
+          Assembly's reset allows you to use semantically appropriate HTML without battling browser-default styles.
+          And its CSS rules are built to behave the same regardless of which element they're applied to.
+          A heading <em>style</em>, or a button <em>style</em>, can be applied to <em>any</em> element by applying the appropriate classes.
         </p>
         <h3 className='mt24 txt-bold'>
           box-sizing: border-box
@@ -93,7 +93,7 @@ class Home extends React.Component {
           Media queries are mobile-first
         </h3>
         <p className='mt6'>
-          Mobile-first media queries lead to cleaner code because there are fewer overrides. Start with a simple mobile layout, then add complexity with additional media constrained rules. Assembly uses the following media queries:
+          Mobile-first media queries lead to cleaner code because there are fewer overrides. Start with a simple mobile layout, then add complexity with additional media-constrained rules. Assembly uses the following media queries:
         </p>
         <div className='prose mt6'>
           <ul className='txt-ul'>
@@ -103,8 +103,8 @@ class Home extends React.Component {
           </ul>
         </div>
         <p className='mt6'>
-          Classes that take affect within certain media queries always end with a <code className='code'>{'-media-<size>'}</code> suffix,
-          where "size" is <code className='code'>s</code>, <code className='code'>m</code>, or <code className='code'>l</code>.
+          Classes that take affect within certain media queries always end with a <code className='code'>{'-m<size>'}</code> suffix,
+          where "size" is <code className='code'>m</code>, <code className='code'>l</code>, or <code className='code'>xl</code>.
         </p>
         <h3 className='mt24 txt-bold'>
           <code className='code'>!important</code> all utility classes behavior
@@ -114,9 +114,12 @@ class Home extends React.Component {
         </p>
         <p className='mt6'>
           For example, in the <code className='code'>.bg-pink</code> rule, the <code className='code'>background-color</code> declaration is <code className='code'>!important</code>.
-          This ensures that such classes always behave the same. If you see the class <code className='code'>bg-pink</code> on an element,
-          you should be able to assume that the element will have a pink background, regardless of its context or the other rules that apply.
-          Responsive classes (described above) provide some additional flexibility.
+          On the <code className='code'>.pl20</code> rule, the <code className='code'>padding-left</code> declaration is <code className='code'>!important</code>.
+          This ensures that such classes always behave the same. Whenever you see the class <code className='code'>bg-pink</code> on an element,
+          that element should have a pink background, regardless of its context and the other rules that apply to it.
+        </p>
+        <p className='mt6'>
+          For dynamic styles, responsive classes (described above) provide some additional flexibility.
           But if you need even more, you should use custom CSS instead of a utility class.
         </p>
         <h3 className='mt24 txt-bold'>
@@ -126,9 +129,8 @@ class Home extends React.Component {
           Assembly uses the <code className='code'>is-active</code> state class to designate that an element is active and style it accordingly.
         </p>
         <p className='mt6'>
-          The <code className='code'>is-active</code> state on buttons and links darkens the color.
-          The <code className='code'>*-on-active</code> state classes only have any effect when combined with the <code className='code'>is-active</code> class,
-          and will override the default button and link behavior.
+          The <code className='code'>is-active</code> state on buttons and links darkens their color.
+          And the <code className='code'>*-on-active</code> state classes (e.g. only <code className='code'>color-red-on-active</code>) only take effect when combined with the <code className='code'>is-active</code> class.
         </p>
       </div>
     );

@@ -1,6 +1,6 @@
 /* stylelint-disable selector-no-type, selector-no-combinator */
 /**
- * Styles for HTML5 input and textarea elements. All form elements on Assembly's 6px baseline grid.
+ * Styles for HTML5 input and textarea elements. All form elements fit into Assembly's `6px` baseline grid.
  * @section Forms
  */
 
@@ -67,12 +67,12 @@
 /* stylelint-enable selector-no-attribute */
 
 /**
- * A basic text input. Set the color of the border with `input--border-{color}`.
+ * Style a text input. Set the color of the border with a `input--border-{color}` modifier.
  *
  * @memberof Inputs & textareas
  * @example
- * <input class='input' placeholder='basic' />
- * <input class='input input--border-teal' placeholder='basic' />
+ * <input class='input' placeholder='default' />
+ * <input class='input input--border-teal' placeholder='teal' />
  */
 .input {
   height: 36px;
@@ -81,11 +81,11 @@
 }
 
 /**
- * Small input
+ * Make an input small.
  *
  * @memberof Inputs & textareas
  * @example
- * <input class='input input--s txt-s' placeholder='basic' />
+ * <input class='input input--s txt-s' placeholder='small' />
  */
 .input--s {
   height: 24px;
@@ -94,11 +94,12 @@
 }
 
 /**
- * Textarea.
+ * Style a textarea. Set the color of the border with a `textarea--border-{color} modifier.
  *
  * @memberof Inputs & textareas
  * @example
- * <textarea placeholder='basic' class='textarea'></textarea>
+ * <textarea placeholder='default' class='textarea'></textarea>
+ * <textarea placeholder='pink' class='textarea textarea--border-pink'></textarea>
  */
 .textarea {
   resize: vertical;
@@ -109,7 +110,7 @@
 }
 
 /**
- * Small textarea.
+ * Make a textarea small.
  *
  * @memberof Inputs & textareas
  * @example
@@ -120,12 +121,12 @@
 }
 
 /**
- * Disabled input and textarea.
+ * When `input` and `textarea` elements have a `disabled` attribute, they will be styled accordingly.
  *
  * @memberof Inputs & textareas
  * @example
- * <input disabled class='input' placeholder='basic' />
- * <textarea disabled class='textarea' placeholder='basic' value='Disabled'>Disabled text</textarea>
+ * <input disabled class='input' placeholder='disabled' />
+ * <textarea disabled class='textarea' placeholder='disabled' value='Disabled'>Disabled text</textarea>
  */
 .input:disabled,
 .textarea:disabled {
@@ -137,9 +138,9 @@
 
 /* stylelint-disable selector-no-attribute */
 /* Using the attribute selector instead of the pseudo-class `:read-only`
-because it seems to be more cross-browser consistent with HTML5 input types */
+because it seems to be more cross-browser consistent with all HTML5 input types */
 /**
- * Read-only input and textarea.
+ * When `input` and `textarea` elements have a `readyonly` attribute, they will be styled accordingly.
  *
  * @memberof Inputs & textareas
  * @example
@@ -153,17 +154,18 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 /* stylelint-enable selector-no-attribute */
 
 /**
- * The select component styles `<input type='select'>`. The markup must fit the following pattern:
+ * The select component styles the `<select>` element. The markup must fit the following pattern:
  * - A wrapping `<div>` with the `select-container` class.
  * - A `<select>` element with the `select` class.
- * - A div with the `select-arrow` class.
+ * - A `<div>` with the `select-arrow` class.
  *
  * @section Selects
  * @memberof Forms
  */
 
 /*
- * A select component. Vary color with the `.select--{color}` modifier.
+ * Style a select component.
+ * Set the background color by adding a `select--{color}` modifier to the `select` element.
  *
  * @memberof Selects
  * @group
@@ -255,7 +257,8 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 /* End IE overrides */
 
 /**
- * A stroked select input. Depends on the `select` class.
+ * Modify a select component so its text and borders are colored and its background transparent.
+ * You can still change the color by adding a `select--{color}` modifier to the `select` element.
  *
  * @memberof Selects
  * @example
@@ -287,7 +290,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 }
 
 /**
- * A small select input. Depends on the `select` class.
+ * Make a select component small.
  *
  * @memberof Selects
  * @example
@@ -310,7 +313,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 }
 
 /**
- * A disabled select input.
+ * When the `select` element has the `disabled` attribute, the component will be styled accordingly.
  *
  * @memberof Selects
  * @example
@@ -334,7 +337,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 }
 
 /**
- * The `range` class styles `<input type='range'>`.
+ * The `range` class styles the `<input type='range'>` element.
  *
  * @section Ranges
  * @memberof Forms
@@ -342,7 +345,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 
 /**
  *
- * A range element. Vary color with the `.range--{color}` modifier.
+ * Style a range element. Set the color by adding a `range--{color}` modifier.
  *
  * @memberof Ranges
  * @example
@@ -450,7 +453,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 .range:hover::-moz-range-thumb { border-color: var(--blue-dark); }
 
 /*
- * A small range element. Depends on the `range` class.
+ * Make a range element small.
  *
  * @memberof Ranges
  * @selectors .range--s
@@ -510,7 +513,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 .range::-moz-focus-outer { border: 0; }
 
 /*
- * A disabled range element.
+ * When a range element has the `disabled` attribute, it will be styled accordingly.
  *
  * @memberof Ranges
  * @selectors .range:disabled
@@ -558,20 +561,20 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 }
 
 /**
- * The checkbox component enhances the `<input type='checkbox'>` element. Markup must fit the following pattern:
+ * The checkbox component styles the `<input type='checkbox'>` element. The markup must fit the following pattern:
  * - A wrapping `<label>` with the class `checkbox-container`.
  * - An `<input type='checkbox'>`. You may want to add a `mr*` margin-right
  *   class to separate the checkbox from its label.
  * - A `<div>` with the class `checkbox`
- *   containing an `<svg>` with the chosen icon.
+ *   containing an `<svg>` with the chosen icon (usually `#icon-check`).
  *
  * @section Checkboxes
  * @memberof Forms
  */
 
 /*
- * A checkbox with a label. Change the color of the checkbox with `.checkbox--{color}`.
- * Adjust the line height of the checkbox with `.checkbox--s-label`.
+ * Style a checkbox with a label. Change the color of the checkbox with a `checkbox--{color}` modifier.
+ * Adjust the line height of the checkbox to match a label with small text with the `checkbox--s-label` modifier.
  *
  * @memberof Checkboxes
  * @example
@@ -617,7 +620,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 }
 
 /**
- * The radio component enhances the `<input type='radio'>` element. The radio markup must fit the following pattern:
+ * The radio component styles the `<input type='radio'>` element. The markup must fit the following pattern:
  * - A wrapping `<label>` with the class `radio-container`.
  * - An `<input type='radio'>`. You may want to add a `mr*` margin-right
  *   class to separate the radio from its label.
@@ -628,8 +631,8 @@ because it seems to be more cross-browser consistent with HTML5 input types */
  */
 
 /**
- * A radio button. Change the color of the radio button with a `radio--{color}` class.
- * Adjust the line height of the radio button with `.radio--s-label`.
+ * Style a radio button. Change the color of the radio button with a `radio--{color}` modifier.
+ * Adjust the line height of the radio button to match a label with small text with the `radio--s-label` modifier.
  *
  * @memberof Radio buttons
  * @example
@@ -667,9 +670,10 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 }
 
 /**
- * The switch component enhances the `<input type='checkbox'>`. The switch markup must fit the following pattern:
+ * The switch component styles the `<input type='checkbox'>` element. The markup must fit the following pattern:
  * - A wrapping `<label>` with the class `switch-container`.
- * - An `<input type='checkbox'>`.
+ * - An `<input type='checkbox'>`. You may want to add a `mr*` margin-right
+ *   class to separate the radio from its label.
  * - A `<div>` with the class `switch`.
  *
  * @section Switches
@@ -677,8 +681,11 @@ because it seems to be more cross-browser consistent with HTML5 input types */
  */
 
 /**
- * A switch with on and off states. Modify the color of the dot when inactive, the border when inactive and
- * the background in active state with `switch--{color}`. Set the color of switch handle when switch is active with `switch--dot-{color}`.
+ * Style a switch.
+ * Change the color of the dot when inactive, the border when inactive,
+ * and the background when active with a `switch--{color}` modifier.
+ * Change the color of the dot when active with a `switch--dot-{color}` modifier.
+ *
  * @memberof Switches
  * @example
  * <label class="switch-container">
@@ -720,19 +727,22 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 }
 
 /*
- * The toggle group component enhances a set of `<input type=radio'>` inputs. Toggle markup must fit the following pattern:
+ * The toggle group component styles a set of `<input type=radio'>` elements. The markup must fit the following pattern:
  * - A wrapping `<div>` around all your radio options with the class `toggle-group`.
- * - A wrapping `<label>` around each radio option with the class `toggle-container`.
- * - An `<input type='radio'>`.
- * - A `<div>` with the class `toggle`.
+ * - For each radio option, a wrapping `<label>` with the class `toggle-container`.
+ * - For each radio option, an `<input type='radio'>`.
+ * - For each radio option, a `<div>` with the class `toggle`.
  *
  * @section Toggle group
  * @memberof Forms
  */
 
 /**
- * A toggle group. Modify the inactive toggle label text color, and the active toggle background color with `toggle--{color}`.
- * Modify the active label color with `toggle--active-{color}`. Modify the border radiuses of toggle groups inside small text with `toggle-group--s` on toggle group element.
+ * Style a toggle group.
+ * Change the inactive toggle text color and the active toggle background color with a `toggle--{color}` modifier.
+ * Change the active label color with a `toggle--active-{color}` modifier.
+ * Change the border radiuses of toggle groups inside small text with `toggle-group--s` on the `toggle-container` element.
+ *
  * @group
  * @memberof Toggle group
  * @example
@@ -778,7 +788,7 @@ because it seems to be more cross-browser consistent with HTML5 input types */
 /** @endgroup */
 
 /*
- * A stroked toggle group
+ * Add a border to a toggle group.
  *
  * @memberof Toggle group
  * @example
@@ -833,7 +843,7 @@ input:disabled {
 }
 
 /**
- * Disabled checkbox.
+ * When a checkbox has the `disabled` attribute, it will be styled accordingly.
  *
  * @memberof Checkboxes
  * @selectors input:disabled + .checkbox
@@ -853,7 +863,7 @@ input:disabled {
  */
 
 /**
- * Disabled radio button.
+ * When a radio button has the `disabled` attribute, it will be styled accordingly.
  *
  * @memberof Radio buttons
  * @selectors input:disabled + .radio
@@ -869,7 +879,7 @@ input:disabled {
  */
 
 /**
- * Disabled switch.
+ * When a switch has the `disabled` attribute, it will be styled accordingly.
  *
  * @memberof Switches
  * @selectors input:disabled + .switch
@@ -932,7 +942,7 @@ input:checked + .toggle {
 }
 
 /**
- * Disabled toggle.
+ * When a toggle group input has the `disabled` attribute, it will be styled accordingly.
  *
  * @memberof Toggle group
  * @example

@@ -1,14 +1,19 @@
 /**
- * Use buttons to trigger click events. For links,
- * we recommend using an `a` element with the [`.link`](#Links) class.
+ * Although the `btn` class will apply button styling to any element, you should typically apply it to the `<button>` element.
+ * Not a `<div>` or `<span>` with a click handler, and not an `<a>` without an `href` attribute.
+ * `<button>` is semantically appropriate for anything with a click handler that changes the page dynamically.
+ * `<button>`s receive focus, handle keyboard events, can be disabled, and are fully accessible.
+ *
+ * For actual links, you should usually use an `<a>` with the [`link`](#Links) class.
  *
  * @section Buttons
  */
 
 /**
- * A button. Use the
- * `.btn--{color}` modifier to change the color of a button. Buttons have white text unless combined with a [`.color-*`](#Color)
- * class. Buttons have fully rounded corners unless combined with a [`.round-*`](#Theming) class.
+ * Apply a button style.
+ * To change the background color of a button, use a `btn--{color}` modifier.
+ * Buttons have white text unless combined with a [`color-*`](#Text-colors) class.
+ * Buttons have fully rounded corners unless combined with a [`round-*`](#Border-radius) class.
  *
  * @memberof Buttons
  * @example
@@ -37,9 +42,9 @@
 }
 
 /**
- * A modifier class to create buttons with colored borders.
+ * Modify a button so its text and borders are colored and its background transparent.
  * The border color and text color will always match.
- * To change the text & border color, use a `.btn-{color}` modifier.
+ * To change the text and border color, use a `btn--{color}` modifier.
  *
  * @memberof Buttons
  * @example
@@ -57,7 +62,7 @@
 }
 
 /**
- * Small button.
+ * Make a button small.
  *
  * @memberof Buttons
  * @example
@@ -70,7 +75,7 @@
 }
 
 /**
- * Extra small button.
+ * Make a button extra small.
  *
  * @memberof Buttons
  * @example
@@ -106,7 +111,7 @@
 }
 
 /**
- * Disabled button. Add the `disabled` property to a button to disable it.
+ * When a button has the `disabled` attribute, it will be styled accordingly.
  *
  * @memberof Buttons
  * @example
@@ -120,23 +125,23 @@
 }
 
 /**
- * Classes to create pill button groups. Every button in a pill group
- * has a `.btn--pill` class and a modifier specifying its position.
- * Pill groups should be wrapped in a container with a
- * `flex-parent flex-parent-inline` container.
+ * Create pill button groups.
+ * Pill groups must be wrapped in a `flex-parent-inline` container.
+ * And every button in a pill group must have the `btn` and `btn--pill` classes, along with a modifier specifying its position.
  *
  * For *horizontal* pills, use
- * - `btn--pill-hc` (center)
- * - `btn--pill-hl` (left)
- * - `btn--pill-hr` (right)
+ * - `flex-parent-inline` on the container
+ * - `btn btn--pill btn--pill-hc` (center)
+ * - `btn btn--pill btn--pill-hl` (left)
+ * - `btn btn--pill btn--pill-hr` (right)
  *
  * For *vertical* pills, use
- * - `flex-parent flex-parent--column` on the flex-parent container
- * - `btn--pill-vc` (center)
- * - `btn--pill-vt` (top)
- * - `btn--pill-vb` (bottom)
+ * - `flex-parent-inline flex-parent--column` on the container
+ * - `btn btn--pill btn--pill-vc` (center)
+ * - `btn btn--pill btn--pill-vt` (top)
+ * - `btn btn--pill btn--pill-vb` (bottom)
  *
- * Pill buttons can be modified and themed the same ways as regular buttons.
+ * Pill buttons can be modified and themed in the same ways as regular buttons.
  *
  * @memberof Buttons
  * @example

@@ -5,10 +5,10 @@
  */
 
 /**
- * The `.icon` must be appled to an `<svg>` element.
+ * The `icon` class must be appled to an `<svg>` element.
  * Inside the `<svg>`, insert a `<use>` element whose `xlink:href` attribute
- * points to an icon loaded by `assembldy-svg.js`. All icons are referenced
- * by the string `#icon-<name>`.
+ * points to an icon loaded by `assembly-svg.js`. All icons are referenced
+ * by the string `#icon-{name}`.
  *
  * To see a list of all available icons, visit [the icons page](/assembly/icons).
  *
@@ -24,7 +24,7 @@
 }
 
 /**
- * Small icon. Depends on the `icon` class.
+ * Make an icon small.
  *
  * @memberof Icons
  * @example
@@ -36,7 +36,7 @@
 }
 
 /**
- * Large icon. Depends on the `icon` class.
+ * Make an icon large.
  *
  * @memberof Icons
  * @example

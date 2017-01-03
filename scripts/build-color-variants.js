@@ -366,6 +366,8 @@ function buildColorVariants(variables, config) {
        */
 
       /**
+       * Apply a text color.
+       *
        * @group
        * @memberof Text colors
        * @example
@@ -399,6 +401,8 @@ function buildColorVariants(variables, config) {
        */
 
       /**
+       * Apply a background color.
+       *
        * @group
        * @memberof Background colors
        * @example
@@ -438,7 +442,7 @@ function buildColorVariants(variables, config) {
   variantGenerators.border = function (colors) {
     let css = stripIndent(`
       /**
-       * Modify your border with a [color](#Colors-&-gradients). Depends on a \`border\` or \`border-{direction}\` class.
+       * Apply a [color](#Colors) to a border.
        *
        * @group
        * @memberof Borders
@@ -459,7 +463,7 @@ function buildColorVariants(variables, config) {
   variantGenerators.hoverShadow = function (colors) {
     let css = stripIndent(`
       /**
-       * Add shadows to elements on hover and active states.
+       * Apply a box shadow on hover and active states.
        *
        * @group
        * @memberof Shadows
@@ -489,10 +493,10 @@ function buildColorVariants(variables, config) {
   variantGenerators.hoverBackground = function (colors) {
     let css = stripIndent(`
       /**
-       * Control the background of elements on hover and active states.
+       * Apply a background color on hover and active states.
        *
        * @group
-       * @memberof Colors
+       * @memberof Background colors
        * @example
        * <div class='bg-darken25-on-hover'>bg-darken25-on-hover</div>
        * <div class='bg-darken25-on-active'>bg-darken25-on-active (not active)</div>
@@ -513,10 +517,10 @@ function buildColorVariants(variables, config) {
   variantGenerators.hoverColor = function (colors) {
     let css = stripIndent(`
       /**
-       * Control the color of elements on hover and active states.
+       * Apply a text color on hover and active states.
        *
        * @group
-       * @memberof Colors
+       * @memberof Text colors
        * @example
        * <div class='color-red-on-hover'>color-red-on-hover</div>
        * <div class='color-red-on-active'>color-red-on-active (not active)</div>
@@ -537,7 +541,7 @@ function buildColorVariants(variables, config) {
   variantGenerators.hoverBorder = function (colors) {
     let css = stripIndent(`
       /**
-       * Control the border color of an element on hover and active states. Depends on a \`border\` or \`border-{direction}\` class.
+       * Apply a border color on hover and active states.
        *
        * @group
        * @memberof Borders

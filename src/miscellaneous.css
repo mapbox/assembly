@@ -1,14 +1,14 @@
 /**
- * Extra rules that come in handy in certain cases.
+ * Extra rules that come in handy.
+ *
  * @section Miscellaneous
 */
 
 /**
- * Loading spinners.
- * - Act on their own or on a loading element.
- * - On dark backgrounds, add the modifying class `loading--dark`.
- * - For a smaller spinner, add the modifying class 'loading--s'.
- * - If appending a spinner to an element, that element will take on `display: flex` to center the spinner.
+ * Style a loading spinner.
+ * On dark backgrounds, add the `loading--dark` modifier.
+ * For a smaller spinner, add the `loading--s` modifier.
+ *
  * @group
  * @memberof Miscellaneous
  * @example
@@ -43,9 +43,9 @@
 
 /**
  * Disable touch and click events on an element and
- * it's children. Be aware that this rule does not disable keyboard events,
- * or prevent a user from tabbing to an element and pressing return to trigger
- * it's click event.
+ * its children. Be aware that this rule does not disable keyboard events,
+ * so a user can still tab to an element and press Return to trigger
+ * its click event.
  *
  * @memberof Miscellaneous
  * @example
@@ -57,8 +57,8 @@
 }
 
 /**
- * This rule enables touch and click events on an element and
- * it's children. Use to re-enable events inside a parent with the `events-none` class.
+ * Enable touch and click events on an element and
+ * its children. Use to re-enable such events inside a parent with the `events-none` class.
  *
  * @memberof Miscellaneous
  * @example
@@ -70,7 +70,7 @@
 }
 
 /**
- * Disable text selection on an element and it's children. Use only in cases where accidental
+ * Disable text selection on an element and its children. Use only in cases where accidental
  * text selection causes user frustration.
  *
  * @memberof Miscellaneous
@@ -82,8 +82,8 @@
 }
 
 /**
- * Enable text selection on an element and it's children.
- * Use to re-enable events inside a parent with the `events-none` class.
+ * Enable text selection on an element and its children.
+ * Use to re-enable selection inside a parent with the `select-none` class.
  *
  * @memberof Miscellaneous
  * @example
@@ -94,7 +94,7 @@
 }
 
 /**
- * Disable transition on elements like [`btn`](#btn) that have default transitions.
+ * Disable an animated transition on elements like [`btn`](#Buttons) that have default transitions.
  *
  * @memberof Miscellaneous
  * @example
@@ -116,7 +116,7 @@
 }
 
 /**
- * Display scrollbars if content would flow beyond the edge of element.
+ * Display scrollbars if content flows beyond the edge of the element.
  *
  * @memberof Miscellaneous
  * @example
@@ -127,7 +127,7 @@
 }
 
 /**
- * Clip content if it reaches the edge of element.
+ * Clip content if it reaches the edge of the element.
  *
  * @memberof Miscellaneous
  * @example
@@ -138,12 +138,12 @@
 }
 
 /**
- * Display the default focus outline.
+ * Apply Assembly's default focus outline when an element is focused.
  *
- * Inputs, selects, buttons, and links use this default focus outline already.
- * You'll need to apply this class to other things that you make focusable
- * (e.g. by adding a tabindex). *If you do not use this class on a focusable
- * element, that element will receive the browser's default focus outline.*
+ * Inputs, selects, buttons, and links already handle focus states.
+ * You'll only need to apply this class to other things that you make focusable
+ * (e.g. by adding a `tabindex`). If you do not use this class on a focusable
+ * element, that element will receive the browser's default focus outline.
  *
  * @memberof Miscellaneous
  * @example
@@ -155,4 +155,3 @@
   outline: 0 !important;
   box-shadow: var(--focus-shadow) !important;
 }
-

@@ -2,11 +2,12 @@
 
 /**
  * Use tables to display tabular data.
+ *
  * @section Tables
  */
 
 /**
- * Standard table styling.
+ * Apply standard table styling.
  *
  * @memberof Tables
  * @example
@@ -58,7 +59,7 @@
 }
 
 /**
- * Invert your table so it is legible on dark backgrounds.
+ * Invert a table's colors so it is legible against a dark background.
  *
  * @example
  * <div class='bg-darken75 p12'>
@@ -102,7 +103,7 @@
 }
 
 /**
- * Force all rows in the table to be the same width.
+ * Force the width of all columns in a table to be determined by the columns in the first row.
  *
  * @memberof Tables
  * @example
