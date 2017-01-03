@@ -57,10 +57,23 @@ class Navigation extends React.Component {
       );
     });
 
-    return (<div>
-      <a href='/assembly/' className='mb24 txt-mono link txt-spacing2 uppercase block'>Assembly</a>
-      {navEls}
-    </div>);
+    return (
+      <div className='flex-parent-mm flex-parent--column-mm w-full'>
+        <a href='/assembly/' className='mt24 mb12 mx24 txt-mono link txt-spacing2 uppercase block'>Assembly</a>
+        <div className='flex-child-grow-mm scroll-auto pr18 pl24'>
+          {navEls}
+        </div>
+        <div className='mt12 mb24 mx24 flex-child-noshrink-mm'>
+          <a className='link txt-s' href='https://github.com/mapbox/assembly/'>
+            <svg
+              className='icon'
+              dangerouslySetInnerHTML={{ __html: '<use xlink:href="#icon-github"></use>' }}
+            />
+            <span className='ml6 align-middle'>View on GitHub</span>
+          </a>
+        </div>
+      </div>
+    );
   }
 }
 
