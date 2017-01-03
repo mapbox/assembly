@@ -25,7 +25,7 @@
  */
 .input,
 .textarea {
-  border: 1px solid var(--blue);
+  border: 1px solid var(--default-interactive-color);
   border-radius: var(--border-radius);
   display: inline-block;
   transition: background-color var(--transition),
@@ -36,7 +36,7 @@
 .textarea:hover,
 .input:focus,
 .textarea:focus {
-  border-color: var(--blue-dark);
+  border-color: var(--default-interactive-color-dark);
 }
 
 .input::placeholder,
@@ -202,7 +202,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-style: solid;
   border-color: transparent;
   border-radius: var(--border-radius);
-  background-color: var(--blue); /* match btn default state */
+  background-color: var(--default-interactive-color); /* match btn default state */
 }
 
 .select-arrow {
@@ -223,7 +223,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /* default hover state */
 .select:hover {
-  background-color: var(--blue-dark);
+  background-color: var(--default-interactive-color-dark);
 }
 
 /* Some browsers color the option text and background, so reset that */
@@ -267,22 +267,22 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * </div>
  */
 .select--stroke {
-  color: var(--blue);
+  color: var(--default-interactive-color);
   background-color: transparent;
   border-color: currentColor;
 }
 
 .select--stroke + .select-arrow {
-  border-top-color: var(--blue);
+  border-top-color: var(--default-interactive-color);
 }
 
 .select--stroke:hover {
   background-color: transparent;
-  color: var(--blue-dark);
+  color: var(--default-interactive-color-dark);
 }
 
 .select--stroke:hover + .select-arrow {
-  border-top-color: var(--blue-dark);
+  border-top-color: var(--default-interactive-color-dark);
 }
 
 /**
@@ -363,7 +363,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: var(--blue);
+  background: var(--default-interactive-color);
   vertical-align: middle;
   cursor: pointer;
   box-shadow: 0;
@@ -375,7 +375,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: var(--blue);
+  background: var(--default-interactive-color);
   vertical-align: middle;
   cursor: pointer;
   box-shadow: 0;
@@ -392,22 +392,22 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .range::-ms-fill-lower {
-  background: var(--blue);
+  background: var(--default-interactive-color);
   border: 0;
   box-shadow: 0;
 }
 
 .range::-ms-fill-upper {
-  background: var(--blue);
+  background: var(--default-interactive-color);
   border: 0;
   box-shadow: 0;
 }
 
 /* range track:hover */
-.range:hover::-webkit-slider-runnable-track { background: var(--blue-dark); }
-.range:hover::-moz-range-track { background: var(--blue-dark); }
-.range:hover::-ms-fill-upper { background: var(--blue-dark); }
-.range:hover::-ms-fill-lower { background: var(--blue-dark); }
+.range:hover::-webkit-slider-runnable-track { background: var(--default-interactive-color-dark); }
+.range:hover::-moz-range-track { background: var(--default-interactive-color-dark); }
+.range:hover::-ms-fill-upper { background: var(--default-interactive-color-dark); }
+.range:hover::-ms-fill-lower { background: var(--default-interactive-color-dark); }
 
 /* range thumb */
 .range::-webkit-slider-thumb {
@@ -418,7 +418,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 20px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px solid var(--blue);
+  border: 2px solid var(--default-interactive-color);
   cursor: pointer;
   margin-top: -8px;
 }
@@ -429,7 +429,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 17px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px solid var(--blue);
+  border: 2px solid var(--default-interactive-color);
   cursor: pointer;
 }
 
@@ -439,14 +439,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 20px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px solid var(--blue);
+  border: 2px solid var(--default-interactive-color);
   cursor: pointer;
 }
 
 /* range thumb:hover */
-.range:hover::-webkit-slider-thumb { border-color: var(--blue-dark); }
-.range:hover::-ms-thumb { border-color: var(--blue-dark); }
-.range:hover::-moz-range-thumb { border-color: var(--blue-dark); }
+.range:hover::-webkit-slider-thumb { border-color: var(--default-interactive-color-dark); }
+.range:hover::-ms-thumb { border-color: var(--default-interactive-color-dark); }
+.range:hover::-moz-range-thumb { border-color: var(--default-interactive-color-dark); }
 
 /*
  * Make a range element small.
@@ -565,12 +565,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .checkbox {
   background-color: #fff;
-  color: var(--blue);
+  color: var(--default-interactive-color);
   border-color: currentColor;
 }
 
 .checkbox-container:hover > .checkbox {
-  color: var(--blue-dark);
+  color: var(--default-interactive-color-dark);
 }
 
 /* Ensure checkboxes inside buttons look nice */
@@ -619,12 +619,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .radio {
   border-radius: 50%;
-  color: var(--blue);
+  color: var(--default-interactive-color);
   border-color: currentColor;
 }
 
 .radio-container:hover > .radio {
-  color: var(--blue-dark);
+  color: var(--default-interactive-color-dark);
 }
 
 .radio::before {
@@ -679,7 +679,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-width: 2px;
   border-style: solid;
   border-color: currentColor;
-  color: var(--blue);
+  color: var(--default-interactive-color);
   transition: color var(--transition),
     background-color var(--transition),
     border-color var(--transition);
@@ -749,7 +749,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .toggle {
   flex-shrink: 0;
   cursor: pointer;
-  color: var(--blue);
+  color: var(--default-interactive-color);
   font-weight: bold;
   padding: 0 12px;
   border-radius: 13px;
@@ -780,7 +780,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: var(--blue);
+  border-color: var(--default-interactive-color);
 }
 
 /* Adjust border radiuses with small text – only necessary for vertical toggle groups */
@@ -876,12 +876,12 @@ input:checked + .radio::before {
 
 input:checked + .checkbox,
 input:checked + .radio {
-  color: var(--blue-dark);
+  color: var(--default-interactive-color-dark);
 }
 
 /* state management for switches */
 .switch:hover {
-  color: var(--blue-dark);
+  color: var(--default-interactive-color-dark);
 }
 
 input:checked + .switch::after {
@@ -891,16 +891,16 @@ input:checked + .switch::after {
 
 input:checked + .switch {
   border-color: transparent;
-  background-color: var(--blue-dark);
+  background-color: var(--default-interactive-color-dark);
 }
 
 /* state management for toggles */
 .toggle:hover {
-  color: var(--blue-dark);
+  color: var(--default-interactive-color-dark);
 }
 
 input:checked + .toggle {
-  background: var(--blue);
+  background: var(--default-interactive-color);
   color: var(--white);
 }
 
