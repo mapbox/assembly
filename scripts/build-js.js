@@ -21,7 +21,8 @@ function buildJs(outfile) {
     concatJs()
   ])
     .then((data) => {
-      return UglifyJS.minify(data.join(''), { fromString: true }).code;
+      const allJs = data.join('');
+      return UglifyJS.minify(allJs, { fromString: true }).code;
     })
     .then((minifiedJs) => {
       return optimizeJs(minifiedJs);

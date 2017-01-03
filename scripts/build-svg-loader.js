@@ -21,9 +21,14 @@ const baseJsTemplate = (options) => {
   return `
     (function () {
       var svgDocument = (new DOMParser()).parseFromString('${options.svgSprite}', 'text/xml');
-      document.addEventListener('DOMContentLoaded', function () {
+      var appendSvg = function () {
         document.body.appendChild(svgDocument.getElementById('svg-symbols'));
-      });
+      }
+      if (document.readyState !== 'loading') {
+        appendSvg();
+      } else {
+        document.addEventListener('DOMContentLoaded', appendSvg);
+      }
     }());
   `;
 };
