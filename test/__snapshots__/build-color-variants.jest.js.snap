@@ -4884,6 +4884,8 @@ input:checked + .toggle--active-transparent {
  */
 
 /**
+ * Apply a text color.
+ *
  * @group
  * @memberof Text colors
  * @example
@@ -5146,6 +5148,8 @@ input:checked + .toggle--active-transparent {
  */
 
 /**
+ * Apply a background color.
+ *
  * @group
  * @memberof Background colors
  * @example
@@ -5749,7 +5753,7 @@ input:checked + .toggle--active-transparent {
 }
       
 /**
- * Modify your border with a [color](#Colors-&-gradients). Depends on a \`border\` or \`border-{direction}\` class.
+ * Apply a [color](#Colors) to a border.
  *
  * @group
  * @memberof Borders
@@ -5953,7 +5957,7 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Add shadows to elements on hover and active states.
+ * Apply a box shadow on hover and active states.
  *
  * @group
  * @memberof Shadows
@@ -6053,10 +6057,10 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Control the background of elements on hover and active states.
+ * Apply a background color on hover and active states.
  *
  * @group
- * @memberof Colors
+ * @memberof Background colors
  * @example
  * <div class=\'bg-darken25-on-hover\'>bg-darken25-on-hover</div>
  * <div class=\'bg-darken25-on-active\'>bg-darken25-on-active (not active)</div>
@@ -6308,10 +6312,10 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Control the color of elements on hover and active states.
+ * Apply a text color on hover and active states.
  *
  * @group
- * @memberof Colors
+ * @memberof Text colors
  * @example
  * <div class=\'color-red-on-hover\'>color-red-on-hover</div>
  * <div class=\'color-red-on-active\'>color-red-on-active (not active)</div>
@@ -6563,7 +6567,7 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Control the border color of an element on hover and active states. Depends on a \`border\` or \`border-{direction}\` class.
+ * Apply a border color on hover and active states.
  *
  * @group
  * @memberof Borders
@@ -11705,6 +11709,8 @@ input:checked + .toggle--active-transparent {
  */
 
 /**
+ * Apply a text color.
+ *
  * @group
  * @memberof Text colors
  * @example
@@ -11967,6 +11973,8 @@ input:checked + .toggle--active-transparent {
  */
 
 /**
+ * Apply a background color.
+ *
  * @group
  * @memberof Background colors
  * @example
@@ -12570,7 +12578,7 @@ input:checked + .toggle--active-transparent {
 }
       
 /**
- * Modify your border with a [color](#Colors-&-gradients). Depends on a \`border\` or \`border-{direction}\` class.
+ * Apply a [color](#Colors) to a border.
  *
  * @group
  * @memberof Borders
@@ -12774,7 +12782,7 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Add shadows to elements on hover and active states.
+ * Apply a box shadow on hover and active states.
  *
  * @group
  * @memberof Shadows
@@ -12874,10 +12882,10 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Control the background of elements on hover and active states.
+ * Apply a background color on hover and active states.
  *
  * @group
- * @memberof Colors
+ * @memberof Background colors
  * @example
  * <div class=\'bg-darken25-on-hover\'>bg-darken25-on-hover</div>
  * <div class=\'bg-darken25-on-active\'>bg-darken25-on-active (not active)</div>
@@ -13129,10 +13137,10 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Control the color of elements on hover and active states.
+ * Apply a text color on hover and active states.
  *
  * @group
- * @memberof Colors
+ * @memberof Text colors
  * @example
  * <div class=\'color-red-on-hover\'>color-red-on-hover</div>
  * <div class=\'color-red-on-active\'>color-red-on-active (not active)</div>
@@ -13384,7 +13392,7 @@ input:checked + .toggle--active-transparent {
 }
       /** @endgroup */
 /**
- * Control the border color of an element on hover and active states. Depends on a \`border\` or \`border-{direction}\` class.
+ * Apply a border color on hover and active states.
  *
  * @group
  * @memberof Borders
@@ -13676,6 +13684,8 @@ exports[`buildColorVariants with granular colors 1`] = `
  */
 
 /**
+ * Apply a background color.
+ *
  * @group
  * @memberof Background colors
  * @example
@@ -13707,7 +13717,7 @@ exports[`buildColorVariants with granular colors 1`] = `
 }
       
 /**
- * Add shadows to elements on hover and active states.
+ * Apply a box shadow on hover and active states.
  *
  * @group
  * @memberof Shadows
@@ -14113,6 +14123,8 @@ input:checked + .toggle--active-green-light {
  */
 
 /**
+ * Apply a text color.
+ *
  * @group
  * @memberof Text colors
  * @example
@@ -14150,6 +14162,8 @@ input:checked + .toggle--active-green-light {
  */
 
 /**
+ * Apply a background color.
+ *
  * @group
  * @memberof Background colors
  * @example
@@ -14204,7 +14218,7 @@ input:checked + .toggle--active-green-light {
 }
       
 /**
- * Modify your border with a [color](#Colors-&-gradients). Depends on a \`border\` or \`border-{direction}\` class.
+ * Apply a [color](#Colors) to a border.
  *
  * @group
  * @memberof Borders
@@ -14228,7 +14242,7 @@ input:checked + .toggle--active-green-light {
 }
       /** @endgroup */
 /**
- * Add shadows to elements on hover and active states.
+ * Apply a box shadow on hover and active states.
  *
  * @group
  * @memberof Shadows
@@ -14238,10 +14252,10 @@ input:checked + .toggle--active-green-light {
  * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
  *//** @endgroup */
 /**
- * Control the background of elements on hover and active states.
+ * Apply a background color on hover and active states.
  *
  * @group
- * @memberof Colors
+ * @memberof Background colors
  * @example
  * <div class=\'bg-darken25-on-hover\'>bg-darken25-on-hover</div>
  * <div class=\'bg-darken25-on-active\'>bg-darken25-on-active (not active)</div>
@@ -14268,10 +14282,10 @@ input:checked + .toggle--active-green-light {
 }
       /** @endgroup */
 /**
- * Control the color of elements on hover and active states.
+ * Apply a text color on hover and active states.
  *
  * @group
- * @memberof Colors
+ * @memberof Text colors
  * @example
  * <div class=\'color-red-on-hover\'>color-red-on-hover</div>
  * <div class=\'color-red-on-active\'>color-red-on-active (not active)</div>
@@ -14298,7 +14312,7 @@ input:checked + .toggle--active-green-light {
 }
       /** @endgroup */
 /**
- * Control the border color of an element on hover and active states. Depends on a \`border\` or \`border-{direction}\` class.
+ * Apply a border color on hover and active states.
  *
  * @group
  * @memberof Borders

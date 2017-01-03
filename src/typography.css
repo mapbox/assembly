@@ -1,8 +1,11 @@
 /* stylelint-disable selector-no-combinator, selector-no-type */
 
 /**
- * Font styles, sizes, and utilities. There are two ways to style text with Assembly. All typographic styles can be applied individually with classes that have a
- * `.txt-` prefix. Alternatively, the [`.prose`](#Prose) class can be used to apply sensible default styling for semantic elements.
+ * Font styles, sizes, and utilities.
+ *
+ * There are two ways to style text with Assembly: by applying utility classes to every element,
+ * or by creating [`prose`](#Prose) sections. All typographic styles can be applied individually with classes that have a
+ * `.txt-` prefix. Alternatively, [`prose`](#Prose) sections can be used to apply sensible default styling for all the semantic elements they contain.
  *
  * @section Typography
 */
@@ -20,12 +23,14 @@ textarea {
 
 /**
  * Classes for font size and line height, lists, block quotes, code blocks, and more.
+ *
  * @section Type basics
  * @memberof Typography
  */
 
 /**
- * Standard text scale. All text size classes include `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Classes for the standard text scale.
+ * All text size classes include `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @memberof Type basics
  * @group
@@ -186,7 +191,7 @@ textarea {
 }
 
 /**
- * Style for an abrreviation or acronym.
+ * Style an abbreviation or acronym.
  *
  * @memberof Type basics
  * @example
@@ -199,7 +204,7 @@ textarea {
 }
 
 /**
- * Style for a break between two blocks of text.
+ * Style a line separating two blocks of text.
  *
  * @memberof Type basics
  * @example
@@ -239,7 +244,7 @@ textarea {
 }
 
 /**
- * Unordered list. Works with any element type if children use the `.txt-li` class.
+ * Style an unordered list. Works with any element type if the list items use the `txt-li` class, but you should almost always use it with a `<ul>` element.
  *
  * @memberof Type basics
  * @example
@@ -255,7 +260,7 @@ textarea {
 }
 
 /**
- * Ordered list. Works with any element type if children use the `.txt-li` class.
+ * Style an ordered list. Works with any element type if the list items use the `txt-li` class, but you should almost always use it with a `<ol>` element.
  *
  * @memberof Type basics
  * @example
@@ -280,7 +285,8 @@ textarea {
 }
 
 /**
- * Basic quote styling.
+ * Style a block quotation.
+ *
  * @memberof Type basics
  * @example
  * <div class='txt-blockquote'>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.</div>
@@ -337,7 +343,7 @@ textarea {
 }
 
 /**
- * Place small text above the standard line height.
+ * Style superscript text: small and above the standard line.
  *
  * @memberof Type basics
  * @example
@@ -349,7 +355,7 @@ textarea {
 }
 
 /**
- * Place small text below the standard line height.
+ * Style subscript text: small and below the standard line.
  *
  * @memberof Type basics
  * @example
@@ -378,7 +384,7 @@ textarea {
 }
 
 /**
- * Style inline code.
+ * Style text as inline code.
  *
  * @memberof Type basics
  * @example
@@ -390,14 +396,14 @@ textarea {
 }
 
 /**
- * Style blocks of code.
+ * Style a code block.
  *
  * @memberof Type basics
  * @example
  * <pre class='pre'>
- * for each
+ * <code>for each
  *   do this
- * end
+ * end</code>
  * </pre>
  */
 .pre,
@@ -415,13 +421,15 @@ textarea {
 }
 
 /**
- * Single-purpose classes for customizing text.
+ * Single-purpose classes for styling text.
+ *
  * @section Type utils
  * @memberof Typography
  */
 
 /**
- * Monospaced text.
+ * Apply Assembly's monospaced font stack.
+ *
  * @memberof Type utils
  * @example
  * <div class='txt-mono'>txt-mono</div>
@@ -432,7 +440,8 @@ textarea {
 }
 
 /**
- * Light font weight.
+ * Apply a light font weight.
+ *
  * @memberof Type utils
  * @example
  * <div class='txt-light'>txt-light</div>
@@ -442,7 +451,8 @@ textarea {
 }
 
 /**
- * Normal font weight.
+ * Apply a normal font weight.
+ *
  * @memberof Type utils
  * @example
  * <div class='txt-normal'>txt-normal</div>
@@ -452,7 +462,8 @@ textarea {
 }
 
 /**
- * Bold font weight.
+ * Apply a bold font weight.
+ *
  * @memberof Type utils
  * @example
  * <div class='txt-bold'>txt-bold</div>
@@ -460,7 +471,8 @@ textarea {
 .txt-bold { font-weight: bold !important; }
 
 /**
- * Italic text.
+ * Italicize text.
+ *
  * @memberof Type utils
  * @example
  * <div class='em'>em</div>
@@ -468,7 +480,8 @@ textarea {
 .em { font-style: italic !important; }
 
 /**
- * Uppercase text.
+ * Capitalize all letters in an element.
+ *
  * @memberof Type utils
  * @example
  * <div class='uppercase'>UpPeRcAsE</div>
@@ -476,7 +489,8 @@ textarea {
 .uppercase { text-transform: uppercase !important; }
 
 /**
- * Lowercase text.
+ * Lowercase all letters in an element.
+ *
  * @memberof Type utils
  * @example
  * <div class='lowercase'>LoWeRcAsE</div>
@@ -484,7 +498,8 @@ textarea {
 .lowercase { text-transform: lowercase !important; }
 
 /**
- * Capitalize all words in the element.
+ * Capitalize all words in an element.
+ *
  * @memberof Type utils
  * @example
  * <div class='capitalize'>all words are capitalized</div>
@@ -492,7 +507,8 @@ textarea {
 .capitalize { text-transform: capitalize !important; }
 
 /**
- * Capitalize the first letter in the element.
+ * Capitalize the first letter in an element.
+ *
  * @memberof Type utils
  * @example
  * <div class='capitalize-first'>first word only is capitalized</div>
@@ -501,7 +517,8 @@ textarea {
 .capitalize-first::first-letter { text-transform: capitalize !important; }
 
 /**
- * Text horizontal alignment.
+ * Control the horizontal alignment of an element's inline children.
+ *
  * @memberof Type utils
  * @group
  * @example
@@ -515,7 +532,8 @@ textarea {
 /** @endgroup */
 
 /**
- * Text vertical alignment.
+ * Control the vertical alignment of an inline element.
+ *
  * @memberof Type utils
  * @group
  * @example
@@ -527,7 +545,8 @@ textarea {
 /** @endgroup */
 
 /**
- * Text underline.
+ * Underline text.
+ *
  * @memberof Type utils
  * @example
  * <div class='txt-underline'>txt-underline</div>
@@ -535,7 +554,7 @@ textarea {
 .txt-underline { text-decoration: underline !important; }
 
 /**
- * Prevents text from wrapping.
+ * Prevent text from wrapping.
  *
  * @memberof Type utils
  * @example
@@ -548,7 +567,7 @@ textarea {
 }
 
 /**
- * Allows words to be broken across lines.
+ * Allow words to break across lines.
  *
  * @memberof Type utils
  * @example
@@ -561,7 +580,7 @@ textarea {
 }
 
 /**
- * Truncates text to a single line contained within the width
+ * Truncate text to a single line contained within the width
  * of its container, ending with an ellipsis if it overflows.
  *
  * @memberof Type utils
@@ -578,7 +597,8 @@ textarea {
 }
 
 /**
- * Letter spacing.
+ * Apply extra space between letters.
+ *
  * @memberof Type utils
  * @group
  * @example
@@ -590,7 +610,7 @@ textarea {
 /** @endgroup */
 
 /**
- * Add text shadow shadows to elements.
+ * Apply text shadows.
  *
  * @group
  * @memberof Type utils
@@ -616,7 +636,9 @@ textarea {
 /** @endgroup */
 
 /**
- * Conveniently style large blocks of semantic markup. `.prose` is designed to only be used when content is generated by a markdown processor and you don't control over each element's class list.
+ * Conveniently style large blocks of semantic markup.
+ * `prose` is designed to only be used when content is generated by a markdown processor and you don't have control over each element's class list.
+ *
  * @section Prose
  * @memberof Typography
  */
@@ -637,7 +659,8 @@ textarea {
  */
 
 /**
- * Invert styling of everything inside the prose class so content stays legible on dark backgrounds.
+ * Invert the coloring of textual content inside `prose` sections, so it is legible against dark backgrounds.
+ *
  * @memberof Prose
  * @example
  * <div class="prose prose--dark bg-gray">

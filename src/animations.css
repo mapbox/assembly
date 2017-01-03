@@ -1,10 +1,12 @@
 /**
  * Animations and animation modifiers.
+ *
  * @section Animations
  */
 
 /**
  * Infinite animations.
+ *
  * @group
  * @memberof Animations
  * @example
@@ -18,7 +20,8 @@
 /** @endgroup */
 
 /**
- * Transition and reaction animations run once at a duration of 1.5 seconds.
+ * Transition and reaction animations. These run once for 1.5 seconds.
+ *
  * @group
  * @memberof Animations
  * @example
@@ -32,7 +35,10 @@
 /** @endgroup */
 
 /**
- * Animation modifiers. Change animation duration with `animation--speed-<seconds>`. Add a 1 second delay with `animation--delay`.
+ * Animation modifiers.
+ * Change animation duration with an `animation--speed-{seconds}` modifier.
+ * Add a 1 second delay with `animation--delay`.
+ *
  * @group
  * @memberof Animations
  * @example

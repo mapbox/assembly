@@ -1,17 +1,18 @@
 /**
  * Decorate elements with borders, shadows, opacity adjustments, and more.
+ *
  * @section Theming
 */
 
 /**
- * Add borders to elements.
+ * Add borders to an element.
  *
  * @section Borders
  * @memberof Theming
  */
 
 /**
- * Add a basic 1px border. Target sides with `border-t`, `border-r`, `border-b`, and `border-l`. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Add a `1px` border that is the same color as the element's text. Target sides with `*-t`, `*-r`, `*-b`, and `*-l`. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Borders
@@ -51,12 +52,12 @@
 }
 
 /**
- * Modify a border to be zero pixels wide. Depends on a `border` or `border-{direction}` class.
+ *Make a border zero pixels wide. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Borders
  * @example
- * <div class='border border-r--0'>border--0</div>
+ * <div class='border border-r--0'>border-r--0</div>
  */
 .border--0 { border-width: 0 !important; }
 .border-t--0 { border-top-width: 0 !important; }
@@ -90,7 +91,7 @@
 }
 
 /**
- * Modify a border to be two pixels wide. Depends on a `border` or `border-{direction}` class.
+ *Make a border two pixels wide.
  *
  * @memberof Borders
  * @example
@@ -99,7 +100,7 @@
 .border--2 { border-width: 2px !important; }
 
 /**
- * Modify a border to be be dashed instead of solid. Depends on a `border` or `border-{direction}` class.
+ *Make a border dashed instead of solid.
  *
  * @memberof Borders
  * @example
@@ -108,7 +109,8 @@
 .border--dash { border-style: dashed !important; }
 
 /**
- * Adjust the radius of element's borders.
+ * Adjust the curve of an element's corners.
+ *
  * @memberof Theming
  * @section Border radius
  */
@@ -154,7 +156,7 @@
 /** @endgroup */
 
 /**
- * Fully-round border radiuses of elements.
+ * Like `round`, but with fully round corners.
  *
  * @group
  * @memberof Border radius
@@ -174,13 +176,14 @@
 /** @endgroup */
 
 /**
- * Outer shadows that add emphasis to elements or add structure to layouts. Class naming follows the pattern `shadow-<lighten|darken><alpha>`
+ * Apply outer shadows that add emphasis to elements or structure to layouts. Class naming follows the pattern `shadow-<lighten|darken><alpha>`.
+ *
  * @section Shadows
  * @memberof Theming
  */
 
 /**
- * Add box shadows to elements.
+ * Apply a box shadow.
  *
  * @group
  * @memberof Shadows
@@ -199,7 +202,7 @@
 /** @endgroup */
 
 /**
- * Add larger shadows to elements.
+ * Apply a larger box shadow.
  *
  * @group
  * @memberof Shadows
@@ -217,13 +220,14 @@
 /** @endgroup */
 
 /**
- * Set cursor style when hovering over an element.
+ * Set the style of the cursor when hovering over an element.
+ *
  * @section Cursors
  * @memberof Theming
  */
 
 /**
- * Cursor is one of `default`, `pointer`, `crosshair`, or `move` on hover.
+ * Set the `cursor` property value of an element.
  *
  * @group
  * @memberof Cursors
@@ -241,13 +245,14 @@
 /** @endgroup */
 
 /**
- * Dim or hide elements without removing them from the document flow with opacity.
+ * Dim elements, or hide them from the document flow  without removing them.
+ *
  * @section Opacity
  * @memberof Theming
  */
 
 /**
- * Control the opacity of elements.
+ * Apply an opacity.
  *
  * @group
  * @memberof Opacity
@@ -264,9 +269,9 @@
 /** @endgroup */
 
 /**
- * Control the opacity of elements on hover and active states.
+ * Apply an opacity on hover and active states.
  *
- * `.alpha100-on-focus` is also available to make an element opaque on focus.
+ * `.alpha100-on-focus` is also available to make an otherwise transparent element opaque on focus.
  *
  * @group
  * @memberof Opacity

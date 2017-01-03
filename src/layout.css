@@ -1,17 +1,21 @@
 /**
- * Define the size, shape and content flow of your markup.
+ * Define the size, shape, and content flow of your markup.
+ *
  * @section Layout
  */
 
 /**
- * Assembly uses a 12-column flexible grid with optional [gutters](#grid--gut6) and left and right [column offsets](#col--offl1).
+ * Assembly uses a 12-column flexible grid with optional gutters.
  *
  * @section Grid
  * @memberof Layout
  */
 
 /**
- * Grids are made by adding the `grid` class to a parent, followed by the `col–{size}` class to a child element. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Grids are made by adding the `grid` class to a parent and `col col--{size}` classes to children. Column classes include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ *
+ * Grids and their columns use margin and padding for layout, so you should not apply any other margin or padding to these elements. Instead, apply such styling to parent and child elements, and use these elements for the grid layout only.
+ *
  * @group
  * @memberof Grid
  * @example
@@ -87,7 +91,8 @@
 }
 
 /**
- * Appy column gutters to all columns in a grid by adding a `grid--{size}` modifier class to the `grid` element.
+ * Appy column gutters to all columns in a grid by adding a `grid--gut{size}` modifier to the `grid` element.
+ *
  * @example
  * <div class='grid grid--gut12'>
  *   <div class='col col--2'>
@@ -119,7 +124,8 @@
 /* stylelint-enable selector-no-combinator */
 
 /**
- * Left grid offsets. Add offsets directly to columns. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply a left offset to a grid column. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ *
  * @example
  * <div class='grid'>
  *   <div class='col col--6 col--offl6 border border--darken10'>col--6</div>
@@ -187,7 +193,8 @@
 }
 
 /**
- * Right grid offsets. Add offsets directly to columns. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply a right offset to a grid column. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ *
  * @example
  * <div class='grid'>
  *   <div class='col col--3 border border--darken10'>col--3</div>
@@ -263,7 +270,7 @@
  */
 
 /**
- * Set display style to inline, block, inline-block, or none. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set an element's `display` property value. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @memberof Display
  * @group
@@ -301,13 +308,14 @@
 }
 
 /**
- * Basic Positioning. For flexbox-specific positioning rules, see documentation for [flex](#flex-parent) utilities.
+ * Classes for basic positioning. For flexbox positioning rules, see the documentation for [flexbox](#Flexbox) utilities.
+ *
  * @section Positioning
  * @memberof Layout
  */
 
 /**
- * Set an element's position. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set an element's `position` property value. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -350,7 +358,7 @@
 }
 
 /**
- * Pin positioned elements against a side of their container. Positioning classes can be combined to stretch elements across the top, bottom, left, or right of their container. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Pin a positioned element against a side of its container. Positioning classes can be combined to stretch elements across the top, bottom, left, or right sides of their container. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -390,8 +398,8 @@
 }
 
 /**
- * Override default stacking order with z-index classes. Whenever possible, rely on
- * built-in stacking order and avoid these rules. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Override default stacking order by setting an element's `z-index` property value. Whenever possible, rely on
+ * built-in stacking order and avoid using these classes. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @group
  * @memberof Positioning
@@ -442,15 +450,16 @@
 }
 
 /**
- * All margin classes follow the following pattern:
- * `m<side><margin-size>`.
+ * All margin classes fit the following pattern: `m<side><size>`.
+ * And all margin class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @section Margins
  * @memberof Layout
  */
 
 /**
- * Margins on all sides. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply margins on all sides.
+ *
  * @group
  * @example
  * <div class='m24 bg-darken10'>m24</div>
@@ -520,7 +529,8 @@
 }
 
 /**
- * Auto margins on left and right. Useful for horizontally centering content Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set `auto` margins on left and right. This pattern is useful for horizontally centering block elements.
+ *
  * @group
  * @example
  * <div class='mx-auto w72 bg-darken10'>mx-auto</div>
@@ -542,7 +552,8 @@
 }
 
 /**
- * Margins on top & bottom. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply margins on the top and bottom.
+ *
  * @group
  * @example
  * <div class='my24 bg-darken10'>my24</div>
@@ -612,7 +623,8 @@
 }
 
 /**
- * Margins on left & right. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply margins on the left and right.
+ *
  * @group
  * @example
  * <div class='mx24 bg-darken10'>mx24</div>
@@ -682,7 +694,7 @@
 }
 
 /**
- * Margins on top. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply a margin on the top.
  * @group
  * @example
  * <div class='mt24 bg-darken10'>mt24</div>
@@ -752,7 +764,8 @@
 }
 
 /**
- * Margins to the right. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply a margin on the right.
+ *
  * @group
  * @example
  * <div class='border border--darken10'>
@@ -824,7 +837,10 @@
 }
 
 /**
- * Margins on the bottom. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply a margin on the bottom.
+ *
+ * The negative margin classes, `mb-neg*`, can be useful for certain design patterns like underline tabs.
+ *
  * @group
  * @example
  * <div class='mb24 bg-darken10'>mb24</div>
@@ -902,7 +918,8 @@
 }
 
 /**
- * Margins to the left. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply a margin on the left.
+ *
  * @group
  * @example
  * <div class='ml24 bg-darken10'>ml24</div>
@@ -972,15 +989,16 @@
 }
 
 /**
- * All padding classes follow the following pattern:
- * `m<side><padding-size>`.
+ * All padding classes fit the following pattern: `m<side><size>`.
+ * And all padding class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @section Padding
  * @memberof Layout
  */
 
 /**
- * Padding on all sides. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply padding on all sides.
+ *
  * @group
  * @memberof Padding
  * @example
@@ -1034,7 +1052,8 @@
 }
 
 /**
- * Padding on top & bottom. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply padding on the top and bottom.
+ *
  * @group
  * @memberof Padding
  * @example
@@ -1088,7 +1107,8 @@
 }
 
 /**
- * Padding on left & right. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply padding on the left and right.
+ *
  * @group
  * @memberof Padding
  * @example
@@ -1142,7 +1162,8 @@
 }
 
 /**
- * Padding on top. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply padding on the top.
+ *
  * @group
  * @memberof Padding
  * @example
@@ -1196,12 +1217,13 @@
 }
 
 /**
- * Padding to the right. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply padding on the right.
+ *
  * @group
  * @memberof Padding
  * @example
  * <div class='pr24 bg-darken10'>
- *   <div class=' bg-darken10'>pr24</div>
+ *   <div class='bg-darken10'>pr24</div>
  * </div>
  */
 .pr0 { padding-right: 0 !important; }
@@ -1252,7 +1274,8 @@
 }
 
 /**
- * Padding on the bottom. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply padding on the bottom.
+ *
  * @group
  * @memberof Padding
  * @example
@@ -1306,7 +1329,8 @@
 }
 
 /**
- * Padding to the left. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Apply padding on the left.
+ *
  * @group
  * @memberof Padding
  * @example
@@ -1360,15 +1384,16 @@
 }
 
 /**
- * All sizing classes follow the following pattern:
- * `<w|h><min|max><dimension-size>`. Min/max values are optional.
+ * All sizing classes fit the following pattern: `<w|h><min|max><size>`.
+ * And all sizing class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @section Sizing
  * @memberof Layout
  */
 
 /**
- * Widths. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set an element's width.
+ *
  * @group
  * @memberof Sizing
  * @example
@@ -1442,7 +1467,8 @@
 }
 
 /**
- * Max widths. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set an element's maximum width.
+ *
  * @group
  * @memberof Sizing
  * @example
@@ -1520,11 +1546,12 @@
 }
 
 /**
- * Min widths. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set an element's minimum width.
+ *
  * @group
  * @memberof Sizing
  * @example
- * <div class='wmin96 bg-darken10'>wmin96</div>
+ * <div class='inline-block wmin96 bg-darken10'>wmin96</div>
  */
 .wmin0 { min-width: 0 !important; }
 .wmin6 { min-width: 6px !important; }
@@ -1586,7 +1613,8 @@
 }
 
 /**
- * Heights. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set an element's height.
+ *
  * @group
  * @memberof Sizing
  * @example
@@ -1652,7 +1680,8 @@
 }
 
 /**
- * Max heights. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set an element's maximum height.
+ *
  * @group
  * @memberof Sizing
  * @example
@@ -1718,11 +1747,12 @@
 }
 
 /**
- * Min heights. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set an element's minimum height.
+ *
  * @group
  * @memberof Sizing
  * @example
- * <div class='hmin bg-darken10'>hmin12</div>
+ * <div class='hmin48 bg-darken10'>hmin48</div>
  */
 .hmin0 { min-height: 0 !important; }
 .hmin6 { min-height: 6px !important; }
@@ -1784,7 +1814,8 @@
 }
 
 /**
- * Viewport-based heights. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Set a viewport-based height.
+ *
  * @group
  * @memberof Sizing
  * @example
@@ -1822,17 +1853,21 @@
 }
 
 /**
- * Flexbox utilities. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes. Usage must fit the following pattern:
- * - `Flex-parent-*` rules control the parent behavior, while `flex-child-*` rules control the child behavior.
+ * Flexbox utilities. All class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ *
+ * Usage must fit the following pattern:
+ * - `flex-parent` rules control the parent container, while `flex-child-*` rules control the children.
  * - By default, the `main` axis is horizontal and the `cross` axis is vertical. The axes can be inverted with the use of `flex-parent--column`.
- * - To learn more about how the flexbox system works, check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox).
+ * - To learn about how the flexbox system works, check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox).
+ *
  * @section Flexbox
  * @memberof Layout
  */
 
 /**
- * To use flexbox utilities, set display style to flex or inline-flex.
- * This allows use of dependent `flex-parent--*` classes, and `flex-child-*` classes on children.
+ * Establish an element as a flex parent.
+ * These classes allow the use of `flex-parent--*` modifiers, and `flex-child-*` classes on children.
+ *
  * @group
  * @memberof Flexbox
  * @example
@@ -1844,7 +1879,8 @@
 /** @endgroup */
 
 /**
- * Set the direction of the main axis as top-to-bottom.
+ * Set the direction of the main axis to top-to-bottom (default is left-to-right).
+ *
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 flex-parent flex-parent--column'>
@@ -1857,6 +1893,7 @@
 
 /**
  * Center an element's children on the main axis.
+ *
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 flex-parent flex-parent--center-main'>
@@ -1867,6 +1904,7 @@
 
 /**
  * Center an element's children on the cross axis.
+ *
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 h96 flex-parent flex-parent--center-cross'>
@@ -1877,6 +1915,7 @@
 
 /**
  * Justify an element's children to the end of the main axis.
+ *
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 flex-parent flex-parent--justify-end'>
@@ -1886,7 +1925,8 @@
 .flex-parent--justify-end { justify-content: flex-end !important; }
 
 /**
- * Children will wrap, rather than fitting all on one line.
+ * Allow children to wrap. By default, they are all forced onto one line.
+ *
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 clip flex-parent flex-parent--wrap'>
@@ -1897,7 +1937,8 @@
 .flex-parent--wrap { flex-wrap: wrap !important; }
 
 /**
- * Children will stretch to fill the parent container along the cross axis.
+ * Stretch children to fill the parent container along the cross axis.
+ *
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 h96 flex-parent flex-parent--stretch-cross'>
@@ -1907,9 +1948,11 @@
 .flex-parent--stretch-cross { align-items: stretch !important; }
 
 /**
+ * Prevent a child from shrinking below its width value.
+ *
  * By default, flex children (even with specified widths) will shrink as needed to accommodate sibling elements.
  * This class prevents that default shrinkage, forcing siblings to accommodate the parent's width.
- * Prevent the child from shrinking below its width value.
+ *
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 w240 flex-parent'>
@@ -1921,8 +1964,10 @@
 .flex-child-noshrink { flex-shrink: 0 !important; }
 
 /**
- * Specify that a child will grow to fill the container. This is useful when you have one or more elements of
+ * Make a child to grow to fill whatever space is available in the main axis of the parent container.
+ * This is useful when you have one or more elements of
  * fixed width, and another element that should take up the remaining space in the row.
+ *
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 flex-parent'>
@@ -1993,7 +2038,8 @@
 
 /**
  * Bleed utilities. Bleed classes allow an element inside a centered container to escape the container and meet the edge of the screen.
- * When using the bleed classes, consider adding the `.clip` class on a parent element to horizontal overflow.
+ * When using the bleed classes, consider adding the `.clip` class on a parent element to prevent horizontal overflow.
+ *
  * @group
  * @example
  * <div class='bg-darken10 bleed-l'>Left bleed</div>
@@ -2014,7 +2060,8 @@
 /* @endgroup */
 
 /**
- * Float elements. Unfloat removes existing flats. Class set includes `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ * Float utilities. Class set (except `clearfix`) includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ *
  * @group
  * @memberof Layout utils
  * @example

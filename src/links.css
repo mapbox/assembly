@@ -1,20 +1,20 @@
 /**
- * Classes to create clickable, hoverable, focusable, colored text.
- * These classes are often used for actual `<a>` elements, but might also be
- * useful for `<button>`s, depending on semantics.
+ * Create clickable, hoverable, focusable, colored text.
+ * These classes are often used for actual `<a>` elements with `href` attributes,
+ * but might prove useful for `<button>`s, as well, depending on semantics.
  *
  * @section Links
  */
 
 /**
- * By default, the `link` class turns text blue, and provides dark blue
- * `:hover` and `.is-active` states. Combine with `link--{color}` classes for
- * analogous behavior.
+ * Style a link. By default, the `link` class turns text blue, and provides dark blue
+ * hover and active states. Change the color with a `link--{color}` modifier.
+ * Links are underlined when focused.
  *
  * @memberof Links
  * @example
- * <a href='#link' class='link'>A link</a>
- * <a href='#link' class='link link--red'>A red link</a>
+ * <a href='#Links' class='link'>A link</a>
+ * <a href='#Links' class='link link--red'>A red link</a>
  */
 .link {
   cursor: pointer;
@@ -28,8 +28,8 @@
  * @memberof Links
  * @selectors .link.is-active
  * @example
- * <a class='link is-active'>Active</a>
- * <a class='link link--red is-active'>Red and active</a>
+ * <a href='#Links' class='link is-active'>Active</a>
+ * <a href='#Links' class='link link--red is-active'>Red and active</a>
  */
 .link:hover,
 .link.is-active {
