@@ -13960,453 +13960,7 @@ input:checked + .toggle--active-transparent {
       /** @endgroup */"
 `;
 
-exports[`buildColorVariants with granular colors 1`] = `
-"
-/* Color variants */
-
-.btn--green {
-  background-color: #01aa46;
-}
-
-.btn--green:hover,
-.btn--green.is-active {
-  background-color: #007532;
-}
-      
-.btn--purple {
-  background-color: #8c50c7;
-}
-
-.btn--purple:hover,
-.btn--purple.is-active {
-  background-color: #500078;
-}
-      
-.btn--stroke.btn--lighten50 {
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.50);
-}
-
-.btn--stroke.btn--lighten50:hover,
-.btn--stroke.btn--lighten50.is-active {
-  color: rgba(255, 255, 255, 0.75);
-}
-      
-.btn--stroke.btn--lighten25 {
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.25);
-}
-
-.btn--stroke.btn--lighten25:hover,
-.btn--stroke.btn--lighten25.is-active {
-  color: rgba(255, 255, 255, 0.50);
-}
-      
-.btn--stroke.btn--gray {
-  background-color: transparent;
-  color: #666;
-}
-
-.btn--stroke.btn--gray:hover,
-.btn--stroke.btn--gray.is-active {
-  color: #333;
-}
-      
-.textarea--border-lighten50,
-.input--border-lighten50,
-.textarea--border-lighten50,
-.input--border-lighten50 {
-  border-color: rgba(255, 255, 255, 0.50);
-}
-
-.textarea--border-lighten50:hover,
-.input--border-lighten50:hover,
-.textarea--border-lighten50:focus,
-.input--border-lighten50:focus {
-  border-color: rgba(255, 255, 255, 0.75);
-}
-      
-.textarea--border-lighten25,
-.input--border-lighten25,
-.textarea--border-lighten25,
-.input--border-lighten25 {
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
-.textarea--border-lighten25:hover,
-.input--border-lighten25:hover,
-.textarea--border-lighten25:focus,
-.input--border-lighten25:focus {
-  border-color: rgba(255, 255, 255, 0.50);
-}
-      
-.textarea--border-gray,
-.input--border-gray,
-.textarea--border-gray,
-.input--border-gray {
-  border-color: #666;
-}
-
-.textarea--border-gray:hover,
-.input--border-gray:hover,
-.textarea--border-gray:focus,
-.input--border-gray:focus {
-  border-color: #333;
-}
-      
-.select--green {
-  background-color: #01aa46;
-}
-
-.select--green:hover {
-  background-color: #007532;
-}
-      
-.select--stroke-lighten50 {
-  color: rgba(255, 255, 255, 0.50);
-}
-.select--stroke-lighten50 + .select-arrow {
-  border-top-color: rgba(255, 255, 255, 0.50);
-}
-.select--stroke-lighten50:hover {
-  color: rgba(255, 255, 255, 0.75);
-}
-.select--stroke-lighten50:hover + .select-arrow {
-  border-top-color: rgba(255, 255, 255, 0.75);
-}
-      
-.select--stroke-lighten25 {
-  color: rgba(255, 255, 255, 0.25);
-}
-.select--stroke-lighten25 + .select-arrow {
-  border-top-color: rgba(255, 255, 255, 0.25);
-}
-.select--stroke-lighten25:hover {
-  color: rgba(255, 255, 255, 0.50);
-}
-.select--stroke-lighten25:hover + .select-arrow {
-  border-top-color: rgba(255, 255, 255, 0.50);
-}
-      
-.select--stroke-gray {
-  color: #666;
-}
-.select--stroke-gray + .select-arrow {
-  border-top-color: #666;
-}
-.select--stroke-gray:hover {
-  color: #333;
-}
-.select--stroke-gray:hover + .select-arrow {
-  border-top-color: #333;
-}
-      
-.checkbox--lighten50 {
-  color: rgba(255, 255, 255, 0.50);
-}
-
-.checkbox-container:hover > .checkbox--lighten50,
-input:checked + .checkbox--lighten50 {
-  color: rgba(255, 255, 255, 0.75);
-}
-      
-.checkbox--lighten25 {
-  color: rgba(255, 255, 255, 0.25);
-}
-
-.checkbox-container:hover > .checkbox--lighten25,
-input:checked + .checkbox--lighten25 {
-  color: rgba(255, 255, 255, 0.50);
-}
-      
-.checkbox--gray {
-  color: #666;
-}
-
-.checkbox-container:hover > .checkbox--gray,
-input:checked + .checkbox--gray {
-  color: #333;
-}
-      
-.radio--lighten50 {
-  color: rgba(255, 255, 255, 0.50);
-}
-
-.radio-container:hover > .radio--lighten50,
-input:checked + .radio--lighten50 {
-  color: rgba(255, 255, 255, 0.75);
-}
-      
-.radio--lighten25 {
-  color: rgba(255, 255, 255, 0.25);
-}
-
-.radio-container:hover > .radio--lighten25,
-input:checked + .radio--lighten25 {
-  color: rgba(255, 255, 255, 0.50);
-}
-      
-.radio--gray {
-  color: #666;
-}
-
-.radio-container:hover > .radio--gray,
-input:checked + .radio--gray {
-  color: #333;
-}
-      
-.toggle--lighten50 {
-  color: rgba(255, 255, 255, 0.50);
-}
-
-.toggle--lighten50:hover {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-input:checked + .toggle--lighten50 {
-  background: rgba(255, 255, 255, 0.50);
-  color: #fff;
-}
-
-input:checked + .toggle--active-lighten50 {
-  color: rgba(255, 255, 255, 0.50);
-}
-      
-.toggle--lighten25 {
-  color: rgba(255, 255, 255, 0.25);
-}
-
-.toggle--lighten25:hover {
-  color: rgba(255, 255, 255, 0.50);
-}
-
-input:checked + .toggle--lighten25 {
-  background: rgba(255, 255, 255, 0.25);
-  color: #fff;
-}
-
-input:checked + .toggle--active-lighten25 {
-  color: rgba(255, 255, 255, 0.25);
-}
-      
-.toggle--gray {
-  color: #666;
-}
-
-.toggle--gray:hover {
-  color: #333;
-}
-
-input:checked + .toggle--gray {
-  background: #666;
-  color: #fff;
-}
-
-input:checked + .toggle--active-gray {
-  color: #666;
-}
-      
-input:checked + .toggle--active-lighten50 {
-  color: rgba(255, 255, 255, 0.50);
-}
-      
-input:checked + .toggle--active-lighten25 {
-  color: rgba(255, 255, 255, 0.25);
-}
-      
-input:checked + .toggle--active-gray {
-  color: #666;
-}
-      
-/**
- * @section Text colors
- * @memberof Colors
- */
-
-/**
- * Apply a text color.
- *
- * @group
- * @memberof Text colors
- * @example
- * <div class=\'grid\'>
- *   <div class=\'col col--3 color-lighten50\'>color-lighten50</div>
- *   <div class=\'col col--3 color-lighten25\'>color-lighten25</div>
- *   <div class=\'col col--3 color-gray\'>color-gray</div>
- *   <div class=\'col col--3 color-text\'>.color-text</div>
- * </div>
- */
-.color-lighten50 {
-  color: rgba(255, 255, 255, 0.50) !important;
-}
-      
-.color-lighten25 {
-  color: rgba(255, 255, 255, 0.25) !important;
-}
-      
-.color-gray {
-  color: #666 !important;
-}
-      
-.color-text {
-  color: rgba(0, 0, 0, 0.75) !important;
-}
-    /** @endgroup */
-/**
- * @section Background colors
- * @memberof Colors
- */
-
-/**
- * Apply a background color.
- *
- * @group
- * @memberof Background colors
- * @example
- * <div class=\'grid\'>
- *   <div class=\'col col--3 bg-orange p6\'>bg-orange</div>
- *   <div class=\'col col--3 bg-yellow p6\'>bg-yellow</div>
- *   <div class=\'col col--3 bg-pink p6\'>bg-pink</div>
- * </div>
- */
-.bg-orange {
-  background-color: #ff6e00 !important;
-}
-      
-.bg-yellow {
-  background-color: #f0dc00 !important;
-}
-      
-.bg-pink {
-  background-color: #ff3c96 !important;
-}
-      /** @endgroup */
-.link--orange {
-  color: #ff6e00;
-}
-
-.link--orange:hover,
-.link--orange.is-active {
-  color: #DC4600;
-}
-      
-/**
- * Apply a [color](#Colors) to a border.
- *
- * @group
- * @memberof Borders
- * @example
- * <div class=\'border border--red\'>border--red</div>
- */
-.border--lighten50 {
-  border-color: rgba(255, 255, 255, 0.50) !important;
-}
-      
-.border--lighten25 {
-  border-color: rgba(255, 255, 255, 0.25) !important;
-}
-      
-.border--gray {
-  border-color: #666 !important;
-}
-      /** @endgroup */
-/**
- * Apply a box shadow on hover and active states.
- *
- * @group
- * @memberof Shadows
- * @example
- * <div class=\'shadow-darken25-on-hover\'>shadow-darken25-on-hover</div>
- * <div class=\'shadow-darken25-on-active\'>shadow-darken25-on-active (not active)</div>
- * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
- */
-.shadow-lighten50-on-hover:hover,
-.shadow-lighten50-on-active.is-active {
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.50) !important;
-}
-.shadow-bold-lighten50-on-hover:hover,
-.shadow-bold-lighten50-on-active.is-active {
-  box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.50) !important;
-}
-      /** @endgroup */
-/**
- * Apply a background color on hover and active states.
- *
- * @group
- * @memberof Background colors
- * @example
- * <div class=\'bg-darken25-on-hover\'>bg-darken25-on-hover</div>
- * <div class=\'bg-darken25-on-active\'>bg-darken25-on-active (not active)</div>
- * <div class=\'bg-darken25-on-active is-active\'>bg-darken25-on-active (active)</div>
- */
-.bg-lighten50-on-hover:hover,
-.bg-lighten50-on-active.is-active {
-  background-color: rgba(255, 255, 255, 0.50) !important;
-}
-      
-.bg-lighten25-on-hover:hover,
-.bg-lighten25-on-active.is-active {
-  background-color: rgba(255, 255, 255, 0.25) !important;
-}
-      
-.bg-gray-on-hover:hover,
-.bg-gray-on-active.is-active {
-  background-color: #666 !important;
-}
-      /** @endgroup */
-/**
- * Apply a text color on hover and active states.
- *
- * @group
- * @memberof Text colors
- * @example
- * <div class=\'color-red-on-hover\'>color-red-on-hover</div>
- * <div class=\'color-red-on-active\'>color-red-on-active (not active)</div>
- * <div class=\'color-red-on-active is-active\'>color-red-on-active (active)</div>
- */
-.color-lighten50-on-hover:hover,
-.color-lighten50-on-active.is-active {
-  color: rgba(255, 255, 255, 0.50) !important;
-}
-      
-.color-lighten25-on-hover:hover,
-.color-lighten25-on-active.is-active {
-  color: rgba(255, 255, 255, 0.25) !important;
-}
-      
-.color-gray-on-hover:hover,
-.color-gray-on-active.is-active {
-  color: #666 !important;
-}
-      /** @endgroup */
-/**
- * Apply a border color on hover and active states.
- *
- * @group
- * @memberof Borders
- * @example
- * <div class=\'border border--red-on-hover\'>border--red-on-hover</div>
- * <div class=\'border border--red-on-active\'>border--red-on-active (not active)</div>
- * <div class=\'border border--red-on-active is-active\'>border--red-on-active (active)</div>
- */
-.border--lighten50-on-hover:hover,
-.border--lighten50-on-active.is-active {
-  border-color: rgba(255, 255, 255, 0.50) !important;
-}
-      
-.border--lighten25-on-hover:hover,
-.border--lighten25-on-active.is-active {
-  border-color: rgba(255, 255, 255, 0.25) !important;
-}
-      
-.border--gray-on-hover:hover,
-.border--gray-on-active.is-active {
-  border-color: #666 !important;
-}
-      /** @endgroup */"
-`;
-
-exports[`buildColorVariants with universal colors 1`] = `
+exports[`buildColorVariants with default colors array 1`] = `
 "
 /* Color variants */
 
@@ -15020,6 +14574,452 @@ input:checked + .toggle--active-green-light {
 .border--green-light-on-hover:hover,
 .border--green-light-on-active.is-active {
   border-color: #72C781 !important;
+}
+      /** @endgroup */"
+`;
+
+exports[`buildColorVariants with granular colors 1`] = `
+"
+/* Color variants */
+
+.btn--green {
+  background-color: #01aa46;
+}
+
+.btn--green:hover,
+.btn--green.is-active {
+  background-color: #007532;
+}
+      
+.btn--purple {
+  background-color: #8c50c7;
+}
+
+.btn--purple:hover,
+.btn--purple.is-active {
+  background-color: #500078;
+}
+      
+.btn--stroke.btn--lighten50 {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.btn--stroke.btn--lighten50:hover,
+.btn--stroke.btn--lighten50.is-active {
+  color: rgba(255, 255, 255, 0.75);
+}
+      
+.btn--stroke.btn--lighten25 {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.btn--stroke.btn--lighten25:hover,
+.btn--stroke.btn--lighten25.is-active {
+  color: rgba(255, 255, 255, 0.50);
+}
+      
+.btn--stroke.btn--gray {
+  background-color: transparent;
+  color: #666;
+}
+
+.btn--stroke.btn--gray:hover,
+.btn--stroke.btn--gray.is-active {
+  color: #333;
+}
+      
+.textarea--border-lighten50,
+.input--border-lighten50,
+.textarea--border-lighten50,
+.input--border-lighten50 {
+  border-color: rgba(255, 255, 255, 0.50);
+}
+
+.textarea--border-lighten50:hover,
+.input--border-lighten50:hover,
+.textarea--border-lighten50:focus,
+.input--border-lighten50:focus {
+  border-color: rgba(255, 255, 255, 0.75);
+}
+      
+.textarea--border-lighten25,
+.input--border-lighten25,
+.textarea--border-lighten25,
+.input--border-lighten25 {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.textarea--border-lighten25:hover,
+.input--border-lighten25:hover,
+.textarea--border-lighten25:focus,
+.input--border-lighten25:focus {
+  border-color: rgba(255, 255, 255, 0.50);
+}
+      
+.textarea--border-gray,
+.input--border-gray,
+.textarea--border-gray,
+.input--border-gray {
+  border-color: #666;
+}
+
+.textarea--border-gray:hover,
+.input--border-gray:hover,
+.textarea--border-gray:focus,
+.input--border-gray:focus {
+  border-color: #333;
+}
+      
+.select--green {
+  background-color: #01aa46;
+}
+
+.select--green:hover {
+  background-color: #007532;
+}
+      
+.select--stroke-lighten50 {
+  color: rgba(255, 255, 255, 0.50);
+}
+.select--stroke-lighten50 + .select-arrow {
+  border-top-color: rgba(255, 255, 255, 0.50);
+}
+.select--stroke-lighten50:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+.select--stroke-lighten50:hover + .select-arrow {
+  border-top-color: rgba(255, 255, 255, 0.75);
+}
+      
+.select--stroke-lighten25 {
+  color: rgba(255, 255, 255, 0.25);
+}
+.select--stroke-lighten25 + .select-arrow {
+  border-top-color: rgba(255, 255, 255, 0.25);
+}
+.select--stroke-lighten25:hover {
+  color: rgba(255, 255, 255, 0.50);
+}
+.select--stroke-lighten25:hover + .select-arrow {
+  border-top-color: rgba(255, 255, 255, 0.50);
+}
+      
+.select--stroke-gray {
+  color: #666;
+}
+.select--stroke-gray + .select-arrow {
+  border-top-color: #666;
+}
+.select--stroke-gray:hover {
+  color: #333;
+}
+.select--stroke-gray:hover + .select-arrow {
+  border-top-color: #333;
+}
+      
+.checkbox--lighten50 {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.checkbox-container:hover > .checkbox--lighten50,
+input:checked + .checkbox--lighten50 {
+  color: rgba(255, 255, 255, 0.75);
+}
+      
+.checkbox--lighten25 {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.checkbox-container:hover > .checkbox--lighten25,
+input:checked + .checkbox--lighten25 {
+  color: rgba(255, 255, 255, 0.50);
+}
+      
+.checkbox--gray {
+  color: #666;
+}
+
+.checkbox-container:hover > .checkbox--gray,
+input:checked + .checkbox--gray {
+  color: #333;
+}
+      
+.radio--lighten50 {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.radio-container:hover > .radio--lighten50,
+input:checked + .radio--lighten50 {
+  color: rgba(255, 255, 255, 0.75);
+}
+      
+.radio--lighten25 {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.radio-container:hover > .radio--lighten25,
+input:checked + .radio--lighten25 {
+  color: rgba(255, 255, 255, 0.50);
+}
+      
+.radio--gray {
+  color: #666;
+}
+
+.radio-container:hover > .radio--gray,
+input:checked + .radio--gray {
+  color: #333;
+}
+      
+.toggle--lighten50 {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.toggle--lighten50:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+input:checked + .toggle--lighten50 {
+  background: rgba(255, 255, 255, 0.50);
+  color: #fff;
+}
+
+input:checked + .toggle--active-lighten50 {
+  color: rgba(255, 255, 255, 0.50);
+}
+      
+.toggle--lighten25 {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.toggle--lighten25:hover {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+input:checked + .toggle--lighten25 {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+input:checked + .toggle--active-lighten25 {
+  color: rgba(255, 255, 255, 0.25);
+}
+      
+.toggle--gray {
+  color: #666;
+}
+
+.toggle--gray:hover {
+  color: #333;
+}
+
+input:checked + .toggle--gray {
+  background: #666;
+  color: #fff;
+}
+
+input:checked + .toggle--active-gray {
+  color: #666;
+}
+      
+input:checked + .toggle--active-lighten50 {
+  color: rgba(255, 255, 255, 0.50);
+}
+      
+input:checked + .toggle--active-lighten25 {
+  color: rgba(255, 255, 255, 0.25);
+}
+      
+input:checked + .toggle--active-gray {
+  color: #666;
+}
+      
+/**
+ * @section Text colors
+ * @memberof Colors
+ */
+
+/**
+ * Apply a text color.
+ *
+ * @group
+ * @memberof Text colors
+ * @example
+ * <div class=\'grid\'>
+ *   <div class=\'col col--3 color-lighten50\'>color-lighten50</div>
+ *   <div class=\'col col--3 color-lighten25\'>color-lighten25</div>
+ *   <div class=\'col col--3 color-gray\'>color-gray</div>
+ *   <div class=\'col col--3 color-text\'>.color-text</div>
+ * </div>
+ */
+.color-lighten50 {
+  color: rgba(255, 255, 255, 0.50) !important;
+}
+      
+.color-lighten25 {
+  color: rgba(255, 255, 255, 0.25) !important;
+}
+      
+.color-gray {
+  color: #666 !important;
+}
+      
+.color-text {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+    /** @endgroup */
+/**
+ * @section Background colors
+ * @memberof Colors
+ */
+
+/**
+ * Apply a background color.
+ *
+ * @group
+ * @memberof Background colors
+ * @example
+ * <div class=\'grid\'>
+ *   <div class=\'col col--3 bg-orange p6\'>bg-orange</div>
+ *   <div class=\'col col--3 bg-yellow p6\'>bg-yellow</div>
+ *   <div class=\'col col--3 bg-pink p6\'>bg-pink</div>
+ * </div>
+ */
+.bg-orange {
+  background-color: #ff6e00 !important;
+}
+      
+.bg-yellow {
+  background-color: #f0dc00 !important;
+}
+      
+.bg-pink {
+  background-color: #ff3c96 !important;
+}
+      /** @endgroup */
+.link--orange {
+  color: #ff6e00;
+}
+
+.link--orange:hover,
+.link--orange.is-active {
+  color: #DC4600;
+}
+      
+/**
+ * Apply a [color](#Colors) to a border.
+ *
+ * @group
+ * @memberof Borders
+ * @example
+ * <div class=\'border border--red\'>border--red</div>
+ */
+.border--lighten50 {
+  border-color: rgba(255, 255, 255, 0.50) !important;
+}
+      
+.border--lighten25 {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+      
+.border--gray {
+  border-color: #666 !important;
+}
+      /** @endgroup */
+/**
+ * Apply a box shadow on hover and active states.
+ *
+ * @group
+ * @memberof Shadows
+ * @example
+ * <div class=\'shadow-darken25-on-hover\'>shadow-darken25-on-hover</div>
+ * <div class=\'shadow-darken25-on-active\'>shadow-darken25-on-active (not active)</div>
+ * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
+ */
+.shadow-lighten50-on-hover:hover,
+.shadow-lighten50-on-active.is-active {
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.50) !important;
+}
+.shadow-bold-lighten50-on-hover:hover,
+.shadow-bold-lighten50-on-active.is-active {
+  box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.50) !important;
+}
+      /** @endgroup */
+/**
+ * Apply a background color on hover and active states.
+ *
+ * @group
+ * @memberof Background colors
+ * @example
+ * <div class=\'bg-darken25-on-hover\'>bg-darken25-on-hover</div>
+ * <div class=\'bg-darken25-on-active\'>bg-darken25-on-active (not active)</div>
+ * <div class=\'bg-darken25-on-active is-active\'>bg-darken25-on-active (active)</div>
+ */
+.bg-lighten50-on-hover:hover,
+.bg-lighten50-on-active.is-active {
+  background-color: rgba(255, 255, 255, 0.50) !important;
+}
+      
+.bg-lighten25-on-hover:hover,
+.bg-lighten25-on-active.is-active {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
+      
+.bg-gray-on-hover:hover,
+.bg-gray-on-active.is-active {
+  background-color: #666 !important;
+}
+      /** @endgroup */
+/**
+ * Apply a text color on hover and active states.
+ *
+ * @group
+ * @memberof Text colors
+ * @example
+ * <div class=\'color-red-on-hover\'>color-red-on-hover</div>
+ * <div class=\'color-red-on-active\'>color-red-on-active (not active)</div>
+ * <div class=\'color-red-on-active is-active\'>color-red-on-active (active)</div>
+ */
+.color-lighten50-on-hover:hover,
+.color-lighten50-on-active.is-active {
+  color: rgba(255, 255, 255, 0.50) !important;
+}
+      
+.color-lighten25-on-hover:hover,
+.color-lighten25-on-active.is-active {
+  color: rgba(255, 255, 255, 0.25) !important;
+}
+      
+.color-gray-on-hover:hover,
+.color-gray-on-active.is-active {
+  color: #666 !important;
+}
+      /** @endgroup */
+/**
+ * Apply a border color on hover and active states.
+ *
+ * @group
+ * @memberof Borders
+ * @example
+ * <div class=\'border border--red-on-hover\'>border--red-on-hover</div>
+ * <div class=\'border border--red-on-active\'>border--red-on-active (not active)</div>
+ * <div class=\'border border--red-on-active is-active\'>border--red-on-active (active)</div>
+ */
+.border--lighten50-on-hover:hover,
+.border--lighten50-on-active.is-active {
+  border-color: rgba(255, 255, 255, 0.50) !important;
+}
+      
+.border--lighten25-on-hover:hover,
+.border--lighten25-on-active.is-active {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+      
+.border--gray-on-hover:hover,
+.border--gray-on-active.is-active {
+  border-color: #666 !important;
 }
       /** @endgroup */"
 `;

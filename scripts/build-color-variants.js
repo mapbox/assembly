@@ -77,8 +77,8 @@ function isDark(color) {
 function buildColorVariants(variables, config) {
   variables = Object.assign({}, defaultVariables, variables);
   const colorVariants = (Array.isArray(config))
-    ? { universal: config }
-    : Object.assign({ universal: allColors }, config);
+    ? { default: config }
+    : Object.assign({ default: allColors }, config);
 
   function getDarkerShade(color) {
     if (color === 'white') return variables['gray-faint'];
@@ -568,7 +568,7 @@ function buildColorVariants(variables, config) {
   let result = '\n/* Color variants */\n';
 
   Object.keys(variantGenerators).forEach((coloredThing) => {
-    const colors = colorVariants[coloredThing] || colorVariants.universal;
+    const colors = colorVariants[coloredThing] || colorVariants.default;
     if (colors === null || colors === undefined) return;
     result += variantGenerators[coloredThing](colors);
   });

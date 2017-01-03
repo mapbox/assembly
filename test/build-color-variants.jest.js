@@ -15,7 +15,7 @@ describe('buildColorVariants', () => {
     })).toMatchSnapshot();
   });
 
-  it('with universal colors', () => {
+  it('with default colors array', () => {
     expect(buildColorVariants(null, [
       'red',
       'teal',
@@ -26,7 +26,7 @@ describe('buildColorVariants', () => {
 
   it('with granular colors', () => {
     expect(buildColorVariants(null, {
-      universal: ['lighten50', 'lighten25', 'gray'],
+      default: ['lighten50', 'lighten25', 'gray'],
       buttonFill: ['green', 'purple'],
       selectFill: ['green'],
       background: ['orange', 'yellow', 'pink'],

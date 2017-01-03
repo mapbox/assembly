@@ -43,7 +43,7 @@ buildUserAssets('path/to/my/outdir', myOptions)
 
 If the `colorVariants` value is an array, it must be an array of color names corresponding to variables. All components will have color variants generated for all colors in the array.
 
-The following configuration specifies an array of universal colors. All components will have these (and *only these*) color variants.
+The following configuration specifies an array of default colors. All components will have these (and *only these*) color variants.
 
 ```json
 [
@@ -55,7 +55,7 @@ The following configuration specifies an array of universal colors. All componen
 ```
 
 If the `colorVariants` value is an object, each property value must be an array of color names corresponding to variables. The property names designate which component each color array applies to:
-  - `universal`: These colors apply to all components that are not otherwise specified.
+  - `default`: These colors apply to all components that are not otherwise specified.
   - `buttonFill`: `*-dark` colors will not be used.
   - `buttonStroke`: `*-dark` colors will not be used.
   - `inputTextarea`: `*-dark` colors will not be used.
@@ -75,11 +75,11 @@ If the `colorVariants` value is an object, each property value must be an array 
   - `hoverColor`
   - `hoverBorder`
 
-The following configuration specifies colors for individual components. In this configuration, every component not specified will have the `universal` color variants; specified components will have their specified color variants; and `switch` and `range` components will have no color variants (only the default will be available).
+The following configuration specifies colors for individual components. In this configuration, every component not specified will have the `default` color variants; specified components will have their specified color variants; and `switch` and `range` components will have no color variants (only the default will be available).
 
 ```json
 {
-  "universal": ["lighten50", "lighten25", "gray"],
+  "default": ["lighten50", "lighten25", "gray"],
   "buttonFill": ["green", "purple"],
   "selectFill": ["green"],
   "background": ["orange", "yellow", "pink"],
