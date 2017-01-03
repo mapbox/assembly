@@ -2042,7 +2042,12 @@
  *
  * @group
  * @example
- * <div class='bg-darken10 bleed-l'>Left bleed</div>
+ * <div class='bg-darken10 flex-parent flex-parent--center-main clip'>
+ *   <div class='p12 bg-darken10'>
+ *     <div class='bg-darken10 bleed-r'>Right bleed</div>
+ *   </div>
+ * </div>
+ *
  * @memberof Layout utils
  */
 .bleed {
@@ -2066,11 +2071,12 @@
  * @memberof Layout utils
  * @example
  * <div class='clearfix'>
- *   <div class='fl'>left</div>
- *   <div class='fr'>right</div>
+ *   <div class='fl bg-darken10'>left</div>
  * </div>
- * <div class='fl'>left</div>
- * <div class='fr'>right</div>
+ * <div> with .clearfix </div>
+ * <div class='fr bg-darken10'>right</div>
+ * <div class='bg-darken10'> without .clearfix </div>
+ * <div class='fl unfloat'>unfloat</div>
  */
 .fl { float: left !important; }
 .fr { float: right !important; }
