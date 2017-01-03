@@ -136,22 +136,3 @@
 .clip {
   overflow: hidden !important;
 }
-
-/**
- * Apply Assembly's default focus outline when an element is focused.
- *
- * Inputs, selects, buttons, and links already handle focus states.
- * You'll only need to apply this class to other things that you make focusable
- * (e.g. by adding a `tabindex`). If you do not use this class on a focusable
- * element, that element will receive the browser's default focus outline.
- *
- * @memberof Miscellaneous
- * @example
- * <div tabindex='0' class='focusable inline-block bg-blue-light p6'>
- *   I am a div but focusable
- * </div>
- */
-.focusable:focus {
-  outline: 0 !important;
-  box-shadow: var(--focus-shadow) !important;
-}

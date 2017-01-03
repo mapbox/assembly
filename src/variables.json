@@ -60,9 +60,9 @@
   "white": "#fff",
   "transparent": "transparent",
 
-  "neutral10": "rgba(127, 127, 127, .10)",
-  "neutral25": "rgba(127, 127, 127, .25)",
-  "neutral45": "rgba(127, 127, 127, .45)",
+  "neutral10": "rgba(127, 127, 127, 0.10)",
+  "neutral25": "rgba(127, 127, 127, 0.25)",
+  "neutral45": "rgba(127, 127, 127, 0.45)",
 
   "text-color": "rgba(0, 0, 0, 0.75)",
 
@@ -72,7 +72,7 @@
 
   "transition": "0.125s",
 
-  "focus-shadow": "0 0 5px 0 rgba(0, 0, 0, 0.75)",
+  "focus-shadow": "0 0 0 3px rgba(137, 199, 216, 0.65)",
 
   "font-stack-base": "'Open Sans', sans-serif",
   "font-stack-mono": "'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace"

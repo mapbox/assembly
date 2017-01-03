@@ -31,6 +31,7 @@ function handlePostcssError(error) {
 
 const assemblyCssFiles = [
   getCssPath('reset'),
+  getCssPath('focus'),
   getCssPath('fonts'),
   getCssPath('typography'),
   getCssPath('tables'),

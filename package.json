@@ -9,13 +9,13 @@
     "check-size": "node scripts/check-size",
     "build:site": "node scripts/build-site",
     "build:css": "node scripts/build-css",
-    "build:svg": "node scripts/build-svg-sprite",
-    "build": "rm -rf dist && npm-run-all --parallel build:css build:svg build:site",
+    "build:js": "node scripts/build-js",
+    "build": "rm -rf dist && npm-run-all --parallel build:css build:js build:site",
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint .",
     "lint": "npm run lint:css && npm run lint:js",
     "serve": "node scripts/serve",
-    "start": "npm run build:svg && npm run serve",
+    "start": "npm run build:js && npm run serve",
     "test:jest": "jest",
     "test:svgs": "tape test/test-icons.tape.js | tap-spec",
     "test": "npm run lint && npm run test:svgs && npm run test:jest && npm run build:site"
@@ -68,6 +68,7 @@
     "highlight.js": "^9.8.0",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.0",
+    "optimize-js": "^1.0.2",
     "pretty-bytes": "^4.0.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
@@ -77,6 +78,7 @@
     "stylelint": "^7.6.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3",
+    "uglify-js": "^2.7.5",
     "xml2js": "^0.4.17"
   },
   "jest": {
