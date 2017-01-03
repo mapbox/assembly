@@ -47,7 +47,7 @@ class Icons extends React.Component {
           {iconEls}
         </div>
 
-        <h2 className='pt24 txt-bold uppercase mb12 mt24'>
+        <h2 className='pt24 txt-bold txt-uppercase mb12 mt24'>
           Programmatically adding icons with JavaScript
         </h2>
         <div className='mb24'>
