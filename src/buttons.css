@@ -11,7 +11,7 @@
 
 /**
  * Apply a button style.
- * To change the background color of a button, use a `btn--{color}` modifier.
+ * To change the background color of a button, use a `btn--{color}` modifier  (`*-dark` colors are not available).
  * Buttons have white text unless combined with a [`color-*`](#Text-colors) class.
  * Buttons have fully rounded corners unless combined with a [`round-*`](#Border-radius) class.
  *
@@ -46,7 +46,7 @@
 /**
  * Modify a button so its text and borders are colored and its background transparent.
  * The border color and text color will always match.
- * To change the text and border color, use a `btn--{color}` modifier.
+ * To change the text and border color, use a `btn--{color}` modifier (`*-dark` colors are not available).
  *
  * @memberof Buttons
  * @example

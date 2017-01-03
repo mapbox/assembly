@@ -560,6 +560,15 @@ textarea {
 .txt-underline { text-decoration: underline !important; }
 
 /**
+ * Underline text on hover.
+ *
+ * @memberof Type utils
+ * @example
+ * <span class='txt-underline-on-hover'>txt-underline-on-hover</span>
+ */
+.txt-underline-on-hover:hover { text-decoration: underline !important; }
+
+/**
  * Prevent text from wrapping.
  *
  * @memberof Type utils

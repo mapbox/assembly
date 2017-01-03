@@ -62,7 +62,7 @@
 /* stylelint-enable selector-no-attribute */
 
 /**
- * Style a text input. Set the color of the border with a `input--border-{color}` modifier.
+ * Style a text input. Set the color of the border with a `input--border-{color}` modifier (`*-dark` colors are not available).
  *
  * @memberof Inputs & textareas
  * @example
@@ -89,7 +89,7 @@
 }
 
 /**
- * Style a textarea. Set the color of the border with a `textarea--border-{color} modifier.
+ * Style a textarea. Set the color of the border with a `textarea--border-{color} modifier (`*-dark` colors are not available).
  *
  * @memberof Inputs & textareas
  * @example
@@ -160,7 +160,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /*
  * Style a select component.
- * Set the background color by adding a `select--{color}` modifier to the `select` element.
+ * Set the background color by adding a `select--{color}` modifier to the `select` element (`*-dark` colors are not available).
  *
  * @memberof Selects
  * @group
@@ -254,7 +254,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /**
  * Modify a select component so its text and borders are colored and its background transparent.
- * You can still change the color by adding a `select--{color}` modifier to the `select` element.
+ * You can still change the color by adding a `select--{color}` modifier to the `select` element (`*-dark` colors are not available).
  *
  * @memberof Selects
  * @example
@@ -341,7 +341,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /**
  *
- * Style a range element. Set the color by adding a `range--{color}` modifier.
+ * Style a range element. Set the color by adding a `range--{color}` modifier (`*-dark` colors are not available).
  *
  * @memberof Ranges
  * @example
@@ -543,7 +543,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 
 /*
- * Style a checkbox with a label. Change the color of the checkbox with a `checkbox--{color}` modifier.
+ * Style a checkbox with a label. Change the color of the checkbox with a `checkbox--{color}` modifier (`*-dark` colors are not available).
  * Adjust the line height of the checkbox to match a label with small text with the `checkbox--s-label` modifier.
  *
  * @memberof Checkboxes
@@ -601,7 +601,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 
 /**
- * Style a radio button. Change the color of the radio button with a `radio--{color}` modifier.
+ * Style a radio button. Change the color of the radio button with a `radio--{color}` modifier (`*-dark` colors are not available).
  * Adjust the line height of the radio button to match a label with small text with the `radio--s-label` modifier.
  *
  * @memberof Radio buttons
@@ -653,7 +653,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 /**
  * Style a switch.
  * Change the color of the dot when inactive, the border when inactive,
- * and the background when active with a `switch--{color}` modifier.
+ * and the background when active with a `switch--{color}` modifier (`*-dark` colors are not available).
  * Change the color of the dot when active with a `switch--dot-{color}` modifier.
  *
  * @memberof Switches
@@ -711,8 +711,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /**
  * Style a toggle group.
- * Change the inactive toggle text color and the active toggle background color with a `toggle--{color}` modifier.
- * Change the active label color with a `toggle--active-{color}` modifier.
+ * Change the inactive toggle text color and the active toggle background color with a `toggle--{color}` modifier (`*-dark` colors are not available).
+ * Change the active label color with a `toggle--active-{color}` modifier (`*-dark` colors are not available).
  * Change the border radiuses of toggle groups inside small text with `toggle-group--s` on the `toggle-container` element.
  *
  * @group
