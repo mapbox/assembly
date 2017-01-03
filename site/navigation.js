@@ -9,7 +9,7 @@ class Navigation extends React.Component {
       if (!items || items.length === 0) return null;
       return items.map((member) => {
         let linkContainerClasses;
-        let linkClasses = 'link mr12 mr0-mm inline-block block-mm txt-s';
+        let linkClasses = 'link link--gray mr12 mr0-mm inline-block block-mm txt-s';
         if (level !== 0) {
           linkClasses += ` ml${6 * level}-mm`;
         }
@@ -51,14 +51,14 @@ class Navigation extends React.Component {
       );
       return (
         <div key={r.name}>
-          <a className={`txt-s txt-bold block link mb6 ${r.name === props.navData.active ? 'is-active' : ''}`} href={`/assembly${r.route}`}>{r.name}</a>
+          <a className={`txt-s txt-bold block link link--gray mb6 ${r.name === props.navData.active ? 'is-active' : ''}`} href={`/assembly${r.route}`}>{r.name}</a>
           {nestedItems}
         </div>
       );
     });
 
     return (<div>
-      <a href='/assembly/' className='mb24 txt-mono link txt-spacing2 uppercase block'>Assembly</a>
+      <a href='/assembly/' className='mb24 txt-mono link link--gray txt-spacing2 uppercase block'>Assembly</a>
       {navEls}
     </div>);
   }
