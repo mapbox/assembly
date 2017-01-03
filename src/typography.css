@@ -522,26 +522,32 @@ textarea {
  * @memberof Type utils
  * @group
  * @example
- * <div class='txt-align-l'>.txt-align-l</div>
- * <div class='txt-align-r'>.txt-align-r</div>
- * <div class='txt-align-center'>.txt-align-center</div>
+ * <div class='align-l'>.align-l</div>
+ * <div class='align-r'>.align-r</div>
+ * <div class='align-center'>.align-center</div>
  */
-.txt-align-l { text-align: left !important; }
-.txt-align-r { text-align: right !important; }
-.txt-align-center { text-align: center !important; }
+.align-l { text-align: left !important; }
+.align-r { text-align: right !important; }
+.align-center { text-align: center !important; }
 /** @endgroup */
 
 /**
- * Control the vertical alignment of an inline element.
+ * Control the vertical alignment of an inline or table-cell element.
  *
  * @memberof Type utils
  * @group
  * @example
- * <div class='txt-align-t'>txt-align-t</div>
- * <div class='txt-align-middle'>txt-align-middle</div>
+ * <div>
+ *   <span class='align-t inline-block h12 w12 border border--gray'></span>
+ *   <span class='align-t inline-block h48 border border--gray'>align-top</span>
+ * </div>
+ * <div class='mt3'>
+ *   <span class='align-middle inline-block h12 w12 border'></span>
+ *   <span class='align-middle inline-block h48 border border--gray'>align-middle</span>
+ * </div>
  */
-.txt-align-t { vertical-align: top !important; }
-.txt-align-middle { vertical-align: middle !important; }
+.align-t { vertical-align: top !important; }
+.align-middle { vertical-align: middle !important; }
 /** @endgroup */
 
 /**

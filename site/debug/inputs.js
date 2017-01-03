@@ -97,7 +97,7 @@ class Inputs extends React.Component {
                 type='search'
               />
             </div>
-            <div className='mr6 mb6 inline-block txt-align-t'>
+            <div className='mr6 mb6 inline-block align-t'>
               <input
                 className='input'
                 type='color'
