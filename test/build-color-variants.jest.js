@@ -26,11 +26,14 @@ describe('buildColorVariants', () => {
 
   it('with granular colors', () => {
     expect(buildColorVariants(null, {
+      universal: ['lighten50', 'lighten25', 'gray'],
       buttonFill: ['green', 'purple'],
       selectFill: ['green'],
       background: ['orange', 'yellow', 'pink'],
       link: ['orange'],
-      hoverShadow: ['lighten50']
+      hoverShadow: ['lighten50'],
+      switch: [],
+      range: [],
     })).toMatchSnapshot();
   });
 });

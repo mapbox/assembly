@@ -3,7 +3,7 @@
 const stripIndent = require('strip-indent');
 const defaultVariables = require('../src/variables');
 
-const allConfig = [
+const allColors = [
   'gray-dark',
   'gray',
   'gray-light',
@@ -76,10 +76,9 @@ function isDark(color) {
 
 function buildColorVariants(variables, config) {
   variables = Object.assign({}, defaultVariables, variables);
-  config = config || allConfig;
-  const universalColors = (Array.isArray(config))
-    ? config
-    : null;
+  const colorVariants = (Array.isArray(config))
+    ? { universal: config }
+    : Object.assign({ universal: allColors }, config);
 
   function getDarkerShade(color) {
     if (color === 'white') return variables['gray-faint'];
@@ -163,7 +162,7 @@ function buildColorVariants(variables, config) {
     }, '');
   };
 
-  variantGenerators.inputStroke = function (colors) {
+  variantGenerators.inputTextarea = function (colors) {
     return colors.reduce((result, color) => {
       if (isDark(color)) return result;
       const colorValue = variables[color];
@@ -296,8 +295,8 @@ function buildColorVariants(variables, config) {
       const darkerShade = getDarkerShade(color);
       // Set the text color to regular when inactive.
       // Set the text color to dark when inactive on hover.
-      // Set the background color to dark and text color to white
-      // when active.
+      // Set the background color to regular and text color to white when active.
+      // Set the text color of toggle label when active.
       return result += stripIndent(`
         .toggle--${color} {
           color: ${colorValue};
@@ -311,6 +310,10 @@ function buildColorVariants(variables, config) {
           background: ${colorValue};
           color: #fff;
         }
+
+        input:checked + .toggle--active-${color} {
+          color: ${colorValue};
+        }
       `);
     }, '');
   };
@@ -318,8 +321,8 @@ function buildColorVariants(variables, config) {
   variantGenerators.toggleActive = function (colors) {
     return colors.reduce((result, color) => {
       const colorValue = variables[color];
-      // Set the text color of toggle label when active.
-      // Must be below .toggle group in  stylesheet
+
+      // Must be below .toggle group in stylesheet
       return result += stripIndent(`
         input:checked + .toggle--active-${color} {
           color: ${colorValue};
@@ -449,14 +452,14 @@ function buildColorVariants(variables, config) {
        * @example
        * <div class='border border--red'>border--red</div>
        */`);
-    css +=  colors.reduce((result, color) => {
+    css += colors.reduce((result, color) => {
       return result += stripIndent(`
         .border--${color} {
           border-color: ${variables[color]} !important;
         }
       `);
     }, '');
-    css +=  '/** @endgroup */';
+    css += '/** @endgroup */';
     return css;
   };
 
@@ -486,7 +489,7 @@ function buildColorVariants(variables, config) {
         }
       `);
     }, '');
-    css +=  '/** @endgroup */';
+    css += '/** @endgroup */';
     return css;
   };
 
@@ -510,7 +513,7 @@ function buildColorVariants(variables, config) {
         }
       `);
     }, '');
-    css +=  '/** @endgroup */';
+    css += '/** @endgroup */';
     return css;
   };
 
@@ -534,7 +537,7 @@ function buildColorVariants(variables, config) {
         }
       `);
     }, '');
-    css +=  '/** @endgroup */';
+    css += '/** @endgroup */';
     return css;
   };
 
@@ -558,14 +561,14 @@ function buildColorVariants(variables, config) {
         }
       `);
     }, '');
-    css +=  '/** @endgroup */';
+    css += '/** @endgroup */';
     return css;
   };
 
   let result = '\n/* Color variants */\n';
 
   Object.keys(variantGenerators).forEach((coloredThing) => {
-    const colors = universalColors || config[coloredThing];
+    const colors = colorVariants[coloredThing] || colorVariants.universal;
     if (colors === null || colors === undefined) return;
     result += variantGenerators[coloredThing](colors);
   });
