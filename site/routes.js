@@ -4,7 +4,6 @@ import { Page } from './page';
 import { Documentation } from './documentation/documentation';
 import { Home } from './home';
 import { Icons } from './icons';
-import { Examples } from './examples';
 import { Debug } from './debug';
 import fs from 'fs';
 import path from 'path';
@@ -24,19 +23,20 @@ const routes = [
   {
     name: 'Home',
     route: '/'
-  }, {
+  },
+  {
     name: 'Documentation',
     route: '/documentation/'
-  }, {
-    name: 'Examples',
-    route: '/examples/'
-  }, {
+  },
+  {
     name: 'Icons',
     route: '/icons/'
-  }, {
+  },
+  {
     name: 'Debug',
     route: '/debug/'
-  }];
+  }
+];
 
 function buildRoutes() {
   const routesWithComponents = routes.map((r) => {
@@ -97,13 +97,6 @@ function buildRoutes() {
         r.component = (
           <Page navData={navData}>
             <Home {...props} />
-          </Page>
-        );
-        break;
-      case 'Examples':
-        r.component = (
-          <Page navData={navData}>
-            <Examples {...props} />
           </Page>
         );
         break;
