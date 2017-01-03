@@ -1,7 +1,7 @@
 Assembly
 ---
 
-A CSS framework.
+A CSS framework that makes the hard parts of building anything on the web easy. We define the hard parts as: managing class specificity, designing cross-browser form components that work well with each other, creating a harmonious typographic scale, maintaining a baseline grid, and keeping responsive designs simple.
 
 [![Build Status](https://travis-ci.com/mapbox/assembly.svg?token=FB2dZNVWaGo68KZnwz9M&branch=mb-pages)](https://travis-ci.com/mapbox/assembly)
 
@@ -10,21 +10,18 @@ Browser support
 
 Assembly targets IE 11+ and other modern browsers.
 
-## Principles
+## Development principles
 
-### Class naming convention
+### Writing rules
+
+Assembly strives for flat, single rule declarations and avoids overrides whenever possible. Assembly makes all Atomic-style utility classes `!important`, so they cannot be overridden, and so they are guarateed to do what they say they do.
+
+### Naming classes
 
 - Keep names as short as possible.
 - Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.p6` for `padding: 5px` instead of `.p-small` or `.p-1`.
 - If the number of utility classes describing a property is limited, Assembly classes use the suffixes, `xl`, `l`, `m`, `s`, `sm`.
-- Unless absolutely necessary, selectors consist of a single class. This means that a class's effect will not vary when combined with different classes.
 - Assembly doesn't have a top level namespace. Assembly is designed to provide fundamental rules that are used frequently and should be easy to type and remember. If you want to use your own css with base, consider namespacing that css.
-
-### Media queries
-
-- Many classes have media query variants. The media query variants follow a naming convention: suffix `-media-{size}` to end of the rule. For example, for the class `.p6`, the variations are: `.p6-ms`, `.p6-ml`, `.p6-mxl`.
-- If a class has a media query variant for one breakpoint, it must also have a variant for all breakpoints.
-- Order in stylesheet of media query rules is consistent: first the default rule, followed by the `-mm` rule, followed by the `-ml` rule, followed by the `-mxl` rule. We do this to guarantee that as page size gets larger, rules that target larger screens override rules that target small screens, etc.
 
 ## Development
 
