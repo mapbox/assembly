@@ -1,9 +1,6 @@
 import React from 'react';
 const defaultMediaQueries = require('../src/media-queries');
 
-const headIncludes = `<link href="https://www.mapbox.com/assembly/assembly.css" rel="stylesheet"
-<script src="https://www.mapbox.com/assembly/assembly.js"></script>`;
-
 class Home extends React.Component {
   render() {
     return (
@@ -18,11 +15,19 @@ class Home extends React.Component {
           Usage
         </h2>
         <p>
-          Include in the head of your HTML the Assembly stylesheet and icon-loading JavaScript.
+          Include in the head of your HTML the Assembly stylesheet.
         </p>
-        <pre className='mt12 pre'>
+        <pre className='mt6 pre'>
           <code>
-            {headIncludes}
+            {'<link href="https://www.mapbox.com/assembly/assembly.css" rel="stylesheet">'}
+          </code>
+        </pre>
+        <p className='mt6'>
+          And include somewhere in your HTML, depending on your preferences, the Assembly JavaScript. It is safe to use the `async` and `defer` attributes.
+        </p>
+        <pre className='mt6 pre'>
+          <code>
+            {'<script async defer src="https://www.mapbox.com/assembly/assembly.js"></script>'}
           </code>
         </pre>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l uppercase txt-bold'>
