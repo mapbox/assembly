@@ -54,7 +54,7 @@ class Entry extends React.Component {
       <span
         key={selector}
         id={`${selector.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
-        className='mr3 pl3 pr3 round bg-blue color-white txt-mono inline-block'>
+        className='mr3 pr3 px3 txt-mono color-purple-dark round bg-purple-faint mb3 inline-block'>
         {selector.trim()}
       </span>;
 
@@ -64,14 +64,14 @@ class Entry extends React.Component {
     const expandButton = selectors !== undefined && selectors.length > 15 ? (
       <button
         id={`expandButton-${selectors && selectors[0]}`}
-        className='ml3 color-darken50 round btn txt-s btn--xs btn--darken10'>
+        className='ml3 btn btn--xs btn--purple round'>
         See all
       </button>
     ) : null;
 
     return (
-      <div className='border-t border--2 border--gray-faint pt48 pb48 flex-parent flex-parent--wrap'>
-        <div className='txt-s txt-m-mxl col col--12 col--4-ml pr12-ml mb6'>
+      <div className='grid-mxl grid--gut18-mxl border-t border--2 border--gray-faint pt48 pb48'>
+        <div className='col col--4-mxl pr18-ml mb6'>
           <div className='none' id={`expanded-${selectors && selectors[0]}`}>
             {selectorEls}
           </div>
@@ -80,8 +80,8 @@ class Entry extends React.Component {
           </div>
           {expandButton}
         </div>
-        <div className='col col--12 col--8-ml'>
-          <div className='mb48 prose'>
+        <div className='col col--8-mxl'>
+          <div className='mb24 prose'>
             {remark().use(reactRenderer).process(props.parsedComment.description).contents}
           </div>
           {example}

@@ -9,16 +9,14 @@ class Navigation extends React.Component {
       if (!items || items.length === 0) return null;
       return items.map((member) => {
         let linkContainerClasses;
-        let linkClasses = 'link mr12 mr0-mm inline-block block-mm txt-s';
-        if (level !== 0) {
-          linkClasses += ` ml${6 * level}-mm`;
-        }
+        let linkClasses = 'color-purple-on-hover relative mr12 mr0-mm pb3 txt-s';
+        linkClasses += ` ml${6 * (level + 1)}-mm`;
         if (member.name === props.navData.active) {
           linkClasses += ' is-active';
         }
         if (level === 0) {
+          linkContainerClasses = 'block mt6 mt0-mm';
           linkClasses += ' txt-bold';
-          linkContainerClasses = 'block';
         } else {
           linkContainerClasses = 'inline-block block-mm ';
         }
@@ -45,13 +43,13 @@ class Navigation extends React.Component {
         || r.items === undefined
         || r.items.length === 0;
       const nestedItems = (showNestedItems) ? null : (
-        <div className='pl6 txt-s mb6'>
+        <div className='mb6 ml12 ml0-mm txt-s'>
           {listNestedMembers(r.items)}
         </div>
       );
       return (
         <div key={r.name}>
-          <a className={`txt-s txt-bold block link mb6 ${r.name === props.navData.active ? 'is-active' : ''}`} href={`/assembly${r.route}`}>{r.name}</a>
+          <a className={`txt-s txt-bold txt-uppercase block color-purple-on-hover mb6 ${r.name === props.navData.active ? 'color-darken50' : ''}`} href={`/assembly${r.route}`}>{r.name}</a>
           {nestedItems}
         </div>
       );
@@ -59,12 +57,14 @@ class Navigation extends React.Component {
 
     return (
       <div className='flex-parent-mm flex-parent--column-mm w-full'>
-        <a href='/assembly/' className='mt24 mb12 mx24 txt-mono link txt-spacing2 txt-uppercase block'>Assembly</a>
+        <div className='txt-l'>
+          <a href='/assembly/' className='mt24 mb12 mx24 txt-mono link link--purple txt-spacing2 txt-uppercase block'>Assembly</a>
+        </div>
         <div className='flex-child-grow-mm scroll-auto pr18 pl24'>
           {navEls}
         </div>
         <div className='mt12 mb24 mx24 flex-child-noshrink-mm'>
-          <a className='link txt-s' href='https://github.com/mapbox/assembly/'>
+          <a className='color-purple-on-hover txt-s' href='https://github.com/mapbox/assembly/'>
             <svg
               className='icon'
               dangerouslySetInnerHTML={{ __html: '<use xlink:href="#icon-github"></use>' }}

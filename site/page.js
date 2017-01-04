@@ -5,10 +5,10 @@ class Page extends React.Component {
   render() {
     return (
       <div>
-        <div className='bg-darken5 scroll-auto viewport-full-mm w180-mm fixed-mm top left flex-parent-mm flex-parent--stretch-cross-mm'>
+        <div className='bg-gray-faint scroll-auto viewport-full-mm w180-mm fixed-mm top left flex-parent-mm flex-parent--stretch-cross-mm'>
           <Navigation navData={this.props.navData} />
         </div>
-        <div className='ml180-mm wmax1200 pl24 pr24 pl48-mm pr48-mm mb24'>
+        <div className='ml180-mm wmax1200 pl24 pr24 pl48-mm pr48-mm mb72'>
           {this.props.children}
         </div>
       </div>

@@ -46,6 +46,11 @@
 /** @endgroup */
 
 @media (--m-screen) {
+  .grid-mm {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
   .col--1-mm { width: 08.3333% !important; }
   .col--2-mm { width: 16.6666% !important; }
   .col--3-mm { width: 25% !important; }
@@ -61,6 +66,11 @@
 }
 
 @media (--l-screen) {
+  .grid-ml {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
   .col--1-ml { width: 08.3333% !important; }
   .col--2-ml { width: 16.6666% !important; }
   .col--3-ml { width: 25% !important; }
@@ -76,6 +86,11 @@
 }
 
 @media (--xl-screen) {
+  .grid-mxl {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
   .col--1-mxl { width: 08.3333% !important; }
   .col--2-mxl { width: 16.6666% !important; }
   .col--3-mxl { width: 25% !important; }
@@ -91,7 +106,7 @@
 }
 
 /**
- * Appy column gutters to all columns in a grid by adding a `grid--gut{size}` modifier to the `grid` element.
+ * Appy column gutters to all columns in a grid by adding a `grid--gut{size}` modifier to the `grid` element. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @example
  * <div class='grid grid--gut12'>
@@ -122,6 +137,54 @@
 .grid--gut48 > .col { padding-left: 48px !important; }
 .grid--gut96 > .col { padding-left: 96px !important; }
 /* stylelint-enable selector-no-combinator */
+
+@media (--m-screen) {
+  .grid--gut6-mm { margin-left: -6px !important; }
+  .grid--gut12-mm { margin-left: -12px !important; }
+  .grid--gut24-mm { margin-left: -24px !important; }
+  .grid--gut48-mm { margin-left: -48px !important; }
+  .grid--gut96-mm { margin-left: -96px !important; }
+
+  /* stylelint-disable selector-no-combinator */
+  .grid--gut6-mm > .col { padding-left: 6px !important; }
+  .grid--gut12-mm > .col { padding-left: 12px !important; }
+  .grid--gut24-mm > .col { padding-left: 24px !important; }
+  .grid--gut48-mm > .col { padding-left: 48px !important; }
+  .grid--gut96-mm > .col { padding-left: 96px !important; }
+  /* stylelint-enable selector-no-combinator */
+}
+
+@media (--l-screen) {
+  .grid--gut6-ml { margin-left: -6px !important; }
+  .grid--gut12-ml { margin-left: -12px !important; }
+  .grid--gut24-ml { margin-left: -24px !important; }
+  .grid--gut48-ml { margin-left: -48px !important; }
+  .grid--gut96-ml { margin-left: -96px !important; }
+
+  /* stylelint-disable selector-no-combinator */
+  .grid--gut6-ml > .col { padding-left: 6px !important; }
+  .grid--gut12-ml > .col { padding-left: 12px !important; }
+  .grid--gut24-ml > .col { padding-left: 24px !important; }
+  .grid--gut48-ml > .col { padding-left: 48px !important; }
+  .grid--gut96-ml > .col { padding-left: 96px !important; }
+  /* stylelint-enable selector-no-combinator */
+}
+
+@media (--xl-screen) {
+  .grid--gut6-mxl { margin-left: -6px !important; }
+  .grid--gut12-mxl { margin-left: -12px !important; }
+  .grid--gut24-mxl { margin-left: -24px !important; }
+  .grid--gut48-mxl { margin-left: -48px !important; }
+  .grid--gut96-mxl { margin-left: -96px !important; }
+
+  /* stylelint-disable selector-no-combinator */
+  .grid--gut6-mxl > .col { padding-left: 6px !important; }
+  .grid--gut12-mxl > .col { padding-left: 12px !important; }
+  .grid--gut24-mxl > .col { padding-left: 24px !important; }
+  .grid--gut48-mxl > .col { padding-left: 48px !important; }
+  .grid--gut96-mxl > .col { padding-left: 96px !important; }
+  /* stylelint-enable selector-no-combinator */
+}
 
 /**
  * Apply a left offset to a grid column. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
