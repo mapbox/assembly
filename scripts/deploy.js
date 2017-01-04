@@ -8,7 +8,7 @@ const pkg = require('../package');
 
 const bucket = new S3({
   params: {
-    Bucket: 'www.mapbox.com/assembly/' + pkg.version
+    Bucket: 'www.mapbox.com/assembly/v' + pkg.version
   }
 });
 
