@@ -61,7 +61,7 @@ class Typography extends React.Component {
           <div className='txt-xl txt-bold mb18 mt24'>Sit Nullam Elit</div>
 
           {/* note there is no bottom margin here, on the final element in the container */}
-          <div className='txt-xl mb18 mt24 txt-bold em'>Sit Nullam Elit</div>
+          <div className='txt-xl mb18 mt24 txt-bold txt-em'>Sit Nullam Elit</div>
 
         </div>
       </div>

@@ -28,7 +28,7 @@ class Elements extends React.Component {
           </div>
           <div className='col col--4'>
             classes
-            <p>Lorem <sup className='txt-sup'>ipsum</sup> dolor <sub className='txt-sub'>sit</sub> amet, <abbr className='txt-abbr'>consectetur adipisicing elit</abbr>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <code className='code'>Cool code</code> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <kbd className='txt-kbd'>T</kbd> aliquip ex ea commodo consequat.</p>
+            <p>Lorem <sup className='txt-sup'>ipsum</sup> dolor <sub className='txt-sub'>sit</sub> amet, <abbr className='txt-abbr'>consectetur adipisicing elit</abbr>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <code className='txt-code'>Cool code</code> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <kbd className='txt-kbd'>T</kbd> aliquip ex ea commodo consequat.</p>
             <p><img src='http://placehold.it/800' alt='' /></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <hr className='txt-hr' />

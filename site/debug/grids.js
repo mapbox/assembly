@@ -69,16 +69,16 @@ class Grids extends React.Component {
           Grid
         </h1>
 
-        <h2 className='mb12 mt24 txt-l uppercase txt-bold'>Standard grid</h2>
+        <h2 className='mb12 mt24 txt-l txt-uppercase txt-bold'>Standard grid</h2>
         {GridEls}
 
-        <h2 className='mb12 mt24 txt-l uppercase txt-bold'>Grid with gutters</h2>
+        <h2 className='mb12 mt24 txt-l txt-uppercase txt-bold'>Grid with gutters</h2>
         {GridElsWithGutters}
 
-        <h2 className='mb12 mt24 txt-l uppercase txt-bold'>Grid with left offset</h2>
+        <h2 className='mb12 mt24 txt-l txt-uppercase txt-bold'>Grid with left offset</h2>
         {GridElsWithLeftMargin}
 
-        <h2 className='mb12 mt24 txt-l uppercase txt-bold'>Grid with right offset</h2>
+        <h2 className='mb12 mt24 txt-l txt-uppercase txt-bold'>Grid with right offset</h2>
         {GridElsWithRightMargin}
       </div>
     );

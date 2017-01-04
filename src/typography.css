@@ -366,7 +366,7 @@ textarea {
   top: 0.5ex;
 }
 
-.code,
+.txt-code,
 .pre,
 .prose code,
 .prose pre {
@@ -388,9 +388,9 @@ textarea {
  *
  * @memberof Type basics
  * @example
- * Make sure you <code class='code'>git checkout</code> the repository.
+ * Make sure you <code class='txt-code'>git checkout</code> the repository.
  */
-.code,
+.txt-code,
 .prose code {
   padding: 2px 4px;
 }
@@ -475,80 +475,46 @@ textarea {
  *
  * @memberof Type utils
  * @example
- * <div class='em'>em</div>
+ * <div class='txt-em'>em</div>
  */
-.em { font-style: italic !important; }
+.txt-em { font-style: italic !important; }
 
 /**
  * Capitalize all letters in an element.
  *
  * @memberof Type utils
  * @example
- * <div class='uppercase'>UpPeRcAsE</div>
+ * <div class='txt-uppercase'>UpPeRcAsE</div>
  */
-.uppercase { text-transform: uppercase !important; }
+.txt-uppercase { text-transform: uppercase !important; }
 
 /**
  * Lowercase all letters in an element.
  *
  * @memberof Type utils
  * @example
- * <div class='lowercase'>LoWeRcAsE</div>
+ * <div class='txt-lowercase'>LoWeRcAsE</div>
  */
-.lowercase { text-transform: lowercase !important; }
+.txt-lowercase { text-transform: lowercase !important; }
 
 /**
  * Capitalize all words in an element.
  *
  * @memberof Type utils
  * @example
- * <div class='capitalize'>all words are capitalized</div>
+ * <div class='txt-capitalize'>all words are capitalized</div>
  */
-.capitalize { text-transform: capitalize !important; }
+.txt-capitalize { text-transform: capitalize !important; }
 
 /**
  * Capitalize the first letter in an element.
  *
  * @memberof Type utils
  * @example
- * <div class='capitalize-first'>first word only is capitalized</div>
+ * <div class='txt-capitalize-first'>first word only is capitalized</div>
  */
-.capitalize-first { text-transform: lowercase !important; }
-.capitalize-first::first-letter { text-transform: capitalize !important; }
-
-/**
- * Control the horizontal alignment of an element's inline children.
- *
- * @memberof Type utils
- * @group
- * @example
- * <div class='align-l'>.align-l</div>
- * <div class='align-r'>.align-r</div>
- * <div class='align-center'>.align-center</div>
- */
-.align-l { text-align: left !important; }
-.align-r { text-align: right !important; }
-.align-center { text-align: center !important; }
-/** @endgroup */
-
-/**
- * Control the vertical alignment of an inline or table-cell element.
- *
- * @memberof Type utils
- * @group
- * @example
- * <div>
- *   <span class='align-t inline-block h12 w12 border border--gray'></span>
- *   <span class='align-t inline-block h48 border border--gray'>align-top</span>
- * </div>
- * <div class='mt3'>
- *   <span class='align-middle inline-block h12 w12 border'></span>
- *   <span class='align-middle inline-block h48 border border--gray'>align-middle</span>
- * </div>
- */
-.align-t { vertical-align: top !important; }
-.align-middle { vertical-align: middle !important; }
-/** @endgroup */
+.txt-capitalize-first { text-transform: lowercase !important; }
+.txt-capitalize-first::first-letter { text-transform: capitalize !important; }
 
 /**
  * Underline text.
@@ -769,3 +735,37 @@ textarea {
 }
 /* stylelint-enable selector-no-universal */
 /* end prose-specific rules */
+
+/**
+ * Control the horizontal alignment of an element's inline children.
+ *
+ * @memberof Type utils
+ * @group
+ * @example
+ * <div class='align-l'>.align-l</div>
+ * <div class='align-r'>.align-r</div>
+ * <div class='align-center'>.align-center</div>
+ */
+.align-l { text-align: left !important; }
+.align-r { text-align: right !important; }
+.align-center { text-align: center !important; }
+/** @endgroup */
+
+/**
+ * Control the vertical alignment of an inline or table-cell element.
+ *
+ * @memberof Type utils
+ * @group
+ * @example
+ * <div>
+ *   <span class='align-t inline-block h12 w12 border border--gray'></span>
+ *   <span class='align-t inline-block h48 border border--gray'>align-top</span>
+ * </div>
+ * <div class='mt3'>
+ *   <span class='align-middle inline-block h12 w12 border'></span>
+ *   <span class='align-middle inline-block h48 border border--gray'>align-middle</span>
+ * </div>
+ */
+.align-t { vertical-align: top !important; }
+.align-middle { vertical-align: middle !important; }
+/** @endgroup */
