@@ -9,21 +9,12 @@ const defaultMediaQueries = require('../src/media-queries');
 class Home extends React.Component {
   render() {
     return (
-      <div className='mt24 mb96 wmax960'>
+      <div className='mt24 wmax960'>
         <div className='txt-headline'>
-          <h1 className='animation-rainbow animation--speed-8 color-teal txt-mono txt-uppercase txt-headline txt-spacing2 pl6 pr6'>Assembly.css</h1>
+          <h1 className='animation-rainbow animation--speed-8 color-purple txt-mono txt-uppercase txt-headline txt-spacing2 pl6 pr6'>Assembly.css</h1>
         </div>
         <p className='txt-l mt24'>
-          Assembly is a CSS framework that makes the hard parts of designing for the web easy.
-        </p>
-        <p className='mt24'>
-          <a className='link' href='https://github.com/mapbox/assembly/'>
-            <svg
-              className='icon'
-              dangerouslySetInnerHTML={{ __html: '<use xlink:href="#icon-github"></use>' }}
-            />
-            <span className='ml6 align-middle'>View on GitHub</span>
-          </a>
+          Assembly is an open source CSS framework that makes the hard parts of designing for the web easy.
         </p>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-uppercase txt-bold'>
           Usage
