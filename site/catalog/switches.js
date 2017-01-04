@@ -47,9 +47,9 @@ class Switches extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb18'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-uppercase txt-bold'>
           Switches
-        </h1>
+        </h2>
 
         {colors.map((handle, i) =>
           <div key={i} className='mb12'>

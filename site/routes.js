@@ -4,7 +4,7 @@ import { Page } from './page';
 import { Documentation } from './documentation/documentation';
 import { Home } from './home';
 import { Icons } from './icons';
-import { Debug } from './debug';
+import { Catalog } from './catalog';
 import fs from 'fs';
 import path from 'path';
 import { orderSections } from './order-sections';
@@ -33,8 +33,8 @@ const routes = [
     route: '/icons/'
   },
   {
-    name: 'Debug',
-    route: '/debug/'
+    name: 'Catalog',
+    route: '/catalog/'
   }
 ];
 
@@ -85,7 +85,6 @@ function buildRoutes() {
         };
 
         orderSections(documentationData).forEach((entry) => addEntryToNav(entry));
-
         r.component = (
           <Page navData={navData}>
             <Documentation {...props} />
@@ -107,13 +106,48 @@ function buildRoutes() {
           </Page>
         );
         break;
-      case 'Debug':
+      case 'Catalog': {
+
+        const sections = [
+          'Typography',
+          'Grids',
+          'Tables',
+          'Lists',
+          'Links',
+          'Buttons',
+          'Pills',
+          'Inputs',
+          'Textareas',
+          'Selects',
+          'Ranges',
+          'Toggles',
+          'Switches',
+          'Checkboxes',
+          'Radios',
+          'Triangles',
+          'Miscellaneous'
+        ];
+
+        const entries = [];
+
+        sections.forEach((s) => {
+          entries.push({
+            name: s,
+            route: '#' + s,
+            items: []
+          });
+        });
+
+        const variationNav = navData.items.find((item) => item.name === 'Catalog');
+        variationNav.items = entries;
+
         r.component = (
           <Page navData={navData}>
-            <Debug {...props} />
+            <Catalog {...props} />
           </Page>
         );
         break;
+      }
       default:
         console.error(r.name + ' has no matching component.');
         break;

@@ -16,9 +16,9 @@ const sizeCombos = [
 
 function RowEl(props) {
   return (
-    <div className={`txt-s txt-mono grid mb18 ${props.gutter ? props.gutter : ''}`}>
+    <div className={`txt-s grid mb18 ${props.gutter ? props.gutter : ''}`}>
       {props.combo.map((c, i) => <div key={i} className={`col col--${c}`}>
-        <div className='border'>col--{c}</div>
+        <div className='border p3'>col--{c}</div>
       </div>)}
     </div>
   );
@@ -26,9 +26,9 @@ function RowEl(props) {
 
 function RowElWithLeftMargin(props) {
   return (
-    <div className='txt-s txt-mono grid mb18'>
+    <div className='txt-s grid mb18'>
       {props.combo.map((c, i) => <div key={i} className={`col col--${i === 1 ? 'offl' : '' }${c}`}>
-        {i === 1 ? '' : <div className='border'>col--{c}</div>}
+        {i === 1 ? '' : <div className='border p3'>col--{c}</div>}
       </div>)}
     </div>
   );
@@ -36,9 +36,9 @@ function RowElWithLeftMargin(props) {
 
 function RowElWithRightMargin(props) {
   return (
-    <div className='txt-s txt-mono grid mb18'>
+    <div className='txt-s grid mb18'>
       {props.combo.map((c, i) => <div key={i} className={`col col--${i === 1 ? 'offr' : '' }${c}`}>
-        {i === 1 ? '' : <div className='border'>col--{c}</div>}
+        {i === 1 ? '' : <div className='border p3'>col--{c}</div>}
       </div>)}
     </div>
   );
@@ -65,20 +65,20 @@ class Grids extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb18'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-uppercase txt-bold'>
           Grid
-        </h1>
+        </h2>
 
-        <h2 className='mb12 mt24 txt-l txt-uppercase txt-bold'>Standard grid</h2>
+        <h3 className='mb12 txt-m txt-bold color-purple'>Standard grid</h3>
         {GridEls}
 
-        <h2 className='mb12 mt24 txt-l txt-uppercase txt-bold'>Grid with gutters</h2>
+        <h3 className='mb12 mt48 txt-m txt-bold color-purple'>Grid with gutters</h3>
         {GridElsWithGutters}
 
-        <h2 className='mb12 mt24 txt-l txt-uppercase txt-bold'>Grid with left offset</h2>
+        <h3 className='mb12 mt48 txt-m txt-bold color-purple'>Grid with left offset</h3>
         {GridElsWithLeftMargin}
 
-        <h2 className='mb12 mt24 txt-l txt-uppercase txt-bold'>Grid with right offset</h2>
+        <h3 className='mb12 mt48 txt-m txt-bold color-purple'>Grid with right offset</h3>
         {GridElsWithRightMargin}
       </div>
     );
