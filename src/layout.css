@@ -2125,10 +2125,13 @@
  * Bleed utilities. Bleed classes allow an element inside a centered container to escape the container and meet the edge of the screen.
  * When using the bleed classes, consider adding the `.clip` class on a parent element to prevent horizontal overflow.
  *
+ * *Warning*: In Firefox, children with negative margins have different layout effects than in other browsers.
+ * The bleed classes should only be used if the parent's width is stable, either because it is set or because other children determine it.
+ *
  * @group
  * @example
  * <div class='bg-darken10 flex-parent flex-parent--center-main clip'>
- *   <div class='p12 bg-darken10'>
+ *   <div class='w180 p12 bg-darken10'>
  *     <div class='bg-darken10 bleed-r'>Right bleed</div>
  *   </div>
  * </div>
