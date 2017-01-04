@@ -42,25 +42,24 @@ class Ranges extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb18'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-uppercase txt-bold'>
           Ranges
-        </h1>
+        </h2>
 
-          <div className='mb12'>
-            {colors.map((c) => <RangesEl key={c} color={c}  />)}
-          </div>
+        <div className='mb12 txt-bold color-purple'>Color variations</div>
+        <div className='mb24'>
+          {colors.map((c) => <RangesEl key={c} color={c}  />)}
+        </div>
 
-          <div className='mb12'>
-            {colors.map((c) => <RangesEl key={c} color={c} disabled={true} />)}
-          </div>
+        <div className='mb12 txt-bold color-purple'>Disabled</div>
+        <div className='mb24'>
+          {colors.map((c) => <RangesEl key={c} color={c} disabled={true} />)}
+        </div>
 
-          <div className='mb12'>
-            {colors.map((c) => <RangesEl key={c} color={c} size={'s'} />)}
-          </div>
-
-          <div className='mb12'>
-            {colors.map((c) => <RangesEl key={c} color={c} size={'s'} disabled={true} />)}
-          </div>
+        <div className='mb12 txt-bold color-purple'>Small</div>
+        <div className='mb24'>
+          {colors.map((c) => <RangesEl key={c} color={c} size={'s'} />)}
+        </div>
 
       </div>
     );

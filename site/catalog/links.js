@@ -28,12 +28,12 @@ const colors = [
 ];
 
 function LinkEl(props) {
-  let linkClasses = 'link inline mr12 mb6';
+  let linkClasses = 'link col col--4 inline mb6';
   if (props.color) linkClasses += ` link--${props.color}`;
   return (
-    <div>
+    <div className='grid'>
       <div className={linkClasses}>Click me!</div>
-      <div className={`txt-underline ${linkClasses}`}>Click me!</div>
+      <div className={`txt-underline-on-hover ${linkClasses}`}>Click me!</div>
       <div className={`link is-active ${linkClasses}`}>Active</div>
     </div>
   );
@@ -44,11 +44,16 @@ class Links extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb18'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-uppercase txt-bold'>
           Links
-        </h1>
+        </h2>
 
         <div className='mb12'>
+          <div className='grid'>
+            <div className='col col--4 mb12 txt-bold color-purple'>Standard</div>
+            <div className='col col--4 mb12 txt-bold color-purple'>Underline on hover</div>
+            <div className='col col--4 mb12 txt-bold color-purple'>Active</div>
+          </div>
           {colors.map((c) => <LinkEl key={c} color={c} size={null} />)}
         </div>
 

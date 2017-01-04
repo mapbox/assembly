@@ -62,33 +62,44 @@ class Toggles extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb18'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-uppercase txt-bold'>
           Toggles
-        </h1>
+        </h2>
 
-        {colors.map((o) => <div key={o} className='mb12'>
-          {colors.map((c) => <ToggleEl key={c} color={c} activeColor={o} />)}
-        </div>)}
+        <div className='mb12 txt-bold color-purple'>Color and active text color variations</div>
+        <div className='mb24'>
+          {colors.map((o) => <div key={o} className='mb12'>
+            {colors.map((c) => <ToggleEl key={c} color={c} activeColor={o} />)}
+          </div>)}
+        </div>
 
-        <div className='mb12'>
+        <div className='mb12 txt-bold color-purple'>Disabled</div>
+        <div className='mb24'>
         {colors.map((c) => <ToggleEl key={c} color={c} disabled={true} />)}
         </div>
 
-        <div className='mb12'>
+        <div className='mb12 txt-bold color-purple'>Stroked</div>
+        <div className='mb24'>
         {colors.map((c) => <ToggleEl key={c} color={c} stroke={true} />)}
         </div>
 
-        <div className='mb12'>
+        <div className='mb12 txt-bold color-purple'>Small</div>
+        <div className='mb24'>
         {colors.map((c) => <ToggleEl key={c} color={c} small={true} />)}
         </div>
 
-        <div className='mb12'>
+        <div className='mb12 txt-bold color-purple'>Small and stroked</div>
+        <div className='mb24'>
         {colors.map((c) => <ToggleEl key={c} color={c} small={true} stroke={true} />)}
         </div>
 
-
-        <div className='bg-blue p12 mt12'>
+        <div className='mb12 txt-bold color-purple'>Light variations</div>
+        <div className='bg-gray round p12y mt12'>
         {lightenColors.map((c) => <ToggleEl key={c} color={c} />)}
+        </div>
+
+        <div className='mt24 mb12 txt-bold color-purple'>Disabled and light</div>
+        <div className='bg-gray round p12y mt12'>
         {lightenColors.map((c) => <ToggleEl key={c} color={c} disabled={true} />)}
         </div>
 

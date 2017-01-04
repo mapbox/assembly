@@ -41,9 +41,9 @@ class Triangles extends React.Component {
 
     return (
       <div>
-        <h1 className='txt-headline mb18'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-uppercase txt-bold'>
           Triangles
-        </h1>
+        </h2>
 
         {directions.map((d) =>
           colors.map((c) => <TriangleEl color={c} direction={d} size={null} />)
