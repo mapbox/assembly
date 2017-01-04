@@ -144,6 +144,12 @@ class Home extends React.Component {
           The <code className='txt-code'>is-active</code> state on buttons and links darkens their color.
           And the <code className='txt-code'>*-on-active</code> state classes (e.g. only <code className='txt-code'>color-red-on-active</code>) only take effect when combined with the <code className='txt-code'>is-active</code> class.
         </p>
+        <h3 className='mt24 txt-bold'>
+          Focus outlines as needed
+        </h3>
+        <p className='mt12'>
+          Assembly turns off focus outlines when you mousedown and turns them back on, universally, when you hit <kbd className='txt-kbd'>Tab</kbd>. This means that only the keyboard users who need them will see nice, prominent focus outlines, while mouse users won't have the design disturbed unnecessarily.
+        </p>
       </div>
     );
   }
