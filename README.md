@@ -129,7 +129,7 @@ yarn # Installs your `node_modules`
 
 npm start # Builds everything, starts a dev server, rebuilds & reloads on changes
 
-npm run build:svg # Build SVGs
+npm run build:js # Build SVGs and other JS
 ```
 
 For other scripts, look in `package.json`.
