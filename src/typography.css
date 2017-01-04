@@ -409,6 +409,7 @@ textarea {
 .pre,
 .prose pre {
   padding: 12px;
+  overflow: auto;
 }
 
 .prose pre {
