@@ -18,7 +18,7 @@ function handleError(err) {
 const bsServer = browserSync.create();
 
 const nodemonProcess = child_process.spawn('node_modules/.bin/nodemon', [
-  path.join(__dirname, './build-site.js')
+  path.join(__dirname, './fast-build-site.js')
 ]);
 
 nodemonProcess.on('error', handleError);
@@ -41,16 +41,12 @@ bsServer.init({
     }
   },
   open: false,
-  files: [path.join(distDir, '/**/*')],
+  // Reload is fast enough here, and more reliable and clear
+  injectChanges: false,
+  // HTML is the last thing to finishing rebuilding, and is always rebuilt
+  // when CSS is
+  files: [path.join(distDir, '/**/*.html')],
   logFileChanges: false,
-  reloadDebounce: 300,
   notify: false,
-  plugins: [
-    {
-      module: 'bs-html-injector',
-      options: {
-        files: [path.join(distDir, '**/*.html')]
-      }
-    }
-  ]
+  reloadDebounce: 500
 });

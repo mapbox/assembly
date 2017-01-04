@@ -44,6 +44,11 @@
   color: var(--neutral45);
 }
 
+/* Without this, IE always has a scrollbar */
+.textarea {
+  overflow: auto;
+}
+
 /* Remove bad padding and unique cancel button from IE and Safari inputs */
 /* stylelint-disable selector-no-attribute */
 .input::-ms-clear,

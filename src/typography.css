@@ -260,15 +260,15 @@ textarea {
 }
 
 /**
- * Style an ordered list. Works with any element type if the list items use the `txt-li` class, but you should almost always use it with a `<ol>` element.
+ * Style an ordered list. This does *not* work (in Firefox) without semantic elements `<ol>` and `<li>`, so use those.
  *
  * @memberof Type basics
  * @example
- * <div class='txt-ol'>
- *   <div class='txt-li'>one</div>
- *   <div class='txt-li'>two</div>
- *   <div class='txt-li'>three</div>
- * </div>
+ * <ol class='txt-ol'>
+ *   <li class='txt-li'>one</li>
+ *   <li class='txt-li'>two</li>
+ *   <li class='txt-li'>three</li>
+ * </ol>
  */
 .txt-ol,
 .prose ol {
@@ -409,6 +409,7 @@ textarea {
 .pre,
 .prose pre {
   padding: 12px;
+  overflow: auto;
 }
 
 .prose pre {
