@@ -28,9 +28,13 @@
 .grid {
   display: flex !important;
   flex-wrap: wrap !important;
+  width: 100%;
 }
 
-.col { flex-shrink: 0 !important; }
+.col {
+  flex-shrink: 0 !important;
+  max-width: 100%;
+}
 .col--1 { width: 08.3333% !important; }
 .col--2 { width: 16.6666% !important; }
 .col--3 { width: 25% !important; }
