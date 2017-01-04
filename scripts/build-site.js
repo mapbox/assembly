@@ -9,7 +9,7 @@ const copySiteAssets = require('./copy-site-assets');
 
 function buildSite() {
   return Promise.all([
-    buildCss().then(renderSite()),
+    buildCss().then(renderSite),
     buildJs(),
     copySiteAssets()
   ]);
