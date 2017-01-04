@@ -1,5 +1,5 @@
 import React from 'react';
-import { logo } from './logo';
+import { Logo } from './logo';
 
 class Navigation extends React.Component {
   render() {
@@ -59,7 +59,7 @@ class Navigation extends React.Component {
     return (
       <div className='flex-parent-mm flex-parent--column-mm w-full'>
         <a href='/assembly/' className='mt24 mb18 mx24 link link--purple block'>
-         <div className='icon icon--l' dangerouslySetInnerHTML={{ __html: logo }} />
+         <Logo className='icon icon--l' />
         </a>
         <div className='flex-child-grow-mm scroll-auto pr18 pl24'>
           {navEls}
