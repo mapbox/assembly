@@ -502,6 +502,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .checkbox-container,
 .switch-container,
 .radio-container {
+  cursor: pointer;
   user-select: none;
   display: inline-flex;
 }
@@ -516,7 +517,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 .checkbox,
 .radio {
-  cursor: pointer;
   top: 3px;
   flex-shrink: 0;
   width: 18px;
@@ -675,7 +675,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   width: 30px;
   height: 18px;
   border-radius: 9999px;
-  cursor: pointer;
   border-width: 2px;
   border-style: solid;
   border-color: currentColor;
