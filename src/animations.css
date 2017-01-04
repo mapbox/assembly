@@ -12,11 +12,9 @@
  * @example
  * <div class="bg-blue inline-block mr18 w48 h48 round animation-pulse"></div>
  * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin"></div>
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-rainbow"></div>
 */
 .animation-pulse { animation: pulse 1.5s infinite ease-in-out; }
 .animation-spin { animation: spin 1.5s infinite linear; }
-.animation-rainbow { animation: rainbow 1.5s infinite linear; }
 /** @endgroup */
 
 /**
@@ -52,11 +50,6 @@
 .animation--speed-8 { animation-duration: 4s; }
 .animation--delay { animation-delay: 1s; }
 /** @endgroup */
-
-@keyframes rainbow {
-  from { filter: hue-rotate(0deg); }
-  to { filter: hue-rotate(360deg); }
-}
 
 @keyframes pulse {
   0% { transform: scale(0.5); opacity: 0; }
