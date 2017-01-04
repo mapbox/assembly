@@ -1,6 +1,7 @@
 import React from 'react';
 import Lowlight from 'react-lowlight';
 import xmlLanguage from 'highlight.js/lib/languages/xml';
+import { purpleLogo } from './logo';
 
 Lowlight.registerLanguage('html', xmlLanguage);
 
@@ -11,7 +12,10 @@ class Home extends React.Component {
     return (
       <div className='mt24 wmax960'>
         <div className='txt-headline'>
-          <h1 className='animation-rainbow animation--speed-8 color-purple txt-mono txt-uppercase txt-headline txt-spacing2 pl6 pr6'>Assembly.css</h1>
+          <h1 className='pl6 pr6 flex-parent mt72 flex-parent--center-cross'>
+            <div className='w48 inline-block mr12' dangerouslySetInnerHTML={{ __html: purpleLogo }} />
+            <div className='color-purple txt-mono txt-uppercase txt-headline txt-spacing2'>Assembly.css</div>
+          </h1>
         </div>
         <p className='txt-l mt24'>
           Assembly is an open source CSS framework that makes the hard parts of designing for the web easy.
