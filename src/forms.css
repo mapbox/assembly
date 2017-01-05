@@ -58,7 +58,7 @@
   height: 0;
 }
 .input[type='search'] {
-  appearance: textfield;
+  appearance: none;
 }
 .input[type='search']::-webkit-search-decoration,
 .input[type='search']::-webkit-search-cancel-button {
