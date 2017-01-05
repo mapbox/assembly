@@ -32,9 +32,12 @@
 }
 
 .col {
-  flex-shrink: 0 !important;
+  display: block !important;
   max-width: 100%;
+  flex-shrink: 0 !important;
+  flex-basis: auto !important;
 }
+
 .col--1 { width: 08.3333% !important; }
 .col--2 { width: 16.6666% !important; }
 .col--3 { width: 25% !important; }
@@ -1985,7 +1988,7 @@
  * Flexbox utilities. All class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * Usage must fit the following pattern:
- * - `flex-parent` rules control the parent container, while `flex-child-*` rules control the children.
+ * - `flex-parent` rules control the parent container, while `flex-child` rules control the children.
  * - By default, the `main` axis is horizontal and the `cross` axis is vertical. The axes can be inverted with the use of `flex-parent--column`.
  * - To learn about how the flexbox system works, check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox).
  *
@@ -1995,7 +1998,7 @@
 
 /**
  * Establish an element as a flex parent.
- * These classes allow the use of `flex-parent--*` modifiers, and `flex-child-*` classes on children.
+ * These classes allow the use of `flex-parent--*` modifiers, and `flex-child` classes on children.
  *
  * @group
  * @memberof Flexbox
@@ -2013,9 +2016,9 @@
  * @memberof Flexbox
  * @example
  * <div class='bg-darken10 flex-parent flex-parent--column'>
- *  <span>1</span>
- *  <span>2</span>
- *  <span>3</span>
+ *  <span class='flex-child'>1</span>
+ *  <span class='flex-child'>2</span>
+ *  <span class='flex-child'>3</span>
  * </div>
  */
 .flex-parent--column { flex-direction: column !important; }
@@ -2025,8 +2028,8 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='bg-darken10 flex-parent flex-parent--center-main'>
- *  <div class='bg-darken10'>child</div>
+ * <div class='flex-parent flex-parent--center-main bg-darken10'>
+ *  <div class='flex-child bg-darken10'>child</div>
  * </div>
  */
 .flex-parent--center-main { justify-content: center !important; }
@@ -2036,8 +2039,8 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='bg-darken10 h96 flex-parent flex-parent--center-cross'>
- *  <div class='bg-darken10'>child</div>
+ * <div class='flex-parent flex-parent--center-cross bg-darken10 h96'>
+ *  <div class='flex-child bg-darken10'>child</div>
  * </div>
  */
 .flex-parent--center-cross { align-items: center !important; }
@@ -2047,8 +2050,8 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='bg-darken10 flex-parent flex-parent--justify-end'>
- *  <div class='bg-darken10'>child</div>
+ * <div class='flex-parent flex-parent--justify-end bg-darken10'>
+ *  <div class='flex-child bg-darken10'>child</div>
  * </div>
  */
 .flex-parent--justify-end { justify-content: flex-end !important; }
@@ -2058,9 +2061,9 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='bg-darken10 clip flex-parent flex-parent--wrap'>
- *  <div class='bg-darken10 w480'>child</div>
- *  <div class='bg-darken10 w480'>child</div>
+ * <div class='flex-parent flex-parent--wrap bg-darken10 clip'>
+ *  <div class='flex-child bg-darken10 w480'>child</div>
+ *  <div class='flex-child bg-darken10 w480'>child</div>
  * </div>
  */
 .flex-parent--wrap { flex-wrap: wrap !important; }
@@ -2070,27 +2073,29 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='bg-darken10 h96 flex-parent flex-parent--stretch-cross'>
- *  <div class='bg-darken10'>child</div>
+ * <div class='flex-parent flex-parent--stretch-cross bg-darken10 h96'>
+ *  <div class='flex-child bg-darken10'>child</div>
  * </div>
  */
 .flex-parent--stretch-cross { align-items: stretch !important; }
 
 /**
- * Prevent a child from shrinking below its width value.
- *
- * By default, flex children (even with specified widths) will shrink as needed to accommodate sibling elements.
- * This class prevents that default shrinkage, forcing siblings to accommodate the parent's width.
+ * Establish an element as a flex child. This class mainly exists to anticipate certain bugs
+ * and unexpected behaviors that can otherwise occur with flexbox (especially in IE).
  *
  * @memberof Flexbox
  * @example
- * <div class='bg-darken10 w240 flex-parent'>
- *  <div class='border w120 flex-child-noshrink'>child</div>
- *  <div class='border w120'>child</div>
- *  <div class='border w120'>child</div>
+ * <div class='flex-parent flex-parent--center-main'>
+ *   <div class='flex-child bg-darken10'>child</div>
  * </div>
  */
-.flex-child-noshrink { flex-shrink: 0 !important; }
+.flex-child {
+  display: block;
+  max-width: 100%;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+/* Specifically, the above addresses #1, #2, and #12 in https://github.com/philipwalton/flexbugs */
 
 /**
  * Make a child to grow to fill whatever space is available in the main axis of the parent container.
@@ -2099,14 +2104,14 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='bg-darken10 flex-parent'>
- *  <div class='border w240'>child</div>
- *  <div class='border flex-child-grow'>child</div>
+ * <div class='flex-parent bg-darken10'>
+ *  <div class='flex-child border w240'>child</div>
+ *  <div class='flex-child flex-child--grow border'>child</div>
  * </div>
  */
-.flex-child-grow {
+.flex-child--grow {
   flex-grow: 1 !important;
-  min-width: 0 !important;
+  min-width: 0;
 }
 
 @media (--m-screen) {
@@ -2118,10 +2123,15 @@
   .flex-parent--center-main-mm { justify-content: center !important; }
   .flex-parent--center-cross-mm { align-items: center !important; }
   .flex-parent--stretch-cross-mm { align-items: stretch !important; }
-  .flex-child-noshrink-mm { flex-shrink: 0 !important; }
-  .flex-child-grow-mm {
+  .flex-child-mm {
+    display: block;
+    max-width: 100%;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+  .flex-child--grow-mm {
     flex-grow: 1 !important;
-    min-width: 0 !important;
+    min-width: 0;
   }
 }
 
@@ -2134,10 +2144,15 @@
   .flex-parent--center-main-ml { justify-content: center !important; }
   .flex-parent--center-cross-ml { align-items: center !important; }
   .flex-parent--stretch-cross-ml { align-items: stretch !important; }
-  .flex-child-noshrink-ml { flex-shrink: 0 !important; }
-  .flex-child-grow-ml {
+  .flex-child-ml {
+    display: block;
+    max-width: 100%;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+  .flex-child--grow-ml {
     flex-grow: 1 !important;
-    min-width: 0 !important;
+    min-width: 0;
   }
 }
 
@@ -2150,10 +2165,15 @@
   .flex-parent--center-main-mxl { justify-content: center !important; }
   .flex-parent--center-cross-mxl { align-items: center !important; }
   .flex-parent--stretch-cross-mxl { align-items: stretch !important; }
-  .flex-child-noshrink-mxl { flex-shrink: 0 !important; }
-  .flex-child-grow-mxl {
+  .flex-child-mxl {
+    display: block;
+    max-width: 100%;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+  .flex-child--grow-mxl {
     flex-grow: 1 !important;
-    min-width: 0 !important;
+    min-width: 0;
   }
 }
 /* end flex */
@@ -2183,16 +2203,16 @@
  * @memberof Layout utils
  */
 .bleed {
-  margin-left: calc(50% - 50vw) !important;
-  margin-right: calc(50% - 50vw) !important;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 .bleed-r {
-  flex: 1 !important;
-  margin-right: calc(50% - 50vw) !important;
+  flex-grow: 1;
+  margin-right: calc(50% - 50vw);
 }
 .bleed-l {
-  flex: 1 !important;
-  margin-left: calc(50% - 50vw) !important;
+  flex-grow: 1;
+  margin-left: calc(50% - 50vw);
 }
 /* @endgroup */
 

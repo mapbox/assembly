@@ -61,10 +61,10 @@ class Navigation extends React.Component {
         <a href='/assembly/' className='mt24 mb18 mx24 hmin48 link link--purple block'>
          <Logo className='icon icon--l' />
         </a>
-        <div className='flex-child-grow-mm scroll-auto pr18 pl24'>
+        <div className='flex-child flex-child--grow-mm scroll-auto pr18 pl24'>
           {navEls}
         </div>
-        <div className='mt12 mb24 mx24 flex-child-noshrink-mm'>
+        <div className='mt12 mb24 mx24'>
           <a className='color-purple-on-hover txt-s' href='https://github.com/mapbox/assembly/'>
             <svg
               className='icon'
