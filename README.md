@@ -1,7 +1,5 @@
 # Assembly
 
-<img width='195px' src='(https://cloud.githubusercontent.com/assets/5186564/21673872/09316a66-d366-11e6-8aee-969b517d05c0.png' />
-
 A CSS framework that makes the hard parts of building anything on the web easy. We define the hard parts as: managing class specificity, designing cross-browser form components that work well with each other, creating a harmonious typographic scale, maintaining a baseline grid, and keeping responsive designs simple.
 
 For usage guidelines and documentation, check out https://www.mapbox.com/assembly/.
