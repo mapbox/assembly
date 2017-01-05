@@ -34,9 +34,7 @@
   border-radius: 18px; /* fully round by default */
   padding: 4px 12px; /* Padding accommodates borders */
   font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   text-decoration: none !important; /* prevent underline when inside .prose */
   transition: background-color var(--transition),
     border-color var(--transition),
@@ -129,7 +127,7 @@
 /**
  * Create pill button groups.
  * Pill groups must be wrapped in a `flex-parent-inline` container.
- * And every button in a pill group must have the `btn` and `btn--pill` classes, along with a modifier specifying its position.
+ * Every button in a pill group must have the `btn` and `btn--pill` classes, along with a modifier specifying its position.
  *
  * For *horizontal* pills, use
  * - `flex-parent-inline` on the container
@@ -147,18 +145,16 @@
  *
  * @memberof Buttons
  * @example
- * <div>
- *   <div class="mr12 flex-parent-inline">
- *     <button class="btn btn--pill btn--pill-hl">Left</button>
- *     <button class="btn btn--pill btn--pill-hc">Center</button>
- *     <button class="btn btn--pill btn--pill-hr">Right</button>
- *   </div>
+ * <div class="flex-parent-inline">
+ *   <button class="btn btn--pill btn--pill-hl">Left</button>
+ *   <button class="btn btn--pill btn--pill-hc">Center</button>
+ *   <button class="btn btn--pill btn--pill-hr">Right</button>
  * </div>
- *  <div class="flex-parent flex-parent-inline flex-parent--column mt12">
- *     <button class="btn btn--pill btn--pill-vt">Top</button>
- *     <button class="btn btn--pill btn--pill-vc is-active">Center</button>
- *     <button class="btn btn--pill btn--pill-vb">Bottom</button>
- *  </div>
+ * <div class="flex-parent-inline flex-parent--column">
+ *   <button class="btn btn--pill btn--pill-vt">Top</button>
+ *   <button class="btn btn--pill btn--pill-vc is-active">Center</button>
+ *   <button class="btn btn--pill btn--pill-vb">Bottom</button>
+ * </div>
  */
 .btn--pill {
   position: relative;
@@ -196,16 +192,22 @@ against .round class */
   border-radius: 0 !important;
   margin-top: 1px;
   margin-bottom: 1px;
+  display: block;
+  width: 100%;
 }
 
 .btn.btn--pill-vt {
   border-bottom-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
+  display: block;
+  width: 100%;
 }
 
 .btn.btn--pill-vb {
   border-top-right-radius: 0 !important;
   border-top-left-radius: 0 !important;
+  display: block;
+  width: 100%;
 }
 
 .btn--stroke.btn--pill-hc {
