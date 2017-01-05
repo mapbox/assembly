@@ -81,7 +81,7 @@ function buildColorVariants(variables, config) {
     : Object.assign({ default: allColors }, config);
 
   function getDarkerShade(color) {
-    if (color === 'white') return variables['gray-faint'];
+    if (color === 'white') return variables['lighten75'];
     if (color === 'transparent') return variables['darken5'];
     if (color === 'black') return 'No dark variant for "black"';
 
