@@ -36,10 +36,15 @@
 .prose table {
   width: 100%;
   background-color: transparent;
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: separate;
   border: 1px solid var(--gray-light);
+  border-radius: var(--border-radius);
 }
+
+/* To achieve rounded corners, we cannot use border-collapse: collapse,
+and need an outer border on the whole table. The borders of cells must then
+be adjusted based on their position. */
 
 .prose table {
   margin-bottom: 18px;
@@ -51,13 +56,25 @@
 .prose table td {
   text-align: left;
   vertical-align: top;
-  border-bottom: 1px solid var(--gray-light);
-  padding: 6px;
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--gray-light);
+  border-left-width: 1px;
+  border-bottom-width: 1px;
 }
 
-.table th + td,
-.prose th + td {
-  border-left: 1px solid var(--gray-light);
+.table th:first-child,
+.table td:first-child,
+.prose table th:first-child,
+.prose table td:first-child {
+  border-left-width: 0;
+}
+
+.table :not(thead) tr:last-of-type th,
+.table :not(thead) tr:last-of-type td,
+.prose table :not(thead) tr:last-of-type th,
+.prose table :not(thead) tr:last-of-type td {
+  border-bottom-width: 0;
 }
 
 /**
