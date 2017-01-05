@@ -1,7 +1,6 @@
 import React from 'react';
 import Lowlight from 'react-lowlight';
 import xmlLanguage from 'highlight.js/lib/languages/xml';
-import { Logo } from './logo';
 import { version } from '../package';
 
 Lowlight.registerLanguage('html', xmlLanguage);
@@ -13,9 +12,8 @@ class Home extends React.Component {
     return (
       <div className='mt24 wmax960'>
         <div className='txt-headline'>
-          <h1 className='pl6 pr6 flex-parent mt72 flex-parent--center-cross'>
-            <Logo className='w48 inline-block mr12' style={{ fill: '#9762cc' }}/>
-            <div className='color-purple txt-mono txt-uppercase txt-headline txt-spacing2'>Assembly.css</div>
+          <h1 className='flex-parent mt72 flex-parent--center-cross'>
+            <div className='color-blue txt-uppercase txt-headline txt-spacing2'>Assembly.css</div>
           </h1>
         </div>
         <p className='txt-l mt24'>
