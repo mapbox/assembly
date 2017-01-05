@@ -25,7 +25,7 @@
  */
 .input,
 .textarea {
-  border: 1px solid var(--default-interactive-color);
+  border: 1px solid var(--gray-light);
   border-radius: var(--border-radius);
   display: inline-block;
   transition: background-color var(--transition),
@@ -36,7 +36,7 @@
 .textarea:hover,
 .input:focus,
 .textarea:focus {
-  border-color: var(--default-interactive-color-dark);
+  border-color: var(--default-primary-interactive-color);
 }
 
 .input::placeholder,
@@ -207,7 +207,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-style: solid;
   border-color: transparent;
   border-radius: var(--border-radius);
-  background-color: var(--default-interactive-color); /* match btn default state */
+  background-color: var(--default-primary-interactive-color); /* match btn default state */
 }
 
 .select-arrow {
@@ -217,10 +217,10 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   pointer-events: none;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 6px solid currentColor;
+  border-top: 5px solid currentColor;
   width: 8px;
   height: 8px;
-  margin-top: -3px;
+  margin-top: -1px;
   transition: border-top-color var(--transition);
 }
 
@@ -228,7 +228,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /* default hover state */
 .select:hover {
-  background-color: var(--default-interactive-color-dark);
+  background-color: var(--default-primary-interactive-color-dark);
 }
 
 /* Some browsers color the option text and background, so reset that */
@@ -272,22 +272,22 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * </div>
  */
 .select--stroke {
-  color: var(--default-interactive-color);
+  color: var(--gray);
   background-color: transparent;
   border-color: currentColor;
 }
 
 .select--stroke + .select-arrow {
-  border-top-color: var(--default-interactive-color);
+  border-top-color: var(--gray);
 }
 
 .select--stroke:hover {
   background-color: transparent;
-  color: var(--default-interactive-color-dark);
+  color: var(--gray-dark);
 }
 
 .select--stroke:hover + .select-arrow {
-  border-top-color: var(--default-interactive-color-dark);
+  border-top-color: var(--gray-dark);
 }
 
 /**
@@ -368,7 +368,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: var(--default-interactive-color);
+  background: var(--default-secondary-interactive-color);
   vertical-align: middle;
   cursor: pointer;
   box-shadow: 0;
@@ -380,7 +380,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: var(--default-interactive-color);
+  background: var(--default-secondary-interactive-color);
   vertical-align: middle;
   cursor: pointer;
   box-shadow: 0;
@@ -397,22 +397,22 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .range::-ms-fill-lower {
-  background: var(--default-interactive-color);
+  background: var(--default-secondary-interactive-color);
   border: 0;
   box-shadow: 0;
 }
 
 .range::-ms-fill-upper {
-  background: var(--default-interactive-color);
+  background: var(--default-secondary-interactive-color);
   border: 0;
   box-shadow: 0;
 }
 
 /* range track:hover */
-.range:hover::-webkit-slider-runnable-track { background: var(--default-interactive-color-dark); }
-.range:hover::-moz-range-track { background: var(--default-interactive-color-dark); }
-.range:hover::-ms-fill-upper { background: var(--default-interactive-color-dark); }
-.range:hover::-ms-fill-lower { background: var(--default-interactive-color-dark); }
+.range:hover::-webkit-slider-runnable-track { background: var(--gray); }
+.range:hover::-moz-range-track { background: var(--gray); }
+.range:hover::-ms-fill-upper { background: var(--gray); }
+.range:hover::-ms-fill-lower { background: var(--gray); }
 
 /* range thumb */
 .range::-webkit-slider-thumb {
@@ -423,7 +423,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 20px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px solid var(--default-interactive-color);
+  border: 2px solid var(--default-secondary-interactive-color);
   cursor: pointer;
   margin-top: -8px;
 }
@@ -434,7 +434,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 17px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px solid var(--default-interactive-color);
+  border: 2px solid var(--default-secondary-interactive-color);
   cursor: pointer;
 }
 
@@ -444,14 +444,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 20px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px solid var(--default-interactive-color);
+  border: 2px solid var(--default-secondary-interactive-color);
   cursor: pointer;
 }
 
 /* range thumb:hover */
-.range:hover::-webkit-slider-thumb { border-color: var(--default-interactive-color-dark); }
-.range:hover::-ms-thumb { border-color: var(--default-interactive-color-dark); }
-.range:hover::-moz-range-thumb { border-color: var(--default-interactive-color-dark); }
+.range:hover::-webkit-slider-thumb { border-color: var(--gray); }
+.range:hover::-ms-thumb { border-color: var(--gray); }
+.range:hover::-moz-range-thumb { border-color: var(--gray); }
 
 /*
  * Make a range element small.
@@ -570,12 +570,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .checkbox {
   background-color: #fff;
-  color: var(--default-interactive-color);
+  color: var(--default-secondary-interactive-color);
   border-color: currentColor;
 }
 
 .checkbox-container:hover > .checkbox {
-  color: var(--default-interactive-color-dark);
+  color: var(--default-primary-interactive-color);
 }
 
 /* Ensure checkboxes inside buttons look nice */
@@ -624,12 +624,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .radio {
   border-radius: 50%;
-  color: var(--default-interactive-color);
+  color: var(--default-secondary-interactive-color);
   border-color: currentColor;
 }
 
 .radio-container:hover > .radio {
-  color: var(--default-interactive-color-dark);
+  color: var(--default-primary-interactive-color);
 }
 
 .radio::before {
@@ -683,7 +683,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-width: 2px;
   border-style: solid;
   border-color: currentColor;
-  color: var(--default-interactive-color);
+  color: var(--default-secondary-interactive-color);
   transition: color var(--transition),
     background-color var(--transition),
     border-color var(--transition);
@@ -753,7 +753,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .toggle {
   flex-shrink: 0;
   cursor: pointer;
-  color: var(--default-interactive-color);
+  color: var(--default-secondary-interactive-color);
   font-weight: bold;
   padding: 0 12px;
   border-radius: 13px;
@@ -784,7 +784,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 4px;
   border-width: 2px;
   border-style: solid;
-  border-color: var(--default-interactive-color);
+  border-color: var(--default-secondary-interactive-color);
 }
 
 /* Adjust border radiuses with small text – only necessary for vertical toggle groups */
@@ -880,12 +880,12 @@ input:checked + .radio::before {
 
 input:checked + .checkbox,
 input:checked + .radio {
-  color: var(--default-interactive-color-dark);
+  color: var(--default-primary-interactive-color);
 }
 
 /* state management for switches */
 .switch:hover {
-  color: var(--default-interactive-color-dark);
+  color: var(--default-primary-interactive-color);
 }
 
 input:checked + .switch::after {
@@ -895,16 +895,17 @@ input:checked + .switch::after {
 
 input:checked + .switch {
   border-color: transparent;
-  background-color: var(--default-interactive-color-dark);
+  background-color: var(--default-primary-interactive-color);
 }
 
 /* state management for toggles */
 .toggle:hover {
-  color: var(--default-interactive-color-dark);
+  color: var(--default-primary-interactive-color);
+  border-color: var(--default-primary-interactive-color);
 }
 
 input:checked + .toggle {
-  background: var(--default-interactive-color);
+  background: var(--default-primary-interactive-color);
   color: var(--white);
 }
 

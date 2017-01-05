@@ -54,7 +54,7 @@ class Entry extends React.Component {
       <span
         key={selector}
         id={`${selector.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
-        className='mr3 pr3 px3 txt-mono color-purple-dark round bg-purple-faint mb3 inline-block'>
+        className='mr3 pr3 px3 txt-mono color-blue-dark round bg-blue-faint mb3 inline-block'>
         {selector.trim()}
       </span>;
 
@@ -64,7 +64,7 @@ class Entry extends React.Component {
     const expandButton = selectors !== undefined && selectors.length > 15 ? (
       <button
         id={`expandButton-${selectors && selectors[0]}`}
-        className='ml3 btn btn--xs btn--purple round'>
+        className='ml3 btn btn--xs btn--blue round'>
         See all
       </button>
     ) : null;
