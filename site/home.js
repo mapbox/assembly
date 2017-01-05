@@ -30,7 +30,7 @@ class Home extends React.Component {
         <div className='mt24 pre'>
           <Lowlight
             language='html'
-            value={`<link href="https://www.mapbox.com/assembly/v${version}/assembly.css" rel="stylesheet">`}
+            value={`<link href="https://api.mapbox.com/mapbox-assembly/v${version}/assembly.min.css" rel="stylesheet">`}
           />
         </div>
         <p className='mt24'>
@@ -39,7 +39,7 @@ class Home extends React.Component {
         <div className='mt24 pre'>
           <Lowlight
             language='html'
-            value={`<script async defer src="https://www.mapbox.com/assembly/v${version}/assembly.js"></script>`}
+            value={`<script async defer src="https://api.mapbox.com/mapbox-assembly/v${version}/assembly.js"></script>`}
           />
         </div>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-uppercase txt-bold'>
