@@ -23,7 +23,8 @@ const lightenColors = [
   'lighten10',
   'lighten25',
   'lighten50',
-  'lighten75'
+  'lighten75',
+  'white'
 ];
 
 const getButtonEls = (color, i) => {

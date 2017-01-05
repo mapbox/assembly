@@ -10,7 +10,12 @@ const colors = [
   'green',
   'teal',
   'blue',
-  'purple'
+  'purple',
+  'darken5',
+  'darken10',
+  'darken25',
+  'darken50',
+  'darken75'
 ];
 
 
