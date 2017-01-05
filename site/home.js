@@ -2,7 +2,6 @@ import React from 'react';
 import Lowlight from 'react-lowlight';
 import xmlLanguage from 'highlight.js/lib/languages/xml';
 import { Logo } from './logo';
-import { version } from '../package';
 
 Lowlight.registerLanguage('html', xmlLanguage);
 
@@ -30,7 +29,7 @@ class Home extends React.Component {
         <div className='mt24 pre'>
           <Lowlight
             language='html'
-            value={`<link href="https://www.mapbox.com/assembly/v${version}/assembly.css" rel="stylesheet">`}
+            value={`<link href="https://www.mapbox.com/assembly/assembly.css" rel="stylesheet">`}
           />
         </div>
         <p className='mt24'>
@@ -39,7 +38,7 @@ class Home extends React.Component {
         <div className='mt24 pre'>
           <Lowlight
             language='html'
-            value={`<script async defer src="https://www.mapbox.com/assembly/v${version}/assembly.js"></script>`}
+            value={`<script async defer src="https://www.mapbox.com/assembly/assembly.js"></script>`}
           />
         </div>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-uppercase txt-bold'>
