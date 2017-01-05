@@ -24,7 +24,7 @@ Returns a Promise that resolves when all assets have been written to `outdir`.
 
 ```js
 const Assembly = require('assembly');
-buildUserAssets('path/to/my/outdir', myOptions)
+Assembly.buildUserAssets('path/to/my/outdir', myOptions)
   .then(() => /* something */)
   .catch((err) => /* handle error */);
 ```
