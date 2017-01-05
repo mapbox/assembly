@@ -26,7 +26,7 @@
  * </div>
  */
 .btn {
-  background-color: var(--default-interactive-color);
+  background-color: var(--default-primary-interactive-color);
   color: var(--white);
   border-width: 2px;
   border-style: solid;
@@ -58,7 +58,7 @@
 .btn--stroke {
   background-color: transparent;
   border-color: currentColor;
-  color: var(--default-interactive-color);
+  color: var(--default-primary-interactive-color);
 }
 
 /**
@@ -101,13 +101,13 @@
  */
 .btn:hover,
 .btn.is-active {
-  background-color: var(--default-interactive-color-dark);
+  background-color: var(--default-primary-interactive-color-dark);
 }
 
 .btn--stroke:hover,
 .btn--stroke.is-active {
   background-color: transparent;
-  color: var(--default-interactive-color-dark);
+  color: var(--default-primary-interactive-color-dark);
 }
 
 /**
