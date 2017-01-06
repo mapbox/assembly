@@ -29,7 +29,7 @@ const colors = [
 ];
 
 function TextareaEl(props) {
-  let textareaClasses = 'textarea';
+  let textareaClasses = 'textarea w180';
   if (props.border) textareaClasses += ` textarea--border-${props.border}`;
   if (props.color) textareaClasses += ` color-${props.color}`;
   return (
