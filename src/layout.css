@@ -786,6 +786,13 @@
  * <div class='mt24 bg-darken10'>mt24</div>
  * @memberof Margins
  */
+.mt-neg1 { margin-top: -1px !important; }
+.mt-neg2 { margin-top: -2px !important; }
+.mt-neg3 { margin-top: -3px !important; }
+.mt-neg6 { margin-top: -6px !important; }
+.mt-neg12 { margin-top: -12px !important; }
+.mt-neg18 { margin-top: -18px !important; }
+.mt-neg24 { margin-top: -24px !important; }
 .mt0 { margin-top: 0 !important; }
 .mt3 { margin-top: 3px !important; }
 .mt6 { margin-top: 6px !important; }
@@ -802,6 +809,13 @@
 /** @endgroup */
 
 @media (--m-screen) {
+  .mt-neg1-mm { margin-top: -1px !important; }
+  .mt-neg2-mm { margin-top: -2px !important; }
+  .mt-neg3-mm { margin-top: -3px !important; }
+  .mt-neg6-mm { margin-top: -6px !important; }
+  .mt-neg12-mm { margin-top: -12px !important; }
+  .mt-neg18-mm { margin-top: -18px !important; }
+  .mt-neg24-mm { margin-top: -24px !important; }
   .mt0-mm { margin-top: 0 !important; }
   .mt3-mm { margin-top: 3px !important; }
   .mt6-mm { margin-top: 6px !important; }
@@ -818,6 +832,13 @@
 }
 
 @media (--l-screen) {
+  .mt-neg1-ml { margin-top: -1px !important; }
+  .mt-neg2-ml { margin-top: -2px !important; }
+  .mt-neg3-ml { margin-top: -3px !important; }
+  .mt-neg6-ml { margin-top: -6px !important; }
+  .mt-neg12-ml { margin-top: -12px !important; }
+  .mt-neg18-ml { margin-top: -18px !important; }
+  .mt-neg24-ml { margin-top: -24px !important; }
   .mt0-ml { margin-top: 0 !important; }
   .mt3-ml { margin-top: 3px !important; }
   .mt6-ml { margin-top: 6px !important; }
@@ -834,6 +855,13 @@
 }
 
 @media (--xl-screen) {
+  .mt-neg1-mxl { margin-top: -1px !important; }
+  .mt-neg2-mxl { margin-top: -2px !important; }
+  .mt-neg3-mxl { margin-top: -3px !important; }
+  .mt-neg6-mxl { margin-top: -6px !important; }
+  .mt-neg12-mxl { margin-top: -12px !important; }
+  .mt-neg18-mxl { margin-top: -18px !important; }
+  .mt-neg24-mxl { margin-top: -24px !important; }
   .mt0-mxl { margin-top: 0 !important; }
   .mt3-mxl { margin-top: 3px !important; }
   .mt6-mxl { margin-top: 6px !important; }
@@ -857,6 +885,13 @@
  * <div class='mr24 bg-darken10'>mr24</div>
  * @memberof Margins
  */
+.mr-neg1 { margin-right: -1px !important; }
+.mr-neg2 { margin-right: -2px !important; }
+.mr-neg3 { margin-right: -3px !important; }
+.mr-neg6 { margin-right: -6px !important; }
+.mr-neg12 { margin-right: -12px !important; }
+.mr-neg18 { margin-right: -18px !important; }
+.mr-neg24 { margin-right: -24px !important; }
 .mr0 { margin-right: 0 !important; }
 .mr3 { margin-right: 3px !important; }
 .mr6 { margin-right: 6px !important; }
@@ -873,6 +908,13 @@
 /** @endgroup */
 
 @media (--m-screen) {
+  .mr-neg1-mm { margin-right: -1px !important; }
+  .mr-neg2-mm { margin-right: -2px !important; }
+  .mr-neg3-mm { margin-right: -3px !important; }
+  .mr-neg6-mm { margin-right: -6px !important; }
+  .mr-neg12-mm { margin-right: -12px !important; }
+  .mr-neg18-mm { margin-right: -18px !important; }
+  .mr-neg24-mm { margin-right: -24px !important; }
   .mr0-mm { margin-right: 0 !important; }
   .mr3-mm { margin-right: 3px !important; }
   .mr6-mm { margin-right: 6px !important; }
@@ -889,6 +931,13 @@
 }
 
 @media (--l-screen) {
+  .mr-neg1-ml { margin-right: -1px !important; }
+  .mr-neg2-ml { margin-right: -2px !important; }
+  .mr-neg3-ml { margin-right: -3px !important; }
+  .mr-neg6-ml { margin-right: -6px !important; }
+  .mr-neg12-ml { margin-right: -12px !important; }
+  .mr-neg18-ml { margin-right: -18px !important; }
+  .mr-neg24-ml { margin-right: -24px !important; }
   .mr0-ml { margin-right: 0 !important; }
   .mr3-ml { margin-right: 3px !important; }
   .mr6-ml { margin-right: 6px !important; }
@@ -905,6 +954,13 @@
 }
 
 @media (--xl-screen) {
+  .mr-neg1-mxl { margin-right: -1px !important; }
+  .mr-neg2-mxl { margin-right: -2px !important; }
+  .mr-neg3-mxl { margin-right: -3px !important; }
+  .mr-neg6-mxl { margin-right: -6px !important; }
+  .mr-neg12-mxl { margin-right: -12px !important; }
+  .mr-neg18-mxl { margin-right: -18px !important; }
+  .mr-neg24-mxl { margin-right: -24px !important; }
   .mr0-mxl { margin-right: 0 !important; }
   .mr3-mxl { margin-right: 3px !important; }
   .mr6-mxl { margin-right: 6px !important; }
@@ -932,6 +988,11 @@
  */
 .mb-neg1 { margin-bottom: -1px !important; }
 .mb-neg2 { margin-bottom: -2px !important; }
+.mb-neg3 { margin-bottom: -3px !important; }
+.mb-neg6 { margin-bottom: -6px !important; }
+.mb-neg12 { margin-bottom: -12px !important; }
+.mb-neg18 { margin-bottom: -18px !important; }
+.mb-neg24 { margin-bottom: -24px !important; }
 .mb0 { margin-bottom: 0 !important; }
 .mb3 { margin-bottom: 3px !important; }
 .mb6 { margin-bottom: 6px !important; }
@@ -950,6 +1011,11 @@
 @media (--m-screen) {
   .mb-neg1-mm { margin-bottom: -1px !important; }
   .mb-neg2-mm { margin-bottom: -2px !important; }
+  .mb-neg3-mm { margin-bottom: -3px !important; }
+  .mb-neg6-mm { margin-bottom: -6px !important; }
+  .mb-neg12-mm { margin-bottom: -12px !important; }
+  .mb-neg18-mm { margin-bottom: -18px !important; }
+  .mb-neg24-mm { margin-bottom: -24px !important; }
   .mb0-mm { margin-bottom: 0 !important; }
   .mb3-mm { margin-bottom: 3px !important; }
   .mb6-mm { margin-bottom: 6px !important; }
@@ -968,6 +1034,11 @@
 @media (--l-screen) {
   .mb-neg1-ml { margin-bottom: -1px !important; }
   .mb-neg2-ml { margin-bottom: -2px !important; }
+  .mb-neg3-ml { margin-bottom: -3px !important; }
+  .mb-neg6-ml { margin-bottom: -6px !important; }
+  .mb-neg12-ml { margin-bottom: -12px !important; }
+  .mb-neg18-ml { margin-bottom: -18px !important; }
+  .mb-neg24-ml { margin-bottom: -24px !important; }
   .mb0-ml { margin-bottom: 0 !important; }
   .mb3-ml { margin-bottom: 3px !important; }
   .mb6-ml { margin-bottom: 6px !important; }
@@ -986,6 +1057,11 @@
 @media (--xl-screen) {
   .mb-neg1-mxl { margin-bottom: -1px !important; }
   .mb-neg2-mxl { margin-bottom: -2px !important; }
+  .mb-neg3-mxl { margin-bottom: -3px !important; }
+  .mb-neg6-mxl { margin-bottom: -6px !important; }
+  .mb-neg12-mxl { margin-bottom: -12px !important; }
+  .mb-neg18-mxl { margin-bottom: -18px !important; }
+  .mb-neg24-mxl { margin-bottom: -24px !important; }
   .mb0-mxl { margin-bottom: 0 !important; }
   .mb3-mxl { margin-bottom: 3px !important; }
   .mb6-mxl { margin-bottom: 6px !important; }
@@ -1009,6 +1085,13 @@
  * <div class='ml24 bg-darken10'>ml24</div>
  * @memberof Margins
  */
+.ml-neg1 { margin-left: -1px !important; }
+.ml-neg2 { margin-left: -2px !important; }
+.ml-neg3 { margin-left: -3px !important; }
+.ml-neg6 { margin-left: -6px !important; }
+.ml-neg12 { margin-left: -12px !important; }
+.ml-neg18 { margin-left: -18px !important; }
+.ml-neg24 { margin-left: -24px !important; }
 .ml0 { margin-left: 0 !important; }
 .ml6 { margin-left: 6px !important; }
 .ml3 { margin-left: 3px !important; }
@@ -1025,6 +1108,13 @@
 /** @endgroup */
 
 @media (--m-screen) {
+  .ml-neg1-mm { margin-left: -1px !important; }
+  .ml-neg2-mm { margin-left: -2px !important; }
+  .ml-neg3-mm { margin-left: -3px !important; }
+  .ml-neg6-mm { margin-left: -6px !important; }
+  .ml-neg12-mm { margin-left: -12px !important; }
+  .ml-neg18-mm { margin-left: -18px !important; }
+  .ml-neg24-mm { margin-left: -24px !important; }
   .ml0-mm { margin-left: 0 !important; }
   .ml3-mm { margin-left: 3px !important; }
   .ml6-mm { margin-left: 6px !important; }
@@ -1041,6 +1131,13 @@
 }
 
 @media (--l-screen) {
+  .ml-neg1-ml { margin-left: -1px !important; }
+  .ml-neg2-ml { margin-left: -2px !important; }
+  .ml-neg3-ml { margin-left: -3px !important; }
+  .ml-neg6-ml { margin-left: -6px !important; }
+  .ml-neg12-ml { margin-left: -12px !important; }
+  .ml-neg18-ml { margin-left: -18px !important; }
+  .ml-neg24-ml { margin-left: -24px !important; }
   .ml0-ml { margin-left: 0 !important; }
   .ml3-ml { margin-left: 3px !important; }
   .ml6-ml { margin-left: 6px !important; }
@@ -1057,6 +1154,13 @@
 }
 
 @media (--xl-screen) {
+  .ml-neg1-mxl { margin-left: -1px !important; }
+  .ml-neg2-mxl { margin-left: -2px !important; }
+  .ml-neg3-mxl { margin-left: -3px !important; }
+  .ml-neg6-mxl { margin-left: -6px !important; }
+  .ml-neg12-mxl { margin-left: -12px !important; }
+  .ml-neg18-mxl { margin-left: -18px !important; }
+  .ml-neg24-mxl { margin-left: -24px !important; }
   .ml0-mxl { margin-left: 0 !important; }
   .ml3-mxl { margin-left: 3px !important; }
   .ml6-mxl { margin-left: 6px !important; }
