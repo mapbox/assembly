@@ -20,6 +20,10 @@
  * The `input` class styles input types `text`, `password`, `email`,
  * `datetime`, `search`, `tel`, `url`, and `number`. The `textarea` class styles the `<textarea>` element.
  *
+ * Both form elements fill the width of their container, by default.
+ * You should adjust the widths of inputs and textareas by adding [`w*` width classes](http://localhost:3000/assembly/documentation/#Sizing)
+ * or controlling the widths of their containers, e.g. with [`grid` classes](http://localhost:3000/assembly/documentation/#Grid).
+ *
  * @section Inputs & textareas
  * @memberof Forms
  */
@@ -27,9 +31,10 @@
 .textarea {
   border: 1px solid var(--gray-light);
   border-radius: var(--border-radius);
-  display: inline-block;
   transition: background-color var(--transition),
     border-color var(--transition);
+  display: block;
+  width: 100%;
 }
 
 .input:hover,
@@ -58,7 +63,7 @@
   height: 0;
 }
 .input[type='search'] {
-  appearance: textfield;
+  appearance: none;
 }
 .input[type='search']::-webkit-search-decoration,
 .input[type='search']::-webkit-search-cancel-button {
@@ -72,7 +77,7 @@
  * @memberof Inputs & textareas
  * @example
  * <input class='input' placeholder='default' />
- * <input class='input input--border-teal' placeholder='teal' />
+ * <input class='input input--border-teal w180' placeholder='teal' />
  */
 .input {
   height: 36px;
@@ -99,7 +104,7 @@
  * @memberof Inputs & textareas
  * @example
  * <textarea placeholder='default' class='textarea'></textarea>
- * <textarea placeholder='pink' class='textarea textarea--border-pink'></textarea>
+ * <textarea placeholder='pink' class='textarea textarea--border-pink w180'></textarea>
  */
 .textarea {
   resize: vertical;
