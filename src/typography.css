@@ -698,9 +698,8 @@ textarea {
   padding-top: 12px;
 }
 
+/* inherits from txt-* declaration on parent */
 .prose p {
-  font-size: 15px;
-  line-height: 24px;
   margin-bottom: 12px;
 }
 
