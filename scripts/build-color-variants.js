@@ -345,7 +345,7 @@ function buildColorVariants(variables, config) {
         .range--${color}::-ms-fill-upper { background: ${colorValue}; }
 
         .range--${color}::-webkit-slider-thumb { border-color: ${colorValue}; }
-        .range--${color}::-ms-thumb { border-color: ${colorValue}); }
+        .range--${color}::-ms-thumb { border-color: ${colorValue}; }
         .range--${color}::-moz-range-thumb { border-color: ${colorValue}; }
 
         .range--${color}:hover::-webkit-slider-runnable-track { background: ${darkerShade}; }
