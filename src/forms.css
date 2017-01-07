@@ -403,12 +403,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   background: var(--default-secondary-interactive-color);
   border: 0;
   box-shadow: 0;
+  border-radius: 2px;
 }
 
 .range::-ms-fill-upper {
   background: var(--default-secondary-interactive-color);
   border: 0;
   box-shadow: 0;
+  border-radius: 2px;
 }
 
 /* range track:hover */
