@@ -449,6 +449,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   background: var(--white);
   border: 2px solid var(--default-secondary-interactive-color);
   cursor: pointer;
+  margin-top: 0; /* Fixes Edge's vertical alignment */
 }
 
 /* range thumb:hover */
@@ -487,6 +488,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .range--s::-ms-thumb {
   width: 15px;
   height: 15px;
+  margin-top: 0; /* Fixes Edge's vertical alignment */
 }
 
 /*
