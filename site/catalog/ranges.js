@@ -62,6 +62,15 @@ class Ranges extends React.Component {
           {colors.map((c) => <RangesEl key={c} color={c} size={'s'} />)}
         </div>
 
+        <div className='mb12 flex-parent flex-parent--center-cross'>
+          <input className='input w180' />
+          <input type='range' className='range w180' />
+        </div>
+        <div className='mb12 flex-parent flex-parent--center-cross'>
+          <input className='input input--s w180' />
+          <input type='range' className='range range--s w180' />
+        </div>
+
       </div>
     );
   }
