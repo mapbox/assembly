@@ -14,7 +14,7 @@ class Entry extends React.Component {
     const { props } = this;
 
     const example = !props.parsedComment.example ? null : (
-      <HtmlExample code={props.parsedComment.example.description} />
+      <HtmlExample code={props.parsedComment.example.description} copy={false} />
     );
 
     let selectors;

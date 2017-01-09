@@ -1,14 +1,24 @@
 import React from 'react';
 import documentationCss from 'documentation-css';
+import fs from 'fs';
+import path from 'path';
+import { orderSections } from './order-sections';
 import { Page } from './page';
 import { Documentation } from './documentation/documentation';
 import { Home } from './home';
 import { Icons } from './icons';
 import { Catalog } from './catalog';
 import { LayoutScales } from './layout_scales';
-import fs from 'fs';
-import path from 'path';
-import { orderSections } from './order-sections';
+import { Examples } from './examples';
+import { ExampleInputs } from './examples/inputs';
+import { ExampleBadges } from './examples/badges';
+import { ExampleLegends } from './examples/legends';
+import { ExampleModal } from './examples/modal';
+import { ExampleNavigation } from './examples/navigation';
+import { ExampleProgressBars } from './examples/progress_bars';
+import { ExampleSidebarApps } from './examples/sidebar_apps';
+import { ExampleTileLayout } from './examples/tile_layout';
+import { ExampleTooltips } from './examples/tooltips';
 
 /*
  * To add pages to the site, we pass a routes array with
@@ -23,38 +33,81 @@ import { orderSections } from './order-sections';
 const routes = [
   {
     name: 'Home',
-    route: '/'
+    route: '/',
+    component: Home
   },
   {
     name: 'Documentation',
-    route: '/documentation/'
+    route: '/documentation/',
+    component: Documentation
+  },
+  {
+    name: 'Examples',
+    route: '/examples/',
+    component: Examples,
+    children: [{
+      name: 'Badges',
+      route: '/examples/badges/',
+      component: ExampleBadges
+    }, {
+      name: 'Inputs',
+      route: '/examples/inputs/',
+      component: ExampleInputs
+    }, {
+      name: 'Legends',
+      route: '/examples/lagends/',
+      component: ExampleLegends
+    }, {
+      name: 'Modal',
+      route: '/examples/modal/',
+      component: ExampleModal
+    }, {
+      name: 'Navigation',
+      route: '/examples/navigation/',
+      component: ExampleNavigation
+    }, {
+      name: 'Progress bars',
+      route: '/examples/progress-bars/',
+      component: ExampleProgressBars
+    }, {
+      name: 'Sidebar apps',
+      route: '/examples/sidebar-apps/',
+      component: ExampleSidebarApps
+    }, {
+      name: 'Tile layout',
+      route: '/examples/tile-layout/',
+      component: ExampleTileLayout
+    }, {
+      name: 'Tooltips',
+      route: '/examples/tooltips/',
+      component: ExampleTooltips
+    }]
   },
   {
     name: 'Icons',
-    route: '/icons/'
+    route: '/icons/',
+    component: Icons
   },
   {
     name: 'Catalog',
-    route: '/catalog/'
+    route: '/catalog/',
+    component: Catalog
   },
   {
     name: 'Layout Scales',
-    route: '/layout-scales/'
+    route: '/layout-scales/',
+    component: LayoutScales
   }
 ];
 
 function buildRoutes() {
-  const routesWithComponents = routes.map((r) => {
+  const routesWithComponents = routes.reduce((memo, r) => {
     const navData = {
-      items: [],
-      // set current route to active.
+      items: routes.map((route) => {
+        return Object.assign({}, route, { items: [] });
+      }),
       active: r.name
     };
-
-    routes.forEach((r) => {
-      const navDataItem = Object.assign({}, r, { items: [] });
-      navData.items.push(navDataItem);
-    });
 
     const props = {};
 
@@ -97,27 +150,6 @@ function buildRoutes() {
         );
         break;
       }
-      case 'Home':
-        r.component = (
-          <Page navData={navData}>
-            <Home {...props} />
-          </Page>
-        );
-        break;
-      case 'Icons':
-        r.component = (
-          <Page navData={navData}>
-            <Icons {...props} />
-          </Page>
-        );
-        break;
-      case 'Layout Scales':
-        r.component = (
-          <Page navData={navData}>
-            <LayoutScales {...props} />
-          </Page>
-        );
-        break;
       case 'Catalog': {
 
         const sections = [
@@ -140,34 +172,70 @@ function buildRoutes() {
           'Miscellaneous'
         ];
 
-        const entries = [];
-
-        sections.forEach((s) => {
-          entries.push({
-            name: s,
-            route: '#' + s,
-            items: []
-          });
+        // Build out secondary navigation
+        const navDataWithChildren = Object.assign({}, navData, {
+          items: navData.items.map((nav) => {
+            if (nav.name === r.name) {
+              nav.items = sections.map((item) => {
+                return {
+                  name: item,
+                  route: '#' + item,
+                  items: []
+                };
+              });
+            }
+            return nav;
+          })
         });
 
-        const variationNav = navData.items.find((item) => item.name === 'Catalog');
-        variationNav.items = entries;
-
         r.component = (
-          <Page navData={navData}>
-            <Catalog {...props} />
+          <Page navData={navDataWithChildren}>
+            <r.component {...props} />
           </Page>
         );
         break;
       }
       default:
-        console.error(r.name + ' has no matching component.');
+        if (r.children) props.children = r.children;
+        r.component = (
+          <Page navData={navData}>
+            <r.component {...props} />
+          </Page>
+        );
         break;
     }
 
-    return r;
+    if (r.children && r.children.length) {
+      r.children.map((child) => {
 
-  });
+        const navDataWithChildren = Object.assign({}, navData, {
+          items: navData.items.map((nav) => {
+            if (nav.name === r.name) {
+              nav.items = r.children.map((d) => {
+                const item = Object.assign({}, d, { items: [] });
+                return item;
+              });
+
+              nav.active = child.name;
+            }
+            return nav;
+          })
+        });
+
+        child.component = (
+          <Page navData={navDataWithChildren}>
+            <child.component {...props} />
+          </Page>
+        );
+
+        memo.push(child);
+        return child;
+      });
+    }
+
+    memo.push(r);
+    return memo;
+  }, []);
 
   return routesWithComponents;
 }
