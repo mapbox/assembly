@@ -68,12 +68,9 @@ class Navigation extends React.Component {
           {navEls}
         </div>
         <div className='mt12 mb24 mx24'>
-          <a className='color-blue-on-hover txt-s' href='https://github.com/mapbox/assembly/'>
-            <svg
-              className='icon'
-              dangerouslySetInnerHTML={{ __html: '<use xlink:href="#icon-github"></use>' }}
-            />
-            <span className='ml6 align-middle'>View on GitHub</span>
+          <a className='color-blue-on-hover txt-s flex-parent flex-parent--center-cross' href='https://github.com/mapbox/assembly/'>
+            <svg className='icon'><use xlinkHref='#icon-github' /></svg>
+            <div className='ml6'>View on GitHub</div>
           </a>
         </div>
       </div>
