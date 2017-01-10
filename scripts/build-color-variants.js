@@ -480,11 +480,13 @@ function buildColorVariants(variables, config) {
       const colorValue = variables[color];
       return result += stripIndent(`
         .shadow-${color}-on-hover:hover,
-        .shadow-${color}-on-active.is-active {
+        .shadow-${color}-on-active.is-active,
+        .shadow-${color}-on-active.is-active:hover {
           box-shadow: 0 0 10px 2px ${colorValue} !important;
         }
         .shadow-bold-${color}-on-hover:hover,
-        .shadow-bold-${color}-on-active.is-active {
+        .shadow-bold-${color}-on-active.is-active,
+        .shadow-bold-${color}-on-active.is-active:hover {
           box-shadow: 0 0 30px 6px ${colorValue} !important;
         }
       `);
@@ -508,7 +510,8 @@ function buildColorVariants(variables, config) {
     css += colors.reduce((result, color) => {
       return result += stripIndent(`
         .bg-${color}-on-hover:hover,
-        .bg-${color}-on-active.is-active {
+        .bg-${color}-on-active.is-active,
+        .bg-${color}-on-active.is-active:hover {
           background-color: ${variables[color]} !important;
         }
       `);
@@ -532,7 +535,8 @@ function buildColorVariants(variables, config) {
     css += colors.reduce((result, color) => {
       return result += stripIndent(`
         .color-${color}-on-hover:hover,
-        .color-${color}-on-active.is-active {
+        .color-${color}-on-active.is-active,
+        .color-${color}-on-active.is-active:hover {
           color: ${variables[color]} !important;
         }
       `);
@@ -556,7 +560,8 @@ function buildColorVariants(variables, config) {
     css += colors.reduce((result, color) => {
       return result += stripIndent(`
         .border--${color}-on-hover:hover,
-        .border--${color}-on-active.is-active {
+        .border--${color}-on-active.is-active,
+        .border--${color}-on-active.is-active:hover {
           border-color: ${variables[color]} !important;
         }
       `);

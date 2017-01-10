@@ -6123,92 +6123,112 @@ input:checked + .toggle--active-transparent {
  * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
  */
 .shadow-darken5-on-hover:hover,
-.shadow-darken5-on-active.is-active {
+.shadow-darken5-on-active.is-active,
+.shadow-darken5-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05) !important;
 }
 .shadow-bold-darken5-on-hover:hover,
-.shadow-bold-darken5-on-active.is-active {
+.shadow-bold-darken5-on-active.is-active,
+.shadow-bold-darken5-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.05) !important;
 }
       
 .shadow-darken10-on-hover:hover,
-.shadow-darken10-on-active.is-active {
+.shadow-darken10-on-active.is-active,
+.shadow-darken10-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.10) !important;
 }
 .shadow-bold-darken10-on-hover:hover,
-.shadow-bold-darken10-on-active.is-active {
+.shadow-bold-darken10-on-active.is-active,
+.shadow-bold-darken10-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.10) !important;
 }
       
 .shadow-darken25-on-hover:hover,
-.shadow-darken25-on-active.is-active {
+.shadow-darken25-on-active.is-active,
+.shadow-darken25-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25) !important;
 }
 .shadow-bold-darken25-on-hover:hover,
-.shadow-bold-darken25-on-active.is-active {
+.shadow-bold-darken25-on-active.is-active,
+.shadow-bold-darken25-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.25) !important;
 }
       
 .shadow-darken50-on-hover:hover,
-.shadow-darken50-on-active.is-active {
+.shadow-darken50-on-active.is-active,
+.shadow-darken50-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.50) !important;
 }
 .shadow-bold-darken50-on-hover:hover,
-.shadow-bold-darken50-on-active.is-active {
+.shadow-bold-darken50-on-active.is-active,
+.shadow-bold-darken50-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.50) !important;
 }
       
 .shadow-darken75-on-hover:hover,
-.shadow-darken75-on-active.is-active {
+.shadow-darken75-on-active.is-active,
+.shadow-darken75-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.75) !important;
 }
 .shadow-bold-darken75-on-hover:hover,
-.shadow-bold-darken75-on-active.is-active {
+.shadow-bold-darken75-on-active.is-active,
+.shadow-bold-darken75-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.75) !important;
 }
       
 .shadow-lighten5-on-hover:hover,
-.shadow-lighten5-on-active.is-active {
+.shadow-lighten5-on-active.is-active,
+.shadow-lighten5-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.05) !important;
 }
 .shadow-bold-lighten5-on-hover:hover,
-.shadow-bold-lighten5-on-active.is-active {
+.shadow-bold-lighten5-on-active.is-active,
+.shadow-bold-lighten5-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.05) !important;
 }
       
 .shadow-lighten10-on-hover:hover,
-.shadow-lighten10-on-active.is-active {
+.shadow-lighten10-on-active.is-active,
+.shadow-lighten10-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.1) !important;
 }
 .shadow-bold-lighten10-on-hover:hover,
-.shadow-bold-lighten10-on-active.is-active {
+.shadow-bold-lighten10-on-active.is-active,
+.shadow-bold-lighten10-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.1) !important;
 }
       
 .shadow-lighten25-on-hover:hover,
-.shadow-lighten25-on-active.is-active {
+.shadow-lighten25-on-active.is-active,
+.shadow-lighten25-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.25) !important;
 }
 .shadow-bold-lighten25-on-hover:hover,
-.shadow-bold-lighten25-on-active.is-active {
+.shadow-bold-lighten25-on-active.is-active,
+.shadow-bold-lighten25-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.25) !important;
 }
       
 .shadow-lighten50-on-hover:hover,
-.shadow-lighten50-on-active.is-active {
+.shadow-lighten50-on-active.is-active,
+.shadow-lighten50-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.50) !important;
 }
 .shadow-bold-lighten50-on-hover:hover,
-.shadow-bold-lighten50-on-active.is-active {
+.shadow-bold-lighten50-on-active.is-active,
+.shadow-bold-lighten50-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.50) !important;
 }
       
 .shadow-lighten75-on-hover:hover,
-.shadow-lighten75-on-active.is-active {
+.shadow-lighten75-on-active.is-active,
+.shadow-lighten75-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.75) !important;
 }
 .shadow-bold-lighten75-on-hover:hover,
-.shadow-bold-lighten75-on-active.is-active {
+.shadow-bold-lighten75-on-active.is-active,
+.shadow-bold-lighten75-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.75) !important;
 }
       /** @endgroup */
@@ -6223,247 +6243,296 @@ input:checked + .toggle--active-transparent {
  * <div class=\'bg-darken25-on-active is-active\'>bg-darken25-on-active (active)</div>
  */
 .bg-gray-dark-on-hover:hover,
-.bg-gray-dark-on-active.is-active {
+.bg-gray-dark-on-active.is-active,
+.bg-gray-dark-on-active.is-active:hover {
   background-color: #333 !important;
 }
       
 .bg-gray-on-hover:hover,
-.bg-gray-on-active.is-active {
+.bg-gray-on-active.is-active,
+.bg-gray-on-active.is-active:hover {
   background-color: #666 !important;
 }
       
 .bg-gray-light-on-hover:hover,
-.bg-gray-light-on-active.is-active {
+.bg-gray-light-on-active.is-active,
+.bg-gray-light-on-active.is-active:hover {
   background-color: #ccc !important;
 }
       
 .bg-gray-faint-on-hover:hover,
-.bg-gray-faint-on-active.is-active {
+.bg-gray-faint-on-active.is-active,
+.bg-gray-faint-on-active.is-active:hover {
   background-color: #f7f7f7 !important;
 }
       
 .bg-pink-dark-on-hover:hover,
-.bg-pink-dark-on-active.is-active {
+.bg-pink-dark-on-active.is-active,
+.bg-pink-dark-on-active.is-active:hover {
   background-color: #C8145A !important;
 }
       
 .bg-pink-on-hover:hover,
-.bg-pink-on-active.is-active {
+.bg-pink-on-active.is-active,
+.bg-pink-on-active.is-active:hover {
   background-color: #ff3c96 !important;
 }
       
 .bg-pink-light-on-hover:hover,
-.bg-pink-light-on-active.is-active {
+.bg-pink-light-on-active.is-active,
+.bg-pink-light-on-active.is-active:hover {
   background-color: #FF88C0 !important;
 }
       
 .bg-pink-faint-on-hover:hover,
-.bg-pink-faint-on-active.is-active {
+.bg-pink-faint-on-active.is-active,
+.bg-pink-faint-on-active.is-active:hover {
   background-color: #ffdbed !important;
 }
       
 .bg-red-dark-on-hover:hover,
-.bg-red-dark-on-active.is-active {
+.bg-red-dark-on-active.is-active,
+.bg-red-dark-on-active.is-active:hover {
   background-color: #BE0014 !important;
 }
       
 .bg-red-on-hover:hover,
-.bg-red-on-active.is-active {
+.bg-red-on-active.is-active,
+.bg-red-on-active.is-active:hover {
   background-color: #dc2b28 !important;
 }
       
 .bg-red-light-on-hover:hover,
-.bg-red-light-on-active.is-active {
+.bg-red-light-on-active.is-active,
+.bg-red-light-on-active.is-active:hover {
   background-color: #FF8280 !important;
 }
       
 .bg-red-faint-on-hover:hover,
-.bg-red-faint-on-active.is-active {
+.bg-red-faint-on-active.is-active,
+.bg-red-faint-on-active.is-active:hover {
   background-color: #ffdad9 !important;
 }
       
 .bg-orange-dark-on-hover:hover,
-.bg-orange-dark-on-active.is-active {
+.bg-orange-dark-on-active.is-active,
+.bg-orange-dark-on-active.is-active:hover {
   background-color: #DC4600 !important;
 }
       
 .bg-orange-on-hover:hover,
-.bg-orange-on-active.is-active {
+.bg-orange-on-active.is-active,
+.bg-orange-on-active.is-active:hover {
   background-color: #ff6e00 !important;
 }
       
 .bg-orange-light-on-hover:hover,
-.bg-orange-light-on-active.is-active {
+.bg-orange-light-on-active.is-active,
+.bg-orange-light-on-active.is-active:hover {
   background-color: #FFA950 !important;
 }
       
 .bg-orange-faint-on-hover:hover,
-.bg-orange-faint-on-active.is-active {
+.bg-orange-faint-on-active.is-active,
+.bg-orange-faint-on-active.is-active:hover {
   background-color: #FFE5CB !important;
 }
       
 .bg-yellow-dark-on-hover:hover,
-.bg-yellow-dark-on-active.is-active {
+.bg-yellow-dark-on-active.is-active,
+.bg-yellow-dark-on-active.is-active:hover {
   background-color: #FFBD0A !important;
 }
       
 .bg-yellow-on-hover:hover,
-.bg-yellow-on-active.is-active {
+.bg-yellow-on-active.is-active,
+.bg-yellow-on-active.is-active:hover {
   background-color: #f0dc00 !important;
 }
       
 .bg-yellow-light-on-hover:hover,
-.bg-yellow-light-on-active.is-active {
+.bg-yellow-light-on-active.is-active,
+.bg-yellow-light-on-active.is-active:hover {
   background-color: #F0F062 !important;
 }
       
 .bg-yellow-faint-on-hover:hover,
-.bg-yellow-faint-on-active.is-active {
+.bg-yellow-faint-on-active.is-active,
+.bg-yellow-faint-on-active.is-active:hover {
   background-color: #fafbd1 !important;
 }
       
 .bg-green-dark-on-hover:hover,
-.bg-green-dark-on-active.is-active {
+.bg-green-dark-on-active.is-active,
+.bg-green-dark-on-active.is-active:hover {
   background-color: #007532 !important;
 }
       
 .bg-green-on-hover:hover,
-.bg-green-on-active.is-active {
+.bg-green-on-active.is-active,
+.bg-green-on-active.is-active:hover {
   background-color: #01aa46 !important;
 }
       
 .bg-green-light-on-hover:hover,
-.bg-green-light-on-active.is-active {
+.bg-green-light-on-active.is-active,
+.bg-green-light-on-active.is-active:hover {
   background-color: #72C781 !important;
 }
       
 .bg-green-faint-on-hover:hover,
-.bg-green-faint-on-active.is-active {
+.bg-green-faint-on-active.is-active,
+.bg-green-faint-on-active.is-active:hover {
   background-color: #d4edda !important;
 }
       
 .bg-teal-dark-on-hover:hover,
-.bg-teal-dark-on-active.is-active {
+.bg-teal-dark-on-active.is-active,
+.bg-teal-dark-on-active.is-active:hover {
   background-color: #00626E !important;
 }
       
 .bg-teal-on-hover:hover,
-.bg-teal-on-active.is-active {
+.bg-teal-on-active.is-active,
+.bg-teal-on-active.is-active:hover {
   background-color: #01b5b4 !important;
 }
       
 .bg-teal-light-on-hover:hover,
-.bg-teal-light-on-active.is-active {
+.bg-teal-light-on-active.is-active,
+.bg-teal-light-on-active.is-active:hover {
   background-color: #50D2D2 !important;
 }
       
 .bg-teal-faint-on-hover:hover,
-.bg-teal-faint-on-active.is-active {
+.bg-teal-faint-on-active.is-active,
+.bg-teal-faint-on-active.is-active:hover {
   background-color: #cbf2f1 !important;
 }
       
 .bg-blue-dark-on-hover:hover,
-.bg-blue-dark-on-active.is-active {
+.bg-blue-dark-on-active.is-active,
+.bg-blue-dark-on-active.is-active:hover {
   background-color: #346DB0 !important;
 }
       
 .bg-blue-on-hover:hover,
-.bg-blue-on-active.is-active {
+.bg-blue-on-active.is-active,
+.bg-blue-on-active.is-active:hover {
   background-color: #448EE4 !important;
 }
       
 .bg-blue-light-on-hover:hover,
-.bg-blue-light-on-active.is-active {
+.bg-blue-light-on-active.is-active,
+.bg-blue-light-on-active.is-active:hover {
   background-color: #00B1FF !important;
 }
       
 .bg-blue-faint-on-hover:hover,
-.bg-blue-faint-on-active.is-active {
+.bg-blue-faint-on-active.is-active,
+.bg-blue-faint-on-active.is-active:hover {
   background-color: #E0ECF9 !important;
 }
       
 .bg-purple-dark-on-hover:hover,
-.bg-purple-dark-on-active.is-active {
+.bg-purple-dark-on-active.is-active,
+.bg-purple-dark-on-active.is-active:hover {
   background-color: #500078 !important;
 }
       
 .bg-purple-on-hover:hover,
-.bg-purple-on-active.is-active {
+.bg-purple-on-active.is-active,
+.bg-purple-on-active.is-active:hover {
   background-color: #8c50c7 !important;
 }
       
 .bg-purple-light-on-hover:hover,
-.bg-purple-light-on-active.is-active {
+.bg-purple-light-on-active.is-active,
+.bg-purple-light-on-active.is-active:hover {
   background-color: #C299E3 !important;
 }
       
 .bg-purple-faint-on-hover:hover,
-.bg-purple-faint-on-active.is-active {
+.bg-purple-faint-on-active.is-active,
+.bg-purple-faint-on-active.is-active:hover {
   background-color: #ede1f6 !important;
 }
       
 .bg-darken5-on-hover:hover,
-.bg-darken5-on-active.is-active {
+.bg-darken5-on-active.is-active,
+.bg-darken5-on-active.is-active:hover {
   background-color: rgba(0, 0, 0, 0.05) !important;
 }
       
 .bg-darken10-on-hover:hover,
-.bg-darken10-on-active.is-active {
+.bg-darken10-on-active.is-active,
+.bg-darken10-on-active.is-active:hover {
   background-color: rgba(0, 0, 0, 0.10) !important;
 }
       
 .bg-darken25-on-hover:hover,
-.bg-darken25-on-active.is-active {
+.bg-darken25-on-active.is-active,
+.bg-darken25-on-active.is-active:hover {
   background-color: rgba(0, 0, 0, 0.25) !important;
 }
       
 .bg-darken50-on-hover:hover,
-.bg-darken50-on-active.is-active {
+.bg-darken50-on-active.is-active,
+.bg-darken50-on-active.is-active:hover {
   background-color: rgba(0, 0, 0, 0.50) !important;
 }
       
 .bg-darken75-on-hover:hover,
-.bg-darken75-on-active.is-active {
+.bg-darken75-on-active.is-active,
+.bg-darken75-on-active.is-active:hover {
   background-color: rgba(0, 0, 0, 0.75) !important;
 }
       
 .bg-lighten5-on-hover:hover,
-.bg-lighten5-on-active.is-active {
+.bg-lighten5-on-active.is-active,
+.bg-lighten5-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.05) !important;
 }
       
 .bg-lighten10-on-hover:hover,
-.bg-lighten10-on-active.is-active {
+.bg-lighten10-on-active.is-active,
+.bg-lighten10-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
       
 .bg-lighten25-on-hover:hover,
-.bg-lighten25-on-active.is-active {
+.bg-lighten25-on-active.is-active,
+.bg-lighten25-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }
       
 .bg-lighten50-on-hover:hover,
-.bg-lighten50-on-active.is-active {
+.bg-lighten50-on-active.is-active,
+.bg-lighten50-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.50) !important;
 }
       
 .bg-lighten75-on-hover:hover,
-.bg-lighten75-on-active.is-active {
+.bg-lighten75-on-active.is-active,
+.bg-lighten75-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.75) !important;
 }
       
 .bg-white-on-hover:hover,
-.bg-white-on-active.is-active {
+.bg-white-on-active.is-active,
+.bg-white-on-active.is-active:hover {
   background-color: #fff !important;
 }
       
 .bg-black-on-hover:hover,
-.bg-black-on-active.is-active {
+.bg-black-on-active.is-active,
+.bg-black-on-active.is-active:hover {
   background-color: #000 !important;
 }
       
 .bg-transparent-on-hover:hover,
-.bg-transparent-on-active.is-active {
+.bg-transparent-on-active.is-active,
+.bg-transparent-on-active.is-active:hover {
   background-color: transparent !important;
 }
       /** @endgroup */
@@ -6478,247 +6547,296 @@ input:checked + .toggle--active-transparent {
  * <div class=\'color-red-on-active is-active\'>color-red-on-active (active)</div>
  */
 .color-gray-dark-on-hover:hover,
-.color-gray-dark-on-active.is-active {
+.color-gray-dark-on-active.is-active,
+.color-gray-dark-on-active.is-active:hover {
   color: #333 !important;
 }
       
 .color-gray-on-hover:hover,
-.color-gray-on-active.is-active {
+.color-gray-on-active.is-active,
+.color-gray-on-active.is-active:hover {
   color: #666 !important;
 }
       
 .color-gray-light-on-hover:hover,
-.color-gray-light-on-active.is-active {
+.color-gray-light-on-active.is-active,
+.color-gray-light-on-active.is-active:hover {
   color: #ccc !important;
 }
       
 .color-gray-faint-on-hover:hover,
-.color-gray-faint-on-active.is-active {
+.color-gray-faint-on-active.is-active,
+.color-gray-faint-on-active.is-active:hover {
   color: #f7f7f7 !important;
 }
       
 .color-pink-dark-on-hover:hover,
-.color-pink-dark-on-active.is-active {
+.color-pink-dark-on-active.is-active,
+.color-pink-dark-on-active.is-active:hover {
   color: #C8145A !important;
 }
       
 .color-pink-on-hover:hover,
-.color-pink-on-active.is-active {
+.color-pink-on-active.is-active,
+.color-pink-on-active.is-active:hover {
   color: #ff3c96 !important;
 }
       
 .color-pink-light-on-hover:hover,
-.color-pink-light-on-active.is-active {
+.color-pink-light-on-active.is-active,
+.color-pink-light-on-active.is-active:hover {
   color: #FF88C0 !important;
 }
       
 .color-pink-faint-on-hover:hover,
-.color-pink-faint-on-active.is-active {
+.color-pink-faint-on-active.is-active,
+.color-pink-faint-on-active.is-active:hover {
   color: #ffdbed !important;
 }
       
 .color-red-dark-on-hover:hover,
-.color-red-dark-on-active.is-active {
+.color-red-dark-on-active.is-active,
+.color-red-dark-on-active.is-active:hover {
   color: #BE0014 !important;
 }
       
 .color-red-on-hover:hover,
-.color-red-on-active.is-active {
+.color-red-on-active.is-active,
+.color-red-on-active.is-active:hover {
   color: #dc2b28 !important;
 }
       
 .color-red-light-on-hover:hover,
-.color-red-light-on-active.is-active {
+.color-red-light-on-active.is-active,
+.color-red-light-on-active.is-active:hover {
   color: #FF8280 !important;
 }
       
 .color-red-faint-on-hover:hover,
-.color-red-faint-on-active.is-active {
+.color-red-faint-on-active.is-active,
+.color-red-faint-on-active.is-active:hover {
   color: #ffdad9 !important;
 }
       
 .color-orange-dark-on-hover:hover,
-.color-orange-dark-on-active.is-active {
+.color-orange-dark-on-active.is-active,
+.color-orange-dark-on-active.is-active:hover {
   color: #DC4600 !important;
 }
       
 .color-orange-on-hover:hover,
-.color-orange-on-active.is-active {
+.color-orange-on-active.is-active,
+.color-orange-on-active.is-active:hover {
   color: #ff6e00 !important;
 }
       
 .color-orange-light-on-hover:hover,
-.color-orange-light-on-active.is-active {
+.color-orange-light-on-active.is-active,
+.color-orange-light-on-active.is-active:hover {
   color: #FFA950 !important;
 }
       
 .color-orange-faint-on-hover:hover,
-.color-orange-faint-on-active.is-active {
+.color-orange-faint-on-active.is-active,
+.color-orange-faint-on-active.is-active:hover {
   color: #FFE5CB !important;
 }
       
 .color-yellow-dark-on-hover:hover,
-.color-yellow-dark-on-active.is-active {
+.color-yellow-dark-on-active.is-active,
+.color-yellow-dark-on-active.is-active:hover {
   color: #FFBD0A !important;
 }
       
 .color-yellow-on-hover:hover,
-.color-yellow-on-active.is-active {
+.color-yellow-on-active.is-active,
+.color-yellow-on-active.is-active:hover {
   color: #f0dc00 !important;
 }
       
 .color-yellow-light-on-hover:hover,
-.color-yellow-light-on-active.is-active {
+.color-yellow-light-on-active.is-active,
+.color-yellow-light-on-active.is-active:hover {
   color: #F0F062 !important;
 }
       
 .color-yellow-faint-on-hover:hover,
-.color-yellow-faint-on-active.is-active {
+.color-yellow-faint-on-active.is-active,
+.color-yellow-faint-on-active.is-active:hover {
   color: #fafbd1 !important;
 }
       
 .color-green-dark-on-hover:hover,
-.color-green-dark-on-active.is-active {
+.color-green-dark-on-active.is-active,
+.color-green-dark-on-active.is-active:hover {
   color: #007532 !important;
 }
       
 .color-green-on-hover:hover,
-.color-green-on-active.is-active {
+.color-green-on-active.is-active,
+.color-green-on-active.is-active:hover {
   color: #01aa46 !important;
 }
       
 .color-green-light-on-hover:hover,
-.color-green-light-on-active.is-active {
+.color-green-light-on-active.is-active,
+.color-green-light-on-active.is-active:hover {
   color: #72C781 !important;
 }
       
 .color-green-faint-on-hover:hover,
-.color-green-faint-on-active.is-active {
+.color-green-faint-on-active.is-active,
+.color-green-faint-on-active.is-active:hover {
   color: #d4edda !important;
 }
       
 .color-teal-dark-on-hover:hover,
-.color-teal-dark-on-active.is-active {
+.color-teal-dark-on-active.is-active,
+.color-teal-dark-on-active.is-active:hover {
   color: #00626E !important;
 }
       
 .color-teal-on-hover:hover,
-.color-teal-on-active.is-active {
+.color-teal-on-active.is-active,
+.color-teal-on-active.is-active:hover {
   color: #01b5b4 !important;
 }
       
 .color-teal-light-on-hover:hover,
-.color-teal-light-on-active.is-active {
+.color-teal-light-on-active.is-active,
+.color-teal-light-on-active.is-active:hover {
   color: #50D2D2 !important;
 }
       
 .color-teal-faint-on-hover:hover,
-.color-teal-faint-on-active.is-active {
+.color-teal-faint-on-active.is-active,
+.color-teal-faint-on-active.is-active:hover {
   color: #cbf2f1 !important;
 }
       
 .color-blue-dark-on-hover:hover,
-.color-blue-dark-on-active.is-active {
+.color-blue-dark-on-active.is-active,
+.color-blue-dark-on-active.is-active:hover {
   color: #346DB0 !important;
 }
       
 .color-blue-on-hover:hover,
-.color-blue-on-active.is-active {
+.color-blue-on-active.is-active,
+.color-blue-on-active.is-active:hover {
   color: #448EE4 !important;
 }
       
 .color-blue-light-on-hover:hover,
-.color-blue-light-on-active.is-active {
+.color-blue-light-on-active.is-active,
+.color-blue-light-on-active.is-active:hover {
   color: #00B1FF !important;
 }
       
 .color-blue-faint-on-hover:hover,
-.color-blue-faint-on-active.is-active {
+.color-blue-faint-on-active.is-active,
+.color-blue-faint-on-active.is-active:hover {
   color: #E0ECF9 !important;
 }
       
 .color-purple-dark-on-hover:hover,
-.color-purple-dark-on-active.is-active {
+.color-purple-dark-on-active.is-active,
+.color-purple-dark-on-active.is-active:hover {
   color: #500078 !important;
 }
       
 .color-purple-on-hover:hover,
-.color-purple-on-active.is-active {
+.color-purple-on-active.is-active,
+.color-purple-on-active.is-active:hover {
   color: #8c50c7 !important;
 }
       
 .color-purple-light-on-hover:hover,
-.color-purple-light-on-active.is-active {
+.color-purple-light-on-active.is-active,
+.color-purple-light-on-active.is-active:hover {
   color: #C299E3 !important;
 }
       
 .color-purple-faint-on-hover:hover,
-.color-purple-faint-on-active.is-active {
+.color-purple-faint-on-active.is-active,
+.color-purple-faint-on-active.is-active:hover {
   color: #ede1f6 !important;
 }
       
 .color-darken5-on-hover:hover,
-.color-darken5-on-active.is-active {
+.color-darken5-on-active.is-active,
+.color-darken5-on-active.is-active:hover {
   color: rgba(0, 0, 0, 0.05) !important;
 }
       
 .color-darken10-on-hover:hover,
-.color-darken10-on-active.is-active {
+.color-darken10-on-active.is-active,
+.color-darken10-on-active.is-active:hover {
   color: rgba(0, 0, 0, 0.10) !important;
 }
       
 .color-darken25-on-hover:hover,
-.color-darken25-on-active.is-active {
+.color-darken25-on-active.is-active,
+.color-darken25-on-active.is-active:hover {
   color: rgba(0, 0, 0, 0.25) !important;
 }
       
 .color-darken50-on-hover:hover,
-.color-darken50-on-active.is-active {
+.color-darken50-on-active.is-active,
+.color-darken50-on-active.is-active:hover {
   color: rgba(0, 0, 0, 0.50) !important;
 }
       
 .color-darken75-on-hover:hover,
-.color-darken75-on-active.is-active {
+.color-darken75-on-active.is-active,
+.color-darken75-on-active.is-active:hover {
   color: rgba(0, 0, 0, 0.75) !important;
 }
       
 .color-lighten5-on-hover:hover,
-.color-lighten5-on-active.is-active {
+.color-lighten5-on-active.is-active,
+.color-lighten5-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.05) !important;
 }
       
 .color-lighten10-on-hover:hover,
-.color-lighten10-on-active.is-active {
+.color-lighten10-on-active.is-active,
+.color-lighten10-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.1) !important;
 }
       
 .color-lighten25-on-hover:hover,
-.color-lighten25-on-active.is-active {
+.color-lighten25-on-active.is-active,
+.color-lighten25-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.25) !important;
 }
       
 .color-lighten50-on-hover:hover,
-.color-lighten50-on-active.is-active {
+.color-lighten50-on-active.is-active,
+.color-lighten50-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.50) !important;
 }
       
 .color-lighten75-on-hover:hover,
-.color-lighten75-on-active.is-active {
+.color-lighten75-on-active.is-active,
+.color-lighten75-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.75) !important;
 }
       
 .color-white-on-hover:hover,
-.color-white-on-active.is-active {
+.color-white-on-active.is-active,
+.color-white-on-active.is-active:hover {
   color: #fff !important;
 }
       
 .color-black-on-hover:hover,
-.color-black-on-active.is-active {
+.color-black-on-active.is-active,
+.color-black-on-active.is-active:hover {
   color: #000 !important;
 }
       
 .color-transparent-on-hover:hover,
-.color-transparent-on-active.is-active {
+.color-transparent-on-active.is-active,
+.color-transparent-on-active.is-active:hover {
   color: transparent !important;
 }
       /** @endgroup */
@@ -6733,247 +6851,296 @@ input:checked + .toggle--active-transparent {
  * <div class=\'border border--red-on-active is-active\'>border--red-on-active (active)</div>
  */
 .border--gray-dark-on-hover:hover,
-.border--gray-dark-on-active.is-active {
+.border--gray-dark-on-active.is-active,
+.border--gray-dark-on-active.is-active:hover {
   border-color: #333 !important;
 }
       
 .border--gray-on-hover:hover,
-.border--gray-on-active.is-active {
+.border--gray-on-active.is-active,
+.border--gray-on-active.is-active:hover {
   border-color: #666 !important;
 }
       
 .border--gray-light-on-hover:hover,
-.border--gray-light-on-active.is-active {
+.border--gray-light-on-active.is-active,
+.border--gray-light-on-active.is-active:hover {
   border-color: #ccc !important;
 }
       
 .border--gray-faint-on-hover:hover,
-.border--gray-faint-on-active.is-active {
+.border--gray-faint-on-active.is-active,
+.border--gray-faint-on-active.is-active:hover {
   border-color: #f7f7f7 !important;
 }
       
 .border--pink-dark-on-hover:hover,
-.border--pink-dark-on-active.is-active {
+.border--pink-dark-on-active.is-active,
+.border--pink-dark-on-active.is-active:hover {
   border-color: #C8145A !important;
 }
       
 .border--pink-on-hover:hover,
-.border--pink-on-active.is-active {
+.border--pink-on-active.is-active,
+.border--pink-on-active.is-active:hover {
   border-color: #ff3c96 !important;
 }
       
 .border--pink-light-on-hover:hover,
-.border--pink-light-on-active.is-active {
+.border--pink-light-on-active.is-active,
+.border--pink-light-on-active.is-active:hover {
   border-color: #FF88C0 !important;
 }
       
 .border--pink-faint-on-hover:hover,
-.border--pink-faint-on-active.is-active {
+.border--pink-faint-on-active.is-active,
+.border--pink-faint-on-active.is-active:hover {
   border-color: #ffdbed !important;
 }
       
 .border--red-dark-on-hover:hover,
-.border--red-dark-on-active.is-active {
+.border--red-dark-on-active.is-active,
+.border--red-dark-on-active.is-active:hover {
   border-color: #BE0014 !important;
 }
       
 .border--red-on-hover:hover,
-.border--red-on-active.is-active {
+.border--red-on-active.is-active,
+.border--red-on-active.is-active:hover {
   border-color: #dc2b28 !important;
 }
       
 .border--red-light-on-hover:hover,
-.border--red-light-on-active.is-active {
+.border--red-light-on-active.is-active,
+.border--red-light-on-active.is-active:hover {
   border-color: #FF8280 !important;
 }
       
 .border--red-faint-on-hover:hover,
-.border--red-faint-on-active.is-active {
+.border--red-faint-on-active.is-active,
+.border--red-faint-on-active.is-active:hover {
   border-color: #ffdad9 !important;
 }
       
 .border--orange-dark-on-hover:hover,
-.border--orange-dark-on-active.is-active {
+.border--orange-dark-on-active.is-active,
+.border--orange-dark-on-active.is-active:hover {
   border-color: #DC4600 !important;
 }
       
 .border--orange-on-hover:hover,
-.border--orange-on-active.is-active {
+.border--orange-on-active.is-active,
+.border--orange-on-active.is-active:hover {
   border-color: #ff6e00 !important;
 }
       
 .border--orange-light-on-hover:hover,
-.border--orange-light-on-active.is-active {
+.border--orange-light-on-active.is-active,
+.border--orange-light-on-active.is-active:hover {
   border-color: #FFA950 !important;
 }
       
 .border--orange-faint-on-hover:hover,
-.border--orange-faint-on-active.is-active {
+.border--orange-faint-on-active.is-active,
+.border--orange-faint-on-active.is-active:hover {
   border-color: #FFE5CB !important;
 }
       
 .border--yellow-dark-on-hover:hover,
-.border--yellow-dark-on-active.is-active {
+.border--yellow-dark-on-active.is-active,
+.border--yellow-dark-on-active.is-active:hover {
   border-color: #FFBD0A !important;
 }
       
 .border--yellow-on-hover:hover,
-.border--yellow-on-active.is-active {
+.border--yellow-on-active.is-active,
+.border--yellow-on-active.is-active:hover {
   border-color: #f0dc00 !important;
 }
       
 .border--yellow-light-on-hover:hover,
-.border--yellow-light-on-active.is-active {
+.border--yellow-light-on-active.is-active,
+.border--yellow-light-on-active.is-active:hover {
   border-color: #F0F062 !important;
 }
       
 .border--yellow-faint-on-hover:hover,
-.border--yellow-faint-on-active.is-active {
+.border--yellow-faint-on-active.is-active,
+.border--yellow-faint-on-active.is-active:hover {
   border-color: #fafbd1 !important;
 }
       
 .border--green-dark-on-hover:hover,
-.border--green-dark-on-active.is-active {
+.border--green-dark-on-active.is-active,
+.border--green-dark-on-active.is-active:hover {
   border-color: #007532 !important;
 }
       
 .border--green-on-hover:hover,
-.border--green-on-active.is-active {
+.border--green-on-active.is-active,
+.border--green-on-active.is-active:hover {
   border-color: #01aa46 !important;
 }
       
 .border--green-light-on-hover:hover,
-.border--green-light-on-active.is-active {
+.border--green-light-on-active.is-active,
+.border--green-light-on-active.is-active:hover {
   border-color: #72C781 !important;
 }
       
 .border--green-faint-on-hover:hover,
-.border--green-faint-on-active.is-active {
+.border--green-faint-on-active.is-active,
+.border--green-faint-on-active.is-active:hover {
   border-color: #d4edda !important;
 }
       
 .border--teal-dark-on-hover:hover,
-.border--teal-dark-on-active.is-active {
+.border--teal-dark-on-active.is-active,
+.border--teal-dark-on-active.is-active:hover {
   border-color: #00626E !important;
 }
       
 .border--teal-on-hover:hover,
-.border--teal-on-active.is-active {
+.border--teal-on-active.is-active,
+.border--teal-on-active.is-active:hover {
   border-color: #01b5b4 !important;
 }
       
 .border--teal-light-on-hover:hover,
-.border--teal-light-on-active.is-active {
+.border--teal-light-on-active.is-active,
+.border--teal-light-on-active.is-active:hover {
   border-color: #50D2D2 !important;
 }
       
 .border--teal-faint-on-hover:hover,
-.border--teal-faint-on-active.is-active {
+.border--teal-faint-on-active.is-active,
+.border--teal-faint-on-active.is-active:hover {
   border-color: #cbf2f1 !important;
 }
       
 .border--blue-dark-on-hover:hover,
-.border--blue-dark-on-active.is-active {
+.border--blue-dark-on-active.is-active,
+.border--blue-dark-on-active.is-active:hover {
   border-color: #346DB0 !important;
 }
       
 .border--blue-on-hover:hover,
-.border--blue-on-active.is-active {
+.border--blue-on-active.is-active,
+.border--blue-on-active.is-active:hover {
   border-color: #448EE4 !important;
 }
       
 .border--blue-light-on-hover:hover,
-.border--blue-light-on-active.is-active {
+.border--blue-light-on-active.is-active,
+.border--blue-light-on-active.is-active:hover {
   border-color: #00B1FF !important;
 }
       
 .border--blue-faint-on-hover:hover,
-.border--blue-faint-on-active.is-active {
+.border--blue-faint-on-active.is-active,
+.border--blue-faint-on-active.is-active:hover {
   border-color: #E0ECF9 !important;
 }
       
 .border--purple-dark-on-hover:hover,
-.border--purple-dark-on-active.is-active {
+.border--purple-dark-on-active.is-active,
+.border--purple-dark-on-active.is-active:hover {
   border-color: #500078 !important;
 }
       
 .border--purple-on-hover:hover,
-.border--purple-on-active.is-active {
+.border--purple-on-active.is-active,
+.border--purple-on-active.is-active:hover {
   border-color: #8c50c7 !important;
 }
       
 .border--purple-light-on-hover:hover,
-.border--purple-light-on-active.is-active {
+.border--purple-light-on-active.is-active,
+.border--purple-light-on-active.is-active:hover {
   border-color: #C299E3 !important;
 }
       
 .border--purple-faint-on-hover:hover,
-.border--purple-faint-on-active.is-active {
+.border--purple-faint-on-active.is-active,
+.border--purple-faint-on-active.is-active:hover {
   border-color: #ede1f6 !important;
 }
       
 .border--darken5-on-hover:hover,
-.border--darken5-on-active.is-active {
+.border--darken5-on-active.is-active,
+.border--darken5-on-active.is-active:hover {
   border-color: rgba(0, 0, 0, 0.05) !important;
 }
       
 .border--darken10-on-hover:hover,
-.border--darken10-on-active.is-active {
+.border--darken10-on-active.is-active,
+.border--darken10-on-active.is-active:hover {
   border-color: rgba(0, 0, 0, 0.10) !important;
 }
       
 .border--darken25-on-hover:hover,
-.border--darken25-on-active.is-active {
+.border--darken25-on-active.is-active,
+.border--darken25-on-active.is-active:hover {
   border-color: rgba(0, 0, 0, 0.25) !important;
 }
       
 .border--darken50-on-hover:hover,
-.border--darken50-on-active.is-active {
+.border--darken50-on-active.is-active,
+.border--darken50-on-active.is-active:hover {
   border-color: rgba(0, 0, 0, 0.50) !important;
 }
       
 .border--darken75-on-hover:hover,
-.border--darken75-on-active.is-active {
+.border--darken75-on-active.is-active,
+.border--darken75-on-active.is-active:hover {
   border-color: rgba(0, 0, 0, 0.75) !important;
 }
       
 .border--lighten5-on-hover:hover,
-.border--lighten5-on-active.is-active {
+.border--lighten5-on-active.is-active,
+.border--lighten5-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.05) !important;
 }
       
 .border--lighten10-on-hover:hover,
-.border--lighten10-on-active.is-active {
+.border--lighten10-on-active.is-active,
+.border--lighten10-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
       
 .border--lighten25-on-hover:hover,
-.border--lighten25-on-active.is-active {
+.border--lighten25-on-active.is-active,
+.border--lighten25-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.25) !important;
 }
       
 .border--lighten50-on-hover:hover,
-.border--lighten50-on-active.is-active {
+.border--lighten50-on-active.is-active,
+.border--lighten50-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.50) !important;
 }
       
 .border--lighten75-on-hover:hover,
-.border--lighten75-on-active.is-active {
+.border--lighten75-on-active.is-active,
+.border--lighten75-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.75) !important;
 }
       
 .border--white-on-hover:hover,
-.border--white-on-active.is-active {
+.border--white-on-active.is-active,
+.border--white-on-active.is-active:hover {
   border-color: #fff !important;
 }
       
 .border--black-on-hover:hover,
-.border--black-on-active.is-active {
+.border--black-on-active.is-active,
+.border--black-on-active.is-active:hover {
   border-color: #000 !important;
 }
       
 .border--transparent-on-hover:hover,
-.border--transparent-on-active.is-active {
+.border--transparent-on-active.is-active,
+.border--transparent-on-active.is-active:hover {
   border-color: transparent !important;
 }
       /** @endgroup */"
@@ -13104,92 +13271,112 @@ input:checked + .toggle--active-transparent {
  * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
  */
 .shadow-darken5-on-hover:hover,
-.shadow-darken5-on-active.is-active {
+.shadow-darken5-on-active.is-active,
+.shadow-darken5-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05) !important;
 }
 .shadow-bold-darken5-on-hover:hover,
-.shadow-bold-darken5-on-active.is-active {
+.shadow-bold-darken5-on-active.is-active,
+.shadow-bold-darken5-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.05) !important;
 }
       
 .shadow-darken10-on-hover:hover,
-.shadow-darken10-on-active.is-active {
+.shadow-darken10-on-active.is-active,
+.shadow-darken10-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.10) !important;
 }
 .shadow-bold-darken10-on-hover:hover,
-.shadow-bold-darken10-on-active.is-active {
+.shadow-bold-darken10-on-active.is-active,
+.shadow-bold-darken10-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.10) !important;
 }
       
 .shadow-darken25-on-hover:hover,
-.shadow-darken25-on-active.is-active {
+.shadow-darken25-on-active.is-active,
+.shadow-darken25-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25) !important;
 }
 .shadow-bold-darken25-on-hover:hover,
-.shadow-bold-darken25-on-active.is-active {
+.shadow-bold-darken25-on-active.is-active,
+.shadow-bold-darken25-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.25) !important;
 }
       
 .shadow-darken50-on-hover:hover,
-.shadow-darken50-on-active.is-active {
+.shadow-darken50-on-active.is-active,
+.shadow-darken50-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.50) !important;
 }
 .shadow-bold-darken50-on-hover:hover,
-.shadow-bold-darken50-on-active.is-active {
+.shadow-bold-darken50-on-active.is-active,
+.shadow-bold-darken50-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.50) !important;
 }
       
 .shadow-darken75-on-hover:hover,
-.shadow-darken75-on-active.is-active {
+.shadow-darken75-on-active.is-active,
+.shadow-darken75-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.75) !important;
 }
 .shadow-bold-darken75-on-hover:hover,
-.shadow-bold-darken75-on-active.is-active {
+.shadow-bold-darken75-on-active.is-active,
+.shadow-bold-darken75-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.75) !important;
 }
       
 .shadow-lighten5-on-hover:hover,
-.shadow-lighten5-on-active.is-active {
+.shadow-lighten5-on-active.is-active,
+.shadow-lighten5-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.05) !important;
 }
 .shadow-bold-lighten5-on-hover:hover,
-.shadow-bold-lighten5-on-active.is-active {
+.shadow-bold-lighten5-on-active.is-active,
+.shadow-bold-lighten5-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.05) !important;
 }
       
 .shadow-lighten10-on-hover:hover,
-.shadow-lighten10-on-active.is-active {
+.shadow-lighten10-on-active.is-active,
+.shadow-lighten10-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.1) !important;
 }
 .shadow-bold-lighten10-on-hover:hover,
-.shadow-bold-lighten10-on-active.is-active {
+.shadow-bold-lighten10-on-active.is-active,
+.shadow-bold-lighten10-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.1) !important;
 }
       
 .shadow-lighten25-on-hover:hover,
-.shadow-lighten25-on-active.is-active {
+.shadow-lighten25-on-active.is-active,
+.shadow-lighten25-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.25) !important;
 }
 .shadow-bold-lighten25-on-hover:hover,
-.shadow-bold-lighten25-on-active.is-active {
+.shadow-bold-lighten25-on-active.is-active,
+.shadow-bold-lighten25-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.25) !important;
 }
       
 .shadow-lighten50-on-hover:hover,
-.shadow-lighten50-on-active.is-active {
+.shadow-lighten50-on-active.is-active,
+.shadow-lighten50-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.50) !important;
 }
 .shadow-bold-lighten50-on-hover:hover,
-.shadow-bold-lighten50-on-active.is-active {
+.shadow-bold-lighten50-on-active.is-active,
+.shadow-bold-lighten50-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.50) !important;
 }
       
 .shadow-lighten75-on-hover:hover,
-.shadow-lighten75-on-active.is-active {
+.shadow-lighten75-on-active.is-active,
+.shadow-lighten75-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.75) !important;
 }
 .shadow-bold-lighten75-on-hover:hover,
-.shadow-bold-lighten75-on-active.is-active {
+.shadow-bold-lighten75-on-active.is-active,
+.shadow-bold-lighten75-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.75) !important;
 }
       /** @endgroup */
@@ -13204,247 +13391,296 @@ input:checked + .toggle--active-transparent {
  * <div class=\'bg-darken25-on-active is-active\'>bg-darken25-on-active (active)</div>
  */
 .bg-gray-dark-on-hover:hover,
-.bg-gray-dark-on-active.is-active {
+.bg-gray-dark-on-active.is-active,
+.bg-gray-dark-on-active.is-active:hover {
   background-color: #000 !important;
 }
       
 .bg-gray-on-hover:hover,
-.bg-gray-on-active.is-active {
+.bg-gray-on-active.is-active,
+.bg-gray-on-active.is-active:hover {
   background-color: #666 !important;
 }
       
 .bg-gray-light-on-hover:hover,
-.bg-gray-light-on-active.is-active {
+.bg-gray-light-on-active.is-active,
+.bg-gray-light-on-active.is-active:hover {
   background-color: #ccc !important;
 }
       
 .bg-gray-faint-on-hover:hover,
-.bg-gray-faint-on-active.is-active {
+.bg-gray-faint-on-active.is-active,
+.bg-gray-faint-on-active.is-active:hover {
   background-color: #f7f7f7 !important;
 }
       
 .bg-pink-dark-on-hover:hover,
-.bg-pink-dark-on-active.is-active {
+.bg-pink-dark-on-active.is-active,
+.bg-pink-dark-on-active.is-active:hover {
   background-color: #C8145A !important;
 }
       
 .bg-pink-on-hover:hover,
-.bg-pink-on-active.is-active {
+.bg-pink-on-active.is-active,
+.bg-pink-on-active.is-active:hover {
   background-color: pink !important;
 }
       
 .bg-pink-light-on-hover:hover,
-.bg-pink-light-on-active.is-active {
+.bg-pink-light-on-active.is-active,
+.bg-pink-light-on-active.is-active:hover {
   background-color: #FF88C0 !important;
 }
       
 .bg-pink-faint-on-hover:hover,
-.bg-pink-faint-on-active.is-active {
+.bg-pink-faint-on-active.is-active,
+.bg-pink-faint-on-active.is-active:hover {
   background-color: #ffdbed !important;
 }
       
 .bg-red-dark-on-hover:hover,
-.bg-red-dark-on-active.is-active {
+.bg-red-dark-on-active.is-active,
+.bg-red-dark-on-active.is-active:hover {
   background-color: #BE0014 !important;
 }
       
 .bg-red-on-hover:hover,
-.bg-red-on-active.is-active {
+.bg-red-on-active.is-active,
+.bg-red-on-active.is-active:hover {
   background-color: #fff !important;
 }
       
 .bg-red-light-on-hover:hover,
-.bg-red-light-on-active.is-active {
+.bg-red-light-on-active.is-active,
+.bg-red-light-on-active.is-active:hover {
   background-color: #FF8280 !important;
 }
       
 .bg-red-faint-on-hover:hover,
-.bg-red-faint-on-active.is-active {
+.bg-red-faint-on-active.is-active,
+.bg-red-faint-on-active.is-active:hover {
   background-color: #ffdad9 !important;
 }
       
 .bg-orange-dark-on-hover:hover,
-.bg-orange-dark-on-active.is-active {
+.bg-orange-dark-on-active.is-active,
+.bg-orange-dark-on-active.is-active:hover {
   background-color: #DC4600 !important;
 }
       
 .bg-orange-on-hover:hover,
-.bg-orange-on-active.is-active {
+.bg-orange-on-active.is-active,
+.bg-orange-on-active.is-active:hover {
   background-color: #ff6e00 !important;
 }
       
 .bg-orange-light-on-hover:hover,
-.bg-orange-light-on-active.is-active {
+.bg-orange-light-on-active.is-active,
+.bg-orange-light-on-active.is-active:hover {
   background-color: #FFA950 !important;
 }
       
 .bg-orange-faint-on-hover:hover,
-.bg-orange-faint-on-active.is-active {
+.bg-orange-faint-on-active.is-active,
+.bg-orange-faint-on-active.is-active:hover {
   background-color: #FFE5CB !important;
 }
       
 .bg-yellow-dark-on-hover:hover,
-.bg-yellow-dark-on-active.is-active {
+.bg-yellow-dark-on-active.is-active,
+.bg-yellow-dark-on-active.is-active:hover {
   background-color: #FFBD0A !important;
 }
       
 .bg-yellow-on-hover:hover,
-.bg-yellow-on-active.is-active {
+.bg-yellow-on-active.is-active,
+.bg-yellow-on-active.is-active:hover {
   background-color: #f0dc00 !important;
 }
       
 .bg-yellow-light-on-hover:hover,
-.bg-yellow-light-on-active.is-active {
+.bg-yellow-light-on-active.is-active,
+.bg-yellow-light-on-active.is-active:hover {
   background-color: #F0F062 !important;
 }
       
 .bg-yellow-faint-on-hover:hover,
-.bg-yellow-faint-on-active.is-active {
+.bg-yellow-faint-on-active.is-active,
+.bg-yellow-faint-on-active.is-active:hover {
   background-color: #fafbd1 !important;
 }
       
 .bg-green-dark-on-hover:hover,
-.bg-green-dark-on-active.is-active {
+.bg-green-dark-on-active.is-active,
+.bg-green-dark-on-active.is-active:hover {
   background-color: #007532 !important;
 }
       
 .bg-green-on-hover:hover,
-.bg-green-on-active.is-active {
+.bg-green-on-active.is-active,
+.bg-green-on-active.is-active:hover {
   background-color: #01aa46 !important;
 }
       
 .bg-green-light-on-hover:hover,
-.bg-green-light-on-active.is-active {
+.bg-green-light-on-active.is-active,
+.bg-green-light-on-active.is-active:hover {
   background-color: #72C781 !important;
 }
       
 .bg-green-faint-on-hover:hover,
-.bg-green-faint-on-active.is-active {
+.bg-green-faint-on-active.is-active,
+.bg-green-faint-on-active.is-active:hover {
   background-color: #d4edda !important;
 }
       
 .bg-teal-dark-on-hover:hover,
-.bg-teal-dark-on-active.is-active {
+.bg-teal-dark-on-active.is-active,
+.bg-teal-dark-on-active.is-active:hover {
   background-color: #00626E !important;
 }
       
 .bg-teal-on-hover:hover,
-.bg-teal-on-active.is-active {
+.bg-teal-on-active.is-active,
+.bg-teal-on-active.is-active:hover {
   background-color: #01b5b4 !important;
 }
       
 .bg-teal-light-on-hover:hover,
-.bg-teal-light-on-active.is-active {
+.bg-teal-light-on-active.is-active,
+.bg-teal-light-on-active.is-active:hover {
   background-color: #50D2D2 !important;
 }
       
 .bg-teal-faint-on-hover:hover,
-.bg-teal-faint-on-active.is-active {
+.bg-teal-faint-on-active.is-active,
+.bg-teal-faint-on-active.is-active:hover {
   background-color: #cbf2f1 !important;
 }
       
 .bg-blue-dark-on-hover:hover,
-.bg-blue-dark-on-active.is-active {
+.bg-blue-dark-on-active.is-active,
+.bg-blue-dark-on-active.is-active:hover {
   background-color: #346DB0 !important;
 }
       
 .bg-blue-on-hover:hover,
-.bg-blue-on-active.is-active {
+.bg-blue-on-active.is-active,
+.bg-blue-on-active.is-active:hover {
   background-color: #448EE4 !important;
 }
       
 .bg-blue-light-on-hover:hover,
-.bg-blue-light-on-active.is-active {
+.bg-blue-light-on-active.is-active,
+.bg-blue-light-on-active.is-active:hover {
   background-color: #00B1FF !important;
 }
       
 .bg-blue-faint-on-hover:hover,
-.bg-blue-faint-on-active.is-active {
+.bg-blue-faint-on-active.is-active,
+.bg-blue-faint-on-active.is-active:hover {
   background-color: #E0ECF9 !important;
 }
       
 .bg-purple-dark-on-hover:hover,
-.bg-purple-dark-on-active.is-active {
+.bg-purple-dark-on-active.is-active,
+.bg-purple-dark-on-active.is-active:hover {
   background-color: #500078 !important;
 }
       
 .bg-purple-on-hover:hover,
-.bg-purple-on-active.is-active {
+.bg-purple-on-active.is-active,
+.bg-purple-on-active.is-active:hover {
   background-color: #8c50c7 !important;
 }
       
 .bg-purple-light-on-hover:hover,
-.bg-purple-light-on-active.is-active {
+.bg-purple-light-on-active.is-active,
+.bg-purple-light-on-active.is-active:hover {
   background-color: #C299E3 !important;
 }
       
 .bg-purple-faint-on-hover:hover,
-.bg-purple-faint-on-active.is-active {
+.bg-purple-faint-on-active.is-active,
+.bg-purple-faint-on-active.is-active:hover {
   background-color: #ede1f6 !important;
 }
       
 .bg-darken5-on-hover:hover,
-.bg-darken5-on-active.is-active {
+.bg-darken5-on-active.is-active,
+.bg-darken5-on-active.is-active:hover {
   background-color: rgba(0, 0, 0, 0.05) !important;
 }
       
 .bg-darken10-on-hover:hover,
-.bg-darken10-on-active.is-active {
+.bg-darken10-on-active.is-active,
+.bg-darken10-on-active.is-active:hover {
   background-color: rgba(0, 0, 0, 0.10) !important;
 }
       
 .bg-darken25-on-hover:hover,
-.bg-darken25-on-active.is-active {
+.bg-darken25-on-active.is-active,
+.bg-darken25-on-active.is-active:hover {
   background-color: rgba(0, 0, 0, 0.25) !important;
 }
       
 .bg-darken50-on-hover:hover,
-.bg-darken50-on-active.is-active {
+.bg-darken50-on-active.is-active,
+.bg-darken50-on-active.is-active:hover {
   background-color: rgba(0, 0, 0, 0.50) !important;
 }
       
 .bg-darken75-on-hover:hover,
-.bg-darken75-on-active.is-active {
+.bg-darken75-on-active.is-active,
+.bg-darken75-on-active.is-active:hover {
   background-color: rgba(0, 0, 0, 0.75) !important;
 }
       
 .bg-lighten5-on-hover:hover,
-.bg-lighten5-on-active.is-active {
+.bg-lighten5-on-active.is-active,
+.bg-lighten5-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.05) !important;
 }
       
 .bg-lighten10-on-hover:hover,
-.bg-lighten10-on-active.is-active {
+.bg-lighten10-on-active.is-active,
+.bg-lighten10-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
       
 .bg-lighten25-on-hover:hover,
-.bg-lighten25-on-active.is-active {
+.bg-lighten25-on-active.is-active,
+.bg-lighten25-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }
       
 .bg-lighten50-on-hover:hover,
-.bg-lighten50-on-active.is-active {
+.bg-lighten50-on-active.is-active,
+.bg-lighten50-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.50) !important;
 }
       
 .bg-lighten75-on-hover:hover,
-.bg-lighten75-on-active.is-active {
+.bg-lighten75-on-active.is-active,
+.bg-lighten75-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.75) !important;
 }
       
 .bg-white-on-hover:hover,
-.bg-white-on-active.is-active {
+.bg-white-on-active.is-active,
+.bg-white-on-active.is-active:hover {
   background-color: #fff !important;
 }
       
 .bg-black-on-hover:hover,
-.bg-black-on-active.is-active {
+.bg-black-on-active.is-active,
+.bg-black-on-active.is-active:hover {
   background-color: #000 !important;
 }
       
 .bg-transparent-on-hover:hover,
-.bg-transparent-on-active.is-active {
+.bg-transparent-on-active.is-active,
+.bg-transparent-on-active.is-active:hover {
   background-color: transparent !important;
 }
       /** @endgroup */
@@ -13459,247 +13695,296 @@ input:checked + .toggle--active-transparent {
  * <div class=\'color-red-on-active is-active\'>color-red-on-active (active)</div>
  */
 .color-gray-dark-on-hover:hover,
-.color-gray-dark-on-active.is-active {
+.color-gray-dark-on-active.is-active,
+.color-gray-dark-on-active.is-active:hover {
   color: #000 !important;
 }
       
 .color-gray-on-hover:hover,
-.color-gray-on-active.is-active {
+.color-gray-on-active.is-active,
+.color-gray-on-active.is-active:hover {
   color: #666 !important;
 }
       
 .color-gray-light-on-hover:hover,
-.color-gray-light-on-active.is-active {
+.color-gray-light-on-active.is-active,
+.color-gray-light-on-active.is-active:hover {
   color: #ccc !important;
 }
       
 .color-gray-faint-on-hover:hover,
-.color-gray-faint-on-active.is-active {
+.color-gray-faint-on-active.is-active,
+.color-gray-faint-on-active.is-active:hover {
   color: #f7f7f7 !important;
 }
       
 .color-pink-dark-on-hover:hover,
-.color-pink-dark-on-active.is-active {
+.color-pink-dark-on-active.is-active,
+.color-pink-dark-on-active.is-active:hover {
   color: #C8145A !important;
 }
       
 .color-pink-on-hover:hover,
-.color-pink-on-active.is-active {
+.color-pink-on-active.is-active,
+.color-pink-on-active.is-active:hover {
   color: pink !important;
 }
       
 .color-pink-light-on-hover:hover,
-.color-pink-light-on-active.is-active {
+.color-pink-light-on-active.is-active,
+.color-pink-light-on-active.is-active:hover {
   color: #FF88C0 !important;
 }
       
 .color-pink-faint-on-hover:hover,
-.color-pink-faint-on-active.is-active {
+.color-pink-faint-on-active.is-active,
+.color-pink-faint-on-active.is-active:hover {
   color: #ffdbed !important;
 }
       
 .color-red-dark-on-hover:hover,
-.color-red-dark-on-active.is-active {
+.color-red-dark-on-active.is-active,
+.color-red-dark-on-active.is-active:hover {
   color: #BE0014 !important;
 }
       
 .color-red-on-hover:hover,
-.color-red-on-active.is-active {
+.color-red-on-active.is-active,
+.color-red-on-active.is-active:hover {
   color: #fff !important;
 }
       
 .color-red-light-on-hover:hover,
-.color-red-light-on-active.is-active {
+.color-red-light-on-active.is-active,
+.color-red-light-on-active.is-active:hover {
   color: #FF8280 !important;
 }
       
 .color-red-faint-on-hover:hover,
-.color-red-faint-on-active.is-active {
+.color-red-faint-on-active.is-active,
+.color-red-faint-on-active.is-active:hover {
   color: #ffdad9 !important;
 }
       
 .color-orange-dark-on-hover:hover,
-.color-orange-dark-on-active.is-active {
+.color-orange-dark-on-active.is-active,
+.color-orange-dark-on-active.is-active:hover {
   color: #DC4600 !important;
 }
       
 .color-orange-on-hover:hover,
-.color-orange-on-active.is-active {
+.color-orange-on-active.is-active,
+.color-orange-on-active.is-active:hover {
   color: #ff6e00 !important;
 }
       
 .color-orange-light-on-hover:hover,
-.color-orange-light-on-active.is-active {
+.color-orange-light-on-active.is-active,
+.color-orange-light-on-active.is-active:hover {
   color: #FFA950 !important;
 }
       
 .color-orange-faint-on-hover:hover,
-.color-orange-faint-on-active.is-active {
+.color-orange-faint-on-active.is-active,
+.color-orange-faint-on-active.is-active:hover {
   color: #FFE5CB !important;
 }
       
 .color-yellow-dark-on-hover:hover,
-.color-yellow-dark-on-active.is-active {
+.color-yellow-dark-on-active.is-active,
+.color-yellow-dark-on-active.is-active:hover {
   color: #FFBD0A !important;
 }
       
 .color-yellow-on-hover:hover,
-.color-yellow-on-active.is-active {
+.color-yellow-on-active.is-active,
+.color-yellow-on-active.is-active:hover {
   color: #f0dc00 !important;
 }
       
 .color-yellow-light-on-hover:hover,
-.color-yellow-light-on-active.is-active {
+.color-yellow-light-on-active.is-active,
+.color-yellow-light-on-active.is-active:hover {
   color: #F0F062 !important;
 }
       
 .color-yellow-faint-on-hover:hover,
-.color-yellow-faint-on-active.is-active {
+.color-yellow-faint-on-active.is-active,
+.color-yellow-faint-on-active.is-active:hover {
   color: #fafbd1 !important;
 }
       
 .color-green-dark-on-hover:hover,
-.color-green-dark-on-active.is-active {
+.color-green-dark-on-active.is-active,
+.color-green-dark-on-active.is-active:hover {
   color: #007532 !important;
 }
       
 .color-green-on-hover:hover,
-.color-green-on-active.is-active {
+.color-green-on-active.is-active,
+.color-green-on-active.is-active:hover {
   color: #01aa46 !important;
 }
       
 .color-green-light-on-hover:hover,
-.color-green-light-on-active.is-active {
+.color-green-light-on-active.is-active,
+.color-green-light-on-active.is-active:hover {
   color: #72C781 !important;
 }
       
 .color-green-faint-on-hover:hover,
-.color-green-faint-on-active.is-active {
+.color-green-faint-on-active.is-active,
+.color-green-faint-on-active.is-active:hover {
   color: #d4edda !important;
 }
       
 .color-teal-dark-on-hover:hover,
-.color-teal-dark-on-active.is-active {
+.color-teal-dark-on-active.is-active,
+.color-teal-dark-on-active.is-active:hover {
   color: #00626E !important;
 }
       
 .color-teal-on-hover:hover,
-.color-teal-on-active.is-active {
+.color-teal-on-active.is-active,
+.color-teal-on-active.is-active:hover {
   color: #01b5b4 !important;
 }
       
 .color-teal-light-on-hover:hover,
-.color-teal-light-on-active.is-active {
+.color-teal-light-on-active.is-active,
+.color-teal-light-on-active.is-active:hover {
   color: #50D2D2 !important;
 }
       
 .color-teal-faint-on-hover:hover,
-.color-teal-faint-on-active.is-active {
+.color-teal-faint-on-active.is-active,
+.color-teal-faint-on-active.is-active:hover {
   color: #cbf2f1 !important;
 }
       
 .color-blue-dark-on-hover:hover,
-.color-blue-dark-on-active.is-active {
+.color-blue-dark-on-active.is-active,
+.color-blue-dark-on-active.is-active:hover {
   color: #346DB0 !important;
 }
       
 .color-blue-on-hover:hover,
-.color-blue-on-active.is-active {
+.color-blue-on-active.is-active,
+.color-blue-on-active.is-active:hover {
   color: #448EE4 !important;
 }
       
 .color-blue-light-on-hover:hover,
-.color-blue-light-on-active.is-active {
+.color-blue-light-on-active.is-active,
+.color-blue-light-on-active.is-active:hover {
   color: #00B1FF !important;
 }
       
 .color-blue-faint-on-hover:hover,
-.color-blue-faint-on-active.is-active {
+.color-blue-faint-on-active.is-active,
+.color-blue-faint-on-active.is-active:hover {
   color: #E0ECF9 !important;
 }
       
 .color-purple-dark-on-hover:hover,
-.color-purple-dark-on-active.is-active {
+.color-purple-dark-on-active.is-active,
+.color-purple-dark-on-active.is-active:hover {
   color: #500078 !important;
 }
       
 .color-purple-on-hover:hover,
-.color-purple-on-active.is-active {
+.color-purple-on-active.is-active,
+.color-purple-on-active.is-active:hover {
   color: #8c50c7 !important;
 }
       
 .color-purple-light-on-hover:hover,
-.color-purple-light-on-active.is-active {
+.color-purple-light-on-active.is-active,
+.color-purple-light-on-active.is-active:hover {
   color: #C299E3 !important;
 }
       
 .color-purple-faint-on-hover:hover,
-.color-purple-faint-on-active.is-active {
+.color-purple-faint-on-active.is-active,
+.color-purple-faint-on-active.is-active:hover {
   color: #ede1f6 !important;
 }
       
 .color-darken5-on-hover:hover,
-.color-darken5-on-active.is-active {
+.color-darken5-on-active.is-active,
+.color-darken5-on-active.is-active:hover {
   color: rgba(0, 0, 0, 0.05) !important;
 }
       
 .color-darken10-on-hover:hover,
-.color-darken10-on-active.is-active {
+.color-darken10-on-active.is-active,
+.color-darken10-on-active.is-active:hover {
   color: rgba(0, 0, 0, 0.10) !important;
 }
       
 .color-darken25-on-hover:hover,
-.color-darken25-on-active.is-active {
+.color-darken25-on-active.is-active,
+.color-darken25-on-active.is-active:hover {
   color: rgba(0, 0, 0, 0.25) !important;
 }
       
 .color-darken50-on-hover:hover,
-.color-darken50-on-active.is-active {
+.color-darken50-on-active.is-active,
+.color-darken50-on-active.is-active:hover {
   color: rgba(0, 0, 0, 0.50) !important;
 }
       
 .color-darken75-on-hover:hover,
-.color-darken75-on-active.is-active {
+.color-darken75-on-active.is-active,
+.color-darken75-on-active.is-active:hover {
   color: rgba(0, 0, 0, 0.75) !important;
 }
       
 .color-lighten5-on-hover:hover,
-.color-lighten5-on-active.is-active {
+.color-lighten5-on-active.is-active,
+.color-lighten5-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.05) !important;
 }
       
 .color-lighten10-on-hover:hover,
-.color-lighten10-on-active.is-active {
+.color-lighten10-on-active.is-active,
+.color-lighten10-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.1) !important;
 }
       
 .color-lighten25-on-hover:hover,
-.color-lighten25-on-active.is-active {
+.color-lighten25-on-active.is-active,
+.color-lighten25-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.25) !important;
 }
       
 .color-lighten50-on-hover:hover,
-.color-lighten50-on-active.is-active {
+.color-lighten50-on-active.is-active,
+.color-lighten50-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.50) !important;
 }
       
 .color-lighten75-on-hover:hover,
-.color-lighten75-on-active.is-active {
+.color-lighten75-on-active.is-active,
+.color-lighten75-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.75) !important;
 }
       
 .color-white-on-hover:hover,
-.color-white-on-active.is-active {
+.color-white-on-active.is-active,
+.color-white-on-active.is-active:hover {
   color: #fff !important;
 }
       
 .color-black-on-hover:hover,
-.color-black-on-active.is-active {
+.color-black-on-active.is-active,
+.color-black-on-active.is-active:hover {
   color: #000 !important;
 }
       
 .color-transparent-on-hover:hover,
-.color-transparent-on-active.is-active {
+.color-transparent-on-active.is-active,
+.color-transparent-on-active.is-active:hover {
   color: transparent !important;
 }
       /** @endgroup */
@@ -13714,247 +13999,296 @@ input:checked + .toggle--active-transparent {
  * <div class=\'border border--red-on-active is-active\'>border--red-on-active (active)</div>
  */
 .border--gray-dark-on-hover:hover,
-.border--gray-dark-on-active.is-active {
+.border--gray-dark-on-active.is-active,
+.border--gray-dark-on-active.is-active:hover {
   border-color: #000 !important;
 }
       
 .border--gray-on-hover:hover,
-.border--gray-on-active.is-active {
+.border--gray-on-active.is-active,
+.border--gray-on-active.is-active:hover {
   border-color: #666 !important;
 }
       
 .border--gray-light-on-hover:hover,
-.border--gray-light-on-active.is-active {
+.border--gray-light-on-active.is-active,
+.border--gray-light-on-active.is-active:hover {
   border-color: #ccc !important;
 }
       
 .border--gray-faint-on-hover:hover,
-.border--gray-faint-on-active.is-active {
+.border--gray-faint-on-active.is-active,
+.border--gray-faint-on-active.is-active:hover {
   border-color: #f7f7f7 !important;
 }
       
 .border--pink-dark-on-hover:hover,
-.border--pink-dark-on-active.is-active {
+.border--pink-dark-on-active.is-active,
+.border--pink-dark-on-active.is-active:hover {
   border-color: #C8145A !important;
 }
       
 .border--pink-on-hover:hover,
-.border--pink-on-active.is-active {
+.border--pink-on-active.is-active,
+.border--pink-on-active.is-active:hover {
   border-color: pink !important;
 }
       
 .border--pink-light-on-hover:hover,
-.border--pink-light-on-active.is-active {
+.border--pink-light-on-active.is-active,
+.border--pink-light-on-active.is-active:hover {
   border-color: #FF88C0 !important;
 }
       
 .border--pink-faint-on-hover:hover,
-.border--pink-faint-on-active.is-active {
+.border--pink-faint-on-active.is-active,
+.border--pink-faint-on-active.is-active:hover {
   border-color: #ffdbed !important;
 }
       
 .border--red-dark-on-hover:hover,
-.border--red-dark-on-active.is-active {
+.border--red-dark-on-active.is-active,
+.border--red-dark-on-active.is-active:hover {
   border-color: #BE0014 !important;
 }
       
 .border--red-on-hover:hover,
-.border--red-on-active.is-active {
+.border--red-on-active.is-active,
+.border--red-on-active.is-active:hover {
   border-color: #fff !important;
 }
       
 .border--red-light-on-hover:hover,
-.border--red-light-on-active.is-active {
+.border--red-light-on-active.is-active,
+.border--red-light-on-active.is-active:hover {
   border-color: #FF8280 !important;
 }
       
 .border--red-faint-on-hover:hover,
-.border--red-faint-on-active.is-active {
+.border--red-faint-on-active.is-active,
+.border--red-faint-on-active.is-active:hover {
   border-color: #ffdad9 !important;
 }
       
 .border--orange-dark-on-hover:hover,
-.border--orange-dark-on-active.is-active {
+.border--orange-dark-on-active.is-active,
+.border--orange-dark-on-active.is-active:hover {
   border-color: #DC4600 !important;
 }
       
 .border--orange-on-hover:hover,
-.border--orange-on-active.is-active {
+.border--orange-on-active.is-active,
+.border--orange-on-active.is-active:hover {
   border-color: #ff6e00 !important;
 }
       
 .border--orange-light-on-hover:hover,
-.border--orange-light-on-active.is-active {
+.border--orange-light-on-active.is-active,
+.border--orange-light-on-active.is-active:hover {
   border-color: #FFA950 !important;
 }
       
 .border--orange-faint-on-hover:hover,
-.border--orange-faint-on-active.is-active {
+.border--orange-faint-on-active.is-active,
+.border--orange-faint-on-active.is-active:hover {
   border-color: #FFE5CB !important;
 }
       
 .border--yellow-dark-on-hover:hover,
-.border--yellow-dark-on-active.is-active {
+.border--yellow-dark-on-active.is-active,
+.border--yellow-dark-on-active.is-active:hover {
   border-color: #FFBD0A !important;
 }
       
 .border--yellow-on-hover:hover,
-.border--yellow-on-active.is-active {
+.border--yellow-on-active.is-active,
+.border--yellow-on-active.is-active:hover {
   border-color: #f0dc00 !important;
 }
       
 .border--yellow-light-on-hover:hover,
-.border--yellow-light-on-active.is-active {
+.border--yellow-light-on-active.is-active,
+.border--yellow-light-on-active.is-active:hover {
   border-color: #F0F062 !important;
 }
       
 .border--yellow-faint-on-hover:hover,
-.border--yellow-faint-on-active.is-active {
+.border--yellow-faint-on-active.is-active,
+.border--yellow-faint-on-active.is-active:hover {
   border-color: #fafbd1 !important;
 }
       
 .border--green-dark-on-hover:hover,
-.border--green-dark-on-active.is-active {
+.border--green-dark-on-active.is-active,
+.border--green-dark-on-active.is-active:hover {
   border-color: #007532 !important;
 }
       
 .border--green-on-hover:hover,
-.border--green-on-active.is-active {
+.border--green-on-active.is-active,
+.border--green-on-active.is-active:hover {
   border-color: #01aa46 !important;
 }
       
 .border--green-light-on-hover:hover,
-.border--green-light-on-active.is-active {
+.border--green-light-on-active.is-active,
+.border--green-light-on-active.is-active:hover {
   border-color: #72C781 !important;
 }
       
 .border--green-faint-on-hover:hover,
-.border--green-faint-on-active.is-active {
+.border--green-faint-on-active.is-active,
+.border--green-faint-on-active.is-active:hover {
   border-color: #d4edda !important;
 }
       
 .border--teal-dark-on-hover:hover,
-.border--teal-dark-on-active.is-active {
+.border--teal-dark-on-active.is-active,
+.border--teal-dark-on-active.is-active:hover {
   border-color: #00626E !important;
 }
       
 .border--teal-on-hover:hover,
-.border--teal-on-active.is-active {
+.border--teal-on-active.is-active,
+.border--teal-on-active.is-active:hover {
   border-color: #01b5b4 !important;
 }
       
 .border--teal-light-on-hover:hover,
-.border--teal-light-on-active.is-active {
+.border--teal-light-on-active.is-active,
+.border--teal-light-on-active.is-active:hover {
   border-color: #50D2D2 !important;
 }
       
 .border--teal-faint-on-hover:hover,
-.border--teal-faint-on-active.is-active {
+.border--teal-faint-on-active.is-active,
+.border--teal-faint-on-active.is-active:hover {
   border-color: #cbf2f1 !important;
 }
       
 .border--blue-dark-on-hover:hover,
-.border--blue-dark-on-active.is-active {
+.border--blue-dark-on-active.is-active,
+.border--blue-dark-on-active.is-active:hover {
   border-color: #346DB0 !important;
 }
       
 .border--blue-on-hover:hover,
-.border--blue-on-active.is-active {
+.border--blue-on-active.is-active,
+.border--blue-on-active.is-active:hover {
   border-color: #448EE4 !important;
 }
       
 .border--blue-light-on-hover:hover,
-.border--blue-light-on-active.is-active {
+.border--blue-light-on-active.is-active,
+.border--blue-light-on-active.is-active:hover {
   border-color: #00B1FF !important;
 }
       
 .border--blue-faint-on-hover:hover,
-.border--blue-faint-on-active.is-active {
+.border--blue-faint-on-active.is-active,
+.border--blue-faint-on-active.is-active:hover {
   border-color: #E0ECF9 !important;
 }
       
 .border--purple-dark-on-hover:hover,
-.border--purple-dark-on-active.is-active {
+.border--purple-dark-on-active.is-active,
+.border--purple-dark-on-active.is-active:hover {
   border-color: #500078 !important;
 }
       
 .border--purple-on-hover:hover,
-.border--purple-on-active.is-active {
+.border--purple-on-active.is-active,
+.border--purple-on-active.is-active:hover {
   border-color: #8c50c7 !important;
 }
       
 .border--purple-light-on-hover:hover,
-.border--purple-light-on-active.is-active {
+.border--purple-light-on-active.is-active,
+.border--purple-light-on-active.is-active:hover {
   border-color: #C299E3 !important;
 }
       
 .border--purple-faint-on-hover:hover,
-.border--purple-faint-on-active.is-active {
+.border--purple-faint-on-active.is-active,
+.border--purple-faint-on-active.is-active:hover {
   border-color: #ede1f6 !important;
 }
       
 .border--darken5-on-hover:hover,
-.border--darken5-on-active.is-active {
+.border--darken5-on-active.is-active,
+.border--darken5-on-active.is-active:hover {
   border-color: rgba(0, 0, 0, 0.05) !important;
 }
       
 .border--darken10-on-hover:hover,
-.border--darken10-on-active.is-active {
+.border--darken10-on-active.is-active,
+.border--darken10-on-active.is-active:hover {
   border-color: rgba(0, 0, 0, 0.10) !important;
 }
       
 .border--darken25-on-hover:hover,
-.border--darken25-on-active.is-active {
+.border--darken25-on-active.is-active,
+.border--darken25-on-active.is-active:hover {
   border-color: rgba(0, 0, 0, 0.25) !important;
 }
       
 .border--darken50-on-hover:hover,
-.border--darken50-on-active.is-active {
+.border--darken50-on-active.is-active,
+.border--darken50-on-active.is-active:hover {
   border-color: rgba(0, 0, 0, 0.50) !important;
 }
       
 .border--darken75-on-hover:hover,
-.border--darken75-on-active.is-active {
+.border--darken75-on-active.is-active,
+.border--darken75-on-active.is-active:hover {
   border-color: rgba(0, 0, 0, 0.75) !important;
 }
       
 .border--lighten5-on-hover:hover,
-.border--lighten5-on-active.is-active {
+.border--lighten5-on-active.is-active,
+.border--lighten5-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.05) !important;
 }
       
 .border--lighten10-on-hover:hover,
-.border--lighten10-on-active.is-active {
+.border--lighten10-on-active.is-active,
+.border--lighten10-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
       
 .border--lighten25-on-hover:hover,
-.border--lighten25-on-active.is-active {
+.border--lighten25-on-active.is-active,
+.border--lighten25-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.25) !important;
 }
       
 .border--lighten50-on-hover:hover,
-.border--lighten50-on-active.is-active {
+.border--lighten50-on-active.is-active,
+.border--lighten50-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.50) !important;
 }
       
 .border--lighten75-on-hover:hover,
-.border--lighten75-on-active.is-active {
+.border--lighten75-on-active.is-active,
+.border--lighten75-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.75) !important;
 }
       
 .border--white-on-hover:hover,
-.border--white-on-active.is-active {
+.border--white-on-active.is-active,
+.border--white-on-active.is-active:hover {
   border-color: #fff !important;
 }
       
 .border--black-on-hover:hover,
-.border--black-on-active.is-active {
+.border--black-on-active.is-active,
+.border--black-on-active.is-active:hover {
   border-color: #000 !important;
 }
       
 .border--transparent-on-hover:hover,
-.border--transparent-on-active.is-active {
+.border--transparent-on-active.is-active,
+.border--transparent-on-active.is-active:hover {
   border-color: transparent !important;
 }
       /** @endgroup */"
@@ -14497,22 +14831,26 @@ input:checked + .toggle--active-green-light {
  * <div class=\'bg-darken25-on-active is-active\'>bg-darken25-on-active (active)</div>
  */
 .bg-red-on-hover:hover,
-.bg-red-on-active.is-active {
+.bg-red-on-active.is-active,
+.bg-red-on-active.is-active:hover {
   background-color: #dc2b28 !important;
 }
       
 .bg-teal-on-hover:hover,
-.bg-teal-on-active.is-active {
+.bg-teal-on-active.is-active,
+.bg-teal-on-active.is-active:hover {
   background-color: #01b5b4 !important;
 }
       
 .bg-teal-dark-on-hover:hover,
-.bg-teal-dark-on-active.is-active {
+.bg-teal-dark-on-active.is-active,
+.bg-teal-dark-on-active.is-active:hover {
   background-color: #00626E !important;
 }
       
 .bg-green-light-on-hover:hover,
-.bg-green-light-on-active.is-active {
+.bg-green-light-on-active.is-active,
+.bg-green-light-on-active.is-active:hover {
   background-color: #72C781 !important;
 }
       /** @endgroup */
@@ -14527,22 +14865,26 @@ input:checked + .toggle--active-green-light {
  * <div class=\'color-red-on-active is-active\'>color-red-on-active (active)</div>
  */
 .color-red-on-hover:hover,
-.color-red-on-active.is-active {
+.color-red-on-active.is-active,
+.color-red-on-active.is-active:hover {
   color: #dc2b28 !important;
 }
       
 .color-teal-on-hover:hover,
-.color-teal-on-active.is-active {
+.color-teal-on-active.is-active,
+.color-teal-on-active.is-active:hover {
   color: #01b5b4 !important;
 }
       
 .color-teal-dark-on-hover:hover,
-.color-teal-dark-on-active.is-active {
+.color-teal-dark-on-active.is-active,
+.color-teal-dark-on-active.is-active:hover {
   color: #00626E !important;
 }
       
 .color-green-light-on-hover:hover,
-.color-green-light-on-active.is-active {
+.color-green-light-on-active.is-active,
+.color-green-light-on-active.is-active:hover {
   color: #72C781 !important;
 }
       /** @endgroup */
@@ -14557,22 +14899,26 @@ input:checked + .toggle--active-green-light {
  * <div class=\'border border--red-on-active is-active\'>border--red-on-active (active)</div>
  */
 .border--red-on-hover:hover,
-.border--red-on-active.is-active {
+.border--red-on-active.is-active,
+.border--red-on-active.is-active:hover {
   border-color: #dc2b28 !important;
 }
       
 .border--teal-on-hover:hover,
-.border--teal-on-active.is-active {
+.border--teal-on-active.is-active,
+.border--teal-on-active.is-active:hover {
   border-color: #01b5b4 !important;
 }
       
 .border--teal-dark-on-hover:hover,
-.border--teal-dark-on-active.is-active {
+.border--teal-dark-on-active.is-active,
+.border--teal-dark-on-active.is-active:hover {
   border-color: #00626E !important;
 }
       
 .border--green-light-on-hover:hover,
-.border--green-light-on-active.is-active {
+.border--green-light-on-active.is-active,
+.border--green-light-on-active.is-active:hover {
   border-color: #72C781 !important;
 }
       /** @endgroup */"
@@ -14939,11 +15285,13 @@ input:checked + .toggle--active-gray {
  * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
  */
 .shadow-lighten50-on-hover:hover,
-.shadow-lighten50-on-active.is-active {
+.shadow-lighten50-on-active.is-active,
+.shadow-lighten50-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.50) !important;
 }
 .shadow-bold-lighten50-on-hover:hover,
-.shadow-bold-lighten50-on-active.is-active {
+.shadow-bold-lighten50-on-active.is-active,
+.shadow-bold-lighten50-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.50) !important;
 }
       /** @endgroup */
@@ -14958,17 +15306,20 @@ input:checked + .toggle--active-gray {
  * <div class=\'bg-darken25-on-active is-active\'>bg-darken25-on-active (active)</div>
  */
 .bg-lighten50-on-hover:hover,
-.bg-lighten50-on-active.is-active {
+.bg-lighten50-on-active.is-active,
+.bg-lighten50-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.50) !important;
 }
       
 .bg-lighten25-on-hover:hover,
-.bg-lighten25-on-active.is-active {
+.bg-lighten25-on-active.is-active,
+.bg-lighten25-on-active.is-active:hover {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }
       
 .bg-gray-on-hover:hover,
-.bg-gray-on-active.is-active {
+.bg-gray-on-active.is-active,
+.bg-gray-on-active.is-active:hover {
   background-color: #666 !important;
 }
       /** @endgroup */
@@ -14983,17 +15334,20 @@ input:checked + .toggle--active-gray {
  * <div class=\'color-red-on-active is-active\'>color-red-on-active (active)</div>
  */
 .color-lighten50-on-hover:hover,
-.color-lighten50-on-active.is-active {
+.color-lighten50-on-active.is-active,
+.color-lighten50-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.50) !important;
 }
       
 .color-lighten25-on-hover:hover,
-.color-lighten25-on-active.is-active {
+.color-lighten25-on-active.is-active,
+.color-lighten25-on-active.is-active:hover {
   color: rgba(255, 255, 255, 0.25) !important;
 }
       
 .color-gray-on-hover:hover,
-.color-gray-on-active.is-active {
+.color-gray-on-active.is-active,
+.color-gray-on-active.is-active:hover {
   color: #666 !important;
 }
       /** @endgroup */
@@ -15008,17 +15362,20 @@ input:checked + .toggle--active-gray {
  * <div class=\'border border--red-on-active is-active\'>border--red-on-active (active)</div>
  */
 .border--lighten50-on-hover:hover,
-.border--lighten50-on-active.is-active {
+.border--lighten50-on-active.is-active,
+.border--lighten50-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.50) !important;
 }
       
 .border--lighten25-on-hover:hover,
-.border--lighten25-on-active.is-active {
+.border--lighten25-on-active.is-active,
+.border--lighten25-on-active.is-active:hover {
   border-color: rgba(255, 255, 255, 0.25) !important;
 }
       
 .border--gray-on-hover:hover,
-.border--gray-on-active.is-active {
+.border--gray-on-active.is-active,
+.border--gray-on-active.is-active:hover {
   border-color: #666 !important;
 }
       /** @endgroup */"
