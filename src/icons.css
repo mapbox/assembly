@@ -10,6 +10,9 @@
  * points to an icon loaded by `assembly.js`. All icons are referenced
  * by the string `#icon-{name}`.
  *
+ * Be aware that *icons are block-level*.
+ * If you want them *inline* with some other element, you can give them the `inline-block` class or wrap them in an inline container.
+ *
  * To see a list of all available icons, visit [the icons page](/assembly/icons).
  *
  * @memberof Icons
@@ -17,8 +20,8 @@
  * <svg class='icon'><use xlink:href='#icon-bike'/></svg>
  */
 .icon {
+  display: block;
   fill: currentColor;
-  vertical-align: middle;
   height: 18px;
   width: 18px;
 }
