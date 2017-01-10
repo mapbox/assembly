@@ -5,6 +5,7 @@ import { Documentation } from './documentation/documentation';
 import { Home } from './home';
 import { Icons } from './icons';
 import { Catalog } from './catalog';
+import { LayoutScales } from './layout_scales';
 import fs from 'fs';
 import path from 'path';
 import { orderSections } from './order-sections';
@@ -35,6 +36,10 @@ const routes = [
   {
     name: 'Catalog',
     route: '/catalog/'
+  },
+  {
+    name: 'Layout Scales',
+    route: '/layout-scales/'
   }
 ];
 
@@ -103,6 +108,13 @@ function buildRoutes() {
         r.component = (
           <Page navData={navData}>
             <Icons {...props} />
+          </Page>
+        );
+        break;
+      case 'Layout Scales':
+        r.component = (
+          <Page navData={navData}>
+            <LayoutScales {...props} />
           </Page>
         );
         break;
