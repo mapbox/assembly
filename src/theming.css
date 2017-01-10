@@ -176,6 +176,25 @@
 /** @endgroup */
 
 /**
+ * Unround the corners of elements. Target sides with `*-t`, `*-r`, `*-b`, `*-l`. Target corners with `*-tl`, `*-tr`, `*-bl`, `*-br`.
+ *
+ * @group
+ * @memberof Border radius
+ * @example
+ * <input type='text' class='input unround' placeholder='.unround' />
+ */
+.unround { border-radius: 0 !important; }
+.unround-t { border-top-left-radius: 0 !important; border-top-right-radius: 0 !important; }
+.unround-r { border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important; }
+.unround-b { border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important; }
+.unround-l { border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important; }
+.unround-tl { border-top-left-radius: 0 !important; }
+.unround-tr { border-top-right-radius: 0 !important; }
+.unround-br { border-bottom-right-radius: 0 !important; }
+.unround-bl { border-bottom-left-radius: 0 !important; }
+/** @endgroup */
+
+/**
  * Apply outer shadows that add emphasis to elements or structure to layouts. Class naming follows the pattern `shadow-<lighten|darken><alpha>`.
  *
  * @section Shadows
