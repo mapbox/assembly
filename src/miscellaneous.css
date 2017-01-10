@@ -143,3 +143,23 @@
 .clip {
   overflow: hidden !important;
 }
+
+/**
+ * Hide an element *visually*, but keep it available to screen readers.
+ *
+ * @memberof Miscellaneous
+ * @example
+ *   <div class='hide-visually'>You cannot see this with your eyes.</div>
+ *   <div>There is a sentence above this that you cannot see.</div>
+ */
+.hide-visually {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
