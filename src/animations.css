@@ -5,51 +5,53 @@
  */
 
 /**
- * Infinite animations.
+ * Transition and reaction animations. By default, these run once for 1.5 seconds.
  *
  * @group
  * @memberof Animations
  * @example
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-pulse"></div>
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-pulse animation--infinite"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation-infinite"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-fade-in animation--infinite"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-fade-out animation--infinite"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-shake animation--infinite"></div>
 */
-.animation-pulse { animation: pulse 1.5s infinite ease-in-out; }
-.animation-spin { animation: spin 1.5s infinite linear; }
-/** @endgroup */
-
-/**
- * Transition and reaction animations. These run once for 1.5 seconds.
- *
- * @group
- * @memberof Animations
- * @example
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-fade-in"></div>
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-fade-out"></div>
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-shake"></div>
-*/
+.animation-pulse { animation: pulse 1.5s ease-in-out; }
+.animation-spin { animation: spin 1.5s linear; }
 .animation-fade-in { animation: fadein 1.5s ease-in forwards; }
 .animation-fade-out { animation: fadein 1.5s ease-out reverse forwards; }
 .animation-shake { animation: shake 1.5s ease-in-out; }
 /** @endgroup */
 
 /**
- * Animation modifiers.
+ * Animation duration modifiers.
  * Change animation duration with an `animation--speed-{seconds}` modifier.
  * Add a 1 second delay with `animation--delay`.
  *
  * @group
  * @memberof Animations
  * @example
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-1"></div>
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--speed-4"></div>
- * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--delay"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--infinite animation--speed-1"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--infinite animation--speed-2"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--infinite animation--speed-4"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--infinite animation--speed-8"></div>
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--infinite animation--delay"></div>
  */
 .animation--speed-1 { animation-duration: 1s; }
 .animation--speed-2 { animation-duration: 2s; }
 .animation--speed-4 { animation-duration: 4s; }
-.animation--speed-8 { animation-duration: 4s; }
+.animation--speed-8 { animation-duration: 8s; }
 .animation--delay { animation-delay: 1s; }
 /** @endgroup */
+
+/**
+ * Repeat an animation infinitely with a `animation--infinite` modifier.
+ *
+ * @memberof Animations
+ * @example
+ * <div class="bg-blue inline-block mr18 w48 h48 round animation-spin animation--infinite"></div>
+ */
+.animation--infinite { animation-iteration-count: infinite; }
 
 @keyframes pulse {
   0% { transform: scale(0.5); opacity: 0; }
