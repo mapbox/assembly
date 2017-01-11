@@ -517,12 +517,20 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   display: inline-flex;
 }
 
+/* Same as the hide-visually class */
 .toggle-container > input,
 .checkbox-container > input,
 .switch-container > input,
 .radio-container > input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
-  left: -9999px;
+  width: 1px;
+  white-space: nowrap;
 }
 
 .checkbox,
