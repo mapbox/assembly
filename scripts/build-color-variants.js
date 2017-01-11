@@ -175,8 +175,6 @@ function buildColorVariants(variables, config) {
           border-color: ${colorValue};
         }
 
-        .textarea--border-${color}:hover,
-        .input--border-${color}:hover,
         .textarea--border-${color}:focus,
         .input--border-${color}:focus {
           border-color: ${darkerShade};
