@@ -8,8 +8,8 @@ class Typography extends React.Component {
           Typography
         </h2>
         <div className='grid grid--gut12'>
-          <div className='mb18 txt-bold col col--6 color-purple'>Styled with prose</div>
-          <div className='mb18 txt-bold col col--6 color-purple'>Styled with classes</div>
+          <div className='mb18 col col--6 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Styled with prose</div>
+          <div className='mb18 col col--6 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Styled with classes</div>
         </div>
         <div className='grid grid--gut12'>
 

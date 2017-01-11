@@ -54,27 +54,27 @@ class Inputs extends React.Component {
           Text inputs
         </h2>
 
-        <div className='mb12 txt-bold color-purple'>Text colors</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Text colors</div>
         <div className='mb24'>
           {colors.map((c) => <InputEl key={c} color={c} />)}
         </div>
 
-        <div className='mb12 txt-bold color-purple'>Border colors</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Border colors</div>
         <div className='mb24'>
           {colors.map((c) => <InputEl key={c} border={c} />)}
         </div>
 
-        <div className='mb12 txt-bold color-purple'>Disabled</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Disabled</div>
         <div className='mb24'>
           {colors.map((c) => <InputEl key={c} color={c} border={c} disabled={true} />)}
         </div>
 
-        <div className='mb12 txt-bold color-purple'>Readonly</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Readonly</div>
         <div className='mb24'>
           {colors.map((c) => <InputEl key={c} color={c} border={c} readonly={true} />)}
         </div>
 
-        <div className='mb12 txt-bold color-purple'>Additional input types</div>
+        <div className='mb12 txt-bold txt-d '>Additional input types</div>
         <div className='mb24'>
           <div className='mr6 mb6 inline-block'>
             <input

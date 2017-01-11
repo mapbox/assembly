@@ -48,22 +48,22 @@ class Textareas extends React.Component {
           Textareas
         </h2>
 
-        <div className='mb12 txt-bold color-purple'>Text colors</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Text colors</div>
         <div className='mb24'>
           {colors.map((c) => <TextareaEl key={c} color={c} size={null} />)}
         </div>
 
-        <div className='mb12 txt-bold color-purple'>Border colors</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Border colors</div>
         <div className='mb24'>
           {colors.map((c) => <TextareaEl key={c} border={c} />)}
         </div>
 
-        <div className='mb12 txt-bold color-purple'>Disabled</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Disabled</div>
         <div className='mb24'>
           {colors.map((c) => <TextareaEl key={c} color={c} disabled={true} />)}
         </div>
 
-        <div className='mb12 txt-bold color-purple'>Readonly</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Readonly</div>
         {colors.map((c) => <TextareaEl key={c} color={c} readonly={true} />)}
 
       </div>

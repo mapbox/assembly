@@ -9,7 +9,7 @@ class Tables extends React.Component {
         </h2>
         <div className='grid grid--gut12'>
           <div className='col col--4'>
-            <div className='mb12 txt-bold color-purple'>Unstyled</div>
+            <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Unstyled</div>
             <table>
               <thead>
                 <tr>
@@ -31,7 +31,7 @@ class Tables extends React.Component {
           </div>
 
           <div className='col col--4'>
-            <div className='mb12 txt-bold color-purple'>Classed</div>
+            <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Classed</div>
             <table className='table mb18'>
               <thead>
                 <tr>
@@ -114,7 +114,7 @@ class Tables extends React.Component {
           </div>
 
           <div className='col col--4 prose'>
-            <div className='mb12 txt-bold color-purple'>Inside prose</div>
+            <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Inside prose</div>
             <table>
               <thead>
                 <tr>
