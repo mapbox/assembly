@@ -48,5 +48,8 @@ bsServer.init({
   files: [path.join(distDir, '/**/*.html')],
   logFileChanges: false,
   notify: false,
-  reloadDebounce: 500
+  reloadDebounce: 500,
+  ghostMode: {
+    scroll: false
+  }
 });

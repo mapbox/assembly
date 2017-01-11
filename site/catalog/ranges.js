@@ -29,10 +29,13 @@ const colors = [
 ];
 
 function RangesEl(props) {
-  const inputClasses = `range range--${props.size || ''} range--${props.color}`;
+  let inputClasses = `range range--${props.color} w180`;
+  if (props.size) inputClasses += ` range--${props.size}`;
   return (
     <div className='mr6 mb6 inline-block'>
-       <input type='range' className={inputClasses} readOnly={props.readonly} disabled={props.disabled} defaultValue='magic'/>
+      <div className={inputClasses}>
+        <input type='range' disabled={props.disabled} />
+      </div>
     </div>
   );
 }
@@ -59,6 +62,19 @@ class Ranges extends React.Component {
         <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Small</div>
         <div className='mb24'>
           {colors.map((c) => <RangesEl key={c} color={c} size={'s'} />)}
+        </div>
+
+        <div className='mb12 flex-parent flex-parent--center-cross'>
+          <input className='input w180' />
+          <div className='range w180'>
+            <input type='range' />
+          </div>
+        </div>
+        <div className='mb12 flex-parent flex-parent--center-cross'>
+          <input className='input input--s w180' />
+          <div className='range range--s w180'>
+            <input type='range' />
+          </div>
         </div>
 
       </div>

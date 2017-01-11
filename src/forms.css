@@ -341,7 +341,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 /**
- * The `range` class styles the `<input type='range'>` element.
+ * The `range` class styles the `<input type='range'>` element. The markup must fit the following pattern:
+ * - A wrapping `<div>` with the `range` class.
+ * - An `<input type='range'>` element.
  *
  * @section Ranges
  * @memberof Forms
@@ -351,11 +353,22 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  *
  * Style a range element. Set the color by adding a `range--{color}` modifier (`*-dark` colors are not available).
  *
+ * The best way to vertically align range elements with other items on the same row is to wrap the row in a `flex-parent flex-parent--center-cross` container.
+ * For more details, read about the [flexbox classes](#Flexbox).
+ *
  * @memberof Ranges
  * @example
- * <input class='range' type='range' />
+ * <div class='range'>
+ *   <input type='range' />
+ * </div>
 */
 .range {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+.range > input {
   appearance: none;
   width: 100%;
   padding: 0;
@@ -365,7 +378,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 /* range track */
-.range::-webkit-slider-runnable-track {
+.range > input::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
   padding: 0;
@@ -377,9 +390,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   box-shadow: 0;
 }
 
-.range::-moz-range-track {
+.range > input::-moz-range-track {
   width: 100%;
-  height: 3px;
+  height: 4px;
   padding: 0;
   border: 0;
   border-radius: 2px;
@@ -389,9 +402,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   box-shadow: 0;
 }
 
-.range::-ms-track { /* use fill-lower + fill-upper to set color */
+.range > input::-ms-track { /* use fill-lower + fill-upper to set color */
   width: 100%;
-  height: 3px;
+  height: 4px;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
@@ -399,52 +412,58 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   color: transparent;
 }
 
-.range::-ms-fill-lower {
+.range > input::-ms-fill-lower {
   background: var(--default-secondary-interactive-color);
   border: 0;
   box-shadow: 0;
+  border-radius: 2px;
 }
 
-.range::-ms-fill-upper {
+.range > input::-ms-fill-upper {
   background: var(--default-secondary-interactive-color);
   border: 0;
   box-shadow: 0;
+  border-radius: 2px;
 }
 
 /* range track:hover */
-.range:hover::-webkit-slider-runnable-track { background: var(--gray); }
-.range:hover::-moz-range-track { background: var(--gray); }
-.range:hover::-ms-fill-upper { background: var(--gray); }
-.range:hover::-ms-fill-lower { background: var(--gray); }
+.range > input:hover::-webkit-slider-runnable-track { background: var(--gray); }
+.range > input:hover::-moz-range-track { background: var(--gray); }
+.range > input:hover::-ms-fill-upper { background: var(--gray); }
+.range > input:hover::-ms-fill-lower { background: var(--gray); }
 
 /* range thumb */
-.range::-webkit-slider-thumb {
+.range > input::-webkit-slider-thumb {
+  box-sizing: border-box;
   transition: background var(--transition);
   appearance: none;
   box-shadow: 0;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 2px solid var(--default-secondary-interactive-color);
-  cursor: pointer;
   margin-top: -8px;
-}
-
-.range::-moz-range-thumb {
-  transition: background var(--transition);
-  width: 17px;
-  height: 17px;
   border-radius: 50%;
   background: var(--white);
   border: 2px solid var(--default-secondary-interactive-color);
   cursor: pointer;
 }
 
-.range::-ms-thumb {
+.range > input::-moz-range-thumb {
+  box-sizing: border-box;
   transition: background var(--transition);
   width: 20px;
   height: 20px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--default-secondary-interactive-color);
+  cursor: pointer;
+}
+
+.range > input::-ms-thumb {
+  box-sizing: border-box;
+  transition: background var(--transition);
+  width: 20px;
+  height: 20px;
+  margin-top: 0; /* Fixes Edge's vertical alignment */
   border-radius: 50%;
   background: var(--white);
   border: 2px solid var(--default-secondary-interactive-color);
@@ -452,9 +471,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 /* range thumb:hover */
-.range:hover::-webkit-slider-thumb { border-color: var(--gray); }
-.range:hover::-ms-thumb { border-color: var(--gray); }
-.range:hover::-moz-range-thumb { border-color: var(--gray); }
+.range > input:hover::-webkit-slider-thumb { border-color: var(--gray); }
+.range > input:hover::-ms-thumb { border-color: var(--gray); }
+.range > input:hover::-moz-range-thumb { border-color: var(--gray); }
 
 /*
  * Make a range element small.
@@ -462,31 +481,36 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * @memberof Ranges
  * @selectors .range--s
  * @example
- * <input class='range range--s' type='range' />
-*/
+ * <div class='range range--s'>
+ *   <input type='range' />
+ * </div>
+ */
+.range--s {
+  height: 24px;
+}
 
-/* range small */
 /* range small track */
-.range--s::-webkit-slider-runnable-track { height: 2px; }
-.range--s::-moz-range-track { height: 2px; }
-.range--s::-ms-track { height: 2px; border-width: 9px 0; }
+.range--s > input::-webkit-slider-runnable-track { height: 2px; }
+.range--s > input::-moz-range-track { height: 2px; }
+.range--s > input::-ms-track { height: 2px; border-width: 9px 0; }
 
 /* range small thumb */
-.range--s::-webkit-slider-thumb {
-  width: 15px;
-  height: 15px;
-  margin-top: -6.5px;
+.range--s > input::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: -7px;
 }
 
-.range--s::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
-  margin-top: -7.5px;
+.range--s > input::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
 }
 
-.range--s::-ms-thumb {
-  width: 15px;
-  height: 15px;
+.range--s > input::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: 0; /* Fixes Edge's vertical alignment */
 }
 
 /*
@@ -495,16 +519,18 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * @memberof Ranges
  * @selectors .range:disabled
  * @example
- * <input disabled class='range' type='range' />
-*/
-.range:disabled::-webkit-slider-runnable-track { background: var(--neutral45); }
-.range:disabled::-moz-range-track { background: var(--neutral45); }
-.range:disabled::-ms-fill-upper { background: var(--neutral45); }
-.range:disabled::-ms-fill-lower { background: var(--neutral45); }
+ * <div class='range'>
+ *   <input disabled type='range' />
+ * </div>
+ */
+.range > input:disabled::-webkit-slider-runnable-track { background: var(--neutral45); }
+.range > input:disabled::-moz-range-track { background: var(--neutral45); }
+.range > input:disabled::-ms-fill-upper { background: var(--neutral45); }
+.range > input:disabled::-ms-fill-lower { background: var(--neutral45); }
 
-.range:disabled::-webkit-slider-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
-.range:disabled::-ms-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
-.range:disabled::-moz-range-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
+.range > input:disabled::-webkit-slider-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
+.range > input:disabled::-ms-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
+.range > input:disabled::-moz-range-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
 
 /* shared form styles */
 .checkbox-container,
