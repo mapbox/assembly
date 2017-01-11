@@ -9,7 +9,7 @@ class Lists extends React.Component {
         </h2>
         <div className='grid grid--gut12'>
           <div className='col col--4'>
-            <div className='mb12 txt-bold color-purple'>unstyled</div>
+            <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>unstyled</div>
             <h2>Unordered</h2>
             <ul>
               <li>Unordered list item</li>
@@ -54,7 +54,7 @@ class Lists extends React.Component {
           </div>
 
           <div className='col col--4'>
-            <div className='mb12 txt-bold color-purple'>txt-ol/ul</div>
+            <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>txt-ol/ul</div>
 
             <ul className='txt-ul'>
               <li className='txt-li'>Unordered list item</li>
@@ -99,7 +99,7 @@ class Lists extends React.Component {
           </div>
 
           <div className='col col--4 prose'>
-            <div className='mb12 txt-bold color-purple'>Prose</div>
+            <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Prose</div>
 
             <h2>Unordered</h2>
             <ul>

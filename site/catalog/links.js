@@ -50,9 +50,9 @@ class Links extends React.Component {
 
         <div className='mb12'>
           <div className='grid'>
-            <div className='col col--4 mb12 txt-bold color-purple'>Standard</div>
-            <div className='col col--4 mb12 txt-bold color-purple'>Underline on hover</div>
-            <div className='col col--4 mb12 txt-bold color-purple'>Active</div>
+            <div className='col col--4 mb12 txt-bold color-darken50 txt-uppercase txt-s'>Standard</div>
+            <div className='col col--4 mb12 txt-bold color-darken50 txt-uppercase txt-s'>Underline on hover</div>
+            <div className='col col--4 mb12 txt-bold color-darken50 txt-uppercase txt-s'>Active</div>
           </div>
           {colors.map((c) => <LinkEl key={c} color={c} size={null} />)}
         </div>

@@ -46,17 +46,17 @@ class Ranges extends React.Component {
           Ranges
         </h2>
 
-        <div className='mb12 txt-bold color-purple'>Color variations</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Color variations</div>
         <div className='mb24'>
           {colors.map((c) => <RangesEl key={c} color={c}  />)}
         </div>
 
-        <div className='mb12 txt-bold color-purple'>Disabled</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Disabled</div>
         <div className='mb24'>
           {colors.map((c) => <RangesEl key={c} color={c} disabled={true} />)}
         </div>
 
-        <div className='mb12 txt-bold color-purple'>Small</div>
+        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Small</div>
         <div className='mb24'>
           {colors.map((c) => <RangesEl key={c} color={c} size={'s'} />)}
         </div>
