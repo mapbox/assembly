@@ -750,8 +750,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #666;
 }
 
-.textarea--border-gray:hover,
-.input--border-gray:hover,
 .textarea--border-gray:focus,
 .input--border-gray:focus {
   border-color: #333;
@@ -764,8 +762,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #ccc;
 }
 
-.textarea--border-gray-light:hover,
-.input--border-gray-light:hover,
 .textarea--border-gray-light:focus,
 .input--border-gray-light:focus {
   border-color: #666;
@@ -778,8 +774,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #f7f7f7;
 }
 
-.textarea--border-gray-faint:hover,
-.input--border-gray-faint:hover,
 .textarea--border-gray-faint:focus,
 .input--border-gray-faint:focus {
   border-color: #ccc;
@@ -792,8 +786,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #ff3c96;
 }
 
-.textarea--border-pink:hover,
-.input--border-pink:hover,
 .textarea--border-pink:focus,
 .input--border-pink:focus {
   border-color: #C8145A;
@@ -806,8 +798,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #FF88C0;
 }
 
-.textarea--border-pink-light:hover,
-.input--border-pink-light:hover,
 .textarea--border-pink-light:focus,
 .input--border-pink-light:focus {
   border-color: #ff3c96;
@@ -820,8 +810,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #ffdbed;
 }
 
-.textarea--border-pink-faint:hover,
-.input--border-pink-faint:hover,
 .textarea--border-pink-faint:focus,
 .input--border-pink-faint:focus {
   border-color: #FF88C0;
@@ -834,8 +822,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #dc2b28;
 }
 
-.textarea--border-red:hover,
-.input--border-red:hover,
 .textarea--border-red:focus,
 .input--border-red:focus {
   border-color: #BE0014;
@@ -848,8 +834,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #FF8280;
 }
 
-.textarea--border-red-light:hover,
-.input--border-red-light:hover,
 .textarea--border-red-light:focus,
 .input--border-red-light:focus {
   border-color: #dc2b28;
@@ -862,8 +846,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #ffdad9;
 }
 
-.textarea--border-red-faint:hover,
-.input--border-red-faint:hover,
 .textarea--border-red-faint:focus,
 .input--border-red-faint:focus {
   border-color: #FF8280;
@@ -876,8 +858,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #ff6e00;
 }
 
-.textarea--border-orange:hover,
-.input--border-orange:hover,
 .textarea--border-orange:focus,
 .input--border-orange:focus {
   border-color: #DC4600;
@@ -890,8 +870,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #FFA950;
 }
 
-.textarea--border-orange-light:hover,
-.input--border-orange-light:hover,
 .textarea--border-orange-light:focus,
 .input--border-orange-light:focus {
   border-color: #ff6e00;
@@ -904,8 +882,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #FFE5CB;
 }
 
-.textarea--border-orange-faint:hover,
-.input--border-orange-faint:hover,
 .textarea--border-orange-faint:focus,
 .input--border-orange-faint:focus {
   border-color: #FFA950;
@@ -918,8 +894,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #f0dc00;
 }
 
-.textarea--border-yellow:hover,
-.input--border-yellow:hover,
 .textarea--border-yellow:focus,
 .input--border-yellow:focus {
   border-color: #FFBD0A;
@@ -932,8 +906,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #F0F062;
 }
 
-.textarea--border-yellow-light:hover,
-.input--border-yellow-light:hover,
 .textarea--border-yellow-light:focus,
 .input--border-yellow-light:focus {
   border-color: #f0dc00;
@@ -946,8 +918,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #fafbd1;
 }
 
-.textarea--border-yellow-faint:hover,
-.input--border-yellow-faint:hover,
 .textarea--border-yellow-faint:focus,
 .input--border-yellow-faint:focus {
   border-color: #F0F062;
@@ -960,8 +930,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #01aa46;
 }
 
-.textarea--border-green:hover,
-.input--border-green:hover,
 .textarea--border-green:focus,
 .input--border-green:focus {
   border-color: #007532;
@@ -974,8 +942,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #72C781;
 }
 
-.textarea--border-green-light:hover,
-.input--border-green-light:hover,
 .textarea--border-green-light:focus,
 .input--border-green-light:focus {
   border-color: #01aa46;
@@ -988,8 +954,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #d4edda;
 }
 
-.textarea--border-green-faint:hover,
-.input--border-green-faint:hover,
 .textarea--border-green-faint:focus,
 .input--border-green-faint:focus {
   border-color: #72C781;
@@ -1002,8 +966,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #01b5b4;
 }
 
-.textarea--border-teal:hover,
-.input--border-teal:hover,
 .textarea--border-teal:focus,
 .input--border-teal:focus {
   border-color: #00626E;
@@ -1016,8 +978,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #50D2D2;
 }
 
-.textarea--border-teal-light:hover,
-.input--border-teal-light:hover,
 .textarea--border-teal-light:focus,
 .input--border-teal-light:focus {
   border-color: #01b5b4;
@@ -1030,8 +990,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #cbf2f1;
 }
 
-.textarea--border-teal-faint:hover,
-.input--border-teal-faint:hover,
 .textarea--border-teal-faint:focus,
 .input--border-teal-faint:focus {
   border-color: #50D2D2;
@@ -1044,8 +1002,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #448EE4;
 }
 
-.textarea--border-blue:hover,
-.input--border-blue:hover,
 .textarea--border-blue:focus,
 .input--border-blue:focus {
   border-color: #346DB0;
@@ -1058,8 +1014,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #00B1FF;
 }
 
-.textarea--border-blue-light:hover,
-.input--border-blue-light:hover,
 .textarea--border-blue-light:focus,
 .input--border-blue-light:focus {
   border-color: #448EE4;
@@ -1072,8 +1026,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #E0ECF9;
 }
 
-.textarea--border-blue-faint:hover,
-.input--border-blue-faint:hover,
 .textarea--border-blue-faint:focus,
 .input--border-blue-faint:focus {
   border-color: #00B1FF;
@@ -1086,8 +1038,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #8c50c7;
 }
 
-.textarea--border-purple:hover,
-.input--border-purple:hover,
 .textarea--border-purple:focus,
 .input--border-purple:focus {
   border-color: #500078;
@@ -1100,8 +1050,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #C299E3;
 }
 
-.textarea--border-purple-light:hover,
-.input--border-purple-light:hover,
 .textarea--border-purple-light:focus,
 .input--border-purple-light:focus {
   border-color: #8c50c7;
@@ -1114,8 +1062,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #ede1f6;
 }
 
-.textarea--border-purple-faint:hover,
-.input--border-purple-faint:hover,
 .textarea--border-purple-faint:focus,
 .input--border-purple-faint:focus {
   border-color: #C299E3;
@@ -1128,8 +1074,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: rgba(0, 0, 0, 0.05);
 }
 
-.textarea--border-darken5:hover,
-.input--border-darken5:hover,
 .textarea--border-darken5:focus,
 .input--border-darken5:focus {
   border-color: rgba(0, 0, 0, 0.10);
@@ -1142,8 +1086,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: rgba(0, 0, 0, 0.10);
 }
 
-.textarea--border-darken10:hover,
-.input--border-darken10:hover,
 .textarea--border-darken10:focus,
 .input--border-darken10:focus {
   border-color: rgba(0, 0, 0, 0.25);
@@ -1156,8 +1098,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: rgba(0, 0, 0, 0.25);
 }
 
-.textarea--border-darken25:hover,
-.input--border-darken25:hover,
 .textarea--border-darken25:focus,
 .input--border-darken25:focus {
   border-color: rgba(0, 0, 0, 0.50);
@@ -1170,8 +1110,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: rgba(0, 0, 0, 0.50);
 }
 
-.textarea--border-darken50:hover,
-.input--border-darken50:hover,
 .textarea--border-darken50:focus,
 .input--border-darken50:focus {
   border-color: rgba(0, 0, 0, 0.75);
@@ -1184,8 +1122,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: rgba(0, 0, 0, 0.75);
 }
 
-.textarea--border-darken75:hover,
-.input--border-darken75:hover,
 .textarea--border-darken75:focus,
 .input--border-darken75:focus {
   border-color: #000;
@@ -1198,8 +1134,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: rgba(255, 255, 255, 0.05);
 }
 
-.textarea--border-lighten5:hover,
-.input--border-lighten5:hover,
 .textarea--border-lighten5:focus,
 .input--border-lighten5:focus {
   border-color: rgba(255, 255, 255, 0.1);
@@ -1212,8 +1146,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-.textarea--border-lighten10:hover,
-.input--border-lighten10:hover,
 .textarea--border-lighten10:focus,
 .input--border-lighten10:focus {
   border-color: rgba(255, 255, 255, 0.25);
@@ -1226,8 +1158,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-.textarea--border-lighten25:hover,
-.input--border-lighten25:hover,
 .textarea--border-lighten25:focus,
 .input--border-lighten25:focus {
   border-color: rgba(255, 255, 255, 0.50);
@@ -1240,8 +1170,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: rgba(255, 255, 255, 0.50);
 }
 
-.textarea--border-lighten50:hover,
-.input--border-lighten50:hover,
 .textarea--border-lighten50:focus,
 .input--border-lighten50:focus {
   border-color: rgba(255, 255, 255, 0.75);
@@ -1254,8 +1182,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: rgba(255, 255, 255, 0.75);
 }
 
-.textarea--border-lighten75:hover,
-.input--border-lighten75:hover,
 .textarea--border-lighten75:focus,
 .input--border-lighten75:focus {
   border-color: #fff;
@@ -1268,8 +1194,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: #fff;
 }
 
-.textarea--border-white:hover,
-.input--border-white:hover,
 .textarea--border-white:focus,
 .input--border-white:focus {
   border-color: rgba(255, 255, 255, 0.75);
@@ -1282,8 +1206,6 @@ exports[`buildColorVariants defaults 1`] = `
   border-color: transparent;
 }
 
-.textarea--border-transparent:hover,
-.input--border-transparent:hover,
 .textarea--border-transparent:focus,
 .input--border-transparent:focus {
   border-color: rgba(0, 0, 0, 0.05);
@@ -7898,8 +7820,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #666;
 }
 
-.textarea--border-gray:hover,
-.input--border-gray:hover,
 .textarea--border-gray:focus,
 .input--border-gray:focus {
   border-color: #000;
@@ -7912,8 +7832,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #ccc;
 }
 
-.textarea--border-gray-light:hover,
-.input--border-gray-light:hover,
 .textarea--border-gray-light:focus,
 .input--border-gray-light:focus {
   border-color: #666;
@@ -7926,8 +7844,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #f7f7f7;
 }
 
-.textarea--border-gray-faint:hover,
-.input--border-gray-faint:hover,
 .textarea--border-gray-faint:focus,
 .input--border-gray-faint:focus {
   border-color: #ccc;
@@ -7940,8 +7856,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: pink;
 }
 
-.textarea--border-pink:hover,
-.input--border-pink:hover,
 .textarea--border-pink:focus,
 .input--border-pink:focus {
   border-color: #C8145A;
@@ -7954,8 +7868,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #FF88C0;
 }
 
-.textarea--border-pink-light:hover,
-.input--border-pink-light:hover,
 .textarea--border-pink-light:focus,
 .input--border-pink-light:focus {
   border-color: pink;
@@ -7968,8 +7880,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #ffdbed;
 }
 
-.textarea--border-pink-faint:hover,
-.input--border-pink-faint:hover,
 .textarea--border-pink-faint:focus,
 .input--border-pink-faint:focus {
   border-color: #FF88C0;
@@ -7982,8 +7892,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #fff;
 }
 
-.textarea--border-red:hover,
-.input--border-red:hover,
 .textarea--border-red:focus,
 .input--border-red:focus {
   border-color: #BE0014;
@@ -7996,8 +7904,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #FF8280;
 }
 
-.textarea--border-red-light:hover,
-.input--border-red-light:hover,
 .textarea--border-red-light:focus,
 .input--border-red-light:focus {
   border-color: #fff;
@@ -8010,8 +7916,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #ffdad9;
 }
 
-.textarea--border-red-faint:hover,
-.input--border-red-faint:hover,
 .textarea--border-red-faint:focus,
 .input--border-red-faint:focus {
   border-color: #FF8280;
@@ -8024,8 +7928,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #ff6e00;
 }
 
-.textarea--border-orange:hover,
-.input--border-orange:hover,
 .textarea--border-orange:focus,
 .input--border-orange:focus {
   border-color: #DC4600;
@@ -8038,8 +7940,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #FFA950;
 }
 
-.textarea--border-orange-light:hover,
-.input--border-orange-light:hover,
 .textarea--border-orange-light:focus,
 .input--border-orange-light:focus {
   border-color: #ff6e00;
@@ -8052,8 +7952,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #FFE5CB;
 }
 
-.textarea--border-orange-faint:hover,
-.input--border-orange-faint:hover,
 .textarea--border-orange-faint:focus,
 .input--border-orange-faint:focus {
   border-color: #FFA950;
@@ -8066,8 +7964,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #f0dc00;
 }
 
-.textarea--border-yellow:hover,
-.input--border-yellow:hover,
 .textarea--border-yellow:focus,
 .input--border-yellow:focus {
   border-color: #FFBD0A;
@@ -8080,8 +7976,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #F0F062;
 }
 
-.textarea--border-yellow-light:hover,
-.input--border-yellow-light:hover,
 .textarea--border-yellow-light:focus,
 .input--border-yellow-light:focus {
   border-color: #f0dc00;
@@ -8094,8 +7988,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #fafbd1;
 }
 
-.textarea--border-yellow-faint:hover,
-.input--border-yellow-faint:hover,
 .textarea--border-yellow-faint:focus,
 .input--border-yellow-faint:focus {
   border-color: #F0F062;
@@ -8108,8 +8000,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #01aa46;
 }
 
-.textarea--border-green:hover,
-.input--border-green:hover,
 .textarea--border-green:focus,
 .input--border-green:focus {
   border-color: #007532;
@@ -8122,8 +8012,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #72C781;
 }
 
-.textarea--border-green-light:hover,
-.input--border-green-light:hover,
 .textarea--border-green-light:focus,
 .input--border-green-light:focus {
   border-color: #01aa46;
@@ -8136,8 +8024,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #d4edda;
 }
 
-.textarea--border-green-faint:hover,
-.input--border-green-faint:hover,
 .textarea--border-green-faint:focus,
 .input--border-green-faint:focus {
   border-color: #72C781;
@@ -8150,8 +8036,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #01b5b4;
 }
 
-.textarea--border-teal:hover,
-.input--border-teal:hover,
 .textarea--border-teal:focus,
 .input--border-teal:focus {
   border-color: #00626E;
@@ -8164,8 +8048,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #50D2D2;
 }
 
-.textarea--border-teal-light:hover,
-.input--border-teal-light:hover,
 .textarea--border-teal-light:focus,
 .input--border-teal-light:focus {
   border-color: #01b5b4;
@@ -8178,8 +8060,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #cbf2f1;
 }
 
-.textarea--border-teal-faint:hover,
-.input--border-teal-faint:hover,
 .textarea--border-teal-faint:focus,
 .input--border-teal-faint:focus {
   border-color: #50D2D2;
@@ -8192,8 +8072,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #448EE4;
 }
 
-.textarea--border-blue:hover,
-.input--border-blue:hover,
 .textarea--border-blue:focus,
 .input--border-blue:focus {
   border-color: #346DB0;
@@ -8206,8 +8084,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #00B1FF;
 }
 
-.textarea--border-blue-light:hover,
-.input--border-blue-light:hover,
 .textarea--border-blue-light:focus,
 .input--border-blue-light:focus {
   border-color: #448EE4;
@@ -8220,8 +8096,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #E0ECF9;
 }
 
-.textarea--border-blue-faint:hover,
-.input--border-blue-faint:hover,
 .textarea--border-blue-faint:focus,
 .input--border-blue-faint:focus {
   border-color: #00B1FF;
@@ -8234,8 +8108,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #8c50c7;
 }
 
-.textarea--border-purple:hover,
-.input--border-purple:hover,
 .textarea--border-purple:focus,
 .input--border-purple:focus {
   border-color: #500078;
@@ -8248,8 +8120,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #C299E3;
 }
 
-.textarea--border-purple-light:hover,
-.input--border-purple-light:hover,
 .textarea--border-purple-light:focus,
 .input--border-purple-light:focus {
   border-color: #8c50c7;
@@ -8262,8 +8132,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #ede1f6;
 }
 
-.textarea--border-purple-faint:hover,
-.input--border-purple-faint:hover,
 .textarea--border-purple-faint:focus,
 .input--border-purple-faint:focus {
   border-color: #C299E3;
@@ -8276,8 +8144,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: rgba(0, 0, 0, 0.05);
 }
 
-.textarea--border-darken5:hover,
-.input--border-darken5:hover,
 .textarea--border-darken5:focus,
 .input--border-darken5:focus {
   border-color: rgba(0, 0, 0, 0.10);
@@ -8290,8 +8156,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: rgba(0, 0, 0, 0.10);
 }
 
-.textarea--border-darken10:hover,
-.input--border-darken10:hover,
 .textarea--border-darken10:focus,
 .input--border-darken10:focus {
   border-color: rgba(0, 0, 0, 0.25);
@@ -8304,8 +8168,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: rgba(0, 0, 0, 0.25);
 }
 
-.textarea--border-darken25:hover,
-.input--border-darken25:hover,
 .textarea--border-darken25:focus,
 .input--border-darken25:focus {
   border-color: rgba(0, 0, 0, 0.50);
@@ -8318,8 +8180,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: rgba(0, 0, 0, 0.50);
 }
 
-.textarea--border-darken50:hover,
-.input--border-darken50:hover,
 .textarea--border-darken50:focus,
 .input--border-darken50:focus {
   border-color: rgba(0, 0, 0, 0.75);
@@ -8332,8 +8192,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: rgba(0, 0, 0, 0.75);
 }
 
-.textarea--border-darken75:hover,
-.input--border-darken75:hover,
 .textarea--border-darken75:focus,
 .input--border-darken75:focus {
   border-color: #000;
@@ -8346,8 +8204,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: rgba(255, 255, 255, 0.05);
 }
 
-.textarea--border-lighten5:hover,
-.input--border-lighten5:hover,
 .textarea--border-lighten5:focus,
 .input--border-lighten5:focus {
   border-color: rgba(255, 255, 255, 0.1);
@@ -8360,8 +8216,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-.textarea--border-lighten10:hover,
-.input--border-lighten10:hover,
 .textarea--border-lighten10:focus,
 .input--border-lighten10:focus {
   border-color: rgba(255, 255, 255, 0.25);
@@ -8374,8 +8228,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-.textarea--border-lighten25:hover,
-.input--border-lighten25:hover,
 .textarea--border-lighten25:focus,
 .input--border-lighten25:focus {
   border-color: rgba(255, 255, 255, 0.50);
@@ -8388,8 +8240,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: rgba(255, 255, 255, 0.50);
 }
 
-.textarea--border-lighten50:hover,
-.input--border-lighten50:hover,
 .textarea--border-lighten50:focus,
 .input--border-lighten50:focus {
   border-color: rgba(255, 255, 255, 0.75);
@@ -8402,8 +8252,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: rgba(255, 255, 255, 0.75);
 }
 
-.textarea--border-lighten75:hover,
-.input--border-lighten75:hover,
 .textarea--border-lighten75:focus,
 .input--border-lighten75:focus {
   border-color: #fff;
@@ -8416,8 +8264,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: #fff;
 }
 
-.textarea--border-white:hover,
-.input--border-white:hover,
 .textarea--border-white:focus,
 .input--border-white:focus {
   border-color: rgba(255, 255, 255, 0.75);
@@ -8430,8 +8276,6 @@ exports[`buildColorVariants handles custom variables 1`] = `
   border-color: transparent;
 }
 
-.textarea--border-transparent:hover,
-.input--border-transparent:hover,
 .textarea--border-transparent:focus,
 .input--border-transparent:focus {
   border-color: rgba(0, 0, 0, 0.05);
@@ -14362,8 +14206,6 @@ exports[`buildColorVariants with default colors array 1`] = `
   border-color: #dc2b28;
 }
 
-.textarea--border-red:hover,
-.input--border-red:hover,
 .textarea--border-red:focus,
 .input--border-red:focus {
   border-color: #BE0014;
@@ -14376,8 +14218,6 @@ exports[`buildColorVariants with default colors array 1`] = `
   border-color: #01b5b4;
 }
 
-.textarea--border-teal:hover,
-.input--border-teal:hover,
 .textarea--border-teal:focus,
 .input--border-teal:focus {
   border-color: #00626E;
@@ -14390,8 +14230,6 @@ exports[`buildColorVariants with default colors array 1`] = `
   border-color: #72C781;
 }
 
-.textarea--border-green-light:hover,
-.input--border-green-light:hover,
 .textarea--border-green-light:focus,
 .input--border-green-light:focus {
   border-color: #01aa46;
@@ -14983,8 +14821,6 @@ exports[`buildColorVariants with granular colors 1`] = `
   border-color: rgba(255, 255, 255, 0.50);
 }
 
-.textarea--border-lighten50:hover,
-.input--border-lighten50:hover,
 .textarea--border-lighten50:focus,
 .input--border-lighten50:focus {
   border-color: rgba(255, 255, 255, 0.75);
@@ -14997,8 +14833,6 @@ exports[`buildColorVariants with granular colors 1`] = `
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-.textarea--border-lighten25:hover,
-.input--border-lighten25:hover,
 .textarea--border-lighten25:focus,
 .input--border-lighten25:focus {
   border-color: rgba(255, 255, 255, 0.50);
@@ -15011,8 +14845,6 @@ exports[`buildColorVariants with granular colors 1`] = `
   border-color: #666;
 }
 
-.textarea--border-gray:hover,
-.input--border-gray:hover,
 .textarea--border-gray:focus,
 .input--border-gray:focus {
   border-color: #333;
