@@ -573,9 +573,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 /**
- * The checkbox component styles the `<input type='checkbox'>` element. The markup must fit the following pattern:
+ * The checkbox component styles the `<input type='checkbox' />` element. The markup must fit the following pattern:
  * - A wrapping `<label>` with the class `checkbox-container`.
- * - An `<input type='checkbox'>`. You may want to add a `mr*` margin-right
+ * - An `<input type='checkbox' />`. You may want to add a `mr*` margin-right
  *   class to separate the checkbox from its label.
  * - A `<div>` with the class `checkbox`
  *   containing an `<svg>` with the chosen icon (usually `#icon-check`).
@@ -591,14 +591,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * @memberof Checkboxes
  * @example
  *   <label class='checkbox-container'>
- *     <input type='checkbox'>
+ *     <input type='checkbox' />
  *     <div class='checkbox mr6'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
  *     More cats
  *   </label>
  *   <label class='txt-s checkbox-container ml24'>
- *     <input type='checkbox'>
+ *     <input type='checkbox' />
  *     <div class='checkbox mr6 checkbox--s-label checkbox--red'>
  *       <svg class='icon'><use xlink:href='#icon-check' /></svg>
  *     </div>
@@ -682,9 +682,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 /**
- * The switch component styles the `<input type='checkbox'>` element. The markup must fit the following pattern:
+ * The switch component styles the `<input type='checkbox' />` element. The markup must fit the following pattern:
  * - A wrapping `<label>` with the class `switch-container`.
- * - An `<input type='checkbox'>`. You may want to add a `mr*` margin-right
+ * - An `<input type='checkbox' />`. You may want to add a `mr*` margin-right
  *   class to separate the radio from its label.
  * - A `<div>` with the class `switch`.
  *
@@ -700,12 +700,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  *
  * @memberof Switches
  * @example
- * <label class="switch-container">
- *   <input type='checkbox'>
- *   <div class="switch"></div>
+ * <label class='switch-container'>
+ *   <input type='checkbox' />
+ *   <div class='switch'></div>
  * </label>
- * <label class="switch-container">
- *   <input type='checkbox'>
+ * <label class='switch-container'>
+ *   <input type='checkbox' />
  *   <div class='switch switch--pink switch--dot-yellow mr6'></div>
  *   Enabled
  * </label>
