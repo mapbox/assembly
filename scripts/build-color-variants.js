@@ -580,7 +580,3 @@ function buildColorVariants(variables, config) {
 }
 
 module.exports = buildColorVariants;
-
-if (require.main === module) {
-  buildColorVariants().catch((err) => console.error(err.stack));
-}
