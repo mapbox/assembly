@@ -1,61 +1,46 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
-import execall from 'execall';
-
-const layoutCss = fs.readFileSync(path.join(__dirname, '../src/layout.css'), 'utf8');
-
-// Expects regular expressions with one sub-match that is the number
-function findNumbers(re) {
-  return execall(re, layoutCss).map((match) => {
-    return match.sub[0];
-  });
-}
+import scales from '../src/scales';
 
 const classSets = {
   'Grid Gutters': {
     classPatterns: ['grid--gut{n}'],
-    numbers: findNumbers(/\.grid--gut(\d+) {/g)
-  },
-  'Z-Indexes': {
-    classPatterns: ['z{n}'],
-    numbers: findNumbers(/\.z(\d+|-neg\d+) {/g)
+    scale: scales.gutter
   },
   'Multi-Side Margins': {
     classPatterns: ['m{n}', 'mx{n}', 'my{n}'],
-    numbers: findNumbers(/\.m(\d+) {/g)
+    scale: scales.multiMargin
   },
   'Single-Side Margins': {
     classPatterns: ['ml{n}', 'mt{n}', 'mr{n}', 'mb{n}'],
-    numbers: findNumbers(/\.mt(\d+|-neg\d+) {/g)
+    scale: scales.singleMargin
   },
   'Paddings': {
     classPatterns: ['p{n}', 'px{n}', 'py{n}', 'pl{n}', 'pt{n}', 'pr{n}', 'pb{n}'],
-    numbers: findNumbers(/\.p(\d+) {/g)
+    scale: scales.padding
   },
   'Widths': {
     classPatterns: ['w{n}'],
-    numbers: findNumbers(/\.w(\d+|-full) {/g)
+    scale: scales.width
   },
   'Max-Widths': {
     classPatterns: ['wmax{n}'],
-    numbers: findNumbers(/\.wmax(\d+|-full) {/g)
+    scale: scales.maxWidth
   },
   'Min-Widths': {
     classPatterns: ['wmin{n}'],
-    numbers: findNumbers(/\.wmin(\d+|-full) {/g)
+    scale: scales.minWidth
   },
   'Heights': {
     classPatterns: ['h{n}'],
-    numbers: findNumbers(/\.h(\d+|-full) {/g)
+    scale: scales.height
   },
   'Max-Heights': {
     classPatterns: ['hmax{n}'],
-    numbers: findNumbers(/\.hmax(\d+|-full) {/g)
+    scale: scales.maxHeight
   },
   'Min-Heights': {
     classPatterns: ['hmin{n}'],
-    numbers: findNumbers(/\.hmin(\d+|-full) {/g)
+    scale: scales.minHeight
   }
 };
 
@@ -63,7 +48,7 @@ class LayoutScales extends React.Component {
   render() {
     const rows = Object.keys(classSets).map((name) => {
       const data = classSets[name];
-      const numbers = data.numbers.map((number) => {
+      const scale = data.scale.map((number) => {
         const numberClasses = 'round border border--gray-light flex-child txt-mono py6 px12 mr3 mb3';
         return (
           <span
@@ -98,7 +83,7 @@ class LayoutScales extends React.Component {
             {classPatterns}
           </div>
           <div className='flex-parent-inline flex-parent--wrap'>
-            {numbers}
+            {scale}
           </div>
         </div>
       );

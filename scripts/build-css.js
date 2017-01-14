@@ -16,6 +16,7 @@ const defaultVariables = require('../src/variables');
 const defaultMediaQueries = require('../src/media-queries');
 const timelog = require('./timelog');
 const buildColorVariants = require('./build-color-variants');
+const buildLayoutScales = require('./build-layout-scales');
 
 function getCssPath(name) {
   return path.join(__dirname, `../src/${name}.css`);
@@ -124,6 +125,10 @@ function buildCss(options) {
     return processCss(colorVariantsCss, 'color-variants.css', concat);
   }
 
+  function appendLayoutScales(concat) {
+    return processCss(buildLayoutScales(), 'layout-scales.css', concat);
+  }
+
   function writeDistCss(concat) {
     const css = `${concat.content}\n/*# sourceMappingURL=${outfileFilename}.map */`;
 
@@ -152,6 +157,7 @@ function buildCss(options) {
   return Promise.all(processCssFiles)
     .catch(handlePostcssError)
     .then(() => appendColorVariants(concat))
+    .then(() => appendLayoutScales(concat))
     .then(() => writeDistCss(concat))
     .then(() => {
       if (!options.quiet) timelog('Done building CSS');
