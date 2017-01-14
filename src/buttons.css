@@ -26,6 +26,7 @@
  * </div>
  */
 .btn {
+  display: inline-block;
   background-color: var(--default-primary-interactive-color);
   color: var(--white);
   border-width: 2px;
