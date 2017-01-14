@@ -15,6 +15,8 @@ function buildLayoutScales() {
   function value(v) {
     if (v === '-full') {
       return '100%';
+    } else if (v === '-auto') {
+      return 'auto';
     } else if (typeof v === 'string' && v.indexOf('neg') !== -1) {
       return `-${v.replace('-neg', '')}px`;
     } else {
