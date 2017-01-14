@@ -11,6 +11,7 @@ class Pills extends React.Component {
         <div className='flex-parent mb18'>
           <button className='btn btn--pill btn--pill-hl'>Confirm</button>
           <button className='btn btn--pill btn--pill-hc is-active'>Confirm</button>
+          <button className='btn btn--pill btn--pill-hc is-active'>Confirm</button>
           <button className='btn btn--pill btn--pill-hr'>Confirm</button>
         </div>
 
@@ -23,6 +24,7 @@ class Pills extends React.Component {
 
         <div className='mb18 flex-parent-inline flex-parent--column'>
           <button className='btn btn--orange btn--s btn--pill btn--pill-vt'>Confirm</button>
+          <button className='btn btn--orange btn--s btn--pill btn--pill-vc'>Confirm</button>
           <button className='btn btn--orange btn--s btn--pill btn--pill-vc'>Confirm</button>
           <button className='btn btn--orange btn--s btn--pill btn--pill-vb is-active'>Confirm</button>
         </div>

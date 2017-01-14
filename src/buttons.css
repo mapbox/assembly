@@ -176,7 +176,6 @@ against .round class */
 .btn.btn--pill-hc {
   border-radius: 0 !important;
   margin-left: 1px;
-  margin-right: 1px;
 }
 
 .btn.btn--pill-hl {
@@ -187,12 +186,12 @@ against .round class */
 .btn.btn--pill-hr {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
+  margin-left: 1px;
 }
 
 .btn.btn--pill-vc {
   border-radius: 0 !important;
   margin-top: 1px;
-  margin-bottom: 1px;
   display: block;
   width: 100%;
 }
@@ -207,6 +206,7 @@ against .round class */
 .btn.btn--pill-vb {
   border-top-right-radius: 0 !important;
   border-top-left-radius: 0 !important;
+  margin-top: 1px;
   display: block;
   width: 100%;
 }
