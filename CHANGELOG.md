@@ -1,5 +1,9 @@
 # Changelog
 
+## Head
+
+- Fix irregularities in search and date inputs on mobile Safari.
+
 ## 0.2.0
 
 - Round table corners by default.
