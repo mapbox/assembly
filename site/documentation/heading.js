@@ -20,7 +20,7 @@ class Heading extends React.Component {
     const levelClass = props.level === 1 ? 'txt-subhead mb12 pt24' : 'pt12 txt-l txt-uppercase';
 
     const example = !props.parsedComment.example ? null : (
-      <HtmlExample code={props.parsedComment.example.description} />
+      <HtmlExample code={props.parsedComment.example.description} copy={false} />
     );
 
     return (

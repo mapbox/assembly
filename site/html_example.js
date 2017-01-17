@@ -5,13 +5,23 @@ import xmlLanguage from 'highlight.js/lib/languages/xml';
 Lowlight.registerLanguage('html', xmlLanguage);
 
 function HtmlExample(props) {
+  const copy = props.copy === false ? false : true;
   return (
     <div>
         <div
           className='border border--gray-light p12 round-t'
           dangerouslySetInnerHTML={{ __html: props.code }}
         />
-      <div className='pre bg-gray-faint scroll-auto hmax180 border-l border-b border-r border--gray-light round-b'>
+      <div className='pre bg-gray-faint scroll-auto hmax180 border-l border-b border-r border--gray-light round-b relative'>
+
+        {copy && <div className='absolute top right p12'>
+          <button
+            data-clipboard-text={props.code}
+            className='ml3 btn btn--xs btn--darken25 round js-clipboard'>
+            Copy
+          </button>
+        </div>}
+
         <Lowlight
           language='html'
           value={props.code}
