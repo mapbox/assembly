@@ -1,7 +1,7 @@
 import React from 'react';
 import { HtmlExample } from '../html_example';
 
-const basic = `<div class='flex-parent flex-parent--center-main flex-parent--wrap flex-parent-inline'>
+const basic = `<div class='flex-parent-inline flex-parent--center-main flex-parent--wrap'>
   <div class='bg-darken75 color-white align-center col col--12 p6 round txt-bold txt-s'>Hello world!</div>
   <span class='triangle triangle--d'></span>
 </div>`;
