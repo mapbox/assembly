@@ -23,12 +23,14 @@ class Navigation extends React.Component {
           linkContainerClasses = 'inline-block block-mm ';
         }
         const nestedItems = listNestedMembers(member.items, isDoc, level + 1);
+        const href = member.route.startsWith('#') ? member.route : `/assembly${member.route}`;
+
         return (
           <div key={member.name} className={linkContainerClasses}>
             <a
               style={style}
               className={linkClasses}
-              href={member.route}
+              href={href}
             >
               {member.name}
             </a>

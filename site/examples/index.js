@@ -8,7 +8,7 @@ class Examples extends React.Component {
         <div key={i}>
           <a
             className='block link'
-            href={child.route}
+            href={`/assembly${child.route}`}
           >{child.name}</a>
         </div>
       );

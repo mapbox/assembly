@@ -55,7 +55,7 @@ const routes = [
       component: ExampleInputs
     }, {
       name: 'Legends',
-      route: '/examples/lagends/',
+      route: '/examples/legends/',
       component: ExampleLegends
     }, {
       name: 'Modal',
