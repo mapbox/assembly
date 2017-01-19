@@ -6,11 +6,9 @@ const tiles = `<div class='bg-darken10 viewport-half'>
 <div class='fixed top right bottom left scroll-auto'></div>-->
   <div class='flex-parent flex-parent--center-main pt48'>
     <div class='flex-child bg-white round relative w480'>
-      <div class='absolute top right flex-parent flex-parent--center-main w36 h36'>
-        <button>
-          <svg class='icon link color-darken50'><use xlink:href='#icon-close'></use></svg>
-        </button>
-      </div>
+      <button class='absolute top right p12'>
+        <svg class='icon link color-darken50'><use xlink:href='#icon-close'></use></svg>
+      </button>
       <div class='p24'>
         <div class='txt-l mb12'>Modal title</div>
         <div class='txt-m'>
