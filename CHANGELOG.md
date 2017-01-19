@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0
+
+- Add `flex-child--no-shrink` class, which is essential after the changes in v0.4.0.
+
 ## 0.4.0
 
 - Remove `flex-shrink: 0` from `flex-child`. This changes the way that flex children are laid out when they have wide content. The new pattern is, hopefully, more intuitive.
