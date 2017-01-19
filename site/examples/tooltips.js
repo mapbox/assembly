@@ -23,6 +23,12 @@ const side_tooltip_left =
   <div class='bg-darken75 color-white align-center col col--12 p6 round txt-bold txt-s'>Hello world!</div>
 </div>`;
 
+const side_tooltip_right = 
+`<div class='flex-parent-inline flex-parent--center-cross'>
+  <div class='bg-darken75 color-white align-center col col--12 p6 round txt-bold txt-s'>Hello world!</div>
+  <span class='triangle triangle--r'></span>
+</div>`
+
 
 class ExampleTooltips extends React.Component {
   render() {
@@ -37,9 +43,13 @@ class ExampleTooltips extends React.Component {
         </h2>
         <HtmlExample code={basic_with_closure} />
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
-          Side tooltips
+          Side tooltip--left
         </h2>
         <HtmlExample code={side_tooltip_left} />
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+          Side tooltip--right
+        </h2>
+        <HtmlExample code={side_tooltip_right} />
       </div>
     );
   }
