@@ -134,8 +134,9 @@ npm run build:js # Build SVGs and other JS
 ### Releasing
 
 - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/mb-pages/CHANGELOG.md).
-- Tag the version in git and `git push --tags`.
 - Increment the version key in [`package.json`](https://github.com/mapbox/assembly/blob/mb-pages/package.json).
+- Merge these changes into the `mb-pages` branch.
+- Tag the version in git and `git push --tags`.
 - Publish the new version on npm via `npm publish`.
 - Run `npm run deploy` to upload the new version to s3. **Note** you will need
 to be authenticated on AWS to do so.
