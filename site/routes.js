@@ -155,6 +155,7 @@ function buildRoutes() {
         const sections = [
           'Typography',
           'Grids',
+          'Flexbox',
           'Tables',
           'Lists',
           'Links',

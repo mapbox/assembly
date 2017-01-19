@@ -15,6 +15,7 @@ import { Textareas } from './textareas';
 import { Ranges } from './ranges';
 import { Links } from './links';
 import { Grids } from './grids';
+import { Flexbox } from './flexbox';
 
 class Catalog extends React.Component {
   render() {
@@ -29,6 +30,9 @@ class Catalog extends React.Component {
         </div>
         <div id='Grids' className='mb48'>
           <Grids />
+        </div>
+        <div id='Flexbox' className='mb48'>
+          <Flexbox />
         </div>
         <div id='Tables' className='mb48'>
           <Tables />
