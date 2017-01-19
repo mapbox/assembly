@@ -421,39 +421,39 @@
  * @group
  * @memberof Opacity
  * @example
- * <div class='alpha25'>alpha25</div>
- * <div class='alpha50'>alpha50</div>
- * <div class='alpha100'>alpha100</div>
+ * <div class='opacity25'>opacity25</div>
+ * <div class='opacity50'>opacity50</div>
+ * <div class='opacity100'>opacity100</div>
  */
-.alpha0 { opacity: 0 !important; }
-.alpha25 { opacity: 0.25 !important; }
-.alpha50 { opacity: 0.5 !important; }
-.alpha75 { opacity: 0.75 !important; }
-.alpha100 { opacity: 1 !important; }
+.opacity0 { opacity: 0 !important; }
+.opacity25 { opacity: 0.25 !important; }
+.opacity50 { opacity: 0.5 !important; }
+.opacity75 { opacity: 0.75 !important; }
+.opacity100 { opacity: 1 !important; }
 /** @endgroup */
 
 /**
  * Apply an opacity on hover and active states.
  *
- * `.alpha100-on-focus` is also available to make an otherwise transparent element opaque on focus.
+ * `.opacity100-on-focus` is also available to make an otherwise transparent element opaque on focus.
  *
  * @group
  * @memberof Opacity
  * @example
- * <div class='alpha25-on-hover'>alpha25-on-hover</div>
- * <div class='alpha25-on-active'>alpha25-on-active (inactive)</div>
- * <div class='alpha25-on-active is-active'>alpha25-on-active (active)</div>
- * <button class='alpha0 alpha100-on-focus'>alpha100-on-focus</button>
+ * <div class='opacity25-on-hover'>opacity25-on-hover</div>
+ * <div class='opacity25-on-active'>opacity25-on-active (inactive)</div>
+ * <div class='opacity25-on-active is-active'>opacity25-on-active (active)</div>
+ * <button class='opacity0 opacity100-on-focus'>opacity100-on-focus</button>
  */
-.alpha0-on-hover:hover,
-.alpha0-on-active.is-active { opacity: 0 !important; }
-.alpha25-on-hover:hover,
-.alpha25-on-active.is-active { opacity: 0.25 !important; }
-.alpha50-on-hover:hover,
-.alpha50-on-active.is-active { opacity: 0.5 !important; }
-.alpha75-on-hover:hover,
-.alpha75-on-active.is-active { opacity: 0.75 !important; }
-.alpha100-on-hover:hover,
-.alpha100-on-active.is-active,
-.alpha100-on-focus:focus { opacity: 1 !important; }
+.opacity0-on-hover:hover,
+.opacity0-on-active.is-active { opacity: 0 !important; }
+.opacity25-on-hover:hover,
+.opacity25-on-active.is-active { opacity: 0.25 !important; }
+.opacity50-on-hover:hover,
+.opacity50-on-active.is-active { opacity: 0.5 !important; }
+.opacity75-on-hover:hover,
+.opacity75-on-active.is-active { opacity: 0.75 !important; }
+.opacity100-on-hover:hover,
+.opacity100-on-active.is-active,
+.opacity100-on-focus:focus { opacity: 1 !important; }
 /** @endgroup */
