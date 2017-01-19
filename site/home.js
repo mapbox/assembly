@@ -122,6 +122,12 @@ class Home extends React.Component {
           where "size" is <code className='txt-code'>m</code>, <code className='txt-code'>l</code>, or <code className='txt-code'>xl</code>.
         </p>
         <h3 className='mt24 txt-bold'>
+          <code className='txt-code'>--modifier</code> classes
+        </h3>
+        <p className='mt12'>
+          A double-hyphen in a class name (e.g. <code className='txt-code'>border--blue</code>) indicates that the class is a <span className='txt-em'>modifier class</span>. A modifier class extends the class whose name precedes the double-hyphen (e.g. <code className='txt-code'>border--blue</code> modifies <code className='txt-code'>border</code>; <code className='txt-code'>flex-child--grow</code> modifies <code className='txt-code'>flex-child</code>). And <span className='txt-em'>modifier classes should only ever be used in combination with the class they modify</span>: modifier classes will not work well on their own.
+        </p>
+        <h3 className='mt24 txt-bold'>
           Utility classes are <code className='txt-code'>!important</code>
         </h3>
         <p className='mt12'>
