@@ -652,6 +652,7 @@
  */
 .flex-child--grow {
   flex-grow: 1 !important;
+  flex-shrink: 1;
   min-width: 0;
 }
 
@@ -672,6 +673,7 @@
   }
   .flex-child--grow-mm {
     flex-grow: 1 !important;
+    flex-shrink: 1;
     min-width: 0;
   }
 }
@@ -693,6 +695,7 @@
   }
   .flex-child--grow-ml {
     flex-grow: 1 !important;
+    flex-shrink: 1;
     min-width: 0;
   }
 }
@@ -714,6 +717,7 @@
   }
   .flex-child--grow-mxl {
     flex-grow: 1 !important;
+    flex-shrink: 1;
     min-width: 0;
   }
 }
