@@ -641,16 +641,36 @@
  * This is useful when you have one or more elements of
  * fixed width, and another element that should take up the remaining space in the row.
  *
+ * Typically, you will also want to apply the `flex-child--no-shrink` modifier to the element in the row with a fixed width.
+ *
  * @memberof Flexbox
  * @example
  * <div class='flex-parent bg-darken10'>
- *  <div class='flex-child border w240'>child</div>
+ *  <div class='flex-child flex-child--no-shrink border w240'>child</div>
  *  <div class='flex-child flex-child--grow border'>child</div>
  * </div>
  */
 .flex-child--grow {
   flex-grow: 1 !important;
   min-width: 0;
+}
+
+/**
+ * Prevent a child from shrinking below its width value.
+ *
+ * By default, flex children (even with specified widths) will shrink as needed to accommodate sibling elements.
+ * This class prevents that default shrinkage, forcing siblings to accommodate the parent's width.
+ *
+ * @memberof Flexbox
+ * @example
+ * <div class='flex-parent bg-darken10 w240'>
+ *  <div class='flex-child flex-child--no-shrink border w120'>child</div>
+ *  <div class='flex-child border w120'>child</div>
+ *  <div class='flex-child border w120'>child</div>
+ * </div>
+ */
+.flex-child--no-shrink {
+  flex-shrink: 0 !important;
 }
 
 @media (--m-screen) {
@@ -669,6 +689,9 @@
   .flex-child--grow-mm {
     flex-grow: 1 !important;
     min-width: 0;
+  }
+  .flex-child--no-shrink-mm {
+    flex-shrink: 0 !important;
   }
 }
 
@@ -689,6 +712,9 @@
     flex-grow: 1 !important;
     min-width: 0;
   }
+  .flex-child--no-shrink-ml {
+    flex-shrink: 0 !important;
+  }
 }
 
 @media (--xl-screen) {
@@ -707,6 +733,9 @@
   .flex-child--grow-mxl {
     flex-grow: 1 !important;
     min-width: 0;
+  }
+  .flex-child--no-shrink-mxl {
+    flex-shrink: 0 !important;
   }
 }
 /* end flex */
