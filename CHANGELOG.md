@@ -1,5 +1,10 @@
 # Changelog
 
+## Head
+
+- Remove `flex-shrink: 0` from `flex-child`. This changes the way that flex children are laid out when they have wide content. The new pattern is, hopefully, more intuitive.
+- Rename `alpha*` classes to `opacity*`.
+
 ## 0.3.0
 
 - Add `height: auto` with `h-auto`.
