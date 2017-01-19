@@ -633,8 +633,6 @@
 .flex-child {
   display: block;
   max-width: 100%;
-  flex-shrink: 0;
-  flex-basis: auto;
 }
 /* Specifically, the above addresses #1, #2, and #12 in https://github.com/philipwalton/flexbugs */
 
@@ -652,7 +650,6 @@
  */
 .flex-child--grow {
   flex-grow: 1 !important;
-  flex-shrink: 1;
   min-width: 0;
 }
 
@@ -668,12 +665,9 @@
   .flex-child-mm {
     display: block;
     max-width: 100%;
-    flex-shrink: 0;
-    flex-basis: auto;
   }
   .flex-child--grow-mm {
     flex-grow: 1 !important;
-    flex-shrink: 1;
     min-width: 0;
   }
 }
@@ -690,12 +684,9 @@
   .flex-child-ml {
     display: block;
     max-width: 100%;
-    flex-shrink: 0;
-    flex-basis: auto;
   }
   .flex-child--grow-ml {
     flex-grow: 1 !important;
-    flex-shrink: 1;
     min-width: 0;
   }
 }
@@ -712,12 +703,9 @@
   .flex-child-mxl {
     display: block;
     max-width: 100%;
-    flex-shrink: 0;
-    flex-basis: auto;
   }
   .flex-child--grow-mxl {
     flex-grow: 1 !important;
-    flex-shrink: 1;
     min-width: 0;
   }
 }
