@@ -17,6 +17,13 @@ const basic_with_closure =
   <span class='triangle triangle--d color-gray-faint'></span>
 </div>`;
 
+const side_tooltip_left = 
+`<div class='flex-parent-inline flex-parent--center-cross'>
+  <span class='triangle triangle--l'></span>
+  <div class='bg-darken75 color-white align-center col col--12 p6 round txt-bold txt-s'>Hello world!</div>
+</div>`;
+
+
 class ExampleTooltips extends React.Component {
   render() {
     return (
@@ -29,6 +36,10 @@ class ExampleTooltips extends React.Component {
           Tooltip with close button
         </h2>
         <HtmlExample code={basic_with_closure} />
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+          Side tooltips
+        </h2>
+        <HtmlExample code={side_tooltip_left} />
       </div>
     );
   }
