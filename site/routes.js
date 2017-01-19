@@ -19,6 +19,7 @@ import { ExampleProgressBars } from './examples/progress_bars';
 import { ExampleSidebarApps } from './examples/sidebar_apps';
 import { ExampleTileLayout } from './examples/tile_layout';
 import { ExampleTooltips } from './examples/tooltips';
+import { ExampleFixedHeader } from './examples/fixed_header';
 
 /*
  * To add pages to the site, we pass a routes array with
@@ -49,6 +50,10 @@ const routes = [
       name: 'Badges',
       route: '/examples/badges/',
       component: ExampleBadges
+    }, {
+      name: 'Fixed header',
+      route: '/examples/fixed-header/',
+      component: ExampleFixedHeader
     }, {
       name: 'Inputs',
       route: '/examples/inputs/',
