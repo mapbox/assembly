@@ -3,6 +3,7 @@ import remark from 'remark';
 import reactRenderer from 'remark-react';
 import _ from 'lodash';
 import { HtmlExample } from '../html_example';
+import { CssSnippet } from '../css_snippet';
 
 class Entry extends React.Component {
   constructor(props) {
@@ -69,6 +70,12 @@ class Entry extends React.Component {
       </button>
     ) : null;
 
+    const css = !props.referencedSource ? null : (
+      <div className='mt6'>
+        <CssSnippet code={props.referencedSource.toString()} />
+      </div>
+    );
+
     return (
       <div className='grid-mxl grid--gut18-mxl border-t border--2 border--gray-faint pt48 pb48'>
         <div className='col col--4-mxl pr18-ml mb6'>
@@ -85,6 +92,7 @@ class Entry extends React.Component {
             {remark().use(reactRenderer).process(props.parsedComment.description).contents}
           </div>
           {example}
+          {css}
         </div>
       </div>
     );
