@@ -1,26 +1,22 @@
 import React from 'react';
 import { HtmlExample } from '../html_example';
 
-const basic = 
-`<div class='flex-parent-inline flex-parent--center-main flex-parent--wrap'>
+const basic = `<div class='flex-parent-inline flex-parent--center-main flex-parent--wrap'>
   <div class='bg-darken75 color-white align-center col col--12 p6 round txt-bold txt-s'>Hello world!</div>
   <span class='triangle triangle--d'></span>
 </div>`;
 
-const basic_left = 
-`<div class='flex-parent-inline flex-parent--center-cross'>
+const basic_left = `<div class='flex-parent-inline flex-parent--center-cross'>
   <span class='triangle triangle--l'></span>
   <div class='bg-darken75 color-white align-center col col--12 p6 round txt-bold txt-s'>Hello world!</div>
 </div>`;
 
-const basic_right = 
-`<div class='flex-parent-inline flex-parent--center-cross'>
+const basic_right = `<div class='flex-parent-inline flex-parent--center-cross'>
   <div class='bg-darken75 color-white align-center col col--12 p6 round txt-bold txt-s'>Hello world!</div>
   <span class='triangle triangle--r'></span>
-</div>`
+</div>`;
 
-const basic_with_closure = 
-`<div class='flex-parent-inline flex-parent--center-main flex-parent--wrap'>
+const basic_with_closure = `<div class='flex-parent-inline flex-parent--center-main flex-parent--wrap'>
   <div class='bg-darken5 color-darken50 align-center col col--12 p18 round txt-bold txt-s relative'>
     <button class='absolute top right'>
       <svg class='icon link color-darken50'><use xlink:href='#icon-close'></use></svg>
