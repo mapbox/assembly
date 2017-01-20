@@ -587,15 +587,27 @@
 .flex-parent--center-cross { align-items: center !important; }
 
 /**
- * Justify an element's children to the end of the main axis.
+ * Align an element's children to the end of the cross axis.
  *
  * @memberof Flexbox
  * @example
- * <div class='flex-parent flex-parent--justify-end bg-darken10'>
+ * <div class='flex-parent flex-parent--end-cross h72 bg-darken10'>
+ *  <div class='flex-child bg-darken10 h42'>child</div>
  *  <div class='flex-child bg-darken10'>child</div>
  * </div>
  */
-.flex-parent--justify-end { justify-content: flex-end !important; }
+.flex-parent--end-cross { align-items: flex-end !important; }
+
+/**
+ * Align an element's children to the end of the main axis.
+ *
+ * @memberof Flexbox
+ * @example
+ * <div class='flex-parent flex-parent--end-main bg-darken10'>
+ *  <div class='flex-child bg-darken10'>child</div>
+ * </div>
+ */
+.flex-parent--end-main { justify-content: flex-end !important; }
 
 /**
  * Allow children to wrap. By default, they are all forced onto one line.
@@ -678,7 +690,8 @@
   .flex-parent-inline-mm { display: inline-flex !important; }
   .flex-parent--column-mm { flex-direction: column !important; }
   .flex-parent--wrap-mm { flex-wrap: wrap !important; }
-  .flex-parent--justify-end-mm { justify-content: flex-end !important; }
+  .flex-parent--end-cross-mm { align-items: flex-end !important; }
+  .flex-parent--end-main-mm { justify-content: flex-end !important; }
   .flex-parent--center-main-mm { justify-content: center !important; }
   .flex-parent--center-cross-mm { align-items: center !important; }
   .flex-parent--stretch-cross-mm { align-items: stretch !important; }
@@ -700,7 +713,8 @@
   .flex-parent-inline-ml { display: inline-flex !important; }
   .flex-parent--column-ml { flex-direction: column !important; }
   .flex-parent--wrap-ml { flex-wrap: wrap !important; }
-  .flex-parent--justify-end-ml { justify-content: flex-end !important; }
+  .flex-parent--end-cross-ml { align-items: flex-end !important; }
+  .flex-parent--end-main-ml { justify-content: flex-end !important; }
   .flex-parent--center-main-ml { justify-content: center !important; }
   .flex-parent--center-cross-ml { align-items: center !important; }
   .flex-parent--stretch-cross-ml { align-items: stretch !important; }
@@ -722,7 +736,8 @@
   .flex-parent-inline-mxl { display: inline-flex !important; }
   .flex-parent--column-mxl { flex-direction: column !important; }
   .flex-parent--wrap-mxl { flex-wrap: wrap !important; }
-  .flex-parent--justify-end-mxl { justify-content: flex-end !important; }
+  .flex-parent--end-cross-mxl { align-items: flex-end !important; }
+  .flex-parent--end-main-mxl { justify-content: flex-end !important; }
   .flex-parent--center-main-mxl { justify-content: center !important; }
   .flex-parent--center-cross-mxl { align-items: center !important; }
   .flex-parent--stretch-cross-mxl { align-items: stretch !important; }
