@@ -69,7 +69,7 @@ class Navigation extends React.Component {
             <a href='/assembly/' className='flex-child flex-child--grow link link--blue block'>
               <Logo className='icon icon--l' />
             </a>
-            <div className='flex-child txt-s txt-bold color-darken50'>
+            <div className='flex-child txt-s color-darken50'>
               v{pkg.version}
             </div>
           </div>
