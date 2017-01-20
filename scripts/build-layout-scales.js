@@ -17,6 +17,8 @@ function buildLayoutScales() {
       return '100%';
     } else if (v === '-auto') {
       return 'auto';
+    } else if (v === '-none') {
+      return 'none';
     } else if (typeof v === 'string' && v.indexOf('neg') !== -1) {
       return `-${v.replace('-neg', '')}px`;
     } else {
@@ -164,6 +166,7 @@ function buildLayoutScales() {
     let css = stripIndent(`
       /**
        * Apply margin on the top.
+       *
        * @group
        * @example
        * <div class='mt24 bg-darken10'>mt24</div>
@@ -438,6 +441,8 @@ function buildLayoutScales() {
     /**
       * Set an element's width.
       *
+      * In addition to numeric values, there are \`w-full\` and \`w-auto\` classes.
+      *
       * @group
       * @memberof Sizing
       * @example
@@ -465,6 +470,8 @@ function buildLayoutScales() {
     let css = stripIndent(`
     /**
       * Set an element's maximum width.
+      *
+      * In addition to numeric values, there are \`wmax-full\` and \`wmax-none\` classes.
       *
       * @group
       * @memberof Sizing
@@ -494,6 +501,8 @@ function buildLayoutScales() {
     /**
       * Set an element's minimum width.
       *
+      * In addition to numeric values, there is the \`wmin-full\` class.
+      *
       * @group
       * @memberof Sizing
       * @example
@@ -521,6 +530,8 @@ function buildLayoutScales() {
     let css = stripIndent(`
     /**
       * Set an element's height.
+      *
+      * In addition to numeric values, there are \`h-full\` and \`h-auto\` classes.
       *
       * @group
       * @memberof Sizing
@@ -550,6 +561,8 @@ function buildLayoutScales() {
     /**
       * Set an element's maximum height.
       *
+      * In addition to numeric values, there are \`hmax-full\` and \`hmax-none\` classes.
+      *
       * @group
       * @memberof Sizing
       * @example
@@ -577,6 +590,8 @@ function buildLayoutScales() {
     let css = stripIndent(`
     /**
       * Set an element's minimum height.
+      *
+      * In addition to numeric values, there is the \`hmin-full\` class.
       *
       * @group
       * @memberof Sizing

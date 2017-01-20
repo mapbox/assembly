@@ -383,6 +383,7 @@ exports[`buildLayoutScales defaults 1`] = `
 
 /**
  * Apply margin on the top.
+ *
  * @group
  * @example
  * <div class=\'mt24 bg-darken10\'>mt24</div>
@@ -1270,6 +1271,8 @@ exports[`buildLayoutScales defaults 1`] = `
 /**
   * Set an element\'s width.
   *
+  * In addition to numeric values, there are \`w-full\` and \`w-auto\` classes.
+  *
   * @group
   * @memberof Sizing
   * @example
@@ -1362,10 +1365,16 @@ exports[`buildLayoutScales defaults 1`] = `
 .w-full {
   width: 100% !important;
 }
+      
+.w-auto {
+  width: auto !important;
+}
       /** @endgroup */
 
 /**
   * Set an element\'s maximum width.
+  *
+  * In addition to numeric values, there are \`wmax-full\` and \`wmax-none\` classes.
   *
   * @group
   * @memberof Sizing
@@ -1467,10 +1476,16 @@ exports[`buildLayoutScales defaults 1`] = `
 .wmax-full {
   max-width: 100% !important;
 }
+      
+.wmax-none {
+  max-width: none !important;
+}
       /** @endgroup */
 
 /**
   * Set an element\'s minimum width.
+  *
+  * In addition to numeric values, there is the \`wmin-full\` class.
   *
   * @group
   * @memberof Sizing
@@ -1560,6 +1575,8 @@ exports[`buildLayoutScales defaults 1`] = `
 
 /**
   * Set an element\'s height.
+  *
+  * In addition to numeric values, there are \`h-full\` and \`h-auto\` classes.
   *
   * @group
   * @memberof Sizing
@@ -1654,6 +1671,8 @@ exports[`buildLayoutScales defaults 1`] = `
 /**
   * Set an element\'s maximum height.
   *
+  * In addition to numeric values, there are \`hmax-full\` and \`hmax-none\` classes.
+  *
   * @group
   * @memberof Sizing
   * @example
@@ -1738,10 +1757,16 @@ exports[`buildLayoutScales defaults 1`] = `
 .hmax-full {
   max-height: 100% !important;
 }
+      
+.hmax-none {
+  max-height: none !important;
+}
       /** @endgroup */
 
 /**
   * Set an element\'s minimum height.
+  *
+  * In addition to numeric values, there is the \`hmin-full\` class.
   *
   * @group
   * @memberof Sizing
@@ -2113,6 +2138,7 @@ exports[`buildLayoutScales defaults 1`] = `
 .w720-mm { width: 720px !important; }
 .w960-mm { width: 960px !important; }
 .w-full-mm { width: 100% !important; }
+.w-auto-mm { width: auto !important; }
 .wmax0-mm { max-width: 0px !important; }
 .wmax3-mm { max-width: 3px !important; }
 .wmax6-mm { max-width: 6px !important; }
@@ -2137,6 +2163,7 @@ exports[`buildLayoutScales defaults 1`] = `
 .wmax1200-mm { max-width: 1200px !important; }
 .wmax1500-mm { max-width: 1500px !important; }
 .wmax-full-mm { max-width: 100% !important; }
+.wmax-none-mm { max-width: none !important; }
 .wmin0-mm { min-width: 0px !important; }
 .wmin3-mm { min-width: 3px !important; }
 .wmin6-mm { min-width: 6px !important; }
@@ -2198,6 +2225,7 @@ exports[`buildLayoutScales defaults 1`] = `
 .hmax420-mm { max-height: 420px !important; }
 .hmax480-mm { max-height: 480px !important; }
 .hmax-full-mm { max-height: 100% !important; }
+.hmax-none-mm { max-height: none !important; }
 .hmin0-mm { min-height: 0px !important; }
 .hmin3-mm { min-height: 3px !important; }
 .hmin6-mm { min-height: 6px !important; }
@@ -2504,6 +2532,7 @@ exports[`buildLayoutScales defaults 1`] = `
 .w720-ml { width: 720px !important; }
 .w960-ml { width: 960px !important; }
 .w-full-ml { width: 100% !important; }
+.w-auto-ml { width: auto !important; }
 .wmax0-ml { max-width: 0px !important; }
 .wmax3-ml { max-width: 3px !important; }
 .wmax6-ml { max-width: 6px !important; }
@@ -2528,6 +2557,7 @@ exports[`buildLayoutScales defaults 1`] = `
 .wmax1200-ml { max-width: 1200px !important; }
 .wmax1500-ml { max-width: 1500px !important; }
 .wmax-full-ml { max-width: 100% !important; }
+.wmax-none-ml { max-width: none !important; }
 .wmin0-ml { min-width: 0px !important; }
 .wmin3-ml { min-width: 3px !important; }
 .wmin6-ml { min-width: 6px !important; }
@@ -2589,6 +2619,7 @@ exports[`buildLayoutScales defaults 1`] = `
 .hmax420-ml { max-height: 420px !important; }
 .hmax480-ml { max-height: 480px !important; }
 .hmax-full-ml { max-height: 100% !important; }
+.hmax-none-ml { max-height: none !important; }
 .hmin0-ml { min-height: 0px !important; }
 .hmin3-ml { min-height: 3px !important; }
 .hmin6-ml { min-height: 6px !important; }
@@ -2895,6 +2926,7 @@ exports[`buildLayoutScales defaults 1`] = `
 .w720-mxl { width: 720px !important; }
 .w960-mxl { width: 960px !important; }
 .w-full-mxl { width: 100% !important; }
+.w-auto-mxl { width: auto !important; }
 .wmax0-mxl { max-width: 0px !important; }
 .wmax3-mxl { max-width: 3px !important; }
 .wmax6-mxl { max-width: 6px !important; }
@@ -2919,6 +2951,7 @@ exports[`buildLayoutScales defaults 1`] = `
 .wmax1200-mxl { max-width: 1200px !important; }
 .wmax1500-mxl { max-width: 1500px !important; }
 .wmax-full-mxl { max-width: 100% !important; }
+.wmax-none-mxl { max-width: none !important; }
 .wmin0-mxl { min-width: 0px !important; }
 .wmin3-mxl { min-width: 3px !important; }
 .wmin6-mxl { min-width: 6px !important; }
@@ -2980,6 +3013,7 @@ exports[`buildLayoutScales defaults 1`] = `
 .hmax420-mxl { max-height: 420px !important; }
 .hmax480-mxl { max-height: 480px !important; }
 .hmax-full-mxl { max-height: 100% !important; }
+.hmax-none-mxl { max-height: none !important; }
 .hmin0-mxl { min-height: 0px !important; }
 .hmin3-mxl { min-height: 3px !important; }
 .hmin6-mxl { min-height: 6px !important; }
