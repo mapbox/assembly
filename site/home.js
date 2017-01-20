@@ -1,7 +1,7 @@
 import React from 'react';
 import Lowlight from 'react-lowlight';
 import xmlLanguage from 'highlight.js/lib/languages/xml';
-import { version } from '../package';
+import pkg from '../package';
 
 Lowlight.registerLanguage('html', xmlLanguage);
 
@@ -11,10 +11,13 @@ class Home extends React.Component {
   render() {
     return (
       <div className='mt24 wmax960'>
-        <div className='txt-headline'>
-          <h1 className='flex-parent mt72 flex-parent--center-cross'>
-            <div className='color-blue txt-uppercase txt-headline txt-spacing2'>Assembly.css</div>
+        <div className='mt72 flex-parent-ml flex-parent--wrap-ml'>
+          <h1 className='flex-child-ml flex-child--grow-ml txt-subhead txt-headline-mm color-blue txt-uppercase txt-spacing2'>
+            Assembly.css
           </h1>
+          <div className='flex-child-ml txt-bold mt18 color-darken50'>
+            v{pkg.version}
+          </div>
         </div>
         <p className='txt-l mt24'>
           Assembly is an open source CSS framework that makes the hard parts of designing for the web easy.
@@ -28,7 +31,7 @@ class Home extends React.Component {
         <div className='mt24 pre'>
           <Lowlight
             language='html'
-            value={`<link href="https://api.mapbox.com/mapbox-assembly/v${version}/assembly.min.css" rel="stylesheet">`}
+            value={`<link href="https://api.mapbox.com/mapbox-assembly/v${pkg.version}/assembly.min.css" rel="stylesheet">`}
           />
         </div>
         <p className='mt24'>
@@ -37,7 +40,7 @@ class Home extends React.Component {
         <div className='mt24 pre'>
           <Lowlight
             language='html'
-            value={`<script async defer src="https://api.mapbox.com/mapbox-assembly/v${version}/assembly.js"></script>`}
+            value={`<script async defer src="https://api.mapbox.com/mapbox-assembly/v${pkg.version}/assembly.js"></script>`}
           />
         </div>
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-uppercase txt-bold'>
