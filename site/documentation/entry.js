@@ -62,8 +62,7 @@ class Entry extends React.Component {
     const collapsedSelectorEls = selectors !== undefined && selectors.slice(0, 15).map(getSelectorEl);
 
     const expandButton = selectors !== undefined && selectors.length > 15 ? (
-      <button
-        id={`expandButton-${selectors && selectors[0]}`}
+      <button data-button-expand
         className='ml3 btn btn--xs btn--blue round'>
         See all
       </button>
@@ -72,10 +71,10 @@ class Entry extends React.Component {
     return (
       <div className='grid-mxl grid--gut18-mxl border-t border--2 border--gray-faint pt48 pb48'>
         <div className='col col--4-mxl pr18-ml mb6'>
-          <div className='none' id={`expanded-${selectors && selectors[0]}`}>
+          <div className='none'>
             {selectorEls}
           </div>
-          <div className='inline' id={`collapsed-${selectors && selectors[0]}`}>
+          <div>
             {collapsedSelectorEls}
           </div>
           {expandButton}
