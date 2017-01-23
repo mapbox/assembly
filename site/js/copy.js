@@ -1,9 +1,10 @@
-/* global Clipboard */
-/* eslint-disable prefer-arrow-callback */
+import Clipboard from 'clipboard';
+
 const clipboard = new Clipboard('button[data-clipboard-text]');
-clipboard.on('success', function (ev) {
+
+clipboard.on('success', (ev) => {
   ev.trigger.textContent = 'Copied!';
-  window.setTimeout(function () {
+  window.setTimeout(() => {
     ev.trigger.textContent = 'Copy';
   }, 800);
 });
