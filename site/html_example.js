@@ -8,10 +8,10 @@ function HtmlExample(props) {
   const copy = props.copy === false ? false : true;
   return (
     <div>
-        <div
-          className='border border--gray-light p12 round-t'
-          dangerouslySetInnerHTML={{ __html: props.code }}
-        />
+      <div
+        className='border border--gray-light p12 round-t'
+        dangerouslySetInnerHTML={{ __html: props.code }}
+      />
       <div className='pre bg-gray-faint scroll-auto hmax180 border-l border-b border-r border--gray-light round-b relative'>
 
         {copy && <div className='absolute top right p12'>
