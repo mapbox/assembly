@@ -93,93 +93,147 @@ class Home extends React.Component {
         <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-uppercase txt-bold'>
           Overview
         </h2>
-        <h3 className='mt48 txt-bold'>
-          6 pixel baseline grid
-        </h3>
-        <p className='mt12'>
-          Every element in Assembly is designed according to a 6 pixel baseline grid, even buttons and form components. Baseline grids don't just make your site look and feel better: they also make development more convenient. All the pieces naturally fit together without fiddling with line height or vertical alignment.
-        </p>
-        <h3 className='mt48 txt-bold'>
-          No default styling for semantic elements
-        </h3>
-        <p className='mt12'>
-          You should use <code className='txt-code'>{'<h3>'}</code> for third-level headings, not because you want a certain style.
-          Similarly, you should use <code className='txt-code'>{'<button>'}</code> when a button is behaviorally and semantically appropriate,
-          instead of <code className='txt-code'>href</code>-less <code className='txt-code'>{'<a>'}</code> tags or other elements with click handlers.
-        </p>
-        <p className='mt12'>
-          Assembly's reset allows you to use semantically appropriate HTML without battling browser-default styles.
-          And its CSS rules are built to behave the same regardless of which element they're applied to.
-          A heading <em>style</em>, or a button <em>style</em>, can be applied to <em>any</em> element by applying the appropriate classes.
-        </p>
-        <h3 className='mt48 txt-bold'>
-          More intuitive box model
-        </h3>
-        <p className='mt12'>
-          The <code className='txt-code'>border-box</code> box model allows for more intuitive styling than the default <code className='txt-code'>content-box</code> model.
-          For example, when you set a <code className='txt-code'>w300</code> class, your element will always be 300 pixels wide, regardless of its padding and borders.
-        </p>
-        <h3 className='mt48 txt-bold'>
-          Customizable icons
-        </h3>
-        <p className='mt12'>
-          Assembly comes with <a className='txt-underline' href='icons/'>more than 150 icons</a>, intended to be used as inline SVGs. Inline SVGs are easy to resize and color.
-        </p>
-        <h3 className='mt48 txt-bold'>
-          Media queries are mobile-first
-        </h3>
-        <p className='mt12'>
-          Mobile-first media queries lead to cleaner code because there are fewer overrides. Start with a simple mobile layout, then add complexity with additional media-constrained rules. Assembly uses the following media queries:
-        </p>
-        <div className='prose mt12'>
-          <ul className='txt-ul'>
-            <li>Extra large screens: <code className='txt-code'>{defaultMediaQueries['--xl-screen']}</code></li>
-            <li>Large screens: <code className='txt-code'>{defaultMediaQueries['--l-screen']}</code></li>
-            <li>Medium screens: <code className='txt-code'>{defaultMediaQueries['--m-screen']}</code></li>
-          </ul>
+
+        <div className='mt48 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/baseline-grid.svg'/></div>
+          <div>
+            <h3 className='txt-bold'>
+              6 pixel baseline grid
+            </h3>
+            <p className='mt12'>
+              Every element in Assembly is designed according to a 6 pixel baseline grid, even buttons and form components. Baseline grids don't just make your site look and feel better: they also make development more convenient. All the pieces naturally fit together without fiddling with line height or vertical alignment.
+            </p>
+          </div>
         </div>
-        <p className='mt12'>
-          Classes that take affect within certain media queries always end with a <code className='txt-code'>{'-m<size>'}</code> suffix,
-          where "size" is <code className='txt-code'>m</code>, <code className='txt-code'>l</code>, or <code className='txt-code'>xl</code>.
-        </p>
-        <h3 className='mt48 txt-bold'>
-          Classes and modifier classes
-        </h3>
-        <p className='mt12'>
-          A double-hyphen in a class name (e.g. <code className='txt-code'>border--blue</code>) indicates that the class is a <span className='txt-em'>modifier class</span>. A modifier class extends the class whose name precedes the double-hyphen (e.g. <code className='txt-code'>border--blue</code> modifies <code className='txt-code'>border</code>; <code className='txt-code'>flex-child--grow</code> modifies <code className='txt-code'>flex-child</code>). And <span className='txt-em'>modifier classes should only ever be used in combination with the class they modify</span>: modifier classes will not work well on their own.
-        </p>
-        <h3 className='mt48 txt-bold'>
-          Utility classes have maximum specificity
-        </h3>
-        <p className='mt12'>
-          Assembly uses <code className='txt-code'>!important</code> on declarations whose effect directly corresponds to a class name.
-        </p>
-        <p className='mt12'>
-          For example, in the <code className='txt-code'>.bg-pink</code> rule, the <code className='txt-code'>background-color</code> declaration is <code className='txt-code'>!important</code>.
-          On the <code className='txt-code'>.pl20</code> rule, the <code className='txt-code'>padding-left</code> declaration is <code className='txt-code'>!important</code>.
-          This ensures that such classes always behave the same. Whenever you see the class <code className='txt-code'>bg-pink</code> on an element,
-          that element should have a pink background, regardless of its context and the other rules that apply to it.
-        </p>
-        <p className='mt12'>
-          For dynamic styles, responsive classes (described above) provide some additional flexibility.
-          But if you need even more, you should use custom CSS instead of a utility class.
-        </p>
-        <h3 className='mt48 txt-bold'>
-          <code className='txt-code'>is-active</code> applies active states
-        </h3>
-        <p className='mt12'>
-          Assembly uses the <code className='txt-code'>is-active</code> state class to designate that an element is active and style it accordingly.
-        </p>
-        <p className='mt12'>
-          The <code className='txt-code'>is-active</code> state on buttons and links darkens their color.
-          And the <code className='txt-code'>*-on-active</code> state classes (e.g. only <code className='txt-code'>color-red-on-active</code>) only take effect when combined with the <code className='txt-code'>is-active</code> class.
-        </p>
-        <h3 className='mt48 txt-bold'>
-          Focus outlines as needed
-        </h3>
-        <p className='mt12'>
-          Assembly turns off focus outlines when you mousedown and turns them back on, universally, when you hit <kbd className='txt-kbd'>Tab</kbd>. This means that only the keyboard users who need them will see nice, prominent focus outlines, while mouse users won't have the design disturbed unnecessarily.
-        </p>
+
+        <div className='mt48 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/defaults.svg'/></div>
+          <div>
+            <h3 className='txt-bold'>
+              No default styling for semantic elements
+            </h3>
+            <p className='mt12'>
+              You should use <code className='txt-code'>{'<h3>'}</code> for third-level headings, not because you want a certain style.
+              Similarly, you should use <code className='txt-code'>{'<button>'}</code> when a button is behaviorally and semantically appropriate,
+              instead of <code className='txt-code'>href</code>-less <code className='txt-code'>{'<a>'}</code> tags or other elements with click handlers.
+            </p>
+            <p className='mt12'>
+              Assembly's reset allows you to use semantically appropriate HTML without battling browser-default styles.
+              And its CSS rules are built to behave the same regardless of which element they're applied to.
+              A heading <em>style</em>, or a button <em>style</em>, can be applied to <em>any</em> element by applying the appropriate classes.
+            </p>
+          </div>
+        </div>
+
+        <div className='mt48 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/box-model.svg'/></div>
+          <div>
+            <h3 className='txt-bold'>
+              More intuitive box model
+            </h3>
+            <p className='mt12'>
+              The <code className='txt-code'>border-box</code> box model allows for more intuitive styling than the default <code className='txt-code'>content-box</code> model.
+              For example, when you set a <code className='txt-code'>w300</code> class, your element will always be 300 pixels wide, regardless of its padding and borders.
+            </p>
+          </div>
+        </div>
+
+        <div className='mt48 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/custom-icons.svg'/></div>
+          <div>
+            <h3 className='txt-bold'>
+              Customizable icons
+            </h3>
+            <p className='mt12'>
+              Assembly comes with <a className='txt-underline' href='icons/'>more than 150 icons</a>, intended to be used as inline SVGs. Inline SVGs are easy to resize and color.
+            </p>
+          </div>
+        </div>
+
+        <div className='mt48 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/media-queries.svg'/></div>
+          <div>
+            <h3 className='txt-bold'>
+              Media queries are mobile-first
+            </h3>
+            <p className='mt12'>
+              Mobile-first media queries lead to cleaner code because there are fewer overrides. Start with a simple mobile layout, then add complexity with additional media-constrained rules. Assembly uses the following media queries:
+            </p>
+            <div className='prose mt12'>
+              <ul className='txt-ul'>
+                <li>Extra large screens: <code className='txt-code'>{defaultMediaQueries['--xl-screen']}</code></li>
+                <li>Large screens: <code className='txt-code'>{defaultMediaQueries['--l-screen']}</code></li>
+                <li>Medium screens: <code className='txt-code'>{defaultMediaQueries['--m-screen']}</code></li>
+              </ul>
+            </div>
+            <p className='mt12'>
+              Classes that take affect within certain media queries always end with a <code className='txt-code'>{'-m<size>'}</code> suffix,
+              where "size" is <code className='txt-code'>m</code>, <code className='txt-code'>l</code>, or <code className='txt-code'>xl</code>.
+            </p>
+          </div>
+        </div>
+
+        <div className='mt48 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/modifier.svg'/></div>
+          <div>
+            <h3 className='txt-bold'>
+              Classes and modifier classes
+            </h3>
+            <p className='mt12'>
+              A double-hyphen in a class name (e.g. <code className='txt-code'>border--blue</code>) indicates that the class is a <span className='txt-em'>modifier class</span>. A modifier class extends the class whose name precedes the double-hyphen (e.g. <code className='txt-code'>border--blue</code> modifies <code className='txt-code'>border</code>; <code className='txt-code'>flex-child--grow</code> modifies <code className='txt-code'>flex-child</code>). And <span className='txt-em'>modifier classes should only ever be used in combination with the class they modify</span>: modifier classes will not work well on their own.
+            </p>
+          </div>
+        </div>
+
+        <div className='mt48 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/specificity.svg'/></div>
+          <div>
+            <h3 className='txt-bold'>
+              Utility classes have maximum specificity
+            </h3>
+            <p className='mt12'>
+              Assembly uses <code className='txt-code'>!important</code> on declarations whose effect directly corresponds to a class name.
+            </p>
+            <p className='mt12'>
+              For example, in the <code className='txt-code'>.bg-blue</code> rule, the <code className='txt-code'>background-color</code> declaration is <code className='txt-code'>!important</code>.
+              On the <code className='txt-code'>.pl20</code> rule, the <code className='txt-code'>padding-left</code> declaration is <code className='txt-code'>!important</code>.
+              This ensures that such classes always behave the same. Whenever you see the class <code className='txt-code'>bg-blue</code> on an element,
+              that element should have a pink background, regardless of its context and the other rules that apply to it.
+            </p>
+            <p className='mt12'>
+              For dynamic styles, responsive classes (described above) provide some additional flexibility.
+              But if you need even more, you should use custom CSS instead of a utility class.
+            </p>
+          </div>
+        </div>
+
+        <div className='mt48 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/is-active.svg'/></div>
+          <div>
+            <h3 className='txt-bold'>
+              <code className='txt-code'>is-active</code> applies active states
+            </h3>
+            <p className='mt12'>
+              Assembly uses the <code className='txt-code'>is-active</code> state class to designate that an element is active and style it accordingly.
+            </p>
+            <p className='mt12'>
+              The <code className='txt-code'>is-active</code> state on buttons and links darkens their color.
+              And the <code className='txt-code'>*-on-active</code> state classes (e.g. only <code className='txt-code'>color-red-on-active</code>) only take effect when combined with the <code className='txt-code'>is-active</code> class.
+            </p>
+          </div>
+        </div>
+
+        <div className='mt48 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/focus.svg'/></div>
+          <div>
+            <h3 className='txt-bold'>
+              Focus outlines as needed
+            </h3>
+            <p className='mt12'>
+              Assembly turns off focus outlines when you mousedown and turns them back on, universally, when you hit <kbd className='txt-kbd'>Tab</kbd>. This means that only the keyboard users who need them will see nice, prominent focus outlines, while mouse users won't have the design disturbed unnecessarily.
+            </p>
+          </div>
+        </div>
       </div>
     );
   }
