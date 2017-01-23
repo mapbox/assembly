@@ -15,8 +15,6 @@ const postcssCustomMedia = require('postcss-custom-media');
 const defaultVariables = require('../src/variables');
 const defaultMediaQueries = require('../src/media-queries');
 const timelog = require('./timelog');
-const buildColorVariants = require('./build-color-variants');
-const buildLayoutScales = require('./build-layout-scales');
 
 function getCssPath(name) {
   return path.join(__dirname, `../src/${name}.css`);
@@ -42,7 +40,9 @@ const assemblyCssFiles = [
   getCssPath('theming'),
   getCssPath('icons'),
   getCssPath('layout'),
+  getCssPath('layout-scales'),
   getCssPath('colors'),
+  getCssPath('color-variants'),
   getCssPath('triangles'),
   getCssPath('animations'),
   getCssPath('miscellaneous')
@@ -120,15 +120,6 @@ function buildCss(options) {
     });
   }
 
-  function appendColorVariants(concat) {
-    const colorVariantsCss = buildColorVariants(variableDefinitions, options.colorVariants);
-    return processCss(colorVariantsCss, 'color-variants.css', concat);
-  }
-
-  function appendLayoutScales(concat) {
-    return processCss(buildLayoutScales(), 'layout-scales.css', concat);
-  }
-
   function writeDistCss(concat) {
     const css = `${concat.content}\n/*# sourceMappingURL=${outfileFilename}.map */`;
 
@@ -156,8 +147,6 @@ function buildCss(options) {
 
   return Promise.all(processCssFiles)
     .catch(handlePostcssError)
-    .then(() => appendColorVariants(concat))
-    .then(() => appendLayoutScales(concat))
     .then(() => writeDistCss(concat))
     .then(() => {
       if (!options.quiet) timelog('Done building CSS');

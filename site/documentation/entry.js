@@ -1,13 +1,14 @@
 import React from 'react';
 import remark from 'remark';
+import path from 'path';
 import reactRenderer from 'remark-react';
 import _ from 'lodash';
 import { HtmlExample } from '../html_example';
+import pkg from '../../package.json';
 
 class Entry extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showSource: false };
   }
 
   render() {
@@ -68,6 +69,8 @@ class Entry extends React.Component {
       </button>
     ) : null;
 
+    const sourceUrl = `https://github.com/mapbox/assembly/blob/${pkg.version}/src/${path.basename(props.parsedComment.source.filename)}#L${props.parsedComment.source.line}`;
+
     return (
       <div className='grid-mxl grid--gut18-mxl border-t border--2 border--gray-faint pt48 pb48'>
         <div className='col col--4-mxl pr18-ml mb6'>
@@ -78,6 +81,15 @@ class Entry extends React.Component {
             {collapsedSelectorEls}
           </div>
           {expandButton}
+          <div className='mt12 txt-s'>
+            <a
+              href={sourceUrl}
+              target='_blank'
+              className='link'
+            >
+              Source
+            </a>
+          </div>
         </div>
         <div className='col col--8-mxl'>
           <div className='mb24 prose'>

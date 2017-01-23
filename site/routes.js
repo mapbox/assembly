@@ -2,6 +2,7 @@ import React from 'react';
 import documentationCss from 'documentation-css';
 import fs from 'fs';
 import path from 'path';
+import globby from 'globby';
 import { orderSections } from './order-sections';
 import { Page } from './page';
 import { Documentation } from './documentation/documentation';
@@ -114,18 +115,13 @@ function buildRoutes() {
     // Add component and one-off props for components.
     switch (r.name) {
       case 'Documentation': {
-        const assemblyCss = path.join(__dirname, '../dist/assembly.css');
-        let entryContent;
-        try {
-          entryContent = fs.readFileSync(assemblyCss, 'utf8');
-        } catch (err) {
-          throw new Error('assembly.css must be built');
-        }
-
-        const documentationData = documentationCss.extract([{
-          contents: entryContent,
-          path: assemblyCss
-        }]);
+        const cssFilePaths = globby.sync(path.join(__dirname, '../src/*.css'));
+        const documentationData = documentationCss.extract(cssFilePaths.map((filePath) => {
+          return {
+            contents: fs.readFileSync(filePath, 'utf8'),
+            path: filePath
+          };
+        }));
 
         props.documentationData = documentationData;
 

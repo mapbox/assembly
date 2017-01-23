@@ -5219,7 +5219,9 @@ input:checked + .toggle--active-transparent {
 .color-text {
   color: rgba(0, 0, 0, 0.75) !important;
 }
-    /** @endgroup */
+    
+/** @endgroup */
+
 /**
  * @section Background colors
  * @memberof Colors
@@ -5478,7 +5480,9 @@ input:checked + .toggle--active-transparent {
 .bg-transparent {
   background-color: transparent !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 .link--gray {
   color: #666;
 }
@@ -6033,7 +6037,9 @@ input:checked + .toggle--active-transparent {
 .border--transparent {
   border-color: transparent !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a box shadow on hover and active states.
  *
@@ -6153,7 +6159,9 @@ input:checked + .toggle--active-transparent {
 .shadow-bold-lighten75-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.75) !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a background color on hover and active states.
  *
@@ -6457,7 +6465,9 @@ input:checked + .toggle--active-transparent {
 .bg-transparent-on-active.is-active:hover {
   background-color: transparent !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a text color on hover and active states.
  *
@@ -6761,7 +6771,9 @@ input:checked + .toggle--active-transparent {
 .color-transparent-on-active.is-active:hover {
   color: transparent !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a border color on hover and active states.
  *
@@ -7065,7 +7077,9 @@ input:checked + .toggle--active-transparent {
 .border--transparent-on-active.is-active:hover {
   border-color: transparent !important;
 }
-      /** @endgroup */"
+      
+/** @endgroup */
+"
 `;
 
 exports[`buildColorVariants handles custom variables 1`] = `
@@ -12289,7 +12303,9 @@ input:checked + .toggle--active-transparent {
 .color-text {
   color: rgba(0, 0, 0, 0.75) !important;
 }
-    /** @endgroup */
+    
+/** @endgroup */
+
 /**
  * @section Background colors
  * @memberof Colors
@@ -12548,7 +12564,9 @@ input:checked + .toggle--active-transparent {
 .bg-transparent {
   background-color: transparent !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 .link--gray {
   color: #666;
 }
@@ -13103,7 +13121,9 @@ input:checked + .toggle--active-transparent {
 .border--transparent {
   border-color: transparent !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a box shadow on hover and active states.
  *
@@ -13223,7 +13243,9 @@ input:checked + .toggle--active-transparent {
 .shadow-bold-lighten75-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.75) !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a background color on hover and active states.
  *
@@ -13527,7 +13549,9 @@ input:checked + .toggle--active-transparent {
 .bg-transparent-on-active.is-active:hover {
   background-color: transparent !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a text color on hover and active states.
  *
@@ -13831,7 +13855,9 @@ input:checked + .toggle--active-transparent {
 .color-transparent-on-active.is-active:hover {
   color: transparent !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a border color on hover and active states.
  *
@@ -14135,7 +14161,9 @@ input:checked + .toggle--active-transparent {
 .border--transparent-on-active.is-active:hover {
   border-color: transparent !important;
 }
-      /** @endgroup */"
+      
+/** @endgroup */
+"
 `;
 
 exports[`buildColorVariants with default colors array 1`] = `
@@ -14562,7 +14590,9 @@ input:checked + .toggle--active-green-light {
 .color-text {
   color: rgba(0, 0, 0, 0.75) !important;
 }
-    /** @endgroup */
+    
+/** @endgroup */
+
 /**
  * @section Background colors
  * @memberof Colors
@@ -14596,7 +14626,9 @@ input:checked + .toggle--active-green-light {
 .bg-green-light {
   background-color: #72C781 !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 .link--red {
   color: #dc2b28;
 }
@@ -14647,7 +14679,9 @@ input:checked + .toggle--active-green-light {
 .border--green-light {
   border-color: #72C781 !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a box shadow on hover and active states.
  *
@@ -14657,7 +14691,9 @@ input:checked + .toggle--active-green-light {
  * <div class=\'shadow-darken25-on-hover\'>shadow-darken25-on-hover</div>
  * <div class=\'shadow-darken25-on-active\'>shadow-darken25-on-active (not active)</div>
  * <div class=\'shadow-darken25-on-active is-active\'>shadow-darken25-on-active (active)</div>
- *//** @endgroup */
+ */
+/** @endgroup */
+
 /**
  * Apply a background color on hover and active states.
  *
@@ -14691,7 +14727,9 @@ input:checked + .toggle--active-green-light {
 .bg-green-light-on-active.is-active:hover {
   background-color: #72C781 !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a text color on hover and active states.
  *
@@ -14725,7 +14763,9 @@ input:checked + .toggle--active-green-light {
 .color-green-light-on-active.is-active:hover {
   color: #72C781 !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a border color on hover and active states.
  *
@@ -14759,7 +14799,9 @@ input:checked + .toggle--active-green-light {
 .border--green-light-on-active.is-active:hover {
   border-color: #72C781 !important;
 }
-      /** @endgroup */"
+      
+/** @endgroup */
+"
 `;
 
 exports[`buildColorVariants with granular colors 1`] = `
@@ -15047,7 +15089,9 @@ input:checked + .toggle--active-gray {
 .color-text {
   color: rgba(0, 0, 0, 0.75) !important;
 }
-    /** @endgroup */
+    
+/** @endgroup */
+
 /**
  * @section Background colors
  * @memberof Colors
@@ -15076,7 +15120,9 @@ input:checked + .toggle--active-gray {
 .bg-pink {
   background-color: #ff3c96 !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 .link--orange {
   color: #ff6e00;
 }
@@ -15105,7 +15151,9 @@ input:checked + .toggle--active-gray {
 .border--gray {
   border-color: #666 !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a box shadow on hover and active states.
  *
@@ -15126,7 +15174,9 @@ input:checked + .toggle--active-gray {
 .shadow-bold-lighten50-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px rgba(255, 255, 255, 0.50) !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a background color on hover and active states.
  *
@@ -15154,7 +15204,9 @@ input:checked + .toggle--active-gray {
 .bg-gray-on-active.is-active:hover {
   background-color: #666 !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a text color on hover and active states.
  *
@@ -15182,7 +15234,9 @@ input:checked + .toggle--active-gray {
 .color-gray-on-active.is-active:hover {
   color: #666 !important;
 }
-      /** @endgroup */
+      
+/** @endgroup */
+
 /**
  * Apply a border color on hover and active states.
  *
@@ -15210,5 +15264,7 @@ input:checked + .toggle--active-gray {
 .border--gray-on-active.is-active:hover {
   border-color: #666 !important;
 }
-      /** @endgroup */"
+      
+/** @endgroup */
+"
 `;
