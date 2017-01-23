@@ -95,7 +95,7 @@ class Home extends React.Component {
         </h2>
 
         <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/baseline-grid.svg'/></div>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/baseline-grid.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               6 pixel baseline grid
@@ -107,7 +107,7 @@ class Home extends React.Component {
         </div>
 
         <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/defaults.svg'/></div>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/defaults.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               No default styling for semantic elements
@@ -126,7 +126,7 @@ class Home extends React.Component {
         </div>
 
         <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/box-model.svg'/></div>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/box-model.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               More intuitive box model
@@ -139,7 +139,7 @@ class Home extends React.Component {
         </div>
 
         <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/custom-icons.svg'/></div>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/custom-icons.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               Customizable icons
@@ -151,7 +151,7 @@ class Home extends React.Component {
         </div>
 
         <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/media-queries.svg'/></div>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/media-queries.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               Media queries are mobile-first
@@ -174,7 +174,7 @@ class Home extends React.Component {
         </div>
 
         <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/modifier.svg'/></div>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/modifier.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               Classes and modifier classes
@@ -186,7 +186,7 @@ class Home extends React.Component {
         </div>
 
         <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/specificity.svg'/></div>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/specificity.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               Utility classes have maximum specificity
@@ -208,7 +208,7 @@ class Home extends React.Component {
         </div>
 
         <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/is-active.svg'/></div>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/is-active.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               <code className='txt-code'>is-active</code> applies active states
@@ -224,7 +224,7 @@ class Home extends React.Component {
         </div>
 
         <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w72 h72 round-full bg-blue'><img src='/focus.svg'/></div>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/focus.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               Focus outlines as needed
