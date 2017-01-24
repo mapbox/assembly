@@ -3,7 +3,7 @@ import { HtmlExample } from '../html_example';
 
 const fixed_header = `<div class='bg-darken10 viewport-half'>
 <!-- In practice, it makes sense to use this for the container instead:
-<div class='fixed top right bottom left scroll-auto'></div>-->
+<div class='absolute top right bottom left'></div>-->
   <div class='flex-parent p12 bg-blue txt-m txt-bold color-white'>Fixed header</div>
 </div>`;
 
