@@ -2,9 +2,10 @@ import React from 'react';
 import { HtmlExample } from '../html_example';
 
 const fixed_header = `<div class='bg-darken10 viewport-half'>
-<!-- In practice, it makes sense to use this for the container instead:
-<div class='absolute top right bottom left'></div>-->
-  <div class='flex-parent p12 bg-blue txt-m txt-bold color-white'>Fixed header</div>
+<!-- in practice, the header container should use the class "fixed" instead of "absolute" -->
+    <div class='relative'>
+      <div class="absolute top left right p12 bg-blue txt-m txt-bold color-white">Fixed header</div>
+    </div>
 </div>`;
 
 class ExampleFixedHeader extends React.Component {
