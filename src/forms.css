@@ -1,4 +1,3 @@
-/* stylelint-disable selector-no-type, selector-no-combinator */
 /**
  * Styles for HTML5 input and textarea elements. All form elements fit into Assembly's `6px` baseline grid.
  * @section Forms
@@ -55,7 +54,6 @@
 }
 
 /* Remove bad padding and unique cancel button from IE and Safari inputs */
-/* stylelint-disable selector-no-attribute */
 .input::-ms-clear,
 .input::-ms-reveal {
   display: none;
@@ -69,7 +67,6 @@
 .input[type='search']::-webkit-search-cancel-button {
   appearance: none;
 }
-/* stylelint-enable selector-no-attribute */
 
 /**
  * Style a text input. Set the color of the border with a `input--border-{color}` modifier (`*-dark` colors are not available).
@@ -141,7 +138,6 @@
   border-color: var(--neutral25) !important;
 }
 
-/* stylelint-disable selector-no-attribute */
 /* Using the attribute selector instead of the pseudo-class `:read-only`
 because it seems to be more cross-browser consistent with all HTML5 input types */
 /**
@@ -156,7 +152,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .textarea[readonly] {
   background-color: var(--neutral10) !important;
 }
-/* stylelint-enable selector-no-attribute */
 
 /**
  * The select component styles the `<select>` element. The markup must fit the following pattern:
