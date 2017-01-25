@@ -1,40 +1,40 @@
-/* stylelint-disable selector-no-universal, selector-no-combinator, selector-no-type */
-.focus-control *:focus {
+/* stylelint-disable selector-no-universal, selector-no-combinator, selector-no-attribute, selector-no-type */
+[data-assembly-focus-control] *:focus {
   outline: 0;
 }
 
-.focus-control.focus-control--visible *:focus {
+[data-assembly-focus-control='visible'] *:focus {
   box-shadow: var(--focus-shadow);
   transition: box-shadow var(--transition);
 }
 
 /* Shared form component focus states */
-.focus-control.focus-control--visible input:focus + .checkbox,
-.focus-control.focus-control--visible input:focus + .radio,
-.focus-control.focus-control--visible input:focus + .switch,
-.focus-control.focus-control--visible input:focus + .toggle {
+[data-assembly-focus-control='visible'] input:focus + .checkbox,
+[data-assembly-focus-control='visible'] input:focus + .radio,
+[data-assembly-focus-control='visible'] input:focus + .switch,
+[data-assembly-focus-control='visible'] input:focus + .toggle {
   box-shadow: var(--focus-shadow);
 }
 
 /* Range focus */
-.focus-control.focus-control--visible .range {
+[data-assembly-focus-control='visible'] .range {
   box-shadow: none;
 }
-.focus-control.focus-control--visible .range:focus::-webkit-slider-thumb {
+[data-assembly-focus-control='visible'] .range:focus::-webkit-slider-thumb {
   box-shadow: var(--focus-shadow);
 }
-.focus-control.focus-control--visible .range:focus::-ms-fill-upper {
+[data-assembly-focus-control='visible'] .range:focus::-ms-fill-upper {
   box-shadow: var(--focus-shadow);
 }
-.focus-control.focus-control--visible .range:focus::-ms-fill-lower {
+[data-assembly-focus-control='visible'] .range:focus::-ms-fill-lower {
   box-shadow: var(--focus-shadow);
 }
-.focus-control.focus-control--visible .range:focus::-ms-thumb {
+[data-assembly-focus-control='visible'] .range:focus::-ms-thumb {
   box-shadow: var(--focus-shadow);
 }
-.focus-control.focus-control--visible .range:focus::-moz-range-thumb {
+[data-assembly-focus-control='visible'] .range:focus::-moz-range-thumb {
   box-shadow: var(--focus-shadow);
 }
 
-.focus-control .range::-moz-focus-outer { border: 0; }
-/* stylelint-enable selector-no-universal, selector-no-combinator, selector-no-type */
+[data-assembly-focus-control] .range::-moz-focus-outer { border: 0; }
+/* stylelint-enable selector-no-universal, selector-no-combinator, selector-no-attribute, selector-no-type */
