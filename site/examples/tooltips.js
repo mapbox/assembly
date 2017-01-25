@@ -17,13 +17,13 @@ const basic_right = `<div class='flex-parent-inline flex-parent--center-cross'>
 </div>`;
 
 const basic_with_closure = `<div class='flex-parent-inline flex-parent--center-main flex-parent--wrap'>
-  <div class='bg-darken5 color-darken50 align-center col col--12 p18 round txt-bold txt-s relative'>
+  <div class='bg-darken75 color-white align-center col col--12 p18 round txt-bold txt-s relative'>
     <button class='absolute top right'>
-      <svg class='icon link color-darken50'><use xlink:href='#icon-close'></use></svg>
+      <svg class='icon link color-white'><use xlink:href='#icon-close'></use></svg>
     </button>
     Hello world!
   </div>
-  <span class='triangle triangle--d color-gray-faint'></span>
+  <span class='triangle triangle--d color-darken75'></span>
 </div>`;
 
 
