@@ -1,5 +1,3 @@
-/* stylelint-disable selector-no-combinator, selector-no-type */
-
 /**
  * Font styles, sizes, and utilities.
  *
@@ -729,11 +727,9 @@ textarea {
 }
 
 /* Clear bottom margins if element is last in container */
-/* stylelint-disable selector-no-universal */
 .prose *:last-child {
   margin-bottom: 0;
 }
-/* stylelint-enable selector-no-universal */
 /* end prose-specific rules */
 
 /**

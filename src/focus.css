@@ -1,4 +1,3 @@
-/* stylelint-disable selector-no-universal, selector-no-combinator, selector-no-attribute, selector-no-type */
 [data-assembly-focus-control] *:focus {
   outline: 0;
 }
@@ -37,4 +36,3 @@
 }
 
 [data-assembly-focus-control] .range::-moz-focus-outer { border: 0; }
-/* stylelint-enable selector-no-universal, selector-no-combinator, selector-no-attribute, selector-no-type */
