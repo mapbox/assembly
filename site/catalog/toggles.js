@@ -32,7 +32,7 @@ const lightenColors = [
 
 function ToggleEl(props) {
   const toggleClass = `toggle toggle--active-${props.activeColor} toggle--${props.color}`;
-  const toggleGroupClass = `mb12 mr12 toggle-group ${props.small ? 'toggle-group--s txt-s' : ''} ${props.stroke ? 'toggle-group--stroke color-' + props.color : ''}`;
+  const toggleGroupClass = `mb12 mr12 toggle-group ${props.small ? 'toggle-group--s txt-s' : ''}`;
   return (
     <div className={toggleGroupClass}>
       <label className='toggle-container'>
@@ -78,19 +78,9 @@ class Toggles extends React.Component {
         {colors.map((c) => <ToggleEl key={c} color={c} disabled={true} />)}
         </div>
 
-        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Stroked</div>
-        <div className='mb24'>
-        {colors.map((c) => <ToggleEl key={c} color={c} stroke={true} />)}
-        </div>
-
         <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Small</div>
         <div className='mb24'>
         {colors.map((c) => <ToggleEl key={c} color={c} small={true} />)}
-        </div>
-
-        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Small and stroked</div>
-        <div className='mb24'>
-        {colors.map((c) => <ToggleEl key={c} color={c} small={true} stroke={true} />)}
         </div>
 
         <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Light variations</div>
