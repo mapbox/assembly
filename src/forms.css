@@ -781,7 +781,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   display: inline-flex;
   text-align: center;
   border-radius: 18px;
-  padding: 6px;
 }
 
 .toggle {
@@ -797,40 +796,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
     background-color var(--transition);
 }
 /** @endgroup */
-
-/*
- * Add a border to a toggle group.
- *
- * @memberof Toggle group
- * @example
- * <div class='toggle-group toggle-group--stroke'>
- *   <label class='toggle-container'>
- *     <input checked name='stroked' type='radio' />
- *     <div class='toggle'>cat</div>
- *   </label>
- *   <label class='toggle-container'>
- *     <input checked  name='stroked' type='radio' />
- *     <div class='toggle'>dog</div>
- *   </label>
- * </div>
- */
-.toggle-group--stroke {
-  padding: 4px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--default-secondary-interactive-color);
-}
-
-/* Adjust border radiuses with small text – only necessary for vertical toggle groups */
-.toggle-group--s {
-  border-radius: 12px;
-  padding: 3px;
-}
-
-.toggle-group--s.toggle-group--stroke {
-  padding: 2px;
-  line-height: 16px !important; /* align to baseline grid */
-}
 
 /* align labels with small text */
 .switch--s-label,
