@@ -1,6 +1,7 @@
 'use strict';
 
 const stripIndent = require('strip-indent');
+const indentString = require('indent-string');
 const mediaQueries = require('../src/media-queries');
 const layoutScales = require('../src/scales');
 
@@ -26,17 +27,12 @@ function buildLayoutScales() {
     }
   }
 
-  function buildMediaRules(selector, properties, v, multi) {
-    multi = multi || '';
+  function buildMediaRules(template) {
+    const mediaFree = template('');
     Object.keys(screens).forEach((screen) => {
-      let css = `${selector}-m${screen}${multi} { `;
-      properties.forEach((prop) => {
-        css += `${prop}: ${v} !important; `;
-      });
-      css += '}\n';
-
-      screens[screen] += css;
+      screens[screen] += template(`-m${screen}`);
     });
+    return mediaFree;
   }
 
   variantGenerators.gutter = function (scales) {
@@ -58,27 +54,27 @@ function buildLayoutScales() {
        * </div>
        * @memberof Grid
        * @group
-       */`
-    );
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .grid--gut${scale} {
-          margin-left: -${value(scale)} !important;
+       */
+    `);
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .grid--gut${scale}${mediaSuffix} {
+          margin-left: -${value(scale)};
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .grid--gut${scale} > .col {
-          padding-left: ${value(scale)} !important;
-        }
-      `);
-    }, '');
+      `));
+    });
+    css += '\n/** @endgroup */\n';
+
 
     scales.forEach((scale) => {
-      buildMediaRules(`.grid--gut${scale}`, ['margin-left'], `-${value(scale)}`);
-      buildMediaRules(`.grid--gut${scale}`, ['padding-left'], `${value(scale)}`, ' > .col');
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .grid--gut${scale}${mediaSuffix} > .col,
+        .grid--gut${scale}${mediaSuffix} > .col-mm,
+        .grid--gut${scale}${mediaSuffix} > .col-ml,
+        .grid--gut${scale}${mediaSuffix} > .col-mxl {
+          padding-left: ${value(scale)};
+        }
+      `));
     });
 
     return css;
@@ -86,78 +82,66 @@ function buildLayoutScales() {
 
   variantGenerators.multiMargin = function (scales) {
     let css = stripIndent(`
-    \n/**
+      /**
        * Apply margin on all sides.
        *
        * @group
        * @example
        * <div class='m24 bg-darken10'>m24</div>
        * @memberof Margins
-       */`
-    );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .m${scale} {
-          margin: ${value(scale)} !important;
-        }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
+       */
+    `);
 
     scales.forEach((scale) => {
-      buildMediaRules(`.m${scale}`, ['margin'], `${value(scale)}`);
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .m${scale}${mediaSuffix} {
+          margin: ${value(scale)} !important;
+        }
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply margin on the top and bottom.
-      *
-      * @group
-      * @example
-      * <div class='my24 bg-darken10'>my24</div>
-      * @memberof Margins
-      */`
-    );
+      /**
+       * Apply margin on the top and bottom.
+       *
+       * @group
+       * @example
+       * <div class='my24 bg-darken10'>my24</div>
+       * @memberof Margins
+       */
+    `);
 
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .my${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .my${scale}${mediaSuffix} {
           margin-top: ${value(scale)} !important;
           margin-bottom: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.my${scale}`, ['margin-top', 'margin-bottom'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply margin on the left and right.
-      *
-      * @group
-      * @example
-      * <div class='mx24 bg-darken10'>mx24</div>
-      * @memberof Margins
-      */`
+      /**
+       * Apply margin on the left and right.
+       *
+       * @group
+       * @example
+       * <div class='mx24 bg-darken10'>mx24</div>
+       * @memberof Margins
+       */`
     );
 
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .mx${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .mx${scale}${mediaSuffix} {
           margin-left: ${value(scale)} !important;
           margin-right: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.mx${scale}`, ['margin-left', 'margin-right'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     return css;
   };
@@ -173,445 +157,362 @@ function buildLayoutScales() {
        * @memberof Margins
        */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .mt${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .mt${scale}${mediaSuffix} {
           margin-top: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.mt${scale}`, ['margin-top'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply margin on the right.
-      *
-      * @group
-      * @example
-      * <div class='mr24 bg-darken10'>mr24</div>
-      * @memberof Margins
-      */`
+      /**
+       * Apply margin on the right.
+       *
+       * @group
+       * @example
+       * <div class='mr24 bg-darken10'>mr24</div>
+       * @memberof Margins
+       */`
     );
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .mr${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .mr${scale}${mediaSuffix} {
           margin-right: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.mr${scale}`, ['margin-right'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply margin on the bottom.
-      *
-      * The negative margin classes, <code>mb-neg</code>, can be useful for certain design patterns like underline tabs.
-      *
-      * @group
-      * @example
-      * <div class='mb24 bg-darken10'>mb24</div>
-      * @memberof Margins
-      */`
+      /**
+       * Apply margin on the bottom.
+       *
+       * The negative margin classes, <code>mb-neg</code>, can be useful for certain design patterns like underline tabs.
+       *
+       * @group
+       * @example
+       * <div class='mb24 bg-darken10'>mb24</div>
+       * @memberof Margins
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .mb${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .mb${scale}${mediaSuffix} {
           margin-bottom: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.mb${scale}`, ['margin-bottom'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply margin on the left.
-      *
-      * @group
-      * @example
-      * <div class='ml24 bg-darken10'>ml24</div>
-      * @memberof Margins
-      */`
+      /**
+       * Apply margin on the left.
+       *
+       * @group
+       * @example
+       * <div class='ml24 bg-darken10'>ml24</div>
+       * @memberof Margins
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .ml${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .ml${scale}${mediaSuffix} {
           margin-left: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.ml${scale}`, ['margin-left'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     return css;
   };
 
   variantGenerators.padding = function (scales) {
     let css = stripIndent(`
-    \n/**
-      * Apply padding on all sides.
-      *
-      * @group
-      * @memberof Padding
-      * @example
-      * <div class='p24 bg-darken10'>p24</div>
-      */`
+      /**
+       * Apply padding on all sides.
+       *
+       * @group
+       * @memberof Padding
+       * @example
+       * <div class='p24 bg-darken10'>p24</div>
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .p${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .p${scale}${mediaSuffix} {
           padding: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.p${scale}`, ['padding'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply padding on the top and bottom.
-      *
-      * @group
-      * @example
-      * <div class='py24 bg-darken10'>py24</div>
-      * @memberof Padding
-      */`
+      /**
+       * Apply padding on the top and bottom.
+       *
+       * @group
+       * @example
+       * <div class='py24 bg-darken10'>py24</div>
+       * @memberof Padding
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .py${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .py${scale}${mediaSuffix} {
           padding-top: ${value(scale)} !important;
           padding-bottom: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.py${scale}`, ['padding-top', 'padding-bottom'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply padding on the left and right.
-      *
-      * @group
-      * @example
-      * <div class='px24 bg-darken10'>px24</div>
-      * @memberof Padding
-      */`
+      /**
+       * Apply padding on the left and right.
+       *
+       * @group
+       * @example
+       * <div class='px24 bg-darken10'>px24</div>
+       * @memberof Padding
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .px${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .px${scale}${mediaSuffix} {
           padding-left: ${value(scale)} !important;
           padding-right: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.px${scale}`, ['padding-left', 'padding-right'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply padding on the top.
-      *
-      * @group
-      * @example
-      * <div class='pt24 bg-darken10'>pt24</div>
-      * @memberof Padding
-      */`
+      /**
+       * Apply padding on the top.
+       *
+       * @group
+       * @example
+       * <div class='pt24 bg-darken10'>pt24</div>
+       * @memberof Padding
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .pt${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .pt${scale}${mediaSuffix} {
           padding-top: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.pt${scale}`, ['padding-top'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply padding on the right.
-      *
-      * @group
-      * @example
-      * <div class='pr24 bg-darken10'>pr24</div>
-      * @memberof Padding
-      */`
+      /**
+       * Apply padding on the right.
+       *
+       * @group
+       * @example
+       * <div class='pr24 bg-darken10'>pr24</div>
+       * @memberof Padding
+       */`
     );
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .pr${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .pr${scale}${mediaSuffix} {
           padding-right: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.pr${scale}`, ['padding-right'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply padding on the bottom.
-      *
-      * @group
-      * @example
-      * <div class='pb24 bg-darken10'>pb24</div>
-      * @memberof Padding
-      */`
+      /**
+       * Apply padding on the bottom.
+       *
+       * @group
+       * @example
+       * <div class='pb24 bg-darken10'>pb24</div>
+       * @memberof Padding
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .pb${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .pb${scale}${mediaSuffix} {
           padding-bottom: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.pb${scale}`, ['padding-bottom'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     css += stripIndent(`
-    \n/**
-      * Apply padding on the left.
-      *
-      * @group
-      * @example
-      * <div class='pl24 bg-darken10'>pl24</div>
-      * @memberof Padding
-      */`
+      /**
+       * Apply padding on the left.
+       *
+       * @group
+       * @example
+       * <div class='pl24 bg-darken10'>pl24</div>
+       * @memberof Padding
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .pl${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .pl${scale}${mediaSuffix} {
           padding-left: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.pl${scale}`, ['padding-left'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     return css;
   };
 
   variantGenerators.width = function (scales) {
     let css = stripIndent(`
-    /**
-      * Set an element's width.
-      *
-      * In addition to numeric values, there are \`w-full\` and \`w-auto\` classes.
-      *
-      * @group
-      * @memberof Sizing
-      * @example
-      * <div class='w96 bg-darken10'>w96</div>
-     */`
+      /**
+       * Set an element's width.
+       *
+       * In addition to numeric values, there are \`w-full\` and \`w-auto\` classes.
+       *
+       * @group
+       * @memberof Sizing
+       * @example
+       * <div class='w96 bg-darken10'>w96</div>
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .w${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .w${scale}${mediaSuffix} {
           width: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.w${scale}`, ['width'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     return css;
   };
 
   variantGenerators.maxWidth = function (scales) {
     let css = stripIndent(`
-    /**
-      * Set an element's maximum width.
-      *
-      * In addition to numeric values, there are \`wmax-full\` and \`wmax-none\` classes.
-      *
-      * @group
-      * @memberof Sizing
-      * @example
-      * <div class='wmax6 bg-darken10'>wmax6</div>
-     */`
+      /**
+       * Set an element's maximum width.
+       *
+       * In addition to numeric values, there are \`wmax-full\` and \`wmax-none\` classes.
+       *
+       * @group
+       * @memberof Sizing
+       * @example
+       * <div class='wmax6 bg-darken10'>wmax6</div>
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .wmax${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .wmax${scale}${mediaSuffix} {
           max-width: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.wmax${scale}`, ['max-width'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     return css;
   };
 
   variantGenerators.minWidth = function (scales) {
     let css = stripIndent(`
-    /**
-      * Set an element's minimum width.
-      *
-      * In addition to numeric values, there is the \`wmin-full\` class.
-      *
-      * @group
-      * @memberof Sizing
-      * @example
-      * <div class='inline-block wmin96 bg-darken10'>wmin96</div>
-     */`
+      /**
+       * Set an element's minimum width.
+       *
+       * In addition to numeric values, there is the \`wmin-full\` class.
+       *
+       * @group
+       * @memberof Sizing
+       * @example
+       * <div class='inline-block wmin96 bg-darken10'>wmin96</div>
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .wmin${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .wmin${scale}${mediaSuffix} {
           min-width: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.wmin${scale}`, ['min-width'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     return css;
   };
 
   variantGenerators.height = function (scales) {
     let css = stripIndent(`
-    /**
-      * Set an element's height.
-      *
-      * In addition to numeric values, there are \`h-full\` and \`h-auto\` classes.
-      *
-      * @group
-      * @memberof Sizing
-      * @example
-      * <div class='h24 bg-darken10'>h24</div>
-     */`
+      /**
+       * Set an element's height.
+       *
+       * In addition to numeric values, there are \`h-full\` and \`h-auto\` classes.
+       *
+       * @group
+       * @memberof Sizing
+       * @example
+       * <div class='h24 bg-darken10'>h24</div>
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .h${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .h${scale}${mediaSuffix} {
           height: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.h${scale}`, ['height'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     return css;
   };
 
   variantGenerators.maxHeight = function (scales) {
     let css = stripIndent(`
-    /**
-      * Set an element's maximum height.
-      *
-      * In addition to numeric values, there are \`hmax-full\` and \`hmax-none\` classes.
-      *
-      * @group
-      * @memberof Sizing
-      * @example
-      * <div class='hmax12 bg-darken10'>hmax12</div>
-     */`
+      /**
+       * Set an element's maximum height.
+       *
+       * In addition to numeric values, there are \`hmax-full\` and \`hmax-none\` classes.
+       *
+       * @group
+       * @memberof Sizing
+       * @example
+       * <div class='hmax12 bg-darken10'>hmax12</div>
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .hmax${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .hmax${scale}${mediaSuffix} {
           max-height: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.hmax${scale}`, ['max-height'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     return css;
   };
 
   variantGenerators.minHeight = function (scales) {
     let css = stripIndent(`
-    /**
-      * Set an element's minimum height.
-      *
-      * In addition to numeric values, there is the \`hmin-full\` class.
-      *
-      * @group
-      * @memberof Sizing
-      * @example
-      * <div class='hmin48 bg-darken10'>hmin48</div>
-     */`
+      /**
+       * Set an element's minimum height.
+       *
+       * In addition to numeric values, there is the \`hmin-full\` class.
+       *
+       * @group
+       * @memberof Sizing
+       * @example
+       * <div class='hmin48 bg-darken10'>hmin48</div>
+       */`
     );
-
-    css += scales.reduce((result, scale) => {
-      return result += stripIndent(`
-        .hmin${scale} {
+    scales.forEach((scale) => {
+      css += buildMediaRules((mediaSuffix) => stripIndent(`
+        .hmin${scale}${mediaSuffix} {
           min-height: ${value(scale)} !important;
         }
-      `);
-    }, '');
-    css += '/** @endgroup */\n';
-
-    scales.forEach((scale) => {
-      buildMediaRules(`.hmin${scale}`, ['min-height'], `${value(scale)}`);
+      `));
     });
+    css += '\n/** @endgroup */\n';
 
     return css;
   };
@@ -624,11 +525,15 @@ function buildLayoutScales() {
 
   Object.keys(screens).forEach((d) => {
     result += '\n@media ' + mediaQueries['--' + d + '-screen'] + ' {\n';
-    result += screens[d];
-    result += '}\n';
+    result += indentString(screens[d], 2);
+    result += '\n}\n';
   });
 
   return result;
 }
 
 module.exports = buildLayoutScales;
+
+if (require.main === module) {
+  buildLayoutScales();
+}
