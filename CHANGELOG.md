@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.6.0
+
+- Add `flex-parent--column-reverse`, `flex-parent--row`, and `flex-parent--row-reverse`.
+- Add `txt-strike`, and support for corresponding elements `<del>` and `<s>` within `prose`.
+- Simplify toggles, including the removal of default padding.
+- Remove `at` icon.
+- Add `extrusion` icon.
+- Fix bug when combining `grid--gut*` media query classes with `col` media query classes.
+- Fix font inheritance of `select`.
+- Change focus-outline control to use a data attribute on the document element instead of a class name, to avoid accidental overwriting.
+- Change `flex-parent--justify-end` to `flex-parent--end-main`.
+- Add `flex-parent--end-cross`.
+- Add `w-auto`, `wmax-none`, and `hmax-none`.
+
 ## 0.5.0
 
 - Add `flex-child--no-shrink` class, which is essential after the changes in v0.4.0.
