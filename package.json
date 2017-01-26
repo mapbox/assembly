@@ -10,7 +10,7 @@
     "check-size": "node scripts/check-size",
     "generate-css": "node scripts/build-color-variants.js && node scripts/build-layout-scales.js",
     "build:site": "node scripts/build-site",
-    "build:css": "generate-css && node scripts/build-css",
+    "build:css": "npm run generate-css && node scripts/build-css",
     "build:js": "node scripts/build-js",
     "build": "rm -rf dist && npm-run-all --parallel build:css build:js build:site",
     "lint:css": "stylelint src/*.css",
