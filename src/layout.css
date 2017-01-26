@@ -565,6 +565,45 @@
 .flex-parent--column { flex-direction: column !important; }
 
 /**
+ * Set the direction of the main axis to bottom-to-top (default is left-to-right).
+ *
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 flex-parent flex-parent--column-reverse'>
+ *  <span class='flex-child'>1</span>
+ *  <span class='flex-child'>2</span>
+ *  <span class='flex-child'>3</span>
+ * </div>
+ */
+.flex-parent--column-reverse { flex-direction: column-reverse !important; }
+
+/**
+ * Set the direction of the main axis to left-to-right (the default value of `flex-parent`).
+ *
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 flex-parent flex-parent--row'>
+ *  <span class='flex-child'>1</span>
+ *  <span class='flex-child'>2</span>
+ *  <span class='flex-child'>3</span>
+ * </div>
+ */
+.flex-parent--row { flex-direction: row !important; }
+
+/**
+ * Set the direction of the main axis to right-to-left (default is left-to-right).
+ *
+ * @memberof Flexbox
+ * @example
+ * <div class='bg-darken10 flex-parent flex-parent--row-reverse'>
+ *  <span class='flex-child'>1</span>
+ *  <span class='flex-child'>2</span>
+ *  <span class='flex-child'>3</span>
+ * </div>
+ */
+.flex-parent--row-reverse { flex-direction: row-reverse !important; }
+
+/**
  * Center an element's children on the main axis.
  *
  * @memberof Flexbox
@@ -689,6 +728,9 @@
   .flex-parent-mm { display: flex !important; }
   .flex-parent-inline-mm { display: inline-flex !important; }
   .flex-parent--column-mm { flex-direction: column !important; }
+  .flex-parent--column-reverse-mm { flex-direction: column-reverse !important; }
+  .flex-parent--row-mm { flex-direction: row !important; }
+  .flex-parent--row-reverse-mm { flex-direction: row-reverse !important; }
   .flex-parent--wrap-mm { flex-wrap: wrap !important; }
   .flex-parent--end-cross-mm { align-items: flex-end !important; }
   .flex-parent--end-main-mm { justify-content: flex-end !important; }
@@ -712,6 +754,9 @@
   .flex-parent-ml { display: flex !important; }
   .flex-parent-inline-ml { display: inline-flex !important; }
   .flex-parent--column-ml { flex-direction: column !important; }
+  .flex-parent--column-reverse-ml { flex-direction: column-reverse !important; }
+  .flex-parent--row-ml { flex-direction: row !important; }
+  .flex-parent--row-reverse-ml { flex-direction: row-reverse !important; }
   .flex-parent--wrap-ml { flex-wrap: wrap !important; }
   .flex-parent--end-cross-ml { align-items: flex-end !important; }
   .flex-parent--end-main-ml { justify-content: flex-end !important; }
@@ -735,6 +780,9 @@
   .flex-parent-mxl { display: flex !important; }
   .flex-parent-inline-mxl { display: inline-flex !important; }
   .flex-parent--column-mxl { flex-direction: column !important; }
+  .flex-parent--column-reverse-mxl { flex-direction: column-reverse !important; }
+  .flex-parent--row-mxl { flex-direction: row !important; }
+  .flex-parent--row-reverse-mxl { flex-direction: row-reverse !important; }
   .flex-parent--wrap-mxl { flex-wrap: wrap !important; }
   .flex-parent--end-cross-mxl { align-items: flex-end !important; }
   .flex-parent--end-main-mxl { justify-content: flex-end !important; }
