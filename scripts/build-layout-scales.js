@@ -313,7 +313,7 @@ function buildLayoutScales() {
        *
        * @group
        * @example
-       * <div class='pr24 bg-darken10'>pr24</div>
+       * <div class='pr24 bg-darken10 align-r'>pr24</div>
        * @memberof Padding
        */`
     );
