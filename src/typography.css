@@ -534,6 +534,17 @@ textarea {
 .txt-underline-on-hover:hover { text-decoration: underline !important; }
 
 /**
+ * Strikethrough text.
+ *
+ * @memberof Type utils
+ * @example
+ * <div class='txt-strike'>txt-strike</div>
+ */
+.prose del,
+.prose s,
+.txt-strike { text-decoration: line-through !important; }
+
+/**
  * Prevent text from wrapping.
  *
  * @memberof Type utils
@@ -625,7 +636,7 @@ textarea {
 
 /**
  * Apply appropriate styles based on semantic markup. Supported elements are:
- * `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `table`, `small`, `ul`, `ol`, `a`, `abbr`, `hr`, `blockquote`, `kbd`, `sub`, `sup`, `code`, `pre`, `img`, and `video`.
+ * `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `table`, `small`, `ul`, `ol`, `a`, `abbr`, `hr`, `blockquote`, `kbd`, `sub`, `sup`, `code`, `pre`, `del`, `s`, `img`, and `video`.
  *
  * @memberof Prose
  * @selectors .prose
@@ -634,7 +645,7 @@ textarea {
  *   <h1>Tortor Porta</h1>
  *   <small>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.</small>
  *   <hr/>
- *   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ *   <p>Cras justo odio, dapibus ac facilisis<sup>[note]</sup> in, egestas eget quam. Lorem ipsum <del>dolor</del> sit amet, consectetur adipiscing elit. H<sub>2</sub>0 electrolitis.</p>
  * </div>
  */
 
@@ -647,7 +658,7 @@ textarea {
  *   <h1>Tortor Porta</h1>
  *   <small>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.</small>
  *   <hr/>
- *   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ *   <p>Cras justo odio, dapibus ac facilisis<sup>[note]</sup> in, egestas eget quam. Lorem ipsum <del>dolor</del> sit amet, consectetur adipiscing elit. H<sub>2</sub>0 electrolitis.</p>
  * </div>
  */
 .prose--dark {
