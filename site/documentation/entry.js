@@ -81,13 +81,14 @@ class Entry extends React.Component {
             {collapsedSelectorEls}
           </div>
           {expandButton}
-          <div className='mt12 txt-s'>
+          <div className='mt12'>
             <a
               href={sourceUrl}
               target='_blank'
-              className='link'
+              className='txt-s link inline-block link--gray'
             >
-              Source
+              <svg className='align-t inline-block mr6 icon'><use xlinkHref='#icon-code'/></svg>
+              {path.basename(props.parsedComment.source.filename)}: {props.parsedComment.source.line}
             </a>
           </div>
         </div>
