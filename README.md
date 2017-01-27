@@ -1,12 +1,12 @@
 # Assembly
 
-<img width='200px' src='https://rawgit.com/mapbox/assembly/mb-pages/assembly-logo.svg?v1'>
+<img width='200px' src='https://rawgit.com/mapbox/assembly/dev-pages/assembly-logo.svg?v1'>
 
 A CSS framework that makes the hard parts of building anything on the web easy. We define the hard parts as: managing class specificity, designing cross-browser form components that work well with each other, creating a harmonious typographic scale, maintaining a baseline grid, and keeping responsive designs simple.
 
 For usage guidelines and documentation, check out https://www.mapbox.com/assembly/.
 
-[![Build Status](https://travis-ci.com/mapbox/assembly.svg?token=FB2dZNVWaGo68KZnwz9M&branch=mb-pages)](https://travis-ci.com/mapbox/assembly)
+[![Build Status](https://travis-ci.com/mapbox/assembly.svg?token=FB2dZNVWaGo68KZnwz9M&branch=dev-pages)](https://travis-ci.com/mapbox/assembly)
 
 ## Browser support
 
@@ -131,11 +131,14 @@ npm start # Builds everything, starts a dev server, rebuilds & reloads on change
 
 npm run build:js # Build SVGs and other JS
 ```
+
 ### Releasing
 
-- Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/mb-pages/CHANGELOG.md).
-- Increment the version key in [`package.json`](https://github.com/mapbox/assembly/blob/mb-pages/package.json).
-- Merge these changes into the `mb-pages` branch.
+Development is done in the `dev-pages` branch, but releases are made from the `mb-pages` branch.
+
+- Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/dev-pages/CHANGELOG.md).
+- Increment the version key in [`package.json`](https://github.com/mapbox/assembly/blob/dev-pages/package.json).
+- Merge these changes into the `mb-pages` branch. Conduct the following steps from `mb-pages`.
 - Tag the version in git and `git push --tags`.
 - Publish the new version on npm via `npm publish`.
 - Run `npm run deploy` to upload the new version to s3. **Note** you will need
