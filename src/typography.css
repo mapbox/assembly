@@ -20,6 +20,114 @@ textarea {
 }
 
 /**
+ * Style text like a keyboard button.
+ *
+ * @memberof Type basics
+ * @example
+ * You entered <kbd class='txt-kbd'>Flamingo</kbd>.
+ */
+.txt-kbd,
+.prose kbd {
+  font-family: var(--font-stack-mono);
+  background: var(--darken5);
+  border: 1px solid var(--darken10);
+  line-height: 18px;
+  border-radius: 3px;
+  padding: 2px 3px;
+  box-shadow: 0 1px 0 0 var(--darken10);
+  font-size: 90%;
+  font-weight: normal;
+}
+
+.prose--dark kbd {
+  background: var(--lighten5);
+  border: 1px solid var(--lighten10);
+  line-height: 18px;
+  border-radius: 3px;
+  padding: 2px 3px;
+  box-shadow: 0 1px 0 0 var(--lighten10);
+}
+
+/**
+ * Style subscript text: small and below the standard line.
+ *
+ * @memberof Type basics
+ * @example
+ * The chemical formula of water is H<sub class='txt-sub'>2</sub>O.
+ */
+.txt-sub,
+.prose sub {
+  top: 0.5ex;
+}
+
+.txt-code,
+.pre,
+.prose code,
+.prose pre {
+  font-family: var(--font-stack-mono);
+  white-space: pre-wrap;
+  font-size: 90%; /* mono fonts have naturally large proportions, scale them down to match open sans. */
+  line-height: 1.5em; /* code blocks look better with smaller line height */
+  background: var(--darken5);
+  border-radius: 3px;
+}
+
+.prose--dark code,
+.prose--dark pre {
+  background: var(--lighten5);
+}
+
+/**
+ * Style a code block.
+ *
+ * @memberof Type basics
+ * @example
+ * <pre class='pre'>
+ * <code>for each
+ *   do this
+ * end</code>
+ * </pre>
+ */
+.pre,
+.prose pre {
+  padding: 12px;
+  overflow: auto;
+}
+
+.prose pre {
+  margin-bottom: 12px;
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/**
+ * Style text as inline code.
+ *
+ * @memberof Type basics
+ * @example
+ * Make sure you <code class='txt-code'>git checkout</code> the repository.
+ */
+.txt-code,
+.prose code {
+  padding: 2px 4px;
+}
+
+/**
+ * Apply Assembly's monospaced font stack.
+ *
+ * @memberof Type utils
+ * @example
+ * <div class='txt-mono'>txt-mono</div>
+ */
+.txt-mono {
+  font-family: var(--font-stack-mono);
+  font-size: 90%; /* mono fonts have naturally large proportions, scale them down to match open sans. */
+}
+
+/**
  * Classes for font size and line height, lists, block quotes, code blocks, and more.
  *
  * @section Type basics
@@ -300,35 +408,6 @@ textarea {
   margin-bottom: 18px;
 }
 
-/**
- * Style text like a keyboard button.
- *
- * @memberof Type basics
- * @example
- * You entered <kbd class='txt-kbd'>Flamingo</kbd>.
- */
-.txt-kbd,
-.prose kbd {
-  font-family: var(--font-stack-mono);
-  background: var(--darken5);
-  border: 1px solid var(--darken10);
-  line-height: 18px;
-  border-radius: 3px;
-  padding: 2px 3px;
-  box-shadow: 0 1px 0 0 var(--darken10);
-  font-size: 90%;
-  font-weight: normal;
-}
-
-.prose--dark kbd {
-  background: var(--lighten5);
-  border: 1px solid var(--lighten10);
-  line-height: 18px;
-  border-radius: 3px;
-  padding: 2px 3px;
-  box-shadow: 0 1px 0 0 var(--lighten10);
-}
-
 .txt-sup,
 .txt-sub,
 .prose sup,
@@ -353,90 +432,11 @@ textarea {
 }
 
 /**
- * Style subscript text: small and below the standard line.
- *
- * @memberof Type basics
- * @example
- * The chemical formula of water is H<sub class='txt-sub'>2</sub>O.
- */
-.txt-sub,
-.prose sub {
-  top: 0.5ex;
-}
-
-.txt-code,
-.pre,
-.prose code,
-.prose pre {
-  font-family: var(--font-stack-mono);
-  white-space: pre-wrap;
-  font-size: 90%; /* mono fonts have naturally large proportions, scale them down to match open sans. */
-  line-height: 1.5em; /* code blocks look better with smaller line height */
-  background: var(--darken5);
-  border-radius: 3px;
-}
-
-.prose--dark code,
-.prose--dark pre {
-  background: var(--lighten5);
-}
-
-/**
- * Style text as inline code.
- *
- * @memberof Type basics
- * @example
- * Make sure you <code class='txt-code'>git checkout</code> the repository.
- */
-.txt-code,
-.prose code {
-  padding: 2px 4px;
-}
-
-/**
- * Style a code block.
- *
- * @memberof Type basics
- * @example
- * <pre class='pre'>
- * <code>for each
- *   do this
- * end</code>
- * </pre>
- */
-.pre,
-.prose pre {
-  padding: 12px;
-  overflow: auto;
-}
-
-.prose pre {
-  margin-bottom: 12px;
-}
-
-.prose pre code {
-  background: transparent;
-  padding: 0;
-}
-
-/**
  * Single-purpose classes for styling text.
  *
  * @section Type utils
  * @memberof Typography
  */
-
-/**
- * Apply Assembly's monospaced font stack.
- *
- * @memberof Type utils
- * @example
- * <div class='txt-mono'>txt-mono</div>
- */
-.txt-mono {
-  font-family: var(--font-stack-mono);
-  font-size: 90%; /* mono fonts have naturally large proportions, scale them down to match open sans. */
-}
 
 /**
  * Apply a light font weight.
