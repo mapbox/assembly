@@ -151,6 +151,17 @@
 }
 
 /**
+ * Apply a subtle animated transition when changing CSS properties on an element. See MDN's [list of CSS animated properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties) for every property effected by this class.
+ *
+ * @memberof Miscellaneous
+ * @example
+ * <div class='bg-blue-on-hover transition'>Hover over me</div>
+ */
+.transition {
+  transition: all var(--transition);
+}
+
+/**
  * Disable an animated transition on elements like [`btn`](#Buttons) that have default transitions.
  *
  * @memberof Miscellaneous
