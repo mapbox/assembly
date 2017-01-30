@@ -1,3 +1,5 @@
+import pkg from '../package';
+
 const htmlTemplate = `<!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -5,8 +7,8 @@ const htmlTemplate = `<!DOCTYPE html>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='shortcut icon' href='Your favicon path goes here' type='image/x-icon'>
-  <link href='https://api.mapbox.com/mapbox-assembly/v0.2.0/assembly.min.css' rel='stylesheet'>
-  <script async defer src='https://api.mapbox.com/mapbox-assembly/v0.2.0/assembly.js'></script>
+  <link href='https://api.mapbox.com/mapbox-assembly/v${pkg.version}/assembly.min.css' rel='stylesheet'>
+  <script async defer src='https://api.mapbox.com/mapbox-assembly/v${pkg.version}/assembly.js'></script>
 </head>
 <body>
   <!-- Your page... -->
