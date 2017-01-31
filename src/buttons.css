@@ -33,8 +33,9 @@
   border-style: solid;
   border-color: transparent;
   border-radius: 18px; /* fully round by default */
-  padding: 4px 12px; /* Padding accommodates borders */
+  padding: 4px 18px; /* Padding accommodates borders */
   font-weight: bold;
+  font-size: 13px;
   text-align: center;
   text-decoration: none !important; /* prevent underline when inside .prose */
   transition: background-color var(--transition),

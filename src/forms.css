@@ -201,6 +201,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 4px 30px 4px 12px; /* plus arrow, minus border */
   cursor: pointer;
   display: inline-block;
+  font-size: 13px;
   transition: color var(--transition),
     background-color var(--transition);
   border-width: 2px;
@@ -789,6 +790,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   color: var(--default-secondary-interactive-color);
   font-weight: bold;
   padding: 0 12px;
+  font-size: 13px;
   border-radius: 13px;
   text-decoration: none !important; /* prevent underline when inside .prose */
   background-color: transparent;
