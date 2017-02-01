@@ -1,8 +1,9 @@
 import React from 'react';
 import { HtmlExample } from '../html_example';
 
-const spinner = `<div class=' viewport-full relative clip'>
-  <div class='flex-parent flex-parent--center-cross flex-parent--center-main bg-darken10 viewport-twothirds viewport-full-ml'>
+const spinner = `<div class='viewport-full relative'>
+ <!-- the wrapper above is for documentation purposes only and not needed in practice !-->
+  <div class='flex-parent flex-parent--center-cross flex-parent--center-main absolute top right bottom left bg-darken10 z5'>
     <div class='flex-child loading'></div>
   </div>  
 </div>`;
