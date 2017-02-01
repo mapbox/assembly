@@ -1,10 +1,10 @@
 import React from 'react';
 import { HtmlExample } from '../html_example';
 
-const spinner = `<div class='flex-parent flex-parent--center-cross flex-parent--center-main viewport-full relative clip'>
-  <div class='flex-child flex-child--grow bg-darken10 viewport-twothirds viewport-full-ml'>
+const spinner = `<div class=' viewport-full relative clip'>
+  <div class='flex-parent flex-parent--center-cross flex-parent--center-main bg-darken10 viewport-twothirds viewport-full-ml'>
     <div class='flex-child loading'></div>
-  </div>
+  </div>  
 </div>`;
 
 
