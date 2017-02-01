@@ -6,8 +6,8 @@ const basic = `<div class='h12 bg-darken10 relative round-full'>
 </div>`;
 
 const playback = `<div class='flex-parent flex-parent--row flex-parent--center-cross border border--gray-light round-t'>
-    <div class='flex-child py12 pr6 pl12 border-r border--gray-light bg-white cursor-pointer'>
-      <span class='block triangle-l triangle-l--r color-green'></span>
+    <div class='flex-child py18 pr12 pl18 border-r border--gray-light bg-white cursor-pointer'>
+      <span class='block triangle--r triangle color-green color-green'></span>
     </div>
     <div class='flex-child flex-child--grow p18 bg-white'>
       <div class='relative w-full h12 bg-darken10 round-full'>
