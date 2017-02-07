@@ -5,6 +5,46 @@
 */
 
 /**
+ * Style scrollbars. Only works in Webkit-based browsers (Safari and Chrome).
+ * On dark backgrounds, add the `scroll-styled--dark` modifier.
+ *
+ * @memberof Miscellaneous
+   @selectors .scroll-styled
+ * @example
+ * <div class="scroll-styled scroll-auto h120"><div class='h240'></div></div>
+ * <div class="scroll-styled scroll-styled--dark bg-gray-dark scroll-auto h120"><div class='h240'></div></div>
+*/
+.scroll-styled::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+}
+.scroll-styled::-webkit-scrollbar:hover {
+  background: transparent;
+}
+.scroll-styled::-webkit-scrollbar-track {
+  background: none;
+}
+.scroll-styled::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+  width: 6px;
+  border-radius: 3px;
+}
+.scroll-styled::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+.scroll-styled::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+.scroll-styled--dark::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+.scroll-styled--dark::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/**
  * Style a loading spinner.
  * On dark backgrounds, add the `loading--dark` modifier.
  * For a smaller spinner, add the `loading--s` modifier.
