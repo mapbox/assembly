@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.0
+
+- Add `transition` class.
+- Allow `txt-{size}` classes to override the font-size set by `txt-mono`.
+
 ## 0.6.0
 
 - Add `flex-parent--column-reverse`, `flex-parent--row`, and `flex-parent--row-reverse`.
