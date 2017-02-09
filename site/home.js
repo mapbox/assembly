@@ -13,7 +13,7 @@ class Home extends React.Component {
     return (
       <div className='mt24 wmax960'>
         <div className='mt72 flex-parent-ml flex-parent--wrap-ml'>
-          <h1 className='flex-child-ml flex-child--grow-ml txt-subhead txt-headline-mm color-blue txt-uppercase txt-spacing2'>
+          <h1 className='flex-child-ml flex-child--grow-ml txt-subhead txt-headline-mm color-blue txt-uppercase txt-spacing1'>
             Assembly.css
           </h1>
           <div className='flex-child-ml mt18 color-darken50'>
@@ -57,7 +57,7 @@ class Home extends React.Component {
           />
         </div>
 
-        <p className='mt24'>
+        <p className='mt12'>
           Unsure what else you need in the <code className='txt-code'>&lt;head&gt;</code>? Check out <a className='link' href='https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML'>MDN's detailed guide</a>.
         </p>
 
