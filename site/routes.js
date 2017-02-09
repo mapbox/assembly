@@ -20,6 +20,7 @@ import { ExampleProgressBars } from './examples/progress_bars';
 import { ExampleSidebarApps } from './examples/sidebar_apps';
 import { ExampleTileLayout } from './examples/tile_layout';
 import { ExampleTooltips } from './examples/tooltips';
+import { ExampleSpinner } from './examples/spinner';
 
 /*
  * To add pages to the site, we pass a routes array with
@@ -82,6 +83,10 @@ const routes = [
       name: 'Tooltips',
       route: '/examples/tooltips/',
       component: ExampleTooltips
+    }, {
+      name: 'Spinner',
+      route: '/examples/spinner/',
+      component: ExampleSpinner
     }]
   },
   {
