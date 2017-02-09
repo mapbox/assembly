@@ -14,7 +14,7 @@ class Typography extends React.Component {
         <div className='grid grid--gut12'>
 
           <div className='col col--6 prose'>
-            <h1>Justo Elit</h1>
+            <h1>Aenean Elit Parturient Malesuada Euismod</h1>
             <p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
             <ul>
@@ -45,10 +45,10 @@ class Typography extends React.Component {
           <div className='col col--6'>
 
             {/* note there is no top margin here, on the first element in the container */}
-            <div className='txt-headline txt-bold mb12'>Justo Elit</div>
+            <div className='txt-headline txt-bold mb12'>Aenean Elit Parturient Malesuada Euismod</div>
             <div className='txt-m mb12'>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.</div>
 
-            <div className='txt-ul ml36 mb12'>
+            <div className='txt-ul ml24 mb12'>
               <div className='txt-li mb6'>Nullam quis risus eget urna mollis ornare vel eu leo.</div>
               <div className='txt-li mb6'>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
               <div className='txt-li'>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div>

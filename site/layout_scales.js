@@ -95,10 +95,8 @@ class LayoutScales extends React.Component {
           <h1 className='txt-subhead txt-bold pt24 mb12'>
             Layout Scales
           </h1>
-          <p className='mb12'>
+          <p className='col col--6-mm mb12'>
             These are the numbers, corresponding to pixel values, available for each set of layout classes.
-          </p>
-          <p className='mb12'>
             All of these class sets include <code className='txt-code'>*-mm</code>, <code className='txt-code'>*-ml</code>, and <code className='txt-code'>*-mxl</code> variations to target screen sizes.
           </p>
         </div>
