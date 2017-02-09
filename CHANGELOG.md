@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.0
+
+- Overhaul typographic scale (classes remain the same).
+- Add `scroll-styled` class.
+- Add `txt-spacing1` class.
+
 ## 0.7.0
 
 - Add `transition` class.
