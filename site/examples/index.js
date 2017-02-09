@@ -17,8 +17,8 @@ class Examples extends React.Component {
     return (
       <div>
         <div className='my24'>
-          <h1 className='txt-subhead txt-bold my24'>Examples</h1>
-          <p>Composing with classes demonstrates the real flexibility in Assembly. The pages below feature a variety of snippets that cover common components to layout interfaces. They are designed for reusability and adjust elegantly for smaller screens.</p>
+          <h1 className='txt-subhead txt-bold mt24 mb18'>Examples</h1>
+          <p className='col col--6-mm'>Composing with classes demonstrates the real flexibility in Assembly. The pages below feature a variety of snippets that cover common components to layout interfaces. They are designed for reusability and adjust elegantly for smaller screens.</p>
         </div>
         {this.props.children.map(renderChildrenAsNav)}
       </div>
