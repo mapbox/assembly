@@ -12,8 +12,10 @@ const buildSvgLoader = require('./build-svg-loader');
 
 const jsGlob = path.join(__dirname, '../src/js/*.js');
 
-function buildJs(outfile) {
-  timelog('Building JS');
+function buildJs(outfile, options) {
+  options = options || {};
+
+  if (!options.quiet) timelog('Building JS');
   outfile = outfile || path.join(__dirname, '../dist/assembly.js');
 
   return Promise.all([
@@ -32,7 +34,7 @@ function buildJs(outfile) {
         return pify(fs.writeFile)(outfile, optimizedJs);
       });
     }).then(() => {
-      timelog('Done building JS');
+      if (!options.quiet) timelog('Done building JS');
     });
 }
 

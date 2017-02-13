@@ -6,18 +6,27 @@ const buildJs = require('./build-js');
 const copyFonts = require('./copy-fonts');
 
 function buildUserAssets(outdir, options) {
+  options = options || {};
   outdir = outdir || path.join(__dirname, '../dist');
 
   const buildCssOptions = Object.assign({
     outfile: path.join(outdir, 'assembly.css')
   }, options);
 
+  const buildJsOptions = {
+    quiet: options.quiet
+  };
+
+  const copyFontsOptions = {
+    quiet: options.quiet
+  };
+
   const jsOutfile = path.join(outdir, 'assembly.js');
 
   return Promise.all([
     buildCss(buildCssOptions),
-    buildJs(jsOutfile),
-    copyFonts(outdir)
+    buildJs(jsOutfile, buildJsOptions),
+    copyFonts(outdir, copyFontsOptions)
   ]);
 }
 
