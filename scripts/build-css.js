@@ -15,6 +15,7 @@ const postcssCustomMedia = require('postcss-custom-media');
 const defaultVariables = require('../src/variables');
 const defaultMediaQueries = require('../src/media-queries');
 const timelog = require('./timelog');
+const buildColorVariants = require('./build-color-variants');
 
 function getCssPath(name) {
   return path.join(__dirname, `../src/${name}.css`);
@@ -42,7 +43,6 @@ const assemblyCssFiles = [
   getCssPath('layout'),
   getCssPath('layout-scales'),
   getCssPath('colors'),
-  getCssPath('color-variants'),
   getCssPath('triangles'),
   getCssPath('animations'),
   getCssPath('miscellaneous')
@@ -120,6 +120,11 @@ function buildCss(options) {
     });
   }
 
+  function addColorVariants(concat) {
+    const colorVariantCss = buildColorVariants(variableDefinitions, options.colorVariants);
+    return processCss(colorVariantCss, path.join(__dirname, '../src/color-variants.css'), concat);
+  }
+
   function writeDistCss(concat) {
     const css = `${concat.content}\n/*# sourceMappingURL=${outfileFilename}.map */`;
 
@@ -146,6 +151,7 @@ function buildCss(options) {
   });
 
   return Promise.all(processCssFiles)
+    .then(() => addColorVariants(concat))
     .catch(handlePostcssError)
     .then(() => writeDistCss(concat))
     .then(() => {

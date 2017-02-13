@@ -1,0 +1,9 @@
+.b {
+  color: var(--beige);
+}
+
+@media (--ms-screen) {
+  .b {
+    color: var(--blue-faint);
+  }
+}

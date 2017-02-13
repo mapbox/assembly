@@ -14,8 +14,10 @@ function copyFile(infile, outdir) {
   return cpFile(infile, outfile);
 }
 
-function copyFonts(outdir) {
-  timelog('Copying fonts');
+function copyFonts(outdir, options) {
+  options = options || {};
+
+  if (!options.quiet) timelog('Copying fonts');
   outdir = outdir || path.join(__dirname, '../dist');
 
   return pify(mkdirp)(outdir)
@@ -26,7 +28,7 @@ function copyFonts(outdir) {
       }));
     })
     .then(() => {
-      timelog('Done copying fonts');
+      if (!options.quiet) timelog('Done copying fonts');
     });
 }
 
