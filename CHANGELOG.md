@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.1
+
+- Fix bug where custom colors in custom builds were being ignored.
+- Add `transition` class to make any element have animatable transitions.
+
 ## 0.8.0
 
 - Overhaul typographic scale (classes remain the same).
