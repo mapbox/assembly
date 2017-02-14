@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0
+
+- Change default font size to 15px, change txt-l font size to 18px.
+
 ## 0.8.1
 
 - Fix bug where custom colors in custom builds were being ignored.
