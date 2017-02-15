@@ -693,7 +693,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * Style a switch.
  * Change the color of the dot when inactive, the border when inactive,
  * and the background when active with a `switch--{color}` modifier (`*-dark` colors are not available).
- * Change the color of the dot when active with a `switch--dot-{color}` modifier.
+ * Change the color of the dot when active with a `switch--dot-{color}` modifier. Adjust the line height of the switch to match a label with small text with the `switch--s-label` modifier.
  *
  * @memberof Switches
  * @example
