@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.1
+
+- Move media query class names (e.g. `m6-ml`) to the bottom of the generated stylesheets, fixing some source-order-caused bugs.
+
 ## 0.9.0
 
 - Change default font size to 15px, change txt-l font size to 18px.
