@@ -11,7 +11,7 @@ const playback = `<div class='flex-parent flex-parent--row flex-parent--center-c
     </div>
     <div class='flex-child flex-child--grow p18 bg-white'>
       <div class='relative w-full h12 bg-darken10 round-full'>
-        <div class='absolute top right bottom left m3 mh6 bg-green-light round-full' style='width:50%;'>
+        <div class='absolute top right bottom left m3 bg-green-light round-full' style='width:50%;'>
           <span class='absolute top right w30 h6 bg-green round-full'></span>
         </div>
       </div>
