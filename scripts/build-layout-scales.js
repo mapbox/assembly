@@ -44,7 +44,7 @@ function buildLayoutScales() {
   variantGenerators.gutter = function (scales) {
     let css = stripIndent(`
       /**
-       * Apply column gutters to all columns in a grid by adding a <code>grid--gut{size}</code> modifier to the <code>grid</code> element. Class set includes <code>*-mm</code>, <code>*-ml</code>, and <code>*-mxl</code> variations to target screen sizes.
+       * Apply column gutters to all columns in a grid by adding a \`grid--gut{size}\` modifier to the \`grid\` element. Class set includes \`*-mm\`, \`*-ml\`, and \`*-mxl\` variations to target screen sizes.
        *
        * @example
        * <div class='grid grid--gut12'>

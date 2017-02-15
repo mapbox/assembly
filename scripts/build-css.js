@@ -16,6 +16,7 @@ const defaultVariables = require('../src/variables');
 const defaultMediaQueries = require('../src/media-queries');
 const timelog = require('./timelog');
 const buildColorVariants = require('./build-color-variants');
+const buildMediaVariants = require('./build-media-variants');
 
 function getCssPath(name) {
   return path.join(__dirname, `../src/${name}.css`);
@@ -125,6 +126,12 @@ function buildCss(options) {
     return processCss(colorVariantCss, path.join(__dirname, '../src/color-variants.css'), concat);
   }
 
+  function addMediaVariants(concat) {
+    return buildMediaVariants().then((mediaVariantCss) => {
+      return processCss(mediaVariantCss, path.join(__dirname, '../src/media-variants.css'), concat);
+    });
+  }
+
   function writeDistCss(concat) {
     const css = `${concat.content}\n/*# sourceMappingURL=${outfileFilename}.map */`;
 
@@ -152,6 +159,7 @@ function buildCss(options) {
 
   return Promise.all(processCssFiles)
     .then(() => addColorVariants(concat))
+    .then(() => addMediaVariants(concat))
     .catch(handlePostcssError)
     .then(() => writeDistCss(concat))
     .then(() => {
