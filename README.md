@@ -105,6 +105,10 @@ Assembly strives for flat, single rule declarations and avoids overrides wheneve
 - If the number of utility classes describing a property is limited, Assembly classes use the suffixes, `xl`, `l`, `m`, `s`, `sm`.
 - Assembly doesn't have a top level namespace. Assembly is designed to provide fundamental rules that are used frequently and should be easy to type and remember. If you want to use your own css with base, consider namespacing that css.
 
+### Media query class variants
+
+Media query class variants (e.g. `block-mm` as a variant of `block`) are automatically generated and added to the CSS build with `scripts/build-media-variants.js`. If you want to generate media variants for a new class, or change which classes get media variants, you'll need to modify the lists in that file.
+
 ## Development
 
 ### Tools
