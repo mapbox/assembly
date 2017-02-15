@@ -142,8 +142,9 @@ Development is done in the `dev-pages` branch, but releases are made from the `m
 
 - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/dev-pages/CHANGELOG.md).
 - Increment the version key in [`package.json`](https://github.com/mapbox/assembly/blob/dev-pages/package.json).
-- Merge these changes into the `mb-pages` branch. Conduct the following steps from `mb-pages`.
-- Tag the version in git and `git push --tags`.
+- Merge these changes into the `mb-pages` branch. *Conduct the following steps from `mb-pages`*.
+- Tag the version in git. Use the exact version number, without any letters (e.g. `0.8.0` instead of `v0.8.0`).
+- Then `git push --tags`.
 - Publish the new version on npm via `npm publish`.
 - Run `npm run deploy` to upload the new version to s3. **Note** you will need
 to be authenticated on AWS to do so.
