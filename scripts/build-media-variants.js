@@ -1,5 +1,7 @@
 'use strict';
 
+// ALERT: Layout scale media variants are built alongside the scales themselves
+// in build-layout-scales.js.
 // ALERT: This is only built to work with single-class selectors at the moment.
 
 const fs = require('fs');
