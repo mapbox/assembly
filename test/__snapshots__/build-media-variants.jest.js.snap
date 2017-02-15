@@ -1040,11 +1040,8 @@ exports[`buildMediaVariants defaults 1`] = `
     .flex-parent--row-reverse-mxl {
         flex-direction: row-reverse !important
     }
-    .flex-parent--center-main-mxl {
-        justify-content: center !important
-    }
-    .flex-parent--center-cross-mxl {
-        align-items: center !important
+    .flex-parent--wrap-mxl {
+        flex-wrap: wrap !important
     }
     .flex-parent--end-cross-mxl {
         align-items: flex-end !important
@@ -1052,8 +1049,11 @@ exports[`buildMediaVariants defaults 1`] = `
     .flex-parent--end-main-mxl {
         justify-content: flex-end !important
     }
-    .flex-parent--wrap-mxl {
-        flex-wrap: wrap !important
+    .flex-parent--center-main-mxl {
+        justify-content: center !important
+    }
+    .flex-parent--center-cross-mxl {
+        align-items: center !important
     }
     .flex-parent--stretch-cross-mxl {
         align-items: stretch !important

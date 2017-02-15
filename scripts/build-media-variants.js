@@ -199,7 +199,8 @@ function buildMediaVariants() {
       const mediaAtRule = postcss.atRule({ name: 'media', params: `(--${screenSize}-screen)` });
       // Sort the rules so the output is deterministic, despite async file reading
       const sortedRules = _.sortBy(screens[screenSize], (rule) => {
-        return targetClassArray.indexOf(rule.selector.slice(1, -3));
+        const suffixlessClassName = rule.selector.replace(/-m[mlx]{1,2}$/, '').replace(/^\./, '');
+        return targetClassArray.indexOf(suffixlessClassName);
       });
       sortedRules.forEach((rule) => {
         mediaAtRule.append(rule);

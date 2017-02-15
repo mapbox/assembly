@@ -15550,13 +15550,9 @@ input:checked + .toggle--active-transparent{
         -ms-flex-direction:row-reverse !important;
             flex-direction:row-reverse !important
     }
-    .flex-parent--center-main-mxl{
-        -ms-flex-pack:center !important;
-            justify-content:center !important
-    }
-    .flex-parent--center-cross-mxl{
-        -ms-flex-align:center !important;
-            align-items:center !important
+    .flex-parent--wrap-mxl{
+        -ms-flex-wrap:wrap !important;
+            flex-wrap:wrap !important
     }
     .flex-parent--end-cross-mxl{
         -ms-flex-align:end !important;
@@ -15566,9 +15562,13 @@ input:checked + .toggle--active-transparent{
         -ms-flex-pack:end !important;
             justify-content:flex-end !important
     }
-    .flex-parent--wrap-mxl{
-        -ms-flex-wrap:wrap !important;
-            flex-wrap:wrap !important
+    .flex-parent--center-main-mxl{
+        -ms-flex-pack:center !important;
+            justify-content:center !important
+    }
+    .flex-parent--center-cross-mxl{
+        -ms-flex-align:center !important;
+            align-items:center !important
     }
     .flex-parent--stretch-cross-mxl{
         -ms-flex-align:stretch !important;
@@ -31991,13 +31991,9 @@ input:checked + .toggle--active-transparent{
         -ms-flex-direction:row-reverse !important;
             flex-direction:row-reverse !important
     }
-    .flex-parent--center-main-mxl{
-        -ms-flex-pack:center !important;
-            justify-content:center !important
-    }
-    .flex-parent--center-cross-mxl{
-        -ms-flex-align:center !important;
-            align-items:center !important
+    .flex-parent--wrap-mxl{
+        -ms-flex-wrap:wrap !important;
+            flex-wrap:wrap !important
     }
     .flex-parent--end-cross-mxl{
         -ms-flex-align:end !important;
@@ -32007,9 +32003,13 @@ input:checked + .toggle--active-transparent{
         -ms-flex-pack:end !important;
             justify-content:flex-end !important
     }
-    .flex-parent--wrap-mxl{
-        -ms-flex-wrap:wrap !important;
-            flex-wrap:wrap !important
+    .flex-parent--center-main-mxl{
+        -ms-flex-pack:center !important;
+            justify-content:center !important
+    }
+    .flex-parent--center-cross-mxl{
+        -ms-flex-align:center !important;
+            align-items:center !important
     }
     .flex-parent--stretch-cross-mxl{
         -ms-flex-align:stretch !important;
