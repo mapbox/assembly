@@ -198,14 +198,11 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   font-size: inherit;
   font-weight: bold;
   color: currentColor;
-  padding: 4px 30px 4px 12px; /* plus arrow, minus border */
+  padding: 6px 30px 6px 12px; /* plus arrow */
   cursor: pointer;
   display: inline-block;
   transition: color var(--transition),
     background-color var(--transition);
-  border-width: 2px;
-  border-style: solid;
-  border-color: transparent;
   border-radius: var(--border-radius);
   background-color: var(--default-primary-interactive-color); /* match btn default state */
 }
@@ -274,7 +271,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .select--stroke {
   color: var(--gray);
   background-color: transparent;
-  border-color: currentColor;
+  box-shadow: inset 0 0 0 2px currentColor;
 }
 
 .select--stroke + .select-arrow {
