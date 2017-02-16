@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.0
+
+- Rework buttons so their heights fall on 6px vertical grid when extra vertical padding is applied.
+
 ## 0.9.1
 
 - Move media query class names (e.g. `m6-ml`) to the bottom of the generated stylesheets, fixing some source-order-caused bugs.

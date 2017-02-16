@@ -29,11 +29,8 @@
   display: inline-block;
   background-color: var(--default-primary-interactive-color);
   color: var(--white);
-  border-width: 2px;
-  border-style: solid;
-  border-color: transparent;
   border-radius: 18px; /* fully round by default */
-  padding: 4px 12px; /* Padding accommodates borders */
+  padding: 6px 12px;
   font-weight: bold;
   text-align: center;
   text-decoration: none !important; /* prevent underline when inside .prose */
@@ -58,7 +55,7 @@
  */
 .btn--stroke {
   background-color: transparent;
-  border-color: currentColor;
+  box-shadow: inset 0 0 0 2px currentColor;
   color: var(--default-primary-interactive-color);
 }
 
@@ -71,7 +68,7 @@
  */
 .btn--s {
   font-size: 12px;
-  padding: 1px 18px;
+  padding: 0 12px;
   border-radius: 15px;
 }
 
@@ -83,9 +80,9 @@
  * <button class='btn btn--xs'>Extra small</button>
  */
 .btn--xs {
-  line-height: 14px; /* Forces height of btn--xs to be 18px */
+  line-height: 18px;
   font-size: 10px;
-  padding: 0 8px;
+  padding: 0 6px;
   border-radius: 14px;
 }
 
