@@ -74,10 +74,6 @@ button {
   cursor: pointer;
 }
 
-a:hover {
-  box-shadow: none;
-}
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;

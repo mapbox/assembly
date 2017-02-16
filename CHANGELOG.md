@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.1
+
+- Remove `a:hover { box-shadow: none }` from reset.
+
 ## 0.10.0
 
 - Rework buttons so their heights fall on 6px vertical grid when extra vertical padding is applied.
