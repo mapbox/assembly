@@ -579,11 +579,8 @@ textarea{
   display:inline-block;
   background-color:#448ee4;
   color:#fff;
-  border-width:2px;
-  border-style:solid;
-  border-color:transparent;
   border-radius:18px;
-  padding:4px 12px;
+  padding:6px 12px;
   font-weight:bold;
   text-align:center;
   text-decoration:none !important;
@@ -593,18 +590,18 @@ textarea{
 }
 .btn--stroke{
   background-color:transparent;
-  border-color:currentColor;
+  box-shadow:inset 0 0 0 2px currentColor;
   color:#448ee4;
 }
 .btn--s{
   font-size:12px;
-  padding:1px 18px;
+  padding:0 12px;
   border-radius:15px;
 }
 .btn--xs{
-  line-height:14px;
+  line-height:18px;
   font-size:10px;
-  padding:0 8px;
+  padding:0 6px;
   border-radius:14px;
 }
 .btn:hover,
@@ -811,14 +808,11 @@ textarea{
   font-size:inherit;
   font-weight:bold;
   color:currentColor;
-  padding:4px 30px 4px 12px;
+  padding:6px 30px 6px 12px;
   cursor:pointer;
   display:inline-block;
   transition:color 0.125s,
     background-color 0.125s;
-  border-width:2px;
-  border-style:solid;
-  border-color:transparent;
   border-radius:4px;
   background-color:#448ee4;
 }
@@ -860,7 +854,7 @@ textarea{
 .select--stroke{
   color:#666;
   background-color:transparent;
-  border-color:currentColor;
+  box-shadow:inset 0 0 0 2px currentColor;
 }
 
 .select--stroke + .select-arrow{
@@ -16350,11 +16344,8 @@ textarea{
   display:inline-block;
   background-color:#448ee4;
   color:#fff;
-  border-width:2px;
-  border-style:solid;
-  border-color:transparent;
   border-radius:18px;
-  padding:4px 12px;
+  padding:6px 12px;
   font-weight:bold;
   text-align:center;
   text-decoration:none !important;
@@ -16364,18 +16355,18 @@ textarea{
 }
 .btn--stroke{
   background-color:transparent;
-  border-color:currentColor;
+  box-shadow:inset 0 0 0 2px currentColor;
   color:#448ee4;
 }
 .btn--s{
   font-size:12px;
-  padding:1px 18px;
+  padding:0 12px;
   border-radius:15px;
 }
 .btn--xs{
-  line-height:14px;
+  line-height:18px;
   font-size:10px;
-  padding:0 8px;
+  padding:0 6px;
   border-radius:14px;
 }
 .btn:hover,
@@ -16582,14 +16573,11 @@ textarea{
   font-size:inherit;
   font-weight:bold;
   color:currentColor;
-  padding:4px 30px 4px 12px;
+  padding:6px 30px 6px 12px;
   cursor:pointer;
   display:inline-block;
   transition:color 0.125s,
     background-color 0.125s;
-  border-width:2px;
-  border-style:solid;
-  border-color:transparent;
   border-radius:4px;
   background-color:#448ee4;
 }
@@ -16631,7 +16619,7 @@ textarea{
 .select--stroke{
   color:#666;
   background-color:transparent;
-  border-color:currentColor;
+  box-shadow:inset 0 0 0 2px currentColor;
 }
 
 .select--stroke + .select-arrow{
