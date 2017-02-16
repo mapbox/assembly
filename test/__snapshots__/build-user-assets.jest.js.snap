@@ -95,10 +95,6 @@ button{
   cursor:pointer;
 }
 
-a:hover{
-  box-shadow:none;
-}
-
 button::-moz-focus-inner{
   padding:0;
   border:0;
@@ -15858,10 +15854,6 @@ button{
       -ms-user-select:none;
           user-select:none;
   cursor:pointer;
-}
-
-a:hover{
-  box-shadow:none;
 }
 
 button::-moz-focus-inner{
