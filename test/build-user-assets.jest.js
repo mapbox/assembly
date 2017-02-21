@@ -10,6 +10,8 @@ const crypto = require('crypto');
 const os = require('os');
 const buildUserAssets = require('../scripts/build-user-assets');
 
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000; // 30 second timeout
+
 function getTmp() {
   return path.join(os.tmpdir(), crypto.randomBytes(16).toString('hex'));
 }
