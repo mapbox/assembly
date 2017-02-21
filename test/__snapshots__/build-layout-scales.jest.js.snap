@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`buildLayoutScales defaults 1`] = `
 "
 /* Layout scales */
@@ -6,15 +8,15 @@ exports[`buildLayoutScales defaults 1`] = `
  * Apply column gutters to all columns in a grid by adding a \`grid--gut{size}\` modifier to the \`grid\` element. Class set includes \`*-mm\`, \`*-ml\`, and \`*-mxl\` variations to target screen sizes.
  *
  * @example
- * <div class=\'grid grid--gut12\'>
- *   <div class=\'col col--2\'>
- *     <div class=\'border border--darken10\'>col--2</div>
+ * <div class='grid grid--gut12'>
+ *   <div class='col col--2'>
+ *     <div class='border border--darken10'>col--2</div>
  *   </div>
- *   <div class=\'col col--4\'>
- *     <div class=\'border border--darken10\'>col--4</div>
+ *   <div class='col col--4'>
+ *     <div class='border border--darken10'>col--4</div>
  *   </div>
- *   <div class=\'col col--6\'>
- *     <div class=\'border border--darken10\'>col--6</div>
+ *   <div class='col col--6'>
+ *     <div class='border border--darken10'>col--6</div>
  *   </div>
  * </div>
  * @memberof Grid
@@ -116,7 +118,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'m24 bg-darken10\'>m24</div>
+ * <div class='m24 bg-darken10'>m24</div>
  * @memberof Margins
  */
 
@@ -203,7 +205,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'my24 bg-darken10\'>my24</div>
+ * <div class='my24 bg-darken10'>my24</div>
  * @memberof Margins
  */
 
@@ -309,7 +311,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'mx24 bg-darken10\'>mx24</div>
+ * <div class='mx24 bg-darken10'>mx24</div>
  * @memberof Margins
  */
 .mx0 {
@@ -414,7 +416,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'mt24 bg-darken10\'>mt24</div>
+ * <div class='mt24 bg-darken10'>mt24</div>
  * @memberof Margins
  */
 .mt-neg1 {
@@ -528,7 +530,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'mr24 bg-darken10\'>mr24</div>
+ * <div class='mr24 bg-darken10'>mr24</div>
  * @memberof Margins
  */
 .mr-neg1 {
@@ -644,7 +646,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'mb24 bg-darken10\'>mb24</div>
+ * <div class='mb24 bg-darken10'>mb24</div>
  * @memberof Margins
  */
 .mb-neg1 {
@@ -758,7 +760,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'ml24 bg-darken10\'>ml24</div>
+ * <div class='ml24 bg-darken10'>ml24</div>
  * @memberof Margins
  */
 .ml-neg1 {
@@ -873,7 +875,7 @@ exports[`buildLayoutScales defaults 1`] = `
  * @group
  * @memberof Padding
  * @example
- * <div class=\'p24 bg-darken10\'>p24</div>
+ * <div class='p24 bg-darken10'>p24</div>
  */
 .p0 {
   padding: 0 !important;
@@ -930,7 +932,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'py24 bg-darken10\'>py24</div>
+ * <div class='py24 bg-darken10'>py24</div>
  * @memberof Padding
  */
 .py0 {
@@ -1000,7 +1002,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'px24 bg-darken10\'>px24</div>
+ * <div class='px24 bg-darken10'>px24</div>
  * @memberof Padding
  */
 .px0 {
@@ -1070,7 +1072,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'pt24 bg-darken10\'>pt24</div>
+ * <div class='pt24 bg-darken10'>pt24</div>
  * @memberof Padding
  */
 .pt0 {
@@ -1128,7 +1130,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'pr24 bg-darken10 align-r\'>pr24</div>
+ * <div class='pr24 bg-darken10 align-r'>pr24</div>
  * @memberof Padding
  */
 .pr0 {
@@ -1186,7 +1188,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'pb24 bg-darken10\'>pb24</div>
+ * <div class='pb24 bg-darken10'>pb24</div>
  * @memberof Padding
  */
 .pb0 {
@@ -1244,7 +1246,7 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @group
  * @example
- * <div class=\'pl24 bg-darken10\'>pl24</div>
+ * <div class='pl24 bg-darken10'>pl24</div>
  * @memberof Padding
  */
 .pl0 {
@@ -1298,14 +1300,14 @@ exports[`buildLayoutScales defaults 1`] = `
 /** @endgroup */
 
 /**
- * Set an element\'s width.
+ * Set an element's width.
  *
  * In addition to numeric values, there are \`w-full\` and \`w-auto\` classes.
  *
  * @group
  * @memberof Sizing
  * @example
- * <div class=\'w96 bg-darken10\'>w96</div>
+ * <div class='w96 bg-darken10'>w96</div>
  */
 .w0 {
   width: 0 !important;
@@ -1402,14 +1404,14 @@ exports[`buildLayoutScales defaults 1`] = `
 /** @endgroup */
 
 /**
- * Set an element\'s maximum width.
+ * Set an element's maximum width.
  *
  * In addition to numeric values, there are \`wmax-full\` and \`wmax-none\` classes.
  *
  * @group
  * @memberof Sizing
  * @example
- * <div class=\'wmax6 bg-darken10\'>wmax6</div>
+ * <div class='wmax6 bg-darken10'>wmax6</div>
  */
 .wmax0 {
   max-width: 0 !important;
@@ -1514,14 +1516,14 @@ exports[`buildLayoutScales defaults 1`] = `
 /** @endgroup */
 
 /**
- * Set an element\'s minimum width.
+ * Set an element's minimum width.
  *
  * In addition to numeric values, there is the \`wmin-full\` class.
  *
  * @group
  * @memberof Sizing
  * @example
- * <div class=\'inline-block wmin96 bg-darken10\'>wmin96</div>
+ * <div class='inline-block wmin96 bg-darken10'>wmin96</div>
  */
 .wmin0 {
   min-width: 0 !important;
@@ -1606,14 +1608,14 @@ exports[`buildLayoutScales defaults 1`] = `
 /** @endgroup */
 
 /**
- * Set an element\'s height.
+ * Set an element's height.
  *
  * In addition to numeric values, there are \`h-full\` and \`h-auto\` classes.
  *
  * @group
  * @memberof Sizing
  * @example
- * <div class=\'h24 bg-darken10\'>h24</div>
+ * <div class='h24 bg-darken10'>h24</div>
  */
 .h0 {
   height: 0 !important;
@@ -1702,14 +1704,14 @@ exports[`buildLayoutScales defaults 1`] = `
 /** @endgroup */
 
 /**
- * Set an element\'s maximum height.
+ * Set an element's maximum height.
  *
  * In addition to numeric values, there are \`hmax-full\` and \`hmax-none\` classes.
  *
  * @group
  * @memberof Sizing
  * @example
- * <div class=\'hmax12 bg-darken10\'>hmax12</div>
+ * <div class='hmax12 bg-darken10'>hmax12</div>
  */
 .hmax0 {
   max-height: 0 !important;
@@ -1798,14 +1800,14 @@ exports[`buildLayoutScales defaults 1`] = `
 /** @endgroup */
 
 /**
- * Set an element\'s minimum height.
+ * Set an element's minimum height.
  *
  * In addition to numeric values, there is the \`hmin-full\` class.
  *
  * @group
  * @memberof Sizing
  * @example
- * <div class=\'hmin48 bg-darken10\'>hmin48</div>
+ * <div class='hmin48 bg-darken10'>hmin48</div>
  */
 .hmin0 {
   min-height: 0 !important;
