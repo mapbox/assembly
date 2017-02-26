@@ -234,6 +234,10 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   color: var(--text-color);
 }
 
+.select option:disabled {
+  color: var(--darken25);
+}
+
 /* IE overrides */
 .select::-ms-expand { display: none; }
 /* IE actually colors the options, so they can't be white */

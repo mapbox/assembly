@@ -41,7 +41,7 @@ class Selects extends React.Component {
                 <div className={selectContainerClass}>
                   <select className={selectClass}>
                     <option>firstoption</option>
-                    <option>two</option>
+                    <option disabled>two</option>
                     <option>three</option>
                   </select>
                   <div className='select-arrow'></div>
