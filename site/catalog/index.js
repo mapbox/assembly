@@ -20,11 +20,9 @@ import { Flexbox } from './flexbox';
 class Catalog extends React.Component {
   render() {
     return (
-      <div>
-        <div className='mt24'>
-          <h1 className='txt-subhead txt-bold mb12'>Catalog</h1>
-          <p className='col col--6-mm'>A catalog of Assembly variations for reference and debugging purposes.</p>
-        </div>
+      <div className='pt24 '>
+        <h1 className='txt-subhead txt-bold mb18'>Catalog</h1>
+        <p className='col col--6-mm'>A catalog of Assembly variations for reference and debugging purposes.</p>
         <div id='Typography' className='mb48'>
           <Typography />
         </div>

@@ -11,19 +11,19 @@ const defaultMediaQueries = require('../src/media-queries');
 class Home extends React.Component {
   render() {
     return (
-      <div className='mt24 wmax960'>
-        <div className='mt72 flex-parent-ml flex-parent--wrap-ml'>
-          <h1 className='flex-child-ml flex-child--grow-ml txt-subhead txt-headline-mm color-blue txt-uppercase txt-spacing1'>
+      <div className='pt24'>
+        <div className='flex-parent-ml flex-parent--wrap-ml'>
+          <h1 className='flex-child-ml flex-child--grow-ml txt-subhead txt-bold'>
             Assembly.css
           </h1>
           <div className='flex-child-ml mt18 color-darken50'>
             v{pkg.version}
           </div>
         </div>
-        <p className='txt-l mt24'>
+        <p className='txt-l mt18'>
           Assembly is an open source CSS framework that makes the hard parts of designing for the web easy.
         </p>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb48 txt-l txt-uppercase txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb48 txt-l txt-bold'>
           Getting started
         </h2>
         <p>
@@ -61,10 +61,10 @@ class Home extends React.Component {
           Unsure what else you need in the <code className='txt-code'>&lt;head&gt;</code>? Check out <a className='link' href='https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML'>MDN's detailed guide</a>.
         </p>
 
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-uppercase txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-bold'>
           Philosophy
         </h2>
-        <div className='grid grid--gut24'>
+        <div className='grid grid--gut24 grid--gut48-ml'>
           <div className='col col--6-ml'>
             <h3 className='mt48 mb12 txt-bold'>Comprehensive</h3>
             <p>
@@ -90,7 +90,7 @@ class Home extends React.Component {
             </p>
           </div>
         </div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-uppercase txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-bold'>
           Overview
         </h2>
 
