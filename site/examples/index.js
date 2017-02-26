@@ -17,8 +17,8 @@ class Examples extends React.Component {
     return (
       <div>
         <div className='py24'>
-          <h1 className='txt-subhead txt-bold mb18'>Examples</h1>
-          <p className='col col--6-mm'>Composing with classes demonstrates the real flexibility in Assembly. The pages below feature a variety of snippets that cover common components to layout interfaces. They are designed for reusability and adjust elegantly for smaller screens.</p>
+          <h1 className='txt-h2 txt-bold mb18'>Examples</h1>
+          <p className='col col--6-mm'>To effectively use Assembly, you must "assemble" many classes together into UI components and page layouts. The examples both demonstrate how to use Assembly, and they function as practical, reusable, customizable exmaples that can be directly copy and pasted. All the examples are fully responsive.</p>
         </div>
         <div className='grid grid--gut24'>
           {this.props.children.map(renderChildrenAsNav)}

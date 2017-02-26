@@ -148,8 +148,11 @@ const targetClassArray = [
   'unround-br',
   'unround-bl',
   // Typography
-  'txt-headline',
-  'txt-subhead',
+  'txt-h1',
+  'txt-h2',
+  'txt-h3',
+  'txt-h4',
+  'txt-h5',
   'txt-xl',
   'txt-l',
   'txt-m',
