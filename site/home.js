@@ -13,7 +13,7 @@ class Home extends React.Component {
     return (
       <div className='pt24'>
         <div className='flex-parent-ml flex-parent--wrap-ml'>
-          <h1 className='flex-child-ml flex-child--grow-ml txt-subhead txt-bold'>
+          <h1 className='flex-child-ml flex-child--grow-ml txt-h2 txt-bold'>
             Assembly.css
           </h1>
           <div className='flex-child-ml mt18 color-darken50'>

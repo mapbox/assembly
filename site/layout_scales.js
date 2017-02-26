@@ -92,7 +92,7 @@ class LayoutScales extends React.Component {
     return (
       <div>
         <div className='mb24'>
-          <h1 className='txt-subhead txt-bold pt24 mb18'>
+          <h1 className='txt-h2 txt-bold pt24 mb18'>
             Layout Scales
           </h1>
           <p className='col col--6-mm mb48'>

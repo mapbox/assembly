@@ -388,17 +388,29 @@ exports[`buildMediaVariants defaults 1`] = `
     .unround-bl-mm {
         border-bottom-left-radius: 0 !important
     }
-    .txt-headline-mm {
+    .txt-h1-mm {
         font-size: 45px;
         line-height: 54px
     }
-    .txt-subhead-mm {
+    .txt-h2-mm {
         font-size: 35px;
         line-height: 42px
     }
-    .txt-xl-mm {
+    .txt-h3-mm {
         font-size: 30px;
         line-height: 36px
+    }
+    .txt-h4-mm {
+        font-size: 18px;
+        line-height: 24px
+    }
+    .txt-h5-mm {
+        font-size: 15px;
+        line-height: 18px
+    }
+    .txt-xl-mm {
+        font-size: 30px;
+        line-height: 45px
     }
     .txt-l-mm {
         font-size: 18px;
@@ -805,17 +817,29 @@ exports[`buildMediaVariants defaults 1`] = `
     .unround-bl-ml {
         border-bottom-left-radius: 0 !important
     }
-    .txt-headline-ml {
+    .txt-h1-ml {
         font-size: 45px;
         line-height: 54px
     }
-    .txt-subhead-ml {
+    .txt-h2-ml {
         font-size: 35px;
         line-height: 42px
     }
-    .txt-xl-ml {
+    .txt-h3-ml {
         font-size: 30px;
         line-height: 36px
+    }
+    .txt-h4-ml {
+        font-size: 18px;
+        line-height: 24px
+    }
+    .txt-h5-ml {
+        font-size: 15px;
+        line-height: 18px
+    }
+    .txt-xl-ml {
+        font-size: 30px;
+        line-height: 45px
     }
     .txt-l-ml {
         font-size: 18px;
@@ -1222,17 +1246,29 @@ exports[`buildMediaVariants defaults 1`] = `
     .unround-bl-mxl {
         border-bottom-left-radius: 0 !important
     }
-    .txt-headline-mxl {
+    .txt-h1-mxl {
         font-size: 45px;
         line-height: 54px
     }
-    .txt-subhead-mxl {
+    .txt-h2-mxl {
         font-size: 35px;
         line-height: 42px
     }
-    .txt-xl-mxl {
+    .txt-h3-mxl {
         font-size: 30px;
         line-height: 36px
+    }
+    .txt-h4-mxl {
+        font-size: 18px;
+        line-height: 24px
+    }
+    .txt-h5-mxl {
+        font-size: 15px;
+        line-height: 18px
+    }
+    .txt-xl-mxl {
+        font-size: 30px;
+        line-height: 45px
     }
     .txt-l-mxl {
         font-size: 18px;

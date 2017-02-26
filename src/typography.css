@@ -135,33 +135,60 @@ textarea {
  */
 
 /**
- * Classes for the standard text scale.
+ * Classes for the headline text scale. Line heights are 1.3333 times font size or less.
  * All text size classes include `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
  *
  * @memberof Type basics
  * @group
  * @example
- * <div class='txt-headline'>Malesuada Pharetra Ridiculus</div>
- * <div class='txt-subhead'>Malesuada Pharetra Ridiculus</div>
- * <div class='txt-xl'>Malesuada Pharetra Ridiculus</div>
- * <div class='txt-l'>Malesuada Pharetra Ridiculus</div>
- * <div class='txt-m'>Malesuada Pharetra Ridiculus</div>
- * <div class='txt-s'>Malesuada Pharetra Ridiculus</div>
- * <div class='txt-xs'>Malesuada Pharetra Ridiculus</div>
+ * <div class='txt-h1'>Malesuada Pharetra Ridiculus</div>
+ * <div class='txt-h2'>Malesuada Pharetra Ridiculus</div>
+ * <div class='txt-h3'>Malesuada Pharetra Ridiculus</div>
+ * <div class='txt-h4'>Malesuada Pharetra Ridiculus</div>
+ * <div class='txt-h5'>Malesuada Pharetra Ridiculus</div>
  */
-.txt-headline {
+.txt-h1 {
   font-size: 45px;
   line-height: 54px;
 }
 
-.txt-subhead {
+.txt-h2 {
   font-size: 35px;
   line-height: 42px;
 }
 
-.txt-xl {
+.txt-h3 {
   font-size: 30px;
   line-height: 36px;
+}
+
+.txt-h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.txt-h5 {
+  font-size: 15px;
+  line-height: 18px;
+}
+/** @endgroup */
+
+/**
+ * Classes for the body text scale. Line heights are 1.5 times font size or more.
+ * All text size classes include `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
+ *
+ * @memberof Type basics
+ * @group
+ * @example
+ * <div class='txt-xl'>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
+ * <div class='txt-l'>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
+ * <div class='txt-m'>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
+ * <div class='txt-s'>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
+ * <div class='txt-xs'>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
+ */
+.txt-xl {
+  font-size: 30px;
+  line-height: 45px;
 }
 
 .txt-l {
