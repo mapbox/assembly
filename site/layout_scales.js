@@ -49,7 +49,7 @@ class LayoutScales extends React.Component {
     const rows = Object.keys(classSets).map((name) => {
       const data = classSets[name];
       const scale = data.scale.map((number) => {
-        const numberClasses = 'round border border--gray-light flex-child txt-mono py6 px12 mr3 mb3';
+        const numberClasses = 'flex-child w72 txt-mono align-r px6 py3 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light color-gray';
         return (
           <span
             key={number}
@@ -64,7 +64,7 @@ class LayoutScales extends React.Component {
         return (
           <div
             key={classPattern}
-            className='inline-block txt-code mr6 mb6'
+            className='mr3 mb3 px3 txt-mono color-blue-dark bg-blue-faint inline-block round'
           >
             {classPattern}
           </div>
@@ -74,15 +74,15 @@ class LayoutScales extends React.Component {
       return (
         <div
           key={name}
-          className='py12'
+          className='mb48'
         >
-          <div className='mb6'>
-            <div className='inline-block txt-bold mr24'>
+          <div className='mb12'>
+            <div className='inline-block txt-bold mr12'>
               {name}
             </div>
             {classPatterns}
           </div>
-          <div className='flex-parent-inline flex-parent--wrap'>
+          <div className='flex-parent flex-parent--wrap'>
             {scale}
           </div>
         </div>
@@ -92,10 +92,10 @@ class LayoutScales extends React.Component {
     return (
       <div>
         <div className='mb24'>
-          <h1 className='txt-subhead txt-bold pt24 mb12'>
+          <h1 className='txt-subhead txt-bold pt24 mb18'>
             Layout Scales
           </h1>
-          <p className='col col--6-mm mb12'>
+          <p className='col col--6-mm mb48'>
             These are the numbers, corresponding to pixel values, available for each set of layout classes.
             All of these class sets include <code className='txt-code'>*-mm</code>, <code className='txt-code'>*-ml</code>, and <code className='txt-code'>*-mxl</code> variations to target screen sizes.
           </p>
