@@ -4,7 +4,7 @@ class Pills extends React.Component {
   render() {
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-uppercase txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
           Button pills
         </h2>
 
@@ -16,10 +16,10 @@ class Pills extends React.Component {
         </div>
 
         <div className='flex-parent mb18'>
-          <button className='btn btn--red btn--stroke btn--pill btn--pill-hl round'>Confirm</button>
-          <button className='btn btn--red btn--stroke btn--pill btn--pill-hc round'>Confirm</button>
-          <button className='btn btn--red btn--stroke btn--pill btn--pill-hc round'>Confirm</button>
-          <button className='btn btn--red btn--stroke btn--pill btn--pill-hr round'>Confirm</button>
+          <button className='btn btn--red btn--stroke btn--pill-stroke btn--pill-hl round btn--fill'>Confirm</button>
+          <button className='btn btn--red btn--stroke btn--pill-stroke btn--pill-hc round is-active'>Confirm</button>
+          <button className='btn btn--red btn--pill-stroke btn--pill-hc round is-active'>Confirm</button>
+          <button className='btn btn--red btn--stroke btn--pill-stroke btn--pill-hr round'>Confirm</button>
         </div>
 
         <div className='mb18 flex-parent-inline flex-parent--column'>
@@ -30,10 +30,10 @@ class Pills extends React.Component {
         </div>
 
         <div className='mb18 ml18 flex-parent-inline flex-parent--column'>
-          <button className='btn btn--stroke btn--s btn--pill btn--pill-vt round'>Confirm</button>
-          <button className='btn btn--stroke btn--s btn--pill btn--pill-vc round'>Confirm</button>
-          <button className='btn btn--stroke btn--s btn--pill btn--pill-vc round'>Confirm</button>
-          <button className='btn btn--stroke btn--s btn--pill btn--pill-vb round is-active'>Confirm</button>
+          <button className='btn btn--s btn--pill-stroke btn--pill-vt round'>Confirm</button>
+          <button className='btn btn--stroke btn--s btn--pill-stroke btn--pill-vc round'>Confirm</button>
+          <button className='btn btn--stroke btn--s btn--pill-stroke btn--pill-vc round'>Confirm</button>
+          <button className='btn btn--stroke btn--s btn--pill-stroke btn--pill-vb round is-active'>Confirm</button>
         </div>
       </div>
     );

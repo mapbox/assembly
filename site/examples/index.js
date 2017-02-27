@@ -5,9 +5,9 @@ class Examples extends React.Component {
 
     function renderChildrenAsNav(child, i) {
       return (
-        <div key={i}>
+        <div className='col col--4' key={i}>
           <a
-            className='block link'
+            className='block link py3'
             href={`/assembly${child.route}`}
           >{child.name}</a>
         </div>
@@ -16,11 +16,13 @@ class Examples extends React.Component {
 
     return (
       <div>
-        <div className='my24'>
-          <h1 className='txt-subhead txt-bold mt24 mb18'>Examples</h1>
-          <p className='col col--6-mm'>Composing with classes demonstrates the real flexibility in Assembly. The pages below feature a variety of snippets that cover common components to layout interfaces. They are designed for reusability and adjust elegantly for smaller screens.</p>
+        <div className='py24'>
+          <h1 className='txt-h2 txt-bold mb18'>Examples</h1>
+          <p className='col col--6-mm'>To effectively use Assembly, you must "assemble" many classes together into UI components and page layouts. The examples both demonstrate how to use Assembly, and they function as practical, reusable, customizable exmaples that can be directly copy and pasted. All the examples are fully responsive.</p>
         </div>
-        {this.props.children.map(renderChildrenAsNav)}
+        <div className='grid grid--gut24'>
+          {this.props.children.map(renderChildrenAsNav)}
+        </div>
       </div>
     );
   }

@@ -125,19 +125,23 @@
 /**
  * Create pill button groups.
  * Pill groups must be wrapped in a `flex-parent-inline` container.
- * Every button in a pill group must have the `btn` and `btn--pill` classes, along with a modifier specifying its position.
+ * Every button in a pill group must have
+ * - a `btn` class
+ * - any `btn--*` modifiers you want (e.g. `btn--stroke`)
+ * - a `btn--pill` *or* `btn--pill-stroke` modifier. Use the `btn--pill-stroke` modifier if the buttons in the pill group are mostly stroke buttons (though active buttons can be non-stroke, if you like that)
+ * - a `btn--pill-*` modifier specifying its position (e.g. `btn--pill-hc`)
  *
  * For *horizontal* pills, use
  * - `flex-parent-inline` on the container
- * - `btn btn--pill btn--pill-hc` (center)
- * - `btn btn--pill btn--pill-hl` (left)
- * - `btn btn--pill btn--pill-hr` (right)
+ * - `btn btn--pill(-stroke) btn--pill-hc` (center)
+ * - `btn btn--pill(-stroke) btn--pill-hl` (left)
+ * - `btn btn--pill(-stroke) btn--pill-hr` (right)
  *
  * For *vertical* pills, use
  * - `flex-parent-inline flex-parent--column` on the container
- * - `btn btn--pill btn--pill-vc` (center)
- * - `btn btn--pill btn--pill-vt` (top)
- * - `btn btn--pill btn--pill-vb` (bottom)
+ * - `btn btn--pill(-stroke) btn--pill-vc` (center)
+ * - `btn btn--pill(-stroke) btn--pill-vt` (top)
+ * - `btn btn--pill(-stroke) btn--pill-vb` (bottom)
  *
  * Pill buttons can be modified and themed in the same ways as regular buttons.
  *
@@ -149,19 +153,19 @@
  *   <button class="btn btn--pill btn--pill-hr">Right</button>
  * </div>
  * <div class="flex-parent-inline flex-parent--column">
- *   <button class="btn btn--pill btn--pill-vt">Top</button>
- *   <button class="btn btn--pill btn--pill-vc is-active">Center</button>
- *   <button class="btn btn--pill btn--pill-vb">Bottom</button>
+ *   <button class="btn btn--stroke btn--pill-stroke btn--pill-vt">Top</button>
+ *   <button class="btn btn--pill-stroke btn--pill-vc is-active">Center</button>
+ *   <button class="btn btn--stroke btn--pill-stroke btn--pill-vb">Bottom</button>
  * </div>
  */
-.btn--pill {
+.btn--pill-stroke {
   position: relative;
 }
 
 /* Put the active pill on top, so if they're stroke pills its
 active color is visible on all borders */
-.btn--pill:hover,
-.btn--pill.is-active {
+.btn--pill-stroke:hover,
+.btn--pill-stroke.is-active {
   z-index: 2;
 }
 
@@ -172,7 +176,6 @@ against .round class */
 
 .btn.btn--pill-hc {
   border-radius: 0 !important;
-  margin-left: 1px;
 }
 
 .btn.btn--pill-hl {
@@ -183,12 +186,15 @@ against .round class */
 .btn.btn--pill-hr {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
+}
+
+.btn.btn--pill-hc:not(.btn--pill-stroke),
+.btn.btn--pill-hr:not(.btn--pill-stroke) {
   margin-left: 1px;
 }
 
 .btn.btn--pill-vc {
   border-radius: 0 !important;
-  margin-top: 1px;
   display: block;
   width: 100%;
 }
@@ -203,25 +209,29 @@ against .round class */
 .btn.btn--pill-vb {
   border-top-right-radius: 0 !important;
   border-top-left-radius: 0 !important;
-  margin-top: 1px;
   display: block;
   width: 100%;
 }
 
-.btn--stroke.btn--pill-hc {
+.btn.btn--pill-vc:not(.btn--pill-stroke),
+.btn.btn--pill-vb:not(.btn--pill-stroke) {
+  margin-top: 1px;
+}
+
+.btn--pill-stroke.btn--pill-hc {
   margin-left: -2px;
   margin-right: 0;
 }
 
-.btn--stroke.btn--pill-hr {
+.btn--pill-stroke.btn--pill-hr {
   margin-left: -2px;
 }
 
-.btn--stroke.btn--pill-vc {
+.btn--pill-stroke.btn--pill-vc {
   margin-top: -2px;
   margin-bottom: 0;
 }
 
-.btn--stroke.btn--pill-vb {
+.btn--pill-stroke.btn--pill-vb {
   margin-top: -2px;
 }

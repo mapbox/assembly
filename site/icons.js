@@ -25,25 +25,25 @@ class Icons extends React.Component {
   render() {
     const iconEls = icons.map((icon) => {
       return (
-        <div key={icon} className='col pt6 pb6 col--6 col--4-ml col--3-mxl flex-parent flex-parent--center-cross'>
+        <div key={icon} className='col--6 col--4-ml col--3-mxl flex-parent flex-parent--center-cross flex-child p12 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light'>
           <svg
             className='icon mr12'
             dangerouslySetInnerHTML={{ __html: `<use xlink:href="#icon-${icon}"></use>` }}
           />
-          {icon}
+          <span className='color-gray'>{icon}</span>
         </div>
       );
     });
 
     return (
       <div>
-        <h1 className='txt-subhead mb12 txt-bold pt24'>
+        <h1 className='txt-h2 mb12 txt-bold pt24'>
           Icons
         </h1>
         <div className='mb48 prose col col--6-mm'>
           <p>Assembly comes with {icons.length} icons covering most UI design needs. The icons are designed to be used as embedded SVGs. For usage instructions, look at <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>.</p>
         </div>
-        <div className='flex-parent flex-parent--wrap bg-gray-faint round pl24 pr24 pt12 pb12 txt-m'>
+        <div className='flex-parent flex-parent--wrap txt-mono txt-s'>
           {iconEls}
         </div>
 

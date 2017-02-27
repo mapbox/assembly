@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.11.0
+
+- Rework typographic scale to have separate headline rules (`txt-h1`, `txt-h2`, `txt-h3`, `txt-h4`, `txt-h5`) from body text rules (`txt-xl`, `txt-l`, `txt-m`, `txt-s`, `txt-xs`). Headline rules have tighter line height than body text rules.
+- Add new `btn--pill-stroke` rule to make sure combined stroked/filled button pills look good.
+- Fix padding on table elements.
+- Make `-dark` colors darker.
+- Fix bug with appearance of disabled select item in FF.
+
 ## 0.10.1
 
 - Remove `a:hover { box-shadow: none }` from reset.

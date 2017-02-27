@@ -23,7 +23,7 @@ class Selects extends React.Component {
   render() {
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-uppercase txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
           Selects
         </h2>
 
@@ -41,7 +41,7 @@ class Selects extends React.Component {
                 <div className={selectContainerClass}>
                   <select className={selectClass}>
                     <option>firstoption</option>
-                    <option>two</option>
+                    <option disabled>two</option>
                     <option>three</option>
                   </select>
                   <div className='select-arrow'></div>
