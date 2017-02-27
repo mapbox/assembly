@@ -849,6 +849,10 @@ textarea{
   background-color:#fff;
   color:rgba(0, 0, 0, 0.75);
 }
+
+.select option:disabled{
+  color:rgba(0, 0, 0, 0.25);
+}
 .select::-ms-expand{ display:none; }
 .select option{ color:rgba(0, 0, 0, 0.75); }
 @media all and (-ms-high-contrast: active){
@@ -16659,6 +16663,10 @@ textarea{
 .select option{
   background-color:#fff;
   color:rgba(0, 0, 0, 0.75);
+}
+
+.select option:disabled{
+  color:rgba(0, 0, 0, 0.25);
 }
 .select::-ms-expand{ display:none; }
 .select option{ color:rgba(0, 0, 0, 0.75); }
