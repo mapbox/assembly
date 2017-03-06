@@ -3,7 +3,9 @@
 const fs = require('fs');
 const xml2js = require('xml2js');
 const parseString = xml2js.parseString;
-
+const collectPaths = require('./svg-utils').collectPaths;
+const collectPathsFromGroup = require('./svg-utils').collectPathsFromGroup;
+const invalidElement = require('./svg-utils').invalidElement;
 
 fs.readdir('./src/svgs/', (err, files) => {
   const svgFiles = files.filter((file) =>
@@ -30,30 +32,11 @@ function cleanSvg(svg, fileName) {
       '</svg>');
   }
 
-  function collectPaths(path) {
-    path.forEach((p) => {
-      if (p.$ && p.$.d) {
-        pathData.push(p.$.d);
-      }
-    });
-  }
+  if (invalidElement(svg)) throw new Error(`${fileName} has ${invalidElement(svg)}`);
+  if (svg.g) collectPathsFromGroup(svg.g, pathData);
+  if (svg.path) collectPaths(svg.path, pathData);
 
-  function traverseGroups(group) {
-    group.forEach((g) => {
-
-      if (g.path) {
-        collectPaths(g.path);
-      }
-
-      if (g.g) {
-        traverseGroups(g.g);
-      }
-
-    });
-  }
-
-  if (svg.g) traverseGroups(svg.g);
-  if (svg.path) collectPaths(svg.path);
+  if (!pathData) throw new Error(`${fileName} has no paths.`);
 
   fs.writeFile('./src/svgs/' + fileName, buildSvgWithPaths(pathData), 'utf8', (err) => {
     if (err) return console.error(err);

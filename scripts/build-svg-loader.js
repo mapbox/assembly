@@ -7,16 +7,26 @@ const svgDir = path.join(__dirname, '../src/svgs');
 const xml2js = require('xml2js');
 const parseString = xml2js.parseString;
 const SVGO = require('svgo');
+const collectPaths = require('./svg-utils').collectPaths;
+const collectPathsFromGroup = require('./svg-utils').collectPathsFromGroup;
 
-const svgo = new SVGO();
+const svgo = new SVGO({
+  plugins: [
+    {
+      removeAttrs: {
+        attrs: 'path:(fill|color|style|width|height|overflow)'
+      }
+    }
+  ]
+});
 
 const baseJsTemplate = (options) => {
   return `
     (function() {
       var svgData = '${JSON.stringify(options.icons)}';
       function getSymbols(icon) {
-        return ('<symbol id=' + icon[0] + 'viewBox="0 0 18 18">' + icon[1].map(function(p) {
-          return '<path d="' + p + '"/>';
+        return ('<symbol id="' + icon[0] + '" viewBox="0 0 18 18">' + icon[1].map(function(p) {
+          return '<path d="' + p + '" />';
         }).join('') + '</symbol>');
       }
 
@@ -25,7 +35,9 @@ const baseJsTemplate = (options) => {
           return getSymbols(svg);
         }).join('') + '</svg>';
 
-      var svgDocument = (new DOMParser()).parseFromString(doc.toString(), 'text/xml');
+      console.log(doc);
+
+      var svgDocument = (new DOMParser()).parseFromString(doc, 'text/xml');
       var appendSvg = function () {
         document.body.appendChild(svgDocument.getElementById('svg-symbols'));
       }
@@ -40,56 +52,48 @@ const baseJsTemplate = (options) => {
 };
 
 function addFileToIcons(filename, icons) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     const extname = path.extname(filename);
     if (extname !== '.svg') return resolve();
 
     const basename = path.basename(filename, extname);
 
+    const handleError = (err) => {
+      console.log(`Error with icon "${basename}"`);
+      reject(err);
+    };
+
     pify(fs.readFile)(filename, 'utf8')
       .then((content) => {
-        pify(svgo.optimize)(content)
-          .then((optimizedContent) => {
-            pify(parseString)(optimizedContent)
+        try {
+          svgo.optimize(content, (optimizedContent) => {
+            pify(parseString)(optimizedContent.data)
               .then((svgObject) => {
 
                 const pathData = [];
 
-                function collectPaths(path) {
-                  path.forEach((p) => {
-                    if (p.$ && p.$.d) {
-                      pathData.push(p.$.d);
-                    }
-                  });
+                if (svgObject.svg.g) {
+                  collectPathsFromGroup(svgObject.svg.g, pathData);
                 }
 
-                function traverseGroups(group) {
-                  group.forEach((g) => {
-
-                    if (g.path) {
-                      collectPaths(g.path);
-                    }
-
-                    if (g.g) {
-                      traverseGroups(g.g);
-                    }
-
-                  });
+                if (svgObject.svg.path) {
+                  collectPaths(svgObject.svg.path, pathData);
                 }
-                if (svgObject.svg.g) traverseGroups(svgObject.svg.g);
-                if (svgObject.svg.path) collectPaths(svgObject.svg.path);
 
                 icons.push([`icon-${basename}`, pathData]);
                 resolve();
-              });
+              }, handleError);
           });
+        } catch (e) {
+          handleError(e);
+        }
       });
 
   });
 }
 
 function buildSvgLoader() {
-  const icons = [];
+  let icons = [];
   return pify(fs.readdir)(svgDir)
     .then((filenames) => {
       return Promise.all(filenames.map((filename) => {
@@ -97,6 +101,11 @@ function buildSvgLoader() {
       }));
     })
     .then(() => {
+      icons = icons.sort((a, b) => {
+        if (a[0] > b[0]) return -1;
+        if (a[0] < b[0]) return 1;
+        return 0;
+      });
       return baseJsTemplate({ icons: icons });
     });
 }

@@ -6,6 +6,7 @@ const test = require('tape');
 const xml2js = require('xml2js');
 
 const parseString = xml2js.parseString;
+const invalidElement = require('../scripts/svg-utils').invalidElement;
 
 test('valid svgs ', (t) => {
 
@@ -31,17 +32,6 @@ test('valid svgs ', (t) => {
   function validateSvg(svg, fileName) {
     const errors = [];
     const pixelUnitRegex = /^-?([0-9])+( ?px)?$/;
-
-    function invalidElement(o) {
-      const keys = Object.keys(o);
-      let invalid = false;
-
-      keys.some((key) => {
-        invalid = key.match(/^(rectangle|circle|ellipse|line|polyline|polygon|style)$/) && key;
-        return invalid;
-      });
-      return invalid;
-    }
 
     function checkPaths(pathArray) {
       pathArray.forEach((path) => {
