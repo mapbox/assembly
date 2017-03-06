@@ -3,12 +3,13 @@
 const fs = require('fs');
 const pify = require('pify');
 const path = require('path');
-const svgDir = path.join(__dirname, '../src/svgs');
 const xml2js = require('xml2js');
 const parseString = xml2js.parseString;
 const SVGO = require('svgo');
 const collectPaths = require('./svg-utils').collectPaths;
 const collectPathsFromGroup = require('./svg-utils').collectPathsFromGroup;
+
+const svgDir = path.join(__dirname, '../src/svgs');
 
 const svgo = new SVGO({
   plugins: [
@@ -34,8 +35,6 @@ const baseJsTemplate = (options) => {
         JSON.parse(svgData).map(function(svg) {
           return getSymbols(svg);
         }).join('') + '</svg>';
-
-      console.log(doc);
 
       var svgDocument = (new DOMParser()).parseFromString(doc, 'text/xml');
       var appendSvg = function () {

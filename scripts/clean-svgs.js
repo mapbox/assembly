@@ -28,7 +28,7 @@ function cleanSvg(svg, fileName) {
 
   function buildSvgWithPaths(pathData) {
     return ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
-      '<svg viewBox="0 0 18 18">' + pathData.map((p) => `<path d="${p}"/>`).join('') +
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 18">' + pathData.map((p) => `<path d="${p}"/>`).join('') +
       '</svg>');
   }
 
