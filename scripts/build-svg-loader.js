@@ -6,11 +6,14 @@ const path = require('path');
 const svgDir = path.join(__dirname, '../src/svgs');
 const xml2js = require('xml2js');
 const parseString = xml2js.parseString;
+const SVGO = require('svgo');
+
+const svgo = new SVGO();
 
 const baseJsTemplate = (options) => {
   return `
     (function() {
-      var svgData = ${JSON.stringify(options.icons)};
+      var svgData = '${JSON.stringify(options.icons)}';
       function getSymbols(icon) {
         return ('<symbol id=' + icon[0] + 'viewBox="0 0 18 18">' + icon[1].map(function(p) {
           return '<path d="' + p + '"/>';
@@ -18,7 +21,7 @@ const baseJsTemplate = (options) => {
       }
 
       var doc = '<?xml version="1.0" encoding="UTF-8"?><svg id="svg-symbols" style="display:none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
-        svgData.map(function(svg) {
+        JSON.parse(svgData).map(function(svg) {
           return getSymbols(svg);
         }).join('') + '</svg>';
 
@@ -45,37 +48,40 @@ function addFileToIcons(filename, icons) {
 
     pify(fs.readFile)(filename, 'utf8')
       .then((content) => {
-        pify(parseString)(content)
-          .then((svgObject) => {
+        pify(svgo.optimize)(content)
+          .then((optimizedContent) => {
+            pify(parseString)(optimizedContent)
+              .then((svgObject) => {
 
-            const pathData = [];
+                const pathData = [];
 
-            function collectPaths(path) {
-              path.forEach((p) => {
-                if (p.$ && p.$.d) {
-                  pathData.push(p.$.d);
+                function collectPaths(path) {
+                  path.forEach((p) => {
+                    if (p.$ && p.$.d) {
+                      pathData.push(p.$.d);
+                    }
+                  });
                 }
+
+                function traverseGroups(group) {
+                  group.forEach((g) => {
+
+                    if (g.path) {
+                      collectPaths(g.path);
+                    }
+
+                    if (g.g) {
+                      traverseGroups(g.g);
+                    }
+
+                  });
+                }
+                if (svgObject.svg.g) traverseGroups(svgObject.svg.g);
+                if (svgObject.svg.path) collectPaths(svgObject.svg.path);
+
+                icons.push([`icon-${basename}`, pathData]);
+                resolve();
               });
-            }
-
-            function traverseGroups(group) {
-              group.forEach((g) => {
-
-                if (g.path) {
-                  collectPaths(g.path);
-                }
-
-                if (g.g) {
-                  traverseGroups(g.g);
-                }
-
-              });
-            }
-            if (svgObject.svg.g) traverseGroups(svgObject.svg.g);
-            if (svgObject.svg.path) collectPaths(svgObject.svg.path);
-
-            icons.push([`icon-${basename}`, pathData]);
-            resolve();
           });
       });
 
