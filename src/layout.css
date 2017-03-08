@@ -393,6 +393,19 @@
 .flex-parent--stretch-cross { align-items: stretch !important; }
 
 /**
+ * Evenly distribute children across the line, so first child is at the start
+ * and last child is at the end.
+ *
+ * @memberof Flexbox
+ * @example
+ * <div class='flex-parent flex-parent--space-between-main bg-darken10 h96'>
+ *  <div class='flex-child bg-darken10'>child</div>
+ *  <div class='flex-child bg-darken10'>child</div>
+ * </div>
+ */
+.flex-parent--space-between-main { justify-content: space-between !important; }
+
+/**
  * Establish an element as a flex child. This class mainly exists to anticipate certain bugs
  * and unexpected behaviors that can otherwise occur with flexbox (especially in IE).
  *
