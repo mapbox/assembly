@@ -226,6 +226,9 @@ exports[`buildMediaVariants defaults 1`] = `
     .flex-parent--stretch-cross-mm {
         align-items: stretch !important
     }
+    .flex-parent--space-between-main-mm {
+        justify-content: space-between !important
+    }
     .flex-child-mm {
         display: block;
         max-width: 100%
@@ -655,6 +658,9 @@ exports[`buildMediaVariants defaults 1`] = `
     .flex-parent--stretch-cross-ml {
         align-items: stretch !important
     }
+    .flex-parent--space-between-main-ml {
+        justify-content: space-between !important
+    }
     .flex-child-ml {
         display: block;
         max-width: 100%
@@ -1083,6 +1089,9 @@ exports[`buildMediaVariants defaults 1`] = `
     }
     .flex-parent--stretch-cross-mxl {
         align-items: stretch !important
+    }
+    .flex-parent--space-between-main-mxl {
+        justify-content: space-between !important
     }
     .flex-child-mxl {
         display: block;

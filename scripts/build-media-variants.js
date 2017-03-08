@@ -94,6 +94,7 @@ const targetClassArray = [
   'flex-parent--center-main',
   'flex-parent--center-cross',
   'flex-parent--stretch-cross',
+  'flex-parent--space-between-main',
   'flex-child',
   'flex-child--grow',
   'flex-child--no-shrink',
