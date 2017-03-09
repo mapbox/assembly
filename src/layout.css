@@ -393,6 +393,19 @@
 .flex-parent--stretch-cross { align-items: stretch !important; }
 
 /**
+ * Evenly distribute children across the line, so first child is at the start
+ * and last child is at the end.
+ *
+ * @memberof Flexbox
+ * @example
+ * <div class='flex-parent flex-parent--space-between-main bg-darken10 h96'>
+ *  <div class='flex-child bg-darken10'>child</div>
+ *  <div class='flex-child bg-darken10'>child</div>
+ * </div>
+ */
+.flex-parent--space-between-main { justify-content: space-between !important; }
+
+/**
  * Establish an element as a flex child. This class mainly exists to anticipate certain bugs
  * and unexpected behaviors that can otherwise occur with flexbox (especially in IE).
  *
@@ -458,8 +471,17 @@
  * Bleed utilities. Bleed classes allow an element inside a centered container to escape the container and meet the edge of the screen.
  * When using the bleed classes, consider adding the `.clip` class on a parent element to prevent horizontal overflow.
  *
+ * *Warning*: Bleeding elements will never bleed out to more than 50% of the viewport width.
+ * So you should not make an element bleed to one side unless it's already on that half of
+ * the screen.
+ *
  * *Warning*: In Firefox, children with negative margins have different layout effects than in other browsers.
  * The bleed classes should only be used if the parent's width is stable, either because it is set or because other children determine it.
+ *
+ * Class set (except `clearfix`) includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ * These screen-size variants are best suited to *adding* the bleed, not *removing* it.
+ * Be aware of the effects of the `unbleed` class: it resets `margin-left`, `margin-right`,
+ * and `flex-grow`.
  *
  * @group
  * @example
@@ -482,6 +504,11 @@
 .bleed-l {
   flex-grow: 1;
   margin-left: calc(50% - 50vw);
+}
+.unbleed {
+  flex-grow: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 /* @endgroup */
 

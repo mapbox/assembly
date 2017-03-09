@@ -157,6 +157,7 @@ function buildRoutes() {
           'Typography',
           'Grids',
           'Flexbox',
+          'Bleeds',
           'Tables',
           'Lists',
           'Links',

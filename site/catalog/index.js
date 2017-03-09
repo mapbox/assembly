@@ -1,6 +1,7 @@
 import React from 'react';
 import { Checkboxes } from './checkboxes';
 import { Radios } from './radios';
+import { Bleeds } from './bleeds';
 import { Buttons } from './buttons';
 import { Pills } from './pills';
 import { Typography } from './typography';
@@ -31,6 +32,9 @@ class Catalog extends React.Component {
         </div>
         <div id='Flexbox' className='mb48'>
           <Flexbox />
+        </div>
+        <div id='Bleeds' className='mb48'>
+          <Bleeds />
         </div>
         <div id='Tables' className='mb48'>
           <Tables />
