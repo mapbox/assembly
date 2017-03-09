@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.12.0
+
+- Add media query variants for bleed classes (e.g. `bleed-r-ml`).
+- Add `unbleed` class.
+- Add more browser prefixes, so more browsers can take advantage of flex classes.
+- Add `flex-parent--space-between-main` class.
+- Add options icon.
+
 ## 0.11.0
 
 - Rework typographic scale to have separate headline rules (`txt-h1`, `txt-h2`, `txt-h3`, `txt-h4`, `txt-h5`) from body text rules (`txt-xl`, `txt-l`, `txt-m`, `txt-s`, `txt-xs`). Headline rules have tighter line height than body text rules.
