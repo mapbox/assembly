@@ -94,7 +94,7 @@ class Entry extends React.Component {
         </div>
         <div className='col col--8-mxl'>
           <div className='mb24 prose'>
-            {remark().use(reactRenderer).process(props.parsedComment.description).contents}
+            {remark().use(reactRenderer).processSync(props.parsedComment.description).contents}
           </div>
           {example}
         </div>

@@ -12,7 +12,7 @@ class Heading extends React.Component {
     let descriptionEl;
     if (props.parsedComment.description) {
       descriptionEl = <div className='prose'>
-        {remark().use(reactRenderer).process(props.parsedComment.description).contents}
+        {remark().use(reactRenderer).processSync(props.parsedComment.description).contents}
       </div>;
     }
 
