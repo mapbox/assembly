@@ -240,6 +240,23 @@ exports[`buildMediaVariants defaults 1`] = `
     .flex-child--no-shrink-mm {
         flex-shrink: 0 !important
     }
+    .bleed-mm {
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw)
+    }
+    .bleed-r-mm {
+        flex-grow: 1;
+        margin-right: calc(50% - 50vw)
+    }
+    .bleed-l-mm {
+        flex-grow: 1;
+        margin-left: calc(50% - 50vw)
+    }
+    .unbleed-mm {
+        flex-grow: 0;
+        margin-left: 0;
+        margin-right: 0
+    }
     .fl-mm {
         float: left !important
     }
@@ -672,6 +689,23 @@ exports[`buildMediaVariants defaults 1`] = `
     .flex-child--no-shrink-ml {
         flex-shrink: 0 !important
     }
+    .bleed-ml {
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw)
+    }
+    .bleed-r-ml {
+        flex-grow: 1;
+        margin-right: calc(50% - 50vw)
+    }
+    .bleed-l-ml {
+        flex-grow: 1;
+        margin-left: calc(50% - 50vw)
+    }
+    .unbleed-ml {
+        flex-grow: 0;
+        margin-left: 0;
+        margin-right: 0
+    }
     .fl-ml {
         float: left !important
     }
@@ -1103,6 +1137,23 @@ exports[`buildMediaVariants defaults 1`] = `
     }
     .flex-child--no-shrink-mxl {
         flex-shrink: 0 !important
+    }
+    .bleed-mxl {
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw)
+    }
+    .bleed-r-mxl {
+        flex-grow: 1;
+        margin-right: calc(50% - 50vw)
+    }
+    .bleed-l-mxl {
+        flex-grow: 1;
+        margin-left: calc(50% - 50vw)
+    }
+    .unbleed-mxl {
+        flex-grow: 0;
+        margin-left: 0;
+        margin-right: 0
     }
     .fl-mxl {
         float: left !important
