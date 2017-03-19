@@ -52,7 +52,7 @@ const assemblyCssFiles = [
 /**
  * Build CSS.
  *
- * @param {Object} options
+ * @param {Object} [options]
  * @param {string} [options.outfile] - Path to which built CSS should be written.
  * @param {Array<string>} [options.files] - Paths to stylesheets that should be
  *   processed and appended.

@@ -1,6 +1,7 @@
 'use strict';
 
 const svgstore = require('svgstore');
+const _ = require('lodash');
 const fs = require('fs');
 const pify = require('pify');
 const path = require('path');
@@ -33,7 +34,9 @@ const baseJsTemplate = (options) => {
   `;
 };
 
-function addFileToSprite(filename, sprite) {
+const spriteItems = [];
+
+function processSvgFile(filename) {
   return new Promise((resolve, reject) => {
     const extname = path.extname(filename);
     if (extname !== '.svg') return resolve();
@@ -49,7 +52,10 @@ function addFileToSprite(filename, sprite) {
       try {
         svgo.optimize(content, (optimizedContent) => {
           try {
-            sprite.add(`icon-${basename}`, optimizedContent.data);
+            spriteItems.push({
+              id: `icon-${basename}`,
+              svg: optimizedContent.data
+            });
             resolve();
           } catch (e) {
             handleError(e);
@@ -68,10 +74,13 @@ function buildSvgLoader() {
   return pify(fs.readdir)(svgDir)
     .then((filenames) => {
       return Promise.all(filenames.map((filename) => {
-        return addFileToSprite(path.join(svgDir, filename), sprite);
+        return processSvgFile(path.join(svgDir, filename), sprite);
       }));
     })
     .then(() => {
+      // This sorting is necessary to get a detemrinistic
+      // order testable with snapshots
+      _.sortBy(spriteItems, 'id').forEach((item) => sprite.add(item.id, item.svg));
       sprite.element('svg')
         .attr('id', 'svg-symbols')
         .attr('style', 'display:none');

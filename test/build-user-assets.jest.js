@@ -19,11 +19,13 @@ describe('buildUserAssets', () => {
           outfile: '/path/to/outdir/assembly.css'
         });
         expect(buildJs).toHaveBeenCalledTimes(1);
-        expect(buildJs).toHaveBeenCalledWith('/path/to/outdir/assembly.js', {
+        expect(buildJs).toHaveBeenCalledWith({
+          outfile: '/path/to/outdir/assembly.js',
           quiet: false
         });
         expect(copyFonts).toHaveBeenCalledTimes(1);
-        expect(copyFonts).toHaveBeenCalledWith('/path/to/outdir', {
+        expect(copyFonts).toHaveBeenCalledWith({
+          outdir: '/path/to/outdir',
           quiet: false
         });
       });
@@ -59,11 +61,13 @@ describe('buildUserAssets', () => {
           outfile: '/path/to/another/outdir/assembly.css',
         }));
         expect(buildJs).toHaveBeenCalledTimes(1);
-        expect(buildJs).toHaveBeenCalledWith('/path/to/another/outdir/assembly.js', {
+        expect(buildJs).toHaveBeenCalledWith({
+          outfile: '/path/to/another/outdir/assembly.js',
           quiet: true
         });
         expect(copyFonts).toHaveBeenCalledTimes(1);
-        expect(copyFonts).toHaveBeenCalledWith('/path/to/another/outdir', {
+        expect(copyFonts).toHaveBeenCalledWith({
+          outdir: '/path/to/another/outdir',
           quiet: true
         });
       });
