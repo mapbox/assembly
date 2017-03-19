@@ -1,49 +1,36 @@
 'use strict';
 
+jest.mock('../scripts/build-css');
+jest.mock('../scripts/build-js');
+jest.mock('../scripts/copy-fonts');
+
+const buildCss = require('../scripts/build-css');
+const buildJs = require('../scripts/build-js');
+const copyFonts = require('../scripts/copy-fonts');
 const path = require('path');
-const postcss = require('postcss');
-const postcssDiscardComments = require('postcss-discard-comments');
-const del = require('del');
-const pify = require('pify');
-const fs = require('fs');
-const crypto = require('crypto');
-const os = require('os');
 const buildUserAssets = require('../scripts/build-user-assets');
 
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000; // 30 second timeout
-
-function getTmp() {
-  return path.join(os.tmpdir(), crypto.randomBytes(16).toString('hex'));
-}
-
-function cleanup(tmp) {
-  return del(tmp, { force: true });
-}
-
-// Discard comments before comparison, because we don't care
-// what the comments are for these tests
-function discardComments(css) {
-  return postcss().use(postcssDiscardComments()).process(css).css;
-}
-
 describe('buildUserAssets', () => {
-  it('defaults', () => {
-    const tmp = getTmp();
-    return buildUserAssets(tmp)
-      .then(() => pify(fs.readdir)(tmp))
-      .then((files) => {
-        expect(files.sort()).toMatchSnapshot();
-        return pify(fs.readFile)(path.join(tmp, 'assembly.css'), 'utf8');
-      })
-      .then((css) => {
-        expect(discardComments(css)).toMatchSnapshot();
-      })
-      .then(cleanup);
+  test('defaults', () => {
+    return buildUserAssets('/path/to/outdir')
+      .then(() => {
+        expect(buildCss).toHaveBeenCalledTimes(1);
+        expect(buildCss).toHaveBeenCalledWith({
+          outfile: '/path/to/outdir/assembly.css'
+        });
+        expect(buildJs).toHaveBeenCalledTimes(1);
+        expect(buildJs).toHaveBeenCalledWith('/path/to/outdir/assembly.js', {
+          quiet: false
+        });
+        expect(copyFonts).toHaveBeenCalledTimes(1);
+        expect(copyFonts).toHaveBeenCalledWith('/path/to/outdir', {
+          quiet: false
+        });
+      });
   });
 
-  it('all options exploited', () => {
-    const tmp = getTmp();
-    return buildUserAssets(tmp, {
+  test('all options exploited', () => {
+    const options = {
       files: [
         path.join(__dirname, './fixtures/b.css'),
         path.join(__dirname, './fixtures/a.css'),
@@ -63,15 +50,22 @@ describe('buildUserAssets', () => {
         'range': ['blue-faint']
       },
       quiet: true
-    })
-      .then(() => pify(fs.readdir)(tmp))
-      .then((files) => {
-        expect(files.sort()).toMatchSnapshot();
-        return pify(fs.readFile)(path.join(tmp, 'assembly.css'), 'utf8');
-      })
-      .then((css) => {
-        expect(discardComments(css)).toMatchSnapshot();
-      })
-      .then(cleanup);
+    };
+
+    return buildUserAssets('/path/to/another/outdir', options)
+      .then(() => {
+        expect(buildCss).toHaveBeenCalledTimes(1);
+        expect(buildCss).toHaveBeenCalledWith(Object.assign({}, options, {
+          outfile: '/path/to/another/outdir/assembly.css',
+        }));
+        expect(buildJs).toHaveBeenCalledTimes(1);
+        expect(buildJs).toHaveBeenCalledWith('/path/to/another/outdir/assembly.js', {
+          quiet: true
+        });
+        expect(copyFonts).toHaveBeenCalledTimes(1);
+        expect(copyFonts).toHaveBeenCalledWith('/path/to/another/outdir', {
+          quiet: true
+        });
+      });
   });
 });

@@ -3,7 +3,7 @@
 const buildLayoutScales = require('../scripts/build-layout-scales');
 
 describe('buildLayoutScales', () => {
-  it('defaults', () => {
+  test('defaults', () => {
     expect(buildLayoutScales()).toMatchSnapshot();
   });
 });

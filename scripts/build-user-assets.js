@@ -14,11 +14,11 @@ function buildUserAssets(outdir, options) {
   }, options);
 
   const buildJsOptions = {
-    quiet: options.quiet
+    quiet: options.quiet || false
   };
 
   const copyFontsOptions = {
-    quiet: options.quiet
+    quiet: options.quiet || false
   };
 
   const jsOutfile = path.join(outdir, 'assembly.js');
