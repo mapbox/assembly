@@ -784,6 +784,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-radius: 18px;
 }
 
+/* Same IE-flexbug-anticipation as with flex-child */
+.toggle-container {
+  display: block;
+  max-width: 100%;
+}
+
 .toggle {
   flex-shrink: 0;
   cursor: pointer;
