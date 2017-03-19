@@ -6,13 +6,9 @@ const classSets = {
     classPatterns: ['grid--gut{n}'],
     scale: scales.gutter
   },
-  'Multi-Side Margins': {
+  'Margins': {
     classPatterns: ['m{n}', 'mx{n}', 'my{n}'],
-    scale: scales.multiMargin
-  },
-  'Single-Side Margins': {
-    classPatterns: ['ml{n}', 'mt{n}', 'mr{n}', 'mb{n}'],
-    scale: scales.singleMargin
+    scale: scales.margin
   },
   'Paddings': {
     classPatterns: ['p{n}', 'px{n}', 'py{n}', 'pl{n}', 'pt{n}', 'pr{n}', 'pb{n}'],
