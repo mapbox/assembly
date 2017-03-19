@@ -941,7 +941,7 @@ textarea{
   background:#999;
   vertical-align:middle;
   cursor:pointer;
-  box-shadow:0;
+  box-shadow:none;
 }
 
 .range > input::-moz-range-track{
@@ -953,7 +953,7 @@ textarea{
   background:#999;
   vertical-align:middle;
   cursor:pointer;
-  box-shadow:0;
+  box-shadow:none;
 }
 
 .range > input::-ms-track{
@@ -969,14 +969,14 @@ textarea{
 .range > input::-ms-fill-lower{
   background:#999;
   border:0;
-  box-shadow:0;
+  box-shadow:none;
   border-radius:2px;
 }
 
 .range > input::-ms-fill-upper{
   background:#999;
   border:0;
-  box-shadow:0;
+  box-shadow:none;
   border-radius:2px;
 }
 .range > input:hover::-webkit-slider-runnable-track{ background:#666; }
@@ -988,7 +988,7 @@ textarea{
   transition:background 0.125s;
   -webkit-appearance:none;
           appearance:none;
-  box-shadow:0;
+  box-shadow:none;
   width:20px;
   height:20px;
   margin-top:-8px;
@@ -16953,7 +16953,7 @@ textarea{
   background:#999;
   vertical-align:middle;
   cursor:pointer;
-  box-shadow:0;
+  box-shadow:none;
 }
 
 .range > input::-moz-range-track{
@@ -16965,7 +16965,7 @@ textarea{
   background:#999;
   vertical-align:middle;
   cursor:pointer;
-  box-shadow:0;
+  box-shadow:none;
 }
 
 .range > input::-ms-track{
@@ -16981,14 +16981,14 @@ textarea{
 .range > input::-ms-fill-lower{
   background:#999;
   border:0;
-  box-shadow:0;
+  box-shadow:none;
   border-radius:2px;
 }
 
 .range > input::-ms-fill-upper{
   background:#999;
   border:0;
-  box-shadow:0;
+  box-shadow:none;
   border-radius:2px;
 }
 .range > input:hover::-webkit-slider-runnable-track{ background:#666; }
@@ -17000,7 +17000,7 @@ textarea{
   transition:background 0.125s;
   -webkit-appearance:none;
           appearance:none;
-  box-shadow:0;
+  box-shadow:none;
   width:20px;
   height:20px;
   margin-top:-8px;

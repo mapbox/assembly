@@ -385,7 +385,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   background: var(--default-secondary-interactive-color);
   vertical-align: middle;
   cursor: pointer;
-  box-shadow: 0;
+  box-shadow: none;
 }
 
 .range > input::-moz-range-track {
@@ -397,7 +397,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   background: var(--default-secondary-interactive-color);
   vertical-align: middle;
   cursor: pointer;
-  box-shadow: 0;
+  box-shadow: none;
 }
 
 .range > input::-ms-track { /* use fill-lower + fill-upper to set color */
@@ -413,14 +413,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .range > input::-ms-fill-lower {
   background: var(--default-secondary-interactive-color);
   border: 0;
-  box-shadow: 0;
+  box-shadow: none;
   border-radius: 2px;
 }
 
 .range > input::-ms-fill-upper {
   background: var(--default-secondary-interactive-color);
   border: 0;
-  box-shadow: 0;
+  box-shadow: none;
   border-radius: 2px;
 }
 
@@ -435,7 +435,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   box-sizing: border-box;
   transition: background var(--transition);
   appearance: none;
-  box-shadow: 0;
+  box-shadow: none;
   width: 20px;
   height: 20px;
   margin-top: -8px;
