@@ -21,9 +21,11 @@ const svgo = new SVGO({
 const baseJsTemplate = (options) => {
   return `
     (function () {
-      var svgDocument = (new DOMParser()).parseFromString('${options.svgSprite}', 'text/xml');
+      var Assembly = window.Assembly = window.Assembly || {};
+      Assembly._svgSprite = '${options.svgSprite}';
+      var parsedSvgSprite = (new DOMParser()).parseFromString(Assembly._svgSprite, 'text/xml');
       var appendSvg = function () {
-        document.body.appendChild(svgDocument.getElementById('svg-symbols'));
+        document.body.appendChild(parsedSvgSprite.getElementById('svg-symbols'));
       }
       if (document.readyState !== 'loading') {
         appendSvg();
