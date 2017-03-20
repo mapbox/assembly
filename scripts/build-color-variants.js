@@ -452,6 +452,48 @@ function buildColorVariants(variables, config) {
     return css;
   };
 
+  variantGenerators.shadow = function (colors) {
+    let css = stripIndent(`
+      /**
+       * Apply a box shadow.
+       *
+       * @group
+       * @memberof Shadows
+       * @example
+       * <div class='shadow-darken25'>shadow-darken25</div>
+       */`);
+    css += colors.reduce((result, color) => {
+      if (!isSemitransparent(color)) return result;
+      return result += stripIndent(`
+        .shadow-${color} {
+          box-shadow: 0 0 10px 2px var(--${color}) !important;
+        }
+      `);
+    }, '');
+    css += '\n/** @endgroup */\n';
+
+    css += stripIndent(`
+      /**
+       * Apply a larger box shadow.
+       *
+       * @group
+       * @memberof Shadows
+       * @example
+       * <div class='mt6 shadow-darken25-bold'>shadow-darken25-bold</div>
+       */`);
+    css += colors.reduce((result, color) => {
+      if (!isSemitransparent(color)) return result;
+      return result += stripIndent(`
+        .shadow-${color}-bold {
+          box-shadow: 0 0 30px 6px var(--${color}) !important;
+        }
+      `);
+    }, '');
+    css += '\n/** @endgroup */\n';
+
+    return css;
+  };
+
   variantGenerators.hoverShadow = function (colors) {
     let css = stripIndent(`
       /**
@@ -472,9 +514,9 @@ function buildColorVariants(variables, config) {
         .shadow-${color}-on-active.is-active:hover {
           box-shadow: 0 0 10px 2px var(--${color}) !important;
         }
-        .shadow-bold-${color}-on-hover:hover,
-        .shadow-bold-${color}-on-active.is-active,
-        .shadow-bold-${color}-on-active.is-active:hover {
+        .shadow-${color}-bold-on-hover:hover,
+        .shadow-${color}-bold-on-active.is-active,
+        .shadow-${color}-bold-on-active.is-active:hover {
           box-shadow: 0 0 30px 6px var(--${color}) !important;
         }
       `);

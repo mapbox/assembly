@@ -6047,6 +6047,106 @@ input:checked + .toggle--active-transparent {
 /** @endgroup */
 
 /**
+ * Apply a box shadow.
+ *
+ * @group
+ * @memberof Shadows
+ * @example
+ * <div class='shadow-darken25'>shadow-darken25</div>
+ */
+.shadow-darken5 {
+  box-shadow: 0 0 10px 2px var(--darken5) !important;
+}
+
+.shadow-darken10 {
+  box-shadow: 0 0 10px 2px var(--darken10) !important;
+}
+
+.shadow-darken25 {
+  box-shadow: 0 0 10px 2px var(--darken25) !important;
+}
+
+.shadow-darken50 {
+  box-shadow: 0 0 10px 2px var(--darken50) !important;
+}
+
+.shadow-darken75 {
+  box-shadow: 0 0 10px 2px var(--darken75) !important;
+}
+
+.shadow-lighten5 {
+  box-shadow: 0 0 10px 2px var(--lighten5) !important;
+}
+
+.shadow-lighten10 {
+  box-shadow: 0 0 10px 2px var(--lighten10) !important;
+}
+
+.shadow-lighten25 {
+  box-shadow: 0 0 10px 2px var(--lighten25) !important;
+}
+
+.shadow-lighten50 {
+  box-shadow: 0 0 10px 2px var(--lighten50) !important;
+}
+
+.shadow-lighten75 {
+  box-shadow: 0 0 10px 2px var(--lighten75) !important;
+}
+
+/** @endgroup */
+
+/**
+ * Apply a larger box shadow.
+ *
+ * @group
+ * @memberof Shadows
+ * @example
+ * <div class='mt6 shadow-darken25-bold'>shadow-darken25-bold</div>
+ */
+.shadow-darken5-bold {
+  box-shadow: 0 0 30px 6px var(--darken5) !important;
+}
+
+.shadow-darken10-bold {
+  box-shadow: 0 0 30px 6px var(--darken10) !important;
+}
+
+.shadow-darken25-bold {
+  box-shadow: 0 0 30px 6px var(--darken25) !important;
+}
+
+.shadow-darken50-bold {
+  box-shadow: 0 0 30px 6px var(--darken50) !important;
+}
+
+.shadow-darken75-bold {
+  box-shadow: 0 0 30px 6px var(--darken75) !important;
+}
+
+.shadow-lighten5-bold {
+  box-shadow: 0 0 30px 6px var(--lighten5) !important;
+}
+
+.shadow-lighten10-bold {
+  box-shadow: 0 0 30px 6px var(--lighten10) !important;
+}
+
+.shadow-lighten25-bold {
+  box-shadow: 0 0 30px 6px var(--lighten25) !important;
+}
+
+.shadow-lighten50-bold {
+  box-shadow: 0 0 30px 6px var(--lighten50) !important;
+}
+
+.shadow-lighten75-bold {
+  box-shadow: 0 0 30px 6px var(--lighten75) !important;
+}
+
+/** @endgroup */
+
+/**
  * Apply a box shadow on hover and active states.
  *
  * @group
@@ -6061,9 +6161,9 @@ input:checked + .toggle--active-transparent {
 .shadow-darken5-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--darken5) !important;
 }
-.shadow-bold-darken5-on-hover:hover,
-.shadow-bold-darken5-on-active.is-active,
-.shadow-bold-darken5-on-active.is-active:hover {
+.shadow-darken5-bold-on-hover:hover,
+.shadow-darken5-bold-on-active.is-active,
+.shadow-darken5-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken5) !important;
 }
 
@@ -6072,9 +6172,9 @@ input:checked + .toggle--active-transparent {
 .shadow-darken10-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--darken10) !important;
 }
-.shadow-bold-darken10-on-hover:hover,
-.shadow-bold-darken10-on-active.is-active,
-.shadow-bold-darken10-on-active.is-active:hover {
+.shadow-darken10-bold-on-hover:hover,
+.shadow-darken10-bold-on-active.is-active,
+.shadow-darken10-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken10) !important;
 }
 
@@ -6083,9 +6183,9 @@ input:checked + .toggle--active-transparent {
 .shadow-darken25-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--darken25) !important;
 }
-.shadow-bold-darken25-on-hover:hover,
-.shadow-bold-darken25-on-active.is-active,
-.shadow-bold-darken25-on-active.is-active:hover {
+.shadow-darken25-bold-on-hover:hover,
+.shadow-darken25-bold-on-active.is-active,
+.shadow-darken25-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken25) !important;
 }
 
@@ -6094,9 +6194,9 @@ input:checked + .toggle--active-transparent {
 .shadow-darken50-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--darken50) !important;
 }
-.shadow-bold-darken50-on-hover:hover,
-.shadow-bold-darken50-on-active.is-active,
-.shadow-bold-darken50-on-active.is-active:hover {
+.shadow-darken50-bold-on-hover:hover,
+.shadow-darken50-bold-on-active.is-active,
+.shadow-darken50-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken50) !important;
 }
 
@@ -6105,9 +6205,9 @@ input:checked + .toggle--active-transparent {
 .shadow-darken75-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--darken75) !important;
 }
-.shadow-bold-darken75-on-hover:hover,
-.shadow-bold-darken75-on-active.is-active,
-.shadow-bold-darken75-on-active.is-active:hover {
+.shadow-darken75-bold-on-hover:hover,
+.shadow-darken75-bold-on-active.is-active,
+.shadow-darken75-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken75) !important;
 }
 
@@ -6116,9 +6216,9 @@ input:checked + .toggle--active-transparent {
 .shadow-lighten5-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten5) !important;
 }
-.shadow-bold-lighten5-on-hover:hover,
-.shadow-bold-lighten5-on-active.is-active,
-.shadow-bold-lighten5-on-active.is-active:hover {
+.shadow-lighten5-bold-on-hover:hover,
+.shadow-lighten5-bold-on-active.is-active,
+.shadow-lighten5-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten5) !important;
 }
 
@@ -6127,9 +6227,9 @@ input:checked + .toggle--active-transparent {
 .shadow-lighten10-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten10) !important;
 }
-.shadow-bold-lighten10-on-hover:hover,
-.shadow-bold-lighten10-on-active.is-active,
-.shadow-bold-lighten10-on-active.is-active:hover {
+.shadow-lighten10-bold-on-hover:hover,
+.shadow-lighten10-bold-on-active.is-active,
+.shadow-lighten10-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten10) !important;
 }
 
@@ -6138,9 +6238,9 @@ input:checked + .toggle--active-transparent {
 .shadow-lighten25-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten25) !important;
 }
-.shadow-bold-lighten25-on-hover:hover,
-.shadow-bold-lighten25-on-active.is-active,
-.shadow-bold-lighten25-on-active.is-active:hover {
+.shadow-lighten25-bold-on-hover:hover,
+.shadow-lighten25-bold-on-active.is-active,
+.shadow-lighten25-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten25) !important;
 }
 
@@ -6149,9 +6249,9 @@ input:checked + .toggle--active-transparent {
 .shadow-lighten50-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten50) !important;
 }
-.shadow-bold-lighten50-on-hover:hover,
-.shadow-bold-lighten50-on-active.is-active,
-.shadow-bold-lighten50-on-active.is-active:hover {
+.shadow-lighten50-bold-on-hover:hover,
+.shadow-lighten50-bold-on-active.is-active,
+.shadow-lighten50-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten50) !important;
 }
 
@@ -6160,9 +6260,9 @@ input:checked + .toggle--active-transparent {
 .shadow-lighten75-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten75) !important;
 }
-.shadow-bold-lighten75-on-hover:hover,
-.shadow-bold-lighten75-on-active.is-active,
-.shadow-bold-lighten75-on-active.is-active:hover {
+.shadow-lighten75-bold-on-hover:hover,
+.shadow-lighten75-bold-on-active.is-active,
+.shadow-lighten75-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten75) !important;
 }
 
@@ -13135,6 +13235,106 @@ input:checked + .toggle--active-transparent {
 /** @endgroup */
 
 /**
+ * Apply a box shadow.
+ *
+ * @group
+ * @memberof Shadows
+ * @example
+ * <div class='shadow-darken25'>shadow-darken25</div>
+ */
+.shadow-darken5 {
+  box-shadow: 0 0 10px 2px var(--darken5) !important;
+}
+
+.shadow-darken10 {
+  box-shadow: 0 0 10px 2px var(--darken10) !important;
+}
+
+.shadow-darken25 {
+  box-shadow: 0 0 10px 2px var(--darken25) !important;
+}
+
+.shadow-darken50 {
+  box-shadow: 0 0 10px 2px var(--darken50) !important;
+}
+
+.shadow-darken75 {
+  box-shadow: 0 0 10px 2px var(--darken75) !important;
+}
+
+.shadow-lighten5 {
+  box-shadow: 0 0 10px 2px var(--lighten5) !important;
+}
+
+.shadow-lighten10 {
+  box-shadow: 0 0 10px 2px var(--lighten10) !important;
+}
+
+.shadow-lighten25 {
+  box-shadow: 0 0 10px 2px var(--lighten25) !important;
+}
+
+.shadow-lighten50 {
+  box-shadow: 0 0 10px 2px var(--lighten50) !important;
+}
+
+.shadow-lighten75 {
+  box-shadow: 0 0 10px 2px var(--lighten75) !important;
+}
+
+/** @endgroup */
+
+/**
+ * Apply a larger box shadow.
+ *
+ * @group
+ * @memberof Shadows
+ * @example
+ * <div class='mt6 shadow-darken25-bold'>shadow-darken25-bold</div>
+ */
+.shadow-darken5-bold {
+  box-shadow: 0 0 30px 6px var(--darken5) !important;
+}
+
+.shadow-darken10-bold {
+  box-shadow: 0 0 30px 6px var(--darken10) !important;
+}
+
+.shadow-darken25-bold {
+  box-shadow: 0 0 30px 6px var(--darken25) !important;
+}
+
+.shadow-darken50-bold {
+  box-shadow: 0 0 30px 6px var(--darken50) !important;
+}
+
+.shadow-darken75-bold {
+  box-shadow: 0 0 30px 6px var(--darken75) !important;
+}
+
+.shadow-lighten5-bold {
+  box-shadow: 0 0 30px 6px var(--lighten5) !important;
+}
+
+.shadow-lighten10-bold {
+  box-shadow: 0 0 30px 6px var(--lighten10) !important;
+}
+
+.shadow-lighten25-bold {
+  box-shadow: 0 0 30px 6px var(--lighten25) !important;
+}
+
+.shadow-lighten50-bold {
+  box-shadow: 0 0 30px 6px var(--lighten50) !important;
+}
+
+.shadow-lighten75-bold {
+  box-shadow: 0 0 30px 6px var(--lighten75) !important;
+}
+
+/** @endgroup */
+
+/**
  * Apply a box shadow on hover and active states.
  *
  * @group
@@ -13149,9 +13349,9 @@ input:checked + .toggle--active-transparent {
 .shadow-darken5-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--darken5) !important;
 }
-.shadow-bold-darken5-on-hover:hover,
-.shadow-bold-darken5-on-active.is-active,
-.shadow-bold-darken5-on-active.is-active:hover {
+.shadow-darken5-bold-on-hover:hover,
+.shadow-darken5-bold-on-active.is-active,
+.shadow-darken5-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken5) !important;
 }
 
@@ -13160,9 +13360,9 @@ input:checked + .toggle--active-transparent {
 .shadow-darken10-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--darken10) !important;
 }
-.shadow-bold-darken10-on-hover:hover,
-.shadow-bold-darken10-on-active.is-active,
-.shadow-bold-darken10-on-active.is-active:hover {
+.shadow-darken10-bold-on-hover:hover,
+.shadow-darken10-bold-on-active.is-active,
+.shadow-darken10-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken10) !important;
 }
 
@@ -13171,9 +13371,9 @@ input:checked + .toggle--active-transparent {
 .shadow-darken25-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--darken25) !important;
 }
-.shadow-bold-darken25-on-hover:hover,
-.shadow-bold-darken25-on-active.is-active,
-.shadow-bold-darken25-on-active.is-active:hover {
+.shadow-darken25-bold-on-hover:hover,
+.shadow-darken25-bold-on-active.is-active,
+.shadow-darken25-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken25) !important;
 }
 
@@ -13182,9 +13382,9 @@ input:checked + .toggle--active-transparent {
 .shadow-darken50-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--darken50) !important;
 }
-.shadow-bold-darken50-on-hover:hover,
-.shadow-bold-darken50-on-active.is-active,
-.shadow-bold-darken50-on-active.is-active:hover {
+.shadow-darken50-bold-on-hover:hover,
+.shadow-darken50-bold-on-active.is-active,
+.shadow-darken50-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken50) !important;
 }
 
@@ -13193,9 +13393,9 @@ input:checked + .toggle--active-transparent {
 .shadow-darken75-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--darken75) !important;
 }
-.shadow-bold-darken75-on-hover:hover,
-.shadow-bold-darken75-on-active.is-active,
-.shadow-bold-darken75-on-active.is-active:hover {
+.shadow-darken75-bold-on-hover:hover,
+.shadow-darken75-bold-on-active.is-active,
+.shadow-darken75-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken75) !important;
 }
 
@@ -13204,9 +13404,9 @@ input:checked + .toggle--active-transparent {
 .shadow-lighten5-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten5) !important;
 }
-.shadow-bold-lighten5-on-hover:hover,
-.shadow-bold-lighten5-on-active.is-active,
-.shadow-bold-lighten5-on-active.is-active:hover {
+.shadow-lighten5-bold-on-hover:hover,
+.shadow-lighten5-bold-on-active.is-active,
+.shadow-lighten5-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten5) !important;
 }
 
@@ -13215,9 +13415,9 @@ input:checked + .toggle--active-transparent {
 .shadow-lighten10-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten10) !important;
 }
-.shadow-bold-lighten10-on-hover:hover,
-.shadow-bold-lighten10-on-active.is-active,
-.shadow-bold-lighten10-on-active.is-active:hover {
+.shadow-lighten10-bold-on-hover:hover,
+.shadow-lighten10-bold-on-active.is-active,
+.shadow-lighten10-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten10) !important;
 }
 
@@ -13226,9 +13426,9 @@ input:checked + .toggle--active-transparent {
 .shadow-lighten25-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten25) !important;
 }
-.shadow-bold-lighten25-on-hover:hover,
-.shadow-bold-lighten25-on-active.is-active,
-.shadow-bold-lighten25-on-active.is-active:hover {
+.shadow-lighten25-bold-on-hover:hover,
+.shadow-lighten25-bold-on-active.is-active,
+.shadow-lighten25-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten25) !important;
 }
 
@@ -13237,9 +13437,9 @@ input:checked + .toggle--active-transparent {
 .shadow-lighten50-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten50) !important;
 }
-.shadow-bold-lighten50-on-hover:hover,
-.shadow-bold-lighten50-on-active.is-active,
-.shadow-bold-lighten50-on-active.is-active:hover {
+.shadow-lighten50-bold-on-hover:hover,
+.shadow-lighten50-bold-on-active.is-active,
+.shadow-lighten50-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten50) !important;
 }
 
@@ -13248,9 +13448,9 @@ input:checked + .toggle--active-transparent {
 .shadow-lighten75-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten75) !important;
 }
-.shadow-bold-lighten75-on-hover:hover,
-.shadow-bold-lighten75-on-active.is-active,
-.shadow-bold-lighten75-on-active.is-active:hover {
+.shadow-lighten75-bold-on-hover:hover,
+.shadow-lighten75-bold-on-active.is-active,
+.shadow-lighten75-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten75) !important;
 }
 
@@ -14697,6 +14897,26 @@ input:checked + .toggle--active-green-light {
 /** @endgroup */
 
 /**
+ * Apply a box shadow.
+ *
+ * @group
+ * @memberof Shadows
+ * @example
+ * <div class='shadow-darken25'>shadow-darken25</div>
+ */
+/** @endgroup */
+
+/**
+ * Apply a larger box shadow.
+ *
+ * @group
+ * @memberof Shadows
+ * @example
+ * <div class='mt6 shadow-darken25-bold'>shadow-darken25-bold</div>
+ */
+/** @endgroup */
+
+/**
  * Apply a box shadow on hover and active states.
  *
  * @group
@@ -15173,6 +15393,42 @@ input:checked + .toggle--active-gray {
 /** @endgroup */
 
 /**
+ * Apply a box shadow.
+ *
+ * @group
+ * @memberof Shadows
+ * @example
+ * <div class='shadow-darken25'>shadow-darken25</div>
+ */
+.shadow-lighten50 {
+  box-shadow: 0 0 10px 2px var(--lighten50) !important;
+}
+
+.shadow-lighten25 {
+  box-shadow: 0 0 10px 2px var(--lighten25) !important;
+}
+
+/** @endgroup */
+
+/**
+ * Apply a larger box shadow.
+ *
+ * @group
+ * @memberof Shadows
+ * @example
+ * <div class='mt6 shadow-darken25-bold'>shadow-darken25-bold</div>
+ */
+.shadow-lighten50-bold {
+  box-shadow: 0 0 30px 6px var(--lighten50) !important;
+}
+
+.shadow-lighten25-bold {
+  box-shadow: 0 0 30px 6px var(--lighten25) !important;
+}
+
+/** @endgroup */
+
+/**
  * Apply a box shadow on hover and active states.
  *
  * @group
@@ -15187,9 +15443,9 @@ input:checked + .toggle--active-gray {
 .shadow-lighten50-on-active.is-active:hover {
   box-shadow: 0 0 10px 2px var(--lighten50) !important;
 }
-.shadow-bold-lighten50-on-hover:hover,
-.shadow-bold-lighten50-on-active.is-active,
-.shadow-bold-lighten50-on-active.is-active:hover {
+.shadow-lighten50-bold-on-hover:hover,
+.shadow-lighten50-bold-on-active.is-active,
+.shadow-lighten50-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--lighten50) !important;
 }
 
