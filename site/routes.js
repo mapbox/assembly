@@ -18,6 +18,7 @@ import { ExampleModal } from './examples/modal';
 import { ExampleNavigation } from './examples/navigation';
 import { ExampleProgressBars } from './examples/progress_bars';
 import { ExampleSidebarApps } from './examples/sidebar_apps';
+import { ExampleEqualHeightColumns } from './examples/equal_height_columns';
 import { ExampleTileLayout } from './examples/tile_layout';
 import { ExampleTooltips } from './examples/tooltips';
 import { ExampleSpinner } from './examples/spinner';
@@ -75,6 +76,10 @@ const routes = [
       name: 'Sidebar apps',
       route: '/examples/sidebar-apps/',
       component: ExampleSidebarApps
+    }, {
+      name: 'Equal-height columns',
+      route: '/examples/equal-height-columns/',
+      component: ExampleEqualHeightColumns
     }, {
       name: 'Tile layout',
       route: '/examples/tile-layout/',
