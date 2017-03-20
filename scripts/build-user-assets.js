@@ -14,19 +14,19 @@ function buildUserAssets(outdir, options) {
   }, options);
 
   const buildJsOptions = {
-    quiet: options.quiet
+    outfile: path.join(outdir, 'assembly.js'),
+    quiet: options.quiet || false
   };
 
   const copyFontsOptions = {
-    quiet: options.quiet
+    outdir,
+    quiet: options.quiet || false
   };
-
-  const jsOutfile = path.join(outdir, 'assembly.js');
 
   return Promise.all([
     buildCss(buildCssOptions),
-    buildJs(jsOutfile, buildJsOptions),
-    copyFonts(outdir, copyFontsOptions)
+    buildJs(buildJsOptions),
+    copyFonts(copyFontsOptions)
   ]);
 }
 

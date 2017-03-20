@@ -14,11 +14,11 @@ function copyFile(infile, outdir) {
   return cpFile(infile, outfile);
 }
 
-function copyFonts(outdir, options) {
+function copyFonts(options) {
   options = options || {};
 
   if (!options.quiet) timelog('Copying fonts');
-  outdir = outdir || path.join(__dirname, '../dist');
+  const outdir = options.outdir || path.join(__dirname, '../dist');
 
   return pify(mkdirp)(outdir)
     .then(() => globby(fontsGlob))

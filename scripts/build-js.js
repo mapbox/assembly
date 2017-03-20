@@ -12,11 +12,19 @@ const buildSvgLoader = require('./build-svg-loader');
 
 const jsGlob = path.join(__dirname, '../src/js/*.js');
 
-function buildJs(outfile, options) {
+/**
+ * Build JS.
+ *
+ * @param {Object} [options]
+ * @param {string} [options.outfile] - Path to which built JS should be written.
+ * @param {Object} [options.quiet] - Suppress logs.
+ * @return {Promise<void>}
+ */
+function buildJs(options) {
   options = options || {};
 
   if (!options.quiet) timelog('Building JS');
-  outfile = outfile || path.join(__dirname, '../dist/assembly.js');
+  const outfile = options.outfile || path.join(__dirname, '../dist/assembly.js');
 
   return Promise.all([
     buildSvgLoader(),
@@ -24,13 +32,12 @@ function buildJs(outfile, options) {
   ])
     .then((data) => {
       const allJs = data.join('');
-      return UglifyJS.minify(allJs, { fromString: true }).code;
-    })
-    .then((minifiedJs) => {
+      if (options.unminified) return allJs;
+      const minifiedJs = UglifyJS.minify(allJs, { fromString: true }).code;
       return optimizeJs(minifiedJs);
     })
     .then((optimizedJs) => {
-      return pify(mkdirp)(path.join(__dirname, '../dist')).then(() => {
+      return pify(mkdirp)(path.dirname(outfile)).then(() => {
         return pify(fs.writeFile)(outfile, optimizedJs);
       });
     }).then(() => {

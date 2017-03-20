@@ -1,25 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`buildUserAssets all options exploited 1`] = `
-Array [
-  "assembly.css",
-  "assembly.css.map",
-  "assembly.js",
-  "assembly.min.css",
-  "opensans-bold.woff",
-  "opensans-bold.woff2",
-  "opensans-bolditalic.woff",
-  "opensans-bolditalic.woff2",
-  "opensans-italic.woff",
-  "opensans-italic.woff2",
-  "opensans-light.woff",
-  "opensans-light.woff2",
-  "opensans-regular.woff",
-  "opensans-regular.woff2",
-]
-`;
-
-exports[`buildUserAssets all options exploited 2`] = `
+exports[`buildCss all options 1`] = `
 "html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -8333,7 +8314,7 @@ input:checked:disabled + .toggle{
 }
 
 .b{
-  color:##FFF8DC;
+  color:#FFF8DC;
 }
 
 @media (min-width: 433px){
@@ -16012,26 +15993,7 @@ input:checked + .toggle--active-transparent{
 }"
 `;
 
-exports[`buildUserAssets defaults 1`] = `
-Array [
-  "assembly.css",
-  "assembly.css.map",
-  "assembly.js",
-  "assembly.min.css",
-  "opensans-bold.woff",
-  "opensans-bold.woff2",
-  "opensans-bolditalic.woff",
-  "opensans-bolditalic.woff2",
-  "opensans-italic.woff",
-  "opensans-italic.woff2",
-  "opensans-light.woff",
-  "opensans-light.woff2",
-  "opensans-regular.woff",
-  "opensans-regular.woff2",
-]
-`;
-
-exports[`buildUserAssets defaults 2`] = `
+exports[`buildCss defaults 1`] = `
 "html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
