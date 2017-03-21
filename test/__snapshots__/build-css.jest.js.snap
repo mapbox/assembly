@@ -1158,6 +1158,10 @@ textarea{
   text-align:center;
   border-radius:18px;
 }
+.toggle-container{
+  display:block;
+  max-width:100%;
+}
 
 .toggle{
   -webkit-flex-shrink:0;
@@ -17602,6 +17606,10 @@ textarea{
   display:inline-flex;
   text-align:center;
   border-radius:18px;
+}
+.toggle-container{
+  display:block;
+  max-width:100%;
 }
 
 .toggle{
