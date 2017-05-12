@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.13.0
+
+- Add `Assembly.createIcon`, `Assembly.changeIcon`, and `Assembly.iconExists` functions to assembly.js
+- Changed `mapbox` icon to reflect new branding.
+- Changed `options` icon to a larger revision.
+- Add negative margin classes for all margin class variants.
+- Add linting improvements to JS and CSS.
+- Add various documentation improvements.
+- Add shadow class automation.
+
 ## 0.12.0
 
 - Add media query variants for bleed classes (e.g. `bleed-r-ml`).

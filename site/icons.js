@@ -10,26 +10,14 @@ const icons = fs.readdirSync(path.join(__dirname, '../src/svgs'))
   .filter((filename) => filename.endsWith('.svg'))
   .map((filename) => path.basename(filename, '.svg'));
 
-const jsSnippet = `function createIcon(icon) {
-  var svgNS = 'http://www.w3.org/2000/svg';
-  var xlinkNS = 'http://www.w3.org/1999/xlink';
-  var svg = document.createElementNS(svgNS, 'svg');
-  svg.setAttributeNS(null, 'class', 'icon');
-  var use = document.createElementNS(svgNS, 'use');
-  use.setAttributeNS(xlinkNS, 'xlink:href', '#icon-' + icon);
-  svg.appendChild(use);
-  return svg;
-}`;
-
 class Icons extends React.Component {
   render() {
     const iconEls = icons.map((icon) => {
       return (
         <div key={icon} className='col--6 col--4-ml col--3-mxl flex-parent flex-parent--center-cross flex-child p12 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light'>
-          <svg
-            className='icon mr12'
-            dangerouslySetInnerHTML={{ __html: `<use xlink:href="#icon-${icon}"></use>` }}
-          />
+          <svg className='icon mr12'>
+            <use xlinkHref={`#icon-${icon}`} />
+          </svg>
           <span className='color-gray'>{icon}</span>
         </div>
       );
@@ -40,7 +28,7 @@ class Icons extends React.Component {
         <h1 className='txt-h2 mb12 txt-bold pt24'>
           Icons
         </h1>
-        <div className='mb48 prose col col--6-mm'>
+        <div className='mb48 prose'>
           <p>Assembly comes with {icons.length} icons covering most UI design needs. The icons are designed to be used as embedded SVGs. For usage instructions, look at <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>.</p>
         </div>
         <div className='flex-parent flex-parent--wrap txt-mono txt-s'>
@@ -48,19 +36,31 @@ class Icons extends React.Component {
         </div>
 
         <h2 className='pt24 txt-bold txt-uppercase mb12 mt24'>
-          Programmatically adding icons with JavaScript
+          Programmatically work with icons in JavaScript
         </h2>
-        <div className='mb24'>
-          To add icons to the page programmatically, you must use special DOM methods that handle XML namespaces. The following function creates an icon element, which you can then add to the DOM where you need it. You can also modify the icon as needed with <a href='/assembly/documentation/#Icons'>icon modifier classes</a>.
+        <div className='mb24 prose'>
+          To add icons to the page or edit them programmatically, you must use special DOM methods that handle XML namespaces. To facilitate this, <code>assembly.js</code> exposes a few functions on a global <code>Assembly</code> namespace.
         </div>
-        <pre className='pre'>
-          <code>
-            <Lowlight
-              language='js'
-              value={jsSnippet}
-            />
-          </code>
-        </pre>
+        <h3 className='mb12 mt24 txt-bold'>
+          <code className='txt-code'>Assembly.createIcon(iconName: string): SVGElement</code>
+        </h3>
+        <div className='prose'>
+          <p>Returns an SVG element containing a <code>{'<use>'}</code> element referencing the designated icon.</p>
+          <p>Throws an error if the designated icon does not exist in Assembly.</p>
+        </div>
+        <h3 className='mb12 mt24 txt-bold'>
+          <code className='txt-code'>Assembly.changeIcon(iconEl: SVGElement, iconName: string): SVGElement</code>
+        </h3>
+        <div className='prose'>
+          <p>Given an icon SVG element (<em>not</em> the <code>{'<use>'}</code> element inside it), such as what <code>Assembly.createIcon</code> returns, changes the icon and returns the SVG element.</p>
+          <p>Throws an error if the designated icon does not exist in Assembly.</p>
+        </div>
+        <h3 className='mb12 mt24 txt-bold'>
+          <code className='txt-code'>Assembly.iconExists(iconName: string): boolean</code>
+        </h3>
+        <div className='prose'>
+          <p>Returns a boolean indicating whether an icon exists in Assembly.</p>
+        </div>
       </div>
     );
   }

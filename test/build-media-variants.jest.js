@@ -3,7 +3,7 @@
 const buildMediaVariants = require('../scripts/build-media-variants');
 
 describe('buildMediaVariants', () => {
-  it('defaults', () => {
+  test('defaults', () => {
     return buildMediaVariants().then((css) => {
       expect(css).toMatchSnapshot();
     });
