@@ -1,0 +1,17 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 5,
+    "sourceType": "script"
+  },
+  "env": {
+    "browser": true,
+    "node": false,
+    "es6": false
+  },
+  "plugins": [],
+  "rules": {
+    "strict": "off",
+    "prefer-arrow-callback": "off",
+    "no-var": "off"
+  }
+}
