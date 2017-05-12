@@ -1751,6 +1751,12 @@ css-tokenize@^1.0.1:
     inherits "^2.0.1"
     readable-stream "^1.0.33"
 
+css-tree@1.0.0-alpha16:
+  version "1.0.0-alpha16"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.0.0-alpha16.tgz#6cb2cdff6947259dfdaf790626333a862de948b0"
+  dependencies:
+    source-map "^0.5.3"
+
 css-what@2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.0.tgz#9467d032c38cfaefb9f2d79501253062f87fa1bd"
@@ -6210,7 +6216,14 @@ stylehacks@^2.3.0:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
-stylelint@^7.6.0:
+stylelint-csstree-validator@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/stylelint-csstree-validator/-/stylelint-csstree-validator-1.1.1.tgz#ed3a1e2c482df50644731fcf557e2dffa9d8dc7f"
+  dependencies:
+    css-tree "1.0.0-alpha16"
+    stylelint "^7.0.0"
+
+stylelint@^7.0.0, stylelint@^7.6.0:
   version "7.9.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.9.0.tgz#b8d9ea20f887ab351075c6aded9528de24509327"
   dependencies:

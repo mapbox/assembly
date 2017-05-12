@@ -3,11 +3,11 @@
 const buildColorVariants = require('../scripts/build-color-variants');
 
 describe('buildColorVariants', () => {
-  it('defaults', () => {
+  test('defaults', () => {
     expect(buildColorVariants()).toMatchSnapshot();
   });
 
-  it('handles custom variables', () => {
+  test('handles custom variables', () => {
     expect(buildColorVariants({
       'gray-dark': '#000',
       'pink': 'pink',
@@ -15,7 +15,7 @@ describe('buildColorVariants', () => {
     })).toMatchSnapshot();
   });
 
-  it('with default colors array', () => {
+  test('with default colors array', () => {
     expect(buildColorVariants(null, [
       'red',
       'teal',
@@ -24,7 +24,7 @@ describe('buildColorVariants', () => {
     ])).toMatchSnapshot();
   });
 
-  it('with granular colors', () => {
+  test('with granular colors', () => {
     expect(buildColorVariants(null, {
       default: ['lighten50', 'lighten25', 'gray'],
       buttonFill: ['green', 'purple'],

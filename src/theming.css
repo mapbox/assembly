@@ -155,43 +155,6 @@
  */
 
 /**
- * Apply a box shadow.
- *
- * @group
- * @memberof Shadows
- * @example
- * <div class='shadow-darken25'>shadow-darken25</div>
- */
-.shadow-darken5 { box-shadow: 0 0 10px 2px var(--darken5) !important; }
-.shadow-darken10 { box-shadow: 0 0 10px 2px var(--darken10) !important; }
-.shadow-darken25 { box-shadow: 0 0 10px 2px var(--darken25) !important; }
-.shadow-darken50 { box-shadow: 0 0 10px 2px var(--darken50) !important; }
-
-.shadow-lighten5 { box-shadow: 0 0 10px 2px var(--lighten5) !important; }
-.shadow-lighten10 { box-shadow: 0 0 10px 2px var(--lighten10) !important; }
-.shadow-lighten25 { box-shadow: 0 0 10px 2px var(--lighten25) !important; }
-.shadow-lighten50 { box-shadow: 0 0 10px 2px var(--lighten50) !important; }
-/** @endgroup */
-
-/**
- * Apply a larger box shadow.
- *
- * @group
- * @memberof Shadows
- * @example
- * <div class='mt6 shadow-darken25-bold'>shadow-darken25-bold</div> */
-.shadow-darken5-bold { box-shadow: 0 0 30px 6px var(--darken5) !important; }
-.shadow-darken10-bold { box-shadow: 0 0 30px 6px var(--darken10) !important; }
-.shadow-darken25-bold { box-shadow: 0 0 30px 6px var(--darken25) !important; }
-.shadow-darken50-bold { box-shadow: 0 0 30px 6px var(--darken50) !important; }
-
-.shadow-lighten5-bold { box-shadow: 0 0 30px 6px var(--lighten5) !important; }
-.shadow-lighten10-bold { box-shadow: 0 0 30px 6px var(--lighten10) !important; }
-.shadow-lighten25-bold { box-shadow: 0 0 30px 6px var(--lighten25) !important; }
-.shadow-lighten50-bold { box-shadow: 0 0 30px 6px var(--lighten50) !important; }
-/** @endgroup */
-
-/**
  * Set the style of the cursor when hovering over an element.
  *
  * @section Cursors

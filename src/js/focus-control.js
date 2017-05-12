@@ -1,4 +1,3 @@
-/* eslint-disable */
 (function () {
   var attributeName = 'data-assembly-focus-control';
   document.documentElement.setAttribute(attributeName, 'not-visible');

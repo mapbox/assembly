@@ -86,7 +86,7 @@ function buildLayoutScales() {
     return css;
   };
 
-  variantGenerators.multiMargin = function (scales) {
+  variantGenerators.margin = function (scales) {
     let css = stripIndent(`
       /**
        * Apply margin on all sides.
@@ -149,11 +149,7 @@ function buildLayoutScales() {
     });
     css += '\n/** @endgroup */\n';
 
-    return css;
-  };
-
-  variantGenerators.singleMargin = function (scales) {
-    let css = stripIndent(`
+    css += stripIndent(`
       /**
        * Apply margin on the top.
        *
