@@ -19,7 +19,7 @@
  *
  * @memberof Icons
  * @example
- * <svg class='icon'><use xlink:href='#icon-bike'/></svg>
+ * <svg class='icon'><use xlink:href='#icon-airplane'/></svg>
  */
 .icon {
   display: block;
@@ -33,7 +33,7 @@
  *
  * @memberof Icons
  * @example
- * <svg class='icon icon--s'><use xlink:href='#icon-bike'/></svg>
+ * <svg class='icon icon--s'><use xlink:href='#icon-heart'/></svg>
  */
 .icon--s {
   height: 12px !important;
@@ -45,9 +45,42 @@
  *
  * @memberof Icons
  * @example
- * <svg class='icon icon--l'><use xlink:href='#icon-bike'/></svg>
+ * <svg class='icon icon--l'><use xlink:href='#icon-extrusion'/></svg>
  */
 .icon--l {
   height: 36px !important;
   width: 36px !important;
 }
+
+/**
+ * Align icons with text and other inline elements and ensure line height matches text line height. These classes must be used alignside corresponding icon size modifier classes.
+ *
+ * `icon--inline` should not be used alignside text larger than `txt-xl` or `txt-h3`.
+ * `icon--s--inline` should not be used alingside text larger than `txt-l` or `txt-h4`.
+ * `icon--l--inline` should not be used alingside text smaller than `txt-xl` or `txt-h4`.
+
+ * @memberof Icons
+ * @group
+ * @example
+ * <p class='txt-l'>Hey there <svg class='icon icon--inline'><use xlink:href='#icon-clipboard'/></svg> friend!</p>
+ * <p class='txt-xl'>Hey there <svg class='icon icon--l icon--l--inline'><use xlink:href='#icon-bell'/></svg> friend!</p>
+ * <p class='txt-s'>Hey there <svg class='icon icon--s icon--s--inline'><use xlink:href='#icon-bug'/></svg> friend!</p>
+ **/
+.icon--inline, .icon--s--inline, .icon--l--inline {
+  position: relative;
+  display: inline-block !important;
+  vertical-align: top !important;
+}
+
+.icon--inline {
+  bottom: calc(12px - 1em) !important;
+}
+
+.icon--s--inline {
+  bottom: calc(9px - 1em) !important;
+}
+
+.icon--l--inline {
+  top: calc(.7em - 20px) !important;
+}
+/** @endgroup */
