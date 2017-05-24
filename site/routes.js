@@ -159,6 +159,7 @@ function buildRoutes() {
       case 'Catalog': {
 
         const sections = [
+          'Icons',
           'Typography',
           'Grids',
           'Flexbox',
