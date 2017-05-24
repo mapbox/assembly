@@ -16,14 +16,19 @@ import { Textareas } from './textareas';
 import { Ranges } from './ranges';
 import { Links } from './links';
 import { Grids } from './grids';
+import { Icons } from './icons';
 import { Flexbox } from './flexbox';
 
 class Catalog extends React.Component {
   render() {
     return (
-      <div className='pt24 '>
+      <div className='pt24'>
+
         <h1 className='txt-h2 txt-bold mb18'>Catalog</h1>
         <p className='col col--6-mm'>A catalog of Assembly variations for reference and debugging purposes.</p>
+        <div id='Icons' className='mb48'>
+          <Icons />
+        </div>
         <div id='Typography' className='mb48'>
           <Typography />
         </div>
