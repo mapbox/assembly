@@ -19,7 +19,7 @@
  *
  * @memberof Icons
  * @example
- * <svg class='icon'><use xlink:href='#icon-bike'/></svg>
+ * <svg class='icon'><use xlink:href='#icon-paint'/></svg>
  */
 .icon {
   display: block;
@@ -33,11 +33,11 @@
  *
  * @memberof Icons
  * @example
- * <svg class='icon icon--s'><use xlink:href='#icon-bike'/></svg>
+ * <svg class='icon icon--s'><use xlink:href='#icon-document'/></svg>
  */
 .icon--s {
-  height: 12px !important;
-  width: 12px !important;
+  height: 15px !important;
+  width: 15px !important;
 }
 
 /**
@@ -45,9 +45,38 @@
  *
  * @memberof Icons
  * @example
- * <svg class='icon icon--l'><use xlink:href='#icon-bike'/></svg>
+ * <svg class='icon icon--l'><use xlink:href='#icon-star'/></svg>
  */
 .icon--l {
   height: 36px !important;
   width: 36px !important;
+}
+
+/**
+ * Add to a wrapping element around an icon in order to align the icon with text and ensure icon doesn't impact text line height. If text uses a `txt-h{number}` class, then use the `icon-wrapper--heading` modifier.
+ *
+ * @memberof Icons
+ * @example
+ * <p class='txt-l'><span class='icon-wrapper'><svg class='icon'><use xlink:href='#icon-clipboard'/></svg></span> Copy</p>
+ * <p class='txt-xl'>Ring the <span class='icon-wrapper'><svg class='icon icon--l'><use xlink:href='#icon-bell'/></svg></span></p>
+ * <p class='txt-s'>Keep your <span class='icon-wrapper'><svg class='icon icon--s'><use xlink:href='#icon-home'/></svg></span> safe from <span class='icon-wrapper'><svg class='icon icon--s'><use xlink:href='#icon-bug'/></svg></span></p>
+ **/
+.icon-wrapper {
+  position: relative;
+  display: inline-flex !important;
+  vertical-align: top !important;
+  align-items: center;
+  justify-content: center;
+  height: 1em;
+  top: 0.3em;
+}
+
+/**
+
+ * @memberof Icons
+ * @example
+ * <h1 class='txt-h1'>I <span class='icon-wrapper icon-wrapper--heading'><svg class='icon icon--l'><use xlink:href='#icon-heart'/></svg></span> New York.</p>
+ **/
+.icon-wrapper--heading {
+  top: 0.08em;
 }
