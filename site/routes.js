@@ -176,8 +176,8 @@ function buildRoutes() {
           'Switches',
           'Checkboxes',
           'Radios',
-          'Triangles',
-          'Miscellaneous'
+          'Icons',
+          'Triangles'
         ];
 
         // Build out secondary navigation

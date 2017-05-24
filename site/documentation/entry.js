@@ -87,7 +87,7 @@ class Entry extends React.Component {
               target='_blank'
               className='txt-s link inline-block link--gray'
             >
-              <svg className='align-t inline-block mr6 icon'><use xlinkHref='#icon-code'/></svg>
+              <svg className='align-t inline-block mr6 mt3 icon icon--s'><use xlinkHref='#icon-code'/></svg>
               {path.basename(props.parsedComment.source.filename)}: {props.parsedComment.source.line}
             </a>
           </div>
