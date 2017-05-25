@@ -74,7 +74,7 @@
  * @memberof Inputs & textareas
  * @example
  * <input class='input' placeholder='default' />
- * <input class='input input--border-teal w180' placeholder='teal' />
+ * <input class='input input--border-teal w240' placeholder='teal' />
  */
 .input {
   height: 36px;
@@ -101,7 +101,7 @@
  * @memberof Inputs & textareas
  * @example
  * <textarea placeholder='default' class='textarea'></textarea>
- * <textarea placeholder='pink' class='textarea textarea--border-pink w180'></textarea>
+ * <textarea placeholder='pink' class='textarea textarea--border-pink w240'></textarea>
  */
 .textarea {
   resize: vertical;

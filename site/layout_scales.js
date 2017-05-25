@@ -45,7 +45,7 @@ class LayoutScales extends React.Component {
     const rows = Object.keys(classSets).map((name) => {
       const data = classSets[name];
       const scale = data.scale.map((number) => {
-        const numberClasses = 'flex-child w72 txt-mono align-r px6 py3 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light color-gray';
+        const numberClasses = 'flex-child w60 txt-s txt-mono align-r pr6 py3 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light color-gray';
         return (
           <span
             key={number}

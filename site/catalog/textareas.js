@@ -29,7 +29,7 @@ const colors = [
 ];
 
 function TextareaEl(props) {
-  let textareaClasses = 'textarea w180';
+  let textareaClasses = 'textarea w240';
   if (props.border) textareaClasses += ` textarea--border-${props.border}`;
   if (props.color) textareaClasses += ` color-${props.color}`;
   return (
@@ -44,7 +44,7 @@ class Textareas extends React.Component {
 
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Textareas
         </h2>
 

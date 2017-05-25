@@ -159,7 +159,7 @@
  * @group
  * @memberof Positioning
  * @example
-  * <div class="relative h72">
+  * <div class="relative h60">
  *   <div class="absolute bg-darken10 right">right</div>
  *   <div class="absolute bg-darken10 bottom">bottom</div>
  *   <div class="absolute bg-darken10 left">left</div>
@@ -179,7 +179,7 @@
  * @group
  * @memberof Positioning
  * @example
- * <div class="relative h72">
+ * <div class="relative h60">
  *   <div class="absolute z5 bg-pink p6">z5</div>
  *   <div class="absolute z1 bg-blue p6 mt12 ml24">z1</div>
  *   <div class="absolute z1-neg1 bg-teal p6 mt24 ml48">z-neg1</div>
@@ -210,7 +210,7 @@
  * Set `auto` margins on left and right. This pattern is useful for horizontally centering block elements.
  *
  * @example
- * <div class='mx-auto w72 bg-darken10'>mx-auto</div>
+ * <div class='mx-auto w60 bg-darken10'>mx-auto</div>
  * @memberof Margins
  */
 .mx-auto { margin-left: auto !important; margin-right: auto !important; }
@@ -340,7 +340,7 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex-parent flex-parent--center-cross bg-darken10 h96'>
+ * <div class='flex-parent flex-parent--center-cross bg-darken10 h120'>
  *  <div class='flex-child bg-darken10'>child</div>
  * </div>
  */
@@ -351,7 +351,7 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex-parent flex-parent--end-cross h72 bg-darken10'>
+ * <div class='flex-parent flex-parent--end-cross h120 bg-darken10'>
  *  <div class='flex-child bg-darken10 h42'>child</div>
  *  <div class='flex-child bg-darken10'>child</div>
  * </div>
@@ -386,7 +386,7 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex-parent flex-parent--stretch-cross bg-darken10 h96'>
+ * <div class='flex-parent flex-parent--stretch-cross bg-darken10 h120'>
  *  <div class='flex-child bg-darken10'>child</div>
  * </div>
  */
@@ -398,7 +398,7 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex-parent flex-parent--space-between-main bg-darken10 h96'>
+ * <div class='flex-parent flex-parent--space-between-main bg-darken10 h120'>
  *  <div class='flex-child bg-darken10'>child</div>
  *  <div class='flex-child bg-darken10'>child</div>
  * </div>
@@ -486,7 +486,7 @@
  * @group
  * @example
  * <div class='bg-darken10 flex-parent flex-parent--center-main clip'>
- *   <div class='w180 p12 bg-darken10'>
+ *   <div class='w240 p12 bg-darken10'>
  *     <div class='bg-darken10 bleed-r'>Right bleed</div>
  *   </div>
  * </div>
