@@ -2,7 +2,7 @@ import React from 'react';
 import { HtmlExample } from '../html_example';
 
 const basicSidebar = `<div class='flex-parent viewport-full relative clip'>
-  <div class='flex-child w-full w300-ml absolute static-ml left bottom'>
+  <div class='flex-child w-full w240-ml absolute static-ml left bottom'>
     <div class='flex-parent flex-parent--column viewport-third h-full hmax-full bg-white'>
       <div class='flex-child flex-child--grow p12 scroll-auto'>
         <h3 class='txt-m txt-bold mb6'>Title here</h3>
@@ -18,7 +18,7 @@ const basicSidebar = `<div class='flex-parent viewport-full relative clip'>
 
 const floatingSidebar = `<div class='viewport-full relative clip'>
   <div class='bg-darken10 viewport-twothirds viewport-full-ml absolute top left right bottom'></div>
-  <div class='absolute top-ml left bottom z1 w-full w300-ml p12-ml'>
+  <div class='absolute top-ml left bottom z1 w-full w240-ml p12-ml'>
     <div class='flex-parent flex-parent--column viewport-third h-auto-ml hmax-full bg-white round-ml shadow-darken5'>
       <div class='p12 scroll-auto'>
         <h3 class='txt-m txt-bold mb6'>Title here</h3>
@@ -36,7 +36,7 @@ class ExampleSidebarApps extends React.Component {
   render() {
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Full height sidebar
         </h2>
         <HtmlExample code={basicSidebar} />
