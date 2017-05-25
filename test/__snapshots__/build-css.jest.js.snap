@@ -264,6 +264,10 @@ textarea{
   font-family:'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   font-size:90%;
 }
+.txt-bold{
+  font-weight:bold !important;
+  line-height:1em;
+}
 .txt-h1{
   font-size:45px;
   line-height:54px;
@@ -393,7 +397,6 @@ textarea{
 .txt-normal{
   font-weight:normal !important;
 }
-.txt-bold{ font-weight:bold !important; }
 .txt-em{ font-style:italic !important; }
 .txt-uppercase{ text-transform:uppercase !important; }
 .txt-lowercase{ text-transform:lowercase !important; }
@@ -16732,6 +16735,10 @@ textarea{
   font-family:'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   font-size:90%;
 }
+.txt-bold{
+  font-weight:bold !important;
+  line-height:1em;
+}
 .txt-h1{
   font-size:45px;
   line-height:54px;
@@ -16861,7 +16868,6 @@ textarea{
 .txt-normal{
   font-weight:normal !important;
 }
-.txt-bold{ font-weight:bold !important; }
 .txt-em{ font-style:italic !important; }
 .txt-uppercase{ text-transform:uppercase !important; }
 .txt-lowercase{ text-transform:lowercase !important; }
