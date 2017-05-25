@@ -53,30 +53,31 @@
 }
 
 /**
- * Add to a wrapping element around an icon in order to align the icon with text and ensure icon doesn't impact text line height. If text uses a `txt-h{number}` class, then use the `icon-wrapper--heading` modifier.
+ * Add to a wrapping element around an icon in order to align the icon with text and ensure the icon doesn't unexpectedly shift text line height. Note that this rule depends on an expected text line height of 1.5 to 1.66, so it does not work with `txt-h{number}` classes. See the `icon-inliner--heading` modifier to center icons in heading text.
  *
  * @memberof Icons
  * @example
- * <p class='txt-l'><span class='icon-wrapper'><svg class='icon'><use xlink:href='#icon-clipboard'/></svg></span> Copy</p>
- * <p class='txt-xl'>Ring the <span class='icon-wrapper'><svg class='icon icon--l'><use xlink:href='#icon-bell'/></svg></span></p>
- * <p class='txt-s'>Keep your <span class='icon-wrapper'><svg class='icon icon--s'><use xlink:href='#icon-home'/></svg></span> safe from <span class='icon-wrapper'><svg class='icon icon--s'><use xlink:href='#icon-bug'/></svg></span></p>
+ * <p class='txt-l'><span class='icon-inliner'><svg class='icon'><use xlink:href='#icon-clipboard'/></svg></span> Copy</p>
+ * <p class='txt-xl'>Ring the <span class='icon-inliner'><svg class='icon icon--l'><use xlink:href='#icon-bell'/></svg></span></p>
+ * <p class='txt-s'>Keep your <span class='icon-inliner'><svg class='icon icon--s'><use xlink:href='#icon-home'/></svg></span> safe from <span class='icon-inliner'><svg class='icon icon--s'><use xlink:href='#icon-bug'/></svg></span></p>
  **/
-.icon-wrapper {
-  position: relative;
+.icon-inliner {
+  position: relative !important;
   display: inline-flex !important;
   vertical-align: top !important;
-  align-items: center;
-  justify-content: center;
-  height: 1em;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 1em !important;
   top: 0.3em;
 }
 
 /**
-
+ * Modify the `icon-inliner` class so it works inside headings, which have an expected line height of 1.2 rather than 1.5 to 1.66.
+ *
  * @memberof Icons
  * @example
- * <h1 class='txt-h1'>I <span class='icon-wrapper icon-wrapper--heading'><svg class='icon icon--l'><use xlink:href='#icon-heart'/></svg></span> New York.</p>
+ * <h1 class='txt-h1'>I <span class='icon-inliner icon-inliner--heading'><svg class='icon icon--l'><use xlink:href='#icon-heart'/></svg></span> New York.</p>
  **/
-.icon-wrapper--heading {
+.icon-inliner--heading {
   top: 0.08em;
 }

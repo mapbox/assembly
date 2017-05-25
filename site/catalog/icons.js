@@ -23,7 +23,7 @@ const iconSizes = [
   'icon icon--l',
 ];
 
-const wrapperClass = 'icon-wrapper';
+const wrapperClass = 'icon-inliner';
 
 const getIconEl = (icon) => {
   return (
@@ -41,13 +41,13 @@ const getIconEl = (icon) => {
       </div>
 
       {fontSizes.map((f) => iconSizes.map((c) => <div className={`mb12 ${f}`}>
-          <div className={f.includes('h') ? wrapperClass + ' icon-wrapper--heading' : wrapperClass}>
+          <div className={f.includes('h') ? wrapperClass + ' icon-inliner--heading' : wrapperClass}>
             <svg className={c}>
               <use xlinkHref={`#icon-${icon}`} />
             </svg>
           </div>
           <span>Curabitur blandit tempus porttitor.</span>
-          <div className={f.includes('h') ? wrapperClass + ' icon-wrapper--heading' : wrapperClass}>
+          <div className={f.includes('h') ? wrapperClass + ' icon-inliner--heading' : wrapperClass}>
             <svg className={c}>
               <use xlinkHref={`#icon-${icon}`} />
             </svg>
