@@ -18,6 +18,9 @@ class Icons extends React.Component {
           <svg className='icon mr12'>
             <use xlinkHref={`#icon-${icon}`} />
           </svg>
+          <svg className='icon icon--s mr12'>
+            <use xlinkHref={`#icon-${icon}`} />
+          </svg>
           <span className='color-gray'>{icon}</span>
         </div>
       );
