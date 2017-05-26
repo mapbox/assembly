@@ -379,7 +379,7 @@ function buildLayoutScales() {
        * @group
        * @memberof Sizing
        * @example
-       * <div class='w96 bg-darken10'>w96</div>
+       * <div class='w60 bg-darken10'>w60</div>
        */`
     );
     scales.forEach((scale) => {
@@ -429,7 +429,7 @@ function buildLayoutScales() {
        * @group
        * @memberof Sizing
        * @example
-       * <div class='inline-block wmin96 bg-darken10'>wmin96</div>
+       * <div class='inline-block wmin60 bg-darken10'>wmin60</div>
        */`
     );
     scales.forEach((scale) => {
@@ -504,7 +504,7 @@ function buildLayoutScales() {
        * @group
        * @memberof Sizing
        * @example
-       * <div class='hmin48 bg-darken10'>hmin48</div>
+       * <div class='hmin60 bg-darken10'>hmin60</div>
        */`
     );
     scales.forEach((scale) => {

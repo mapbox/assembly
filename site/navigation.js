@@ -65,7 +65,7 @@ class Navigation extends React.Component {
     return (
       <div className='flex-parent-mm flex-parent--column-mm w-full'>
         <div className='flex-child'>
-          <div className='flex-parent hmin48 mt24 mb18 mx24'>
+          <div className='flex-parent hmin60 mt24 mb18 mx24'>
             <a href='/assembly/' className='flex-child flex-child--grow link link--blue block'>
               <Logo className='icon icon--l' />
             </a>

@@ -469,7 +469,7 @@ textarea {
  *
  * @memberof Type utils
  * @example
- * <div class='border border--gray w96 txt-nowrap'>
+ * <div class='border border--gray w60 txt-nowrap'>
  *   This text is too long for its container
  * </div>
  */
@@ -482,7 +482,7 @@ textarea {
  *
  * @memberof Type utils
  * @example
- * <div class='border border--gray w96 txt-break-word'>
+ * <div class='border border--gray w60 txt-break-word'>
  *   Thiswordistoolongforitscontainer
  * </div>
  */
@@ -496,7 +496,7 @@ textarea {
  *
  * @memberof Type utils
  * @example
- * <div class='border border--gray w96 txt-truncate'>
+ * <div class='border border--gray w60 txt-truncate'>
  *   This text is too long for its container
  * </div>
  */
@@ -687,11 +687,11 @@ textarea {
  * @example
  * <div>
  *   <span class='align-t inline-block h12 w12 border border--gray'></span>
- *   <span class='align-t inline-block h48 border border--gray'>align-top</span>
+ *   <span class='align-t inline-block h60 border border--gray'>align-top</span>
  * </div>
  * <div class='mt3'>
  *   <span class='align-middle inline-block h12 w12 border'></span>
- *   <span class='align-middle inline-block h48 border border--gray'>align-middle</span>
+ *   <span class='align-middle inline-block h60 border border--gray'>align-middle</span>
  * </div>
  */
 .align-t { vertical-align: top !important; }

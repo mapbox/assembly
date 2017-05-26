@@ -4,17 +4,17 @@ import { HtmlExample } from '../html_example';
 const html = `<div class='grid grid--gut12 flex-parent--stretch-cross'>
   <div class='col col--4'>
     <div class='h-full bg-darken10 p12'>
-      <div class='bg-darken10 h48'></div>
+      <div class='bg-darken10 h60'></div>
     </div>
   </div>
   <div class='col col--4'>
     <div class='h-full bg-darken10 p12'>
-      <div class='bg-darken10 h72'></div>
+      <div class='bg-darken10 h60'></div>
     </div>
   </div>
   <div class='col col--4'>
     <div class='h-full bg-darken10 p12'>
-      <div class='bg-darken10 h96'></div>
+      <div class='bg-darken10 h120'></div>
     </div>
   </div>
 </div>`;
@@ -23,7 +23,7 @@ class ExampleEqualHeightColumns extends React.Component {
   render() {
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Equal-height columns
         </h2>
         <div className='prose mb24'>
