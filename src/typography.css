@@ -128,6 +128,19 @@ textarea {
 }
 
 /**
+ * Apply a bold font weight.
+ *
+ * @memberof Type utils
+ * @example
+ * <div class='txt-bold'>txt-bold</div>
+ */
+.txt-bold {
+  font-weight: bold !important;
+  /* prevent bold text inside inline text from offsetting line height */
+  line-height: 1em;
+}
+
+/**
  * Classes for font size and line height, lists, block quotes, code blocks, and more.
  *
  * @section Type basics
@@ -375,15 +388,6 @@ textarea {
 .txt-normal {
   font-weight: normal !important;
 }
-
-/**
- * Apply a bold font weight.
- *
- * @memberof Type utils
- * @example
- * <div class='txt-bold'>txt-bold</div>
- */
-.txt-bold { font-weight: bold !important; }
 
 /**
  * Italicize text.
