@@ -683,11 +683,11 @@ textarea {
  * @example
  * <div>
  *   <span class='align-t inline-block h12 w12 border border--gray'></span>
- *   <span class='align-t inline-block h48 border border--gray'>align-top</span>
+ *   <span class='align-t inline-block h60 border border--gray'>align-top</span>
  * </div>
  * <div class='mt3'>
  *   <span class='align-middle inline-block h12 w12 border'></span>
- *   <span class='align-middle inline-block h48 border border--gray'>align-middle</span>
+ *   <span class='align-middle inline-block h60 border border--gray'>align-middle</span>
  * </div>
  */
 .align-t { vertical-align: top !important; }
