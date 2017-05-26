@@ -31,7 +31,7 @@ class Icons extends React.Component {
         <h1 className='txt-h2 mb12 txt-bold pt24'>
           Icons
         </h1>
-        <div className='mb48 prose'>
+        <div className='mb36 prose'>
           <p>Assembly comes with {icons.length} icons covering most UI design needs. The icons are designed to be used as embedded SVGs. For usage instructions, look at <a href='/assembly/documentation/#Icons'>the <code>.icon</code> class documentation</a>.</p>
         </div>
         <div className='flex-parent flex-parent--wrap txt-mono txt-s'>

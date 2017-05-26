@@ -4,6 +4,40 @@
  * @section Layout
  */
 
+/*
+ * All a limiter to a wrapping element around a page layout. The limiter should never be placed inside other elements that have layout classes. Unlike many other classes in Assembly, the limiter class includes built-in media queries, designed to manage line lengths across screen sizes. The limiter's max width is 1200px.
+ *
+ * @memberof Layout
+ * @example
+ * <div>
+ *  <div class='limiter border border--darken10 h24'>
+ *   limiter
+ *  </div>
+ * </div>
+ */
+.limiter {
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+}
+
+@media (--m-screen) {
+  .limiter {
+    margin-left: auto;
+    margin-right: auto;
+    width: 91.666666666%;
+    max-width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (--l-screen) {
+  .limiter {
+    width: 83.33333333%;
+  }
+}
+
 /**
  * Assembly uses a 12-column flexible grid with optional gutters.
  *
@@ -182,7 +216,7 @@
  * <div class="relative h60">
  *   <div class="absolute z5 bg-pink p6">z5</div>
  *   <div class="absolute z1 bg-blue p6 mt12 ml24">z1</div>
- *   <div class="absolute z1-neg1 bg-teal p6 mt24 ml48">z-neg1</div>
+ *   <div class="absolute z1-neg1 bg-teal p6 mt24 ml60">z-neg1</div>
  * </div>
  */
 .z-neg1 { z-index: -1 !important; }
@@ -375,8 +409,8 @@
  * @memberof Flexbox
  * @example
  * <div class='flex-parent flex-parent--wrap bg-darken10 clip'>
- *  <div class='flex-child bg-darken10 w480'>child</div>
- *  <div class='flex-child bg-darken10 w480'>child</div>
+ *  <div class='flex-child bg-darken10 w600'>child</div>
+ *  <div class='flex-child bg-darken10 w600'>child</div>
  * </div>
  */
 .flex-parent--wrap { flex-wrap: wrap !important; }

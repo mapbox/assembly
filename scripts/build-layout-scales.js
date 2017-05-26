@@ -504,7 +504,7 @@ function buildLayoutScales() {
        * @group
        * @memberof Sizing
        * @example
-       * <div class='hmin48 bg-darken10'>hmin48</div>
+       * <div class='hmin60 bg-darken10'>hmin60</div>
        */`
     );
     scales.forEach((scale) => {

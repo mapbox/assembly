@@ -72,16 +72,16 @@ class Grids extends React.Component {
         <h3 className='mb12 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Standard grid</h3>
         {GridEls}
 
-        <h3 className='mb12 mt48 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with gutters</h3>
+        <h3 className='mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with gutters</h3>
         {GridElsWithGutters}
 
-        <h3 className='mb12 mt48 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with left offset</h3>
+        <h3 className='mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with left offset</h3>
         {GridElsWithLeftMargin}
 
-        <h3 className='mb12 mt48 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with right offset</h3>
+        <h3 className='mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with right offset</h3>
         {GridElsWithRightMargin}
 
-        <h3 className='mb12 mt48 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grids only on large screens</h3>
+        <h3 className='mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grids only on large screens</h3>
         <div className='txt-s grid-ml grid--gut24-ml mb18'>
           <div className='col-ml col--6-ml'>
             <div className='border p3'>col--6-ml</div>
