@@ -62,12 +62,12 @@
  * <p class='txt-s'>Keep your <span class='icon-inliner'><svg class='icon icon--s'><use xlink:href='#icon-home'/></svg></span> safe from <span class='icon-inliner'><svg class='icon icon--s'><use xlink:href='#icon-bug'/></svg></span></p>
  **/
 .icon-inliner {
-  position: relative !important;
-  display: inline-flex !important;
-  vertical-align: top !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: 1em !important;
+  position: relative;
+  display: inline-flex;
+  vertical-align: top;
+  align-items: center;
+  justify-content: center;
+  height: 1em;
   top: 0.3em;
 }
 
