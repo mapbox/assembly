@@ -136,8 +136,6 @@ textarea {
  */
 .txt-bold {
   font-weight: bold !important;
-  /* prevent bold text inside inline text from offsetting line height */
-  line-height: 1em;
 }
 
 /**
