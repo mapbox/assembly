@@ -183,104 +183,6 @@ function buildColorVariants(variables, config) {
     }, '');
   };
 
-  variantGenerators.selectFill = function (colors) {
-    return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
-        .select--${color} {
-          background-color: var(--${color});
-        }
-
-        .select--${color}:hover {
-          background-color: var(--${darkerShade});
-        }
-      `);
-    }, '');
-  };
-
-  variantGenerators.selectStroke = function (colors) {
-    return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
-        .select--stroke-${color} {
-          color: var(--${color});
-        }
-        .select--stroke-${color} + .select-arrow {
-          border-top-color: var(--${color});
-        }
-        .select--stroke-${color}:hover {
-          color: var(--${darkerShade});
-        }
-        .select--stroke-${color}:hover + .select-arrow {
-          border-top-color: var(--${darkerShade});
-        }
-      `);
-    }, '');
-  };
-
-  variantGenerators.checkbox = function (colors) {
-    return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
-        .checkbox--${color} {
-          color: var(--${color});
-        }
-
-        .checkbox-container:hover > .checkbox--${color},
-        input:checked + .checkbox--${color} {
-          color: var(--${darkerShade});
-        }
-      `);
-    }, '');
-  };
-
-  variantGenerators.radio = function (colors) {
-    return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
-        .radio--${color} {
-          color: var(--${color});
-        }
-
-        .radio-container:hover > .radio--${color},
-        input:checked + .radio--${color} {
-          color: var(--${darkerShade});
-        }
-      `);
-    }, '');
-  };
-
-  variantGenerators.switch = function (colors) {
-    return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      // Darken background when hovered and when active
-      // Darken dot on hover when inactive only
-      return result += stripIndent(`
-        .switch--${color} {
-          color: var(--${color});
-        }
-
-        .switch--${color}:hover {
-          color: var(--${darkerShade});
-        }
-
-        .switch--${color}:hover::after,
-        input:checked + .switch--${color} {
-          background-color: var(--${darkerShade});
-        }
-
-        input:checked + .switch--dot-${color}::after {
-          background-color: var(--${color});
-        }
-      `);
-    }, '');
-  };
-
   variantGenerators.toggle = function (colors) {
     return colors.reduce((result, color) => {
       if (isDark(color)) return result;
@@ -317,34 +219,6 @@ function buildColorVariants(variables, config) {
         input:checked + .toggle--active-${color} {
           color: var(--${color});
         }
-      `);
-    }, '');
-  };
-
-  variantGenerators.range = function (colors) {
-    return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      // Set the track and thumb color.
-      // Set the track and thumb color to dark on hover.
-      return result += stripIndent(`
-        .range--${color} > input::-webkit-slider-runnable-track { background: var(--${color}); }
-        .range--${color} > input::-moz-range-track { background: var(--${color}); }
-        .range--${color} > input::-ms-fill-lower { background: var(--${color}); }
-        .range--${color} > input::-ms-fill-upper { background: var(--${color}); }
-
-        .range--${color} > input::-webkit-slider-thumb { border-color: var(--${color}); }
-        .range--${color} > input::-ms-thumb { border-color: var(--${color}); }
-        .range--${color} > input::-moz-range-thumb { border-color: var(--${color}); }
-
-        .range--${color} > input:hover::-webkit-slider-runnable-track { background: var(--${darkerShade}); }
-        .range--${color} > input:hover::-moz-range-track { background: var(--${darkerShade}); }
-        .range--${color} > input:hover::-ms-fill-lower { background: var(--${darkerShade}); }
-        .range--${color} > input:hover::-ms-fill-upper { background: var(--${darkerShade}); }
-
-        .range--${color} > input:hover::-webkit-slider-thumb { border-color: var(--${darkerShade}); }
-        .range--${color} > input:hover::-ms-thumb { border-color: var(--${darkerShade}); }
-        .range--${color} > input:hover::-moz-range-thumb { border-color: var(--${darkerShade}); }
       `);
     }, '');
   };
