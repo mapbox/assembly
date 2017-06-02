@@ -45,7 +45,7 @@
 
 .input::placeholder,
 .textarea::placeholder {
-  color: var(--neutral45);
+  color: var(--disabled-text-color);
 }
 
 /* Without this, IE always has a scrollbar */
@@ -74,7 +74,7 @@
  * @memberof Inputs & textareas
  * @example
  * <input class='input' placeholder='default' />
- * <input class='input input--border-teal w240' placeholder='teal' />
+ * <input class='input input--border-green w240' placeholder='green' />
  */
 .input {
   height: 36px;
@@ -134,8 +134,8 @@
 .textarea:disabled {
   pointer-events: none;
   color: var(--darken50) !important;
-  background-color: var(--neutral10) !important;
-  border-color: var(--neutral25) !important;
+  background-color: var(--disabled-secondary-interactive-color) !important;
+  border-color: var(--disabled-primary-interactive-color) !important;
 }
 
 /* Using the attribute selector instead of the pseudo-class `:read-only`
@@ -150,7 +150,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .input[readonly],
 .textarea[readonly] {
-  background-color: var(--neutral10) !important;
+  background-color: var(--disabled-secondary-interactive-color) !important;
 }
 
 /**
@@ -279,7 +279,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .select--stroke + .select-arrow {
-  border-top-color: var(--gray);
+  border-top-color: currentColor;
 }
 
 .select--stroke:hover {
@@ -288,7 +288,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .select--stroke:hover + .select-arrow {
-  border-top-color: var(--gray-dark);
+  border-top-color: currentColor;
 }
 
 /**
@@ -330,7 +330,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .select:disabled {
   pointer-events: none;
   color: var(--darken25) !important;
-  background-color: var(--neutral25) !important;
+  background-color: var(--disabled-primary-interactive-color) !important;
   border-color: transparent !important;
 }
 
@@ -349,15 +349,20 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /**
  *
- * Style a range element. Set the color by adding a `range--{color}` modifier (`*-dark` colors are not available).
+ * Style a range element. On dark backgrounds, add the `range--dark` modifier.
  *
  * The best way to vertically align range elements with other items on the same row is to wrap the row in a `flex-parent flex-parent--center-cross` container.
  * For more details, read about the [flexbox classes](#Flexbox).
  *
  * @memberof Ranges
  * @example
- * <div class='range'>
- *   <input type='range' />
+ * <div>
+ *   <div class='range'>
+ *     <input type='range' />
+ *   </div>
+ *   <div class='range range--dark'>
+ *     <input type='range' />
+ *   </div>
  * </div>
 */
 .range {
@@ -382,7 +387,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: var(--default-secondary-interactive-color);
+  background: currentColor;
   vertical-align: middle;
   cursor: pointer;
   box-shadow: none;
@@ -394,7 +399,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 0;
   border: 0;
   border-radius: 2px;
-  background: var(--default-secondary-interactive-color);
+  background: currentColor;
   vertical-align: middle;
   cursor: pointer;
   box-shadow: none;
@@ -411,27 +416,22 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .range > input::-ms-fill-lower {
-  background: var(--default-secondary-interactive-color);
+  background: currentColor;
   border: 0;
   box-shadow: none;
   border-radius: 2px;
 }
 
 .range > input::-ms-fill-upper {
-  background: var(--default-secondary-interactive-color);
+  background: currentColor;
   border: 0;
   box-shadow: none;
   border-radius: 2px;
 }
 
-/* range track:hover */
-.range > input:hover::-webkit-slider-runnable-track { background: var(--gray); }
-.range > input:hover::-moz-range-track { background: var(--gray); }
-.range > input:hover::-ms-fill-upper { background: var(--gray); }
-.range > input:hover::-ms-fill-lower { background: var(--gray); }
-
 /* range thumb */
 .range > input::-webkit-slider-thumb {
+  box-shadow:rgba(255,255,255,0.25) -1200px 0 0 1200px;
   box-sizing: border-box;
   transition: background var(--transition);
   appearance: none;
@@ -440,8 +440,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 20px;
   margin-top: -8px;
   border-radius: 50%;
+  border: 2px solid currentColor;
   background: var(--white);
-  border: 2px solid var(--default-secondary-interactive-color);
   cursor: pointer;
 }
 
@@ -451,8 +451,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--white);
-  border: 2px solid var(--default-secondary-interactive-color);
+  background: var(--range-handle);
   cursor: pointer;
 }
 
@@ -463,15 +462,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 20px;
   margin-top: 0; /* Fixes Edge's vertical alignment */
   border-radius: 50%;
-  background: var(--white);
-  border: 2px solid var(--default-secondary-interactive-color);
+  background: var(--range-handle);
   cursor: pointer;
 }
-
-/* range thumb:hover */
-.range > input:hover::-webkit-slider-thumb { border-color: var(--gray); }
-.range > input:hover::-ms-thumb { border-color: var(--gray); }
-.range > input:hover::-moz-range-thumb { border-color: var(--gray); }
 
 /*
  * Make a range element small.
@@ -488,21 +481,19 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 /* range small track */
-.range--s > input::-webkit-slider-runnable-track { height: 2px; }
-.range--s > input::-moz-range-track { height: 2px; }
-.range--s > input::-ms-track { height: 2px; border-width: 9px 0; }
+.range--s > input::-ms-track { border-width: 9px 0; }
 
 /* range small thumb */
 .range--s > input::-webkit-slider-thumb {
   width: 16px;
   height: 16px;
-  margin-top: -7px;
+  margin-top: -6px;
 }
 
 .range--s > input::-moz-range-thumb {
   width: 16px;
   height: 16px;
-  margin-top: -8px;
+  margin-top: -7px;
 }
 
 .range--s > input::-ms-thumb {
@@ -521,14 +512,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  *   <input disabled type='range' />
  * </div>
  */
-.range > input:disabled::-webkit-slider-runnable-track { background: var(--neutral45); }
-.range > input:disabled::-moz-range-track { background: var(--neutral45); }
-.range > input:disabled::-ms-fill-upper { background: var(--neutral45); }
-.range > input:disabled::-ms-fill-lower { background: var(--neutral45); }
+.range > input:disabled::-webkit-slider-runnable-track { background: var(--disabled-primary-interactive-color); }
+.range > input:disabled::-moz-range-track { background: var(--disabled-primary-interactive-color); }
+.range > input:disabled::-ms-fill-upper { background: var(--disabled-primary-interactive-color); }
+.range > input:disabled::-ms-fill-lower { background: var(--disabled-primary-interactive-color); }
 
-.range > input:disabled::-webkit-slider-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
-.range > input:disabled::-ms-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
-.range > input:disabled::-moz-range-thumb { border-color: var(--neutral45); background: var(--gray-faint); }
+.range > input:disabled::-webkit-slider-thumb { border-color: var(--disabled-primary-interactive-color); background: var(--gray-faint); }
+.range > input:disabled::-ms-thumb { border-color: var(--disabled-primary-interactive-color); background: var(--gray-faint); }
+.range > input:disabled::-moz-range-thumb { border-color: var(--disabled-primary-interactive-color); background: var(--gray-faint); }
 
 /* shared form styles */
 .checkbox-container,
@@ -867,7 +858,7 @@ input:disabled + .radio,
 input:disabled + .switch {
   pointer-events: none;
   color: var(--darken25) !important;
-  background-color: var(--neutral25) !important;
+  background-color: var(--disabled-primary-interactive-color) !important;
   border-color: transparent !important;
 }
 
@@ -937,6 +928,6 @@ input:disabled + .toggle {
 }
 
 input:checked:disabled + .toggle {
-  background-color: var(--neutral25) !important;
+  background-color: var(--disabled-primary-interactive-color) !important;
   color: var(--darken25) !important;
 }

@@ -2,16 +2,12 @@ import React from 'react';
 
 const colors = [
   null,
-  'gray-faint',
-  'gray-light',
   'gray',
-  'gray-dark',
   'pink',
   'red',
   'orange',
   'yellow',
   'green',
-  'teal',
   'blue',
   'purple',
   'darken5',

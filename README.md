@@ -50,8 +50,6 @@ The following configuration specifies an array of default colors. All components
 ```json
 [
   "red",
-  "teal",
-  "teal-dark",
   "green-light"
 ]
 ```

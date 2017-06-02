@@ -137,141 +137,6 @@ scripts/build-layout-scales.js to produce the output you want */
 }
 
 /**
- * Apply margin on all sides.
- *
- * @group
- * @example
- * <div class='m24 bg-darken10'>m24</div>
- * @memberof Margins
- */
-
-.m-neg1 {
-  margin: -1px !important;
-}
-
-.m-neg2 {
-  margin: -2px !important;
-}
-
-.m-neg3 {
-  margin: -3px !important;
-}
-
-.m-neg6 {
-  margin: -6px !important;
-}
-
-.m-neg12 {
-  margin: -12px !important;
-}
-
-.m-neg18 {
-  margin: -18px !important;
-}
-
-.m-neg24 {
-  margin: -24px !important;
-}
-
-.m-neg30 {
-  margin: -30px !important;
-}
-
-.m-neg36 {
-  margin: -36px !important;
-}
-
-.m-neg60 {
-  margin: -60px !important;
-}
-
-.m-neg120 {
-  margin: -120px !important;
-}
-
-.m-neg180 {
-  margin: -180px !important;
-}
-
-.m-neg240 {
-  margin: -240px !important;
-}
-
-.m-neg300 {
-  margin: -300px !important;
-}
-
-.m-neg360 {
-  margin: -360px !important;
-}
-
-.m-neg600 {
-  margin: -600px !important;
-}
-
-.m0 {
-  margin: 0 !important;
-}
-
-.m3 {
-  margin: 3px !important;
-}
-
-.m6 {
-  margin: 6px !important;
-}
-
-.m12 {
-  margin: 12px !important;
-}
-
-.m18 {
-  margin: 18px !important;
-}
-
-.m24 {
-  margin: 24px !important;
-}
-
-.m30 {
-  margin: 30px !important;
-}
-
-.m36 {
-  margin: 36px !important;
-}
-
-.m60 {
-  margin: 60px !important;
-}
-
-.m120 {
-  margin: 120px !important;
-}
-
-.m180 {
-  margin: 180px !important;
-}
-
-.m240 {
-  margin: 240px !important;
-}
-
-.m300 {
-  margin: 300px !important;
-}
-
-.m360 {
-  margin: 360px !important;
-}
-
-.m600 {
-  margin: 600px !important;
-}
-
-/** @endgroup */
-
-/**
  * Apply margin on the top and bottom.
  *
  * @group
@@ -355,11 +220,6 @@ scripts/build-layout-scales.js to produce the output you want */
   margin-bottom: -360px !important;
 }
 
-.my-neg600 {
-  margin-top: -600px !important;
-  margin-bottom: -600px !important;
-}
-
 .my0 {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -428,11 +288,6 @@ scripts/build-layout-scales.js to produce the output you want */
 .my360 {
   margin-top: 360px !important;
   margin-bottom: 360px !important;
-}
-
-.my600 {
-  margin-top: 600px !important;
-  margin-bottom: 600px !important;
 }
 
 /** @endgroup */
@@ -520,11 +375,6 @@ scripts/build-layout-scales.js to produce the output you want */
   margin-right: -360px !important;
 }
 
-.mx-neg600 {
-  margin-left: -600px !important;
-  margin-right: -600px !important;
-}
-
 .mx0 {
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -593,11 +443,6 @@ scripts/build-layout-scales.js to produce the output you want */
 .mx360 {
   margin-left: 360px !important;
   margin-right: 360px !important;
-}
-
-.mx600 {
-  margin-left: 600px !important;
-  margin-right: 600px !important;
 }
 
 /** @endgroup */
@@ -670,10 +515,6 @@ scripts/build-layout-scales.js to produce the output you want */
   margin-top: -360px !important;
 }
 
-.mt-neg600 {
-  margin-top: -600px !important;
-}
-
 .mt0 {
   margin-top: 0 !important;
 }
@@ -728,10 +569,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
 .mt360 {
   margin-top: 360px !important;
-}
-
-.mt600 {
-  margin-top: 600px !important;
 }
 
 /** @endgroup */
@@ -804,10 +641,6 @@ scripts/build-layout-scales.js to produce the output you want */
   margin-right: -360px !important;
 }
 
-.mr-neg600 {
-  margin-right: -600px !important;
-}
-
 .mr0 {
   margin-right: 0 !important;
 }
@@ -862,10 +695,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
 .mr360 {
   margin-right: 360px !important;
-}
-
-.mr600 {
-  margin-right: 600px !important;
 }
 
 /** @endgroup */
@@ -940,10 +769,6 @@ scripts/build-layout-scales.js to produce the output you want */
   margin-bottom: -360px !important;
 }
 
-.mb-neg600 {
-  margin-bottom: -600px !important;
-}
-
 .mb0 {
   margin-bottom: 0 !important;
 }
@@ -998,10 +823,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
 .mb360 {
   margin-bottom: 360px !important;
-}
-
-.mb600 {
-  margin-bottom: 600px !important;
 }
 
 /** @endgroup */
@@ -1074,10 +895,6 @@ scripts/build-layout-scales.js to produce the output you want */
   margin-left: -360px !important;
 }
 
-.ml-neg600 {
-  margin-left: -600px !important;
-}
-
 .ml0 {
   margin-left: 0 !important;
 }
@@ -1132,80 +949,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
 .ml360 {
   margin-left: 360px !important;
-}
-
-.ml600 {
-  margin-left: 600px !important;
-}
-
-/** @endgroup */
-
-/**
- * Apply padding on all sides.
- *
- * @group
- * @memberof Padding
- * @example
- * <div class='p24 bg-darken10'>p24</div>
- */
-.p0 {
-  padding: 0 !important;
-}
-
-.p3 {
-  padding: 3px !important;
-}
-
-.p6 {
-  padding: 6px !important;
-}
-
-.p12 {
-  padding: 12px !important;
-}
-
-.p18 {
-  padding: 18px !important;
-}
-
-.p24 {
-  padding: 24px !important;
-}
-
-.p30 {
-  padding: 30px !important;
-}
-
-.p36 {
-  padding: 36px !important;
-}
-
-.p60 {
-  padding: 60px !important;
-}
-
-.p120 {
-  padding: 120px !important;
-}
-
-.p180 {
-  padding: 180px !important;
-}
-
-.p240 {
-  padding: 240px !important;
-}
-
-.p300 {
-  padding: 300px !important;
-}
-
-.p360 {
-  padding: 360px !important;
-}
-
-.p600 {
-  padding: 600px !important;
 }
 
 /** @endgroup */
@@ -1288,11 +1031,6 @@ scripts/build-layout-scales.js to produce the output you want */
   padding-bottom: 360px !important;
 }
 
-.py600 {
-  padding-top: 600px !important;
-  padding-bottom: 600px !important;
-}
-
 /** @endgroup */
 
 /**
@@ -1373,11 +1111,6 @@ scripts/build-layout-scales.js to produce the output you want */
   padding-right: 360px !important;
 }
 
-.px600 {
-  padding-left: 600px !important;
-  padding-right: 600px !important;
-}
-
 /** @endgroup */
 
 /**
@@ -1442,10 +1175,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
 .pt360 {
   padding-top: 360px !important;
-}
-
-.pt600 {
-  padding-top: 600px !important;
 }
 
 /** @endgroup */
@@ -1514,10 +1243,6 @@ scripts/build-layout-scales.js to produce the output you want */
   padding-right: 360px !important;
 }
 
-.pr600 {
-  padding-right: 600px !important;
-}
-
 /** @endgroup */
 
 /**
@@ -1584,10 +1309,6 @@ scripts/build-layout-scales.js to produce the output you want */
   padding-bottom: 360px !important;
 }
 
-.pb600 {
-  padding-bottom: 600px !important;
-}
-
 /** @endgroup */
 
 /**
@@ -1652,10 +1373,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
 .pl360 {
   padding-left: 360px !important;
-}
-
-.pl600 {
-  padding-left: 600px !important;
 }
 
 /** @endgroup */
@@ -2244,130 +1961,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-left: 120px;
   }
 
-  .m-neg1-mm {
-    margin: -1px !important;
-  }
-
-  .m-neg2-mm {
-    margin: -2px !important;
-  }
-
-  .m-neg3-mm {
-    margin: -3px !important;
-  }
-
-  .m-neg6-mm {
-    margin: -6px !important;
-  }
-
-  .m-neg12-mm {
-    margin: -12px !important;
-  }
-
-  .m-neg18-mm {
-    margin: -18px !important;
-  }
-
-  .m-neg24-mm {
-    margin: -24px !important;
-  }
-
-  .m-neg30-mm {
-    margin: -30px !important;
-  }
-
-  .m-neg36-mm {
-    margin: -36px !important;
-  }
-
-  .m-neg60-mm {
-    margin: -60px !important;
-  }
-
-  .m-neg120-mm {
-    margin: -120px !important;
-  }
-
-  .m-neg180-mm {
-    margin: -180px !important;
-  }
-
-  .m-neg240-mm {
-    margin: -240px !important;
-  }
-
-  .m-neg300-mm {
-    margin: -300px !important;
-  }
-
-  .m-neg360-mm {
-    margin: -360px !important;
-  }
-
-  .m-neg600-mm {
-    margin: -600px !important;
-  }
-
-  .m0-mm {
-    margin: 0 !important;
-  }
-
-  .m3-mm {
-    margin: 3px !important;
-  }
-
-  .m6-mm {
-    margin: 6px !important;
-  }
-
-  .m12-mm {
-    margin: 12px !important;
-  }
-
-  .m18-mm {
-    margin: 18px !important;
-  }
-
-  .m24-mm {
-    margin: 24px !important;
-  }
-
-  .m30-mm {
-    margin: 30px !important;
-  }
-
-  .m36-mm {
-    margin: 36px !important;
-  }
-
-  .m60-mm {
-    margin: 60px !important;
-  }
-
-  .m120-mm {
-    margin: 120px !important;
-  }
-
-  .m180-mm {
-    margin: 180px !important;
-  }
-
-  .m240-mm {
-    margin: 240px !important;
-  }
-
-  .m300-mm {
-    margin: 300px !important;
-  }
-
-  .m360-mm {
-    margin: 360px !important;
-  }
-
-  .m600-mm {
-    margin: 600px !important;
-  }
-
   .my-neg1-mm {
     margin-top: -1px !important;
     margin-bottom: -1px !important;
@@ -2443,11 +2036,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-bottom: -360px !important;
   }
 
-  .my-neg600-mm {
-    margin-top: -600px !important;
-    margin-bottom: -600px !important;
-  }
-
   .my0-mm {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -2516,11 +2104,6 @@ scripts/build-layout-scales.js to produce the output you want */
   .my360-mm {
     margin-top: 360px !important;
     margin-bottom: 360px !important;
-  }
-
-  .my600-mm {
-    margin-top: 600px !important;
-    margin-bottom: 600px !important;
   }
 
   .mx-neg1-mm {
@@ -2598,11 +2181,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-right: -360px !important;
   }
 
-  .mx-neg600-mm {
-    margin-left: -600px !important;
-    margin-right: -600px !important;
-  }
-
   .mx0-mm {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -2673,11 +2251,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-right: 360px !important;
   }
 
-  .mx600-mm {
-    margin-left: 600px !important;
-    margin-right: 600px !important;
-  }
-
   .mt-neg1-mm {
     margin-top: -1px !important;
   }
@@ -2738,10 +2311,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-top: -360px !important;
   }
 
-  .mt-neg600-mm {
-    margin-top: -600px !important;
-  }
-
   .mt0-mm {
     margin-top: 0 !important;
   }
@@ -2796,10 +2365,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .mt360-mm {
     margin-top: 360px !important;
-  }
-
-  .mt600-mm {
-    margin-top: 600px !important;
   }
 
   .mr-neg1-mm {
@@ -2862,10 +2427,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-right: -360px !important;
   }
 
-  .mr-neg600-mm {
-    margin-right: -600px !important;
-  }
-
   .mr0-mm {
     margin-right: 0 !important;
   }
@@ -2920,10 +2481,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .mr360-mm {
     margin-right: 360px !important;
-  }
-
-  .mr600-mm {
-    margin-right: 600px !important;
   }
 
   .mb-neg1-mm {
@@ -2986,10 +2543,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-bottom: -360px !important;
   }
 
-  .mb-neg600-mm {
-    margin-bottom: -600px !important;
-  }
-
   .mb0-mm {
     margin-bottom: 0 !important;
   }
@@ -3044,10 +2597,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .mb360-mm {
     margin-bottom: 360px !important;
-  }
-
-  .mb600-mm {
-    margin-bottom: 600px !important;
   }
 
   .ml-neg1-mm {
@@ -3110,10 +2659,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-left: -360px !important;
   }
 
-  .ml-neg600-mm {
-    margin-left: -600px !important;
-  }
-
   .ml0-mm {
     margin-left: 0 !important;
   }
@@ -3168,70 +2713,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .ml360-mm {
     margin-left: 360px !important;
-  }
-
-  .ml600-mm {
-    margin-left: 600px !important;
-  }
-
-  .p0-mm {
-    padding: 0 !important;
-  }
-
-  .p3-mm {
-    padding: 3px !important;
-  }
-
-  .p6-mm {
-    padding: 6px !important;
-  }
-
-  .p12-mm {
-    padding: 12px !important;
-  }
-
-  .p18-mm {
-    padding: 18px !important;
-  }
-
-  .p24-mm {
-    padding: 24px !important;
-  }
-
-  .p30-mm {
-    padding: 30px !important;
-  }
-
-  .p36-mm {
-    padding: 36px !important;
-  }
-
-  .p60-mm {
-    padding: 60px !important;
-  }
-
-  .p120-mm {
-    padding: 120px !important;
-  }
-
-  .p180-mm {
-    padding: 180px !important;
-  }
-
-  .p240-mm {
-    padding: 240px !important;
-  }
-
-  .p300-mm {
-    padding: 300px !important;
-  }
-
-  .p360-mm {
-    padding: 360px !important;
-  }
-
-  .p600-mm {
-    padding: 600px !important;
   }
 
   .py0-mm {
@@ -3304,11 +2785,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-bottom: 360px !important;
   }
 
-  .py600-mm {
-    padding-top: 600px !important;
-    padding-bottom: 600px !important;
-  }
-
   .px0-mm {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -3379,11 +2855,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-right: 360px !important;
   }
 
-  .px600-mm {
-    padding-left: 600px !important;
-    padding-right: 600px !important;
-  }
-
   .pt0-mm {
     padding-top: 0 !important;
   }
@@ -3438,10 +2909,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .pt360-mm {
     padding-top: 360px !important;
-  }
-
-  .pt600-mm {
-    padding-top: 600px !important;
   }
 
   .pr0-mm {
@@ -3500,10 +2967,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-right: 360px !important;
   }
 
-  .pr600-mm {
-    padding-right: 600px !important;
-  }
-
   .pb0-mm {
     padding-bottom: 0 !important;
   }
@@ -3560,10 +3023,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-bottom: 360px !important;
   }
 
-  .pb600-mm {
-    padding-bottom: 600px !important;
-  }
-
   .pl0-mm {
     padding-left: 0 !important;
   }
@@ -3618,10 +3077,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .pl360-mm {
     padding-left: 360px !important;
-  }
-
-  .pl600-mm {
-    padding-left: 600px !important;
   }
 
   .w0-mm {
@@ -4138,130 +3593,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-left: 120px;
   }
 
-  .m-neg1-ml {
-    margin: -1px !important;
-  }
-
-  .m-neg2-ml {
-    margin: -2px !important;
-  }
-
-  .m-neg3-ml {
-    margin: -3px !important;
-  }
-
-  .m-neg6-ml {
-    margin: -6px !important;
-  }
-
-  .m-neg12-ml {
-    margin: -12px !important;
-  }
-
-  .m-neg18-ml {
-    margin: -18px !important;
-  }
-
-  .m-neg24-ml {
-    margin: -24px !important;
-  }
-
-  .m-neg30-ml {
-    margin: -30px !important;
-  }
-
-  .m-neg36-ml {
-    margin: -36px !important;
-  }
-
-  .m-neg60-ml {
-    margin: -60px !important;
-  }
-
-  .m-neg120-ml {
-    margin: -120px !important;
-  }
-
-  .m-neg180-ml {
-    margin: -180px !important;
-  }
-
-  .m-neg240-ml {
-    margin: -240px !important;
-  }
-
-  .m-neg300-ml {
-    margin: -300px !important;
-  }
-
-  .m-neg360-ml {
-    margin: -360px !important;
-  }
-
-  .m-neg600-ml {
-    margin: -600px !important;
-  }
-
-  .m0-ml {
-    margin: 0 !important;
-  }
-
-  .m3-ml {
-    margin: 3px !important;
-  }
-
-  .m6-ml {
-    margin: 6px !important;
-  }
-
-  .m12-ml {
-    margin: 12px !important;
-  }
-
-  .m18-ml {
-    margin: 18px !important;
-  }
-
-  .m24-ml {
-    margin: 24px !important;
-  }
-
-  .m30-ml {
-    margin: 30px !important;
-  }
-
-  .m36-ml {
-    margin: 36px !important;
-  }
-
-  .m60-ml {
-    margin: 60px !important;
-  }
-
-  .m120-ml {
-    margin: 120px !important;
-  }
-
-  .m180-ml {
-    margin: 180px !important;
-  }
-
-  .m240-ml {
-    margin: 240px !important;
-  }
-
-  .m300-ml {
-    margin: 300px !important;
-  }
-
-  .m360-ml {
-    margin: 360px !important;
-  }
-
-  .m600-ml {
-    margin: 600px !important;
-  }
-
   .my-neg1-ml {
     margin-top: -1px !important;
     margin-bottom: -1px !important;
@@ -4337,11 +3668,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-bottom: -360px !important;
   }
 
-  .my-neg600-ml {
-    margin-top: -600px !important;
-    margin-bottom: -600px !important;
-  }
-
   .my0-ml {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -4410,11 +3736,6 @@ scripts/build-layout-scales.js to produce the output you want */
   .my360-ml {
     margin-top: 360px !important;
     margin-bottom: 360px !important;
-  }
-
-  .my600-ml {
-    margin-top: 600px !important;
-    margin-bottom: 600px !important;
   }
 
   .mx-neg1-ml {
@@ -4492,11 +3813,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-right: -360px !important;
   }
 
-  .mx-neg600-ml {
-    margin-left: -600px !important;
-    margin-right: -600px !important;
-  }
-
   .mx0-ml {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -4567,11 +3883,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-right: 360px !important;
   }
 
-  .mx600-ml {
-    margin-left: 600px !important;
-    margin-right: 600px !important;
-  }
-
   .mt-neg1-ml {
     margin-top: -1px !important;
   }
@@ -4632,10 +3943,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-top: -360px !important;
   }
 
-  .mt-neg600-ml {
-    margin-top: -600px !important;
-  }
-
   .mt0-ml {
     margin-top: 0 !important;
   }
@@ -4690,10 +3997,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .mt360-ml {
     margin-top: 360px !important;
-  }
-
-  .mt600-ml {
-    margin-top: 600px !important;
   }
 
   .mr-neg1-ml {
@@ -4756,10 +4059,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-right: -360px !important;
   }
 
-  .mr-neg600-ml {
-    margin-right: -600px !important;
-  }
-
   .mr0-ml {
     margin-right: 0 !important;
   }
@@ -4814,10 +4113,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .mr360-ml {
     margin-right: 360px !important;
-  }
-
-  .mr600-ml {
-    margin-right: 600px !important;
   }
 
   .mb-neg1-ml {
@@ -4880,10 +4175,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-bottom: -360px !important;
   }
 
-  .mb-neg600-ml {
-    margin-bottom: -600px !important;
-  }
-
   .mb0-ml {
     margin-bottom: 0 !important;
   }
@@ -4938,10 +4229,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .mb360-ml {
     margin-bottom: 360px !important;
-  }
-
-  .mb600-ml {
-    margin-bottom: 600px !important;
   }
 
   .ml-neg1-ml {
@@ -5004,10 +4291,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-left: -360px !important;
   }
 
-  .ml-neg600-ml {
-    margin-left: -600px !important;
-  }
-
   .ml0-ml {
     margin-left: 0 !important;
   }
@@ -5062,70 +4345,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .ml360-ml {
     margin-left: 360px !important;
-  }
-
-  .ml600-ml {
-    margin-left: 600px !important;
-  }
-
-  .p0-ml {
-    padding: 0 !important;
-  }
-
-  .p3-ml {
-    padding: 3px !important;
-  }
-
-  .p6-ml {
-    padding: 6px !important;
-  }
-
-  .p12-ml {
-    padding: 12px !important;
-  }
-
-  .p18-ml {
-    padding: 18px !important;
-  }
-
-  .p24-ml {
-    padding: 24px !important;
-  }
-
-  .p30-ml {
-    padding: 30px !important;
-  }
-
-  .p36-ml {
-    padding: 36px !important;
-  }
-
-  .p60-ml {
-    padding: 60px !important;
-  }
-
-  .p120-ml {
-    padding: 120px !important;
-  }
-
-  .p180-ml {
-    padding: 180px !important;
-  }
-
-  .p240-ml {
-    padding: 240px !important;
-  }
-
-  .p300-ml {
-    padding: 300px !important;
-  }
-
-  .p360-ml {
-    padding: 360px !important;
-  }
-
-  .p600-ml {
-    padding: 600px !important;
   }
 
   .py0-ml {
@@ -5198,11 +4417,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-bottom: 360px !important;
   }
 
-  .py600-ml {
-    padding-top: 600px !important;
-    padding-bottom: 600px !important;
-  }
-
   .px0-ml {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -5273,11 +4487,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-right: 360px !important;
   }
 
-  .px600-ml {
-    padding-left: 600px !important;
-    padding-right: 600px !important;
-  }
-
   .pt0-ml {
     padding-top: 0 !important;
   }
@@ -5332,10 +4541,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .pt360-ml {
     padding-top: 360px !important;
-  }
-
-  .pt600-ml {
-    padding-top: 600px !important;
   }
 
   .pr0-ml {
@@ -5394,10 +4599,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-right: 360px !important;
   }
 
-  .pr600-ml {
-    padding-right: 600px !important;
-  }
-
   .pb0-ml {
     padding-bottom: 0 !important;
   }
@@ -5454,10 +4655,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-bottom: 360px !important;
   }
 
-  .pb600-ml {
-    padding-bottom: 600px !important;
-  }
-
   .pl0-ml {
     padding-left: 0 !important;
   }
@@ -5512,10 +4709,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .pl360-ml {
     padding-left: 360px !important;
-  }
-
-  .pl600-ml {
-    padding-left: 600px !important;
   }
 
   .w0-ml {
@@ -5920,7 +5113,7 @@ scripts/build-layout-scales.js to produce the output you want */
 
 }
 
-@media screen and (min-width: 1200px) {
+@media undefined {
 
   .grid--gut0-mxl {
     margin-left: -0;
@@ -6032,130 +5225,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-left: 120px;
   }
 
-  .m-neg1-mxl {
-    margin: -1px !important;
-  }
-
-  .m-neg2-mxl {
-    margin: -2px !important;
-  }
-
-  .m-neg3-mxl {
-    margin: -3px !important;
-  }
-
-  .m-neg6-mxl {
-    margin: -6px !important;
-  }
-
-  .m-neg12-mxl {
-    margin: -12px !important;
-  }
-
-  .m-neg18-mxl {
-    margin: -18px !important;
-  }
-
-  .m-neg24-mxl {
-    margin: -24px !important;
-  }
-
-  .m-neg30-mxl {
-    margin: -30px !important;
-  }
-
-  .m-neg36-mxl {
-    margin: -36px !important;
-  }
-
-  .m-neg60-mxl {
-    margin: -60px !important;
-  }
-
-  .m-neg120-mxl {
-    margin: -120px !important;
-  }
-
-  .m-neg180-mxl {
-    margin: -180px !important;
-  }
-
-  .m-neg240-mxl {
-    margin: -240px !important;
-  }
-
-  .m-neg300-mxl {
-    margin: -300px !important;
-  }
-
-  .m-neg360-mxl {
-    margin: -360px !important;
-  }
-
-  .m-neg600-mxl {
-    margin: -600px !important;
-  }
-
-  .m0-mxl {
-    margin: 0 !important;
-  }
-
-  .m3-mxl {
-    margin: 3px !important;
-  }
-
-  .m6-mxl {
-    margin: 6px !important;
-  }
-
-  .m12-mxl {
-    margin: 12px !important;
-  }
-
-  .m18-mxl {
-    margin: 18px !important;
-  }
-
-  .m24-mxl {
-    margin: 24px !important;
-  }
-
-  .m30-mxl {
-    margin: 30px !important;
-  }
-
-  .m36-mxl {
-    margin: 36px !important;
-  }
-
-  .m60-mxl {
-    margin: 60px !important;
-  }
-
-  .m120-mxl {
-    margin: 120px !important;
-  }
-
-  .m180-mxl {
-    margin: 180px !important;
-  }
-
-  .m240-mxl {
-    margin: 240px !important;
-  }
-
-  .m300-mxl {
-    margin: 300px !important;
-  }
-
-  .m360-mxl {
-    margin: 360px !important;
-  }
-
-  .m600-mxl {
-    margin: 600px !important;
-  }
-
   .my-neg1-mxl {
     margin-top: -1px !important;
     margin-bottom: -1px !important;
@@ -6231,11 +5300,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-bottom: -360px !important;
   }
 
-  .my-neg600-mxl {
-    margin-top: -600px !important;
-    margin-bottom: -600px !important;
-  }
-
   .my0-mxl {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -6304,11 +5368,6 @@ scripts/build-layout-scales.js to produce the output you want */
   .my360-mxl {
     margin-top: 360px !important;
     margin-bottom: 360px !important;
-  }
-
-  .my600-mxl {
-    margin-top: 600px !important;
-    margin-bottom: 600px !important;
   }
 
   .mx-neg1-mxl {
@@ -6386,11 +5445,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-right: -360px !important;
   }
 
-  .mx-neg600-mxl {
-    margin-left: -600px !important;
-    margin-right: -600px !important;
-  }
-
   .mx0-mxl {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -6461,11 +5515,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-right: 360px !important;
   }
 
-  .mx600-mxl {
-    margin-left: 600px !important;
-    margin-right: 600px !important;
-  }
-
   .mt-neg1-mxl {
     margin-top: -1px !important;
   }
@@ -6526,10 +5575,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-top: -360px !important;
   }
 
-  .mt-neg600-mxl {
-    margin-top: -600px !important;
-  }
-
   .mt0-mxl {
     margin-top: 0 !important;
   }
@@ -6584,10 +5629,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .mt360-mxl {
     margin-top: 360px !important;
-  }
-
-  .mt600-mxl {
-    margin-top: 600px !important;
   }
 
   .mr-neg1-mxl {
@@ -6650,10 +5691,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-right: -360px !important;
   }
 
-  .mr-neg600-mxl {
-    margin-right: -600px !important;
-  }
-
   .mr0-mxl {
     margin-right: 0 !important;
   }
@@ -6708,10 +5745,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .mr360-mxl {
     margin-right: 360px !important;
-  }
-
-  .mr600-mxl {
-    margin-right: 600px !important;
   }
 
   .mb-neg1-mxl {
@@ -6774,10 +5807,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-bottom: -360px !important;
   }
 
-  .mb-neg600-mxl {
-    margin-bottom: -600px !important;
-  }
-
   .mb0-mxl {
     margin-bottom: 0 !important;
   }
@@ -6832,10 +5861,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .mb360-mxl {
     margin-bottom: 360px !important;
-  }
-
-  .mb600-mxl {
-    margin-bottom: 600px !important;
   }
 
   .ml-neg1-mxl {
@@ -6898,10 +5923,6 @@ scripts/build-layout-scales.js to produce the output you want */
     margin-left: -360px !important;
   }
 
-  .ml-neg600-mxl {
-    margin-left: -600px !important;
-  }
-
   .ml0-mxl {
     margin-left: 0 !important;
   }
@@ -6956,70 +5977,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .ml360-mxl {
     margin-left: 360px !important;
-  }
-
-  .ml600-mxl {
-    margin-left: 600px !important;
-  }
-
-  .p0-mxl {
-    padding: 0 !important;
-  }
-
-  .p3-mxl {
-    padding: 3px !important;
-  }
-
-  .p6-mxl {
-    padding: 6px !important;
-  }
-
-  .p12-mxl {
-    padding: 12px !important;
-  }
-
-  .p18-mxl {
-    padding: 18px !important;
-  }
-
-  .p24-mxl {
-    padding: 24px !important;
-  }
-
-  .p30-mxl {
-    padding: 30px !important;
-  }
-
-  .p36-mxl {
-    padding: 36px !important;
-  }
-
-  .p60-mxl {
-    padding: 60px !important;
-  }
-
-  .p120-mxl {
-    padding: 120px !important;
-  }
-
-  .p180-mxl {
-    padding: 180px !important;
-  }
-
-  .p240-mxl {
-    padding: 240px !important;
-  }
-
-  .p300-mxl {
-    padding: 300px !important;
-  }
-
-  .p360-mxl {
-    padding: 360px !important;
-  }
-
-  .p600-mxl {
-    padding: 600px !important;
   }
 
   .py0-mxl {
@@ -7092,11 +6049,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-bottom: 360px !important;
   }
 
-  .py600-mxl {
-    padding-top: 600px !important;
-    padding-bottom: 600px !important;
-  }
-
   .px0-mxl {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -7167,11 +6119,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-right: 360px !important;
   }
 
-  .px600-mxl {
-    padding-left: 600px !important;
-    padding-right: 600px !important;
-  }
-
   .pt0-mxl {
     padding-top: 0 !important;
   }
@@ -7226,10 +6173,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .pt360-mxl {
     padding-top: 360px !important;
-  }
-
-  .pt600-mxl {
-    padding-top: 600px !important;
   }
 
   .pr0-mxl {
@@ -7288,10 +6231,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-right: 360px !important;
   }
 
-  .pr600-mxl {
-    padding-right: 600px !important;
-  }
-
   .pb0-mxl {
     padding-bottom: 0 !important;
   }
@@ -7348,10 +6287,6 @@ scripts/build-layout-scales.js to produce the output you want */
     padding-bottom: 360px !important;
   }
 
-  .pb600-mxl {
-    padding-bottom: 600px !important;
-  }
-
   .pl0-mxl {
     padding-left: 0 !important;
   }
@@ -7406,10 +6341,6 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .pl360-mxl {
     padding-left: 360px !important;
-  }
-
-  .pl600-mxl {
-    padding-left: 600px !important;
   }
 
   .w0-mxl {

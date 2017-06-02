@@ -216,7 +216,7 @@
  * <div class="relative h60">
  *   <div class="absolute z5 bg-pink p6">z5</div>
  *   <div class="absolute z1 bg-blue p6 mt12 ml24">z1</div>
- *   <div class="absolute z1-neg1 bg-teal p6 mt24 ml60">z-neg1</div>
+ *   <div class="absolute z1-neg1 bg-blue p6 mt24 ml60">z-neg1</div>
  * </div>
  */
 .z-neg1 { z-index: -1 !important; }

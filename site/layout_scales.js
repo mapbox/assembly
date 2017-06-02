@@ -7,11 +7,11 @@ const classSets = {
     scale: scales.gutter
   },
   'Margins': {
-    classPatterns: ['m{n}', 'mx{n}', 'my{n}'],
+    classPatterns: ['mx{n}', 'my{n}', 'ml{n}', 'mt{n}', 'mr{n}', 'mb{n}'],
     scale: scales.margin
   },
   'Paddings': {
-    classPatterns: ['p{n}', 'px{n}', 'py{n}', 'pl{n}', 'pt{n}', 'pr{n}', 'pb{n}'],
+    classPatterns: ['px{n}', 'py{n}', 'pl{n}', 'pt{n}', 'pr{n}', 'pb{n}'],
     scale: scales.padding
   },
   'Widths': {

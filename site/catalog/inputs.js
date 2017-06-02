@@ -2,29 +2,20 @@ import React from 'react';
 
 const colors = [
   null,
-  'gray-faint',
-  'gray-light',
   'gray',
-  'gray-dark',
   'pink',
   'red',
   'orange',
   'yellow',
   'green',
-  'teal',
   'blue',
   'purple',
-  'lighten5',
-  'lighten10',
   'lighten25',
   'lighten50',
   'lighten75',
-  'darken5',
-  'darken10',
   'darken25',
   'darken50',
   'darken75',
-  'black',
   'white'
 ];
 
@@ -53,11 +44,6 @@ class Inputs extends React.Component {
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Text inputs
         </h2>
-
-        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Text colors</div>
-        <div className='mb24'>
-          {colors.map((c) => <InputEl key={c} color={c} />)}
-        </div>
 
         <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Border colors</div>
         <div className='mb24'>

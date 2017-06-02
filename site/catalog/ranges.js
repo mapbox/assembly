@@ -2,10 +2,7 @@ import React from 'react';
 
 const colors = [
   null,
-  'gray-faint',
-  'gray-light',
   'gray',
-  'gray-dark',
   'pink',
   'red',
   'orange',
@@ -14,18 +11,8 @@ const colors = [
   'teal',
   'blue',
   'purple',
-  'lighten5',
-  'lighten10',
-  'lighten25',
-  'lighten50',
-  'lighten75',
-  'darken5',
-  'darken10',
-  'darken25',
   'darken50',
-  'darken75',
-  'black',
-  'white'
+  'darken75'
 ];
 
 function RangesEl(props) {

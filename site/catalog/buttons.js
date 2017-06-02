@@ -8,7 +8,6 @@ const colors = [
   'orange',
   'yellow',
   'green',
-  'teal',
   'blue',
   'purple',
   'darken5',
@@ -44,17 +43,19 @@ const getButtonEls = (color, i) => {
         <button disabled className={buttonFillClass}>Fill</button>
       </div>
       <div className='inline-block mr18'>
-        <button className={buttonStrokeClass}>Stroke</button>
-      </div>
-      <div className='inline-block mr18'>
-        <button disabled className={buttonStrokeClass}>Stroke</button>
-      </div>
-      <div className='inline-block mr18'>
         <button className={`${buttonFillClass} round`}>Less round</button>
       </div>
       <div className='inline-block mr18'>
         <button disabled className={`${buttonFillClass} round`}>Less round</button>
       </div>
+      {!/^(darken5|darken10|darken25|lighten5|lighten10|lighten25)$/.test(color) ? <span>
+        <div className='inline-block mr18'>
+          <button className={buttonStrokeClass}>Stroke</button>
+        </div>
+        <div className='inline-block mr18'>
+          <button disabled className={buttonStrokeClass}>Stroke</button>
+        </div>
+      </span> : ''}
 
     </div>
   );

@@ -19,7 +19,7 @@
  * @example
  * <button class='btn'>Default</button>
  * <button class='btn btn--red'>Color</button>
- * <button class='btn btn--teal color-yellow'>More colors</button>
+ * <button class='btn btn--green color-yellow'>More colors</button>
  * <button class='btn round'>Less rounded</button>
  * <div class='p6 bg-blue inline-block'>
  *   <button class='btn btn--white color-blue'>Reverse</button>
@@ -117,8 +117,8 @@
  */
 .btn:disabled {
   pointer-events: none;
-  color: var(--darken25) !important;
-  background-color: var(--neutral25) !important;
+  color: var(--disabled-text-color) !important;
+  background-color: var(--disabled-primary-interactive-color) !important;
   border-color: transparent !important;
 }
 

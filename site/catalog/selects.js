@@ -8,7 +8,6 @@ const colors = [
   'orange',
   'yellow',
   'green',
-  'teal',
   'blue',
   'purple',
   'darken5',
@@ -59,16 +58,6 @@ class Selects extends React.Component {
               </div>
               <div className='inline-block mr12'>
                 <div className={selectContainerClass}>
-                  <select className={selectStrokeClass}>
-                    <option>firstoption</option>
-                    <option>two</option>
-                    <option>three</option>
-                  </select>
-                  <div className='select-arrow'></div>
-                </div>
-              </div>
-              <div className='inline-block mr12'>
-                <div className={selectContainerClass}>
                   <select className={`${selectClass} select--s`}>
                     <option>firstoption</option>
                     <option>two</option>
@@ -77,6 +66,16 @@ class Selects extends React.Component {
                   <div className='select-arrow'></div>
                 </div>
               </div>
+              {!/^(darken5|darken10|lighten5|lighten10)$/.test(color) ? <span>
+                <div className={selectContainerClass}>
+                  <select className={selectStrokeClass}>
+                    <option>firstoption</option>
+                    <option>two</option>
+                    <option>three</option>
+                  </select>
+                  <div className='select-arrow'></div>
+                </div>
+                </span> : ''}
             </div>
           );
         })}
