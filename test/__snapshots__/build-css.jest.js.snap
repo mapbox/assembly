@@ -83,6 +83,10 @@ button::-moz-focus-inner{
   border:0;
 }
 
+abbr{
+  text-decoration:none;
+}
+
 svg{
   display:inline-block;
 }
@@ -17141,6 +17145,10 @@ button{
 button::-moz-focus-inner{
   padding:0;
   border:0;
+}
+
+abbr{
+  text-decoration:none;
 }
 
 svg{
