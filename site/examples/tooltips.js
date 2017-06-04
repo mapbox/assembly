@@ -2,7 +2,7 @@ import React from 'react';
 import { HtmlExample } from '../html_example';
 
 const basic = `<div class='flex-parent-inline flex-parent--center-cross flex-parent--column'>
-  <div class='flex-child px6 py6bg-darken75 color-white align-center  round txt-bold txt-s'>Hello world!</div>
+  <div class='flex-child px6 py6 bg-darken75 color-white align-center  round txt-bold txt-s'>Hello world!</div>
   <span class='flex-child triangle triangle--d'></span>
 </div>`;
 

@@ -144,7 +144,7 @@ function buildColorVariants(variables, config) {
   };
 
   variantGenerators.buttonStroke = function (colors) {
-    return colors.reduce((result, color) => {
+    let css = colors.reduce((result, color) => {
       if (isNotSuitableForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
@@ -158,6 +158,12 @@ function buildColorVariants(variables, config) {
         }
       `);
     }, '');
+    css += stripIndent(`
+      .btn.btn--stroke {
+        background-color: transparent;
+      }
+    `);
+    return css;
   };
 
   variantGenerators.selectFill = function (colors) {
