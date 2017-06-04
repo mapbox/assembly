@@ -467,7 +467,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--range-handle);
+  border: 2px solid currentColor;
+  background: var(--white);
   cursor: pointer;
 }
 
@@ -478,7 +479,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 20px;
   margin-top: 0; /* Fixes Edge's vertical alignment */
   border-radius: 50%;
-  background: var(--range-handle);
+  border: 2px solid currentColor;
+  background: var(--white);
   cursor: pointer;
 }
 
