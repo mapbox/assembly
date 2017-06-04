@@ -279,7 +279,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .select--stroke + .select-arrow {
-  border-top-color: currentColor;
+  color: var(--gray);
 }
 
 .select--stroke:hover {
@@ -307,7 +307,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .select--s {
   font-size: 12px;
   line-height: 20px;
-  padding: 0 22px 0 12px; /* plus arrow */
+  padding: 0 20px 0 6px; /* plus arrow */
 }
 
 .select--s + .select-arrow {
