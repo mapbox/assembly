@@ -275,6 +275,23 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .select--stroke {
   color: var(--gray);
   background-color: transparent;
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+/**
+ * Modify the `select--stroke` modifier to be 2 px wide instead of 1 px wide. This class will have no effect if not combined with `select--stroke`.
+ *
+ * @memberof Selects
+ * @example
+ * <div class='select-container'>
+ *   <select class='select select--stroke select--stroke--2'>
+ *     <option>one</option>
+ *     <option>two</option>
+ *   </select>
+ *   <div class='select-arrow'></div>
+ * </div>
+ */
+.select--stroke--2 {
   box-shadow: inset 0 0 0 2px currentColor;
 }
 
