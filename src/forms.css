@@ -212,8 +212,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   right: 12px;
   top: 50%;
   pointer-events: none;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
+  border-left: 4px solid var(--transparent);
+  border-right: 4px solid var(--transparent);
   border-top: 5px solid currentColor;
   width: 8px;
   height: 8px;
@@ -245,14 +245,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 /* Remove purple highlight in HC mode */
 @media all and (-ms-high-contrast: active) {
   .select:focus::-ms-value {
-    background-color: transparent;
+    background-color: var(--transparent);
     color: inherit;
   }
 }
 /* Remove blue highlight in Normal mode */
 @media all and (-ms-high-contrast: none) {
   .select:focus::-ms-value {
-    background-color: transparent;
+    background-color: var(--transparent);
     color: inherit;
   }
 }
@@ -274,7 +274,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .select--stroke {
   color: var(--gray);
-  background-color: transparent;
+  background-color: var(--transparent);
   box-shadow: inset 0 0 0 1px currentColor;
 }
 
@@ -300,7 +300,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .select--stroke:hover {
-  background-color: transparent;
+  background-color: var(--transparent);
   color: var(--gray-dark);
 }
 
@@ -348,7 +348,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   pointer-events: none;
   color: var(--darken25) !important;
   background-color: var(--disabled-primary-interactive-color) !important;
-  border-color: transparent !important;
+  border-color: var(--transparent) !important;
 }
 
 .select:disabled + .select-arrow {
@@ -394,7 +394,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 0;
   margin: 0;
   border: 0;
-  background: transparent;
+  background: var(--transparent);
 }
 
 /* range track */
@@ -426,10 +426,10 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   width: 100%;
   height: 4px;
   cursor: pointer;
-  background: transparent;
-  border-color: transparent;
+  background: var(--transparent);
+  border-color: var(--transparent);
   border-width: 12px 0;
-  color: transparent;
+  color: var(--transparent);
 }
 
 .range > input::-ms-fill-lower {
@@ -572,8 +572,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   position: relative;
   border-width: 2px;
   border-style: solid;
-  border-color: transparent;
+  border-color: var(--transparent);
   transition: color var(--transition),
+    border var(--transition),
     background-color var(--transition);
 }
 
@@ -611,18 +612,20 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  *   </label>
  */
 .checkbox {
-  background-color: #fff;
-  color: var(--default-secondary-interactive-color);
-  border-color: currentColor;
+  color: var(--white);
+  border-color: var(--default-secondary-interactive-color);
+  transition: color var(--transition),
+    border var(--transition),
+    background-color var(--transition);
 }
 
 .checkbox-container:hover > .checkbox {
-  color: var(--default-primary-interactive-color);
+  border-color: var(--default-primary-interactive-color-dark);
 }
 
 /* Ensure checkboxes inside buttons look nice */
 .btn:not(.btn--stroke) > .checkbox {
-  border-color: transparent;
+  border-color: var(--transparent);
   top: 0;
 }
 
@@ -671,7 +674,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .radio-container:hover > .radio {
-  color: var(--default-primary-interactive-color);
+  color: var(--default-primary-interactive-color-dark);
 }
 
 .radio::before {
@@ -804,7 +807,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   padding: 0 12px;
   border-radius: 13px;
   text-decoration: none !important; /* prevent underline when inside .prose */
-  background-color: transparent;
+  background-color: var(--transparent);
   transition: color var(--transition),
     background-color var(--transition);
 }
@@ -875,7 +878,7 @@ input:disabled + .switch {
   pointer-events: none;
   color: var(--darken25) !important;
   background-color: var(--disabled-primary-interactive-color) !important;
-  border-color: transparent !important;
+  border-color: var(--transparent) !important;
 }
 
 input:disabled + .switch::after {
@@ -883,16 +886,22 @@ input:disabled + .switch::after {
 }
 
 /* State management for checkboxes and radio inputs */
-input:checked + .checkbox > .icon {
-  display: block;
-}
+input:checked + .checkbox > .icon,
 input:checked + .radio::before {
   display: block;
 }
 
-input:checked + .checkbox,
 input:checked + .radio {
   color: var(--default-primary-interactive-color);
+}
+
+input:checked + .checkbox {
+  border: 2px solid var(--transparent);
+  background-color: var(--default-primary-interactive-color);
+}
+
+.checkbox-container:hover > input:checked + .checkbox {
+  background-color: var(--default-primary-interactive-color-dark);
 }
 
 /* state management for switches */
@@ -906,7 +915,7 @@ input:checked + .switch::after {
 }
 
 input:checked + .switch {
-  border-color: transparent;
+  border-color: var(--transparent);
   background-color: var(--default-primary-interactive-color);
 }
 
@@ -940,7 +949,7 @@ input:checked + .toggle {
 input:disabled + .toggle {
   pointer-events: none;
   color: var(--darken25) !important;
-  border-color: transparent !important;
+  border-color: var(--transparent) !important;
 }
 
 input:checked:disabled + .toggle {

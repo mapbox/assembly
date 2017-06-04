@@ -227,12 +227,19 @@ function buildColorVariants(variables, config) {
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .checkbox--${color} {
-          color: var(--${color});
+          border-color: var(--${color});
         }
 
-        .checkbox-container:hover > .checkbox--${color},
+        .checkbox-container:hover > .checkbox--${color} {
+          border-color: var(--${darkerShade});
+        }
+
         input:checked + .checkbox--${color} {
-          color: var(--${darkerShade});
+          background-color: var(--${color});
+        }
+
+        .checkbox-container:hover > input:checked + .checkbox--${color} {
+          background-color: var(--${darkerShade});
         }
       `);
     }, '');
@@ -243,12 +250,12 @@ function buildColorVariants(variables, config) {
       if (isNotSuitableForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
-        .radio--${color} {
+        .radio--${color},
+        input:checked + .radio--${color} {
           color: var(--${color});
         }
 
-        .radio-container:hover > .radio--${color},
-        input:checked + .radio--${color} {
+        .radio-container:hover > .radio--${color} {
           color: var(--${darkerShade});
         }
       `);

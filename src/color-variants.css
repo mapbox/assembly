@@ -383,6 +383,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--darken10);
 }
 
+.btn.btn--stroke {
+  background-color: transparent;
+}
+
 .select--gray {
   background-color: var(--gray);
 }
@@ -960,290 +964,402 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .checkbox--gray {
-  color: var(--gray);
+  border-color: var(--gray);
 }
 
-.checkbox-container:hover > .checkbox--gray,
+.checkbox-container:hover > .checkbox--gray {
+  border-color: var(--gray-dark);
+}
+
 input:checked + .checkbox--gray {
-  color: var(--gray-dark);
+  background-color: var(--gray);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--gray {
+  background-color: var(--gray-dark);
 }
 
 .checkbox--pink {
-  color: var(--pink);
+  border-color: var(--pink);
 }
 
-.checkbox-container:hover > .checkbox--pink,
+.checkbox-container:hover > .checkbox--pink {
+  border-color: var(--pink-dark);
+}
+
 input:checked + .checkbox--pink {
-  color: var(--pink-dark);
+  background-color: var(--pink);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--pink {
+  background-color: var(--pink-dark);
 }
 
 .checkbox--red {
-  color: var(--red);
+  border-color: var(--red);
 }
 
-.checkbox-container:hover > .checkbox--red,
+.checkbox-container:hover > .checkbox--red {
+  border-color: var(--red-dark);
+}
+
 input:checked + .checkbox--red {
-  color: var(--red-dark);
+  background-color: var(--red);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--red {
+  background-color: var(--red-dark);
 }
 
 .checkbox--orange {
-  color: var(--orange);
+  border-color: var(--orange);
 }
 
-.checkbox-container:hover > .checkbox--orange,
+.checkbox-container:hover > .checkbox--orange {
+  border-color: var(--orange-dark);
+}
+
 input:checked + .checkbox--orange {
-  color: var(--orange-dark);
+  background-color: var(--orange);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--orange {
+  background-color: var(--orange-dark);
 }
 
 .checkbox--yellow {
-  color: var(--yellow);
+  border-color: var(--yellow);
 }
 
-.checkbox-container:hover > .checkbox--yellow,
+.checkbox-container:hover > .checkbox--yellow {
+  border-color: var(--yellow-dark);
+}
+
 input:checked + .checkbox--yellow {
-  color: var(--yellow-dark);
+  background-color: var(--yellow);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--yellow {
+  background-color: var(--yellow-dark);
 }
 
 .checkbox--green {
-  color: var(--green);
+  border-color: var(--green);
 }
 
-.checkbox-container:hover > .checkbox--green,
+.checkbox-container:hover > .checkbox--green {
+  border-color: var(--green-dark);
+}
+
 input:checked + .checkbox--green {
-  color: var(--green-dark);
+  background-color: var(--green);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--green {
+  background-color: var(--green-dark);
 }
 
 .checkbox--blue {
-  color: var(--blue);
+  border-color: var(--blue);
 }
 
-.checkbox-container:hover > .checkbox--blue,
+.checkbox-container:hover > .checkbox--blue {
+  border-color: var(--blue-dark);
+}
+
 input:checked + .checkbox--blue {
-  color: var(--blue-dark);
+  background-color: var(--blue);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--blue {
+  background-color: var(--blue-dark);
 }
 
 .checkbox--purple {
-  color: var(--purple);
+  border-color: var(--purple);
 }
 
-.checkbox-container:hover > .checkbox--purple,
+.checkbox-container:hover > .checkbox--purple {
+  border-color: var(--purple-dark);
+}
+
 input:checked + .checkbox--purple {
-  color: var(--purple-dark);
+  background-color: var(--purple);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--purple {
+  background-color: var(--purple-dark);
 }
 
 .checkbox--darken25 {
-  color: var(--darken25);
+  border-color: var(--darken25);
 }
 
-.checkbox-container:hover > .checkbox--darken25,
+.checkbox-container:hover > .checkbox--darken25 {
+  border-color: var(--darken50);
+}
+
 input:checked + .checkbox--darken25 {
-  color: var(--darken50);
+  background-color: var(--darken25);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--darken25 {
+  background-color: var(--darken50);
 }
 
 .checkbox--darken50 {
-  color: var(--darken50);
+  border-color: var(--darken50);
 }
 
-.checkbox-container:hover > .checkbox--darken50,
+.checkbox-container:hover > .checkbox--darken50 {
+  border-color: var(--darken75);
+}
+
 input:checked + .checkbox--darken50 {
-  color: var(--darken75);
+  background-color: var(--darken50);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--darken50 {
+  background-color: var(--darken75);
 }
 
 .checkbox--darken75 {
-  color: var(--darken75);
+  border-color: var(--darken75);
 }
 
-.checkbox-container:hover > .checkbox--darken75,
+.checkbox-container:hover > .checkbox--darken75 {
+  border-color: var(--black);
+}
+
 input:checked + .checkbox--darken75 {
-  color: var(--black);
+  background-color: var(--darken75);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--darken75 {
+  background-color: var(--black);
 }
 
 .checkbox--lighten25 {
-  color: var(--lighten25);
+  border-color: var(--lighten25);
 }
 
-.checkbox-container:hover > .checkbox--lighten25,
+.checkbox-container:hover > .checkbox--lighten25 {
+  border-color: var(--lighten50);
+}
+
 input:checked + .checkbox--lighten25 {
-  color: var(--lighten50);
+  background-color: var(--lighten25);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--lighten25 {
+  background-color: var(--lighten50);
 }
 
 .checkbox--lighten50 {
-  color: var(--lighten50);
+  border-color: var(--lighten50);
 }
 
-.checkbox-container:hover > .checkbox--lighten50,
+.checkbox-container:hover > .checkbox--lighten50 {
+  border-color: var(--lighten75);
+}
+
 input:checked + .checkbox--lighten50 {
-  color: var(--lighten75);
+  background-color: var(--lighten50);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--lighten50 {
+  background-color: var(--lighten75);
 }
 
 .checkbox--lighten75 {
-  color: var(--lighten75);
+  border-color: var(--lighten75);
 }
 
-.checkbox-container:hover > .checkbox--lighten75,
+.checkbox-container:hover > .checkbox--lighten75 {
+  border-color: var(--white);
+}
+
 input:checked + .checkbox--lighten75 {
-  color: var(--white);
+  background-color: var(--lighten75);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--lighten75 {
+  background-color: var(--white);
 }
 
 .checkbox--white {
-  color: var(--white);
+  border-color: var(--white);
 }
 
-.checkbox-container:hover > .checkbox--white,
+.checkbox-container:hover > .checkbox--white {
+  border-color: var(--lighten75);
+}
+
 input:checked + .checkbox--white {
-  color: var(--lighten75);
+  background-color: var(--white);
+}
+
+.checkbox-container:hover > input:checked + .checkbox--white {
+  background-color: var(--lighten75);
 }
 
 .checkbox--transparent {
-  color: var(--transparent);
+  border-color: var(--transparent);
 }
 
-.checkbox-container:hover > .checkbox--transparent,
+.checkbox-container:hover > .checkbox--transparent {
+  border-color: var(--darken10);
+}
+
 input:checked + .checkbox--transparent {
-  color: var(--darken10);
+  background-color: var(--transparent);
 }
 
-.radio--gray {
+.checkbox-container:hover > input:checked + .checkbox--transparent {
+  background-color: var(--darken10);
+}
+
+.radio--gray,
+input:checked + .radio--gray {
   color: var(--gray);
 }
 
-.radio-container:hover > .radio--gray,
-input:checked + .radio--gray {
+.radio-container:hover > .radio--gray {
   color: var(--gray-dark);
 }
 
-.radio--pink {
+.radio--pink,
+input:checked + .radio--pink {
   color: var(--pink);
 }
 
-.radio-container:hover > .radio--pink,
-input:checked + .radio--pink {
+.radio-container:hover > .radio--pink {
   color: var(--pink-dark);
 }
 
-.radio--red {
+.radio--red,
+input:checked + .radio--red {
   color: var(--red);
 }
 
-.radio-container:hover > .radio--red,
-input:checked + .radio--red {
+.radio-container:hover > .radio--red {
   color: var(--red-dark);
 }
 
-.radio--orange {
+.radio--orange,
+input:checked + .radio--orange {
   color: var(--orange);
 }
 
-.radio-container:hover > .radio--orange,
-input:checked + .radio--orange {
+.radio-container:hover > .radio--orange {
   color: var(--orange-dark);
 }
 
-.radio--yellow {
+.radio--yellow,
+input:checked + .radio--yellow {
   color: var(--yellow);
 }
 
-.radio-container:hover > .radio--yellow,
-input:checked + .radio--yellow {
+.radio-container:hover > .radio--yellow {
   color: var(--yellow-dark);
 }
 
-.radio--green {
+.radio--green,
+input:checked + .radio--green {
   color: var(--green);
 }
 
-.radio-container:hover > .radio--green,
-input:checked + .radio--green {
+.radio-container:hover > .radio--green {
   color: var(--green-dark);
 }
 
-.radio--blue {
+.radio--blue,
+input:checked + .radio--blue {
   color: var(--blue);
 }
 
-.radio-container:hover > .radio--blue,
-input:checked + .radio--blue {
+.radio-container:hover > .radio--blue {
   color: var(--blue-dark);
 }
 
-.radio--purple {
+.radio--purple,
+input:checked + .radio--purple {
   color: var(--purple);
 }
 
-.radio-container:hover > .radio--purple,
-input:checked + .radio--purple {
+.radio-container:hover > .radio--purple {
   color: var(--purple-dark);
 }
 
-.radio--darken25 {
+.radio--darken25,
+input:checked + .radio--darken25 {
   color: var(--darken25);
 }
 
-.radio-container:hover > .radio--darken25,
-input:checked + .radio--darken25 {
+.radio-container:hover > .radio--darken25 {
   color: var(--darken50);
 }
 
-.radio--darken50 {
-  color: var(--darken50);
-}
-
-.radio-container:hover > .radio--darken50,
+.radio--darken50,
 input:checked + .radio--darken50 {
+  color: var(--darken50);
+}
+
+.radio-container:hover > .radio--darken50 {
   color: var(--darken75);
 }
 
-.radio--darken75 {
-  color: var(--darken75);
-}
-
-.radio-container:hover > .radio--darken75,
+.radio--darken75,
 input:checked + .radio--darken75 {
+  color: var(--darken75);
+}
+
+.radio-container:hover > .radio--darken75 {
   color: var(--black);
 }
 
-.radio--lighten25 {
+.radio--lighten25,
+input:checked + .radio--lighten25 {
   color: var(--lighten25);
 }
 
-.radio-container:hover > .radio--lighten25,
-input:checked + .radio--lighten25 {
+.radio-container:hover > .radio--lighten25 {
   color: var(--lighten50);
 }
 
-.radio--lighten50 {
-  color: var(--lighten50);
-}
-
-.radio-container:hover > .radio--lighten50,
+.radio--lighten50,
 input:checked + .radio--lighten50 {
+  color: var(--lighten50);
+}
+
+.radio-container:hover > .radio--lighten50 {
   color: var(--lighten75);
 }
 
-.radio--lighten75 {
-  color: var(--lighten75);
-}
-
-.radio-container:hover > .radio--lighten75,
+.radio--lighten75,
 input:checked + .radio--lighten75 {
-  color: var(--white);
-}
-
-.radio--white {
-  color: var(--white);
-}
-
-.radio-container:hover > .radio--white,
-input:checked + .radio--white {
   color: var(--lighten75);
 }
 
-.radio--transparent {
+.radio-container:hover > .radio--lighten75 {
+  color: var(--white);
+}
+
+.radio--white,
+input:checked + .radio--white {
+  color: var(--white);
+}
+
+.radio-container:hover > .radio--white {
+  color: var(--lighten75);
+}
+
+.radio--transparent,
+input:checked + .radio--transparent {
   color: var(--transparent);
 }
 
-.radio-container:hover > .radio--transparent,
-input:checked + .radio--transparent {
+.radio-container:hover > .radio--transparent {
   color: var(--darken10);
 }
 
