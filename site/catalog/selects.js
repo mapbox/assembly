@@ -10,7 +10,6 @@ const colors = [
   'green',
   'blue',
   'purple',
-  'darken5',
   'darken10',
   'darken25',
   'darken50',
@@ -66,7 +65,7 @@ class Selects extends React.Component {
                   <div className='select-arrow'></div>
                 </div>
               </div>
-              {!/^(darken5|darken10|lighten5|lighten10)$/.test(color) ? <span>
+              {!/^(darken10|lighten10)$/.test(color) ? <span>
                 <div className={selectContainerClass}>
                   <select className={selectStrokeClass}>
                     <option>firstoption</option>

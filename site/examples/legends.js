@@ -1,7 +1,7 @@
 import React from 'react';
 import { HtmlExample } from '../html_example';
 
-const basicLegend = `<div class='w240 round shadow-darken5 px12 py12 txt-s'>
+const basicLegend = `<div class='w240 round shadow-darken10 px12 py12 txt-s'>
   <strong class='block mb6'>Title description</strong>
   <div class='flex-parent mb6'>
     <div class='flex-child flex-child--grow bg-blue-faint h12'></div>
@@ -19,7 +19,7 @@ const basicLegend = `<div class='w240 round shadow-darken5 px12 py12 txt-s'>
   </div>
 </div>`;
 
-const basicLegendTwo = `<div class='w240 round shadow-darken5 px12 py12 txt-s'>
+const basicLegendTwo = `<div class='w240 round shadow-darken10 px12 py12 txt-s'>
   <strong class='block mb6'>Title description</strong>
   <div class='flex-parent mb6'>
     <div class='flex-child flex-child--grow bg-green-faint h12'></div>
@@ -35,7 +35,7 @@ const basicLegendTwo = `<div class='w240 round shadow-darken5 px12 py12 txt-s'>
   </div>
 </div>`;
 
-const radiusLegend = `<div class='w240 round shadow-darken5 px12 py12 txt-s'>
+const radiusLegend = `<div class='w240 round shadow-darken10 px12 py12 txt-s'>
   <strong class='block mb6'>Title description</strong>
   <div class='flex-parent flex-parent--center-main flex-parent--center-cross align-center'>
     <div class='flex-child flex-child--grow wmin24'>

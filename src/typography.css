@@ -29,8 +29,8 @@ textarea {
 .txt-kbd,
 .prose kbd {
   font-family: var(--font-stack-mono);
-  background: var(--darken5);
-  border: 1px solid var(--darken10);
+  background: var(--darken10);
+  border: 1px solid var(--darken25);
   line-height: 18px;
   border-radius: 3px;
   padding: 2px 3px;
@@ -40,12 +40,12 @@ textarea {
 }
 
 .prose--dark kbd {
-  background: var(--lighten5);
-  border: 1px solid var(--lighten10);
+  background: var(--lighten10);
+  border: 1px solid var(--lighten25);
   line-height: 18px;
   border-radius: 3px;
   padding: 2px 3px;
-  box-shadow: 0 1px 0 0 var(--lighten10);
+  box-shadow: 0 1px 0 0 var(--lighten25);
 }
 
 /**
@@ -68,13 +68,13 @@ textarea {
   white-space: pre-wrap;
   font-size: 90%; /* mono fonts have naturally large proportions, scale them down to match open sans. */
   line-height: 1.5em; /* code blocks look better with smaller line height */
-  background: var(--darken5);
+  background: var(--darken10);
   border-radius: 3px;
 }
 
 .prose--dark code,
 .prose--dark pre {
-  background: var(--lighten5);
+  background: var(--lighten10);
 }
 
 /**
@@ -525,21 +525,17 @@ textarea {
  * @group
  * @memberof Type utils
  * @example
- * <div class='txt-shadow-darken5'>ghost world</div>
  * <div class='txt-shadow-darken10'>ghost world</div>
  * <div class='txt-shadow-darken25'>ghost world</div>
  * <div class='txt-shadow-darken50'>ghost world</div>
- * <div class='txt-shadow-lighten5 bg-darken75'>ghost world</div>
  * <div class='txt-shadow-lighten10 bg-darken75'>ghost world</div>
  * <div class='txt-shadow-lighten25 bg-darken75'>ghost world</div>
  * <div class='txt-shadow-lighten50 bg-darken75'>ghost world</div>
  */
-.txt-shadow-darken5 { text-shadow: 1px 1px 1px var(--darken5); }
 .txt-shadow-darken10 { text-shadow: 1px 1px 1px var(--darken10); }
 .txt-shadow-darken25 { text-shadow: 1px 1px 1px var(--darken25); }
 .txt-shadow-darken50 { text-shadow: 1px 1px 1px var(--darken50); }
 
-.txt-shadow-lighten5 { text-shadow: 1px 1px 1px var(--lighten5); }
 .txt-shadow-lighten10 { text-shadow: 1px 1px 1px var(--lighten10); }
 .txt-shadow-lighten25 { text-shadow: 1px 1px 1px var(--lighten25); }
 .txt-shadow-lighten50 { text-shadow: 1px 1px 1px var(--lighten50); }

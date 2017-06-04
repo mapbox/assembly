@@ -2,13 +2,13 @@ import React from 'react';
 import { HtmlExample } from '../html_example';
 
 const menuNavigation = `<nav>
-  <a class='flex-parent-inline btn color-blue color-white-on-active bg-transparent bg-darken5-on-hover bg-blue-on-active txt-s ml3 is-active' href='#'>
+  <a class='flex-parent-inline btn color-blue color-white-on-active bg-transparent bg-darken10-on-hover bg-blue-on-active txt-s ml3 is-active' href='#'>
     <svg class='icon mr3'><use xlink:href='#icon-home'/></svg> Home
   </a>
-  <a class='flex-parent-inline btn color-blue color-white-on-active bg-transparent bg-darken5-on-hover bg-blue-on-active txt-s ml3' href='#'>
+  <a class='flex-parent-inline btn color-blue color-white-on-active bg-transparent bg-darken10-on-hover bg-blue-on-active txt-s ml3' href='#'>
     <svg class='icon mr3'><use xlink:href='#icon-user'/></svg> Account
   </a>
-  <a class='flex-parent-inline btn color-blue color-white-on-active bg-transparent bg-darken5-on-hover bg-blue-on-active txt-s ml3' href='#'>
+  <a class='flex-parent-inline btn color-blue color-white-on-active bg-transparent bg-darken10-on-hover bg-blue-on-active txt-s ml3' href='#'>
     <svg class='icon mr3'><use xlink:href='#icon-logout'/></svg> Logout
   </a>
 </nav>`;

@@ -47,13 +47,11 @@ const allColors = [
   'purple-light',
   'purple-faint',
 
-  'darken5',
   'darken10',
   'darken25',
   'darken50',
   'darken75',
 
-  'lighten5',
   'lighten10',
   'lighten25',
   'lighten50',
@@ -71,7 +69,7 @@ function isSemitransparent(color) {
 function isNotSuitableForForms(color) {
   // Do not create form elements from values that are too light or too dark,
   // for accessibility and to save space.
-  return color === 'black' || /^(darken5|darken10|lighten5|lighten10)$/.test(color) || /(-dark|-light|-faint)$/.test(color);
+  return color === 'black' || /^(darken10|lighten10)$/.test(color) || /(-dark|-light|-faint)$/.test(color);
 }
 
 function isNotSuitableForButtons(color) {
@@ -87,7 +85,7 @@ function buildColorVariants(variables, config) {
 
   function getDarkerShade(color) {
     if (color === 'white') return 'lighten75';
-    if (color === 'transparent') return 'darken5';
+    if (color === 'transparent') return 'darken10';
     if (color === 'black') return 'No dark variant for "black"';
 
     const semitransparentMatch = color.match(/(lighten|darken)(\d+$)/);
@@ -153,7 +151,6 @@ function buildColorVariants(variables, config) {
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .btn--stroke.btn--${color} {
-          background-color: transparent;
           color: var(--${color});
         }
 
@@ -207,8 +204,6 @@ function buildColorVariants(variables, config) {
       if (isNotSuitableForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
-        .textarea--border-${color},
-        .input--border-${color},
         .textarea--border-${color},
         .input--border-${color} {
           border-color: var(--${color});

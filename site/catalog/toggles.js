@@ -10,7 +10,6 @@ const colors = [
   'green',
   'blue',
   'purple',
-  'darken5',
   'darken10',
   'darken25',
   'darken50',
@@ -18,7 +17,6 @@ const colors = [
 ];
 
 const lightenColors = [
-  'lighten5',
   'lighten10',
   'lighten25',
   'lighten50',

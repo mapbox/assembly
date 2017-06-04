@@ -149,15 +149,6 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--purple);
 }
 
-.btn--darken5 {
-  background-color: var(--darken5);
-}
-
-.btn--darken5:hover,
-.btn--darken5.is-active {
-  background-color: var(--darken10);
-}
-
 .btn--darken10 {
   background-color: var(--darken10);
 }
@@ -192,15 +183,6 @@ scripts/build-color-variants.js to produce the output you want */
 .btn--darken75:hover,
 .btn--darken75.is-active {
   background-color: var(--black);
-}
-
-.btn--lighten5 {
-  background-color: var(--lighten5);
-}
-
-.btn--lighten5:hover,
-.btn--lighten5.is-active {
-  background-color: var(--lighten10);
 }
 
 .btn--lighten10 {
@@ -254,11 +236,10 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--transparent:hover,
 .btn--transparent.is-active {
-  background-color: var(--darken5);
+  background-color: var(--darken10);
 }
 
 .btn--stroke.btn--gray {
-  background-color: transparent;
   color: var(--gray);
 }
 
@@ -268,7 +249,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--pink {
-  background-color: transparent;
   color: var(--pink);
 }
 
@@ -278,7 +258,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--red {
-  background-color: transparent;
   color: var(--red);
 }
 
@@ -288,7 +267,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--orange {
-  background-color: transparent;
   color: var(--orange);
 }
 
@@ -298,7 +276,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--yellow {
-  background-color: transparent;
   color: var(--yellow);
 }
 
@@ -308,7 +285,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--green {
-  background-color: transparent;
   color: var(--green);
 }
 
@@ -318,7 +294,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--blue {
-  background-color: transparent;
   color: var(--blue);
 }
 
@@ -328,7 +303,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--purple {
-  background-color: transparent;
   color: var(--purple);
 }
 
@@ -338,7 +312,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--darken25 {
-  background-color: transparent;
   color: var(--darken25);
 }
 
@@ -348,7 +321,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--darken50 {
-  background-color: transparent;
   color: var(--darken50);
 }
 
@@ -358,7 +330,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--darken75 {
-  background-color: transparent;
   color: var(--darken75);
 }
 
@@ -368,7 +339,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--lighten25 {
-  background-color: transparent;
   color: var(--lighten25);
 }
 
@@ -378,7 +348,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--lighten50 {
-  background-color: transparent;
   color: var(--lighten50);
 }
 
@@ -388,7 +357,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--lighten75 {
-  background-color: transparent;
   color: var(--lighten75);
 }
 
@@ -398,7 +366,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--white {
-  background-color: transparent;
   color: var(--white);
 }
 
@@ -408,13 +375,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .btn--stroke.btn--transparent {
-  background-color: transparent;
   color: var(--transparent);
 }
 
 .btn--stroke.btn--transparent:hover,
 .btn--stroke.btn--transparent.is-active {
-  color: var(--darken5);
+  color: var(--darken10);
 }
 
 .select--gray {
@@ -545,14 +511,6 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--purple);
 }
 
-.select--darken5 {
-  background-color: var(--darken5);
-}
-
-.select--darken5:hover {
-  background-color: var(--darken10);
-}
-
 .select--darken10 {
   background-color: var(--darken10);
 }
@@ -583,14 +541,6 @@ scripts/build-color-variants.js to produce the output you want */
 
 .select--darken75:hover {
   background-color: var(--black);
-}
-
-.select--lighten5 {
-  background-color: var(--lighten5);
-}
-
-.select--lighten5:hover {
-  background-color: var(--lighten10);
 }
 
 .select--lighten10 {
@@ -638,7 +588,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--transparent:hover {
-  background-color: var(--darken5);
+  background-color: var(--darken10);
 }
 
 .select--stroke-gray {
@@ -843,14 +793,12 @@ scripts/build-color-variants.js to produce the output you want */
   border-top-color: var(--transparent);
 }
 .select--stroke-transparent:hover {
-  color: var(--darken5);
+  color: var(--darken10);
 }
 .select--stroke-transparent:hover + .select-arrow {
-  border-top-color: var(--darken5);
+  border-top-color: var(--darken10);
 }
 
-.textarea--border-gray,
-.input--border-gray,
 .textarea--border-gray,
 .input--border-gray {
   border-color: var(--gray);
@@ -862,8 +810,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-pink,
-.input--border-pink,
-.textarea--border-pink,
 .input--border-pink {
   border-color: var(--pink);
 }
@@ -873,8 +819,6 @@ scripts/build-color-variants.js to produce the output you want */
   border-color: var(--pink-dark);
 }
 
-.textarea--border-red,
-.input--border-red,
 .textarea--border-red,
 .input--border-red {
   border-color: var(--red);
@@ -886,8 +830,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-orange,
-.input--border-orange,
-.textarea--border-orange,
 .input--border-orange {
   border-color: var(--orange);
 }
@@ -897,8 +839,6 @@ scripts/build-color-variants.js to produce the output you want */
   border-color: var(--orange-dark);
 }
 
-.textarea--border-yellow,
-.input--border-yellow,
 .textarea--border-yellow,
 .input--border-yellow {
   border-color: var(--yellow);
@@ -910,8 +850,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-green,
-.input--border-green,
-.textarea--border-green,
 .input--border-green {
   border-color: var(--green);
 }
@@ -921,8 +859,6 @@ scripts/build-color-variants.js to produce the output you want */
   border-color: var(--green-dark);
 }
 
-.textarea--border-blue,
-.input--border-blue,
 .textarea--border-blue,
 .input--border-blue {
   border-color: var(--blue);
@@ -934,8 +870,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-purple,
-.input--border-purple,
-.textarea--border-purple,
 .input--border-purple {
   border-color: var(--purple);
 }
@@ -945,8 +879,6 @@ scripts/build-color-variants.js to produce the output you want */
   border-color: var(--purple-dark);
 }
 
-.textarea--border-darken25,
-.input--border-darken25,
 .textarea--border-darken25,
 .input--border-darken25 {
   border-color: var(--darken25);
@@ -958,8 +890,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-darken50,
-.input--border-darken50,
-.textarea--border-darken50,
 .input--border-darken50 {
   border-color: var(--darken50);
 }
@@ -969,8 +899,6 @@ scripts/build-color-variants.js to produce the output you want */
   border-color: var(--darken75);
 }
 
-.textarea--border-darken75,
-.input--border-darken75,
 .textarea--border-darken75,
 .input--border-darken75 {
   border-color: var(--darken75);
@@ -982,8 +910,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-lighten25,
-.input--border-lighten25,
-.textarea--border-lighten25,
 .input--border-lighten25 {
   border-color: var(--lighten25);
 }
@@ -993,8 +919,6 @@ scripts/build-color-variants.js to produce the output you want */
   border-color: var(--lighten50);
 }
 
-.textarea--border-lighten50,
-.input--border-lighten50,
 .textarea--border-lighten50,
 .input--border-lighten50 {
   border-color: var(--lighten50);
@@ -1006,8 +930,6 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-lighten75,
-.input--border-lighten75,
-.textarea--border-lighten75,
 .input--border-lighten75 {
   border-color: var(--lighten75);
 }
@@ -1017,8 +939,6 @@ scripts/build-color-variants.js to produce the output you want */
   border-color: var(--white);
 }
 
-.textarea--border-white,
-.input--border-white,
 .textarea--border-white,
 .input--border-white {
   border-color: var(--white);
@@ -1030,15 +950,13 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-transparent,
-.input--border-transparent,
-.textarea--border-transparent,
 .input--border-transparent {
   border-color: var(--transparent);
 }
 
 .textarea--border-transparent:focus,
 .input--border-transparent:focus {
-  border-color: var(--darken5);
+  border-color: var(--darken10);
 }
 
 .checkbox--gray {
@@ -1182,7 +1100,7 @@ input:checked + .checkbox--white {
 
 .checkbox-container:hover > .checkbox--transparent,
 input:checked + .checkbox--transparent {
-  color: var(--darken5);
+  color: var(--darken10);
 }
 
 .radio--gray {
@@ -1326,7 +1244,7 @@ input:checked + .radio--white {
 
 .radio-container:hover > .radio--transparent,
 input:checked + .radio--transparent {
-  color: var(--darken5);
+  color: var(--darken10);
 }
 
 .toggle--gray {
@@ -1514,7 +1432,7 @@ input:checked + .toggle--white {
 }
 
 .toggle--transparent:hover {
-  color: var(--darken5);
+  color: var(--darken10);
 }
 
 input:checked + .toggle--transparent {
@@ -1845,12 +1763,12 @@ input:checked + .switch--dot-white::after {
 }
 
 .switch--transparent:hover {
-  color: var(--darken5);
+  color: var(--darken10);
 }
 
 .switch--transparent:hover::after,
 input:checked + .switch--transparent {
-  background-color: var(--darken5);
+  background-color: var(--darken10);
 }
 
 input:checked + .switch--dot-transparent::after {
@@ -1903,7 +1821,7 @@ input:checked + .switch--dot-transparent::after {
 .range--white:hover > input { color: var(--lighten75); }
 
 .range--transparent > input { color: var(--transparent); }
-.range--transparent:hover > input { color: var(--darken5); }
+.range--transparent:hover > input { color: var(--darken10); }
 
 /**
  * @section Text colors
@@ -1949,12 +1867,10 @@ input:checked + .switch--dot-transparent::after {
  *   <div class='col col--3 color-purple'>color-purple</div>
  *   <div class='col col--3 color-purple-light'>color-purple-light</div>
  *   <div class='col col--3 color-purple-faint'>color-purple-faint</div>
- *   <div class='col col--3 color-darken5'>color-darken5</div>
  *   <div class='col col--3 color-darken10'>color-darken10</div>
  *   <div class='col col--3 color-darken25'>color-darken25</div>
  *   <div class='col col--3 color-darken50'>color-darken50</div>
  *   <div class='col col--3 color-darken75'>color-darken75</div>
- *   <div class='col col--3 color-lighten5'>color-lighten5</div>
  *   <div class='col col--3 color-lighten10'>color-lighten10</div>
  *   <div class='col col--3 color-lighten25'>color-lighten25</div>
  *   <div class='col col--3 color-lighten50'>color-lighten50</div>
@@ -2093,10 +2009,6 @@ input:checked + .switch--dot-transparent::after {
   color: var(--purple-faint) !important;
 }
 
-.color-darken5 {
-  color: var(--darken5) !important;
-}
-
 .color-darken10 {
   color: var(--darken10) !important;
 }
@@ -2111,10 +2023,6 @@ input:checked + .switch--dot-transparent::after {
 
 .color-darken75 {
   color: var(--darken75) !important;
-}
-
-.color-lighten5 {
-  color: var(--lighten5) !important;
 }
 
 .color-lighten10 {
@@ -2195,12 +2103,10 @@ input:checked + .switch--dot-transparent::after {
  *   <div class='col col--3 bg-purple py6 px6'>bg-purple</div>
  *   <div class='col col--3 bg-purple-light py6 px6'>bg-purple-light</div>
  *   <div class='col col--3 bg-purple-faint py6 px6'>bg-purple-faint</div>
- *   <div class='col col--3 bg-darken5 py6 px6'>bg-darken5</div>
  *   <div class='col col--3 bg-darken10 py6 px6'>bg-darken10</div>
  *   <div class='col col--3 bg-darken25 py6 px6'>bg-darken25</div>
  *   <div class='col col--3 bg-darken50 py6 px6'>bg-darken50</div>
  *   <div class='col col--3 bg-darken75 py6 px6'>bg-darken75</div>
- *   <div class='col col--3 bg-lighten5 py6 px6'>bg-lighten5</div>
  *   <div class='col col--3 bg-lighten10 py6 px6'>bg-lighten10</div>
  *   <div class='col col--3 bg-lighten25 py6 px6'>bg-lighten25</div>
  *   <div class='col col--3 bg-lighten50 py6 px6'>bg-lighten50</div>
@@ -2338,10 +2244,6 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--purple-faint) !important;
 }
 
-.bg-darken5 {
-  background-color: var(--darken5) !important;
-}
-
 .bg-darken10 {
   background-color: var(--darken10) !important;
 }
@@ -2356,10 +2258,6 @@ input:checked + .switch--dot-transparent::after {
 
 .bg-darken75 {
   background-color: var(--darken75) !important;
-}
-
-.bg-lighten5 {
-  background-color: var(--lighten5) !important;
 }
 
 .bg-lighten10 {
@@ -2533,7 +2431,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--transparent:hover,
 .link--transparent.is-active {
-  color: var(--darken5);
+  color: var(--darken10);
 }
 
 /**
@@ -2672,10 +2570,6 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--purple-faint) !important;
 }
 
-.border--darken5 {
-  border-color: var(--darken5) !important;
-}
-
 .border--darken10 {
   border-color: var(--darken10) !important;
 }
@@ -2690,10 +2584,6 @@ input:checked + .switch--dot-transparent::after {
 
 .border--darken75 {
   border-color: var(--darken75) !important;
-}
-
-.border--lighten5 {
-  border-color: var(--lighten5) !important;
 }
 
 .border--lighten10 {
@@ -2734,10 +2624,6 @@ input:checked + .switch--dot-transparent::after {
  * @example
  * <div class='shadow-darken25'>shadow-darken25</div>
  */
-.shadow-darken5 {
-  box-shadow: 0 0 10px 2px var(--darken5) !important;
-}
-
 .shadow-darken10 {
   box-shadow: 0 0 10px 2px var(--darken10) !important;
 }
@@ -2752,10 +2638,6 @@ input:checked + .switch--dot-transparent::after {
 
 .shadow-darken75 {
   box-shadow: 0 0 10px 2px var(--darken75) !important;
-}
-
-.shadow-lighten5 {
-  box-shadow: 0 0 10px 2px var(--lighten5) !important;
 }
 
 .shadow-lighten10 {
@@ -2784,10 +2666,6 @@ input:checked + .switch--dot-transparent::after {
  * @example
  * <div class='mt6 shadow-darken25-bold'>shadow-darken25-bold</div>
  */
-.shadow-darken5-bold {
-  box-shadow: 0 0 30px 6px var(--darken5) !important;
-}
-
 .shadow-darken10-bold {
   box-shadow: 0 0 30px 6px var(--darken10) !important;
 }
@@ -2802,10 +2680,6 @@ input:checked + .switch--dot-transparent::after {
 
 .shadow-darken75-bold {
   box-shadow: 0 0 30px 6px var(--darken75) !important;
-}
-
-.shadow-lighten5-bold {
-  box-shadow: 0 0 30px 6px var(--lighten5) !important;
 }
 
 .shadow-lighten10-bold {
@@ -2836,17 +2710,6 @@ input:checked + .switch--dot-transparent::after {
  * <div class='shadow-darken25-on-active'>shadow-darken25-on-active (not active)</div>
  * <div class='shadow-darken25-on-active is-active'>shadow-darken25-on-active (active)</div>
  */
-.shadow-darken5-on-hover:hover,
-.shadow-darken5-on-active.is-active,
-.shadow-darken5-on-active.is-active:hover {
-  box-shadow: 0 0 10px 2px var(--darken5) !important;
-}
-.shadow-darken5-bold-on-hover:hover,
-.shadow-darken5-bold-on-active.is-active,
-.shadow-darken5-bold-on-active.is-active:hover {
-  box-shadow: 0 0 30px 6px var(--darken5) !important;
-}
-
 .shadow-darken10-on-hover:hover,
 .shadow-darken10-on-active.is-active,
 .shadow-darken10-on-active.is-active:hover {
@@ -2889,17 +2752,6 @@ input:checked + .switch--dot-transparent::after {
 .shadow-darken75-bold-on-active.is-active,
 .shadow-darken75-bold-on-active.is-active:hover {
   box-shadow: 0 0 30px 6px var(--darken75) !important;
-}
-
-.shadow-lighten5-on-hover:hover,
-.shadow-lighten5-on-active.is-active,
-.shadow-lighten5-on-active.is-active:hover {
-  box-shadow: 0 0 10px 2px var(--lighten5) !important;
-}
-.shadow-lighten5-bold-on-hover:hover,
-.shadow-lighten5-bold-on-active.is-active,
-.shadow-lighten5-bold-on-active.is-active:hover {
-  box-shadow: 0 0 30px 6px var(--lighten5) !important;
 }
 
 .shadow-lighten10-on-hover:hover,
@@ -3150,12 +3002,6 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--purple-faint) !important;
 }
 
-.bg-darken5-on-hover:hover,
-.bg-darken5-on-active.is-active,
-.bg-darken5-on-active.is-active:hover {
-  background-color: var(--darken5) !important;
-}
-
 .bg-darken10-on-hover:hover,
 .bg-darken10-on-active.is-active,
 .bg-darken10-on-active.is-active:hover {
@@ -3178,12 +3024,6 @@ input:checked + .switch--dot-transparent::after {
 .bg-darken75-on-active.is-active,
 .bg-darken75-on-active.is-active:hover {
   background-color: var(--darken75) !important;
-}
-
-.bg-lighten5-on-hover:hover,
-.bg-lighten5-on-active.is-active,
-.bg-lighten5-on-active.is-active:hover {
-  background-color: var(--lighten5) !important;
 }
 
 .bg-lighten10-on-hover:hover,
@@ -3432,12 +3272,6 @@ input:checked + .switch--dot-transparent::after {
   color: var(--purple-faint) !important;
 }
 
-.color-darken5-on-hover:hover,
-.color-darken5-on-active.is-active,
-.color-darken5-on-active.is-active:hover {
-  color: var(--darken5) !important;
-}
-
 .color-darken10-on-hover:hover,
 .color-darken10-on-active.is-active,
 .color-darken10-on-active.is-active:hover {
@@ -3460,12 +3294,6 @@ input:checked + .switch--dot-transparent::after {
 .color-darken75-on-active.is-active,
 .color-darken75-on-active.is-active:hover {
   color: var(--darken75) !important;
-}
-
-.color-lighten5-on-hover:hover,
-.color-lighten5-on-active.is-active,
-.color-lighten5-on-active.is-active:hover {
-  color: var(--lighten5) !important;
 }
 
 .color-lighten10-on-hover:hover,
@@ -3714,12 +3542,6 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--purple-faint) !important;
 }
 
-.border--darken5-on-hover:hover,
-.border--darken5-on-active.is-active,
-.border--darken5-on-active.is-active:hover {
-  border-color: var(--darken5) !important;
-}
-
 .border--darken10-on-hover:hover,
 .border--darken10-on-active.is-active,
 .border--darken10-on-active.is-active:hover {
@@ -3742,12 +3564,6 @@ input:checked + .switch--dot-transparent::after {
 .border--darken75-on-active.is-active,
 .border--darken75-on-active.is-active:hover {
   border-color: var(--darken75) !important;
-}
-
-.border--lighten5-on-hover:hover,
-.border--lighten5-on-active.is-active,
-.border--lighten5-on-active.is-active:hover {
-  border-color: var(--lighten5) !important;
 }
 
 .border--lighten10-on-hover:hover,
