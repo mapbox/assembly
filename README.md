@@ -99,7 +99,7 @@ Assembly strives for flat, single rule declarations and avoids overrides wheneve
 ### Naming classes
 
 - Keep names as short as possible.
-- Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.p6` for `padding: 6px` instead of `.p-small` or `.p-1`.
+- Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.pt6` for `padding-top: 6px` instead of `.pt-small` or `.pt-1`.
 - If the number of utility classes describing a property is limited, Assembly classes use the suffixes, `xl`, `l`, `m`, `s`, `sm`.
 - Assembly doesn't have a top level namespace. Assembly is designed to provide fundamental rules that are used frequently and should be easy to type and remember. If you want to use your own css with base, consider namespacing that css.
 

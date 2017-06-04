@@ -18,7 +18,7 @@ const underlinedTabs = `<div class='bg-gray border-b border--black flex-parent h
   <button class='mb-neg1 px12 py6 border-b border--black border--white-on-active color-lighten50 color-white-on-active color-lighten75-on-hover is-active'>Active</button>
   <button class='mb-neg1 px12 py6 border-b border--black border--white-on-active color-lighten50 color-white-on-active color-lighten75-on-hover'>Two</button>
 </div>
-<div class='bg-darken75 color-white p12'>
+<div class='bg-darken75 color-white px12 py12'>
   Changing content
 </div>`;
 

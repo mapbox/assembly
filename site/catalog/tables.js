@@ -71,7 +71,7 @@ class Tables extends React.Component {
               </tbody>
             </table>
 
-            <div className='bg-gray-dark p12'>
+            <div className='bg-gray-dark px12 py12'>
               <table className='table table--dark mb18'>
                 <thead>
                   <tr>
@@ -154,7 +154,7 @@ class Tables extends React.Component {
               </tbody>
             </table>
 
-            <div className='bg-gray-dark p12'>
+            <div className='bg-gray-dark px12 py12'>
               <table className='table--dark'>
                 <thead>
                   <tr>

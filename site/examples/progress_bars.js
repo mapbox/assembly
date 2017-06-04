@@ -9,7 +9,7 @@ const playback = `<div class='flex-parent flex-parent--row flex-parent--center-c
     <button class='flex-child py18 pr12 pl18 border-r border--gray-light bg-white bg-green-faint-on-hover cursor-pointer round-l'>
       <div class='triangle--r triangle color-green color-green'></div>
     </button>
-    <div class='flex-child flex-child--grow p18 bg-white'>
+    <div class='flex-child flex-child--grow px18 py18bg-white'>
       <div class='relative w-full h12 bg-darken10 round-full'>
         <div class='absolute top right bottom left m3 bg-green-light round-full' style='width:50%;'>
           <span class='absolute top right w30 h6 bg-green round-full'></span>

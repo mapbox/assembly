@@ -384,7 +384,7 @@ function buildColorVariants(variables, config) {
        * <div class='grid'>`
     );
     colors.forEach((color) => {
-      css += `\n *   <div class='col col--3 bg-${color} p6'>bg-${color}</div>`;
+      css += `\n *   <div class='col col--3 bg-${color} py6 px6'>bg-${color}</div>`;
     });
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {

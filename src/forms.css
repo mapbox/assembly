@@ -431,7 +431,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /* range thumb */
 .range > input::-webkit-slider-thumb {
-  box-shadow:rgba(255,255,255,0.25) -1200px 0 0 1200px;
   box-sizing: border-box;
   transition: background var(--transition);
   appearance: none;

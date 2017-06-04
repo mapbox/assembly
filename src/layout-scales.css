@@ -5113,7 +5113,7 @@ scripts/build-layout-scales.js to produce the output you want */
 
 }
 
-@media undefined {
+@media screen and (min-width: 1200px) {
 
   .grid--gut0-mxl {
     margin-left: -0;

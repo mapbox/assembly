@@ -2,22 +2,22 @@ import React from 'react';
 import { HtmlExample } from '../html_example';
 
 const basic = `<div class='flex-parent-inline flex-parent--center-cross flex-parent--column'>
-  <div class='flex-child p6 bg-darken75 color-white align-center  round txt-bold txt-s'>Hello world!</div>
+  <div class='flex-child px6 py6bg-darken75 color-white align-center  round txt-bold txt-s'>Hello world!</div>
   <span class='flex-child triangle triangle--d'></span>
 </div>`;
 
 const basic_right = `<div class='flex-parent-inline flex-parent--center-cross'>
   <span class='flex-child triangle triangle--l'></span>
-  <div class='flex-child p6 round txt-bold txt-s align-center bg-darken75 color-white'>Hello world!</div>
+  <div class='flex-child px6 py6round txt-bold txt-s align-center bg-darken75 color-white'>Hello world!</div>
 </div>`;
 
 const basic_left = `<div class='flex-parent-inline flex-parent--center-cross'>
-  <div class='flex-child p6 round txt-bold txt-s align-center bg-darken75 color-white'>Hello world!</div>
+  <div class='flex-child px6 py6round txt-bold txt-s align-center bg-darken75 color-white'>Hello world!</div>
   <span class='flex-child triangle triangle--r'></span>
 </div>`;
 
 const basic_with_closure = `<div class='flex-parent-inline flex-parent--center-cross flex-parent--column'>
-  <div class='flex-child relative p18 round txt-bold txt-s align-center bg-darken75 color-white'>
+  <div class='flex-child relative px18 py18round txt-bold txt-s align-center bg-darken75 color-white'>
     <button class='flex-child absolute top right'>
       <svg class='flex-child icon link color-white'><use xlink:href='#icon-close'></use></svg>
     </button>

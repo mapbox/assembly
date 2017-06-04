@@ -80,12 +80,12 @@ class Toggles extends React.Component {
         </div>
 
         <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Light variations</div>
-        <div className='bg-gray round p12y mt12'>
+        <div className='bg-gray round px12 py12y mt12'>
         {lightenColors.map((c) => <ToggleEl key={c} color={c} />)}
         </div>
 
         <div className='mt24 mb12 txt-bold color-darken50 txt-uppercase txt-s'>Disabled and light</div>
-        <div className='bg-gray round p12y mt12'>
+        <div className='bg-gray round px12 py12y mt12'>
         {lightenColors.map((c) => <ToggleEl key={c} color={c} disabled={true} />)}
         </div>
 

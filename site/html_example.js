@@ -9,12 +9,12 @@ function HtmlExample(props) {
   return (
     <div>
         <div
-          className='border border--gray-light p12 round-t'
+          className='border border--gray-light px12 py12 round-t'
           dangerouslySetInnerHTML={{ __html: props.code }}
         />
       <div className='pre bg-gray-faint scroll-auto hmax240 border-l border-b border-r border--gray-light round-b relative'>
 
-        {copy && <div className='absolute top right p12'>
+        {copy && <div className='absolute top right px12 py12'>
           <button
             data-clipboard-text={props.code}
             className='ml3 btn btn--xs btn--darken25 round js-clipboard'>
