@@ -215,8 +215,8 @@
  * @example
  * <div class="relative h60">
  *   <div class="absolute z5 bg-pink py6 px6">z5</div>
- *   <div class="absolute z1 bg-blue px6 py6mt12 ml24">z1</div>
- *   <div class="absolute z1-neg1 bg-blue px6 py6mt24 ml60">z-neg1</div>
+ *   <div class="absolute z1 bg-blue px6 py6 mt12 ml24">z1</div>
+ *   <div class="absolute z1-neg1 bg-blue px6 py6 mt24 ml60">z-neg1</div>
  * </div>
  */
 .z-neg1 { z-index: -1 !important; }

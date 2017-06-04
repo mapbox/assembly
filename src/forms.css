@@ -45,7 +45,7 @@
 
 .input::placeholder,
 .textarea::placeholder {
-  color: var(--disabled-text-color);
+  color: var(--inactive-text-color);
 }
 
 /* Without this, IE always has a scrollbar */
