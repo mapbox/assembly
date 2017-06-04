@@ -89,26 +89,6 @@ function buildLayoutScales() {
   variantGenerators.margin = function (scales) {
     let css = stripIndent(`
       /**
-       * Apply margin on all sides.
-       *
-       * @group
-       * @example
-       * <div class='m24 bg-darken10'>m24</div>
-       * @memberof Margins
-       */
-    `);
-
-    scales.forEach((scale) => {
-      css += buildMediaRules((mediaSuffix) => stripIndent(`
-        .m${scale}${mediaSuffix} {
-          margin: ${value(scale)} !important;
-        }
-      `));
-    });
-    css += '\n/** @endgroup */\n';
-
-    css += stripIndent(`
-      /**
        * Apply margin on the top and bottom.
        *
        * @group
@@ -232,25 +212,6 @@ function buildLayoutScales() {
 
   variantGenerators.padding = function (scales) {
     let css = stripIndent(`
-      /**
-       * Apply padding on all sides.
-       *
-       * @group
-       * @memberof Padding
-       * @example
-       * <div class='p24 bg-darken10'>p24</div>
-       */`
-    );
-    scales.forEach((scale) => {
-      css += buildMediaRules((mediaSuffix) => stripIndent(`
-        .p${scale}${mediaSuffix} {
-          padding: ${value(scale)} !important;
-        }
-      `));
-    });
-    css += '\n/** @endgroup */\n';
-
-    css += stripIndent(`
       /**
        * Apply padding on the top and bottom.
        *

@@ -74,8 +74,8 @@
  * @group
  * @memberof Border radius
  * @example
- * <div class='bg-teal inline-block round'>round</div>
- * <div class='bg-teal inline-block ml6 round-tr'>round-tr</div>
+ * <div class='bg-blue inline-block round'>round</div>
+ * <div class='bg-blue inline-block ml6 round-tr'>round-tr</div>
  */
 .round { border-radius: var(--border-radius) !important; }
 .round-t { border-radius: var(--border-radius) var(--border-radius) 0 0 !important; }
@@ -94,8 +94,8 @@
  * @group
  * @memberof Border radius
  * @example
- * <div class='bg-teal inline-block round-bold'>round-bold</div>
- * <div class='bg-teal inline-block ml6 round-tr-bold'>round-tr-bold</div>
+ * <div class='bg-blue inline-block round-bold'>round-bold</div>
+ * <div class='bg-blue inline-block ml6 round-tr-bold'>round-tr-bold</div>
  */
 .round-bold { border-radius: var(--border-radius-bold) !important; }
 .round-t-bold { border-radius: var(--border-radius-bold) var(--border-radius-bold) 0 0 !important; }
@@ -114,8 +114,8 @@
  * @group
  * @memberof Border radius
  * @example
- * <div class='bg-teal inline-block round-full'>round-full</div>
- * <div class='bg-teal inline-block ml6 round-tr-full'>round-tr-full</div>
+ * <div class='bg-blue inline-block round-full'>round-full</div>
+ * <div class='bg-blue inline-block ml6 round-tr-full'>round-tr-full</div>
  */
 .round-full { border-radius: var(--border-radius-full) !important; }
 .round-t-full { border-radius: var(--border-radius-full) var(--border-radius-full) 0 0 !important; }

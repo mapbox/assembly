@@ -22,6 +22,13 @@ class Pills extends React.Component {
           <button className='btn btn--red btn--stroke btn--pill-stroke btn--pill-hr round'>Confirm</button>
         </div>
 
+        <div className='flex-parent mb18'>
+          <button className='btn btn--purple btn--stroke--2 btn--stroke btn--pill-stroke btn--pill-hl round btn--fill'>Confirm</button>
+          <button className='btn btn--purple btn--stroke--2 btn--stroke btn--pill-stroke btn--pill-hc round is-active'>Confirm</button>
+          <button className='btn btn--purple btn--pill-stroke btn--pill-hc round is-active'>Confirm</button>
+          <button className='btn btn--purple btn--stroke--2 btn--stroke btn--pill-stroke btn--pill-hr round'>Confirm</button>
+        </div>
+
         <div className='mb18 flex-parent-inline flex-parent--column'>
           <button className='btn btn--orange btn--s btn--pill btn--pill-vt'>Confirm</button>
           <button className='btn btn--orange btn--s btn--pill btn--pill-vc'>Confirm</button>
@@ -34,6 +41,13 @@ class Pills extends React.Component {
           <button className='btn btn--stroke btn--s btn--pill-stroke btn--pill-vc round'>Confirm</button>
           <button className='btn btn--stroke btn--s btn--pill-stroke btn--pill-vc round'>Confirm</button>
           <button className='btn btn--stroke btn--s btn--pill-stroke btn--pill-vb round is-active'>Confirm</button>
+        </div>
+
+        <div className='mb18 ml18 flex-parent-inline flex-parent--column'>
+          <button className='btn btn--s btn--pill-stroke btn--pill-vt round'>Confirm</button>
+          <button className='btn btn--stroke--2 btn--stroke btn--s btn--pill-stroke btn--pill-vc round'>Confirm</button>
+          <button className='btn btn--stroke--2 btn--stroke btn--s btn--pill-stroke btn--pill-vc round'>Confirm</button>
+          <button className='btn btn--stroke--2 btn--stroke btn--s btn--pill-stroke btn--pill-vb round is-active'>Confirm</button>
         </div>
       </div>
     );

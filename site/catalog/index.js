@@ -25,7 +25,7 @@ class Catalog extends React.Component {
       <div className='pt24'>
 
         <h1 className='txt-h2 txt-bold mb18'>Catalog</h1>
-        <p className='col col--6-mm'>A catalog of Assembly variations for reference and debugging purposes.</p>
+        <p className='col col--6-ml'>A catalog of Assembly variations for reference and debugging purposes.</p>
         <div id='Typography' className='mb36'>
           <Typography />
         </div>

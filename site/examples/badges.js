@@ -18,11 +18,11 @@ const warning = `<div class='bg-orange-faint color-orange-dark inline-block px6 
 </div>`;
 
 const chip = `<div class='flex-parent flex-parent--center-cross flex-parent-inline relative w240'>
-  <div class='bg-blue-faint round-l col col--6 p12'>
+  <div class='bg-blue-faint round-l col col--6 px12 py12'>
     <strong class='txt-s color-blue'>This</strong>
   </div>
   <span class='triangle triangle--r mr-neg12 z1 color-blue-faint'></span>
-  <div class='bg-blue round-r col col--6 p12 pl24'>
+  <div class='bg-blue round-r col col--6 px12 py12 pl24'>
     <strong class='txt-s color-blue-faint'>is that</strong>
   </div>
 </div>`;
