@@ -29,7 +29,6 @@ textarea {
 .txt-kbd,
 .prose kbd {
   font-family: var(--font-stack-mono);
-  background: var(--darken10);
   border: 1px solid var(--darken25);
   line-height: 18px;
   border-radius: 3px;
@@ -39,12 +38,9 @@ textarea {
   font-weight: normal;
 }
 
+.txt-kbd--dark,
 .prose--dark kbd {
-  background: var(--lighten10);
   border: 1px solid var(--lighten25);
-  line-height: 18px;
-  border-radius: 3px;
-  padding: 2px 3px;
   box-shadow: 0 1px 0 0 var(--lighten25);
 }
 
@@ -72,6 +68,8 @@ textarea {
   border-radius: 3px;
 }
 
+.txt-code--dark,
+.pre--dark,
 .prose--dark code,
 .prose--dark pre {
   background: var(--lighten10);
@@ -251,6 +249,7 @@ textarea {
   background: var(--darken10);
 }
 
+.txt-hr--dark,
 .prose--dark hr {
   background: var(--lighten10);
 }
