@@ -74,7 +74,7 @@ class Navigation extends React.Component {
             </div>
           </div>
         </div>
-        <div className='flex-child flex-child--grow-mm scroll-auto pr18 pl24'>
+        <div className='flex-child flex-child--grow-mm scroll-auto scroll-styled pr18 pl24'>
           {navEls}
         </div>
         <div className='mt12 mb24 mx24'>

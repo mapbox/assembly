@@ -18,7 +18,7 @@ function RowEl(props) {
   return (
     <div className={`txt-s grid mb18 ${props.gutter ? props.gutter : ''}`}>
       {props.combo.map((c, i) => <div key={i} className={`col col--${c}`}>
-        <div className='border p3'>col--{c}</div>
+        <div className='border px3 py3'>col--{c}</div>
       </div>)}
     </div>
   );
@@ -28,7 +28,7 @@ function RowElWithLeftMargin(props) {
   return (
     <div className='txt-s grid mb18'>
       {props.combo.map((c, i) => <div key={i} className={`col col--${i === 1 ? 'offl' : '' }${c}`}>
-        {i === 1 ? '' : <div className='border p3'>col--{c}</div>}
+        {i === 1 ? '' : <div className='border px3 py3'>col--{c}</div>}
       </div>)}
     </div>
   );
@@ -38,7 +38,7 @@ function RowElWithRightMargin(props) {
   return (
     <div className='txt-s grid mb18'>
       {props.combo.map((c, i) => <div key={i} className={`col col--${i === 1 ? 'offr' : '' }${c}`}>
-        {i === 1 ? '' : <div className='border p3'>col--{c}</div>}
+        {i === 1 ? '' : <div className='border px3 py3'>col--{c}</div>}
       </div>)}
     </div>
   );
@@ -84,13 +84,13 @@ class Grids extends React.Component {
         <h3 className='mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grids only on large screens</h3>
         <div className='txt-s grid-ml grid--gut24-ml mb18'>
           <div className='col-ml col--6-ml'>
-            <div className='border p3'>col--6-ml</div>
+            <div className='border px3 py3'>col--6-ml</div>
           </div>
           <div className='col-ml col--3-ml'>
-            <div className='border p3'>col--3-ml</div>
+            <div className='border px3 py3'>col--3-ml</div>
           </div>
           <div className='col-ml col--3-ml'>
-            <div className='border p3'>col--3-ml</div>
+            <div className='border px3 py3'>col--3-ml</div>
           </div>
         </div>
       </div>

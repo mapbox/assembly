@@ -14,7 +14,7 @@ class Icons extends React.Component {
   render() {
     const iconEls = icons.map((icon) => {
       return (
-        <div key={icon} className='col--6 col--4-ml col--3-mxl flex-parent flex-parent--center-cross flex-child p12 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light'>
+        <div key={icon} className='col--6 col--4-ml col--3-mxl flex-parent flex-parent--center-cross flex-child px12 py12 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light'>
           <svg className='icon mr12'>
             <use xlinkHref={`#icon-${icon}`} />
           </svg>

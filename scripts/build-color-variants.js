@@ -37,11 +37,6 @@ const allColors = [
   'green-light',
   'green-faint',
 
-  'teal-dark',
-  'teal',
-  'teal-light',
-  'teal-faint',
-
   'blue-dark',
   'blue',
   'blue-light',
@@ -52,13 +47,11 @@ const allColors = [
   'purple-light',
   'purple-faint',
 
-  'darken5',
   'darken10',
   'darken25',
   'darken50',
   'darken75',
 
-  'lighten5',
   'lighten10',
   'lighten25',
   'lighten50',
@@ -73,8 +66,15 @@ function isSemitransparent(color) {
   return /^(lighten|darken)/.test(color);
 }
 
-function isDark(color) {
-  return color === 'black' || /-dark$/.test(color);
+function isNotAccessible(color) {
+  // Do not create form elements from values that are too light or too dark,
+  // for accessibility and to save space.
+  return color === 'black' || /^(darken10|lighten10)$/.test(color) || /(-dark|-light|-faint)$/.test(color);
+}
+
+function isNotAccessibleForBg(color) {
+  // Elements that are primarily defined by their background can have looser requirements.
+  return color === 'black' || /(-faint|-dark)$/.test(color);
 }
 
 function buildColorVariants(variables, config) {
@@ -85,7 +85,7 @@ function buildColorVariants(variables, config) {
 
   function getDarkerShade(color) {
     if (color === 'white') return 'lighten75';
-    if (color === 'transparent') return 'darken5';
+    if (color === 'transparent') return 'darken10';
     if (color === 'black') return 'No dark variant for "black"';
 
     const semitransparentMatch = color.match(/(lighten|darken)(\d+$)/);
@@ -93,8 +93,6 @@ function buildColorVariants(variables, config) {
       const action = semitransparentMatch[1];
       const magnitude = semitransparentMatch[2];
       switch (magnitude) {
-        case '5':
-          return `${action}10`;
         case '10':
           return `${action}25`;
         case '25':
@@ -130,7 +128,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.buttonFill = function (colors) {
     return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
+      if (isNotAccessibleForBg(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .btn--${color} {
@@ -146,12 +144,11 @@ function buildColorVariants(variables, config) {
   };
 
   variantGenerators.buttonStroke = function (colors) {
-    return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
+    let css = colors.reduce((result, color) => {
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .btn--stroke.btn--${color} {
-          background-color: transparent;
           color: var(--${color});
         }
 
@@ -161,31 +158,17 @@ function buildColorVariants(variables, config) {
         }
       `);
     }, '');
-  };
-
-  variantGenerators.inputTextarea = function (colors) {
-    return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
-        .textarea--border-${color},
-        .input--border-${color},
-        .textarea--border-${color},
-        .input--border-${color} {
-          border-color: var(--${color});
-        }
-
-        .textarea--border-${color}:focus,
-        .input--border-${color}:focus {
-          border-color: var(--${darkerShade});
-        }
-      `);
-    }, '');
+    css += stripIndent(`
+      .btn.btn--stroke {
+        background-color: transparent;
+      }
+    `);
+    return css;
   };
 
   variantGenerators.selectFill = function (colors) {
     return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
+      if (isNotAccessibleForBg(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .select--${color} {
@@ -201,7 +184,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.selectStroke = function (colors) {
     return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .select--stroke-${color} {
@@ -220,18 +203,43 @@ function buildColorVariants(variables, config) {
     }, '');
   };
 
+  variantGenerators.inputTextarea = function (colors) {
+    return colors.reduce((result, color) => {
+      if (isNotAccessible(color)) return result;
+      const darkerShade = getDarkerShade(color);
+      return result += stripIndent(`
+        .textarea--border-${color},
+        .input--border-${color} {
+          border-color: var(--${color});
+        }
+
+        .textarea--border-${color}:focus,
+        .input--border-${color}:focus {
+          border-color: var(--${darkerShade});
+        }
+      `);
+    }, '');
+  };
+
   variantGenerators.checkbox = function (colors) {
     return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .checkbox--${color} {
-          color: var(--${color});
+          border-color: var(--${color});
         }
 
-        .checkbox-container:hover > .checkbox--${color},
+        .checkbox-container:hover > .checkbox--${color} {
+          border-color: var(--${darkerShade});
+        }
+
         input:checked + .checkbox--${color} {
-          color: var(--${darkerShade});
+          background-color: var(--${color});
+        }
+
+        .checkbox-container:hover > input:checked + .checkbox--${color} {
+          background-color: var(--${darkerShade});
         }
       `);
     }, '');
@@ -239,16 +247,52 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.radio = function (colors) {
     return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
-        .radio--${color} {
+        .radio--${color},
+        input:checked + .radio--${color} {
           color: var(--${color});
         }
 
-        .radio-container:hover > .radio--${color},
-        input:checked + .radio--${color} {
+        .radio-container:hover > .radio--${color} {
           color: var(--${darkerShade});
+        }
+      `);
+    }, '');
+  };
+
+  variantGenerators.toggle = function (colors) {
+    return colors.reduce((result, color) => {
+      if (isNotAccessible(color)) return result;
+      const darkerShade = getDarkerShade(color);
+      // Set the text color to regular when inactive.
+      // Set the text color to dark when inactive on hover.
+      // Set the background color to regular and text color to white when active.
+      // Set the text color of toggle label when active.
+      return result += stripIndent(`
+        .toggle--${color} {
+          color: var(--${color});
+        }
+
+        .toggle--${color}:hover {
+          color: var(--${darkerShade});
+        }
+
+        input:checked + .toggle--${color} {
+          background: var(--${color});
+        }
+      `);
+    }, '');
+  };
+
+  variantGenerators.toggleActive = function (colors) {
+    return colors.reduce((result, color) => {
+      if (isNotAccessible(color)) return result;
+      // Must be below .toggle group in stylesheet
+      return result += stripIndent(`
+        input:checked + .toggle--active-${color} {
+          color: var(--${color});
         }
       `);
     }, '');
@@ -256,7 +300,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.switch = function (colors) {
     return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       // Darken background when hovered and when active
       // Darken dot on hover when inactive only
@@ -281,70 +325,15 @@ function buildColorVariants(variables, config) {
     }, '');
   };
 
-  variantGenerators.toggle = function (colors) {
-    return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      // Set the text color to regular when inactive.
-      // Set the text color to dark when inactive on hover.
-      // Set the background color to regular and text color to white when active.
-      // Set the text color of toggle label when active.
-      return result += stripIndent(`
-        .toggle--${color} {
-          color: var(--${color});
-        }
-
-        .toggle--${color}:hover {
-          color: var(--${darkerShade});
-        }
-
-        input:checked + .toggle--${color} {
-          background: var(--${color});
-          color: var(--white);
-        }
-
-        input:checked + .toggle--active-${color} {
-          color: var(--${color});
-        }
-      `);
-    }, '');
-  };
-
-  variantGenerators.toggleActive = function (colors) {
-    return colors.reduce((result, color) => {
-      // Must be below .toggle group in stylesheet
-      return result += stripIndent(`
-        input:checked + .toggle--active-${color} {
-          color: var(--${color});
-        }
-      `);
-    }, '');
-  };
-
   variantGenerators.range = function (colors) {
     return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
-      // Set the track and thumb color.
-      // Set the track and thumb color to dark on hover.
+
+      // Set the thumb color.
       return result += stripIndent(`
-        .range--${color} > input::-webkit-slider-runnable-track { background: var(--${color}); }
-        .range--${color} > input::-moz-range-track { background: var(--${color}); }
-        .range--${color} > input::-ms-fill-lower { background: var(--${color}); }
-        .range--${color} > input::-ms-fill-upper { background: var(--${color}); }
-
-        .range--${color} > input::-webkit-slider-thumb { border-color: var(--${color}); }
-        .range--${color} > input::-ms-thumb { border-color: var(--${color}); }
-        .range--${color} > input::-moz-range-thumb { border-color: var(--${color}); }
-
-        .range--${color} > input:hover::-webkit-slider-runnable-track { background: var(--${darkerShade}); }
-        .range--${color} > input:hover::-moz-range-track { background: var(--${darkerShade}); }
-        .range--${color} > input:hover::-ms-fill-lower { background: var(--${darkerShade}); }
-        .range--${color} > input:hover::-ms-fill-upper { background: var(--${darkerShade}); }
-
-        .range--${color} > input:hover::-webkit-slider-thumb { border-color: var(--${darkerShade}); }
-        .range--${color} > input:hover::-ms-thumb { border-color: var(--${darkerShade}); }
-        .range--${color} > input:hover::-moz-range-thumb { border-color: var(--${darkerShade}); }
+        .range--${color} > input { color: var(--${color}); }
+        .range--${color}:hover > input { color: var(--${darkerShade}); }
       `);
     }, '');
   };
@@ -401,7 +390,7 @@ function buildColorVariants(variables, config) {
        * <div class='grid'>`
     );
     colors.forEach((color) => {
-      css += `\n *   <div class='col col--3 bg-${color} p6'>bg-${color}</div>`;
+      css += `\n *   <div class='col col--3 bg-${color} py6 px6'>bg-${color}</div>`;
     });
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
@@ -416,7 +405,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.link = function (colors) {
     return colors.reduce((result, color) => {
-      if (isDark(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .link--${color} {
@@ -538,6 +527,7 @@ function buildColorVariants(variables, config) {
        * <div class='bg-darken25-on-active is-active'>bg-darken25-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
+      if (!isNotAccessibleForBg(color)) return result;
       return result += stripIndent(`
         .bg-${color}-on-hover:hover,
         .bg-${color}-on-active.is-active,
@@ -563,6 +553,7 @@ function buildColorVariants(variables, config) {
        * <div class='color-red-on-active is-active'>color-red-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
+      if (!isNotAccessible(color)) return result;
       return result += stripIndent(`
         .color-${color}-on-hover:hover,
         .color-${color}-on-active.is-active,
@@ -588,6 +579,7 @@ function buildColorVariants(variables, config) {
        * <div class='border border--red-on-active is-active'>border--red-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
+      if (!isNotAccessibleForBg(color)) return result;
       return result += stripIndent(`
         .border--${color}-on-hover:hover,
         .border--${color}-on-active.is-active,
