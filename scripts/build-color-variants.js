@@ -69,7 +69,7 @@ function isSemitransparent(color) {
 function isNotSuitableForForms(color) {
   // Do not create form elements from values that are too light or too dark,
   // for accessibility and to save space.
-  return color === 'black' || /^(darken10|lighten10)$/.test(color) || /(-dark|-light|-faint)$/.test(color);
+  return color === 'black' || /^(darken10|lighten5|lighten10)$/.test(color) || /(-dark|-light|-faint)$/.test(color);
 }
 
 function isNotSuitableForButtons(color) {
@@ -93,8 +93,6 @@ function buildColorVariants(variables, config) {
       const action = semitransparentMatch[1];
       const magnitude = semitransparentMatch[2];
       switch (magnitude) {
-        case '5':
-          return `${action}10`;
         case '10':
           return `${action}25`;
         case '25':
