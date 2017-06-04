@@ -66,14 +66,14 @@ function isSemitransparent(color) {
   return /^(lighten|darken)/.test(color);
 }
 
-function isNotSuitableForForms(color) {
+function isNotAccessible(color) {
   // Do not create form elements from values that are too light or too dark,
   // for accessibility and to save space.
   return color === 'black' || /^(darken10|lighten10)$/.test(color) || /(-dark|-light|-faint)$/.test(color);
 }
 
-function isNotSuitableForButtons(color) {
-  // Filled Buttons should be allowed to have subtle backgrounds within reason.
+function isNotAccessibleForBg(color) {
+  // Elements that are primarily defined by their background can have looser requirements.
   return color === 'black' || /(-faint|-dark)$/.test(color);
 }
 
@@ -128,7 +128,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.buttonFill = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForButtons(color)) return result;
+      if (isNotAccessibleForBg(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .btn--${color} {
@@ -145,7 +145,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.buttonStroke = function (colors) {
     let css = colors.reduce((result, color) => {
-      if (isNotSuitableForForms(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .btn--stroke.btn--${color} {
@@ -168,7 +168,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.selectFill = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForButtons(color)) return result;
+      if (isNotAccessibleForBg(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .select--${color} {
@@ -184,7 +184,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.selectStroke = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForForms(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .select--stroke-${color} {
@@ -205,7 +205,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.inputTextarea = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForForms(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .textarea--border-${color},
@@ -223,7 +223,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.checkbox = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForForms(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .checkbox--${color} {
@@ -247,7 +247,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.radio = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForForms(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .radio--${color},
@@ -264,7 +264,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.toggle = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForForms(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       // Set the text color to regular when inactive.
       // Set the text color to dark when inactive on hover.
@@ -288,7 +288,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.toggleActive = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForForms(color)) return result;
+      if (isNotAccessible(color)) return result;
       // Must be below .toggle group in stylesheet
       return result += stripIndent(`
         input:checked + .toggle--active-${color} {
@@ -300,7 +300,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.switch = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForForms(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       // Darken background when hovered and when active
       // Darken dot on hover when inactive only
@@ -327,7 +327,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.range = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForForms(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
 
       // Set the thumb color.
@@ -405,7 +405,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.link = function (colors) {
     return colors.reduce((result, color) => {
-      if (isNotSuitableForForms(color)) return result;
+      if (isNotAccessible(color)) return result;
       const darkerShade = getDarkerShade(color);
       return result += stripIndent(`
         .link--${color} {
@@ -527,6 +527,7 @@ function buildColorVariants(variables, config) {
        * <div class='bg-darken25-on-active is-active'>bg-darken25-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
+      if (!isNotAccessibleForBg(color)) return result;
       return result += stripIndent(`
         .bg-${color}-on-hover:hover,
         .bg-${color}-on-active.is-active,
@@ -552,6 +553,7 @@ function buildColorVariants(variables, config) {
        * <div class='color-red-on-active is-active'>color-red-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
+      if (!isNotAccessible(color)) return result;
       return result += stripIndent(`
         .color-${color}-on-hover:hover,
         .color-${color}-on-active.is-active,
@@ -577,6 +579,7 @@ function buildColorVariants(variables, config) {
        * <div class='border border--red-on-active is-active'>border--red-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
+      if (!isNotAccessibleForBg(color)) return result;
       return result += stripIndent(`
         .border--${color}-on-hover:hover,
         .border--${color}-on-active.is-active,

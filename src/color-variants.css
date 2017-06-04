@@ -2932,18 +2932,6 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--gray-dark) !important;
 }
 
-.bg-gray-on-hover:hover,
-.bg-gray-on-active.is-active,
-.bg-gray-on-active.is-active:hover {
-  background-color: var(--gray) !important;
-}
-
-.bg-gray-light-on-hover:hover,
-.bg-gray-light-on-active.is-active,
-.bg-gray-light-on-active.is-active:hover {
-  background-color: var(--gray-light) !important;
-}
-
 .bg-gray-faint-on-hover:hover,
 .bg-gray-faint-on-active.is-active,
 .bg-gray-faint-on-active.is-active:hover {
@@ -2954,18 +2942,6 @@ input:checked + .switch--dot-transparent::after {
 .bg-pink-dark-on-active.is-active,
 .bg-pink-dark-on-active.is-active:hover {
   background-color: var(--pink-dark) !important;
-}
-
-.bg-pink-on-hover:hover,
-.bg-pink-on-active.is-active,
-.bg-pink-on-active.is-active:hover {
-  background-color: var(--pink) !important;
-}
-
-.bg-pink-light-on-hover:hover,
-.bg-pink-light-on-active.is-active,
-.bg-pink-light-on-active.is-active:hover {
-  background-color: var(--pink-light) !important;
 }
 
 .bg-pink-faint-on-hover:hover,
@@ -2980,18 +2956,6 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--red-dark) !important;
 }
 
-.bg-red-on-hover:hover,
-.bg-red-on-active.is-active,
-.bg-red-on-active.is-active:hover {
-  background-color: var(--red) !important;
-}
-
-.bg-red-light-on-hover:hover,
-.bg-red-light-on-active.is-active,
-.bg-red-light-on-active.is-active:hover {
-  background-color: var(--red-light) !important;
-}
-
 .bg-red-faint-on-hover:hover,
 .bg-red-faint-on-active.is-active,
 .bg-red-faint-on-active.is-active:hover {
@@ -3002,18 +2966,6 @@ input:checked + .switch--dot-transparent::after {
 .bg-orange-dark-on-active.is-active,
 .bg-orange-dark-on-active.is-active:hover {
   background-color: var(--orange-dark) !important;
-}
-
-.bg-orange-on-hover:hover,
-.bg-orange-on-active.is-active,
-.bg-orange-on-active.is-active:hover {
-  background-color: var(--orange) !important;
-}
-
-.bg-orange-light-on-hover:hover,
-.bg-orange-light-on-active.is-active,
-.bg-orange-light-on-active.is-active:hover {
-  background-color: var(--orange-light) !important;
 }
 
 .bg-orange-faint-on-hover:hover,
@@ -3028,18 +2980,6 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--yellow-dark) !important;
 }
 
-.bg-yellow-on-hover:hover,
-.bg-yellow-on-active.is-active,
-.bg-yellow-on-active.is-active:hover {
-  background-color: var(--yellow) !important;
-}
-
-.bg-yellow-light-on-hover:hover,
-.bg-yellow-light-on-active.is-active,
-.bg-yellow-light-on-active.is-active:hover {
-  background-color: var(--yellow-light) !important;
-}
-
 .bg-yellow-faint-on-hover:hover,
 .bg-yellow-faint-on-active.is-active,
 .bg-yellow-faint-on-active.is-active:hover {
@@ -3050,18 +2990,6 @@ input:checked + .switch--dot-transparent::after {
 .bg-green-dark-on-active.is-active,
 .bg-green-dark-on-active.is-active:hover {
   background-color: var(--green-dark) !important;
-}
-
-.bg-green-on-hover:hover,
-.bg-green-on-active.is-active,
-.bg-green-on-active.is-active:hover {
-  background-color: var(--green) !important;
-}
-
-.bg-green-light-on-hover:hover,
-.bg-green-light-on-active.is-active,
-.bg-green-light-on-active.is-active:hover {
-  background-color: var(--green-light) !important;
 }
 
 .bg-green-faint-on-hover:hover,
@@ -3076,18 +3004,6 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--blue-dark) !important;
 }
 
-.bg-blue-on-hover:hover,
-.bg-blue-on-active.is-active,
-.bg-blue-on-active.is-active:hover {
-  background-color: var(--blue) !important;
-}
-
-.bg-blue-light-on-hover:hover,
-.bg-blue-light-on-active.is-active,
-.bg-blue-light-on-active.is-active:hover {
-  background-color: var(--blue-light) !important;
-}
-
 .bg-blue-faint-on-hover:hover,
 .bg-blue-faint-on-active.is-active,
 .bg-blue-faint-on-active.is-active:hover {
@@ -3100,88 +3016,16 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--purple-dark) !important;
 }
 
-.bg-purple-on-hover:hover,
-.bg-purple-on-active.is-active,
-.bg-purple-on-active.is-active:hover {
-  background-color: var(--purple) !important;
-}
-
-.bg-purple-light-on-hover:hover,
-.bg-purple-light-on-active.is-active,
-.bg-purple-light-on-active.is-active:hover {
-  background-color: var(--purple-light) !important;
-}
-
 .bg-purple-faint-on-hover:hover,
 .bg-purple-faint-on-active.is-active,
 .bg-purple-faint-on-active.is-active:hover {
   background-color: var(--purple-faint) !important;
 }
 
-.bg-darken10-on-hover:hover,
-.bg-darken10-on-active.is-active,
-.bg-darken10-on-active.is-active:hover {
-  background-color: var(--darken10) !important;
-}
-
-.bg-darken25-on-hover:hover,
-.bg-darken25-on-active.is-active,
-.bg-darken25-on-active.is-active:hover {
-  background-color: var(--darken25) !important;
-}
-
-.bg-darken50-on-hover:hover,
-.bg-darken50-on-active.is-active,
-.bg-darken50-on-active.is-active:hover {
-  background-color: var(--darken50) !important;
-}
-
-.bg-darken75-on-hover:hover,
-.bg-darken75-on-active.is-active,
-.bg-darken75-on-active.is-active:hover {
-  background-color: var(--darken75) !important;
-}
-
-.bg-lighten10-on-hover:hover,
-.bg-lighten10-on-active.is-active,
-.bg-lighten10-on-active.is-active:hover {
-  background-color: var(--lighten10) !important;
-}
-
-.bg-lighten25-on-hover:hover,
-.bg-lighten25-on-active.is-active,
-.bg-lighten25-on-active.is-active:hover {
-  background-color: var(--lighten25) !important;
-}
-
-.bg-lighten50-on-hover:hover,
-.bg-lighten50-on-active.is-active,
-.bg-lighten50-on-active.is-active:hover {
-  background-color: var(--lighten50) !important;
-}
-
-.bg-lighten75-on-hover:hover,
-.bg-lighten75-on-active.is-active,
-.bg-lighten75-on-active.is-active:hover {
-  background-color: var(--lighten75) !important;
-}
-
-.bg-white-on-hover:hover,
-.bg-white-on-active.is-active,
-.bg-white-on-active.is-active:hover {
-  background-color: var(--white) !important;
-}
-
 .bg-black-on-hover:hover,
 .bg-black-on-active.is-active,
 .bg-black-on-active.is-active:hover {
   background-color: var(--black) !important;
-}
-
-.bg-transparent-on-hover:hover,
-.bg-transparent-on-active.is-active,
-.bg-transparent-on-active.is-active:hover {
-  background-color: var(--transparent) !important;
 }
 
 /** @endgroup */
@@ -3202,12 +3046,6 @@ input:checked + .switch--dot-transparent::after {
   color: var(--gray-dark) !important;
 }
 
-.color-gray-on-hover:hover,
-.color-gray-on-active.is-active,
-.color-gray-on-active.is-active:hover {
-  color: var(--gray) !important;
-}
-
 .color-gray-light-on-hover:hover,
 .color-gray-light-on-active.is-active,
 .color-gray-light-on-active.is-active:hover {
@@ -3224,12 +3062,6 @@ input:checked + .switch--dot-transparent::after {
 .color-pink-dark-on-active.is-active,
 .color-pink-dark-on-active.is-active:hover {
   color: var(--pink-dark) !important;
-}
-
-.color-pink-on-hover:hover,
-.color-pink-on-active.is-active,
-.color-pink-on-active.is-active:hover {
-  color: var(--pink) !important;
 }
 
 .color-pink-light-on-hover:hover,
@@ -3250,12 +3082,6 @@ input:checked + .switch--dot-transparent::after {
   color: var(--red-dark) !important;
 }
 
-.color-red-on-hover:hover,
-.color-red-on-active.is-active,
-.color-red-on-active.is-active:hover {
-  color: var(--red) !important;
-}
-
 .color-red-light-on-hover:hover,
 .color-red-light-on-active.is-active,
 .color-red-light-on-active.is-active:hover {
@@ -3272,12 +3098,6 @@ input:checked + .switch--dot-transparent::after {
 .color-orange-dark-on-active.is-active,
 .color-orange-dark-on-active.is-active:hover {
   color: var(--orange-dark) !important;
-}
-
-.color-orange-on-hover:hover,
-.color-orange-on-active.is-active,
-.color-orange-on-active.is-active:hover {
-  color: var(--orange) !important;
 }
 
 .color-orange-light-on-hover:hover,
@@ -3298,12 +3118,6 @@ input:checked + .switch--dot-transparent::after {
   color: var(--yellow-dark) !important;
 }
 
-.color-yellow-on-hover:hover,
-.color-yellow-on-active.is-active,
-.color-yellow-on-active.is-active:hover {
-  color: var(--yellow) !important;
-}
-
 .color-yellow-light-on-hover:hover,
 .color-yellow-light-on-active.is-active,
 .color-yellow-light-on-active.is-active:hover {
@@ -3320,12 +3134,6 @@ input:checked + .switch--dot-transparent::after {
 .color-green-dark-on-active.is-active,
 .color-green-dark-on-active.is-active:hover {
   color: var(--green-dark) !important;
-}
-
-.color-green-on-hover:hover,
-.color-green-on-active.is-active,
-.color-green-on-active.is-active:hover {
-  color: var(--green) !important;
 }
 
 .color-green-light-on-hover:hover,
@@ -3346,12 +3154,6 @@ input:checked + .switch--dot-transparent::after {
   color: var(--blue-dark) !important;
 }
 
-.color-blue-on-hover:hover,
-.color-blue-on-active.is-active,
-.color-blue-on-active.is-active:hover {
-  color: var(--blue) !important;
-}
-
 .color-blue-light-on-hover:hover,
 .color-blue-light-on-active.is-active,
 .color-blue-light-on-active.is-active:hover {
@@ -3368,12 +3170,6 @@ input:checked + .switch--dot-transparent::after {
 .color-purple-dark-on-active.is-active,
 .color-purple-dark-on-active.is-active:hover {
   color: var(--purple-dark) !important;
-}
-
-.color-purple-on-hover:hover,
-.color-purple-on-active.is-active,
-.color-purple-on-active.is-active:hover {
-  color: var(--purple) !important;
 }
 
 .color-purple-light-on-hover:hover,
@@ -3394,64 +3190,16 @@ input:checked + .switch--dot-transparent::after {
   color: var(--darken10) !important;
 }
 
-.color-darken25-on-hover:hover,
-.color-darken25-on-active.is-active,
-.color-darken25-on-active.is-active:hover {
-  color: var(--darken25) !important;
-}
-
-.color-darken50-on-hover:hover,
-.color-darken50-on-active.is-active,
-.color-darken50-on-active.is-active:hover {
-  color: var(--darken50) !important;
-}
-
-.color-darken75-on-hover:hover,
-.color-darken75-on-active.is-active,
-.color-darken75-on-active.is-active:hover {
-  color: var(--darken75) !important;
-}
-
 .color-lighten10-on-hover:hover,
 .color-lighten10-on-active.is-active,
 .color-lighten10-on-active.is-active:hover {
   color: var(--lighten10) !important;
 }
 
-.color-lighten25-on-hover:hover,
-.color-lighten25-on-active.is-active,
-.color-lighten25-on-active.is-active:hover {
-  color: var(--lighten25) !important;
-}
-
-.color-lighten50-on-hover:hover,
-.color-lighten50-on-active.is-active,
-.color-lighten50-on-active.is-active:hover {
-  color: var(--lighten50) !important;
-}
-
-.color-lighten75-on-hover:hover,
-.color-lighten75-on-active.is-active,
-.color-lighten75-on-active.is-active:hover {
-  color: var(--lighten75) !important;
-}
-
-.color-white-on-hover:hover,
-.color-white-on-active.is-active,
-.color-white-on-active.is-active:hover {
-  color: var(--white) !important;
-}
-
 .color-black-on-hover:hover,
 .color-black-on-active.is-active,
 .color-black-on-active.is-active:hover {
   color: var(--black) !important;
-}
-
-.color-transparent-on-hover:hover,
-.color-transparent-on-active.is-active,
-.color-transparent-on-active.is-active:hover {
-  color: var(--transparent) !important;
 }
 
 /** @endgroup */
@@ -3472,18 +3220,6 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--gray-dark) !important;
 }
 
-.border--gray-on-hover:hover,
-.border--gray-on-active.is-active,
-.border--gray-on-active.is-active:hover {
-  border-color: var(--gray) !important;
-}
-
-.border--gray-light-on-hover:hover,
-.border--gray-light-on-active.is-active,
-.border--gray-light-on-active.is-active:hover {
-  border-color: var(--gray-light) !important;
-}
-
 .border--gray-faint-on-hover:hover,
 .border--gray-faint-on-active.is-active,
 .border--gray-faint-on-active.is-active:hover {
@@ -3494,18 +3230,6 @@ input:checked + .switch--dot-transparent::after {
 .border--pink-dark-on-active.is-active,
 .border--pink-dark-on-active.is-active:hover {
   border-color: var(--pink-dark) !important;
-}
-
-.border--pink-on-hover:hover,
-.border--pink-on-active.is-active,
-.border--pink-on-active.is-active:hover {
-  border-color: var(--pink) !important;
-}
-
-.border--pink-light-on-hover:hover,
-.border--pink-light-on-active.is-active,
-.border--pink-light-on-active.is-active:hover {
-  border-color: var(--pink-light) !important;
 }
 
 .border--pink-faint-on-hover:hover,
@@ -3520,18 +3244,6 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--red-dark) !important;
 }
 
-.border--red-on-hover:hover,
-.border--red-on-active.is-active,
-.border--red-on-active.is-active:hover {
-  border-color: var(--red) !important;
-}
-
-.border--red-light-on-hover:hover,
-.border--red-light-on-active.is-active,
-.border--red-light-on-active.is-active:hover {
-  border-color: var(--red-light) !important;
-}
-
 .border--red-faint-on-hover:hover,
 .border--red-faint-on-active.is-active,
 .border--red-faint-on-active.is-active:hover {
@@ -3542,18 +3254,6 @@ input:checked + .switch--dot-transparent::after {
 .border--orange-dark-on-active.is-active,
 .border--orange-dark-on-active.is-active:hover {
   border-color: var(--orange-dark) !important;
-}
-
-.border--orange-on-hover:hover,
-.border--orange-on-active.is-active,
-.border--orange-on-active.is-active:hover {
-  border-color: var(--orange) !important;
-}
-
-.border--orange-light-on-hover:hover,
-.border--orange-light-on-active.is-active,
-.border--orange-light-on-active.is-active:hover {
-  border-color: var(--orange-light) !important;
 }
 
 .border--orange-faint-on-hover:hover,
@@ -3568,18 +3268,6 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--yellow-dark) !important;
 }
 
-.border--yellow-on-hover:hover,
-.border--yellow-on-active.is-active,
-.border--yellow-on-active.is-active:hover {
-  border-color: var(--yellow) !important;
-}
-
-.border--yellow-light-on-hover:hover,
-.border--yellow-light-on-active.is-active,
-.border--yellow-light-on-active.is-active:hover {
-  border-color: var(--yellow-light) !important;
-}
-
 .border--yellow-faint-on-hover:hover,
 .border--yellow-faint-on-active.is-active,
 .border--yellow-faint-on-active.is-active:hover {
@@ -3590,18 +3278,6 @@ input:checked + .switch--dot-transparent::after {
 .border--green-dark-on-active.is-active,
 .border--green-dark-on-active.is-active:hover {
   border-color: var(--green-dark) !important;
-}
-
-.border--green-on-hover:hover,
-.border--green-on-active.is-active,
-.border--green-on-active.is-active:hover {
-  border-color: var(--green) !important;
-}
-
-.border--green-light-on-hover:hover,
-.border--green-light-on-active.is-active,
-.border--green-light-on-active.is-active:hover {
-  border-color: var(--green-light) !important;
 }
 
 .border--green-faint-on-hover:hover,
@@ -3616,18 +3292,6 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--blue-dark) !important;
 }
 
-.border--blue-on-hover:hover,
-.border--blue-on-active.is-active,
-.border--blue-on-active.is-active:hover {
-  border-color: var(--blue) !important;
-}
-
-.border--blue-light-on-hover:hover,
-.border--blue-light-on-active.is-active,
-.border--blue-light-on-active.is-active:hover {
-  border-color: var(--blue-light) !important;
-}
-
 .border--blue-faint-on-hover:hover,
 .border--blue-faint-on-active.is-active,
 .border--blue-faint-on-active.is-active:hover {
@@ -3640,88 +3304,16 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--purple-dark) !important;
 }
 
-.border--purple-on-hover:hover,
-.border--purple-on-active.is-active,
-.border--purple-on-active.is-active:hover {
-  border-color: var(--purple) !important;
-}
-
-.border--purple-light-on-hover:hover,
-.border--purple-light-on-active.is-active,
-.border--purple-light-on-active.is-active:hover {
-  border-color: var(--purple-light) !important;
-}
-
 .border--purple-faint-on-hover:hover,
 .border--purple-faint-on-active.is-active,
 .border--purple-faint-on-active.is-active:hover {
   border-color: var(--purple-faint) !important;
 }
 
-.border--darken10-on-hover:hover,
-.border--darken10-on-active.is-active,
-.border--darken10-on-active.is-active:hover {
-  border-color: var(--darken10) !important;
-}
-
-.border--darken25-on-hover:hover,
-.border--darken25-on-active.is-active,
-.border--darken25-on-active.is-active:hover {
-  border-color: var(--darken25) !important;
-}
-
-.border--darken50-on-hover:hover,
-.border--darken50-on-active.is-active,
-.border--darken50-on-active.is-active:hover {
-  border-color: var(--darken50) !important;
-}
-
-.border--darken75-on-hover:hover,
-.border--darken75-on-active.is-active,
-.border--darken75-on-active.is-active:hover {
-  border-color: var(--darken75) !important;
-}
-
-.border--lighten10-on-hover:hover,
-.border--lighten10-on-active.is-active,
-.border--lighten10-on-active.is-active:hover {
-  border-color: var(--lighten10) !important;
-}
-
-.border--lighten25-on-hover:hover,
-.border--lighten25-on-active.is-active,
-.border--lighten25-on-active.is-active:hover {
-  border-color: var(--lighten25) !important;
-}
-
-.border--lighten50-on-hover:hover,
-.border--lighten50-on-active.is-active,
-.border--lighten50-on-active.is-active:hover {
-  border-color: var(--lighten50) !important;
-}
-
-.border--lighten75-on-hover:hover,
-.border--lighten75-on-active.is-active,
-.border--lighten75-on-active.is-active:hover {
-  border-color: var(--lighten75) !important;
-}
-
-.border--white-on-hover:hover,
-.border--white-on-active.is-active,
-.border--white-on-active.is-active:hover {
-  border-color: var(--white) !important;
-}
-
 .border--black-on-hover:hover,
 .border--black-on-active.is-active,
 .border--black-on-active.is-active:hover {
   border-color: var(--black) !important;
-}
-
-.border--transparent-on-hover:hover,
-.border--transparent-on-active.is-active,
-.border--transparent-on-active.is-active:hover {
-  border-color: var(--transparent) !important;
 }
 
 /** @endgroup */
