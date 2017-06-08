@@ -64,7 +64,7 @@ textarea {
   white-space: pre-wrap;
   font-size: 90%; /* mono fonts have naturally large proportions, scale them down to match open sans. */
   line-height: 1.5em; /* code blocks look better with smaller line height */
-  background: var(--darken10);
+  background: var(--darken5);
   border-radius: 3px;
 }
 
@@ -72,7 +72,7 @@ textarea {
 .pre--dark,
 .prose--dark code,
 .prose--dark pre {
-  background: var(--lighten10);
+  background: var(--lighten5);
 }
 
 /**

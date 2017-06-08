@@ -2219,10 +2219,12 @@ input:checked + .switch--dot-transparent::after {
  *   <div class='col col--3 bg-purple py6 px6'>bg-purple</div>
  *   <div class='col col--3 bg-purple-light py6 px6'>bg-purple-light</div>
  *   <div class='col col--3 bg-purple-faint py6 px6'>bg-purple-faint</div>
+ *   <div class='col col--3 bg-darken5 py6 px6'>bg-darken5</div>
  *   <div class='col col--3 bg-darken10 py6 px6'>bg-darken10</div>
  *   <div class='col col--3 bg-darken25 py6 px6'>bg-darken25</div>
  *   <div class='col col--3 bg-darken50 py6 px6'>bg-darken50</div>
  *   <div class='col col--3 bg-darken75 py6 px6'>bg-darken75</div>
+ *   <div class='col col--3 bg-lighten5 py6 px6'>bg-lighten5</div>
  *   <div class='col col--3 bg-lighten10 py6 px6'>bg-lighten10</div>
  *   <div class='col col--3 bg-lighten25 py6 px6'>bg-lighten25</div>
  *   <div class='col col--3 bg-lighten50 py6 px6'>bg-lighten50</div>
@@ -2360,6 +2362,10 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--purple-faint) !important;
 }
 
+.bg-darken5 {
+  background-color: var(--darken5) !important;
+}
+
 .bg-darken10 {
   background-color: var(--darken10) !important;
 }
@@ -2374,6 +2380,10 @@ input:checked + .switch--dot-transparent::after {
 
 .bg-darken75 {
   background-color: var(--darken75) !important;
+}
+
+.bg-lighten5 {
+  background-color: var(--lighten5) !important;
 }
 
 .bg-lighten10 {
@@ -3020,6 +3030,18 @@ input:checked + .switch--dot-transparent::after {
 .bg-purple-faint-on-active.is-active,
 .bg-purple-faint-on-active.is-active:hover {
   background-color: var(--purple-faint) !important;
+}
+
+.bg-darken5-on-hover:hover,
+.bg-darken5-on-active.is-active,
+.bg-darken5-on-active.is-active:hover {
+  background-color: var(--darken5) !important;
+}
+
+.bg-lighten5-on-hover:hover,
+.bg-lighten5-on-active.is-active,
+.bg-lighten5-on-active.is-active:hover {
+  background-color: var(--lighten5) !important;
 }
 
 .bg-black-on-hover:hover,
