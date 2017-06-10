@@ -803,7 +803,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   font-weight: bold;
   padding: 0 12px;
   border-radius: 13px;
-  text-decoration: none !important; /* prevent underline when inside .prose */
   background-color: var(--transparent);
   transition: color var(--transition),
     background-color var(--transition);
