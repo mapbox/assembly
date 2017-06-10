@@ -15,6 +15,7 @@ function buildUserAssets(outdir, options) {
 
   const buildJsOptions = {
     outfile: path.join(outdir, 'assembly.js'),
+    icons: options.icons || false,
     quiet: options.quiet || false
   };
 
