@@ -30,4 +30,25 @@ describe('buildJs', () => {
       })
       .then(() => cleanup(tmp));
   });
+
+  test('with valid svg option', () => {
+    const tmp = `${getTmp()}/test.js`;
+    return buildJs({
+      outfile: tmp,
+      icons: ['airplane', 'alert']
+    })
+      .then(() => pify(fs.readFile)(tmp, 'utf8'))
+      .then((js) => {
+        expect(js).toMatchSnapshot();
+      })
+      .then(() => cleanup(tmp));
+  });
+
+  test('fails with invalid icon option', () => {
+    const tmp = `${getTmp()}/test.js`;
+    return expect(buildJs({
+      outfile: tmp,
+      icons: ['airplane', 'pizza']
+    })).rejects.toEqual(Error('an icon matching pizza does not exist'));
+  });
 });

@@ -70,14 +70,33 @@ function processSvgFile(filename) {
   });
 }
 
-function buildSvgLoader() {
+/**
+ * Build Svg loader, which includes SVG data for all icons.
+ *
+ * @param {Array<string>} [icons] - Array of icon names to include in the
+ *   loader. Icon names correspond to SVG file names excluding the `.svg` suffix.
+ */
+function buildSvgLoader(icons) {
   const sprite = svgstore();
 
   return pify(fs.readdir)(svgDir)
     .then((filenames) => {
-      return Promise.all(filenames.map((filename) => {
+
+      // Error if user tries to include icons that don't exist
+      icons.forEach((svg) => {
+        if (!filenames.includes(svg + '.svg')) {
+          throw new Error(`an icon matching ${svg} does not exist`);
+        }
+      });
+
+      const files = (icons.length !== 0)
+        ? filenames.filter((f) => icons.includes(f.split('.svg')[0]))
+        : filenames;
+
+      return Promise.all(files.map((filename) => {
         return processSvgFile(path.join(svgDir, filename), sprite);
       }));
+
     })
     .then(() => {
       // This sorting is necessary to get a detemrinistic
@@ -94,3 +113,6 @@ function buildSvgLoader() {
 }
 
 module.exports = buildSvgLoader;
+if (require.main === module) {
+  buildSvgLoader().catch((err) => console.error(err.stack));
+}
