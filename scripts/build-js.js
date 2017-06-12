@@ -23,6 +23,8 @@ const jsFiles = [
  * @param {Object} [options]
  * @param {string} [options.outfile] - Path to which built JS should be written.
  * @param {Object} [options.quiet] - Suppress logs.
+ * @param {Array<string>} [options.icons] - Array of icon names to include in the
+ *   loader. icon names correspond to SVG file names excluding the `.svg` suffix.
  * @return {Promise<void>}
  */
 function buildJs(options) {
@@ -32,7 +34,7 @@ function buildJs(options) {
   const outfile = options.outfile || path.join(__dirname, '../dist/assembly.js');
 
   return Promise.all([
-    buildSvgLoader(),
+    buildSvgLoader(options.icons || []),
     concatJs()
   ])
     .then((data) => {
