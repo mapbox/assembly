@@ -487,7 +487,20 @@ textarea{
 }
 
 .prose a{
+  color:#448ee4;
   text-decoration:underline;
+}
+
+.prose--dark a{
+  color:#fff;
+}
+
+.prose a:hover{
+  color:#346db0;
+}
+
+.prose--dark a:hover{
+  color:rgba(255, 255, 255, 0.75);
 }
 
 .prose img,
@@ -13328,7 +13341,20 @@ textarea{
 }
 
 .prose a{
+  color:#448ee4;
   text-decoration:underline;
+}
+
+.prose--dark a{
+  color:#fff;
+}
+
+.prose a:hover{
+  color:#346db0;
+}
+
+.prose--dark a:hover{
+  color:rgba(255, 255, 255, 0.75);
 }
 
 .prose img,
