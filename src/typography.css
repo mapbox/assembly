@@ -559,7 +559,7 @@ textarea {
  *   <h1>Tortor Porta</h1>
  *   <small>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.</small>
  *   <hr/>
- *   <p>Cras justo odio, dapibus ac facilisis<sup>[note]</sup> in, egestas eget quam. Lorem ipsum <del>dolor</del> sit amet, consectetur adipiscing elit. H<sub>2</sub>0 electrolitis.</p>
+ *   <p>Cras justo odio, dapibus ac facilisis<sup>[note]</sup> in, <a href='#'>egestas eget quam</a>. Lorem ipsum <del>dolor</del> sit amet, consectetur adipiscing elit. H<sub>2</sub>0 electrolitis.</p>
  * </div>
  */
 
@@ -572,7 +572,7 @@ textarea {
  *   <h1>Tortor Porta</h1>
  *   <small>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.</small>
  *   <hr/>
- *   <p>Cras justo odio, dapibus ac facilisis<sup>[note]</sup> in, egestas eget quam. Lorem ipsum <del>dolor</del> sit amet, consectetur adipiscing elit. H<sub>2</sub>0 electrolitis.</p>
+ *   <p>Cras justo odio, dapibus ac facilisis<sup>[note]</sup> in, <a href='#'>egestas eget quam</a>. Lorem ipsum <del>dolor</del> sit amet, consectetur adipiscing elit. H<sub>2</sub>0 electrolitis.</p>
  * </div>
  */
 .prose--dark {
@@ -634,7 +634,20 @@ textarea {
 }
 
 .prose a {
+  color: var(--default-primary-interactive-color);
   text-decoration: underline;
+}
+
+.prose--dark a {
+  color: var(--white);
+}
+
+.prose a:hover {
+  color: var(--default-primary-interactive-color-dark);
+}
+
+.prose--dark a:hover {
+  color: var(--lighten75);
 }
 
 .prose img,
