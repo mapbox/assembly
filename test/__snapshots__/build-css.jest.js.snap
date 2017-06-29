@@ -13337,35 +13337,25 @@ textarea{
   margin-bottom:12px;
 }
 
-<<<<<<< HEAD
-.prose a{
+.prose a:not(.unprose){
   color:#448ee4;
   text-decoration:underline;
 }
 
-.prose--dark a{
+.prose--dark a:not(.unprose){
   color:#fff;
 }
 
-.prose a:hover{
+.prose a:not(.unprose):hover{
   color:#346db0;
 }
 
-.prose--dark a:hover{
+.prose--dark a:not(.unprose):hover{
   color:rgba(255, 255, 255, 0.75);
 }
 
-.prose img,
-.prose video{
-=======
-.prose a:not(.unprose){
-  text-decoration:underline;
-}
-
 .prose img:not(.unprose),
-.prose video:not(.unprose){
->>>>>>> add unprose class, closes #793
-  margin-bottom:12px;
+.prose video:not(.unprose){  margin-bottom:12px;
 }
 
 .prose h1:first-child:not(.unprose),
