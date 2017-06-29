@@ -31,7 +31,7 @@
  *
  */
 .table,
-.prose table {
+.prose table:not(.unprose) {
   width: 100%;
   background-color: transparent;
   border-spacing: 0;
@@ -44,14 +44,14 @@
 and need an outer border on the whole table. The borders of cells must then
 be adjusted based on their position. */
 
-.prose table {
+.prose table:not(.unprose) {
   margin-bottom: 18px;
 }
 
 .table th,
 .table td,
-.prose table th,
-.prose table td {
+.prose table th:not(.unprose),
+.prose table td:not(.unprose) {
   text-align: left;
   vertical-align: top;
   padding: 12px;
@@ -63,15 +63,15 @@ be adjusted based on their position. */
 
 .table th:first-child,
 .table td:first-child,
-.prose table th:first-child,
-.prose table td:first-child {
+.prose table th:first-child:not(.unprose),
+.prose table td:first-child:not(.unprose) {
   border-left-width: 0;
 }
 
 .table :not(thead) tr:last-of-type th,
 .table :not(thead) tr:last-of-type td,
-.prose table :not(thead) tr:last-of-type th,
-.prose table :not(thead) tr:last-of-type td {
+.prose table :not(thead) tr:last-of-type th:not(.unprose),
+.prose table :not(thead) tr:last-of-type td:not(.unprose) {
   border-bottom-width: 0;
 }
 
@@ -104,7 +104,7 @@ be adjusted based on their position. */
  *
  */
 .table--dark,
-.prose--dark table {
+.prose--dark table:not(.unprose) {
   background: transparent;
   border-color: var(--white);
   color: var(--white);
@@ -112,8 +112,8 @@ be adjusted based on their position. */
 
 .table--dark th,
 .table--dark td,
-.prose--dark th,
-.prose--dark td {
+.prose--dark th:not(.unprose),
+.prose--dark td:not(.unprose) {
   border-bottom-color: var(--white);
 }
 
