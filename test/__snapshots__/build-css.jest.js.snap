@@ -205,7 +205,7 @@ textarea{
   -webkit-font-smoothing:antialiased;
 }
 .txt-kbd,
-.prose kbd{
+.prose:not(.unprose) kbd{
   font-family:'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   border:1px solid rgba(0, 0, 0, 0.25);
   line-height:18px;
@@ -217,19 +217,19 @@ textarea{
 }
 
 .txt-kbd--dark,
-.prose--dark kbd{
+.prose--dark kbd:not(.unprose){
   border:1px solid rgba(255, 255, 255, 0.25);
   box-shadow:0 1px 0 0 rgba(255, 255, 255, 0.25);
 }
 .txt-sub,
-.prose sub{
+.prose sub:not(.unprose){
   top:0.5ex;
 }
 
 .txt-code,
 .pre,
-.prose code,
-.prose pre{
+.prose code:not(.unprose),
+.prose pre:not(.unprose){
   font-family:'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   white-space:pre-wrap;
   font-size:90%;
@@ -240,26 +240,26 @@ textarea{
 
 .txt-code--dark,
 .pre--dark,
-.prose--dark code,
-.prose--dark pre{
+.prose--dark code:not(.unprose),
+.prose--dark pre:not(.unprose){
   background:rgba(255, 255, 255, 0.05);
 }
 .pre,
-.prose pre{
+.prose pre:not(.unprose){
   padding:12px;
   overflow:auto;
 }
 
-.prose pre{
+.prose pre:not(.unprose){
   margin-bottom:12px;
 }
 
-.prose pre code{
+.prose pre code:not(.unprose){
   background:transparent;
   padding:0;
 }
 .txt-code,
-.prose code{
+.prose code:not(.unprose){
   padding:2px 4px;
 }
 .txt-mono{
@@ -318,12 +318,12 @@ textarea{
   line-height:15px;
 }
 .txt-abbr,
-.prose abbr{
+.prose abbr:not(.unprose){
   border-bottom:1px dotted currentColor;
   cursor:help;
 }
 .txt-hr,
-.prose hr{
+.prose hr:not(.unprose){
   margin:17px 0;
   border:0;
   height:1px;
@@ -331,58 +331,58 @@ textarea{
 }
 
 .txt-hr--dark,
-.prose--dark hr{
+.prose--dark hr:not(.unprose){
   background:rgba(255, 255, 255, 0.1);
 }
-.prose ol,
-.prose ul,
+.prose ol:not(.unprose),
+.prose ul:not(.unprose),
 .txt-ol,
 .txt-ul{
   margin-left:24px;
 }
 
-.prose ol,
-.prose ul{
+.prose ol:not(.unprose),
+.prose ul:not(.unprose){
   margin-bottom:12px;
 }
-.prose ol ol,
-.prose ul ul,
-.prose ol ol ol,
-.prose ul ul ul{
+.prose ol ol:not(.unprose),
+.prose ul ul:not(.unprose),
+.prose ol ol ol:not(.unprose),
+.prose ul ul ul:not(.unprose){
   margin-bottom:6px;
 }
 .txt-ul,
-.prose ul{
+.prose ul:not(.unprose){
   list-style:disc;
 }
 .txt-ol,
-.prose ol{
+.prose ol:not(.unprose){
   list-style:decimal;
 }
 
 .txt-li,
-.prose li{
+.prose li:not(.unprose){
   display:list-item;
 }
 
-.prose li{
+.prose li:not(.unprose){
   margin-bottom:6px;
 }
 .txt-blockquote,
-.prose blockquote{
+.prose blockquote:not(.unprose){
   quotes:none;
   font-style:normal;
   padding-left:18px;
 }
 
-.prose blockquote{
+.prose blockquote:not(.unprose){
   margin-bottom:18px;
 }
 
 .txt-sup,
 .txt-sub,
-.prose sup,
-.prose sub{
+.prose sup:not(.unprose),
+.prose sub:not(.unprose){
   height:0;
   line-height:1;
   vertical-align:baseline;
@@ -390,7 +390,7 @@ textarea{
   font-size:75%;
 }
 .txt-sup,
-.prose sup{
+.prose sup:not(.unprose){
   bottom:1ex;
 }
 .txt-light{
@@ -407,8 +407,8 @@ textarea{
 .txt-capitalize-first::first-letter{ text-transform:capitalize !important; }
 .txt-underline{ text-decoration:underline !important; }
 .txt-underline-on-hover:hover{ text-decoration:underline !important; }
-.prose del,
-.prose s,
+.prose del:not(.unprose),
+.prose s:not(.unprose),
 .txt-strike{ text-decoration:line-through !important; }
 .txt-nowrap{
   white-space:nowrap !important;
@@ -435,7 +435,7 @@ textarea{
 .prose--dark{
   color:#fff;
 }
-.prose h1{
+.prose h1:not(.unprose){
   font-weight:bold;
   font-size:45px;
   line-height:54px;
@@ -443,7 +443,7 @@ textarea{
   padding-top:36px;
 }
 
-.prose h2{
+.prose h2:not(.unprose){
   font-weight:bold;
   font-size:35px;
   line-height:42px;
@@ -451,7 +451,7 @@ textarea{
   padding-top:24px;
 }
 
-.prose h3{
+.prose h3:not(.unprose){
   font-weight:bold;
   font-size:30px;
   line-height:36px;
@@ -459,7 +459,7 @@ textarea{
   padding-top:24px;
 }
 
-.prose h4{
+.prose h4:not(.unprose){
   font-weight:bold;
   font-size:18px;
   line-height:24px;
@@ -467,56 +467,56 @@ textarea{
   padding-top:18px;
 }
 
-.prose h5,
-.prose h6{
+.prose h5:not(.unprose),
+.prose h6:not(.unprose){
   font-weight:bold;
   font-size:15px;
   line-height:18px;
   margin-bottom:12px;
   padding-top:12px;
 }
-.prose p{
+.prose p:not(.unprose){
   margin-bottom:12px;
 }
 
-.prose small{
+.prose small:not(.unprose){
   display:block;
   font-size:12px;
   line-height:18px;
   margin-bottom:12px;
 }
 
-.prose a{
+.prose a:not(.unprose){
   color:#448ee4;
   text-decoration:underline;
 }
 
-.prose--dark a{
+.prose--dark a:not(.unprose){
   color:#fff;
 }
 
-.prose a:hover{
+.prose a:not(.unprose):hover{
   color:#346db0;
 }
 
-.prose--dark a:hover{
+.prose--dark a:not(.unprose):hover{
   color:rgba(255, 255, 255, 0.75);
 }
 
-.prose img,
-.prose video{
+.prose img:not(.unprose),
+.prose video:not(.unprose){
   margin-bottom:12px;
 }
 
-.prose h1:first-child,
-.prose h2:first-child,
-.prose h3:first-child,
-.prose h4:first-child,
-.prose h5:first-child,
-.prose h6:first-child{
+.prose h1:first-child:not(.unprose),
+.prose h2:first-child:not(.unprose),
+.prose h3:first-child:not(.unprose),
+.prose h4:first-child:not(.unprose),
+.prose h5:first-child:not(.unprose),
+.prose h6:first-child:not(.unprose){
   padding-top:0;
 }
-.prose *:last-child{
+.prose *:last-child:not(.unprose){
   margin-bottom:0;
 }
 .align-l{ text-align:left !important; }
@@ -525,7 +525,7 @@ textarea{
 .align-t{ vertical-align:top !important; }
 .align-middle{ vertical-align:middle !important; }
 .table,
-.prose table{
+.prose table:not(.unprose){
   width:100%;
   background-color:transparent;
   border-spacing:0;
@@ -534,14 +534,14 @@ textarea{
   border-radius:4px;
 }
 
-.prose table{
+.prose table:not(.unprose){
   margin-bottom:18px;
 }
 
 .table th,
 .table td,
-.prose table th,
-.prose table td{
+.prose table th:not(.unprose),
+.prose table td:not(.unprose){
   text-align:left;
   vertical-align:top;
   padding:12px;
@@ -553,19 +553,19 @@ textarea{
 
 .table th:first-child,
 .table td:first-child,
-.prose table th:first-child,
-.prose table td:first-child{
+.prose table th:first-child:not(.unprose),
+.prose table td:first-child:not(.unprose){
   border-left-width:0;
 }
 
 .table :not(thead) tr:last-of-type th,
 .table :not(thead) tr:last-of-type td,
-.prose table :not(thead) tr:last-of-type th,
-.prose table :not(thead) tr:last-of-type td{
+.prose table :not(thead) tr:last-of-type th:not(.unprose),
+.prose table :not(thead) tr:last-of-type td:not(.unprose){
   border-bottom-width:0;
 }
 .table--dark,
-.prose--dark table{
+.prose--dark table:not(.unprose){
   background:transparent;
   border-color:#fff;
   color:#fff;
@@ -573,8 +573,8 @@ textarea{
 
 .table--dark th,
 .table--dark td,
-.prose--dark th,
-.prose--dark td{
+.prose--dark th:not(.unprose),
+.prose--dark td:not(.unprose){
   border-bottom-color:#fff;
 }
 
@@ -592,7 +592,6 @@ textarea{
   padding:6px 12px;
   font-weight:bold;
   text-align:center;
-  text-decoration:none !important;
   transition:background-color 0.125s,
     border-color 0.125s,
     color 0.125s;
@@ -1207,7 +1206,6 @@ textarea{
   font-weight:bold;
   padding:0 12px;
   border-radius:13px;
-  text-decoration:none !important;
   background-color:transparent;
   transition:color 0.125s,
     background-color 0.125s;
@@ -13059,7 +13057,7 @@ textarea{
   -webkit-font-smoothing:antialiased;
 }
 .txt-kbd,
-.prose kbd{
+.prose:not(.unprose) kbd{
   font-family:'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   border:1px solid rgba(0, 0, 0, 0.25);
   line-height:18px;
@@ -13071,19 +13069,19 @@ textarea{
 }
 
 .txt-kbd--dark,
-.prose--dark kbd{
+.prose--dark kbd:not(.unprose){
   border:1px solid rgba(255, 255, 255, 0.25);
   box-shadow:0 1px 0 0 rgba(255, 255, 255, 0.25);
 }
 .txt-sub,
-.prose sub{
+.prose sub:not(.unprose){
   top:0.5ex;
 }
 
 .txt-code,
 .pre,
-.prose code,
-.prose pre{
+.prose code:not(.unprose),
+.prose pre:not(.unprose){
   font-family:'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   white-space:pre-wrap;
   font-size:90%;
@@ -13094,26 +13092,26 @@ textarea{
 
 .txt-code--dark,
 .pre--dark,
-.prose--dark code,
-.prose--dark pre{
+.prose--dark code:not(.unprose),
+.prose--dark pre:not(.unprose){
   background:rgba(255, 255, 255, 0.05);
 }
 .pre,
-.prose pre{
+.prose pre:not(.unprose){
   padding:12px;
   overflow:auto;
 }
 
-.prose pre{
+.prose pre:not(.unprose){
   margin-bottom:12px;
 }
 
-.prose pre code{
+.prose pre code:not(.unprose){
   background:transparent;
   padding:0;
 }
 .txt-code,
-.prose code{
+.prose code:not(.unprose){
   padding:2px 4px;
 }
 .txt-mono{
@@ -13172,12 +13170,12 @@ textarea{
   line-height:15px;
 }
 .txt-abbr,
-.prose abbr{
+.prose abbr:not(.unprose){
   border-bottom:1px dotted currentColor;
   cursor:help;
 }
 .txt-hr,
-.prose hr{
+.prose hr:not(.unprose){
   margin:17px 0;
   border:0;
   height:1px;
@@ -13185,58 +13183,58 @@ textarea{
 }
 
 .txt-hr--dark,
-.prose--dark hr{
+.prose--dark hr:not(.unprose){
   background:rgba(255, 255, 255, 0.1);
 }
-.prose ol,
-.prose ul,
+.prose ol:not(.unprose),
+.prose ul:not(.unprose),
 .txt-ol,
 .txt-ul{
   margin-left:24px;
 }
 
-.prose ol,
-.prose ul{
+.prose ol:not(.unprose),
+.prose ul:not(.unprose){
   margin-bottom:12px;
 }
-.prose ol ol,
-.prose ul ul,
-.prose ol ol ol,
-.prose ul ul ul{
+.prose ol ol:not(.unprose),
+.prose ul ul:not(.unprose),
+.prose ol ol ol:not(.unprose),
+.prose ul ul ul:not(.unprose){
   margin-bottom:6px;
 }
 .txt-ul,
-.prose ul{
+.prose ul:not(.unprose){
   list-style:disc;
 }
 .txt-ol,
-.prose ol{
+.prose ol:not(.unprose){
   list-style:decimal;
 }
 
 .txt-li,
-.prose li{
+.prose li:not(.unprose){
   display:list-item;
 }
 
-.prose li{
+.prose li:not(.unprose){
   margin-bottom:6px;
 }
 .txt-blockquote,
-.prose blockquote{
+.prose blockquote:not(.unprose){
   quotes:none;
   font-style:normal;
   padding-left:18px;
 }
 
-.prose blockquote{
+.prose blockquote:not(.unprose){
   margin-bottom:18px;
 }
 
 .txt-sup,
 .txt-sub,
-.prose sup,
-.prose sub{
+.prose sup:not(.unprose),
+.prose sub:not(.unprose){
   height:0;
   line-height:1;
   vertical-align:baseline;
@@ -13244,7 +13242,7 @@ textarea{
   font-size:75%;
 }
 .txt-sup,
-.prose sup{
+.prose sup:not(.unprose){
   bottom:1ex;
 }
 .txt-light{
@@ -13261,8 +13259,8 @@ textarea{
 .txt-capitalize-first::first-letter{ text-transform:capitalize !important; }
 .txt-underline{ text-decoration:underline !important; }
 .txt-underline-on-hover:hover{ text-decoration:underline !important; }
-.prose del,
-.prose s,
+.prose del:not(.unprose),
+.prose s:not(.unprose),
 .txt-strike{ text-decoration:line-through !important; }
 .txt-nowrap{
   white-space:nowrap !important;
@@ -13289,7 +13287,7 @@ textarea{
 .prose--dark{
   color:#fff;
 }
-.prose h1{
+.prose h1:not(.unprose){
   font-weight:bold;
   font-size:45px;
   line-height:54px;
@@ -13297,7 +13295,7 @@ textarea{
   padding-top:36px;
 }
 
-.prose h2{
+.prose h2:not(.unprose){
   font-weight:bold;
   font-size:35px;
   line-height:42px;
@@ -13305,7 +13303,7 @@ textarea{
   padding-top:24px;
 }
 
-.prose h3{
+.prose h3:not(.unprose){
   font-weight:bold;
   font-size:30px;
   line-height:36px;
@@ -13313,7 +13311,7 @@ textarea{
   padding-top:24px;
 }
 
-.prose h4{
+.prose h4:not(.unprose){
   font-weight:bold;
   font-size:18px;
   line-height:24px;
@@ -13321,56 +13319,56 @@ textarea{
   padding-top:18px;
 }
 
-.prose h5,
-.prose h6{
+.prose h5:not(.unprose),
+.prose h6:not(.unprose){
   font-weight:bold;
   font-size:15px;
   line-height:18px;
   margin-bottom:12px;
   padding-top:12px;
 }
-.prose p{
+.prose p:not(.unprose){
   margin-bottom:12px;
 }
 
-.prose small{
+.prose small:not(.unprose){
   display:block;
   font-size:12px;
   line-height:18px;
   margin-bottom:12px;
 }
 
-.prose a{
+.prose a:not(.unprose){
   color:#448ee4;
   text-decoration:underline;
 }
 
-.prose--dark a{
+.prose--dark a:not(.unprose){
   color:#fff;
 }
 
-.prose a:hover{
+.prose a:not(.unprose):hover{
   color:#346db0;
 }
 
-.prose--dark a:hover{
+.prose--dark a:not(.unprose):hover{
   color:rgba(255, 255, 255, 0.75);
 }
 
-.prose img,
-.prose video{
+.prose img:not(.unprose),
+.prose video:not(.unprose){
   margin-bottom:12px;
 }
 
-.prose h1:first-child,
-.prose h2:first-child,
-.prose h3:first-child,
-.prose h4:first-child,
-.prose h5:first-child,
-.prose h6:first-child{
+.prose h1:first-child:not(.unprose),
+.prose h2:first-child:not(.unprose),
+.prose h3:first-child:not(.unprose),
+.prose h4:first-child:not(.unprose),
+.prose h5:first-child:not(.unprose),
+.prose h6:first-child:not(.unprose){
   padding-top:0;
 }
-.prose *:last-child{
+.prose *:last-child:not(.unprose){
   margin-bottom:0;
 }
 .align-l{ text-align:left !important; }
@@ -13379,7 +13377,7 @@ textarea{
 .align-t{ vertical-align:top !important; }
 .align-middle{ vertical-align:middle !important; }
 .table,
-.prose table{
+.prose table:not(.unprose){
   width:100%;
   background-color:transparent;
   border-spacing:0;
@@ -13388,14 +13386,14 @@ textarea{
   border-radius:4px;
 }
 
-.prose table{
+.prose table:not(.unprose){
   margin-bottom:18px;
 }
 
 .table th,
 .table td,
-.prose table th,
-.prose table td{
+.prose table th:not(.unprose),
+.prose table td:not(.unprose){
   text-align:left;
   vertical-align:top;
   padding:12px;
@@ -13407,19 +13405,19 @@ textarea{
 
 .table th:first-child,
 .table td:first-child,
-.prose table th:first-child,
-.prose table td:first-child{
+.prose table th:first-child:not(.unprose),
+.prose table td:first-child:not(.unprose){
   border-left-width:0;
 }
 
 .table :not(thead) tr:last-of-type th,
 .table :not(thead) tr:last-of-type td,
-.prose table :not(thead) tr:last-of-type th,
-.prose table :not(thead) tr:last-of-type td{
+.prose table :not(thead) tr:last-of-type th:not(.unprose),
+.prose table :not(thead) tr:last-of-type td:not(.unprose){
   border-bottom-width:0;
 }
 .table--dark,
-.prose--dark table{
+.prose--dark table:not(.unprose){
   background:transparent;
   border-color:#fff;
   color:#fff;
@@ -13427,8 +13425,8 @@ textarea{
 
 .table--dark th,
 .table--dark td,
-.prose--dark th,
-.prose--dark td{
+.prose--dark th:not(.unprose),
+.prose--dark td:not(.unprose){
   border-bottom-color:#fff;
 }
 
@@ -13446,7 +13444,6 @@ textarea{
   padding:6px 12px;
   font-weight:bold;
   text-align:center;
-  text-decoration:none !important;
   transition:background-color 0.125s,
     border-color 0.125s,
     color 0.125s;
@@ -14061,7 +14058,6 @@ textarea{
   font-weight:bold;
   padding:0 12px;
   border-radius:13px;
-  text-decoration:none !important;
   background-color:transparent;
   transition:color 0.125s,
     background-color 0.125s;

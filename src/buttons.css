@@ -33,7 +33,6 @@
   padding: 6px 12px;
   font-weight: bold;
   text-align: center;
-  text-decoration: none !important; /* prevent underline when inside .prose */
   transition: background-color var(--transition),
     border-color var(--transition),
     color var(--transition);
