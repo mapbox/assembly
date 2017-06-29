@@ -52,7 +52,8 @@
     "postcss-reporter": "^3.0.0",
     "strip-indent": "^2.0.0",
     "svgo": "^0.7.1",
-    "svgstore": "^2.0.2"
+    "svgstore": "^2.0.2",
+    "uglify-js": "^2.7.5"
   },
   "devDependencies": {
     "aws-sdk": "^2.7.20",
@@ -88,7 +89,6 @@
     "stylelint-csstree-validator": "^1.1.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3",
-    "uglify-js": "^2.7.5",
     "uglifyify": "^3.0.4",
     "xml2js": "^0.4.17"
   },
