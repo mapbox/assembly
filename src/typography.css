@@ -566,6 +566,8 @@ textarea {
 /**
  * Remove prose styling. Useful when you need to display, for example, a custom form inside an otherwise consistently-styled document.
  *
+ * **Apply this class directly to the element you want to unstyle.** It does not work on containers, only on the elements themselves.
+ *
  * @memberof Prose
  * @selectors .unprose
  * @example
