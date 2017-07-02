@@ -16,6 +16,10 @@
 - Adds distinct hover states for active checkboxes and radio inputs.
 - Redesigns checkbox active state to be clearer, more conventional.
 
+## 0.13.1
+
+- Fix syntax of Browserslist for Autoprefixer.
+
 ## 0.13.0
 
 - Add `Assembly.createIcon`, `Assembly.changeIcon`, and `Assembly.iconExists` functions to assembly.js
