@@ -39,6 +39,7 @@ Assembly.buildUserAssets('path/to/my/outdir', myOptions)
 - **`mediaQueries`**: An object whose properties will override and add to `src/mediaQueries.json`. Use this option to change or add media queries.
   These media queries are accessible in any stylesheets you append via the CSS custom media query syntax, e.g. `@media --media-query-name`.
 - **`colorVariants`**: An object or array specifying the color variants you would like added to `assembly.css`. This is documented in detail below.
+- **`browsersList`**: A [Browserslist](https://github.com/ai/browserslist) array to be used by [Autoprefixer](https://github.com/postcss/autoprefixer). Default: `['last 4 versions', 'not ie < 10']`.
 - **`icons`**: An array of icons names to include in Assembly. Names correspond to file names in `src/svgs/`. Use this option to decrease the size of assembly.js by only including the icons you need.
 - **`quiet`**: Suppress logs.
 
