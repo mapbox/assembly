@@ -7,7 +7,7 @@ const mkdirp = require('mkdirp');
 const PQueue = require('p-queue');
 const Concat = require('concat-with-sourcemaps');
 const postcss = require('postcss');
-const cssnano = require('cssnano');
+const csso = require('csso');
 const reporter = require('postcss-reporter');
 const autoprefixer = require('autoprefixer');
 const initPostcssCustomProperties = require('postcss-custom-properties');
@@ -140,9 +140,8 @@ function buildCss(options) {
     const css = `${concat.content}\n/*# sourceMappingURL=${outfileFilename}.map */`;
 
     function writeMinifiedCss() {
-      return cssnano.process(css).then((minifiedCss) => {
-        pify(fs.writeFile)(outfile.replace('.css', '.min.css'), minifiedCss, 'utf8');
-      });
+      const minifiedCss = csso.minify(css).css;
+      return pify(fs.writeFile)(outfile.replace('.css', '.min.css'), minifiedCss, 'utf8');
     }
 
     return pify(mkdirp)(path.dirname(outfile)).then(() => {
