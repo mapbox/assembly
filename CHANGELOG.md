@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.13.1
+## 0.13.1-2
 
 - Fix syntax of Browserslist for Autoprefixer.
 
