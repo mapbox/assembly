@@ -59,11 +59,15 @@ const assemblyCssFiles = [
  * @param {Object} [options.variables] - Variables to override the defaults.
  * @param {Object} [options.mediaQueries] - Media queries to override the defaults.
  * @param {Object} [options.colorVariants] - Color variant config to override.
+ * @param {Array<string>} [options.browsersList] - A Browserslist
+ *   value for Autoprefixer.
  * @param {Object} [options.quiet] - Suppress logs.
  * @return {Promise<void>}
  */
 function buildCss(options) {
-  options = options || {};
+  options = Object.assign({
+    browsersList: ['last 4 versions', 'not ie < 10']
+  }, options);
 
   if (!options.quiet) timelog('Building CSS');
 
@@ -93,7 +97,7 @@ function buildCss(options) {
       extensions: mediaQueryDefinitions
     }),
     autoprefixer({
-      browsers: 'last 4 versions, not ie < 10'
+      browsers: options.browsersList
     }),
     reporter()
   ];
