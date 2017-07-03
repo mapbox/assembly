@@ -16,7 +16,7 @@
 - Adds distinct hover states for active checkboxes and radio inputs.
 - Redesigns checkbox active state to be clearer, more conventional.
 
-## 0.13.1
+## 0.13.1-2
 
 - Fix syntax of Browserslist for Autoprefixer.
 
