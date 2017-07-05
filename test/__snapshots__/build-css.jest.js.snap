@@ -915,11 +915,19 @@ textarea{
 }
 .select--s{
   font-size:12px;
-  line-height:20px;
   padding:0 20px 0 6px;
 }
 
 .select--s + .select-arrow{
+  right:8px;
+}
+.select--xs{
+  font-size:10px;
+  line-height:18px;
+  padding:0 20px 0 6px;
+}
+
+.select--xs + .select-arrow{
   right:8px;
 }
 .select:disabled{
@@ -13767,11 +13775,19 @@ textarea{
 }
 .select--s{
   font-size:12px;
-  line-height:20px;
   padding:0 20px 0 6px;
 }
 
 .select--s + .select-arrow{
+  right:8px;
+}
+.select--xs{
+  font-size:10px;
+  line-height:18px;
+  padding:0 20px 0 6px;
+}
+
+.select--xs + .select-arrow{
   right:8px;
 }
 .select:disabled{
