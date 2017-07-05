@@ -27,10 +27,9 @@ textarea {
  * You entered <kbd class='txt-kbd'>Flamingo</kbd>.
  */
 .txt-kbd,
-.prose kbd {
+.prose:not(.unprose) kbd {
   font-family: var(--font-stack-mono);
-  background: var(--darken5);
-  border: 1px solid var(--darken10);
+  border: 1px solid var(--darken25);
   line-height: 18px;
   border-radius: 3px;
   padding: 2px 3px;
@@ -39,13 +38,10 @@ textarea {
   font-weight: normal;
 }
 
-.prose--dark kbd {
-  background: var(--lighten5);
-  border: 1px solid var(--lighten10);
-  line-height: 18px;
-  border-radius: 3px;
-  padding: 2px 3px;
-  box-shadow: 0 1px 0 0 var(--lighten10);
+.txt-kbd--dark,
+.prose--dark kbd:not(.unprose) {
+  border: 1px solid var(--lighten25);
+  box-shadow: 0 1px 0 0 var(--lighten25);
 }
 
 /**
@@ -56,14 +52,14 @@ textarea {
  * The chemical formula of water is H<sub class='txt-sub'>2</sub>O.
  */
 .txt-sub,
-.prose sub {
+.prose sub:not(.unprose) {
   top: 0.5ex;
 }
 
 .txt-code,
 .pre,
-.prose code,
-.prose pre {
+.prose code:not(.unprose),
+.prose pre:not(.unprose) {
   font-family: var(--font-stack-mono);
   white-space: pre-wrap;
   font-size: 90%; /* mono fonts have naturally large proportions, scale them down to match open sans. */
@@ -72,8 +68,10 @@ textarea {
   border-radius: 3px;
 }
 
-.prose--dark code,
-.prose--dark pre {
+.txt-code--dark,
+.pre--dark,
+.prose--dark code:not(.unprose),
+.prose--dark pre:not(.unprose) {
   background: var(--lighten5);
 }
 
@@ -89,16 +87,16 @@ textarea {
  * </pre>
  */
 .pre,
-.prose pre {
+.prose pre:not(.unprose) {
   padding: 12px;
   overflow: auto;
 }
 
-.prose pre {
+.prose pre:not(.unprose) {
   margin-bottom: 12px;
 }
 
-.prose pre code {
+.prose pre code:not(.unprose) {
   background: transparent;
   padding: 0;
 }
@@ -111,7 +109,7 @@ textarea {
  * Make sure you <code class='txt-code'>git checkout</code> the repository.
  */
 .txt-code,
-.prose code {
+.prose code:not(.unprose) {
   padding: 2px 4px;
 }
 
@@ -125,6 +123,17 @@ textarea {
 .txt-mono {
   font-family: var(--font-stack-mono);
   font-size: 90%; /* mono fonts have naturally large proportions, scale them down to match open sans. */
+}
+
+/**
+ * Apply a bold font weight.
+ *
+ * @memberof Type utils
+ * @example
+ * <div class='txt-bold'>txt-bold</div>
+ */
+.txt-bold {
+  font-weight: bold !important;
 }
 
 /**
@@ -220,7 +229,7 @@ textarea {
  * How do you feel about <abbr title='Cascading Style Sheets' class='txt-abbr'>CSS</abbr>?
  */
 .txt-abbr,
-.prose abbr {
+.prose abbr:not(.unprose) {
   border-bottom: 1px dotted currentColor;
   cursor: help;
 }
@@ -233,35 +242,36 @@ textarea {
  * <hr class='txt-hr'>
  */
 .txt-hr,
-.prose hr {
+.prose hr:not(.unprose) {
   margin: 17px 0; /* margin + height = 18px */
   border: 0;
   height: 1px;
   background: var(--darken10);
 }
 
-.prose--dark hr {
+.txt-hr--dark,
+.prose--dark hr:not(.unprose) {
   background: var(--lighten10);
 }
 
 /* Lists */
-.prose ol,
-.prose ul,
+.prose ol:not(.unprose),
+.prose ul:not(.unprose),
 .txt-ol,
 .txt-ul {
   margin-left: 24px; /* offset list styling */
 }
 
-.prose ol,
-.prose ul {
+.prose ol:not(.unprose),
+.prose ul:not(.unprose) {
   margin-bottom: 12px;
 }
 
 /* Less margin bottom for nested lists */
-.prose ol ol,
-.prose ul ul,
-.prose ol ol ol,
-.prose ul ul ul {
+.prose ol ol:not(.unprose),
+.prose ul ul:not(.unprose),
+.prose ol ol ol:not(.unprose),
+.prose ul ul ul:not(.unprose) {
   margin-bottom: 6px;
 }
 
@@ -277,7 +287,7 @@ textarea {
  * </div>
  */
 .txt-ul,
-.prose ul {
+.prose ul:not(.unprose) {
   list-style: disc;
 }
 
@@ -293,16 +303,16 @@ textarea {
  * </ol>
  */
 .txt-ol,
-.prose ol {
+.prose ol:not(.unprose) {
   list-style: decimal;
 }
 
 .txt-li,
-.prose li {
+.prose li:not(.unprose) {
   display: list-item;
 }
 
-.prose li {
+.prose li:not(.unprose) {
   margin-bottom: 6px;
 }
 
@@ -314,20 +324,20 @@ textarea {
  * <div class='txt-blockquote'>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.</div>
  */
 .txt-blockquote,
-.prose blockquote {
+.prose blockquote:not(.unprose) {
   quotes: none;
   font-style: normal;
   padding-left: 18px;
 }
 
-.prose blockquote {
+.prose blockquote:not(.unprose) {
   margin-bottom: 18px;
 }
 
 .txt-sup,
 .txt-sub,
-.prose sup,
-.prose sub {
+.prose sup:not(.unprose),
+.prose sub:not(.unprose) {
   height: 0;
   line-height: 1;
   vertical-align: baseline;
@@ -343,7 +353,7 @@ textarea {
  * Planet earth is seven years old. <sup class='txt-sup'>citation needed</sup>
  */
 .txt-sup,
-.prose sup {
+.prose sup:not(.unprose) {
   bottom: 1ex;
 }
 
@@ -375,15 +385,6 @@ textarea {
 .txt-normal {
   font-weight: normal !important;
 }
-
-/**
- * Apply a bold font weight.
- *
- * @memberof Type utils
- * @example
- * <div class='txt-bold'>txt-bold</div>
- */
-.txt-bold { font-weight: bold !important; }
 
 /**
  * Italicize text.
@@ -456,8 +457,8 @@ textarea {
  * @example
  * <div class='txt-strike'>txt-strike</div>
  */
-.prose del,
-.prose s,
+.prose del:not(.unprose),
+.prose s:not(.unprose),
 .txt-strike { text-decoration: line-through !important; }
 
 /**
@@ -465,7 +466,7 @@ textarea {
  *
  * @memberof Type utils
  * @example
- * <div class='border border--gray w96 txt-nowrap'>
+ * <div class='border border--gray w60 txt-nowrap'>
  *   This text is too long for its container
  * </div>
  */
@@ -478,7 +479,7 @@ textarea {
  *
  * @memberof Type utils
  * @example
- * <div class='border border--gray w96 txt-break-word'>
+ * <div class='border border--gray w60 txt-break-word'>
  *   Thiswordistoolongforitscontainer
  * </div>
  */
@@ -492,7 +493,7 @@ textarea {
  *
  * @memberof Type utils
  * @example
- * <div class='border border--gray w96 txt-truncate'>
+ * <div class='border border--gray w60 txt-truncate'>
  *   This text is too long for its container
  * </div>
  */
@@ -523,21 +524,17 @@ textarea {
  * @group
  * @memberof Type utils
  * @example
- * <div class='txt-shadow-darken5'>ghost world</div>
  * <div class='txt-shadow-darken10'>ghost world</div>
  * <div class='txt-shadow-darken25'>ghost world</div>
  * <div class='txt-shadow-darken50'>ghost world</div>
- * <div class='txt-shadow-lighten5 bg-darken75'>ghost world</div>
  * <div class='txt-shadow-lighten10 bg-darken75'>ghost world</div>
  * <div class='txt-shadow-lighten25 bg-darken75'>ghost world</div>
  * <div class='txt-shadow-lighten50 bg-darken75'>ghost world</div>
  */
-.txt-shadow-darken5 { text-shadow: 1px 1px 1px var(--darken5); }
 .txt-shadow-darken10 { text-shadow: 1px 1px 1px var(--darken10); }
 .txt-shadow-darken25 { text-shadow: 1px 1px 1px var(--darken25); }
 .txt-shadow-darken50 { text-shadow: 1px 1px 1px var(--darken50); }
 
-.txt-shadow-lighten5 { text-shadow: 1px 1px 1px var(--lighten5); }
 .txt-shadow-lighten10 { text-shadow: 1px 1px 1px var(--lighten10); }
 .txt-shadow-lighten25 { text-shadow: 1px 1px 1px var(--lighten25); }
 .txt-shadow-lighten50 { text-shadow: 1px 1px 1px var(--lighten50); }
@@ -562,7 +559,23 @@ textarea {
  *   <h1>Tortor Porta</h1>
  *   <small>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.</small>
  *   <hr/>
- *   <p>Cras justo odio, dapibus ac facilisis<sup>[note]</sup> in, egestas eget quam. Lorem ipsum <del>dolor</del> sit amet, consectetur adipiscing elit. H<sub>2</sub>0 electrolitis.</p>
+ *   <p>Cras justo odio, dapibus ac facilisis<sup>[note]</sup> in, <a href='#'>egestas eget quam</a>. Lorem ipsum <del>dolor</del> sit amet, consectetur adipiscing elit. H<sub>2</sub>0 electrolitis.</p>
+ * </div>
+ */
+
+/**
+ * Remove prose styling. Useful when you need to display, for example, a custom form inside an otherwise consistently-styled document.
+ *
+ * **Apply this class directly to the element you want to unstyle.** It does not work on containers, only on the elements themselves.
+ *
+ * @memberof Prose
+ * @selectors .unprose
+ * @example
+ * <div class="prose">
+ *   <h1>felis euismod semper</h1>
+ *   <a class='btn'>Click me</a>
+ *   <h1 class='unprose mt18'>Morbi leo risus</h1>
+ *   <a class='btn unprose'>Click me</a>
  * </div>
  */
 
@@ -575,7 +588,7 @@ textarea {
  *   <h1>Tortor Porta</h1>
  *   <small>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.</small>
  *   <hr/>
- *   <p>Cras justo odio, dapibus ac facilisis<sup>[note]</sup> in, egestas eget quam. Lorem ipsum <del>dolor</del> sit amet, consectetur adipiscing elit. H<sub>2</sub>0 electrolitis.</p>
+ *   <p>Cras justo odio, dapibus ac facilisis<sup>[note]</sup> in, <a href='#'>egestas eget quam</a>. Lorem ipsum <del>dolor</del> sit amet, consectetur adipiscing elit. H<sub>2</sub>0 electrolitis.</p>
  * </div>
  */
 .prose--dark {
@@ -583,7 +596,7 @@ textarea {
 }
 
 /* start prose-specific rules (no similar txt-) */
-.prose h1 {
+.prose h1:not(.unprose) {
   font-weight: bold;
   font-size: 45px;
   line-height: 54px;
@@ -591,7 +604,7 @@ textarea {
   padding-top: 36px;
 }
 
-.prose h2 {
+.prose h2:not(.unprose) {
   font-weight: bold;
   font-size: 35px;
   line-height: 42px;
@@ -599,7 +612,7 @@ textarea {
   padding-top: 24px;
 }
 
-.prose h3 {
+.prose h3:not(.unprose) {
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
@@ -607,7 +620,7 @@ textarea {
   padding-top: 24px;
 }
 
-.prose h4 {
+.prose h4:not(.unprose) {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -615,8 +628,8 @@ textarea {
   padding-top: 18px;
 }
 
-.prose h5,
-.prose h6 {
+.prose h5:not(.unprose),
+.prose h6:not(.unprose) {
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
@@ -625,37 +638,50 @@ textarea {
 }
 
 /* inherits from txt-* declaration on parent */
-.prose p {
+.prose p:not(.unprose) {
   margin-bottom: 12px;
 }
 
-.prose small {
+.prose small:not(.unprose) {
   display: block;
   font-size: 12px;
   line-height: 18px;
   margin-bottom: 12px;
 }
 
-.prose a {
+.prose a:not(.unprose) {
+  color: var(--default-primary-interactive-color);
   text-decoration: underline;
 }
 
-.prose img,
-.prose video {
+.prose--dark a:not(.unprose) {
+  color: var(--white);
+}
+
+.prose a:not(.unprose):hover {
+  color: var(--default-primary-interactive-color-dark);
+}
+
+.prose--dark a:not(.unprose):hover {
+  color: var(--lighten75);
+}
+
+.prose img:not(.unprose),
+.prose video:not(.unprose) {
   margin-bottom: 12px;
 }
 
-.prose h1:first-child,
-.prose h2:first-child,
-.prose h3:first-child,
-.prose h4:first-child,
-.prose h5:first-child,
-.prose h6:first-child {
+.prose h1:first-child:not(.unprose),
+.prose h2:first-child:not(.unprose),
+.prose h3:first-child:not(.unprose),
+.prose h4:first-child:not(.unprose),
+.prose h5:first-child:not(.unprose),
+.prose h6:first-child:not(.unprose) {
   padding-top: 0;
 }
 
 /* Clear bottom margins if element is last in container */
-.prose *:last-child {
+.prose *:last-child:not(.unprose) {
   margin-bottom: 0;
 }
 /* end prose-specific rules */
@@ -683,11 +709,11 @@ textarea {
  * @example
  * <div>
  *   <span class='align-t inline-block h12 w12 border border--gray'></span>
- *   <span class='align-t inline-block h48 border border--gray'>align-top</span>
+ *   <span class='align-t inline-block h60 border border--gray'>align-top</span>
  * </div>
  * <div class='mt3'>
  *   <span class='align-middle inline-block h12 w12 border'></span>
- *   <span class='align-middle inline-block h48 border border--gray'>align-middle</span>
+ *   <span class='align-middle inline-block h60 border border--gray'>align-middle</span>
  * </div>
  */
 .align-t { vertical-align: top !important; }

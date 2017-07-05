@@ -4,7 +4,7 @@ class Tables extends React.Component {
   render() {
     return (
       <div>
-        <h2 className='mb24 border-b border--2 border--gray-faint pb6 mt72 txt-l txt-bold'>
+        <h2 className='mb24 border-b border--2 border--gray-faint pb6 mt60 txt-l txt-bold'>
           Tables
         </h2>
         <div className='grid grid--gut12'>
@@ -71,7 +71,7 @@ class Tables extends React.Component {
               </tbody>
             </table>
 
-            <div className='bg-gray-dark p12'>
+            <div className='bg-gray-dark px12 py12'>
               <table className='table table--dark mb18'>
                 <thead>
                   <tr>
@@ -154,7 +154,7 @@ class Tables extends React.Component {
               </tbody>
             </table>
 
-            <div className='bg-gray-dark p12'>
+            <div className='bg-gray-dark px12 py12'>
               <table className='table--dark'>
                 <thead>
                   <tr>

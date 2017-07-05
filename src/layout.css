@@ -4,6 +4,40 @@
  * @section Layout
  */
 
+/*
+ * All a limiter to a wrapping element around a page layout. The limiter should never be placed inside other elements that have layout classes. Unlike many other classes in Assembly, the limiter class includes built-in media queries, designed to manage line lengths across screen sizes. The limiter's max width is 1200px.
+ *
+ * @memberof Layout
+ * @example
+ * <div>
+ *  <div class='limiter border border--darken10 h24'>
+ *   limiter
+ *  </div>
+ * </div>
+ */
+.limiter {
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+}
+
+@media (--m-screen) {
+  .limiter {
+    margin-left: auto;
+    margin-right: auto;
+    width: 91.666666666%;
+    max-width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (--l-screen) {
+  .limiter {
+    width: 83.33333333%;
+  }
+}
+
 /**
  * Assembly uses a 12-column flexible grid with optional gutters.
  *
@@ -159,7 +193,7 @@
  * @group
  * @memberof Positioning
  * @example
-  * <div class="relative h72">
+  * <div class="relative h60">
  *   <div class="absolute bg-darken10 right">right</div>
  *   <div class="absolute bg-darken10 bottom">bottom</div>
  *   <div class="absolute bg-darken10 left">left</div>
@@ -179,10 +213,10 @@
  * @group
  * @memberof Positioning
  * @example
- * <div class="relative h72">
- *   <div class="absolute z5 bg-pink p6">z5</div>
- *   <div class="absolute z1 bg-blue p6 mt12 ml24">z1</div>
- *   <div class="absolute z1-neg1 bg-teal p6 mt24 ml48">z-neg1</div>
+ * <div class="relative h60">
+ *   <div class="absolute z5 bg-pink py6 px6">z5</div>
+ *   <div class="absolute z1 bg-blue px6 py6 mt12 ml24">z1</div>
+ *   <div class="absolute z1-neg1 bg-blue px6 py6 mt24 ml60">z-neg1</div>
  * </div>
  */
 .z-neg1 { z-index: -1 !important; }
@@ -210,7 +244,7 @@
  * Set `auto` margins on left and right. This pattern is useful for horizontally centering block elements.
  *
  * @example
- * <div class='mx-auto w72 bg-darken10'>mx-auto</div>
+ * <div class='mx-auto w60 bg-darken10'>mx-auto</div>
  * @memberof Margins
  */
 .mx-auto { margin-left: auto !important; margin-right: auto !important; }
@@ -340,7 +374,7 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex-parent flex-parent--center-cross bg-darken10 h96'>
+ * <div class='flex-parent flex-parent--center-cross bg-darken10 h120'>
  *  <div class='flex-child bg-darken10'>child</div>
  * </div>
  */
@@ -351,7 +385,7 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex-parent flex-parent--end-cross h72 bg-darken10'>
+ * <div class='flex-parent flex-parent--end-cross h120 bg-darken10'>
  *  <div class='flex-child bg-darken10 h42'>child</div>
  *  <div class='flex-child bg-darken10'>child</div>
  * </div>
@@ -375,8 +409,8 @@
  * @memberof Flexbox
  * @example
  * <div class='flex-parent flex-parent--wrap bg-darken10 clip'>
- *  <div class='flex-child bg-darken10 w480'>child</div>
- *  <div class='flex-child bg-darken10 w480'>child</div>
+ *  <div class='flex-child bg-darken10 w600'>child</div>
+ *  <div class='flex-child bg-darken10 w600'>child</div>
  * </div>
  */
 .flex-parent--wrap { flex-wrap: wrap !important; }
@@ -386,7 +420,7 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex-parent flex-parent--stretch-cross bg-darken10 h96'>
+ * <div class='flex-parent flex-parent--stretch-cross bg-darken10 h120'>
  *  <div class='flex-child bg-darken10'>child</div>
  * </div>
  */
@@ -398,7 +432,7 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex-parent flex-parent--space-between-main bg-darken10 h96'>
+ * <div class='flex-parent flex-parent--space-between-main bg-darken10 h120'>
  *  <div class='flex-child bg-darken10'>child</div>
  *  <div class='flex-child bg-darken10'>child</div>
  * </div>
@@ -486,7 +520,7 @@
  * @group
  * @example
  * <div class='bg-darken10 flex-parent flex-parent--center-main clip'>
- *   <div class='w180 p12 bg-darken10'>
+ *   <div class='w240 px12 py12 bg-darken10'>
  *     <div class='bg-darken10 bleed-r'>Right bleed</div>
  *   </div>
  * </div>

@@ -2,19 +2,14 @@ import React from 'react';
 
 const colors = [
   null,
-  'gray-faint',
-  'gray-light',
   'gray',
-  'gray-dark',
   'pink',
   'red',
   'orange',
   'yellow',
   'green',
-  'teal',
   'blue',
   'purple',
-  'darken5',
   'darken10',
   'darken25',
   'darken50',
@@ -22,7 +17,6 @@ const colors = [
 ];
 
 const lightenColors = [
-  'lighten5',
   'lighten10',
   'lighten25',
   'lighten50',
@@ -62,7 +56,7 @@ class Toggles extends React.Component {
 
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Toggles
         </h2>
 
@@ -84,12 +78,12 @@ class Toggles extends React.Component {
         </div>
 
         <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Light variations</div>
-        <div className='bg-gray round p12y mt12'>
+        <div className='bg-gray round px12 py12 mt12'>
         {lightenColors.map((c) => <ToggleEl key={c} color={c} />)}
         </div>
 
         <div className='mt24 mb12 txt-bold color-darken50 txt-uppercase txt-s'>Disabled and light</div>
-        <div className='bg-gray round p12y mt12'>
+        <div className='bg-gray round px12 py12 mt12'>
         {lightenColors.map((c) => <ToggleEl key={c} color={c} disabled={true} />)}
         </div>
 

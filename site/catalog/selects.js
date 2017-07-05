@@ -8,10 +8,8 @@ const colors = [
   'orange',
   'yellow',
   'green',
-  'teal',
   'blue',
   'purple',
-  'darken5',
   'darken10',
   'darken25',
   'darken50',
@@ -23,7 +21,7 @@ class Selects extends React.Component {
   render() {
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Selects
         </h2>
 
@@ -59,7 +57,7 @@ class Selects extends React.Component {
               </div>
               <div className='inline-block mr12'>
                 <div className={selectContainerClass}>
-                  <select className={selectStrokeClass}>
+                  <select className={`${selectClass} select--s`}>
                     <option>firstoption</option>
                     <option>two</option>
                     <option>three</option>
@@ -69,7 +67,7 @@ class Selects extends React.Component {
               </div>
               <div className='inline-block mr12'>
                 <div className={selectContainerClass}>
-                  <select className={`${selectClass} select--s`}>
+                  <select className={`${selectClass} select--xs`}>
                     <option>firstoption</option>
                     <option>two</option>
                     <option>three</option>
@@ -77,6 +75,16 @@ class Selects extends React.Component {
                   <div className='select-arrow'></div>
                 </div>
               </div>
+              {!/^(darken10|lighten10)$/.test(color) ? <span>
+                <div className={selectContainerClass}>
+                  <select className={selectStrokeClass}>
+                    <option>firstoption</option>
+                    <option>two</option>
+                    <option>three</option>
+                  </select>
+                  <div className='select-arrow'></div>
+                </div>
+                </span> : ''}
             </div>
           );
         })}

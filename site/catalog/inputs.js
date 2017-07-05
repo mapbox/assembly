@@ -2,34 +2,25 @@ import React from 'react';
 
 const colors = [
   null,
-  'gray-faint',
-  'gray-light',
   'gray',
-  'gray-dark',
   'pink',
   'red',
   'orange',
   'yellow',
   'green',
-  'teal',
   'blue',
   'purple',
-  'lighten5',
-  'lighten10',
   'lighten25',
   'lighten50',
   'lighten75',
-  'darken5',
-  'darken10',
   'darken25',
   'darken50',
   'darken75',
-  'black',
   'white'
 ];
 
 function InputEl(props) {
-  let inputClasses = 'input w180';
+  let inputClasses = 'input w240';
   if (props.border) inputClasses += ` input--border-${props.border}`;
   if (props.color) inputClasses += ` color-${props.color}`;
   return (
@@ -50,14 +41,9 @@ class Inputs extends React.Component {
 
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Text inputs
         </h2>
-
-        <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Text colors</div>
-        <div className='mb24'>
-          {colors.map((c) => <InputEl key={c} color={c} />)}
-        </div>
 
         <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Border colors</div>
         <div className='mb24'>
@@ -78,34 +64,34 @@ class Inputs extends React.Component {
         <div className='mb24'>
           <div className='mr6 mb6 inline-block'>
             <input
-              className='input w180'
+              className='input w240'
               placeholder='date'
               type='date'
             />
           </div>
           <div className='mr6 mb6 inline-block'>
             <input
-              className='input w180'
+              className='input w240'
               placeholder='number'
               type='number'
             />
           </div>
           <div className='mr6 mb6 inline-block'>
             <input
-              className='input w180'
+              className='input w240'
               placeholder='search'
               type='search'
             />
           </div>
           <div className='mr6 mb6 inline-block align-t'>
             <input
-              className='input w180'
+              className='input w240'
               type='color'
             />
           </div>
           <div className='mr6 mb6 inline-block'>
             <input
-              className='input w180'
+              className='input w240'
               placeholder='datetime'
               type='datetime'
             />

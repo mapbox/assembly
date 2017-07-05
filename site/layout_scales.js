@@ -7,11 +7,11 @@ const classSets = {
     scale: scales.gutter
   },
   'Margins': {
-    classPatterns: ['m{n}', 'mx{n}', 'my{n}'],
+    classPatterns: ['mx{n}', 'my{n}', 'ml{n}', 'mt{n}', 'mr{n}', 'mb{n}'],
     scale: scales.margin
   },
   'Paddings': {
-    classPatterns: ['p{n}', 'px{n}', 'py{n}', 'pl{n}', 'pt{n}', 'pr{n}', 'pb{n}'],
+    classPatterns: ['px{n}', 'py{n}', 'pl{n}', 'pt{n}', 'pr{n}', 'pb{n}'],
     scale: scales.padding
   },
   'Widths': {
@@ -45,7 +45,7 @@ class LayoutScales extends React.Component {
     const rows = Object.keys(classSets).map((name) => {
       const data = classSets[name];
       const scale = data.scale.map((number) => {
-        const numberClasses = 'flex-child w72 txt-mono align-r px6 py3 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light color-gray';
+        const numberClasses = 'flex-child w60 txt-s txt-mono align-r pr6 py3 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light color-gray';
         return (
           <span
             key={number}
@@ -70,7 +70,7 @@ class LayoutScales extends React.Component {
       return (
         <div
           key={name}
-          className='mb48'
+          className='mb36'
         >
           <div className='mb12'>
             <div className='inline-block txt-bold mr12'>
@@ -91,7 +91,7 @@ class LayoutScales extends React.Component {
           <h1 className='txt-h2 txt-bold pt24 mb18'>
             Layout Scales
           </h1>
-          <p className='col col--6-mm mb48'>
+          <p className='col col--6-ml mb36'>
             These are the numbers, corresponding to pixel values, available for each set of layout classes.
             All of these class sets include <code className='txt-code'>*-mm</code>, <code className='txt-code'>*-ml</code>, and <code className='txt-code'>*-mxl</code> variations to target screen sizes.
           </p>

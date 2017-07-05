@@ -39,6 +39,7 @@ Assembly.buildUserAssets('path/to/my/outdir', myOptions)
 - **`mediaQueries`**: An object whose properties will override and add to `src/mediaQueries.json`. Use this option to change or add media queries.
   These media queries are accessible in any stylesheets you append via the CSS custom media query syntax, e.g. `@media --media-query-name`.
 - **`colorVariants`**: An object or array specifying the color variants you would like added to `assembly.css`. This is documented in detail below.
+- **`icons`**: An array of icons names to include in Assembly. Names correspond to file names in `src/svgs/`. Use this option to decrease the size of assembly.js by only including the icons you need.
 - **`browsersList`**: A [Browserslist](https://github.com/ai/browserslist) array to be used by [Autoprefixer](https://github.com/postcss/autoprefixer). Default: `['last 4 versions', 'not ie < 10']`.
 - **`quiet`**: Suppress logs.
 
@@ -51,8 +52,6 @@ The following configuration specifies an array of default colors. All components
 ```json
 [
   "red",
-  "teal",
-  "teal-dark",
   "green-light"
 ]
 ```
@@ -102,7 +101,7 @@ Assembly strives for flat, single rule declarations and avoids overrides wheneve
 ### Naming classes
 
 - Keep names as short as possible.
-- Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.p6` for `padding: 6px` instead of `.p-small` or `.p-1`.
+- Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.pt6` for `padding-top: 6px` instead of `.pt-small` or `.pt-1`.
 - If the number of utility classes describing a property is limited, Assembly classes use the suffixes, `xl`, `l`, `m`, `s`, `sm`.
 - Assembly doesn't have a top level namespace. Assembly is designed to provide fundamental rules that are used frequently and should be easy to type and remember. If you want to use your own css with base, consider namespacing that css.
 

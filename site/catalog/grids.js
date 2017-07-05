@@ -18,7 +18,7 @@ function RowEl(props) {
   return (
     <div className={`txt-s grid mb18 ${props.gutter ? props.gutter : ''}`}>
       {props.combo.map((c, i) => <div key={i} className={`col col--${c}`}>
-        <div className='border p3'>col--{c}</div>
+        <div className='border px3 py3'>col--{c}</div>
       </div>)}
     </div>
   );
@@ -28,7 +28,7 @@ function RowElWithLeftMargin(props) {
   return (
     <div className='txt-s grid mb18'>
       {props.combo.map((c, i) => <div key={i} className={`col col--${i === 1 ? 'offl' : '' }${c}`}>
-        {i === 1 ? '' : <div className='border p3'>col--{c}</div>}
+        {i === 1 ? '' : <div className='border px3 py3'>col--{c}</div>}
       </div>)}
     </div>
   );
@@ -38,7 +38,7 @@ function RowElWithRightMargin(props) {
   return (
     <div className='txt-s grid mb18'>
       {props.combo.map((c, i) => <div key={i} className={`col col--${i === 1 ? 'offr' : '' }${c}`}>
-        {i === 1 ? '' : <div className='border p3'>col--{c}</div>}
+        {i === 1 ? '' : <div className='border px3 py3'>col--{c}</div>}
       </div>)}
     </div>
   );
@@ -65,32 +65,32 @@ class Grids extends React.Component {
 
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Grid
         </h2>
 
         <h3 className='mb12 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Standard grid</h3>
         {GridEls}
 
-        <h3 className='mb12 mt48 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with gutters</h3>
+        <h3 className='mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with gutters</h3>
         {GridElsWithGutters}
 
-        <h3 className='mb12 mt48 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with left offset</h3>
+        <h3 className='mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with left offset</h3>
         {GridElsWithLeftMargin}
 
-        <h3 className='mb12 mt48 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with right offset</h3>
+        <h3 className='mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with right offset</h3>
         {GridElsWithRightMargin}
 
-        <h3 className='mb12 mt48 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grids only on large screens</h3>
+        <h3 className='mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grids only on large screens</h3>
         <div className='txt-s grid-ml grid--gut24-ml mb18'>
           <div className='col-ml col--6-ml'>
-            <div className='border p3'>col--6-ml</div>
+            <div className='border px3 py3'>col--6-ml</div>
           </div>
           <div className='col-ml col--3-ml'>
-            <div className='border p3'>col--3-ml</div>
+            <div className='border px3 py3'>col--3-ml</div>
           </div>
           <div className='col-ml col--3-ml'>
-            <div className='border p3'>col--3-ml</div>
+            <div className='border px3 py3'>col--3-ml</div>
           </div>
         </div>
       </div>

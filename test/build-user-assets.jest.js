@@ -21,7 +21,8 @@ describe('buildUserAssets', () => {
         expect(buildJs).toHaveBeenCalledTimes(1);
         expect(buildJs).toHaveBeenCalledWith({
           outfile: '/path/to/outdir/assembly.js',
-          quiet: false
+          quiet: false,
+          icons: false
         });
         expect(copyFonts).toHaveBeenCalledTimes(1);
         expect(copyFonts).toHaveBeenCalledWith({
@@ -51,7 +52,8 @@ describe('buildUserAssets', () => {
       colorVariants: {
         'range': ['blue-faint']
       },
-      quiet: true
+      quiet: true,
+      icons: ['airplane']
     };
 
     return buildUserAssets('/path/to/another/outdir', options)
@@ -63,7 +65,8 @@ describe('buildUserAssets', () => {
         expect(buildJs).toHaveBeenCalledTimes(1);
         expect(buildJs).toHaveBeenCalledWith({
           outfile: '/path/to/another/outdir/assembly.js',
-          quiet: true
+          quiet: true,
+          icons: ['airplane']
         });
         expect(copyFonts).toHaveBeenCalledTimes(1);
         expect(copyFonts).toHaveBeenCalledWith({

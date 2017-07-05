@@ -23,7 +23,7 @@ class Home extends React.Component {
         <p className='txt-l mt18'>
           Assembly is an open source CSS framework that makes the hard parts of designing for the web easy.
         </p>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb48 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb36 txt-l txt-bold'>
           Getting started
         </h2>
         <p>
@@ -45,7 +45,7 @@ class Home extends React.Component {
           />
         </div>
 
-        <h3 className='mt48 mb12 txt-bold'>HTML Template</h3>
+        <h3 className='mt60 mb12 txt-bold'>HTML Template</h3>
         <p>
           Get started right away with this bare bones HTML template.
         </p>
@@ -61,41 +61,41 @@ class Home extends React.Component {
           Unsure what else you need in the <code className='txt-code'>&lt;head&gt;</code>? Check out <a className='link' href='https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML'>MDN's detailed guide</a>.
         </p>
 
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 txt-l txt-bold'>
           Philosophy
         </h2>
-        <div className='grid grid--gut24 grid--gut48-ml'>
+        <div className='grid grid--gut24 grid--gut36-ml'>
           <div className='col col--6-ml'>
-            <h3 className='mt48 mb12 txt-bold'>Comprehensive</h3>
+            <h3 className='mt60 mb12 txt-bold'>Comprehensive</h3>
             <p>
               Assembly includes everything you need to fully implement responsive, colorful web pages, web apps, dashboards, and more.
             </p>
             </div>
             <div className='col col--6-ml'>
-            <h3 className='mt48 mb12 txt-bold'>Flexible</h3>
+            <h3 className='mt60 mb12 txt-bold'>Flexible</h3>
             <p>
               The core of Assembly is a set of composable, atomic utility classes covering most of your styling needs.
             </p>
             </div>
             <div className='col col--6-ml'>
-            <h3 className='mt48 mb12 txt-bold'>Practical</h3>
+            <h3 className='mt60 mb12 txt-bold'>Practical</h3>
             <p>
               Complete reliance on atomic design can slow down development and foster inconsistency and bad UX. Assembly inserts the right opinions in the right places.
             </p>
             </div>
             <div className='col col--6-ml'>
-            <h3 className='mt48 mb12 txt-bold'>Customizable</h3>
+            <h3 className='mt60 mb12 txt-bold'>Customizable</h3>
             <p>
               Assembly exposes its build process in a public API. Customize colors, fonts, and media queries; append your own stylesheets; and specify color variants to reduce file size.
             </p>
           </div>
         </div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 txt-l txt-bold'>
           Overview
         </h2>
 
-        <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/baseline-grid.svg'/></div>
+        <div className='mt60 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60'><img src='/assembly/baseline-grid.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               6 pixel baseline grid
@@ -106,8 +106,8 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/defaults.svg'/></div>
+        <div className='mt60 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60'><img src='/assembly/defaults.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               No default styling for semantic elements
@@ -125,21 +125,21 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/box-model.svg'/></div>
+        <div className='mt60 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60'><img src='/assembly/box-model.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               More intuitive box model
             </h3>
             <p className='mt12'>
               The <code className='txt-code'>border-box</code> box model allows for more intuitive styling than the default <code className='txt-code'>content-box</code> model.
-              For example, when you set a <code className='txt-code'>w300</code> class, your element will always be 300 pixels wide, regardless of its padding and borders.
+              For example, when you set a <code className='txt-code'>w360</code> class, your element will always be 360 pixels wide, regardless of its padding and borders.
             </p>
           </div>
         </div>
 
-        <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/custom-icons.svg'/></div>
+        <div className='mt60 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60'><img src='/assembly/custom-icons.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               Customizable icons
@@ -150,8 +150,8 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/media-queries.svg'/></div>
+        <div className='mt60 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60'><img src='/assembly/media-queries.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               Media queries are mobile-first
@@ -173,8 +173,8 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/modifier.svg'/></div>
+        <div className='mt60 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60'><img src='/assembly/modifier.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               Classes and modifier classes
@@ -185,8 +185,8 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/specificity.svg'/></div>
+        <div className='mt60 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60'><img src='/assembly/specificity.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               Utility classes have maximum specificity
@@ -207,8 +207,8 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/is-active.svg'/></div>
+        <div className='mt60 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60'><img src='/assembly/is-active.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               <code className='txt-code'>is-active</code> applies active states
@@ -223,8 +223,8 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className='mt48 flex-parent-mm'>
-          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w48 h48'><img src='/assembly/focus.svg'/></div>
+        <div className='mt60 flex-parent-mm'>
+          <div className='flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60'><img src='/assembly/focus.svg'/></div>
           <div>
             <h3 className='txt-bold'>
               Focus outlines as needed

@@ -19,7 +19,7 @@
  *
  * @memberof Icons
  * @example
- * <svg class='icon'><use xlink:href='#icon-bike'/></svg>
+ * <svg class='icon'><use xlink:href='#icon-paint'/></svg>
  */
 .icon {
   display: block;
@@ -33,11 +33,11 @@
  *
  * @memberof Icons
  * @example
- * <svg class='icon icon--s'><use xlink:href='#icon-bike'/></svg>
+ * <svg class='icon icon--s'><use xlink:href='#icon-document'/></svg>
  */
 .icon--s {
-  height: 12px !important;
-  width: 12px !important;
+  height: 15px !important;
+  width: 15px !important;
 }
 
 /**
@@ -45,9 +45,39 @@
  *
  * @memberof Icons
  * @example
- * <svg class='icon icon--l'><use xlink:href='#icon-bike'/></svg>
+ * <svg class='icon icon--l'><use xlink:href='#icon-star'/></svg>
  */
 .icon--l {
   height: 36px !important;
   width: 36px !important;
+}
+
+/**
+ * Add to a wrapping element around an icon in order to align the icon with text and ensure the icon doesn't unexpectedly shift text line height. Note that this rule depends on an expected text line height of 1.5 to 1.66, so it does not work with `txt-h{number}` classes. See the `icon-inliner--heading` modifier to center icons in heading text.
+ *
+ * @memberof Icons
+ * @example
+ * <p class='txt-l'><span class='icon-inliner'><svg class='icon'><use xlink:href='#icon-clipboard'/></svg></span> Copy</p>
+ * <p class='txt-xl'>Ring the <span class='icon-inliner'><svg class='icon icon--l'><use xlink:href='#icon-bell'/></svg></span></p>
+ * <p class='txt-s'>Keep your <span class='icon-inliner'><svg class='icon icon--s'><use xlink:href='#icon-home'/></svg></span> safe from <span class='icon-inliner'><svg class='icon icon--s'><use xlink:href='#icon-bug'/></svg></span></p>
+ **/
+.icon-inliner {
+  position: relative;
+  display: inline-flex;
+  vertical-align: top;
+  align-items: center;
+  justify-content: center;
+  height: 1em;
+  top: 0.3em;
+}
+
+/**
+ * Modify the `icon-inliner` class so it works inside headings, which have an expected line height of 1.2 rather than 1.5 to 1.66.
+ *
+ * @memberof Icons
+ * @example
+ * <h1 class='txt-h1'>I <span class='icon-inliner icon-inliner--heading'><svg class='icon icon--l'><use xlink:href='#icon-heart'/></svg></span> New York.</p>
+ **/
+.icon-inliner--heading {
+  top: 0.08em;
 }

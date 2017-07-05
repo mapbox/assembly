@@ -8,10 +8,8 @@ const colors = [
   'orange',
   'yellow',
   'green',
-  'teal',
   'blue',
   'purple',
-  'darken5',
   'darken10',
   'darken25',
   'darken50',
@@ -19,7 +17,6 @@ const colors = [
 ];
 
 const lightenColors = [
-  'lighten5',
   'lighten10',
   'lighten25',
   'lighten50',
@@ -44,17 +41,19 @@ const getButtonEls = (color, i) => {
         <button disabled className={buttonFillClass}>Fill</button>
       </div>
       <div className='inline-block mr18'>
-        <button className={buttonStrokeClass}>Stroke</button>
-      </div>
-      <div className='inline-block mr18'>
-        <button disabled className={buttonStrokeClass}>Stroke</button>
-      </div>
-      <div className='inline-block mr18'>
         <button className={`${buttonFillClass} round`}>Less round</button>
       </div>
       <div className='inline-block mr18'>
         <button disabled className={`${buttonFillClass} round`}>Less round</button>
       </div>
+      {!/^(darken10|darken25|lighten10|lighten25)$/.test(color) ? <span>
+        <div className='inline-block mr18'>
+          <button className={buttonStrokeClass}>Stroke</button>
+        </div>
+        <div className='inline-block mr18'>
+          <button disabled className={buttonStrokeClass}>Stroke</button>
+        </div>
+      </span> : ''}
 
     </div>
   );
@@ -67,7 +66,7 @@ class Buttons extends React.Component {
 
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt72 mb24 txt-l txt-bold'>
+        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Buttons
         </h2>
 

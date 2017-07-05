@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.14.0
+
+- Adds missing `--dark` modifiers to some typography rules.
+- Stroked buttons and select elements now have a 1px stroke by default.
+- Adds new `btn--stroked--2` and `select--stroked--2` modifier classes to create stroked buttons and select elements that have 2px strokes.
+- [internal only] Renames `neutral` variables to more meaningful `disabled-{type}-interactive` variables.
+- Darken the `gray-faint` color to #e5e5e5 so it's legible on a wider range of monitors.
+- Remove teal color variations.
+- Remove 600px layout scale value for padding and margin.
+- Refactor range inputs to use currentColor for coloring, which save space
+- Remove `darken5` and `lighten5` color variations to save space and encourage more accessible design.
+- Remove `p{n}` and `m{n}` rules.
+- Limit the possible colors available for form elements as well as `--on-active` and `--on-hover` modifiers for accessibility reasons and to save size. `-faint` or `-light` form elements are no longer available for _any element_, and `darken10` and `darken10` are no longer available for any for element except buttons.
+- Add distinct hover states for active checkboxes and radio inputs.
+- Redesign checkbox active state to be clearer, more conventional.
+- Add `select--xs` class.
+- Fix bug with browser prefixing to cover the correct browsers.
+- Add color and hover states by default to links inside `.prose`.
+- Fix visual bug with `txt-abbr` rule.
+- Update version of Open Sans to fix regular weight / bold weight line heighht differences.
+- Fix bug with `animation-spin` utility.
+
 ## 0.13.1-2
 
 - Fix syntax of Browserslist for Autoprefixer.

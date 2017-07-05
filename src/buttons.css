@@ -19,9 +19,9 @@
  * @example
  * <button class='btn'>Default</button>
  * <button class='btn btn--red'>Color</button>
- * <button class='btn btn--teal color-yellow'>More colors</button>
+ * <button class='btn btn--green color-yellow'>More colors</button>
  * <button class='btn round'>Less rounded</button>
- * <div class='p6 bg-blue inline-block'>
+ * <div class='px6 py6 bg-blue inline-block'>
  *   <button class='btn btn--white color-blue'>Reverse</button>
  * </div>
  */
@@ -33,7 +33,6 @@
   padding: 6px 12px;
   font-weight: bold;
   text-align: center;
-  text-decoration: none !important; /* prevent underline when inside .prose */
   transition: background-color var(--transition),
     border-color var(--transition),
     color var(--transition);
@@ -49,14 +48,25 @@
  * <button class='btn btn--stroke'>Default</button>
  * <button class='btn btn--stroke btn--red'>Color</button>
  * <button class='btn btn--stroke round'>Less rounded</button>
- * <div class='p6 bg-blue inline-block'>
+ * <div class='px6 py6 bg-blue inline-block'>
  *   <button class='btn btn--stroke btn--white'>Reverse</button>
  * </div>
  */
 .btn--stroke {
   background-color: transparent;
-  box-shadow: inset 0 0 0 2px currentColor;
+  box-shadow: inset 0 0 0 1px currentColor;
   color: var(--default-primary-interactive-color);
+}
+
+/**
+ * Modify the `btn--stroke` modifier to be 2 px wide instead of 1 px wide. This class will have no effect if not combined with `btn--stroke`.
+ *
+ * @memberof Buttons
+ * @example
+ * <button class='btn btn--stroke btn--stroke--2'>2 pixel stroke</button>
+ */
+.btn--stroke--2 {
+  box-shadow: inset 0 0 0 2px currentColor;
 }
 
 /**
@@ -117,8 +127,8 @@
  */
 .btn:disabled {
   pointer-events: none;
-  color: var(--darken25) !important;
-  background-color: var(--neutral25) !important;
+  color: var(--inactive-text-color) !important;
+  background-color: var(--disabled-primary-interactive-color) !important;
   border-color: transparent !important;
 }
 
@@ -219,19 +229,37 @@ against .round class */
 }
 
 .btn--pill-stroke.btn--pill-hc {
-  margin-left: -2px;
+  margin-left: -1px;
   margin-right: 0;
 }
 
 .btn--pill-stroke.btn--pill-hr {
-  margin-left: -2px;
+  margin-left: -1px;
 }
 
 .btn--pill-stroke.btn--pill-vc {
-  margin-top: -2px;
+  margin-top: -1px;
   margin-bottom: 0;
 }
 
 .btn--pill-stroke.btn--pill-vb {
+  margin-top: -1px;
+}
+
+.btn--pill-stroke.btn--stroke--2.btn--pill-hc {
+  margin-left: -2px;
+  margin-right: 0;
+}
+
+.btn--pill-stroke.btn--stroke--2.btn--pill-hr {
+  margin-left: -2px;
+}
+
+.btn--pill-stroke.btn--stroke--2.btn--pill-vc {
+  margin-top: -2px;
+  margin-bottom: 0;
+}
+
+.btn--pill-stroke.btn--stroke--2.btn--pill-vb {
   margin-top: -2px;
 }

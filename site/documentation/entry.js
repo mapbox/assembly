@@ -72,31 +72,33 @@ class Entry extends React.Component {
     const sourceUrl = `https://github.com/mapbox/assembly/blob/${pkg.version}/src/${path.basename(props.parsedComment.source.filename)}#L${props.parsedComment.source.line}`;
 
     return (
-      <div className='grid-mxl grid--gut18-mxl border-t border--2 border--gray-faint pt48 pb48'>
-        <div className='col col--4-mxl pr18-ml mb6'>
-          <div className='none'>
-            {selectorEls}
+      <div className='border-t border--2 border--gray-faint'>
+        <div className='grid-mxl grid--gut18-mxl pt36 pb60'>
+          <div className='col col--4-mxl pr18-ml mb6'>
+            <div className='none'>
+              {selectorEls}
+            </div>
+            <div>
+              {collapsedSelectorEls}
+            </div>
+            {expandButton}
+            <div className='mt12'>
+              <a
+                href={sourceUrl}
+                target='_blank'
+                className='txt-s link inline-block link--gray'
+              >
+                <svg className='align-t inline-block mr6 mt3 icon icon--s'><use xlinkHref='#icon-code'/></svg>
+                {path.basename(props.parsedComment.source.filename)}: {props.parsedComment.source.line}
+              </a>
+            </div>
           </div>
-          <div>
-            {collapsedSelectorEls}
+          <div className='col col--8-mxl'>
+            <div className='mb24 prose'>
+              {remark().use(reactRenderer).processSync(props.parsedComment.description).contents}
+            </div>
+            {example}
           </div>
-          {expandButton}
-          <div className='mt12'>
-            <a
-              href={sourceUrl}
-              target='_blank'
-              className='txt-s link inline-block link--gray'
-            >
-              <svg className='align-t inline-block mr6 icon'><use xlinkHref='#icon-code'/></svg>
-              {path.basename(props.parsedComment.source.filename)}: {props.parsedComment.source.line}
-            </a>
-          </div>
-        </div>
-        <div className='col col--8-mxl'>
-          <div className='mb24 prose'>
-            {remark().use(reactRenderer).processSync(props.parsedComment.description).contents}
-          </div>
-          {example}
         </div>
       </div>
     );
