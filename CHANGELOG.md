@@ -2,6 +2,8 @@
 
 ## 0.14.0
 
+- Adds new 'limiter' class for setting max page width across screen sizes.
+- Significantly refactors layout scale to be more consistent across different properties and to increment more predictibly. Removes `48`, `72`, `96`, `420`, `480`, `720`, and `960` values for all properties that had them. Adds `60`, `120` to all properties. Adds `600` value to height and width properties. Adds negative margins to match all positive margin values.
 - Adds missing `--dark` modifiers to some typography rules.
 - Stroked buttons and select elements now have a 1px stroke by default.
 - Adds new `btn--stroked--2` and `select--stroked--2` modifier classes to create stroked buttons and select elements that have 2px strokes.
