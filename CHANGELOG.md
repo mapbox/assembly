@@ -1,5 +1,9 @@
 # Changelog
 
+## Next
+
+- Add 'align-b' class to vertically align inline inline or table-cell elements to the bottom.
+
 ## 0.14.0
 
 - Adds new 'limiter' class for setting max page width across screen sizes.
