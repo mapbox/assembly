@@ -715,7 +715,12 @@ textarea {
  *   <span class='align-middle inline-block h12 w12 border'></span>
  *   <span class='align-middle inline-block h60 border border--gray'>align-middle</span>
  * </div>
+ * <div>
+ *   <span class='align-b inline-block h12 w12 border border--gray'></span>
+ *   <span class='align-b inline-block h60 border border--gray'>align-top</span>
+ * </div>
  */
 .align-t { vertical-align: top !important; }
+.align-b { vertical-align: bottom !important; }
 .align-middle { vertical-align: middle !important; }
 /** @endgroup */
