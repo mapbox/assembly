@@ -3,18 +3,17 @@
 ## 0.14.0
 
 - Adds new 'limiter' class for setting max page width across screen sizes.
-- Significantly refactors layout scale to be more consistent across different properties and to increment more predictibly. Removes `48`, `72`, `96`, `420`, `480`, `720`, and `960` values for all properties that had them. Adds `60`, `120` to all properties. Adds `600` value to height and width properties. Adds negative margins to match all positive margin values.
+- [breaking] Significantly refactors layout scale to be more consistent across different properties and to increment more predictibly. Removes `48`, `72`, `96`, `420`, `480`, `720`, and `960` values for all properties that had them. Adds `60`, `120` to all properties. Adds `600` value to height and width properties. Adds negative margins to match all positive margin values.
 - Adds missing `--dark` modifiers to some typography rules.
 - Stroked buttons and select elements now have a 1px stroke by default.
 - Adds new `btn--stroked--2` and `select--stroked--2` modifier classes to create stroked buttons and select elements that have 2px strokes.
 - [internal only] Renames `neutral` variables to more meaningful `disabled-{type}-interactive` variables.
-- Darken the `gray-faint` color to #e5e5e5 so it's legible on a wider range of monitors.
-- Remove teal color variations.
-- Remove 600px layout scale value for padding and margin.
+- Darken the `gray-faint` color to `#e5e5e5` so it's legible on a wider range of monitors.
+- [breaking] Remove teal color variations.
 - Refactor range inputs to use currentColor for coloring, which save space
-- Remove `darken5` and `lighten5` color variations to save space and encourage more accessible design.
-- Remove `p{n}` and `m{n}` rules.
-- Limit the possible colors available for form elements as well as `--on-active` and `--on-hover` modifiers for accessibility reasons and to save size. `-faint` or `-light` form elements are no longer available for _any element_, and `darken10` and `darken10` are no longer available for any for element except buttons.
+- [breaking] Remove `darken5` and `lighten5` color variations to save space and encourage more accessible design.
+- [breaking] Remove `p{n}` and `m{n}` rules.
+- [breaking] Limit the possible colors available for form elements as well as `--on-active` and `--on-hover` modifiers for accessibility reasons and to save size. `-faint` or `-light` form elements are no longer available for _any element_, and `darken10` and `darken10` are no longer available for any for element except buttons.
 - Add distinct hover states for active checkboxes and radio inputs.
 - Redesign checkbox active state to be clearer, more conventional.
 - Add `select--xs` class.
