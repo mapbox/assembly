@@ -46,47 +46,69 @@
  */
 
 /**
- * Grids are made by adding the `grid` class to a parent and `col col--{size}` classes to children. Column classes include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ * Grids require at minimum two elements: A parent with the class `grid` and a child with the class `col`. By default, each `col` in a grid will occupy equal space. The `grid` class includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
- * Grids and their columns use margin and padding for layout, so you should not apply any other margin or padding to these elements. Instead, apply such styling to parent and child elements, and use these elements for the grid layout only.
+ * When using these classes, do not apply left or right margin or padding directly to the \`grid\` or \`col\` elements or you will face unexpected side-effects.
  *
  * @group
  * @memberof Grid
  * @example
  * <div class='grid'>
- *   <div class='col col--2 border border--darken10'>col--2</div>
- *   <div class='col col--4 border border--darken10'>col--4</div>
- *   <div class='col col--6 border border--darken10'>col--6</div>
+ *   <div class='col border border--darken10'>one</div>
+ *   <div class='col border border--darken10'>two</div>
+ *   <div class='col border border--darken10'>three</div>
  * </div>
  */
 .grid {
   display: flex !important;
   flex-wrap: wrap !important;
 }
-
 .col {
-  display: block !important;
+  display: block;
   max-width: 100%;
-  flex-shrink: 0 !important;
-  flex-basis: auto !important;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
+/** @endgroup */
 
-.col--1 { width: 08.3333% !important; }
-.col--2 { width: 16.6666% !important; }
-.col--3 { width: 25% !important; }
-.col--4 { width: 33.3333% !important; }
-.col--5 { width: 41.6666% !important; }
-.col--6 { width: 50% !important; }
-.col--7 { width: 58.3333% !important; }
-.col--8 { width: 66.6666% !important; }
-.col--9 { width: 75% !important; }
-.col--10 { width: 83.3333% !important; }
-.col--11 { width: 91.6666% !important; }
-.col--12 { width: 100% !important; }
+/**
+ * Specify a percentage-based width for a `col` in a grid. `col` elements that do _not_ have `col--{size}`
+ * modifiers but are siblings of `col`s that do have modifiers, will retain their default behavior by proportionally
+ * occupying the remaining space. `col--{size}` classes include `*-mm`, `*-ml`, and `*-mxl` variations
+ * to target screen sizes.
+ *
+ * @group
+ * @memberof Grid
+ * @example
+ * <div class='grid mt12'>
+ *   <div class='col border border--darken10'>col</div>
+ *   <div class='col border border--darken10'>col</div>
+ *   <div class='col col--6 border border--darken10'>col--6</div>
+ * </div>
+ * <div class='grid'>
+ *   <div class='col col--2 border border--darken10'>col--2</div>
+ *   <div class='col col--4 border border--darken10'>col--4</div>
+ *   <div class='col col--6 border border--darken10'>col--6</div>
+ * </div>
+ */
+.col--1 { flex: none; width: 08.3333% !important; }
+.col--2 { flex: none; width: 16.6666% !important; }
+.col--3 { flex: none; width: 25% !important; }
+.col--4 { flex: none; width: 33.3333% !important; }
+.col--5 { flex: none; width: 41.6666% !important; }
+.col--6 { flex: none; width: 50% !important; }
+.col--7 { flex: none; width: 58.3333% !important; }
+.col--8 { flex: none; width: 66.6666% !important; }
+.col--9 { flex: none; width: 75% !important; }
+.col--10 { flex: none; width: 83.3333% !important; }
+.col--11 { flex: none; width: 91.6666% !important; }
+.col--12 { flex: none; width: 100% !important; }
 /** @endgroup */
 
 /**
  * Apply a left offset to a grid column. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ *
  *
  * @example
  * <div class='grid'>
