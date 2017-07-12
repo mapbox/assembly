@@ -69,7 +69,14 @@ class Grids extends React.Component {
           Grid
         </h2>
 
-        <h3 className='mb12 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Standard grid</h3>
+        <h3 className='mb12 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Uncontrolled grid</h3>
+        <div className='txt-s grid mb18'>
+          {[...Array(12)].map((i) => <div key={i} className='col'>
+            <div className='border px3 py3'>col</div>
+          </div>)}
+        </div>
+
+        <h3 className='mb12 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Standard controlled grid</h3>
         {GridEls}
 
         <h3 className='mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Grid with gutters</h3>
