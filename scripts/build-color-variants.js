@@ -81,7 +81,7 @@ function isNotAccessibleExceptButtons(color) {
 
 function isNotAccessibleExceptBg(color) {
   // Five percent opacity classes should only be used for backgrounds.
-  return null || /^(darken5|lighten5)$/.test(color);
+  return /^(darken5|lighten5)$/.test(color);
 }
 
 function buildColorVariants(variables, config) {
@@ -539,7 +539,6 @@ function buildColorVariants(variables, config) {
        * <div class='bg-darken25-on-active is-active'>bg-darken25-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
-      if (!isNotAccessibleExceptButtons(color)) return result;
       return result += stripIndent(`
         .bg-${color}-on-hover:hover,
         .bg-${color}-on-active.is-active,
@@ -565,7 +564,7 @@ function buildColorVariants(variables, config) {
        * <div class='color-red-on-active is-active'>color-red-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
-      if (!isNotAccessibleForForms(color) || isNotAccessibleExceptBg(color)) return result;
+      if (isNotAccessibleExceptBg(color)) return result;
       return result += stripIndent(`
         .color-${color}-on-hover:hover,
         .color-${color}-on-active.is-active,
@@ -591,7 +590,7 @@ function buildColorVariants(variables, config) {
        * <div class='border border--red-on-active is-active'>border--red-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
-      if (!isNotAccessibleExceptButtons(color) || isNotAccessibleExceptBg(color)) return result;
+      if (isNotAccessibleExceptBg(color)) return result;
       return result += stripIndent(`
         .border--${color}-on-hover:hover,
         .border--${color}-on-active.is-active,
