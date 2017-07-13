@@ -107,6 +107,23 @@
 /** @endgroup */
 
 /**
+ * Apply to a `col` element to override a`col--{size}` rule and take on default `col`,occupying equal space with other `col` siblings.
+ * This class is designed to be used with `*-mm`, `*-ml`, and `*-mxl` variations
+ * to target screen sizes.
+ *
+ * @memberof Grid
+ * @example
+ * <div class='grid'>
+ *   <div class='col col--3 col--auto-ml border border--darken10'>col--3 col--auto-ml</div>
+ *   <div class='col col--9 col--auto-ml border border--darken10'>col--9 col--auto-ml</div>
+ * </div>
+ */
+.col--auto {
+  width: auto !important;
+  flex: auto;
+}
+
+/**
  * Apply a left offset to a grid column. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  *

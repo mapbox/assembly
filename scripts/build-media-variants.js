@@ -21,6 +21,7 @@ const targetFiles = [
 const targetClassArray = [
   // Layout
   'grid',
+  'col',
   'col--1',
   'col--2',
   'col--3',
@@ -33,6 +34,7 @@ const targetClassArray = [
   'col--10',
   'col--11',
   'col--12',
+  'col--auto',
   'col--offl1',
   'col--offl2',
   'col--offl3',
