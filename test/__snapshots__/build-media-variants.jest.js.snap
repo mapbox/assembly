@@ -6,6 +6,13 @@ exports[`buildMediaVariants defaults 1`] = `
         display: flex !important;
         flex-wrap: wrap !important
     }
+    .col-mm {
+        display: block;
+        max-width: 100%;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1
+    }
     .col--1-mm {
         flex: none;
         width: 08.3333% !important
@@ -53,6 +60,10 @@ exports[`buildMediaVariants defaults 1`] = `
     .col--12-mm {
         flex: none;
         width: 100% !important
+    }
+    .col--auto-mm {
+        width: auto !important;
+        flex: auto
     }
     .col--offl1-mm {
         margin-left: 08.3333% !important
@@ -467,6 +478,13 @@ exports[`buildMediaVariants defaults 1`] = `
         display: flex !important;
         flex-wrap: wrap !important
     }
+    .col-ml {
+        display: block;
+        max-width: 100%;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1
+    }
     .col--1-ml {
         flex: none;
         width: 08.3333% !important
@@ -514,6 +532,10 @@ exports[`buildMediaVariants defaults 1`] = `
     .col--12-ml {
         flex: none;
         width: 100% !important
+    }
+    .col--auto-ml {
+        width: auto !important;
+        flex: auto
     }
     .col--offl1-ml {
         margin-left: 08.3333% !important
@@ -928,6 +950,13 @@ exports[`buildMediaVariants defaults 1`] = `
         display: flex !important;
         flex-wrap: wrap !important
     }
+    .col-mxl {
+        display: block;
+        max-width: 100%;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1
+    }
     .col--1-mxl {
         flex: none;
         width: 08.3333% !important
@@ -975,6 +1004,10 @@ exports[`buildMediaVariants defaults 1`] = `
     .col--12-mxl {
         flex: none;
         width: 100% !important
+    }
+    .col--auto-mxl {
+        width: auto !important;
+        flex: auto
     }
     .col--offl1-mxl {
         margin-left: 08.3333% !important
