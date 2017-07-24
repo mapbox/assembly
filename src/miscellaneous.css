@@ -102,6 +102,20 @@
   pointer-events: none;
 }
 
+@media (--m-screen) {
+  .events-none-mm {
+    -webkit-touch-callout: none !important;
+    pointer-events: none !important;
+  }
+}
+
+@media (--l-screen) {
+  .events-none-ml {
+    -webkit-touch-callout: none !important;
+    pointer-events: none !important;
+  }
+}
+
 /**
  * Enable touch and click events on an element and
  * its children. Use to re-enable such events inside a parent with the `events-none` class.
@@ -115,6 +129,20 @@
   pointer-events: all;
 }
 
+@media (--m-screen) {
+  .events-all-mm {
+    -webkit-touch-callout: default !important;
+    pointer-events: all !important;
+  }
+}
+
+@media (--l-screen) {
+  .events-all-ml {
+    -webkit-touch-callout: default !important;
+    pointer-events: all !important;
+  }
+}
+
 /**
  * Disable text selection on an element and its children. Use only in cases where accidental
  * text selection causes user frustration.
@@ -123,8 +151,20 @@
  * @example
  * <div class='select-none'>You can't select this.</div>
  */
-.select-none {
+.unselectable {
   user-select: none;
+}
+
+@media (--m-screen) {
+  .unselectable-mm {
+    user-select: none !important;
+  }
+}
+
+@media (--l-screen) {
+  .unselectable-ml {
+    user-select: none !important;
+  }
 }
 
 /**
@@ -135,8 +175,20 @@
  * @example
  * <div class='select-none'><div class='select-text'>You can select this.</div></div>
  */
-.select-text {
+.selectable {
   user-select: text;
+}
+
+@media (--m-screen) {
+  .selectable-mm {
+    user-select: text !important;
+  }
+}
+
+@media (--l-screen) {
+  .selectable-ml {
+    user-select: text !important;
+  }
 }
 
 /**

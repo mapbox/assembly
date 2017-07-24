@@ -8264,21 +8264,85 @@ input:checked:disabled + .toggle{
   -webkit-touch-callout:none;
   pointer-events:none;
 }
+
+@media screen and (min-width: 640px){
+  .events-none-mm{
+    -webkit-touch-callout:none !important;
+    pointer-events:none !important;
+  }
+}
+
+@media screen and (min-width: 760px){
+  .events-none-ml{
+    -webkit-touch-callout:none !important;
+    pointer-events:none !important;
+  }
+}
 .events-all{
   -webkit-touch-callout:default;
   pointer-events:all;
 }
-.select-none{
+
+@media screen and (min-width: 640px){
+  .events-all-mm{
+    -webkit-touch-callout:default !important;
+    pointer-events:all !important;
+  }
+}
+
+@media screen and (min-width: 760px){
+  .events-all-ml{
+    -webkit-touch-callout:default !important;
+    pointer-events:all !important;
+  }
+}
+.unselectable{
   -webkit-user-select:none;
      -moz-user-select:none;
       -ms-user-select:none;
           user-select:none;
 }
-.select-text{
+
+@media screen and (min-width: 640px){
+  .unselectable-mm{
+    -webkit-user-select:none !important;
+       -moz-user-select:none !important;
+        -ms-user-select:none !important;
+            user-select:none !important;
+  }
+}
+
+@media screen and (min-width: 760px){
+  .unselectable-ml{
+    -webkit-user-select:none !important;
+       -moz-user-select:none !important;
+        -ms-user-select:none !important;
+            user-select:none !important;
+  }
+}
+.selectable{
   -webkit-user-select:text;
      -moz-user-select:text;
       -ms-user-select:text;
           user-select:text;
+}
+
+@media screen and (min-width: 640px){
+  .selectable-mm{
+    -webkit-user-select:text !important;
+       -moz-user-select:text !important;
+        -ms-user-select:text !important;
+            user-select:text !important;
+  }
+}
+
+@media screen and (min-width: 760px){
+  .selectable-ml{
+    -webkit-user-select:text !important;
+       -moz-user-select:text !important;
+        -ms-user-select:text !important;
+            user-select:text !important;
+  }
 }
 .transition{
   transition:all 0.125s;
@@ -21705,21 +21769,85 @@ input:checked:disabled + .toggle{
   -webkit-touch-callout:none;
   pointer-events:none;
 }
+
+@media screen and (min-width: 640px){
+  .events-none-mm{
+    -webkit-touch-callout:none !important;
+    pointer-events:none !important;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .events-none-ml{
+    -webkit-touch-callout:none !important;
+    pointer-events:none !important;
+  }
+}
 .events-all{
   -webkit-touch-callout:default;
   pointer-events:all;
 }
-.select-none{
+
+@media screen and (min-width: 640px){
+  .events-all-mm{
+    -webkit-touch-callout:default !important;
+    pointer-events:all !important;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .events-all-ml{
+    -webkit-touch-callout:default !important;
+    pointer-events:all !important;
+  }
+}
+.unselectable{
   -webkit-user-select:none;
      -moz-user-select:none;
       -ms-user-select:none;
           user-select:none;
 }
-.select-text{
+
+@media screen and (min-width: 640px){
+  .unselectable-mm{
+    -webkit-user-select:none !important;
+       -moz-user-select:none !important;
+        -ms-user-select:none !important;
+            user-select:none !important;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .unselectable-ml{
+    -webkit-user-select:none !important;
+       -moz-user-select:none !important;
+        -ms-user-select:none !important;
+            user-select:none !important;
+  }
+}
+.selectable{
   -webkit-user-select:text;
      -moz-user-select:text;
       -ms-user-select:text;
           user-select:text;
+}
+
+@media screen and (min-width: 640px){
+  .selectable-mm{
+    -webkit-user-select:text !important;
+       -moz-user-select:text !important;
+        -ms-user-select:text !important;
+            user-select:text !important;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .selectable-ml{
+    -webkit-user-select:text !important;
+       -moz-user-select:text !important;
+        -ms-user-select:text !important;
+            user-select:text !important;
+  }
 }
 .transition{
   transition:all 0.125s;
