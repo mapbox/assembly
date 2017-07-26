@@ -1,10 +1,20 @@
+import PropTypes from 'prop-types';
+import { withLocation } from '@mapbox/batfish/modules/with-location';
 import React from 'react';
+
 import { Logo } from './logo';
+import navigationData from '../_tmp_assembly/navigation.json';
 import pkg from '../package.json';
 
 class Navigation extends React.Component {
+  getActivePathname() {
+    // Remove the first section of the pathname (`/assembly/foo/` becomes `/foo/`).
+    return this.props.location.pathname.replace(/^\/[a-zA-Z0-9\-]*/, '');
+  }
+
   render() {
-    const { props } = this;
+    const { navigationList } = navigationData;
+    const activePathname = this.getActivePathname();
 
     function listNestedMembers(items, isDoc, level) {
       level = level || 0;
@@ -13,7 +23,7 @@ class Navigation extends React.Component {
         let linkContainerClasses, style;
         let linkClasses = 'color-blue-on-hover relative mr12 mr0-mm pb3 txt-s';
         linkClasses += ` ml${6 * (level + 1)}-mm`;
-        if (member.name === props.navData.active) {
+        if (member.route === activePathname) {
           linkClasses += ' is-active';
         }
         if (level === 0 && isDoc) {
@@ -41,22 +51,23 @@ class Navigation extends React.Component {
       });
     }
 
-    const filteredNavData = props.navData.items.filter((n) => {
+    const filteredNavData = navigationList.filter((n) => {
       return n.name !== 'Home';
     });
     const navEls = filteredNavData.map((r) => {
-      const showNestedItems = r.name !== props.navData.active
+      const hideNestedItems = !activePathname.startsWith(r.route)
         || r.items === undefined
         || r.items.length === 0;
+
       const isDoc = r.name === 'Documentation';
-      const nestedItems = (showNestedItems) ? null : (
+      const nestedItems = hideNestedItems ? null : (
         <div className='mb6 ml12 ml0-mm txt-s'>
           {listNestedMembers(r.items, isDoc)}
         </div>
       );
       return (
         <div key={r.name}>
-          <a className={`txt-s txt-bold block color-blue-on-hover mb6 ${r.name === props.navData.active ? 'color-blue' : ''}`} href={`/assembly${r.route}`}>{r.name}</a>
+          <a className={`txt-s txt-bold block color-blue-on-hover mb6 ${activePathname.startsWith(r.route) ? 'color-blue' : ''}`} href={`/assembly${r.route}`}>{r.name}</a>
           {nestedItems}
         </div>
       );
@@ -89,10 +100,12 @@ class Navigation extends React.Component {
 }
 
 Navigation.propTypes = {
-  navData: React.PropTypes.shape({
-    items: React.PropTypes.array.isRequired,
-    active: React.PropTypes.string
-  }).isRequired
+  navData: PropTypes.shape({
+    items: PropTypes.array,
+    active: PropTypes.string
+  })
 };
+
+Navigation = withLocation(Navigation); // eslint-disable-line
 
 export { Navigation };
