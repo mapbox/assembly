@@ -28,7 +28,7 @@ function TextareaEl(props) {
   );
 }
 
-export default class Textareas extends React.Component {
+export class Textareas extends React.Component {
   render() {
 
     return (

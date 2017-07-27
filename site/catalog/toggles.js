@@ -51,7 +51,7 @@ function ToggleEl(props) {
   );
 }
 
-export default class Toggles extends React.Component {
+export class Toggles extends React.Component {
   render() {
 
     return (

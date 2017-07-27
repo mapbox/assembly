@@ -44,7 +44,7 @@ function RowElWithRightMargin(props) {
   );
 }
 
-export default class Grids extends React.Component {
+export class Grids extends React.Component {
   render() {
 
     const GridEls = sizeCombos.map((combo, i) => {

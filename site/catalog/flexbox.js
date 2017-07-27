@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Flexbox extends React.Component {
+export class Flexbox extends React.Component {
   render() {
     return (
       <div>

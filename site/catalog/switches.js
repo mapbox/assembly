@@ -36,7 +36,7 @@ function SwitchEl(props) {
   );
 }
 
-export default class Switches extends React.Component {
+export class Switches extends React.Component {
   render() {
 
     return (

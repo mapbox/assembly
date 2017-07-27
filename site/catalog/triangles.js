@@ -33,7 +33,7 @@ function TriangleEl(props) {
   );
 }
 
-export default class Triangles extends React.Component {
+export class Triangles extends React.Component {
   render() {
 
     return (

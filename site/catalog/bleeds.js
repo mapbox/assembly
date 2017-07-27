@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Bleeds extends React.Component {
+export class Bleeds extends React.Component {
   render() {
     return (
       <div>

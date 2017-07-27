@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Pills extends React.Component {
+export class Pills extends React.Component {
   render() {
     return (
       <div>

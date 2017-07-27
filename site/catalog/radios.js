@@ -12,7 +12,7 @@ const colors = [
   'purple'
 ];
 
-export default class Radios extends React.Component {
+export class Radios extends React.Component {
   render() {
 
     const radios = colors.map((color, i) => {

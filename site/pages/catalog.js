@@ -1,25 +1,25 @@
 import React from 'react';
 
-import { Page } from '../../page';
-import Checkboxes from './checkboxes';
-import Radios from './radios';
-import Bleeds from './bleeds';
-import Buttons from './buttons';
-import Pills from './pills';
-import Typography from './typography';
-import Tables from './tables';
-import Lists from './lists';
-import Triangles from './triangles';
-import Selects from './selects';
-import Switches from './switches';
-import Toggles from './toggles';
-import Inputs from './inputs';
-import Textareas from './textareas';
-import Ranges from './ranges';
-import Links from './links';
-import Grids from './grids';
-import Icons from './icons';
-import Flexbox from './flexbox';
+import { Page } from '../page';
+import { Checkboxes } from '../catalog/checkboxes';
+import { Radios } from '../catalog/radios';
+import { Bleeds } from '../catalog/bleeds';
+import { Buttons } from '../catalog/buttons';
+import { Pills } from '../catalog/pills';
+import { Typography } from '../catalog/typography';
+import { Tables } from '../catalog/tables';
+import { Lists } from '../catalog/lists';
+import { Triangles } from '../catalog/triangles';
+import { Selects } from '../catalog/selects';
+import { Switches } from '../catalog/switches';
+import { Toggles } from '../catalog/toggles';
+import { Inputs } from '../catalog/inputs';
+import { Textareas } from '../catalog/textareas';
+import { Ranges } from '../catalog/ranges';
+import { Links } from '../catalog/links';
+import { Grids } from '../catalog/grids';
+import { Icons } from '../catalog/icons';
+import { Flexbox } from '../catalog/flexbox';
 
 export default class Catalog extends React.Component {
   render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import iconsList from '../../../_tmp_assembly/icons.json';
+import iconsList from '../../_tmp_assembly/icons.json';
 
 const fontSizes = [
   'txt-h1',
@@ -53,7 +53,7 @@ const getIconEl = (icon) => {
 
 };
 
-export default class Icons extends React.Component {
+export class Icons extends React.Component {
   render() {
     const { icons } = iconsList;
     // Get a random icon from all icons. Because why not.

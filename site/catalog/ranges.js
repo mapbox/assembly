@@ -26,7 +26,7 @@ function RangesEl(props) {
   );
 }
 
-export default class Ranges extends React.Component {
+export class Ranges extends React.Component {
   render() {
 
     return (

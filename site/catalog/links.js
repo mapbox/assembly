@@ -32,7 +32,7 @@ function LinkEl(props) {
   );
 }
 
-export default class Links extends React.Component {
+export class Links extends React.Component {
   render() {
 
     return (

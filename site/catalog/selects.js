@@ -17,7 +17,7 @@ const colors = [
 ];
 
 
-export default class Selects extends React.Component {
+export class Selects extends React.Component {
   render() {
     return (
       <div>
