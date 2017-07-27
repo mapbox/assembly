@@ -24,16 +24,6 @@ module.exports = () => {
     inlineJs: [{ filename: path.join(__dirname, './dist/assembly.js') }],
     pagesDirectory: path.join(__dirname, './site/pages'),
     siteBasePath: '/assembly/',
-    webpackConfigStaticTransform: (webpackConfig) => {
-      // We need to ignore the following two files becasue their contents are executed immediately,
-      // and they rely on DOM APIs, so the static site renderer chokes on them otherwise.
-      webpackConfig.module.rules.unshift({
-        test: /copy\.js$|expander\.js$/,
-        loader: 'ignore-loader'
-      });
-
-      return webpackConfig;
-    },
     vendorModules: ['highlight.js']
   };
 };
