@@ -20,7 +20,7 @@ module.exports = () => {
           .documentationData;
       }
     },
-    fileLoaderExtensions: (extensions) => extensions.concat(['svg', 'ico']),
+    fileLoaderExtensions: (extensions) => extensions.concat(['svg']),
     inlineJs: [{ filename: path.join(__dirname, './dist/assembly.js') }],
     notFoundPath: path.join(__dirname, './site/pages/404.js'),
     pagesDirectory: path.join(__dirname, './site/pages'),
