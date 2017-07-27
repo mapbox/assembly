@@ -24,6 +24,7 @@ module.exports = () => {
     inlineJs: [{ filename: path.join(__dirname, './dist/assembly.js') }],
     pagesDirectory: path.join(__dirname, './site/pages'),
     siteBasePath: '/assembly/',
+    webpackStaticIgnore: [/expander\.js$|copy\.js$/],
     vendorModules: ['highlight.js']
   };
 };
