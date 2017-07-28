@@ -1,10 +1,5 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
-
-const icons = fs.readdirSync(path.join(__dirname, '../../src/svgs'))
-  .filter((filename) => filename.endsWith('.svg'))
-  .map((filename) => path.basename(filename, '.svg'));
+import iconsList from '../../_tmp_assembly/icons.json';
 
 const fontSizes = [
   'txt-h1',
@@ -58,8 +53,9 @@ const getIconEl = (icon) => {
 
 };
 
-class Icons extends React.Component {
+export class Icons extends React.Component {
   render() {
+    const { icons } = iconsList;
     // Get a random icon from all icons. Because why not.
     const iconEls = getIconEl(icons[Math.floor(Math.random() * icons.length)]);
 
@@ -75,5 +71,3 @@ class Icons extends React.Component {
     );
   }
 }
-
-export { Icons };

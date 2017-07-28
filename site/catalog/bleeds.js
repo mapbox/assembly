@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Bleeds extends React.Component {
+export class Bleeds extends React.Component {
   render() {
     return (
       <div>
@@ -32,5 +32,3 @@ class Bleeds extends React.Component {
     );
   }
 }
-
-export { Bleeds };

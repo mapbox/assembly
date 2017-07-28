@@ -1,5 +1,6 @@
 import React from 'react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from '../../html_example';
+import { Page } from '../../page';
 
 const menuNavigation = `<nav>
   <a class='flex-parent-inline btn color-blue color-white-on-active bg-transparent bg-darken10-on-hover bg-blue-on-active txt-s ml3 is-active' href='#'>
@@ -30,10 +31,10 @@ const breadcrumbs = `<div class='flex-parent-inline flex-parent--center-cross tx
   <span class='txt-bold'>Three</span>
 </div>`;
 
-class ExampleNavigation extends React.Component {
+export default class ExampleNavigation extends React.Component {
   render() {
     return (
-      <div>
+      <Page>
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Main navigation
         </h2>
@@ -46,9 +47,7 @@ class ExampleNavigation extends React.Component {
           Breadcrumbs
         </h2>
         <HtmlExample code={breadcrumbs} />
-      </div>
+      </Page>
     );
   }
 }
-
-export { ExampleNavigation };

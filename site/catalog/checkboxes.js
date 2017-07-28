@@ -12,7 +12,7 @@ const colors = [
   'purple'
 ];
 
-class Checkboxes extends React.Component {
+export class Checkboxes extends React.Component {
   render() {
     const checkmark = (
       <svg
@@ -56,7 +56,7 @@ class Checkboxes extends React.Component {
 
         <div className='mb12'>
           <input id='checkbox-unstyled' type='checkbox' />
-          <label for='checkbox-unstyled'>Unstyled</label>
+          <label htmlFor='checkbox-unstyled'>Unstyled</label>
         </div>
 
         {checkboxes}
@@ -65,5 +65,3 @@ class Checkboxes extends React.Component {
     );
   }
 }
-
-export { Checkboxes };

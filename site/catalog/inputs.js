@@ -36,7 +36,7 @@ function InputEl(props) {
   );
 }
 
-class Inputs extends React.Component {
+export class Inputs extends React.Component {
   render() {
 
     return (
@@ -102,5 +102,3 @@ class Inputs extends React.Component {
     );
   }
 }
-
-export { Inputs };

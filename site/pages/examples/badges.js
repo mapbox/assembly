@@ -1,5 +1,6 @@
 import React from 'react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from '../../html_example';
+import { Page } from '../../page';
 
 const simple = `<div class='bg-blue-faint color-blue inline-block px6 py3 txt-xs txt-bold round-full'>
   screamin dealz
@@ -27,10 +28,10 @@ const chip = `<div class='flex-parent flex-parent--center-cross flex-parent-inli
   </div>
 </div>`;
 
-class ExampleBadges extends React.Component {
+export default class ExampleBadges extends React.Component {
   render() {
     return (
-      <div>
+      <Page>
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Badges
         </h2>
@@ -46,9 +47,7 @@ class ExampleBadges extends React.Component {
         <div>
           <HtmlExample code={chip} />
         </div>
-      </div>
+      </Page>
     );
   }
 }
-
-export { ExampleBadges };

@@ -1,5 +1,6 @@
 import React from 'react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from '../../html_example';
+import { Page } from '../../page';
 
 const tiles = `<div class='grid grid--gut12 h600'>
   <div class='flex-parent flex-parent--wrap col col--12 col--6-mm col--8-ml mb12 mb0-mm'>
@@ -27,17 +28,15 @@ const tiles = `<div class='grid grid--gut12 h600'>
   </div>
 </div>`;
 
-class ExampleTileLayout extends React.Component {
+export default class ExampleTileLayout extends React.Component {
   render() {
     return (
-      <div>
+      <Page>
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Tile layout
         </h2>
         <HtmlExample code={tiles} />
-      </div>
+      </Page>
     );
   }
 }
-
-export { ExampleTileLayout };

@@ -36,7 +36,7 @@ function SwitchEl(props) {
   );
 }
 
-class Switches extends React.Component {
+export class Switches extends React.Component {
   render() {
 
     return (
@@ -61,5 +61,3 @@ class Switches extends React.Component {
     );
   }
 }
-
-export { Switches };

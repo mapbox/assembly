@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from './html_example';
 
 class Heading extends React.Component {
   render() {
@@ -41,10 +42,10 @@ class Heading extends React.Component {
 }
 
 Heading.propTypes = {
-  level: React.PropTypes.oneOf([1, 2, 3, 4, 5]).isRequired,
-  title: React.PropTypes.string.isRequired,
-  parsedComment: React.PropTypes.shape({
-    description: React.PropTypes.string
+  level: PropTypes.oneOf([1, 2, 3, 4, 5]).isRequired,
+  title: PropTypes.string.isRequired,
+  parsedComment: PropTypes.shape({
+    description: PropTypes.string
   }).isRequired
 };
 

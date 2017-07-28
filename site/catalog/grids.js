@@ -44,7 +44,7 @@ function RowElWithRightMargin(props) {
   );
 }
 
-class Grids extends React.Component {
+export class Grids extends React.Component {
   render() {
 
     const GridEls = sizeCombos.map((combo, i) => {
@@ -71,7 +71,7 @@ class Grids extends React.Component {
 
         <h3 className='mb12 txt-m txt-bold color-darken50 txt-uppercase txt-s'>Uncontrolled grid</h3>
         <div className='txt-s grid mb18'>
-          {[...Array(12)].map((i) => <div key={i} className='col'>
+          {[...Array(12)].map((_, i) => <div key={i} className='col'>
             <div className='border px3 py3'>col</div>
           </div>)}
         </div>
@@ -104,5 +104,3 @@ class Grids extends React.Component {
     );
   }
 }
-
-export { Grids };

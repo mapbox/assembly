@@ -32,7 +32,7 @@ function LinkEl(props) {
   );
 }
 
-class Links extends React.Component {
+export class Links extends React.Component {
   render() {
 
     return (
@@ -54,5 +54,3 @@ class Links extends React.Component {
     );
   }
 }
-
-export { Links };

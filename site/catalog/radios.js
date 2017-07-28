@@ -12,7 +12,7 @@ const colors = [
   'purple'
 ];
 
-class Radios extends React.Component {
+export class Radios extends React.Component {
   render() {
 
     const radios = colors.map((color, i) => {
@@ -47,7 +47,7 @@ class Radios extends React.Component {
 
         <div className='mb12'>
           <input id='radio-unstyled' type='radio' />
-          <label for='radio-unstyled'>Radio</label>
+          <label htmlFor='radio-unstyled'>Radio</label>
         </div>
         {radios}
 
@@ -55,5 +55,3 @@ class Radios extends React.Component {
     );
   }
 }
-
-export { Radios };

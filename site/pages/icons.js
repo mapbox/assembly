@@ -1,17 +1,10 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
-import Lowlight from 'react-lowlight';
-import jsLanguage from 'highlight.js/lib/languages/javascript';
+import { Page } from '../page';
+import iconsList from '../../_tmp_assembly/icons.json';
 
-Lowlight.registerLanguage('js', jsLanguage);
-
-const icons = fs.readdirSync(path.join(__dirname, '../src/svgs'))
-  .filter((filename) => filename.endsWith('.svg'))
-  .map((filename) => path.basename(filename, '.svg'));
-
-class Icons extends React.Component {
+export default class Icons extends React.Component {
   render() {
+    const { icons } = iconsList;
     const iconEls = icons.map((icon) => {
       return (
         <div key={icon} className='col--6 col--4-ml col--3-mxl flex-parent flex-parent--center-cross flex-child px12 py12 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light'>
@@ -27,7 +20,7 @@ class Icons extends React.Component {
     });
 
     return (
-      <div>
+      <Page>
         <h1 className='txt-h2 mb12 txt-bold pt24'>
           Icons
         </h1>
@@ -64,9 +57,7 @@ class Icons extends React.Component {
         <div className='prose'>
           <p>Returns a boolean indicating whether an icon exists in Assembly.</p>
         </div>
-      </div>
+      </Page>
     );
   }
 }
-
-export { Icons };

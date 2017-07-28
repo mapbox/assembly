@@ -33,7 +33,7 @@ function TriangleEl(props) {
   );
 }
 
-class Triangles extends React.Component {
+export class Triangles extends React.Component {
   render() {
 
     return (
@@ -54,5 +54,3 @@ class Triangles extends React.Component {
     );
   }
 }
-
-export { Triangles };

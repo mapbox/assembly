@@ -1,5 +1,6 @@
 import React from 'react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from '../../html_example';
+import { Page } from '../../page';
 
 const html = `<div class='grid grid--gut12 flex-parent--stretch-cross'>
   <div class='col col--4'>
@@ -19,10 +20,10 @@ const html = `<div class='grid grid--gut12 flex-parent--stretch-cross'>
   </div>
 </div>`;
 
-class ExampleEqualHeightColumns extends React.Component {
+export default class ExampleEqualHeightColumns extends React.Component {
   render() {
     return (
-      <div>
+      <Page>
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Equal-height columns
         </h2>
@@ -31,9 +32,7 @@ class ExampleEqualHeightColumns extends React.Component {
           <p>The key here is to add <code>flex-parent--stretch-cross</code> to the <code>grid</code>, and add <code>h-full</code> to the <em>child</em> of the <code>col</code> element, which is the one with the background color.</p>
         </div>
         <HtmlExample code={html} />
-      </div>
+      </Page>
     );
   }
 }
-
-export { ExampleEqualHeightColumns };

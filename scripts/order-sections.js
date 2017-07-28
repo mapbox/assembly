@@ -1,4 +1,6 @@
-import _ from 'lodash';
+'use strict';
+
+const _ = require('lodash');
 
 function orderSections(entries) {
   function getSection(title) {
@@ -38,4 +40,4 @@ function orderSections(entries) {
   return sections;
 }
 
-export { orderSections };
+module.exports = orderSections;

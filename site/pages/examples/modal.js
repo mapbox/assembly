@@ -1,5 +1,6 @@
 import React from 'react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from '../../html_example';
+import { Page } from '../../page';
 
 const tiles = `<div class='bg-darken10 viewport-half'>
 <!-- In practice, it makes sense to use this for the container instead:
@@ -19,17 +20,15 @@ const tiles = `<div class='bg-darken10 viewport-half'>
   </div>
 </div>`;
 
-class ExampleModal extends React.Component {
+export default class ExampleModal extends React.Component {
   render() {
     return (
-      <div>
+      <Page>
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Modal component
         </h2>
         <HtmlExample code={tiles} />
-      </div>
+      </Page>
     );
   }
 }
-
-export { ExampleModal };

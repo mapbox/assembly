@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Lists extends React.Component {
+export class Lists extends React.Component {
   render() {
     return (
       <div>
@@ -148,5 +148,3 @@ class Lists extends React.Component {
     );
   }
 }
-
-export { Lists };

@@ -1,5 +1,6 @@
 import React from 'react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from '../../html_example';
+import { Page } from '../../page';
 
 const basicLegend = `<div class='w240 round shadow-darken10 px12 py12 txt-s'>
   <strong class='block mb6'>Title description</strong>
@@ -63,10 +64,10 @@ const radiusLegend = `<div class='w240 round shadow-darken10 px12 py12 txt-s'>
   </div>
 </div>`;
 
-class ExampleLegends extends React.Component {
+export default class ExampleLegends extends React.Component {
   render() {
     return (
-      <div>
+      <Page>
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Legend with bars
         </h2>
@@ -78,9 +79,7 @@ class ExampleLegends extends React.Component {
           Legend with varying radius
         </h2>
         <HtmlExample code={radiusLegend} />
-      </div>
+      </Page>
     );
   }
 }
-
-export { ExampleLegends };
