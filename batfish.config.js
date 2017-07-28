@@ -24,6 +24,7 @@ module.exports = () => {
     },
     fileLoaderExtensions: (extensions) => extensions.concat(['svg']),
     inlineJs: [{ filename: path.join(__dirname, './dist/assembly.js') }],
+    outputDirectory: path.join(__dirname, './_site_prepublish'),
     pagesDirectory: path.join(__dirname, './site/pages'),
     siteBasePath: '/assembly/',
     webpackStaticIgnore: [/expander\.js$|copy\.js$/],
