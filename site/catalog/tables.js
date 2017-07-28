@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Tables extends React.Component {
+export class Tables extends React.Component {
   render() {
     return (
       <div>
@@ -200,5 +200,3 @@ class Tables extends React.Component {
     );
   }
 }
-
-export { Tables };

@@ -1,5 +1,6 @@
 import React from 'react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from '../../html_example';
+import { Page } from '../../page';
 
 const basicSidebar = `<div class='flex-parent viewport-full relative clip'>
   <div class='flex-child w-full w240-ml absolute static-ml left bottom'>
@@ -32,10 +33,10 @@ const floatingSidebar = `<div class='viewport-full relative clip'>
 </div>`;
 
 
-class ExampleSidebarApps extends React.Component {
+export default class ExampleSidebarApps extends React.Component {
   render() {
     return (
-      <div>
+      <Page>
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Full height sidebar
         </h2>
@@ -44,9 +45,7 @@ class ExampleSidebarApps extends React.Component {
           Floating full height sidebar
         </h2>
         <HtmlExample code={floatingSidebar} />
-      </div>
+      </Page>
     );
   }
 }
-
-export { ExampleSidebarApps };

@@ -1,8 +1,14 @@
 # Changelog
 
+## 0.16.0
+
+- Add mobile conditions for `events-{none|all}`
+- [breaking] Name change of `select-none` & `select-text` to `selectable` & `unselectable`
+- Add mobile conditions for `selectable` & `unselectable`
+
 ## 0.15.0
 
-- Add 'align-b' class to vertically align inline inline or table-cell elements to the bottom.
+- Add `align-b` class to vertically align inline inline or table-cell elements to the bottom.
 - Change defualt behavior of the `col` class – `col`s in a grid now stretch to fill all the space, each `col` occupying equal space unless `col--{size}` modifiers are used.
 - Adds `col--auto` modifier to imitate `col` default behavior. Useful for media query overrides of `col--{size}` rules.
 - Fixes bug that lead to incorrect generation of `hoverBorder`, `hoverColor`, and `hoverBackground` color variants.

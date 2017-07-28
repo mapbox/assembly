@@ -1,5 +1,6 @@
 import React from 'react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from '../../html_example';
+import { Page } from '../../page';
 
 const basic = `<div class='h12 bg-darken10 relative round-full'>
   <div class='absolute h12 bg-green-light round-full' style='width:50%;'></div>
@@ -18,10 +19,10 @@ const playback = `<div class='flex-parent flex-parent--row flex-parent--center-c
     </div>
   </div>`;
 
-class ExampleProgressBars extends React.Component {
+export default class ExampleProgressBars extends React.Component {
   render() {
     return (
-      <div>
+      <Page>
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Basic bar
         </h2>
@@ -34,9 +35,7 @@ class ExampleProgressBars extends React.Component {
         <div className='mb24'>
           <HtmlExample code={playback} />
         </div>
-      </div>
+      </Page>
     );
   }
 }
-
-export { ExampleProgressBars };

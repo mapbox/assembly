@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import remark from 'remark';
-import path from 'path';
 import reactRenderer from 'remark-react';
 import _ from 'lodash';
-import { HtmlExample } from '../html_example';
-import pkg from '../../package.json';
+import { HtmlExample } from './html_example';
+import pkg from '../package.json';
 
 class Entry extends React.Component {
   constructor(props) {
@@ -69,7 +69,7 @@ class Entry extends React.Component {
       </button>
     ) : null;
 
-    const sourceUrl = `https://github.com/mapbox/assembly/blob/${pkg.version}/src/${path.basename(props.parsedComment.source.filename)}#L${props.parsedComment.source.line}`;
+    const sourceUrl = `https://github.com/mapbox/assembly/blob/${pkg.version}/src/${props.parsedComment.source.filename}#L${props.parsedComment.source.line}`;
 
     return (
       <div className='border-t border--2 border--gray-faint'>
@@ -89,7 +89,7 @@ class Entry extends React.Component {
                 className='txt-s link inline-block link--gray'
               >
                 <svg className='align-t inline-block mr6 mt3 icon icon--s'><use xlinkHref='#icon-code'/></svg>
-                {path.basename(props.parsedComment.source.filename)}: {props.parsedComment.source.line}
+                {props.parsedComment.source.filename}: {props.parsedComment.source.line}
               </a>
             </div>
           </div>
@@ -106,15 +106,15 @@ class Entry extends React.Component {
 }
 
 Entry.propTypes = {
-  type: React.PropTypes.oneOf(['group', 'member']).isRequired,
-  parsedComment: React.PropTypes.shape({
-    description: React.PropTypes.string.isRequired,
-    example: React.PropTypes.shape({
-      description: React.PropTypes.string.isRequired
+  type: PropTypes.oneOf(['group', 'member']).isRequired,
+  parsedComment: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    example: PropTypes.shape({
+      description: PropTypes.string.isRequired
     })
   }).isRequired,
-  referencedSource: React.PropTypes.shape({
-    toString: React.PropTypes.func.isRequired,
+  referencedSource: PropTypes.shape({
+    toString: PropTypes.func.isRequired,
   })
 };
 

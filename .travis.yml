@@ -1,4 +1,8 @@
 language: node_js
 node_js:
-  - "6"
-cache: yarn
+  - "8"
+cache:
+  directories:
+    - $HOME/.npm
+before_install:
+  - npm install npm@5

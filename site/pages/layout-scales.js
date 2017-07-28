@@ -1,5 +1,6 @@
 import React from 'react';
-import scales from '../src/scales';
+import { Page } from '../page';
+import scales from '../../src/scales';
 
 const classSets = {
   'Grid Gutters': {
@@ -40,7 +41,7 @@ const classSets = {
   }
 };
 
-class LayoutScales extends React.Component {
+export default class LayoutScales extends React.Component {
   render() {
     const rows = Object.keys(classSets).map((name) => {
       const data = classSets[name];
@@ -86,7 +87,7 @@ class LayoutScales extends React.Component {
     });
 
     return (
-      <div>
+      <Page>
         <div className='mb24'>
           <h1 className='txt-h2 txt-bold pt24 mb18'>
             Layout Scales
@@ -97,9 +98,7 @@ class LayoutScales extends React.Component {
           </p>
         </div>
         {rows}
-      </div>
+      </Page>
     );
   }
 }
-
-export { LayoutScales };

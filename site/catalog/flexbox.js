@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Flexbox extends React.Component {
+export class Flexbox extends React.Component {
   render() {
     return (
       <div>
@@ -59,5 +59,3 @@ class Flexbox extends React.Component {
     );
   }
 }
-
-export { Flexbox };

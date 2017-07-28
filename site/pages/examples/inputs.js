@@ -1,5 +1,6 @@
 import React from 'react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from '../../html_example';
+import { Page } from '../../page';
 
 const inputWithButton = `<div class='flex-parent'>
   <input class='input border-r--0 round-l' placeholder='Search'>
@@ -20,10 +21,10 @@ const inputWithSpinner = `<div class='relative'>
   <input class='input pr36' placeholder='Search'>
 </div>`;
 
-class ExampleInputs extends React.Component {
+export default class ExampleInputs extends React.Component {
   render() {
     return (
-      <div>
+      <Page>
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Input with button
         </h2>
@@ -36,9 +37,7 @@ class ExampleInputs extends React.Component {
           Input with spinner
         </h2>
         <HtmlExample code={inputWithSpinner} />
-      </div>
+      </Page>
     );
   }
 }
-
-export { ExampleInputs };

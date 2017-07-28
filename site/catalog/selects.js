@@ -17,7 +17,7 @@ const colors = [
 ];
 
 
-class Selects extends React.Component {
+export class Selects extends React.Component {
   render() {
     return (
       <div>
@@ -92,5 +92,3 @@ class Selects extends React.Component {
     );
   }
 }
-
-export { Selects };

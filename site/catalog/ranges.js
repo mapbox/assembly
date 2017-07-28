@@ -26,7 +26,7 @@ function RangesEl(props) {
   );
 }
 
-class Ranges extends React.Component {
+export class Ranges extends React.Component {
   render() {
 
     return (
@@ -67,5 +67,3 @@ class Ranges extends React.Component {
     );
   }
 }
-
-export { Ranges };

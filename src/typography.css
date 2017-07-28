@@ -709,7 +709,7 @@ textarea {
  * @example
  * <div>
  *   <span class='align-t inline-block h12 w12 border border--gray'></span>
- *   <span class='align-t inline-block h60 border border--gray'>align-top</span>
+ *   <span class='align-t inline-block h60 border border--gray'>align-t</span>
  * </div>
  * <div class='mt3'>
  *   <span class='align-middle inline-block h12 w12 border'></span>
@@ -717,7 +717,7 @@ textarea {
  * </div>
  * <div>
  *   <span class='align-b inline-block h12 w12 border border--gray'></span>
- *   <span class='align-b inline-block h60 border border--gray'>align-top</span>
+ *   <span class='align-b inline-block h60 border border--gray'>align-b</span>
  * </div>
  */
 .align-t { vertical-align: top !important; }

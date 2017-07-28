@@ -1,9 +1,11 @@
 {
   "verbose": true,
   "watch": [
-    "./src/",
-    "./site/"
+    "./src/"
   ],
-  "ext": "js css html",
-  "exec": "babel-node"
+  "ignore": [
+    "src/color-variants.css",
+    "src/layout-scales.css"
+  ],
+  "ext": "js json css html"
 }

@@ -59,7 +59,7 @@ const getButtonEls = (color, i) => {
   );
 };
 
-class Buttons extends React.Component {
+export class Buttons extends React.Component {
   render() {
     const buttonEls = colors.map(getButtonEls);
     const lightenButtonEls = lightenColors.map(getButtonEls);
@@ -79,5 +79,3 @@ class Buttons extends React.Component {
     );
   }
 }
-
-export { Buttons };

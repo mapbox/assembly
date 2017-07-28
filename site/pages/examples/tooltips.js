@@ -1,5 +1,6 @@
 import React from 'react';
-import { HtmlExample } from '../html_example';
+import { HtmlExample } from '../../html_example';
+import { Page } from '../../page';
 
 const basic = `<div class='flex-parent-inline flex-parent--center-cross flex-parent--column'>
   <div class='flex-child px6 py6 bg-darken75 color-white align-center  round txt-bold txt-s'>Hello world!</div>
@@ -27,10 +28,10 @@ const basic_with_closure = `<div class='flex-parent-inline flex-parent--center-c
 </div>`;
 
 
-class ExampleTooltips extends React.Component {
+export default class ExampleTooltips extends React.Component {
   render() {
     return (
-      <div>
+      <Page>
         <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
           Basic tooltip
         </h2>
@@ -47,9 +48,7 @@ class ExampleTooltips extends React.Component {
           Tooltip with close button
         </h2>
         <HtmlExample code={basic_with_closure} />
-      </div>
+      </Page>
     );
   }
 }
-
-export { ExampleTooltips };

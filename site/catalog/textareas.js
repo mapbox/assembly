@@ -28,7 +28,7 @@ function TextareaEl(props) {
   );
 }
 
-class Textareas extends React.Component {
+export class Textareas extends React.Component {
   render() {
 
     return (
@@ -54,5 +54,3 @@ class Textareas extends React.Component {
     );
   }
 }
-
-export { Textareas };

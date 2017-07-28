@@ -1,10 +1,15 @@
+/*---
+injectedData:
+  - documentationData
+---*/
+import PropTypes from 'prop-types';
 import React from 'react';
-import { Entry } from './entry';
-import { Heading } from './heading';
-import { orderSections } from '../order-sections';
+import { Entry } from '../entry';
+import { Heading } from '../heading';
+import { Page } from '../page';
+import orderSections from '../../scripts/order-sections';
 
-class Documentation extends React.Component {
-
+export default class Documentation extends React.Component {
   render() {
     const { props } = this;
 
@@ -38,23 +43,23 @@ class Documentation extends React.Component {
       }
     }
 
-    orderSections(props.documentationData).forEach((entry) => addEntryAndMembers(entry, 1));
+    orderSections(props.injectedData.documentationData).forEach((entry) => addEntryAndMembers(entry, 1));
 
     return (
-      <div>
+      <Page>
         {entryEls}
-      </div>
+      </Page>
     );
   }
 }
 
 Documentation.propTypes = {
-  documentationData: React.PropTypes.arrayOf(React.PropTypes.shape({
-    parsedComment: React.PropTypes.shape({
-      description: React.PropTypes.string.isRequired,
-    }).isRequired,
-    members: React.PropTypes.arrayOf(React.PropTypes.object)
-  })).isRequired
+  injectedData: PropTypes.shape({
+    documentationData: PropTypes.arrayOf(PropTypes.shape({
+      parsedComment: PropTypes.shape({
+        description: PropTypes.string.isRequired,
+      }).isRequired,
+      members: PropTypes.arrayOf(PropTypes.object)
+    })).isRequired
+  })
 };
-
-export { Documentation };

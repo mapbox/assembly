@@ -51,7 +51,7 @@ function ToggleEl(props) {
   );
 }
 
-class Toggles extends React.Component {
+export class Toggles extends React.Component {
   render() {
 
     return (
@@ -91,5 +91,3 @@ class Toggles extends React.Component {
     );
   }
 }
-
-export { Toggles };
