@@ -3,7 +3,7 @@
 ## 0.16.0
 
 - Add mobile conditions for `events-{none|all}`
-- Name change of `select-none` & `select-text` to `selectable` & `unselectable`
+- [breaking] Name change of `select-none` & `select-text` to `selectable` & `unselectable`
 - Add mobile conditions for `selectable` & `unselectable`
 
 ## 0.15.0
