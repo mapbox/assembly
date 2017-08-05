@@ -100,11 +100,10 @@
     "stylelint-csstree-validator": "^1.1.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3",
-    "uglifyify": "^3.0.4",
     "xml2js": "^0.4.17"
   },
   "jest": {
-    "resetMocks": true,
+    "clearMocks": true,
     "testEnvironment": "node",
     "roots": [
       "test"
