@@ -67,7 +67,14 @@ const assemblyCssFiles = [
 function buildCss(options) {
   options = Object.assign(
     {
-      browsersList: ['last 4 versions', 'not ie < 10']
+      browsersList: [
+        'last 4 Chrome versions',
+        'last 4 Firefox versions',
+        'last 4 Safari versions',
+        'iOS >= 7',
+        'Android >= 4.4',
+        'IE >= 11'
+      ]
     },
     options
   );
