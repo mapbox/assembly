@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Navigation } from './navigation';
 import { prefixUrl } from '@mapbox/batfish/modules/prefix-url';
-
 import 'highlight.js';
-import './css/hljs.css';
-import '../dist/assembly.css';
 
 class Page extends React.Component {
   shouldComponentUpdate() {

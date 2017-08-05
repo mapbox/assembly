@@ -1,13 +1,10 @@
-/*---
-injectedData:
-  - examplesSubNavigationList
----*/
 import React from 'react';
+import examplesSubNavigationList from '@mapbox/batfish/data/examples-sub-navigation-list';
 import { Page } from '../../page';
 
 export default class Examples extends React.Component {
   getExamplesList() {
-    return this.props.injectedData.examplesSubNavigationList.map((child, i) => {
+    return examplesSubNavigationList.map((child, i) => {
       return (
         <div className="col col--4" key={i}>
           <a className="block link py3" href={`/assembly${child.route}`}>

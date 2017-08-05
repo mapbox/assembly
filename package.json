@@ -42,7 +42,6 @@
   },
   "homepage": "https://github.com/mapbox/assembly#readme",
   "dependencies": {
-    "@mapbox/batfish": "^0.6.0",
     "autoprefixer": "^6.6.1",
     "concat-with-sourcemaps": "^1.0.4",
     "cp-file": "^4.1.1",
@@ -65,8 +64,10 @@
     "uglify-js": "^2.7.5"
   },
   "devDependencies": {
+    "@mapbox/batfish": "^0.9.0",
     "aws-sdk": "^2.7.20",
     "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.2.3",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babel-register": "^6.18.0",
@@ -94,8 +95,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-lowlight": "^1.0.2",
-    "remark": "^7.0.0",
-    "remark-react": "^3.1.0",
+    "remark": "^8.0.0",
+    "remark-react": "^4.0.0",
     "stylelint": "^8.0.0",
     "stylelint-csstree-validator": "^1.1.1",
     "tap-spec": "^4.1.1",

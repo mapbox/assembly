@@ -1,9 +1,5 @@
-/*---
-injectedData:
-  - documentationData
----*/
-import PropTypes from 'prop-types';
 import React from 'react';
+import documentationData from '@mapbox/batfish/data/documentation-data';
 import { Entry } from '../entry';
 import { Heading } from '../heading';
 import { Page } from '../page';
@@ -11,8 +7,6 @@ import orderSections from '../../scripts/order-sections';
 
 export default class Documentation extends React.Component {
   render() {
-    const { props } = this;
-
     const entryEls = [];
     const navEls = [];
     function addEntryAndMembers(entry, level) {
@@ -38,7 +32,7 @@ export default class Documentation extends React.Component {
       }
     }
 
-    orderSections(props.injectedData.documentationData).forEach(entry =>
+    orderSections(documentationData).forEach(entry =>
       addEntryAndMembers(entry, 1)
     );
 
@@ -49,16 +43,3 @@ export default class Documentation extends React.Component {
     );
   }
 }
-
-Documentation.propTypes = {
-  injectedData: PropTypes.shape({
-    documentationData: PropTypes.arrayOf(
-      PropTypes.shape({
-        parsedComment: PropTypes.shape({
-          description: PropTypes.string.isRequired
-        }).isRequired,
-        members: PropTypes.arrayOf(PropTypes.object)
-      })
-    ).isRequired
-  })
-};
