@@ -9,20 +9,17 @@ module.exports = () => {
   return {
     dataSelectors: {
       examplesSubNavigationList: () => {
-        return navigationStructure
-          .navigationList
-          .find((routeConfig) => routeConfig.name === 'Examples')
-          .items;
+        return navigationStructure.navigationList.find(
+          routeConfig => routeConfig.name === 'Examples'
+        ).items;
       },
       documentationData: () => {
-        return navigationStructure
-          .navigationList
-          .find((routeConfig) => routeConfig.name === 'Documentation' )
-          .props
-          .documentationData;
+        return navigationStructure.navigationList.find(
+          routeConfig => routeConfig.name === 'Documentation'
+        ).props.documentationData;
       }
     },
-    fileLoaderExtensions: (extensions) => extensions.concat(['svg']),
+    fileLoaderExtensions: extensions => extensions.concat(['svg']),
     inlineJs: [{ filename: path.join(__dirname, './dist/assembly.js') }],
     outputDirectory: path.join(__dirname, './_site_prepublish'),
     pagesDirectory: path.join(__dirname, './site/pages'),

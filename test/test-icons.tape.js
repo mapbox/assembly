@@ -7,14 +7,13 @@ const xml2js = require('xml2js');
 
 const parseString = xml2js.parseString;
 
-test('valid svgs ', (t) => {
-
+test('valid svgs ', t => {
   fs.readdir('./src/svgs/', (err, files) => {
-    const svgFiles = files.filter((file) =>
-      file.split('.').pop().indexOf('svg') !== -1);
+    const svgFiles = files.filter(
+      file => file.split('.').pop().indexOf('svg') !== -1
+    );
 
     svgFiles.forEach((fileName, j) => {
-
       fs.readFile('./src/svgs/' + fileName, 'utf8', (err, file) => {
         if (err) t.fail(err);
         parseString(file, (err, parsed) => {
@@ -36,21 +35,24 @@ test('valid svgs ', (t) => {
       const keys = Object.keys(o);
       let invalid = false;
 
-      keys.some((key) => {
-        invalid = key.match(/^(rectangle|circle|ellipse|line|polyline|polygon|style)$/) && key;
+      keys.some(key => {
+        invalid =
+          key.match(
+            /^(rectangle|circle|ellipse|line|polyline|polygon|style)$/
+          ) && key;
         return invalid;
       });
       return invalid;
     }
 
     function checkPaths(pathArray) {
-      pathArray.forEach((path) => {
+      pathArray.forEach(path => {
         if (path.$ && path.$.transform) errors.push('transformed paths');
       });
     }
 
     function traverseGroups(groupArray) {
-      groupArray.forEach((group) => {
+      groupArray.forEach(group => {
         if (group.$ && group.$.transform) errors.push('transformed groups');
         if (invalidElement(group)) errors.push(' has ' + invalidElement(group));
         if (group.path) {
@@ -62,14 +64,20 @@ test('valid svgs ', (t) => {
       });
     }
 
-    if (svg.$.width || svg.$.height) errors.push('must not have height or width properties');
+    if (svg.$.width || svg.$.height)
+      errors.push('must not have height or width properties');
 
     if (!svg.$.viewBox) {
       errors.push('must use viewBox sizing');
     } else {
-      if (parseFloat(svg.$.viewBox.split(' ')[2]) !== 18 ||
-        parseFloat(svg.$.viewBox.split(' ')[3]) !== 18) errors.push('invalid viewBox');
-      if (svg.$.viewBox.split(' ').some((v) => !v.toString().match(pixelUnitRegex))) {
+      if (
+        parseFloat(svg.$.viewBox.split(' ')[2]) !== 18 ||
+        parseFloat(svg.$.viewBox.split(' ')[3]) !== 18
+      )
+        errors.push('invalid viewBox');
+      if (
+        svg.$.viewBox.split(' ').some(v => !v.toString().match(pixelUnitRegex))
+      ) {
         errors.push('viewBox must use pixel units');
       }
     }
@@ -78,8 +86,11 @@ test('valid svgs ', (t) => {
     if (svg.g) traverseGroups(svg.g);
     if (svg.path) checkPaths(svg.path);
 
-    t.notOk(errors.length, `${fileName} (${errors.length})${(errors.length ? ':' : '')} ${errors.join(', ')}`);
-
+    t.notOk(
+      errors.length,
+      `${fileName} (${errors.length})${errors.length ? ':' : ''} ${errors.join(
+        ', '
+      )}`
+    );
   }
-
 });

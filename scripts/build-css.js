@@ -23,7 +23,7 @@ function getCssPath(name) {
 }
 
 function handlePostcssError(error) {
-  if ( error.name === 'CssSyntaxError' ) {
+  if (error.name === 'CssSyntaxError') {
     process.stderr.write(error.message + error.showSourceCode());
   } else {
     throw error;
@@ -65,26 +65,31 @@ const assemblyCssFiles = [
  * @return {Promise<void>}
  */
 function buildCss(options) {
-  options = Object.assign({
-    browsersList: ['last 4 versions', 'not ie < 10']
-  }, options);
+  options = Object.assign(
+    {
+      browsersList: ['last 4 versions', 'not ie < 10']
+    },
+    options
+  );
 
   if (!options.quiet) timelog('Building CSS');
 
-  const outfile = options.outfile || path.join(__dirname, '../dist/assembly.css');
+  const outfile =
+    options.outfile || path.join(__dirname, '../dist/assembly.css');
   const outfileFilename = path.basename(outfile);
 
-  const cssFiles = (options.files === undefined)
-    ? assemblyCssFiles
-    : assemblyCssFiles.concat(options.files);
+  const cssFiles =
+    options.files === undefined
+      ? assemblyCssFiles
+      : assemblyCssFiles.concat(options.files);
 
   const concat = new Concat(true, outfile, '\n');
 
-  const variableDefinitions = (options.variables)
+  const variableDefinitions = options.variables
     ? Object.assign({}, defaultVariables, options.variables)
     : defaultVariables;
 
-  const mediaQueryDefinitions = (options.mediaQueries)
+  const mediaQueryDefinitions = options.mediaQueries
     ? Object.assign({}, defaultMediaQueries, options.mediaQueries)
     : defaultMediaQueries;
 
@@ -113,26 +118,37 @@ function buildCss(options) {
           sourcesContent: true
         }
       })
-      .then((postcssResult) => {
+      .then(postcssResult => {
         concat.add(filePath, postcssResult.css, postcssResult.map.toString());
       })
       .catch(handlePostcssError);
   }
 
   function processFile(cssFile, concat) {
-    return pify(fs.readFile)(cssFile, 'utf8').then((css) => {
+    return pify(fs.readFile)(cssFile, 'utf8').then(css => {
       return processCss(css, cssFile, concat);
     });
   }
 
   function addColorVariants(concat) {
-    const colorVariantCss = buildColorVariants(variableDefinitions, options.colorVariants);
-    return processCss(colorVariantCss, path.join(__dirname, '../src/color-variants.css'), concat);
+    const colorVariantCss = buildColorVariants(
+      variableDefinitions,
+      options.colorVariants
+    );
+    return processCss(
+      colorVariantCss,
+      path.join(__dirname, '../src/color-variants.css'),
+      concat
+    );
   }
 
   function addMediaVariants(concat) {
-    return buildMediaVariants().then((mediaVariantCss) => {
-      return processCss(mediaVariantCss, path.join(__dirname, '../src/media-variants.css'), concat);
+    return buildMediaVariants().then(mediaVariantCss => {
+      return processCss(
+        mediaVariantCss,
+        path.join(__dirname, '../src/media-variants.css'),
+        concat
+      );
     });
   }
 
@@ -141,7 +157,11 @@ function buildCss(options) {
 
     function writeMinifiedCss() {
       const minifiedCss = csso.minify(css).css;
-      return pify(fs.writeFile)(outfile.replace('.css', '.min.css'), minifiedCss, 'utf8');
+      return pify(fs.writeFile)(
+        outfile.replace('.css', '.min.css'),
+        minifiedCss,
+        'utf8'
+      );
     }
 
     return pify(mkdirp)(path.dirname(outfile)).then(() => {
@@ -156,7 +176,7 @@ function buildCss(options) {
   // Read these one at a time to ensure deterministic
   // stylesheet ordering based on the array above
   const queue = new PQueue({ concurrency: 1 });
-  const processCssFiles = cssFiles.map((file) => {
+  const processCssFiles = cssFiles.map(file => {
     return queue.add(() => processFile(file, concat));
   });
 
@@ -173,5 +193,5 @@ function buildCss(options) {
 module.exports = buildCss;
 
 if (require.main === module) {
-  buildCss().catch((err) => console.error(err.stack));
+  buildCss().catch(err => console.error(err.stack));
 }

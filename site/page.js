@@ -18,13 +18,17 @@ class Page extends React.Component {
       <div>
         <Helmet>
           <title>Assembly.css</title>
-          <meta name='viewport' content='initial-scale=1.0 maximum-scale=1.0' />
-          <link href={prefixUrl('favicon.ico')} rel='icon' type='image/x-icon' />
+          <meta name="viewport" content="initial-scale=1.0 maximum-scale=1.0" />
+          <link
+            href={prefixUrl('favicon.ico')}
+            rel="icon"
+            type="image/x-icon"
+          />
         </Helmet>
-        <div className='scroll-auto viewport-full-mm w180-mm fixed-mm top left flex-parent-mm flex-parent--stretch-cross-mm'>
+        <div className="scroll-auto viewport-full-mm w180-mm fixed-mm top left flex-parent-mm flex-parent--stretch-cross-mm">
           <Navigation />
         </div>
-        <div className='ml180-mm limiter w-auto pl60-mm pr60-mm mb60 mt24'>
+        <div className="ml180-mm limiter w-auto pl60-mm pr60-mm mb60 mt24">
           {this.props.children}
         </div>
       </div>

@@ -25,15 +25,15 @@ export default class ExampleInputs extends React.Component {
   render() {
     return (
       <Page>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Input with button
         </h2>
         <HtmlExample code={inputWithButton} />
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Input with icon
         </h2>
         <HtmlExample code={inputWithIcon} />
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Input with spinner
         </h2>
         <HtmlExample code={inputWithSpinner} />

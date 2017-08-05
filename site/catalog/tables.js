@@ -4,12 +4,14 @@ export class Tables extends React.Component {
   render() {
     return (
       <div>
-        <h2 className='mb24 border-b border--2 border--gray-faint pb6 mt60 txt-l txt-bold'>
+        <h2 className="mb24 border-b border--2 border--gray-faint pb6 mt60 txt-l txt-bold">
           Tables
         </h2>
-        <div className='grid grid--gut12'>
-          <div className='col col--4'>
-            <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Unstyled</div>
+        <div className="grid grid--gut12">
+          <div className="col col--4">
+            <div className="mb12 txt-bold color-darken50 txt-uppercase txt-s">
+              Unstyled
+            </div>
             <table>
               <thead>
                 <tr>
@@ -30,9 +32,11 @@ export class Tables extends React.Component {
             </table>
           </div>
 
-          <div className='col col--4'>
-            <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Classed</div>
-            <table className='table mb18'>
+          <div className="col col--4">
+            <div className="mb12 txt-bold color-darken50 txt-uppercase txt-s">
+              Classed
+            </div>
+            <table className="table mb18">
               <thead>
                 <tr>
                   <th>Column 1</th>
@@ -51,7 +55,7 @@ export class Tables extends React.Component {
               </tbody>
             </table>
 
-            <table className='table mb18'>
+            <table className="table mb18">
               <tbody>
                 <tr>
                   <th>Row 1</th>
@@ -71,8 +75,8 @@ export class Tables extends React.Component {
               </tbody>
             </table>
 
-            <div className='bg-gray-dark px12 py12'>
-              <table className='table table--dark mb18'>
+            <div className="bg-gray-dark px12 py12">
+              <table className="table table--dark mb18">
                 <thead>
                   <tr>
                     <th>Column 1</th>
@@ -91,7 +95,7 @@ export class Tables extends React.Component {
                 </tbody>
               </table>
 
-              <table className='table table--dark'>
+              <table className="table table--dark">
                 <tbody>
                   <tr>
                     <th>Row 1</th>
@@ -113,8 +117,10 @@ export class Tables extends React.Component {
             </div>
           </div>
 
-          <div className='col col--4 prose'>
-            <div className='mb12 txt-bold color-darken50 txt-uppercase txt-s'>Inside prose</div>
+          <div className="col col--4 prose">
+            <div className="mb12 txt-bold color-darken50 txt-uppercase txt-s">
+              Inside prose
+            </div>
             <table>
               <thead>
                 <tr>
@@ -154,8 +160,8 @@ export class Tables extends React.Component {
               </tbody>
             </table>
 
-            <div className='bg-gray-dark px12 py12'>
-              <table className='table--dark'>
+            <div className="bg-gray-dark px12 py12">
+              <table className="table--dark">
                 <thead>
                   <tr>
                     <th>Column 1</th>
@@ -174,7 +180,7 @@ export class Tables extends React.Component {
                 </tbody>
               </table>
 
-              <table className='table--dark'>
+              <table className="table--dark">
                 <tbody>
                   <tr>
                     <th>Row 1</th>
@@ -194,9 +200,9 @@ export class Tables extends React.Component {
                 </tbody>
               </table>
             </div>
+          </div>
         </div>
       </div>
-    </div>
     );
   }
 }

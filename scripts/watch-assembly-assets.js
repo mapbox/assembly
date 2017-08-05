@@ -13,9 +13,9 @@ const nodemonProcess = child_process.spawn('node_modules/.bin/nodemon', [
 ]);
 
 nodemonProcess.on('error', handleError);
-nodemonProcess.stdout.on('data', (data) => {
+nodemonProcess.stdout.on('data', data => {
   console.log(data.toString().trim());
 });
-nodemonProcess.stderr.on('data', (data) => {
+nodemonProcess.stderr.on('data', data => {
   console.log(data.toString().trim());
 });
