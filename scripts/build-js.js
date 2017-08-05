@@ -38,8 +38,11 @@ function buildJs(options) {
     .then(data => {
       const allJs = data.join('');
       if (options.unminified) return allJs;
-      const minifiedJs = UglifyJS.minify(allJs, { fromString: true }).code;
-      return optimizeJs(minifiedJs);
+      const uglifyResult = UglifyJS.minify(allJs);
+      if (uglifyResult.error) {
+        throw uglifyResult.error;
+      }
+      return optimizeJs(uglifyResult.code);
     })
     .then(optimizedJs => {
       return pify(mkdirp)(path.dirname(outfile)).then(() => {
