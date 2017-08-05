@@ -9,7 +9,7 @@ import pkg from '../package.json';
 class Navigation extends React.Component {
   getActivePathname() {
     // Remove the first section of the pathname (`/assembly/foo/` becomes `/foo/`).
-    return this.props.location.pathname.replace(/^\/[a-zA-Z0-9\-]*/, '');
+    return this.props.location.pathname.replace(/^\/[a-zA-Z0-9-]*/, '');
   }
 
   render() {
