@@ -85,6 +85,8 @@ exports[`buildMediaVariants defaults 1`] = `
 .flex-parent--row-mm { flex-direction: row !important; }
 .flex-parent--row-reverse-mm { flex-direction: row-reverse !important; }
 .flex-parent--wrap-mm { flex-wrap: wrap !important; }
+.flex-parent--start-cross-mm { align-items: flex-start !important; }
+.flex-parent--start-main-mm { justify-content: flex-start !important; }
 .flex-parent--end-cross-mm { align-items: flex-end !important; }
 .flex-parent--end-main-mm { justify-content: flex-end !important; }
 .flex-parent--center-main-mm { justify-content: center !important; }
@@ -302,6 +304,8 @@ exports[`buildMediaVariants defaults 1`] = `
 .flex-parent--row-ml { flex-direction: row !important; }
 .flex-parent--row-reverse-ml { flex-direction: row-reverse !important; }
 .flex-parent--wrap-ml { flex-wrap: wrap !important; }
+.flex-parent--start-cross-ml { align-items: flex-start !important; }
+.flex-parent--start-main-ml { justify-content: flex-start !important; }
 .flex-parent--end-cross-ml { align-items: flex-end !important; }
 .flex-parent--end-main-ml { justify-content: flex-end !important; }
 .flex-parent--center-main-ml { justify-content: center !important; }
@@ -519,6 +523,8 @@ exports[`buildMediaVariants defaults 1`] = `
 .flex-parent--row-mxl { flex-direction: row !important; }
 .flex-parent--row-reverse-mxl { flex-direction: row-reverse !important; }
 .flex-parent--wrap-mxl { flex-wrap: wrap !important; }
+.flex-parent--start-cross-mxl { align-items: flex-start !important; }
+.flex-parent--start-main-mxl { justify-content: flex-start !important; }
 .flex-parent--end-cross-mxl { align-items: flex-end !important; }
 .flex-parent--end-main-mxl { justify-content: flex-end !important; }
 .flex-parent--center-main-mxl { justify-content: center !important; }

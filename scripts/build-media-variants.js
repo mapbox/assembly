@@ -87,6 +87,8 @@ const targetClassArray = [
   'flex-parent--row',
   'flex-parent--row-reverse',
   'flex-parent--wrap',
+  'flex-parent--start-cross',
+  'flex-parent--start-main',
   'flex-parent--end-cross',
   'flex-parent--end-main',
   'flex-parent--center-main',
