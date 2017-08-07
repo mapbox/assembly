@@ -7,11 +7,10 @@
     "precommit": "lint-staged",
     "format": "prettier --single-quote --write \"{,scripts/**/,site/**/,src/**/,test/**/}*.js\"",
     "deploy": "npm run build && node scripts/deploy",
-    "copy-site-assets": "node scripts/copy-site-assets",
     "clean-svgs": "node scripts/clean-svgs",
     "check-size": "node scripts/check-size",
     "generate-css": "node scripts/build-color-variants.js && node scripts/build-layout-scales.js",
-    "generate-site-data": "rm -rf _tmp_assembly && npm run copy-site-assets && npm run build-icon-json && npm run build-navigation-json",
+    "generate-site-data": "rm -rf _tmp_assembly && npm run build-icon-json && npm run build-navigation-json",
     "build-icon-json": "node scripts/build-icon-json.js",
     "build-navigation-json": "node scripts/build-navigation-json.js",
     "build:site": "npm run build:css && npm run build:js && npm run generate-site-data && batfish build",
@@ -64,7 +63,7 @@
     "uglify-js": "^3.0.27"
   },
   "devDependencies": {
-    "@mapbox/batfish": "^0.9.0",
+    "@mapbox/batfish": "^0.9.1",
     "aws-sdk": "^2.94.0",
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.2.3",
