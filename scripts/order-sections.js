@@ -4,7 +4,7 @@ const _ = require('lodash');
 
 function orderSections(entries) {
   function getSection(title) {
-    const sectionEntry = entries.find((entry) => {
+    const sectionEntry = entries.find(entry => {
       if (!entry.title) return false;
       return entry.title.toLowerCase() === title.toLowerCase();
     });
@@ -34,7 +34,7 @@ function orderSections(entries) {
     getSection('tables'),
     getSection('animations'),
     getSection('triangles'),
-    getSection('miscellaneous'),
+    getSection('miscellaneous')
   ];
 
   return sections;

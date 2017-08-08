@@ -32,16 +32,15 @@ const floatingSidebar = `<div class='viewport-full relative clip'>
   </div>
 </div>`;
 
-
 export default class ExampleSidebarApps extends React.Component {
   render() {
     return (
       <Page>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Full height sidebar
         </h2>
         <HtmlExample code={basicSidebar} />
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Floating full height sidebar
         </h2>
         <HtmlExample code={floatingSidebar} />

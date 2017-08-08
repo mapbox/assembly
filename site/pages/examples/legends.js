@@ -68,14 +68,14 @@ export default class ExampleLegends extends React.Component {
   render() {
     return (
       <Page>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Legend with bars
         </h2>
-        <div className='mb24'>
+        <div className="mb24">
           <HtmlExample code={basicLegend} />
         </div>
         <HtmlExample code={basicLegendTwo} />
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Legend with varying radius
         </h2>
         <HtmlExample code={radiusLegend} />
