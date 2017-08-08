@@ -2,7 +2,7 @@
 
 ## Head
 
-- [breaking] Changed browser support list more precisely reflect our intentions:
+- [breaking] Changed browser support list to more precisely reflect our intentions:
   - last 4 Chrome versions
   - last 4 Firefox versions
   - last 4 Safari versions
