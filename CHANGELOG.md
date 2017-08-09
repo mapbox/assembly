@@ -3,6 +3,7 @@
 ## Head
 
 - [add] Add `-webkit-overflow-scrolling: touch` to `scroll-auto` for momentum scrolling on iOS.
+- [fix] Set `display: block` on the `main` tag, fixing possible bugs in IE.
 - [breaking] Changed browser support list to more precisely reflect our intentions:
   - last 4 Chrome versions
   - last 4 Firefox versions
