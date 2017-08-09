@@ -630,7 +630,7 @@ textarea{
   pointer-events:none;
   color:rgba(127, 127, 127, 0.45) !important;
   background-color:rgba(127, 127, 127, 0.25) !important;
-  border-color:transparent !important;
+  box-shadow:none !important;
 }
 .btn--pill-stroke{
   position:relative;
@@ -13167,7 +13167,7 @@ textarea{
   pointer-events:none;
   color:rgba(127, 127, 127, 0.45) !important;
   background-color:rgba(127, 127, 127, 0.25) !important;
-  border-color:transparent !important;
+  box-shadow:none !important;
 }
 .btn--pill-stroke{
   position:relative;
