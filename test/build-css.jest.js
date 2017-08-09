@@ -28,10 +28,10 @@ function discardComments(css) {
 
 describe('buildCss', () => {
   test('defaults', () => {
-    const tmp =  `${getTmp()}/test.css`;
+    const tmp = `${getTmp()}/test.css`;
     return buildCss({ outfile: tmp, quiet: true })
       .then(() => pify(fs.readFile)(tmp, 'utf8'))
-      .then((css) => {
+      .then(css => {
         expect(discardComments(css)).toMatchSnapshot();
       })
       .then(() => cleanup(tmp));
@@ -42,28 +42,28 @@ describe('buildCss', () => {
       outfile: `${getTmp()}/test2.css`,
       files: [
         path.join(__dirname, './fixtures/b.css'),
-        path.join(__dirname, './fixtures/a.css'),
+        path.join(__dirname, './fixtures/a.css')
       ],
       variables: {
         'blue-dark': '#223B53',
-        'blue': '#3887BE',
+        blue: '#3887BE',
         'blue-light': '#52A1D8',
         'blue-faint': '#F4F7FB',
-        'beige': '#FFF8DC' // New color
+        beige: '#FFF8DC' // New color
       },
       mediaQueries: {
         '--l-screen': 'screen and (min-width: 760px)',
         '--ms-screen': '(min-width: 433px)' // New media query
       },
       colorVariants: {
-        'range': ['blue-faint']
+        range: ['blue-faint']
       },
       quiet: true
     };
 
     return buildCss(options)
       .then(() => pify(fs.readFile)(options.outfile, 'utf8'))
-      .then((css) => {
+      .then(css => {
         expect(discardComments(css)).toMatchSnapshot();
       })
       .then(() => cleanup(options.outfile));

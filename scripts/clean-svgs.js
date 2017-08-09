@@ -6,10 +6,11 @@ const xml2js = require('xml2js');
 const parseString = xml2js.parseString;
 
 fs.readdir('./src/svgs/', (err, files) => {
-  const svgFiles = files.filter((file) =>
-    file.split('.').pop().indexOf('svg') !== -1);
+  const svgFiles = files.filter(
+    file => file.split('.').pop().indexOf('svg') !== -1
+  );
 
-  svgFiles.forEach((fileName) => {
+  svgFiles.forEach(fileName => {
     fs.readFile('./src/svgs/' + fileName, 'utf8', (err, file) => {
       if (err) return console.error(err);
       parseString(file, (err, parsed) => {
@@ -27,29 +28,26 @@ function cleanSvg(svg, fileName) {
   delete svg['sodipodi:namedview'];
 
   // Remove all properties but viewbox from svg.
-  Object.keys(svg.$).forEach((k) => {
+  Object.keys(svg.$).forEach(k => {
     if (k !== 'viewBox') delete svg.$[k];
   });
 
   function cleanPaths(path) {
-    path.forEach((p) => {
-
+    path.forEach(p => {
       // Remove all properties but d from paths.
       if (p.$ && Object.keys(p.$).length) {
-        Object.keys(p.$).forEach((k) => {
+        Object.keys(p.$).forEach(k => {
           if (k !== 'd') delete p.$[k];
         });
       }
-
     });
   }
 
   function cleanGroups(group) {
-    group.forEach((g) => {
-
+    group.forEach(g => {
       if (g.$ && Object.keys(g.$).length) {
         // Remove all properties from groups
-        Object.keys(g.$).forEach((k) => {
+        Object.keys(g.$).forEach(k => {
           delete g.$[k];
         });
       }
@@ -61,7 +59,6 @@ function cleanSvg(svg, fileName) {
       if (g.g) {
         cleanGroups(g.g);
       }
-
     });
   }
 
@@ -74,7 +71,7 @@ function cleanSvg(svg, fileName) {
   });
   const xml = builder.buildObject(svg);
 
-  fs.writeFile('./src/svgs/' + fileName, xml, 'utf8', (err) => {
+  fs.writeFile('./src/svgs/' + fileName, xml, 'utf8', err => {
     if (err) return console.error(err);
     console.log(`cleaned ${fileName}`);
   });

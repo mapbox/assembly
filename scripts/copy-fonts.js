@@ -22,10 +22,12 @@ function copyFonts(options) {
 
   return pify(mkdirp)(outdir)
     .then(() => globby(fontsGlob))
-    .then((fontFiles) => {
-      return Promise.all(fontFiles.map((file) => {
-        return copyFile(file, outdir);
-      }));
+    .then(fontFiles => {
+      return Promise.all(
+        fontFiles.map(file => {
+          return copyFile(file, outdir);
+        })
+      );
     })
     .then(() => {
       if (!options.quiet) timelog('Done copying fonts');
@@ -35,5 +37,5 @@ function copyFonts(options) {
 module.exports = copyFonts;
 
 if (require.main === module) {
-  copyFonts().catch((err) => console.error(err.stack));
+  copyFonts().catch(err => console.error(err.stack));
 }

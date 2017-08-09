@@ -18,7 +18,7 @@ const svgo = new SVGO({
   ]
 });
 
-const baseJsTemplate = (options) => {
+const baseJsTemplate = options => {
   return `
     (function () {
       var Assembly = window.Assembly = window.Assembly || {};
@@ -44,7 +44,7 @@ function processSvgFile(filename) {
     if (extname !== '.svg') return resolve();
 
     const basename = path.basename(filename, extname);
-    const handleError = (err) => {
+    const handleError = err => {
       console.log(`Error with icon "${basename}"`);
       reject(err);
     };
@@ -52,7 +52,7 @@ function processSvgFile(filename) {
     fs.readFile(filename, 'utf8', (readError, content) => {
       if (readError) return handleError(readError);
       try {
-        svgo.optimize(content, (optimizedContent) => {
+        svgo.optimize(content, optimizedContent => {
           try {
             spriteItems.push({
               id: `icon-${basename}`,
@@ -80,29 +80,33 @@ function buildSvgLoader(icons) {
   const sprite = svgstore();
 
   return pify(fs.readdir)(svgDir)
-    .then((filenames) => {
-
+    .then(filenames => {
       // Error if user tries to include icons that don't exist
-      icons.forEach((svg) => {
+      icons.forEach(svg => {
         if (!filenames.includes(svg + '.svg')) {
           throw new Error(`an icon matching ${svg} does not exist`);
         }
       });
 
-      const files = (icons.length !== 0)
-        ? filenames.filter((f) => icons.includes(f.split('.svg')[0]))
-        : filenames;
+      const files =
+        icons.length !== 0
+          ? filenames.filter(f => icons.includes(f.split('.svg')[0]))
+          : filenames;
 
-      return Promise.all(files.map((filename) => {
-        return processSvgFile(path.join(svgDir, filename), sprite);
-      }));
-
+      return Promise.all(
+        files.map(filename => {
+          return processSvgFile(path.join(svgDir, filename), sprite);
+        })
+      );
     })
     .then(() => {
       // This sorting is necessary to get a detemrinistic
       // order testable with snapshots
-      _.sortBy(spriteItems, 'id').forEach((item) => sprite.add(item.id, item.svg));
-      sprite.element('svg')
+      _.sortBy(spriteItems, 'id').forEach(item =>
+        sprite.add(item.id, item.svg)
+      );
+      sprite
+        .element('svg')
         .attr('id', 'svg-symbols')
         .attr('style', 'display:none');
 
@@ -114,5 +118,5 @@ function buildSvgLoader(icons) {
 
 module.exports = buildSvgLoader;
 if (require.main === module) {
-  buildSvgLoader().catch((err) => console.error(err.stack));
+  buildSvgLoader().catch(err => console.error(err.stack));
 }

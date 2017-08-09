@@ -11,11 +11,7 @@ const path = require('path');
 const postcss = require('postcss');
 
 // These are the files we'll read for the target classes.
-const targetFiles = [
-  'layout',
-  'theming',
-  'typography'
-];
+const targetFiles = ['layout', 'theming', 'typography'];
 
 // These are the classes we'll build media variants for.
 const targetClassArray = [
@@ -91,6 +87,8 @@ const targetClassArray = [
   'flex-parent--row',
   'flex-parent--row-reverse',
   'flex-parent--wrap',
+  'flex-parent--start-cross',
+  'flex-parent--start-main',
   'flex-parent--end-cross',
   'flex-parent--end-main',
   'flex-parent--center-main',
@@ -181,11 +179,11 @@ function buildMediaVariants() {
   const classesRemaining = new Set(targetClasses);
 
   function findRules(root) {
-    root.walkRules((rule) => {
+    root.walkRules(rule => {
       const className = rule.selector.replace(/^\./, '');
       if (!targetClasses.has(className)) return;
       classesRemaining.delete(className);
-      Object.keys(screens).forEach((screenSize) => {
+      Object.keys(screens).forEach(screenSize => {
         const mediaRule = rule.clone({
           selector: `${rule.selector}-m${screenSize}`
         });
@@ -194,27 +192,36 @@ function buildMediaVariants() {
     });
   }
 
-  const findRulesInTargetFiles = targetFiles.map((targetFile) => {
+  const findRulesInTargetFiles = targetFiles.map(targetFile => {
     const filePath = path.join(__dirname, `../src/${targetFile}.css`);
-    return pify(fs.readFile)(filePath, 'utf8').then((css) => {
+    return pify(fs.readFile)(filePath, 'utf8').then(css => {
       return postcss().use(findRules).process(css);
     });
   });
 
   return Promise.all(findRulesInTargetFiles).then(() => {
     if (classesRemaining.size > 0) {
-      throw new Error(`The following classes were not found: ${Array.from(classesRemaining).join(', ')}`);
+      throw new Error(
+        `The following classes were not found: ${Array.from(
+          classesRemaining
+        ).join(', ')}`
+      );
     }
 
     let result = '';
-    Object.keys(screens).forEach((screenSize) => {
-      const mediaAtRule = postcss.atRule({ name: 'media', params: `(--${screenSize}-screen)` });
+    Object.keys(screens).forEach(screenSize => {
+      const mediaAtRule = postcss.atRule({
+        name: 'media',
+        params: `(--${screenSize}-screen)`
+      });
       // Sort the rules so the output is deterministic, despite async file reading
-      const sortedRules = _.sortBy(screens[screenSize], (rule) => {
-        const suffixlessClassName = rule.selector.replace(/-m[mlx]{1,2}$/, '').replace(/^\./, '');
+      const sortedRules = _.sortBy(screens[screenSize], rule => {
+        const suffixlessClassName = rule.selector
+          .replace(/-m[mlx]{1,2}$/, '')
+          .replace(/^\./, '');
         return targetClassArray.indexOf(suffixlessClassName);
       });
-      sortedRules.forEach((rule) => {
+      sortedRules.forEach(rule => {
         mediaAtRule.append(rule);
       });
       result += mediaAtRule.toString() + '\n\n';

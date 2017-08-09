@@ -16,11 +16,12 @@ export class Checkboxes extends React.Component {
   render() {
     const checkmark = (
       <svg
-       className='icon'
-       dangerouslySetInnerHTML={{ __html: '<use xlink:href="#icon-check"></use>' }}
-     >
-     </svg>
-   );
+        className="icon"
+        dangerouslySetInnerHTML={{
+          __html: '<use xlink:href="#icon-check"></use>'
+        }}
+      />
+    );
 
     const checkboxes = colors.map((color, i) => {
       let checkboxClass = 'checkbox mr6';
@@ -29,19 +30,15 @@ export class Checkboxes extends React.Component {
       }
 
       return (
-        <div key={i} className='mb12'>
-          <label className='checkbox-container mr12'>
-            <input type='checkbox' />
-            <div className={checkboxClass}>
-              {checkmark}
-            </div>
+        <div key={i} className="mb12">
+          <label className="checkbox-container mr12">
+            <input type="checkbox" />
+            <div className={checkboxClass}>{checkmark}</div>
             Check me
           </label>
-          <label className='checkbox-container'>
-            <input checked disabled type='checkbox' />
-            <div className={checkboxClass}>
-              {checkmark}
-            </div>
+          <label className="checkbox-container">
+            <input checked disabled type="checkbox" />
+            <div className={checkboxClass}>{checkmark}</div>
             Check me
           </label>
         </div>
@@ -50,17 +47,16 @@ export class Checkboxes extends React.Component {
 
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Checkboxes
         </h2>
 
-        <div className='mb12'>
-          <input id='checkbox-unstyled' type='checkbox' />
-          <label htmlFor='checkbox-unstyled'>Unstyled</label>
+        <div className="mb12">
+          <input id="checkbox-unstyled" type="checkbox" />
+          <label htmlFor="checkbox-unstyled">Unstyled</label>
         </div>
 
         {checkboxes}
-
       </div>
     );
   }

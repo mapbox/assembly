@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.17.0
+
+- [style change] Removed border from disabled buttons.
+- [add] Add `-webkit-overflow-scrolling: touch` to `scroll-auto` for momentum scrolling on iOS.
+- [fix] Set `display: block` on the `main` tag, fixing possible bugs in IE.
+- [breaking] Changed browser support list to more precisely reflect our intentions:
+  - last 4 Chrome versions
+  - last 4 Firefox versions
+  - last 4 Safari versions
+  - iOS >= 7
+  - Android >= 4.4
+  - IE >= 11
+- [breaking] Update to PostCSS 6. If you are using a custom build, this might affect you, especially if you use a custom `browsersList` value, because Browserslist 2 (dependency of PostCSS 6) involves some breaking changes (usually it means you will end up supporting more browsers than you intended).
+
 ## 0.16.0
 
 - Add mobile conditions for `events-{none|all}`

@@ -8,6 +8,8 @@
  * Style scrollbars. Only works in Webkit-based browsers (Safari and Chrome).
  * On dark backgrounds, add the `scroll-styled--dark` modifier.
  *
+ * **Use in combination with `scroll-auto`.**
+ *
  * @memberof Miscellaneous
    @selectors .scroll-styled
  * @example
@@ -233,6 +235,7 @@
  */
 .scroll-auto {
   overflow: auto !important;
+  -webkit-overflow-scrolling: touch;
 }
 
 /**
