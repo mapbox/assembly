@@ -129,7 +129,7 @@
   pointer-events: none;
   color: var(--inactive-text-color) !important;
   background-color: var(--disabled-primary-interactive-color) !important;
-  border-color: transparent !important;
+  box-shadow: none !important;
 }
 
 /**
