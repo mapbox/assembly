@@ -8326,6 +8326,7 @@ input:checked:disabled + .toggle{
 }
 .scroll-auto{
   overflow:auto !important;
+  -webkit-overflow-scrolling:touch;
 }
 .clip{
   overflow:hidden !important;
@@ -20854,6 +20855,7 @@ input:checked:disabled + .toggle{
 }
 .scroll-auto{
   overflow:auto !important;
+  -webkit-overflow-scrolling:touch;
 }
 .clip{
   overflow:hidden !important;
