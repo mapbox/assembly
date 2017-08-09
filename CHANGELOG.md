@@ -1,7 +1,8 @@
 # Changelog
 
-## Head
+## 0.17.0
 
+- [style change] Removed border from disabled buttons.
 - [add] Add `-webkit-overflow-scrolling: touch` to `scroll-auto` for momentum scrolling on iOS.
 - [fix] Set `display: block` on the `main` tag, fixing possible bugs in IE.
 - [breaking] Changed browser support list to more precisely reflect our intentions:
