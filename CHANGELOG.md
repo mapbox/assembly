@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.17.1
+
+- [fix] Let the `<label>` element within a `.switch-container` change the pseudo state of the entire switch component.
+- [add] `CODE_OF_CONDUCT.md`.
+
 ## 0.17.0
 
 - [style change] Removed border from disabled buttons.
