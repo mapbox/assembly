@@ -328,7 +328,7 @@ function buildColorVariants(variables, config) {
           color: var(--${color});
         }
 
-        .switch--${color}:hover {
+        .switch-container:hover > .switch--${color} {
           color: var(--${darkerShade});
         }
 
@@ -337,7 +337,7 @@ function buildColorVariants(variables, config) {
           background-color: var(--${darkerShade});
         }
 
-        input:checked + .switch--dot-${color}::after {
+        .switch-container:hover > input:checked + .switch--${color} {
           background-color: var(--${color});
         }
       `));

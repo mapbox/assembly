@@ -924,7 +924,7 @@ input:checked + .checkbox {
 }
 
 /* state management for switches */
-.switch:hover {
+.switch-container:hover > .switch {
   color: var(--default-primary-interactive-color);
 }
 

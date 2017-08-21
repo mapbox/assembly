@@ -1243,7 +1243,7 @@ input:checked + .checkbox{
 .checkbox-container:hover > input:checked + .checkbox{
   background-color:#346db0;
 }
-.switch:hover{
+.switch-container:hover > .switch{
   color:#448ee4;
 }
 
@@ -9977,7 +9977,7 @@ input:checked + .toggle--active-transparent{
   color:#666;
 }
 
-.switch--gray:hover{
+.switch-container:hover > .switch--gray{
   color:#2d2d2d;
 }
 
@@ -9986,7 +9986,7 @@ input:checked + .switch--gray{
   background-color:#2d2d2d;
 }
 
-input:checked + .switch--dot-gray::after{
+.switch-container:hover > input:checked + .switch--gray{
   background-color:#666;
 }
 
@@ -9994,7 +9994,7 @@ input:checked + .switch--dot-gray::after{
   color:#ff3c96;
 }
 
-.switch--pink:hover{
+.switch-container:hover > .switch--pink{
   color:#ab084b;
 }
 
@@ -10003,7 +10003,7 @@ input:checked + .switch--pink{
   background-color:#ab084b;
 }
 
-input:checked + .switch--dot-pink::after{
+.switch-container:hover > input:checked + .switch--pink{
   background-color:#ff3c96;
 }
 
@@ -10011,7 +10011,7 @@ input:checked + .switch--dot-pink::after{
   color:#dc2b28;
 }
 
-.switch--red:hover{
+.switch-container:hover > .switch--red{
   color:#a30003;
 }
 
@@ -10020,7 +10020,7 @@ input:checked + .switch--red{
   background-color:#a30003;
 }
 
-input:checked + .switch--dot-red::after{
+.switch-container:hover > input:checked + .switch--red{
   background-color:#dc2b28;
 }
 
@@ -10028,7 +10028,7 @@ input:checked + .switch--dot-red::after{
   color:#ff6e00;
 }
 
-.switch--orange:hover{
+.switch-container:hover > .switch--orange{
   color:#bc3a00;
 }
 
@@ -10037,7 +10037,7 @@ input:checked + .switch--orange{
   background-color:#bc3a00;
 }
 
-input:checked + .switch--dot-orange::after{
+.switch-container:hover > input:checked + .switch--orange{
   background-color:#ff6e00;
 }
 
@@ -10045,7 +10045,7 @@ input:checked + .switch--dot-orange::after{
   color:#f0dc00;
 }
 
-.switch--yellow:hover{
+.switch-container:hover > .switch--yellow{
   color:#d9a100;
 }
 
@@ -10054,7 +10054,7 @@ input:checked + .switch--yellow{
   background-color:#d9a100;
 }
 
-input:checked + .switch--dot-yellow::after{
+.switch-container:hover > input:checked + .switch--yellow{
   background-color:#f0dc00;
 }
 
@@ -10062,7 +10062,7 @@ input:checked + .switch--dot-yellow::after{
   color:#01aa46;
 }
 
-.switch--green:hover{
+.switch-container:hover > .switch--green{
   color:#006427;
 }
 
@@ -10071,7 +10071,7 @@ input:checked + .switch--green{
   background-color:#006427;
 }
 
-input:checked + .switch--dot-green::after{
+.switch-container:hover > input:checked + .switch--green{
   background-color:#01aa46;
 }
 
@@ -10079,7 +10079,7 @@ input:checked + .switch--dot-green::after{
   color:#3887BE;
 }
 
-.switch--blue:hover{
+.switch-container:hover > .switch--blue{
   color:#223B53;
 }
 
@@ -10088,7 +10088,7 @@ input:checked + .switch--blue{
   background-color:#223B53;
 }
 
-input:checked + .switch--dot-blue::after{
+.switch-container:hover > input:checked + .switch--blue{
   background-color:#3887BE;
 }
 
@@ -10096,7 +10096,7 @@ input:checked + .switch--dot-blue::after{
   color:#8c50c7;
 }
 
-.switch--purple:hover{
+.switch-container:hover > .switch--purple{
   color:#440067;
 }
 
@@ -10105,7 +10105,7 @@ input:checked + .switch--purple{
   background-color:#440067;
 }
 
-input:checked + .switch--dot-purple::after{
+.switch-container:hover > input:checked + .switch--purple{
   background-color:#8c50c7;
 }
 
@@ -10113,7 +10113,7 @@ input:checked + .switch--dot-purple::after{
   color:rgba(0, 0, 0, 0.25);
 }
 
-.switch--darken25:hover{
+.switch-container:hover > .switch--darken25{
   color:rgba(0, 0, 0, 0.5);
 }
 
@@ -10122,7 +10122,7 @@ input:checked + .switch--darken25{
   background-color:rgba(0, 0, 0, 0.5);
 }
 
-input:checked + .switch--dot-darken25::after{
+.switch-container:hover > input:checked + .switch--darken25{
   background-color:rgba(0, 0, 0, 0.25);
 }
 
@@ -10130,7 +10130,7 @@ input:checked + .switch--dot-darken25::after{
   color:rgba(0, 0, 0, 0.5);
 }
 
-.switch--darken50:hover{
+.switch-container:hover > .switch--darken50{
   color:rgba(0, 0, 0, 0.75);
 }
 
@@ -10139,7 +10139,7 @@ input:checked + .switch--darken50{
   background-color:rgba(0, 0, 0, 0.75);
 }
 
-input:checked + .switch--dot-darken50::after{
+.switch-container:hover > input:checked + .switch--darken50{
   background-color:rgba(0, 0, 0, 0.5);
 }
 
@@ -10147,7 +10147,7 @@ input:checked + .switch--dot-darken50::after{
   color:rgba(0, 0, 0, 0.75);
 }
 
-.switch--darken75:hover{
+.switch-container:hover > .switch--darken75{
   color:#000;
 }
 
@@ -10156,7 +10156,7 @@ input:checked + .switch--darken75{
   background-color:#000;
 }
 
-input:checked + .switch--dot-darken75::after{
+.switch-container:hover > input:checked + .switch--darken75{
   background-color:rgba(0, 0, 0, 0.75);
 }
 
@@ -10164,7 +10164,7 @@ input:checked + .switch--dot-darken75::after{
   color:rgba(255, 255, 255, 0.25);
 }
 
-.switch--lighten25:hover{
+.switch-container:hover > .switch--lighten25{
   color:rgba(255, 255, 255, 0.5);
 }
 
@@ -10173,7 +10173,7 @@ input:checked + .switch--lighten25{
   background-color:rgba(255, 255, 255, 0.5);
 }
 
-input:checked + .switch--dot-lighten25::after{
+.switch-container:hover > input:checked + .switch--lighten25{
   background-color:rgba(255, 255, 255, 0.25);
 }
 
@@ -10181,7 +10181,7 @@ input:checked + .switch--dot-lighten25::after{
   color:rgba(255, 255, 255, 0.5);
 }
 
-.switch--lighten50:hover{
+.switch-container:hover > .switch--lighten50{
   color:rgba(255, 255, 255, 0.75);
 }
 
@@ -10190,7 +10190,7 @@ input:checked + .switch--lighten50{
   background-color:rgba(255, 255, 255, 0.75);
 }
 
-input:checked + .switch--dot-lighten50::after{
+.switch-container:hover > input:checked + .switch--lighten50{
   background-color:rgba(255, 255, 255, 0.5);
 }
 
@@ -10198,7 +10198,7 @@ input:checked + .switch--dot-lighten50::after{
   color:rgba(255, 255, 255, 0.75);
 }
 
-.switch--lighten75:hover{
+.switch-container:hover > .switch--lighten75{
   color:#fff;
 }
 
@@ -10207,7 +10207,7 @@ input:checked + .switch--lighten75{
   background-color:#fff;
 }
 
-input:checked + .switch--dot-lighten75::after{
+.switch-container:hover > input:checked + .switch--lighten75{
   background-color:rgba(255, 255, 255, 0.75);
 }
 
@@ -10215,7 +10215,7 @@ input:checked + .switch--dot-lighten75::after{
   color:#fff;
 }
 
-.switch--white:hover{
+.switch-container:hover > .switch--white{
   color:rgba(255, 255, 255, 0.75);
 }
 
@@ -10224,7 +10224,7 @@ input:checked + .switch--white{
   background-color:rgba(255, 255, 255, 0.75);
 }
 
-input:checked + .switch--dot-white::after{
+.switch-container:hover > input:checked + .switch--white{
   background-color:#fff;
 }
 
@@ -10232,7 +10232,7 @@ input:checked + .switch--dot-white::after{
   color:transparent;
 }
 
-.switch--transparent:hover{
+.switch-container:hover > .switch--transparent{
   color:rgba(0, 0, 0, 0.1);
 }
 
@@ -10241,7 +10241,7 @@ input:checked + .switch--transparent{
   background-color:rgba(0, 0, 0, 0.1);
 }
 
-input:checked + .switch--dot-transparent::after{
+.switch-container:hover > input:checked + .switch--transparent{
   background-color:transparent;
 }
 .color-gray-dark{
@@ -13780,7 +13780,7 @@ input:checked + .checkbox{
 .checkbox-container:hover > input:checked + .checkbox{
   background-color:#346db0;
 }
-.switch:hover{
+.switch-container:hover > .switch{
   color:#448ee4;
 }
 
@@ -22500,7 +22500,7 @@ input:checked + .toggle--active-transparent{
   color:#666;
 }
 
-.switch--gray:hover{
+.switch-container:hover > .switch--gray{
   color:#2d2d2d;
 }
 
@@ -22509,7 +22509,7 @@ input:checked + .switch--gray{
   background-color:#2d2d2d;
 }
 
-input:checked + .switch--dot-gray::after{
+.switch-container:hover > input:checked + .switch--gray{
   background-color:#666;
 }
 
@@ -22517,7 +22517,7 @@ input:checked + .switch--dot-gray::after{
   color:#ff3c96;
 }
 
-.switch--pink:hover{
+.switch-container:hover > .switch--pink{
   color:#ab084b;
 }
 
@@ -22526,7 +22526,7 @@ input:checked + .switch--pink{
   background-color:#ab084b;
 }
 
-input:checked + .switch--dot-pink::after{
+.switch-container:hover > input:checked + .switch--pink{
   background-color:#ff3c96;
 }
 
@@ -22534,7 +22534,7 @@ input:checked + .switch--dot-pink::after{
   color:#dc2b28;
 }
 
-.switch--red:hover{
+.switch-container:hover > .switch--red{
   color:#a30003;
 }
 
@@ -22543,7 +22543,7 @@ input:checked + .switch--red{
   background-color:#a30003;
 }
 
-input:checked + .switch--dot-red::after{
+.switch-container:hover > input:checked + .switch--red{
   background-color:#dc2b28;
 }
 
@@ -22551,7 +22551,7 @@ input:checked + .switch--dot-red::after{
   color:#ff6e00;
 }
 
-.switch--orange:hover{
+.switch-container:hover > .switch--orange{
   color:#bc3a00;
 }
 
@@ -22560,7 +22560,7 @@ input:checked + .switch--orange{
   background-color:#bc3a00;
 }
 
-input:checked + .switch--dot-orange::after{
+.switch-container:hover > input:checked + .switch--orange{
   background-color:#ff6e00;
 }
 
@@ -22568,7 +22568,7 @@ input:checked + .switch--dot-orange::after{
   color:#f0dc00;
 }
 
-.switch--yellow:hover{
+.switch-container:hover > .switch--yellow{
   color:#d9a100;
 }
 
@@ -22577,7 +22577,7 @@ input:checked + .switch--yellow{
   background-color:#d9a100;
 }
 
-input:checked + .switch--dot-yellow::after{
+.switch-container:hover > input:checked + .switch--yellow{
   background-color:#f0dc00;
 }
 
@@ -22585,7 +22585,7 @@ input:checked + .switch--dot-yellow::after{
   color:#01aa46;
 }
 
-.switch--green:hover{
+.switch-container:hover > .switch--green{
   color:#006427;
 }
 
@@ -22594,7 +22594,7 @@ input:checked + .switch--green{
   background-color:#006427;
 }
 
-input:checked + .switch--dot-green::after{
+.switch-container:hover > input:checked + .switch--green{
   background-color:#01aa46;
 }
 
@@ -22602,7 +22602,7 @@ input:checked + .switch--dot-green::after{
   color:#448ee4;
 }
 
-.switch--blue:hover{
+.switch-container:hover > .switch--blue{
   color:#295b97;
 }
 
@@ -22611,7 +22611,7 @@ input:checked + .switch--blue{
   background-color:#295b97;
 }
 
-input:checked + .switch--dot-blue::after{
+.switch-container:hover > input:checked + .switch--blue{
   background-color:#448ee4;
 }
 
@@ -22619,7 +22619,7 @@ input:checked + .switch--dot-blue::after{
   color:#8c50c7;
 }
 
-.switch--purple:hover{
+.switch-container:hover > .switch--purple{
   color:#440067;
 }
 
@@ -22628,7 +22628,7 @@ input:checked + .switch--purple{
   background-color:#440067;
 }
 
-input:checked + .switch--dot-purple::after{
+.switch-container:hover > input:checked + .switch--purple{
   background-color:#8c50c7;
 }
 
@@ -22636,7 +22636,7 @@ input:checked + .switch--dot-purple::after{
   color:rgba(0, 0, 0, 0.25);
 }
 
-.switch--darken25:hover{
+.switch-container:hover > .switch--darken25{
   color:rgba(0, 0, 0, 0.5);
 }
 
@@ -22645,7 +22645,7 @@ input:checked + .switch--darken25{
   background-color:rgba(0, 0, 0, 0.5);
 }
 
-input:checked + .switch--dot-darken25::after{
+.switch-container:hover > input:checked + .switch--darken25{
   background-color:rgba(0, 0, 0, 0.25);
 }
 
@@ -22653,7 +22653,7 @@ input:checked + .switch--dot-darken25::after{
   color:rgba(0, 0, 0, 0.5);
 }
 
-.switch--darken50:hover{
+.switch-container:hover > .switch--darken50{
   color:rgba(0, 0, 0, 0.75);
 }
 
@@ -22662,7 +22662,7 @@ input:checked + .switch--darken50{
   background-color:rgba(0, 0, 0, 0.75);
 }
 
-input:checked + .switch--dot-darken50::after{
+.switch-container:hover > input:checked + .switch--darken50{
   background-color:rgba(0, 0, 0, 0.5);
 }
 
@@ -22670,7 +22670,7 @@ input:checked + .switch--dot-darken50::after{
   color:rgba(0, 0, 0, 0.75);
 }
 
-.switch--darken75:hover{
+.switch-container:hover > .switch--darken75{
   color:#000;
 }
 
@@ -22679,7 +22679,7 @@ input:checked + .switch--darken75{
   background-color:#000;
 }
 
-input:checked + .switch--dot-darken75::after{
+.switch-container:hover > input:checked + .switch--darken75{
   background-color:rgba(0, 0, 0, 0.75);
 }
 
@@ -22687,7 +22687,7 @@ input:checked + .switch--dot-darken75::after{
   color:rgba(255, 255, 255, 0.25);
 }
 
-.switch--lighten25:hover{
+.switch-container:hover > .switch--lighten25{
   color:rgba(255, 255, 255, 0.5);
 }
 
@@ -22696,7 +22696,7 @@ input:checked + .switch--lighten25{
   background-color:rgba(255, 255, 255, 0.5);
 }
 
-input:checked + .switch--dot-lighten25::after{
+.switch-container:hover > input:checked + .switch--lighten25{
   background-color:rgba(255, 255, 255, 0.25);
 }
 
@@ -22704,7 +22704,7 @@ input:checked + .switch--dot-lighten25::after{
   color:rgba(255, 255, 255, 0.5);
 }
 
-.switch--lighten50:hover{
+.switch-container:hover > .switch--lighten50{
   color:rgba(255, 255, 255, 0.75);
 }
 
@@ -22713,7 +22713,7 @@ input:checked + .switch--lighten50{
   background-color:rgba(255, 255, 255, 0.75);
 }
 
-input:checked + .switch--dot-lighten50::after{
+.switch-container:hover > input:checked + .switch--lighten50{
   background-color:rgba(255, 255, 255, 0.5);
 }
 
@@ -22721,7 +22721,7 @@ input:checked + .switch--dot-lighten50::after{
   color:rgba(255, 255, 255, 0.75);
 }
 
-.switch--lighten75:hover{
+.switch-container:hover > .switch--lighten75{
   color:#fff;
 }
 
@@ -22730,7 +22730,7 @@ input:checked + .switch--lighten75{
   background-color:#fff;
 }
 
-input:checked + .switch--dot-lighten75::after{
+.switch-container:hover > input:checked + .switch--lighten75{
   background-color:rgba(255, 255, 255, 0.75);
 }
 
@@ -22738,7 +22738,7 @@ input:checked + .switch--dot-lighten75::after{
   color:#fff;
 }
 
-.switch--white:hover{
+.switch-container:hover > .switch--white{
   color:rgba(255, 255, 255, 0.75);
 }
 
@@ -22747,7 +22747,7 @@ input:checked + .switch--white{
   background-color:rgba(255, 255, 255, 0.75);
 }
 
-input:checked + .switch--dot-white::after{
+.switch-container:hover > input:checked + .switch--white{
   background-color:#fff;
 }
 
@@ -22755,7 +22755,7 @@ input:checked + .switch--dot-white::after{
   color:transparent;
 }
 
-.switch--transparent:hover{
+.switch-container:hover > .switch--transparent{
   color:rgba(0, 0, 0, 0.1);
 }
 
@@ -22764,7 +22764,7 @@ input:checked + .switch--transparent{
   background-color:rgba(0, 0, 0, 0.1);
 }
 
-input:checked + .switch--dot-transparent::after{
+.switch-container:hover > input:checked + .switch--transparent{
   background-color:transparent;
 }
 
