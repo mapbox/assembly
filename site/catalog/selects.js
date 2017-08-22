@@ -16,16 +16,15 @@ const colors = [
   'darken75'
 ];
 
-
 export class Selects extends React.Component {
   render() {
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Selects
         </h2>
 
-        {colors.map((color) => {
+        {colors.map(color => {
           let selectClass = 'select';
           let selectStrokeClass = 'select select--stroke';
           const selectContainerClass = 'select-container';
@@ -34,57 +33,59 @@ export class Selects extends React.Component {
             selectStrokeClass += ` select--stroke-${color}`;
           }
           return (
-            <div key={color} className='mb12'>
-              <div className='inline-block mr12'>
+            <div key={color} className="mb12">
+              <div className="inline-block mr12">
                 <div className={selectContainerClass}>
                   <select className={selectClass}>
                     <option>firstoption</option>
                     <option disabled>two</option>
                     <option>three</option>
                   </select>
-                  <div className='select-arrow'></div>
+                  <div className="select-arrow" />
                 </div>
               </div>
-              <div className='inline-block mr12'>
+              <div className="inline-block mr12">
                 <div className={selectContainerClass}>
                   <select className={selectClass} disabled>
                     <option>firstoption</option>
                     <option>two</option>
                     <option>three</option>
                   </select>
-                  <div className='select-arrow'></div>
+                  <div className="select-arrow" />
                 </div>
               </div>
-              <div className='inline-block mr12'>
+              <div className="inline-block mr12">
                 <div className={selectContainerClass}>
                   <select className={`${selectClass} select--s`}>
                     <option>firstoption</option>
                     <option>two</option>
                     <option>three</option>
                   </select>
-                  <div className='select-arrow'></div>
+                  <div className="select-arrow" />
                 </div>
               </div>
-              <div className='inline-block mr12'>
+              <div className="inline-block mr12">
                 <div className={selectContainerClass}>
                   <select className={`${selectClass} select--xs`}>
                     <option>firstoption</option>
                     <option>two</option>
                     <option>three</option>
                   </select>
-                  <div className='select-arrow'></div>
+                  <div className="select-arrow" />
                 </div>
               </div>
-              {!/^(darken10|lighten10)$/.test(color) ? <span>
-                <div className={selectContainerClass}>
-                  <select className={selectStrokeClass}>
-                    <option>firstoption</option>
-                    <option>two</option>
-                    <option>three</option>
-                  </select>
-                  <div className='select-arrow'></div>
-                </div>
-                </span> : ''}
+              {!/^(darken10|lighten10)$/.test(color)
+                ? <span>
+                    <div className={selectContainerClass}>
+                      <select className={selectStrokeClass}>
+                        <option>firstoption</option>
+                        <option>two</option>
+                        <option>three</option>
+                      </select>
+                      <div className="select-arrow" />
+                    </div>
+                  </span>
+                : ''}
             </div>
           );
         })}

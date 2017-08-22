@@ -71,12 +71,20 @@ function isSemitransparent(color) {
 function isNotAccessibleForForms(color) {
   // Do not create form elements from values that are too light or too dark,
   // for accessibility and to save space.
-  return color === 'black' || /^(darken5|darken10|lighten5|lighten10)$/.test(color) || /(-dark|-light|-faint)$/.test(color);
+  return (
+    color === 'black' ||
+    /^(darken5|darken10|lighten5|lighten10)$/.test(color) ||
+    /(-dark|-light|-faint)$/.test(color)
+  );
 }
 
 function isNotAccessibleExceptButtons(color) {
   // Elements that are primarily defined by their background can have looser requirements.
-  return color === 'black' || /^(darken5|lighten5)$/.test(color) || /(-faint|-dark)$/.test(color);
+  return (
+    color === 'black' ||
+    /^(darken5|lighten5)$/.test(color) ||
+    /(-faint|-dark)$/.test(color)
+  );
 }
 
 function isNotAccessibleExceptBg(color) {
@@ -86,7 +94,7 @@ function isNotAccessibleExceptBg(color) {
 
 function buildColorVariants(variables, config) {
   variables = Object.assign({}, defaultVariables, variables);
-  const colorVariants = (Array.isArray(config))
+  const colorVariants = Array.isArray(config)
     ? { default: config }
     : Object.assign({ default: allColors }, config);
 
@@ -127,7 +135,9 @@ function buildColorVariants(variables, config) {
       case undefined:
         return `${colorBase}-dark`;
       case 'dark':
-        throw new Error(`Dark variants not allowed as base colors: use "${colorBase}" instead of "${color}"`);
+        throw new Error(
+          `Dark variants not allowed as base colors: use "${colorBase}" instead of "${color}"`
+        );
       default:
         throw new Error(`Unknown color ${color}`);
     }
@@ -135,11 +145,11 @@ function buildColorVariants(variables, config) {
 
   const variantGenerators = {};
 
-  variantGenerators.buttonFill = function (colors) {
+  variantGenerators.buttonFill = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleExceptButtons(color)) return result;
       const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .btn--${color} {
           background-color: var(--${color});
         }
@@ -148,15 +158,15 @@ function buildColorVariants(variables, config) {
         .btn--${color}.is-active {
           background-color: var(--${darkerShade});
         }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.buttonStroke = function (colors) {
+  variantGenerators.buttonStroke = function(colors) {
     let css = colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .btn--stroke.btn--${color} {
           color: var(--${color});
         }
@@ -165,7 +175,7 @@ function buildColorVariants(variables, config) {
         .btn--stroke.btn--${color}.is-active {
           color: var(--${darkerShade});
         }
-      `);
+      `));
     }, '');
     css += stripIndent(`
       .btn.btn--stroke {
@@ -175,11 +185,11 @@ function buildColorVariants(variables, config) {
     return css;
   };
 
-  variantGenerators.selectFill = function (colors) {
+  variantGenerators.selectFill = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleExceptButtons(color)) return result;
       const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .select--${color} {
           background-color: var(--${color});
         }
@@ -187,15 +197,15 @@ function buildColorVariants(variables, config) {
         .select--${color}:hover {
           background-color: var(--${darkerShade});
         }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.selectStroke = function (colors) {
+  variantGenerators.selectStroke = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .select--stroke-${color} {
           color: var(--${color});
         }
@@ -208,15 +218,15 @@ function buildColorVariants(variables, config) {
         .select--stroke-${color}:hover + .select-arrow {
           border-top-color: var(--${darkerShade});
         }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.inputTextarea = function (colors) {
+  variantGenerators.inputTextarea = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .textarea--border-${color},
         .input--border-${color} {
           border-color: var(--${color});
@@ -226,15 +236,15 @@ function buildColorVariants(variables, config) {
         .input--border-${color}:focus {
           border-color: var(--${darkerShade});
         }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.checkbox = function (colors) {
+  variantGenerators.checkbox = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .checkbox--${color} {
           border-color: var(--${color});
         }
@@ -250,15 +260,15 @@ function buildColorVariants(variables, config) {
         .checkbox-container:hover > input:checked + .checkbox--${color} {
           background-color: var(--${darkerShade});
         }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.radio = function (colors) {
+  variantGenerators.radio = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .radio--${color},
         input:checked + .radio--${color} {
           color: var(--${color});
@@ -267,11 +277,11 @@ function buildColorVariants(variables, config) {
         .radio-container:hover > .radio--${color} {
           color: var(--${darkerShade});
         }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.toggle = function (colors) {
+  variantGenerators.toggle = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
@@ -279,7 +289,7 @@ function buildColorVariants(variables, config) {
       // Set the text color to dark when inactive on hover.
       // Set the background color to regular and text color to white when active.
       // Set the text color of toggle label when active.
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .toggle--${color} {
           color: var(--${color});
         }
@@ -291,34 +301,34 @@ function buildColorVariants(variables, config) {
         input:checked + .toggle--${color} {
           background: var(--${color});
         }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.toggleActive = function (colors) {
+  variantGenerators.toggleActive = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       // Must be below .toggle group in stylesheet
-      return result += stripIndent(`
+      return (result += stripIndent(`
         input:checked + .toggle--active-${color} {
           color: var(--${color});
         }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.switch = function (colors) {
+  variantGenerators.switch = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
       // Darken background when hovered and when active
       // Darken dot on hover when inactive only
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .switch--${color} {
           color: var(--${color});
         }
 
-        .switch--${color}:hover {
+        .switch-container:hover > .switch--${color} {
           color: var(--${darkerShade});
         }
 
@@ -327,27 +337,27 @@ function buildColorVariants(variables, config) {
           background-color: var(--${darkerShade});
         }
 
-        input:checked + .switch--dot-${color}::after {
+        .switch-container:hover > input:checked + .switch--${color} {
           background-color: var(--${color});
         }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.range = function (colors) {
+  variantGenerators.range = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
 
       // Set the thumb color.
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .range--${color} > input { color: var(--${color}); }
         .range--${color}:hover > input { color: var(--${darkerShade}); }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.color = function (colors) {
+  variantGenerators.color = function(colors) {
     // Manually adding `color-text`
     let css = stripIndent(`
       /**
@@ -361,9 +371,8 @@ function buildColorVariants(variables, config) {
        * @group
        * @memberof Text colors
        * @example
-       * <div class='grid'>`
-    );
-    colors.forEach((color) => {
+       * <div class='grid'>`);
+    colors.forEach(color => {
       if (isNotAccessibleExceptBg(color)) return;
       css += `\n *   <div class='col col--3 color-${color}'>color-${color}</div>`;
     });
@@ -371,21 +380,21 @@ function buildColorVariants(variables, config) {
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
       if (isNotAccessibleExceptBg(color)) return result;
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .color-${color} {
           color: var(--${color}) !important;
         }
-      `);
+      `));
     }, '');
     css += stripIndent(`
       .color-text {
         color: var(--text-color) !important;
       }
     `);
-    return css += '\n/** @endgroup */\n';
+    return (css += '\n/** @endgroup */\n');
   };
 
-  variantGenerators.background = function (colors) {
+  variantGenerators.background = function(colors) {
     let css = stripIndent(`
       /**
        * @section Background colors
@@ -398,27 +407,26 @@ function buildColorVariants(variables, config) {
        * @group
        * @memberof Background colors
        * @example
-       * <div class='grid'>`
-    );
-    colors.forEach((color) => {
+       * <div class='grid'>`);
+    colors.forEach(color => {
       css += `\n *   <div class='col col--3 bg-${color} py6 px6'>bg-${color}</div>`;
     });
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .bg-${color} {
           background-color: var(--${color}) !important;
         }
-      `);
+      `));
     }, '');
-    return css += '\n/** @endgroup */\n';
+    return (css += '\n/** @endgroup */\n');
   };
 
-  variantGenerators.link = function (colors) {
+  variantGenerators.link = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .link--${color} {
           color: var(--${color});
         }
@@ -427,11 +435,11 @@ function buildColorVariants(variables, config) {
         .link--${color}.is-active {
           color: var(--${darkerShade});
         }
-      `);
+      `));
     }, '');
   };
 
-  variantGenerators.border = function (colors) {
+  variantGenerators.border = function(colors) {
     let css = stripIndent(`
       /**
        * Apply a [color](#Colors) to a border.
@@ -443,17 +451,17 @@ function buildColorVariants(variables, config) {
        */`);
     css += colors.reduce((result, color) => {
       if (isNotAccessibleExceptBg(color)) return result;
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .border--${color} {
           border-color: var(--${color}) !important;
         }
-      `);
+      `));
     }, '');
     css += '\n/** @endgroup */\n';
     return css;
   };
 
-  variantGenerators.shadow = function (colors) {
+  variantGenerators.shadow = function(colors) {
     let css = stripIndent(`
       /**
        * Apply a box shadow.
@@ -464,12 +472,13 @@ function buildColorVariants(variables, config) {
        * <div class='shadow-darken25'>shadow-darken25</div>
        */`);
     css += colors.reduce((result, color) => {
-      if (!isSemitransparent(color) || isNotAccessibleExceptBg(color)) return result;
-      return result += stripIndent(`
+      if (!isSemitransparent(color) || isNotAccessibleExceptBg(color))
+        return result;
+      return (result += stripIndent(`
         .shadow-${color} {
           box-shadow: 0 0 10px 2px var(--${color}) !important;
         }
-      `);
+      `));
     }, '');
     css += '\n/** @endgroup */\n';
 
@@ -483,19 +492,20 @@ function buildColorVariants(variables, config) {
        * <div class='mt6 shadow-darken25-bold'>shadow-darken25-bold</div>
        */`);
     css += colors.reduce((result, color) => {
-      if (!isSemitransparent(color) || isNotAccessibleExceptBg(color)) return result;
-      return result += stripIndent(`
+      if (!isSemitransparent(color) || isNotAccessibleExceptBg(color))
+        return result;
+      return (result += stripIndent(`
         .shadow-${color}-bold {
           box-shadow: 0 0 30px 6px var(--${color}) !important;
         }
-      `);
+      `));
     }, '');
     css += '\n/** @endgroup */\n';
 
     return css;
   };
 
-  variantGenerators.hoverShadow = function (colors) {
+  variantGenerators.hoverShadow = function(colors) {
     let css = stripIndent(`
       /**
        * Apply a box shadow on hover and active states.
@@ -508,8 +518,9 @@ function buildColorVariants(variables, config) {
        * <div class='shadow-darken25-on-active is-active'>shadow-darken25-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
-      if (!isSemitransparent(color) || isNotAccessibleExceptBg(color)) return result;
-      return result += stripIndent(`
+      if (!isSemitransparent(color) || isNotAccessibleExceptBg(color))
+        return result;
+      return (result += stripIndent(`
         .shadow-${color}-on-hover:hover,
         .shadow-${color}-on-active.is-active,
         .shadow-${color}-on-active.is-active:hover {
@@ -520,13 +531,13 @@ function buildColorVariants(variables, config) {
         .shadow-${color}-bold-on-active.is-active:hover {
           box-shadow: 0 0 30px 6px var(--${color}) !important;
         }
-      `);
+      `));
     }, '');
     css += '\n/** @endgroup */\n';
     return css;
   };
 
-  variantGenerators.hoverBackground = function (colors) {
+  variantGenerators.hoverBackground = function(colors) {
     let css = stripIndent(`
       /**
        * Apply a background color on hover and active states.
@@ -539,19 +550,19 @@ function buildColorVariants(variables, config) {
        * <div class='bg-darken25-on-active is-active'>bg-darken25-on-active (active)</div>
        */`);
     css += colors.reduce((result, color) => {
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .bg-${color}-on-hover:hover,
         .bg-${color}-on-active.is-active,
         .bg-${color}-on-active.is-active:hover {
           background-color: var(--${color}) !important;
         }
-      `);
+      `));
     }, '');
     css += '\n/** @endgroup */\n';
     return css;
   };
 
-  variantGenerators.hoverColor = function (colors) {
+  variantGenerators.hoverColor = function(colors) {
     let css = stripIndent(`
       /**
        * Apply a text color on hover and active states.
@@ -565,19 +576,19 @@ function buildColorVariants(variables, config) {
        */`);
     css += colors.reduce((result, color) => {
       if (isNotAccessibleExceptBg(color)) return result;
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .color-${color}-on-hover:hover,
         .color-${color}-on-active.is-active,
         .color-${color}-on-active.is-active:hover {
           color: var(--${color}) !important;
         }
-      `);
+      `));
     }, '');
     css += '\n/** @endgroup */\n';
     return css;
   };
 
-  variantGenerators.hoverBorder = function (colors) {
+  variantGenerators.hoverBorder = function(colors) {
     let css = stripIndent(`
       /**
        * Apply a border color on hover and active states.
@@ -591,13 +602,13 @@ function buildColorVariants(variables, config) {
        */`);
     css += colors.reduce((result, color) => {
       if (isNotAccessibleExceptBg(color)) return result;
-      return result += stripIndent(`
+      return (result += stripIndent(`
         .border--${color}-on-hover:hover,
         .border--${color}-on-active.is-active,
         .border--${color}-on-active.is-active:hover {
           border-color: var(--${color}) !important;
         }
-      `);
+      `));
     }, '');
     css += '\n/** @endgroup */\n';
     return css;
@@ -605,7 +616,7 @@ function buildColorVariants(variables, config) {
 
   let result = '\n/* Color variants */\n';
 
-  Object.keys(variantGenerators).forEach((coloredThing) => {
+  Object.keys(variantGenerators).forEach(coloredThing => {
     const colors = colorVariants[coloredThing] || colorVariants.default;
     if (colors === null || colors === undefined) return;
     result += variantGenerators[coloredThing](colors);
@@ -633,8 +644,11 @@ module.exports = buildColorVariants;
 if (require.main === module) {
   Promise.resolve()
     .then(buildColorVariants)
-    .then((css) => {
-      return pify(fs.writeFile)(path.join(__dirname, '../src/color-variants.css'), css);
+    .then(css => {
+      return pify(fs.writeFile)(
+        path.join(__dirname, '../src/color-variants.css'),
+        css
+      );
     })
-    .catch((error) => console.error(error.stack));
+    .catch(error => console.error(error.stack));
 }

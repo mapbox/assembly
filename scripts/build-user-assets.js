@@ -9,9 +9,12 @@ function buildUserAssets(outdir, options) {
   options = options || {};
   outdir = outdir || path.join(__dirname, '../dist');
 
-  const buildCssOptions = Object.assign({
-    outfile: path.join(outdir, 'assembly.css')
-  }, options);
+  const buildCssOptions = Object.assign(
+    {
+      outfile: path.join(outdir, 'assembly.css')
+    },
+    options
+  );
 
   const buildJsOptions = {
     outfile: path.join(outdir, 'assembly.js'),
@@ -34,5 +37,5 @@ function buildUserAssets(outdir, options) {
 module.exports = buildUserAssets;
 
 if (require.main === module) {
-  buildUserAssets().catch((err) => console.error(err.stack));
+  buildUserAssets().catch(err => console.error(err.stack));
 }

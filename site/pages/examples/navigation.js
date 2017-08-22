@@ -35,15 +35,15 @@ export default class ExampleNavigation extends React.Component {
   render() {
     return (
       <Page>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Main navigation
         </h2>
         <HtmlExample code={menuNavigation} />
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Underlined tabs
         </h2>
         <HtmlExample code={underlinedTabs} />
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Breadcrumbs
         </h2>
         <HtmlExample code={breadcrumbs} />

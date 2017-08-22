@@ -33,28 +33,35 @@ const getButtonEls = (color, i) => {
   }
 
   return (
-    <div key={i} className='mb12'>
-      <div className='inline-block mr18'>
+    <div key={i} className="mb12">
+      <div className="inline-block mr18">
         <button className={buttonFillClass}>Fill</button>
       </div>
-      <div className='inline-block mr18'>
-        <button disabled className={buttonFillClass}>Fill</button>
+      <div className="inline-block mr18">
+        <button disabled className={buttonFillClass}>
+          Fill
+        </button>
       </div>
-      <div className='inline-block mr18'>
+      <div className="inline-block mr18">
         <button className={`${buttonFillClass} round`}>Less round</button>
       </div>
-      <div className='inline-block mr18'>
-        <button disabled className={`${buttonFillClass} round`}>Less round</button>
+      <div className="inline-block mr18">
+        <button disabled className={`${buttonFillClass} round`}>
+          Less round
+        </button>
       </div>
-      {!/^(darken10|darken25|lighten10|lighten25)$/.test(color) ? <span>
-        <div className='inline-block mr18'>
-          <button className={buttonStrokeClass}>Stroke</button>
-        </div>
-        <div className='inline-block mr18'>
-          <button disabled className={buttonStrokeClass}>Stroke</button>
-        </div>
-      </span> : ''}
-
+      {!/^(darken10|darken25|lighten10|lighten25)$/.test(color)
+        ? <span>
+            <div className="inline-block mr18">
+              <button className={buttonStrokeClass}>Stroke</button>
+            </div>
+            <div className="inline-block mr18">
+              <button disabled className={buttonStrokeClass}>
+                Stroke
+              </button>
+            </div>
+          </span>
+        : ''}
     </div>
   );
 };
@@ -66,13 +73,13 @@ export class Buttons extends React.Component {
 
     return (
       <div>
-        <h2 className='border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold'>
+        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Buttons
         </h2>
 
         {buttonEls}
 
-        <div className='mt18 py12 bg-gray round'>
+        <div className="mt18 py12 bg-gray round">
           {lightenButtonEls}
         </div>
       </div>

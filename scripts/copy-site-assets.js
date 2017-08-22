@@ -18,5 +18,5 @@ function copySiteAssets() {
 module.exports = copySiteAssets;
 
 if (require.main === module) {
-  copySiteAssets().catch((err) => console.error(err.stack));
+  copySiteAssets().catch(err => console.error(err.stack));
 }

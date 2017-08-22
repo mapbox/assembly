@@ -12,25 +12,32 @@ class Heading extends React.Component {
 
     let descriptionEl;
     if (props.parsedComment.description) {
-      descriptionEl = <div className='prose'>
-        {remark().use(reactRenderer).processSync(props.parsedComment.description).contents}
-      </div>;
+      descriptionEl = (
+        <div className="prose">
+          {
+            remark()
+              .use(reactRenderer)
+              .processSync(props.parsedComment.description).contents
+          }
+        </div>
+      );
     }
 
-    const sectionClass = props.level === 1 ? 'pb18 border--gray' : 'pb12 mt12 border--gray-faint';
+    const sectionClass =
+      props.level === 1 ? 'pb18 border--gray' : 'pb12 mt12 border--gray-faint';
     const levelClass = props.level === 1 ? 'txt-h2 mb18 pt24' : 'pt12 txt-l';
 
-    const example = !props.parsedComment.example ? null : (
-      <HtmlExample code={props.parsedComment.example.description} copy={false} />
-    );
+    const example = !props.parsedComment.example
+      ? null
+      : <HtmlExample
+          code={props.parsedComment.example.description}
+          copy={false}
+        />;
 
     return (
       <div className={`${sectionClass}`}>
-        <div
-          id={id}
-          className={levelClass}
-        >
-          <a className='block txt-bold' href={`#${id}`}>
+        <div id={id} className={levelClass}>
+          <a className="block txt-bold" href={`#${id}`}>
             {props.title}
           </a>
         </div>

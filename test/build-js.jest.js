@@ -25,7 +25,7 @@ describe('buildJs', () => {
       unminified: true
     })
       .then(() => pify(fs.readFile)(tmp, 'utf8'))
-      .then((js) => {
+      .then(js => {
         expect(js).toMatchSnapshot();
       })
       .then(() => cleanup(tmp));
@@ -38,7 +38,7 @@ describe('buildJs', () => {
       icons: ['airplane', 'alert']
     })
       .then(() => pify(fs.readFile)(tmp, 'utf8'))
-      .then((js) => {
+      .then(js => {
         expect(js).toMatchSnapshot();
       })
       .then(() => cleanup(tmp));
@@ -46,9 +46,11 @@ describe('buildJs', () => {
 
   test('fails with invalid icon option', () => {
     const tmp = `${getTmp()}/test.js`;
-    return expect(buildJs({
-      outfile: tmp,
-      icons: ['airplane', 'pizza']
-    })).rejects.toEqual(Error('an icon matching pizza does not exist'));
+    return expect(
+      buildJs({
+        outfile: tmp,
+        icons: ['airplane', 'pizza']
+      })
+    ).rejects.toEqual(Error('an icon matching pizza does not exist'));
   });
 });
