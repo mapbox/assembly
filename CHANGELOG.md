@@ -3,6 +3,7 @@
 ## Next
 
 - [style change] make small range input visually smaller. Doesn't change the metrics of the input, so this is not a breaking change.
+- [breaking] rename `clip` to `scroll-hidden`.
 
 ## 0.17.0
 

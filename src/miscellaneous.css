@@ -239,13 +239,13 @@
 }
 
 /**
- * Clip content if it reaches the edge of the element.
+ * Hide content if it extends beyond the edge of the containing element.
  *
  * @memberof Miscellaneous
  * @example
- *   <div class='h60 clip'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+ *   <div class='h60 scroll-hidden'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
  */
-.clip {
+.scroll-hidden {
   overflow: hidden !important;
 }
 
