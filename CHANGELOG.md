@@ -1,6 +1,6 @@
 # Changelog
 
-## Next
+## 0.18.0
 
 - [style change] make small range input visually smaller. Doesn't change the metrics of the input, so this is not a breaking change.
 
