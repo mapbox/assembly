@@ -1,5 +1,9 @@
 # Changelog
 
+## Next
+
+- [style change] make small range input visually smaller. Doesn't change the metrics of the input, so this is not a breaking change.
+
 ## 0.17.0
 
 - [style change] Removed border from disabled buttons.
