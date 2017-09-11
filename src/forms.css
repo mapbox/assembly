@@ -517,24 +517,33 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 /* range small track */
-.range--s > input::-ms-track { border-width: 9px 0; }
+.range--s > input::-webkit-slider-runnable-track {
+  height: 2px;
+}
+.range.range--s > input::-moz-range-track {
+  height: 2px;
+}
+.range.range--s > input::-ms-track {
+  border-width: 9px 0;
+  height: 2px;
+}
 
 /* range small thumb */
 .range--s > input::-webkit-slider-thumb {
-  width: 16px;
-  height: 16px;
-  margin-top: -6px;
+  width: 12px;
+  height: 12px;
+  margin-top: -5px;
 }
 
 .range--s > input::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  margin-top: -7px;
+  width: 12px;
+  height: 12px;
+  margin-top: -5px;
 }
 
 .range--s > input::-ms-thumb {
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   margin-top: 0; /* Fixes Edge's vertical alignment */
 }
 

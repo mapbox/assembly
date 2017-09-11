@@ -1623,7 +1623,7 @@ input:checked + .toggle--active-transparent {
   color: var(--gray);
 }
 
-.switch--gray:hover {
+.switch-container:hover > .switch--gray {
   color: var(--gray-dark);
 }
 
@@ -1632,7 +1632,7 @@ input:checked + .switch--gray {
   background-color: var(--gray-dark);
 }
 
-input:checked + .switch--dot-gray::after {
+.switch-container:hover > input:checked + .switch--gray {
   background-color: var(--gray);
 }
 
@@ -1640,7 +1640,7 @@ input:checked + .switch--dot-gray::after {
   color: var(--pink);
 }
 
-.switch--pink:hover {
+.switch-container:hover > .switch--pink {
   color: var(--pink-dark);
 }
 
@@ -1649,7 +1649,7 @@ input:checked + .switch--pink {
   background-color: var(--pink-dark);
 }
 
-input:checked + .switch--dot-pink::after {
+.switch-container:hover > input:checked + .switch--pink {
   background-color: var(--pink);
 }
 
@@ -1657,7 +1657,7 @@ input:checked + .switch--dot-pink::after {
   color: var(--red);
 }
 
-.switch--red:hover {
+.switch-container:hover > .switch--red {
   color: var(--red-dark);
 }
 
@@ -1666,7 +1666,7 @@ input:checked + .switch--red {
   background-color: var(--red-dark);
 }
 
-input:checked + .switch--dot-red::after {
+.switch-container:hover > input:checked + .switch--red {
   background-color: var(--red);
 }
 
@@ -1674,7 +1674,7 @@ input:checked + .switch--dot-red::after {
   color: var(--orange);
 }
 
-.switch--orange:hover {
+.switch-container:hover > .switch--orange {
   color: var(--orange-dark);
 }
 
@@ -1683,7 +1683,7 @@ input:checked + .switch--orange {
   background-color: var(--orange-dark);
 }
 
-input:checked + .switch--dot-orange::after {
+.switch-container:hover > input:checked + .switch--orange {
   background-color: var(--orange);
 }
 
@@ -1691,7 +1691,7 @@ input:checked + .switch--dot-orange::after {
   color: var(--yellow);
 }
 
-.switch--yellow:hover {
+.switch-container:hover > .switch--yellow {
   color: var(--yellow-dark);
 }
 
@@ -1700,7 +1700,7 @@ input:checked + .switch--yellow {
   background-color: var(--yellow-dark);
 }
 
-input:checked + .switch--dot-yellow::after {
+.switch-container:hover > input:checked + .switch--yellow {
   background-color: var(--yellow);
 }
 
@@ -1708,7 +1708,7 @@ input:checked + .switch--dot-yellow::after {
   color: var(--green);
 }
 
-.switch--green:hover {
+.switch-container:hover > .switch--green {
   color: var(--green-dark);
 }
 
@@ -1717,7 +1717,7 @@ input:checked + .switch--green {
   background-color: var(--green-dark);
 }
 
-input:checked + .switch--dot-green::after {
+.switch-container:hover > input:checked + .switch--green {
   background-color: var(--green);
 }
 
@@ -1725,7 +1725,7 @@ input:checked + .switch--dot-green::after {
   color: var(--blue);
 }
 
-.switch--blue:hover {
+.switch-container:hover > .switch--blue {
   color: var(--blue-dark);
 }
 
@@ -1734,7 +1734,7 @@ input:checked + .switch--blue {
   background-color: var(--blue-dark);
 }
 
-input:checked + .switch--dot-blue::after {
+.switch-container:hover > input:checked + .switch--blue {
   background-color: var(--blue);
 }
 
@@ -1742,7 +1742,7 @@ input:checked + .switch--dot-blue::after {
   color: var(--purple);
 }
 
-.switch--purple:hover {
+.switch-container:hover > .switch--purple {
   color: var(--purple-dark);
 }
 
@@ -1751,7 +1751,7 @@ input:checked + .switch--purple {
   background-color: var(--purple-dark);
 }
 
-input:checked + .switch--dot-purple::after {
+.switch-container:hover > input:checked + .switch--purple {
   background-color: var(--purple);
 }
 
@@ -1759,7 +1759,7 @@ input:checked + .switch--dot-purple::after {
   color: var(--darken25);
 }
 
-.switch--darken25:hover {
+.switch-container:hover > .switch--darken25 {
   color: var(--darken50);
 }
 
@@ -1768,7 +1768,7 @@ input:checked + .switch--darken25 {
   background-color: var(--darken50);
 }
 
-input:checked + .switch--dot-darken25::after {
+.switch-container:hover > input:checked + .switch--darken25 {
   background-color: var(--darken25);
 }
 
@@ -1776,7 +1776,7 @@ input:checked + .switch--dot-darken25::after {
   color: var(--darken50);
 }
 
-.switch--darken50:hover {
+.switch-container:hover > .switch--darken50 {
   color: var(--darken75);
 }
 
@@ -1785,7 +1785,7 @@ input:checked + .switch--darken50 {
   background-color: var(--darken75);
 }
 
-input:checked + .switch--dot-darken50::after {
+.switch-container:hover > input:checked + .switch--darken50 {
   background-color: var(--darken50);
 }
 
@@ -1793,7 +1793,7 @@ input:checked + .switch--dot-darken50::after {
   color: var(--darken75);
 }
 
-.switch--darken75:hover {
+.switch-container:hover > .switch--darken75 {
   color: var(--black);
 }
 
@@ -1802,7 +1802,7 @@ input:checked + .switch--darken75 {
   background-color: var(--black);
 }
 
-input:checked + .switch--dot-darken75::after {
+.switch-container:hover > input:checked + .switch--darken75 {
   background-color: var(--darken75);
 }
 
@@ -1810,7 +1810,7 @@ input:checked + .switch--dot-darken75::after {
   color: var(--lighten25);
 }
 
-.switch--lighten25:hover {
+.switch-container:hover > .switch--lighten25 {
   color: var(--lighten50);
 }
 
@@ -1819,7 +1819,7 @@ input:checked + .switch--lighten25 {
   background-color: var(--lighten50);
 }
 
-input:checked + .switch--dot-lighten25::after {
+.switch-container:hover > input:checked + .switch--lighten25 {
   background-color: var(--lighten25);
 }
 
@@ -1827,7 +1827,7 @@ input:checked + .switch--dot-lighten25::after {
   color: var(--lighten50);
 }
 
-.switch--lighten50:hover {
+.switch-container:hover > .switch--lighten50 {
   color: var(--lighten75);
 }
 
@@ -1836,7 +1836,7 @@ input:checked + .switch--lighten50 {
   background-color: var(--lighten75);
 }
 
-input:checked + .switch--dot-lighten50::after {
+.switch-container:hover > input:checked + .switch--lighten50 {
   background-color: var(--lighten50);
 }
 
@@ -1844,7 +1844,7 @@ input:checked + .switch--dot-lighten50::after {
   color: var(--lighten75);
 }
 
-.switch--lighten75:hover {
+.switch-container:hover > .switch--lighten75 {
   color: var(--white);
 }
 
@@ -1853,7 +1853,7 @@ input:checked + .switch--lighten75 {
   background-color: var(--white);
 }
 
-input:checked + .switch--dot-lighten75::after {
+.switch-container:hover > input:checked + .switch--lighten75 {
   background-color: var(--lighten75);
 }
 
@@ -1861,7 +1861,7 @@ input:checked + .switch--dot-lighten75::after {
   color: var(--white);
 }
 
-.switch--white:hover {
+.switch-container:hover > .switch--white {
   color: var(--lighten75);
 }
 
@@ -1870,7 +1870,7 @@ input:checked + .switch--white {
   background-color: var(--lighten75);
 }
 
-input:checked + .switch--dot-white::after {
+.switch-container:hover > input:checked + .switch--white {
   background-color: var(--white);
 }
 
@@ -1878,7 +1878,7 @@ input:checked + .switch--dot-white::after {
   color: var(--transparent);
 }
 
-.switch--transparent:hover {
+.switch-container:hover > .switch--transparent {
   color: var(--darken10);
 }
 
@@ -1887,7 +1887,7 @@ input:checked + .switch--transparent {
   background-color: var(--darken10);
 }
 
-input:checked + .switch--dot-transparent::after {
+.switch-container:hover > input:checked + .switch--transparent {
   background-color: var(--transparent);
 }
 
