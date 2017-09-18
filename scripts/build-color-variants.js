@@ -340,6 +340,10 @@ function buildColorVariants(variables, config) {
         .switch-container:hover > input:checked + .switch--${color} {
           background-color: var(--${color});
         }
+
+        input:checked + .switch--dot-${color}::after {
+          background-color: var(--${color});
+        }
       `));
     }, '');
   };
