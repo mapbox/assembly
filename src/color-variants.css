@@ -1636,6 +1636,10 @@ input:checked + .switch--gray {
   background-color: var(--gray);
 }
 
+input:checked + .switch--dot-gray::after {
+  background-color: var(--gray);
+}
+
 .switch--pink {
   color: var(--pink);
 }
@@ -1650,6 +1654,10 @@ input:checked + .switch--pink {
 }
 
 .switch-container:hover > input:checked + .switch--pink {
+  background-color: var(--pink);
+}
+
+input:checked + .switch--dot-pink::after {
   background-color: var(--pink);
 }
 
@@ -1670,6 +1678,10 @@ input:checked + .switch--red {
   background-color: var(--red);
 }
 
+input:checked + .switch--dot-red::after {
+  background-color: var(--red);
+}
+
 .switch--orange {
   color: var(--orange);
 }
@@ -1684,6 +1696,10 @@ input:checked + .switch--orange {
 }
 
 .switch-container:hover > input:checked + .switch--orange {
+  background-color: var(--orange);
+}
+
+input:checked + .switch--dot-orange::after {
   background-color: var(--orange);
 }
 
@@ -1704,6 +1720,10 @@ input:checked + .switch--yellow {
   background-color: var(--yellow);
 }
 
+input:checked + .switch--dot-yellow::after {
+  background-color: var(--yellow);
+}
+
 .switch--green {
   color: var(--green);
 }
@@ -1718,6 +1738,10 @@ input:checked + .switch--green {
 }
 
 .switch-container:hover > input:checked + .switch--green {
+  background-color: var(--green);
+}
+
+input:checked + .switch--dot-green::after {
   background-color: var(--green);
 }
 
@@ -1738,6 +1762,10 @@ input:checked + .switch--blue {
   background-color: var(--blue);
 }
 
+input:checked + .switch--dot-blue::after {
+  background-color: var(--blue);
+}
+
 .switch--purple {
   color: var(--purple);
 }
@@ -1752,6 +1780,10 @@ input:checked + .switch--purple {
 }
 
 .switch-container:hover > input:checked + .switch--purple {
+  background-color: var(--purple);
+}
+
+input:checked + .switch--dot-purple::after {
   background-color: var(--purple);
 }
 
@@ -1772,6 +1804,10 @@ input:checked + .switch--darken25 {
   background-color: var(--darken25);
 }
 
+input:checked + .switch--dot-darken25::after {
+  background-color: var(--darken25);
+}
+
 .switch--darken50 {
   color: var(--darken50);
 }
@@ -1786,6 +1822,10 @@ input:checked + .switch--darken50 {
 }
 
 .switch-container:hover > input:checked + .switch--darken50 {
+  background-color: var(--darken50);
+}
+
+input:checked + .switch--dot-darken50::after {
   background-color: var(--darken50);
 }
 
@@ -1806,6 +1846,10 @@ input:checked + .switch--darken75 {
   background-color: var(--darken75);
 }
 
+input:checked + .switch--dot-darken75::after {
+  background-color: var(--darken75);
+}
+
 .switch--lighten25 {
   color: var(--lighten25);
 }
@@ -1820,6 +1864,10 @@ input:checked + .switch--lighten25 {
 }
 
 .switch-container:hover > input:checked + .switch--lighten25 {
+  background-color: var(--lighten25);
+}
+
+input:checked + .switch--dot-lighten25::after {
   background-color: var(--lighten25);
 }
 
@@ -1840,6 +1888,10 @@ input:checked + .switch--lighten50 {
   background-color: var(--lighten50);
 }
 
+input:checked + .switch--dot-lighten50::after {
+  background-color: var(--lighten50);
+}
+
 .switch--lighten75 {
   color: var(--lighten75);
 }
@@ -1854,6 +1906,10 @@ input:checked + .switch--lighten75 {
 }
 
 .switch-container:hover > input:checked + .switch--lighten75 {
+  background-color: var(--lighten75);
+}
+
+input:checked + .switch--dot-lighten75::after {
   background-color: var(--lighten75);
 }
 
@@ -1874,6 +1930,10 @@ input:checked + .switch--white {
   background-color: var(--white);
 }
 
+input:checked + .switch--dot-white::after {
+  background-color: var(--white);
+}
+
 .switch--transparent {
   color: var(--transparent);
 }
@@ -1888,6 +1948,10 @@ input:checked + .switch--transparent {
 }
 
 .switch-container:hover > input:checked + .switch--transparent {
+  background-color: var(--transparent);
+}
+
+input:checked + .switch--dot-transparent::after {
   background-color: var(--transparent);
 }
 

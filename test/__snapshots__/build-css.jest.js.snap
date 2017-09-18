@@ -9999,6 +9999,10 @@ input:checked + .switch--gray{
   background-color:#666;
 }
 
+input:checked + .switch--dot-gray::after{
+  background-color:#666;
+}
+
 .switch--pink{
   color:#ff3c96;
 }
@@ -10013,6 +10017,10 @@ input:checked + .switch--pink{
 }
 
 .switch-container:hover > input:checked + .switch--pink{
+  background-color:#ff3c96;
+}
+
+input:checked + .switch--dot-pink::after{
   background-color:#ff3c96;
 }
 
@@ -10033,6 +10041,10 @@ input:checked + .switch--red{
   background-color:#dc2b28;
 }
 
+input:checked + .switch--dot-red::after{
+  background-color:#dc2b28;
+}
+
 .switch--orange{
   color:#ff6e00;
 }
@@ -10047,6 +10059,10 @@ input:checked + .switch--orange{
 }
 
 .switch-container:hover > input:checked + .switch--orange{
+  background-color:#ff6e00;
+}
+
+input:checked + .switch--dot-orange::after{
   background-color:#ff6e00;
 }
 
@@ -10067,6 +10083,10 @@ input:checked + .switch--yellow{
   background-color:#f0dc00;
 }
 
+input:checked + .switch--dot-yellow::after{
+  background-color:#f0dc00;
+}
+
 .switch--green{
   color:#01aa46;
 }
@@ -10081,6 +10101,10 @@ input:checked + .switch--green{
 }
 
 .switch-container:hover > input:checked + .switch--green{
+  background-color:#01aa46;
+}
+
+input:checked + .switch--dot-green::after{
   background-color:#01aa46;
 }
 
@@ -10101,6 +10125,10 @@ input:checked + .switch--blue{
   background-color:#3887BE;
 }
 
+input:checked + .switch--dot-blue::after{
+  background-color:#3887BE;
+}
+
 .switch--purple{
   color:#8c50c7;
 }
@@ -10115,6 +10143,10 @@ input:checked + .switch--purple{
 }
 
 .switch-container:hover > input:checked + .switch--purple{
+  background-color:#8c50c7;
+}
+
+input:checked + .switch--dot-purple::after{
   background-color:#8c50c7;
 }
 
@@ -10135,6 +10167,10 @@ input:checked + .switch--darken25{
   background-color:rgba(0, 0, 0, 0.25);
 }
 
+input:checked + .switch--dot-darken25::after{
+  background-color:rgba(0, 0, 0, 0.25);
+}
+
 .switch--darken50{
   color:rgba(0, 0, 0, 0.5);
 }
@@ -10149,6 +10185,10 @@ input:checked + .switch--darken50{
 }
 
 .switch-container:hover > input:checked + .switch--darken50{
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+input:checked + .switch--dot-darken50::after{
   background-color:rgba(0, 0, 0, 0.5);
 }
 
@@ -10169,6 +10209,10 @@ input:checked + .switch--darken75{
   background-color:rgba(0, 0, 0, 0.75);
 }
 
+input:checked + .switch--dot-darken75::after{
+  background-color:rgba(0, 0, 0, 0.75);
+}
+
 .switch--lighten25{
   color:rgba(255, 255, 255, 0.25);
 }
@@ -10183,6 +10227,10 @@ input:checked + .switch--lighten25{
 }
 
 .switch-container:hover > input:checked + .switch--lighten25{
+  background-color:rgba(255, 255, 255, 0.25);
+}
+
+input:checked + .switch--dot-lighten25::after{
   background-color:rgba(255, 255, 255, 0.25);
 }
 
@@ -10203,6 +10251,10 @@ input:checked + .switch--lighten50{
   background-color:rgba(255, 255, 255, 0.5);
 }
 
+input:checked + .switch--dot-lighten50::after{
+  background-color:rgba(255, 255, 255, 0.5);
+}
+
 .switch--lighten75{
   color:rgba(255, 255, 255, 0.75);
 }
@@ -10217,6 +10269,10 @@ input:checked + .switch--lighten75{
 }
 
 .switch-container:hover > input:checked + .switch--lighten75{
+  background-color:rgba(255, 255, 255, 0.75);
+}
+
+input:checked + .switch--dot-lighten75::after{
   background-color:rgba(255, 255, 255, 0.75);
 }
 
@@ -10237,6 +10293,10 @@ input:checked + .switch--white{
   background-color:#fff;
 }
 
+input:checked + .switch--dot-white::after{
+  background-color:#fff;
+}
+
 .switch--transparent{
   color:transparent;
 }
@@ -10251,6 +10311,10 @@ input:checked + .switch--transparent{
 }
 
 .switch-container:hover > input:checked + .switch--transparent{
+  background-color:transparent;
+}
+
+input:checked + .switch--dot-transparent::after{
   background-color:transparent;
 }
 .color-gray-dark{
@@ -22531,6 +22595,10 @@ input:checked + .switch--gray{
   background-color:#666;
 }
 
+input:checked + .switch--dot-gray::after{
+  background-color:#666;
+}
+
 .switch--pink{
   color:#ff3c96;
 }
@@ -22545,6 +22613,10 @@ input:checked + .switch--pink{
 }
 
 .switch-container:hover > input:checked + .switch--pink{
+  background-color:#ff3c96;
+}
+
+input:checked + .switch--dot-pink::after{
   background-color:#ff3c96;
 }
 
@@ -22565,6 +22637,10 @@ input:checked + .switch--red{
   background-color:#dc2b28;
 }
 
+input:checked + .switch--dot-red::after{
+  background-color:#dc2b28;
+}
+
 .switch--orange{
   color:#ff6e00;
 }
@@ -22579,6 +22655,10 @@ input:checked + .switch--orange{
 }
 
 .switch-container:hover > input:checked + .switch--orange{
+  background-color:#ff6e00;
+}
+
+input:checked + .switch--dot-orange::after{
   background-color:#ff6e00;
 }
 
@@ -22599,6 +22679,10 @@ input:checked + .switch--yellow{
   background-color:#f0dc00;
 }
 
+input:checked + .switch--dot-yellow::after{
+  background-color:#f0dc00;
+}
+
 .switch--green{
   color:#01aa46;
 }
@@ -22613,6 +22697,10 @@ input:checked + .switch--green{
 }
 
 .switch-container:hover > input:checked + .switch--green{
+  background-color:#01aa46;
+}
+
+input:checked + .switch--dot-green::after{
   background-color:#01aa46;
 }
 
@@ -22633,6 +22721,10 @@ input:checked + .switch--blue{
   background-color:#448ee4;
 }
 
+input:checked + .switch--dot-blue::after{
+  background-color:#448ee4;
+}
+
 .switch--purple{
   color:#8c50c7;
 }
@@ -22647,6 +22739,10 @@ input:checked + .switch--purple{
 }
 
 .switch-container:hover > input:checked + .switch--purple{
+  background-color:#8c50c7;
+}
+
+input:checked + .switch--dot-purple::after{
   background-color:#8c50c7;
 }
 
@@ -22667,6 +22763,10 @@ input:checked + .switch--darken25{
   background-color:rgba(0, 0, 0, 0.25);
 }
 
+input:checked + .switch--dot-darken25::after{
+  background-color:rgba(0, 0, 0, 0.25);
+}
+
 .switch--darken50{
   color:rgba(0, 0, 0, 0.5);
 }
@@ -22681,6 +22781,10 @@ input:checked + .switch--darken50{
 }
 
 .switch-container:hover > input:checked + .switch--darken50{
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+input:checked + .switch--dot-darken50::after{
   background-color:rgba(0, 0, 0, 0.5);
 }
 
@@ -22701,6 +22805,10 @@ input:checked + .switch--darken75{
   background-color:rgba(0, 0, 0, 0.75);
 }
 
+input:checked + .switch--dot-darken75::after{
+  background-color:rgba(0, 0, 0, 0.75);
+}
+
 .switch--lighten25{
   color:rgba(255, 255, 255, 0.25);
 }
@@ -22715,6 +22823,10 @@ input:checked + .switch--lighten25{
 }
 
 .switch-container:hover > input:checked + .switch--lighten25{
+  background-color:rgba(255, 255, 255, 0.25);
+}
+
+input:checked + .switch--dot-lighten25::after{
   background-color:rgba(255, 255, 255, 0.25);
 }
 
@@ -22735,6 +22847,10 @@ input:checked + .switch--lighten50{
   background-color:rgba(255, 255, 255, 0.5);
 }
 
+input:checked + .switch--dot-lighten50::after{
+  background-color:rgba(255, 255, 255, 0.5);
+}
+
 .switch--lighten75{
   color:rgba(255, 255, 255, 0.75);
 }
@@ -22749,6 +22865,10 @@ input:checked + .switch--lighten75{
 }
 
 .switch-container:hover > input:checked + .switch--lighten75{
+  background-color:rgba(255, 255, 255, 0.75);
+}
+
+input:checked + .switch--dot-lighten75::after{
   background-color:rgba(255, 255, 255, 0.75);
 }
 
@@ -22769,6 +22889,10 @@ input:checked + .switch--white{
   background-color:#fff;
 }
 
+input:checked + .switch--dot-white::after{
+  background-color:#fff;
+}
+
 .switch--transparent{
   color:transparent;
 }
@@ -22783,6 +22907,10 @@ input:checked + .switch--transparent{
 }
 
 .switch-container:hover > input:checked + .switch--transparent{
+  background-color:transparent;
+}
+
+input:checked + .switch--dot-transparent::after{
   background-color:transparent;
 }
 
