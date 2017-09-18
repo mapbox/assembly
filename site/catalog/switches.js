@@ -10,15 +10,14 @@ const colors = [
   'green',
   'blue',
   'purple',
-  'lighten10',
-  'lighten25',
-  'lighten50',
-  'lighten75',
   'darken10',
   'darken25',
   'darken50',
   'darken75',
-  'black',
+  'lighten10',
+  'lighten25',
+  'lighten50',
+  'lighten75',
   'white'
 ];
 
@@ -44,18 +43,18 @@ export class Switches extends React.Component {
           Switches
         </h2>
 
-        {colors.map((handle, i) =>
+        {colors.map((handle, i) => (
           <div key={i} className="mb12">
-            {colors.map(c =>
+            {colors.map(c => (
               <SwitchEl key={c} color={c} handleColor={handle} size={null} />
-            )}
+            ))}
           </div>
-        )}
+        ))}
 
         <div className="mt24">
-          {colors.map((handle, i) =>
+          {colors.map((handle, i) => (
             <div key={i} className="mb12">
-              {colors.map(c =>
+              {colors.map(c => (
                 <SwitchEl
                   key={c}
                   color={c}
@@ -63,9 +62,9 @@ export class Switches extends React.Component {
                   handleColor={handle}
                   size={null}
                 />
-              )}
+              ))}
             </div>
-          )}
+          ))}
         </div>
       </div>
     );
