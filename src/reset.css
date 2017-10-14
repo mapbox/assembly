@@ -74,6 +74,10 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: default;
+}
+
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
