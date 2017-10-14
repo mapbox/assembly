@@ -732,6 +732,10 @@ textarea{
 .link.is-active{
   color:#346db0;
 }
+.link:disabled{
+  cursor:default;
+  color:rgba(127, 127, 127, 0.45) !important;
+}
 
 .fieldset,
 .input,
@@ -13415,6 +13419,10 @@ textarea{
 .link:hover,
 .link.is-active{
   color:#346db0;
+}
+.link:disabled{
+  cursor:default;
+  color:rgba(127, 127, 127, 0.45) !important;
 }
 
 .fieldset,
