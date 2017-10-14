@@ -20,7 +20,7 @@ export class Selects extends React.Component {
   render() {
     return (
       <div>
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Selects
         </h2>
 
@@ -74,18 +74,20 @@ export class Selects extends React.Component {
                   <div className="select-arrow" />
                 </div>
               </div>
-              {!/^(darken10|lighten10)$/.test(color)
-                ? <span>
-                    <div className={selectContainerClass}>
-                      <select className={selectStrokeClass}>
-                        <option>firstoption</option>
-                        <option>two</option>
-                        <option>three</option>
-                      </select>
-                      <div className="select-arrow" />
-                    </div>
-                  </span>
-                : ''}
+              {!/^(darken10|lighten10)$/.test(color) ? (
+                <span>
+                  <div className={selectContainerClass}>
+                    <select className={selectStrokeClass}>
+                      <option>firstoption</option>
+                      <option>two</option>
+                      <option>three</option>
+                    </select>
+                    <div className="select-arrow" />
+                  </div>
+                </span>
+              ) : (
+                ''
+              )}
             </div>
           );
         })}

@@ -31,13 +31,15 @@ const getIconEl = icon => {
       </div>
 
       {fontSizes.map(f =>
-        iconSizes.map(c =>
+        iconSizes.map(c => (
           <div className={`mb12 ${f}`}>
             <div
               className={
-                f.includes('h')
-                  ? wrapperClass + ' icon-inliner--heading'
-                  : wrapperClass
+                f.includes('h') ? (
+                  wrapperClass + ' icon-inliner--heading'
+                ) : (
+                  wrapperClass
+                )
               }
             >
               <svg className={c}>
@@ -47,9 +49,11 @@ const getIconEl = icon => {
             <span>Curabitur blandit tempus porttitor.</span>
             <div
               className={
-                f.includes('h')
-                  ? wrapperClass + ' icon-inliner--heading'
-                  : wrapperClass
+                f.includes('h') ? (
+                  wrapperClass + ' icon-inliner--heading'
+                ) : (
+                  wrapperClass
+                )
               }
             >
               <svg className={c}>
@@ -57,7 +61,7 @@ const getIconEl = icon => {
               </svg>
             </div>
           </div>
-        )
+        ))
       )}
     </div>
   );
@@ -71,7 +75,7 @@ export class Icons extends React.Component {
 
     return (
       <div>
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Icons
         </h2>
 

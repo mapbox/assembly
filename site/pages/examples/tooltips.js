@@ -31,19 +31,19 @@ export default class ExampleTooltips extends React.Component {
   render() {
     return (
       <Page>
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Basic tooltip
         </h2>
         <HtmlExample code={basic} />
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Basic tooltip (right)
         </h2>
         <HtmlExample code={basic_right} />
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Basic tooltip (left)
         </h2>
         <HtmlExample code={basic_left} />
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Tooltip with close button
         </h2>
         <HtmlExample code={basic_with_closure} />
