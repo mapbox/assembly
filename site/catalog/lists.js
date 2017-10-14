@@ -4,7 +4,7 @@ export class Lists extends React.Component {
   render() {
     return (
       <div>
-        <h2 className="mb24 border-b border--2 border--gray-faint pb6 mt60 txt-l txt-bold">
+        <h2 className="mb24 border-b border-b--2 border--gray-faint pb6 mt60 txt-l txt-bold">
           Lists
         </h2>
         <div className="grid grid--gut12">

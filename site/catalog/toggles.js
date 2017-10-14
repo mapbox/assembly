@@ -67,7 +67,7 @@ export class Toggles extends React.Component {
   render() {
     return (
       <div>
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Toggles
         </h2>
 
@@ -75,11 +75,11 @@ export class Toggles extends React.Component {
           Color and active text color variations
         </div>
         <div className="mb24">
-          {colors.map(o =>
+          {colors.map(o => (
             <div key={o} className="mb12">
               {colors.map(c => <ToggleEl key={c} color={c} activeColor={o} />)}
             </div>
-          )}
+          ))}
         </div>
 
         <div className="mb12 txt-bold color-darken50 txt-uppercase txt-s">
@@ -107,9 +107,9 @@ export class Toggles extends React.Component {
           Disabled and light
         </div>
         <div className="bg-gray round px12 py12 mt12">
-          {lightenColors.map(c =>
+          {lightenColors.map(c => (
             <ToggleEl key={c} color={c} disabled={true} />
-          )}
+          ))}
         </div>
       </div>
     );

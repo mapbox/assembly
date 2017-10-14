@@ -30,7 +30,7 @@ export class Ranges extends React.Component {
   render() {
     return (
       <div>
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Ranges
         </h2>
 
