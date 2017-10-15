@@ -229,12 +229,12 @@ function buildColorVariants(variables, config) {
       return (result += stripIndent(`
         .textarea--border-${color},
         .input--border-${color} {
-          border-color: var(--${color});
+          box-shadow: inset 0 0 0 1px var(--${color});
         }
 
         .textarea--border-${color}:focus,
         .input--border-${color}:focus {
-          border-color: var(--${darkerShade});
+          box-shadow: inset 0 0 0 1px var(--${darkerShade});
         }
       `));
     }, '');
@@ -243,22 +243,13 @@ function buildColorVariants(variables, config) {
   variantGenerators.checkbox = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
-      const darkerShade = getDarkerShade(color);
       return (result += stripIndent(`
         .checkbox--${color} {
           border-color: var(--${color});
         }
 
-        .checkbox-container:hover > .checkbox--${color} {
-          border-color: var(--${darkerShade});
-        }
-
         input:checked + .checkbox--${color} {
           background-color: var(--${color});
-        }
-
-        .checkbox-container:hover > input:checked + .checkbox--${color} {
-          background-color: var(--${darkerShade});
         }
       `));
     }, '');
@@ -267,15 +258,10 @@ function buildColorVariants(variables, config) {
   variantGenerators.radio = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
-      const darkerShade = getDarkerShade(color);
       return (result += stripIndent(`
         .radio--${color},
         input:checked + .radio--${color} {
           color: var(--${color});
-        }
-
-        .radio-container:hover > .radio--${color} {
-          color: var(--${darkerShade});
         }
       `));
     }, '');
@@ -284,7 +270,6 @@ function buildColorVariants(variables, config) {
   variantGenerators.toggle = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
-      const darkerShade = getDarkerShade(color);
       // Set the text color to regular when inactive.
       // Set the text color to dark when inactive on hover.
       // Set the background color to regular and text color to white when active.
@@ -292,10 +277,6 @@ function buildColorVariants(variables, config) {
       return (result += stripIndent(`
         .toggle--${color} {
           color: var(--${color});
-        }
-
-        .toggle--${color}:hover {
-          color: var(--${darkerShade});
         }
 
         input:checked + .toggle--${color} {
@@ -328,17 +309,8 @@ function buildColorVariants(variables, config) {
           color: var(--${color});
         }
 
-        .switch-container:hover > .switch--${color} {
-          color: var(--${darkerShade});
-        }
-
-        .switch--${color}:hover::after,
         input:checked + .switch--${color} {
           background-color: var(--${darkerShade});
-        }
-
-        .switch-container:hover > input:checked + .switch--${color} {
-          background-color: var(--${color});
         }
 
         input:checked + .switch--dot-${color}::after {
@@ -351,12 +323,10 @@ function buildColorVariants(variables, config) {
   variantGenerators.range = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
-      const darkerShade = getDarkerShade(color);
 
       // Set the thumb color.
       return (result += stripIndent(`
         .range--${color} > input { color: var(--${color}); }
-        .range--${color}:hover > input { color: var(--${darkerShade}); }
       `));
     }, '');
   };
