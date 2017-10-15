@@ -8354,6 +8354,12 @@ input:checked:disabled + .toggle{
   white-space:nowrap;
 }
 
+@media print{
+  .none-print{
+    display:none !important;
+  }
+}
+
 .b{
   color:#FFF8DC;
 }
@@ -20962,6 +20968,12 @@ input:checked:disabled + .toggle{
   position:absolute;
   width:1px;
   white-space:nowrap;
+}
+
+@media print{
+  .none-print{
+    display:none !important;
+  }
 }
 
 .btn--gray{
