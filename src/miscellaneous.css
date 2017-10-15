@@ -268,3 +268,16 @@
   width: 1px;
   white-space: nowrap;
 }
+
+@media print {
+  /**
+   * Apply display none when rendering page for print.
+   *
+   * @memberof Miscellaneous
+   * @example
+   *   <div class="none-print'>Hi, this text won't print!</div>
+   */
+  .none-print {
+    display: none !important;
+  }
+}
