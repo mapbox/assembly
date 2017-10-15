@@ -10,7 +10,8 @@
  * The `icon` class must be appled to an `<svg>` element.
  * Inside the `<svg>`, insert a `<use>` element whose `xlink:href` attribute
  * points to an icon loaded by `assembly.js`. All icons are referenced
- * by the string `#icon-{name}`.
+ * by the string `#icon-{name}`. By default, icons inherit size from their calculated text size.
+ * Change the size of icons by applying `w{size}` and `h{size}` classes to the svg.
  *
  * Be aware that *icons are block-level*.
  * If you want them *inline* with some other element, you can give them the `inline-block` class or wrap them in an inline container.
@@ -20,64 +21,11 @@
  * @memberof Icons
  * @example
  * <svg class='icon'><use xlink:href='#icon-paint'/></svg>
+ * <svg class='icon w18 h18'><use xlink:href='#icon-document'/></svg>
  */
 .icon {
   display: block;
   fill: currentColor;
-  height: 18px;
-  width: 18px;
-}
-
-/**
- * Make an icon small.
- *
- * @memberof Icons
- * @example
- * <svg class='icon icon--s'><use xlink:href='#icon-document'/></svg>
- */
-.icon--s {
-  height: 15px;
-  width: 15px;
-}
-
-/**
- * Make an icon large.
- *
- * @memberof Icons
- * @example
- * <svg class='icon icon--l'><use xlink:href='#icon-star'/></svg>
- */
-.icon--l {
-  height: 36px;
-  width: 36px;
-}
-
-/**
- * Add to a wrapping element around an icon in order to align the icon with text and ensure the icon doesn't unexpectedly shift text line height. Note that this rule depends on an expected text line height of 1.5 to 1.66, so it does not work with `txt-h{number}` classes. See the `icon-inliner--heading` modifier to center icons in heading text.
- *
- * @memberof Icons
- * @example
- * <p class='txt-l'><span class='icon-inliner'><svg class='icon'><use xlink:href='#icon-clipboard'/></svg></span> Copy</p>
- * <p class='txt-xl'>Ring the <span class='icon-inliner'><svg class='icon icon--l'><use xlink:href='#icon-bell'/></svg></span></p>
- * <p class='txt-s'>Keep your <span class='icon-inliner'><svg class='icon icon--s'><use xlink:href='#icon-home'/></svg></span> safe from <span class='icon-inliner'><svg class='icon icon--s'><use xlink:href='#icon-bug'/></svg></span></p>
- **/
-.icon-inliner {
-  position: relative;
-  display: inline-flex;
-  vertical-align: top;
-  align-items: center;
-  justify-content: center;
   height: 1em;
-  top: 0.3em;
-}
-
-/**
- * Modify the `icon-inliner` class so it works inside headings, which have an expected line height of 1.2 rather than 1.5 to 1.66.
- *
- * @memberof Icons
- * @example
- * <h1 class='txt-h1'>I <span class='icon-inliner icon-inliner--heading'><svg class='icon icon--l'><use xlink:href='#icon-heart'/></svg></span> New York.</p>
- **/
-.icon-inliner--heading {
-  top: 0.08em;
+  width: 1em;
 }

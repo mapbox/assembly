@@ -11,15 +11,10 @@ export default class Icons extends React.Component {
           key={icon}
           className="col--6 col--4-ml col--3-mxl flex-parent flex-parent--center-cross flex-child px12 py12 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light"
         >
-          <svg className="icon mr12">
+          <svg className="icon w18 h18 mr12">
             <use xlinkHref={`#icon-${icon}`} />
           </svg>
-          <svg className="icon icon--s mr12">
-            <use xlinkHref={`#icon-${icon}`} />
-          </svg>
-          <span className="color-gray">
-            {icon}
-          </span>
+          <span className="color-gray">{icon}</span>
         </div>
       );
     });
