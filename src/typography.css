@@ -12,8 +12,8 @@ body,
 input,
 textarea {
   color: var(--text-color);
-  font-size: 15px;
-  line-height: 24px;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
   font-family: var(--font-stack-base);
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
@@ -30,7 +30,7 @@ textarea {
 .prose:not(.unprose) kbd {
   font-family: var(--font-stack-mono);
   border: 1px solid var(--darken25);
-  line-height: 18px;
+  line-height: var(--line-height-s);
   border-radius: 3px;
   padding: 2px 3px;
   box-shadow: 0 1px 0 0 var(--darken10);
@@ -196,28 +196,28 @@ textarea {
  * <div class='txt-xs'>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
  */
 .txt-xl {
-  font-size: 30px;
-  line-height: 45px;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
 }
 
 .txt-l {
-  font-size: 18px;
-  line-height: 30px;
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
 }
 
 .txt-m {
-  font-size: 15px;
-  line-height: 24px;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
 }
 
 .txt-s {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
 }
 
 .txt-xs {
-  font-size: 10px;
-  line-height: 15px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
 }
 /** @endgroup */
 
@@ -644,8 +644,8 @@ textarea {
 
 .prose small:not(.unprose) {
   display: block;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
   margin-bottom: 12px;
 }
 

@@ -210,28 +210,28 @@ exports[`buildMediaVariants defaults 1`] = `
   line-height: 18px;
 }
 .txt-xl-mm {
-  font-size: 30px;
-  line-height: 45px;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
 }
 
 .txt-l-mm {
-  font-size: 18px;
-  line-height: 30px;
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
 }
 
 .txt-m-mm {
-  font-size: 15px;
-  line-height: 24px;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
 }
 
 .txt-s-mm {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
 }
 
 .txt-xs-mm {
-  font-size: 10px;
-  line-height: 15px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
 }
 }
 
@@ -444,28 +444,28 @@ exports[`buildMediaVariants defaults 1`] = `
   line-height: 18px;
 }
 .txt-xl-ml {
-  font-size: 30px;
-  line-height: 45px;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
 }
 
 .txt-l-ml {
-  font-size: 18px;
-  line-height: 30px;
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
 }
 
 .txt-m-ml {
-  font-size: 15px;
-  line-height: 24px;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
 }
 
 .txt-s-ml {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
 }
 
 .txt-xs-ml {
-  font-size: 10px;
-  line-height: 15px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
 }
 }
 
@@ -678,28 +678,28 @@ exports[`buildMediaVariants defaults 1`] = `
   line-height: 18px;
 }
 .txt-xl-mxl {
-  font-size: 30px;
-  line-height: 45px;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
 }
 
 .txt-l-mxl {
-  font-size: 18px;
-  line-height: 30px;
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
 }
 
 .txt-m-mxl {
-  font-size: 15px;
-  line-height: 24px;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
 }
 
 .txt-s-mxl {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
 }
 
 .txt-xs-mxl {
-  font-size: 10px;
-  line-height: 15px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
 }
 }
 
