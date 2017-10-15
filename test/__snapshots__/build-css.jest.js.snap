@@ -1384,6 +1384,16 @@ input:checked:disabled + .toggle{
   height:1em;
   width:1em;
 }
+.icon--in-h{
+  display:inline-block;
+  vertical-align:top;
+  height:calc(1em * 1.2);
+}
+.icon--in-txt{
+  display:inline-block;
+  vertical-align:top;
+  height:calc(1em * 1.5);
+}
 .limiter{
   padding-left:24px;
   padding-right:24px;
@@ -13646,6 +13656,16 @@ input:checked:disabled + .toggle{
   fill:currentColor;
   height:1em;
   width:1em;
+}
+.icon--in-h{
+  display:inline-block;
+  vertical-align:top;
+  height:calc(1em * 1.2);
+}
+.icon--in-txt{
+  display:inline-block;
+  vertical-align:top;
+  height:calc(1em * 1.5);
 }
 .limiter{
   padding-left:24px;

@@ -14,18 +14,53 @@
  * Change the size of icons by applying `w{size}` and `h{size}` classes to the svg.
  *
  * Be aware that *icons are block-level*.
- * If you want them *inline* with some other element, you can give them the `inline-block` class or wrap them in an inline container.
+ * If you want them *inline* with some other element, have a look at the `icon--in-h` and `icon--in-txt` classes.
  *
  * To see a list of all available icons, visit [the icons page](/assembly/icons).
  *
  * @memberof Icons
  * @example
  * <svg class='icon'><use xlink:href='#icon-paint'/></svg>
- * <svg class='icon w18 h18'><use xlink:href='#icon-document'/></svg>
  */
 .icon {
   display: block;
   fill: currentColor;
   height: 1em;
   width: 1em;
+}
+
+/**
+ * Center an icon inline in headings.
+ *
+ * @memberof Icons
+ * @example
+ * <h2 class="txt-h2">
+ *   This is an icon
+ *   <svg class='icon icon--in-h'><use xlink:href='#icon-folder'/></svg>
+ *   inlined and centered with heading text.
+ * </h2>
+ */
+.icon--in-h {
+  display: inline-block;
+  vertical-align: top;
+  /* relies on expected txt to line height ratio of 1.2 */
+  height: calc(1em * 1.2);
+}
+
+/**
+ * Center an icon inline in text.
+ *
+ * @memberof Icons
+ * @example
+ * <p class="txt-s">
+ *   This is an icon
+ *   <svg class='icon icon--in-txt'><use xlink:href='#icon-folder'/></svg>
+ *   inlined and centered with body text.
+ * </p>
+ */
+.icon--in-txt {
+  display: inline-block;
+  vertical-align: top;
+  /* relies on expected txt to line height ratio of 1.5 */
+  height: calc(1em * 1.5);
 }
