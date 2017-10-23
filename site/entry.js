@@ -99,7 +99,7 @@ class Entry extends React.Component {
                 target="_blank"
                 className="txt-s link inline-block link--gray"
               >
-                <svg className="align-t inline-block mr6 mt3 icon icon--s">
+                <svg className="align-t inline-block mr6 mt3 icon w15 h15">
                   <use xlinkHref="#icon-code" />
                 </svg>
                 {props.parsedComment.source.filename}:{' '}
