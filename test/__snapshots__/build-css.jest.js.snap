@@ -1381,31 +1381,8 @@ input:checked:disabled + .toggle{
 .icon{
   display:block;
   fill:currentColor;
-  height:18px;
-  width:18px;
-}
-.icon--s{
-  height:15px;
-  width:15px;
-}
-.icon--l{
-  height:36px;
-  width:36px;
-}
-.icon-inliner{
-  position:relative;
-  display:-webkit-inline-flex;
-  display:inline-flex;
-  vertical-align:top;
-  -webkit-align-items:center;
-          align-items:center;
-  -webkit-justify-content:center;
-          justify-content:center;
   height:1em;
-  top:0.3em;
-}
-.icon-inliner--heading{
-  top:0.08em;
+  width:1em;
 }
 .limiter{
   padding-left:24px;
@@ -13667,31 +13644,8 @@ input:checked:disabled + .toggle{
 .icon{
   display:block;
   fill:currentColor;
-  height:18px;
-  width:18px;
-}
-.icon--s{
-  height:15px;
-  width:15px;
-}
-.icon--l{
-  height:36px;
-  width:36px;
-}
-.icon-inliner{
-  position:relative;
-  display:-webkit-inline-flex;
-  display:inline-flex;
-  vertical-align:top;
-  -webkit-align-items:center;
-          align-items:center;
-  -webkit-justify-content:center;
-          justify-content:center;
   height:1em;
-  top:0.3em;
-}
-.icon-inliner--heading{
-  top:0.08em;
+  width:1em;
 }
 .limiter{
   padding-left:24px;

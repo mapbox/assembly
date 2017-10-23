@@ -7,14 +7,14 @@ const simple = `<div class='bg-blue-faint color-blue inline-block px6 py3 txt-xs
 </div>`;
 
 const tip = `<div class='bg-green-faint color-green inline-block px6 py3 txt-xs txt-bold round-full'>
-  <svg class='icon icon--s inline-block align-middle'><use xlink:href='#icon-info'></use></svg>
+  <svg class='icon w15 h15 inline-block align-middle'><use xlink:href='#icon-info'></use></svg>
   Did you know?
 </div>`;
 
 const warning = `<div class='bg-orange-faint color-orange-dark inline-block px6 py3 txt-xs txt-bold round-full'>
   Heads up!
   <button>
-    <svg class='icon icon--s inline-block align-middle ml3'><use xlink:href='#icon-close'></use></svg>
+    <svg class='icon w15 h15 inline-block align-middle ml3'><use xlink:href='#icon-close'></use></svg>
   </button>
 </div>`;
 

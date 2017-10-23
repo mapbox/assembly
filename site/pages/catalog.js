@@ -18,7 +18,6 @@ import { Textareas } from '../catalog/textareas';
 import { Ranges } from '../catalog/ranges';
 import { Links } from '../catalog/links';
 import { Grids } from '../catalog/grids';
-import { Icons } from '../catalog/icons';
 import { Flexbox } from '../catalog/flexbox';
 
 export default class Catalog extends React.Component {
@@ -81,9 +80,6 @@ export default class Catalog extends React.Component {
           </div>
           <div id="Radios" className="mb36">
             <Radios />
-          </div>
-          <div id="Icons" className="mb36">
-            <Icons />
           </div>
           <div id="Triangles" className="mb36">
             <Triangles />
