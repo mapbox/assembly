@@ -633,9 +633,20 @@ textarea{
 }
 .btn:disabled{
   pointer-events:none;
-  color:rgba(127, 127, 127, 0.45) !important;
-  background-color:rgba(127, 127, 127, 0.25) !important;
-  box-shadow:none !important;
+  color:rgba(127, 127, 127, 0.45);
+  background-color:rgba(127, 127, 127, 0.25);
+  box-shadow:none;
+}
+
+.btn.btn--stroke:disabled{
+  pointer-events:none;
+  background-color:transparent;
+  box-shadow:inset 0 0 0 1px rgba(127, 127, 127, 0.45);
+  color:rgba(127, 127, 127, 0.45);
+}
+
+.btn.btn--stroke--2:disabled{
+  box-shadow:inset 0 0 0 2px rgba(127, 127, 127, 0.45);
 }
 .btn--pill-stroke{
   position:relative;
@@ -734,8 +745,9 @@ textarea{
   color:#346db0;
 }
 .link:disabled{
+  pointer-events:none;
   cursor:default;
-  color:rgba(127, 127, 127, 0.45) !important;
+  color:rgba(127, 127, 127, 0.45);
 }
 
 .fieldset,
@@ -825,13 +837,13 @@ textarea{
 .input:disabled,
 .textarea:disabled{
   pointer-events:none;
-  color:rgba(0, 0, 0, 0.5) !important;
-  background-color:rgba(127, 127, 127, 0.1) !important;
-  box-shadow:inset 0 0 0 1px rgba(127, 127, 127, 0.25) !important;
+  color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(127, 127, 127, 0.1);
+  box-shadow:inset 0 0 0 1px rgba(127, 127, 127, 0.25);
 }
 .input[readonly],
 .textarea[readonly]{
-  background-color:rgba(127, 127, 127, 0.1) !important;
+  background-color:rgba(127, 127, 127, 0.1);
 }
 .select-container{
   display:-webkit-inline-flex;
@@ -938,9 +950,9 @@ textarea{
 }
 .select:disabled{
   pointer-events:none;
-  color:rgba(0, 0, 0, 0.25) !important;
-  background-color:rgba(127, 127, 127, 0.25) !important;
-  border-color:transparent !important;
+  color:rgba(0, 0, 0, 0.25);
+  background-color:rgba(127, 127, 127, 0.25);
+  border-color:transparent;
 }
 
 .select:disabled + .select-arrow{
@@ -1229,15 +1241,18 @@ input:disabled{
 
 input:disabled + .checkbox,
 input:disabled + .radio,
-input:disabled + .switch{
+input:disabled + .switch,
+input:checked:disabled + .checkbox,
+input:checked:disabled + .radio,
+input:checked:disabled + .switch{
   pointer-events:none;
-  color:rgba(0, 0, 0, 0.25) !important;
-  background-color:rgba(127, 127, 127, 0.25) !important;
-  border-color:transparent !important;
+  color:rgba(0, 0, 0, 0.25);
+  background-color:rgba(127, 127, 127, 0.25);
+  border-color:transparent;
 }
 
 input:disabled + .switch::after{
-  background-color:rgba(0, 0, 0, 0.25) !important;
+  background-color:rgba(0, 0, 0, 0.25);
 }
 input:checked + .checkbox > .icon,
 input:checked + .radio::before{
@@ -1267,13 +1282,13 @@ input:checked + .toggle{
 }
 input:disabled + .toggle{
   pointer-events:none;
-  color:rgba(0, 0, 0, 0.25) !important;
-  border-color:transparent !important;
+  color:rgba(0, 0, 0, 0.25);
+  border-color:transparent;
 }
 
 input:checked:disabled + .toggle{
-  background-color:rgba(127, 127, 127, 0.25) !important;
-  color:rgba(0, 0, 0, 0.25) !important;
+  background-color:rgba(127, 127, 127, 0.25);
+  color:rgba(0, 0, 0, 0.25);
 }
 .border{
   border-style:solid;
@@ -1370,12 +1385,12 @@ input:checked:disabled + .toggle{
   width:18px;
 }
 .icon--s{
-  height:15px !important;
-  width:15px !important;
+  height:15px;
+  width:15px;
 }
 .icon--l{
-  height:36px !important;
-  width:36px !important;
+  height:36px;
+  width:36px;
 }
 .icon-inliner{
   position:relative;
@@ -8236,8 +8251,8 @@ input:checked:disabled + .toggle{
           animation:spin 0.8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 .loading--s::after{
-  height:18px !important;
-  width:18px !important;
+  height:18px;
+  width:18px;
 }
 .loading::after{
   background-image:url(\\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='36' height='36' viewBox='0 0 36 36'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23333;%7D.b%7Bopacity:0.1;%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M5.2721,5.2721,7.3934,7.3934a15,15,0,0,1,21.2132,0l2.1213-2.1213A18,18,0,0,0,5.2721,5.2721Z'/%3E%3Cg class='b'%3E%3Cpath d='M28.6066,28.6066A15,15,0,0,1,7.3934,7.3934L5.2721,5.2721a18,18,0,1,0,25.4558,0L28.6066,7.3934A15,15,0,0,1,28.6066,28.6066Z'/%3E%3C/g%3E%3C/svg%3E\\");
@@ -12904,9 +12919,20 @@ textarea{
 }
 .btn:disabled{
   pointer-events:none;
-  color:rgba(127, 127, 127, 0.45) !important;
-  background-color:rgba(127, 127, 127, 0.25) !important;
-  box-shadow:none !important;
+  color:rgba(127, 127, 127, 0.45);
+  background-color:rgba(127, 127, 127, 0.25);
+  box-shadow:none;
+}
+
+.btn.btn--stroke:disabled{
+  pointer-events:none;
+  background-color:transparent;
+  box-shadow:inset 0 0 0 1px rgba(127, 127, 127, 0.45);
+  color:rgba(127, 127, 127, 0.45);
+}
+
+.btn.btn--stroke--2:disabled{
+  box-shadow:inset 0 0 0 2px rgba(127, 127, 127, 0.45);
 }
 .btn--pill-stroke{
   position:relative;
@@ -13005,8 +13031,9 @@ textarea{
   color:#346db0;
 }
 .link:disabled{
+  pointer-events:none;
   cursor:default;
-  color:rgba(127, 127, 127, 0.45) !important;
+  color:rgba(127, 127, 127, 0.45);
 }
 
 .fieldset,
@@ -13096,13 +13123,13 @@ textarea{
 .input:disabled,
 .textarea:disabled{
   pointer-events:none;
-  color:rgba(0, 0, 0, 0.5) !important;
-  background-color:rgba(127, 127, 127, 0.1) !important;
-  box-shadow:inset 0 0 0 1px rgba(127, 127, 127, 0.25) !important;
+  color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(127, 127, 127, 0.1);
+  box-shadow:inset 0 0 0 1px rgba(127, 127, 127, 0.25);
 }
 .input[readonly],
 .textarea[readonly]{
-  background-color:rgba(127, 127, 127, 0.1) !important;
+  background-color:rgba(127, 127, 127, 0.1);
 }
 .select-container{
   display:-webkit-inline-flex;
@@ -13209,9 +13236,9 @@ textarea{
 }
 .select:disabled{
   pointer-events:none;
-  color:rgba(0, 0, 0, 0.25) !important;
-  background-color:rgba(127, 127, 127, 0.25) !important;
-  border-color:transparent !important;
+  color:rgba(0, 0, 0, 0.25);
+  background-color:rgba(127, 127, 127, 0.25);
+  border-color:transparent;
 }
 
 .select:disabled + .select-arrow{
@@ -13500,15 +13527,18 @@ input:disabled{
 
 input:disabled + .checkbox,
 input:disabled + .radio,
-input:disabled + .switch{
+input:disabled + .switch,
+input:checked:disabled + .checkbox,
+input:checked:disabled + .radio,
+input:checked:disabled + .switch{
   pointer-events:none;
-  color:rgba(0, 0, 0, 0.25) !important;
-  background-color:rgba(127, 127, 127, 0.25) !important;
-  border-color:transparent !important;
+  color:rgba(0, 0, 0, 0.25);
+  background-color:rgba(127, 127, 127, 0.25);
+  border-color:transparent;
 }
 
 input:disabled + .switch::after{
-  background-color:rgba(0, 0, 0, 0.25) !important;
+  background-color:rgba(0, 0, 0, 0.25);
 }
 input:checked + .checkbox > .icon,
 input:checked + .radio::before{
@@ -13538,13 +13568,13 @@ input:checked + .toggle{
 }
 input:disabled + .toggle{
   pointer-events:none;
-  color:rgba(0, 0, 0, 0.25) !important;
-  border-color:transparent !important;
+  color:rgba(0, 0, 0, 0.25);
+  border-color:transparent;
 }
 
 input:checked:disabled + .toggle{
-  background-color:rgba(127, 127, 127, 0.25) !important;
-  color:rgba(0, 0, 0, 0.25) !important;
+  background-color:rgba(127, 127, 127, 0.25);
+  color:rgba(0, 0, 0, 0.25);
 }
 .border{
   border-style:solid;
@@ -13641,12 +13671,12 @@ input:checked:disabled + .toggle{
   width:18px;
 }
 .icon--s{
-  height:15px !important;
-  width:15px !important;
+  height:15px;
+  width:15px;
 }
 .icon--l{
-  height:36px !important;
-  width:36px !important;
+  height:36px;
+  width:36px;
 }
 .icon-inliner{
   position:relative;
@@ -20507,8 +20537,8 @@ input:checked:disabled + .toggle{
           animation:spin 0.8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 .loading--s::after{
-  height:18px !important;
-  width:18px !important;
+  height:18px;
+  width:18px;
 }
 .loading::after{
   background-image:url(\\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='36' height='36' viewBox='0 0 36 36'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23333;%7D.b%7Bopacity:0.1;%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M5.2721,5.2721,7.3934,7.3934a15,15,0,0,1,21.2132,0l2.1213-2.1213A18,18,0,0,0,5.2721,5.2721Z'/%3E%3Cg class='b'%3E%3Cpath d='M28.6066,28.6066A15,15,0,0,1,7.3934,7.3934L5.2721,5.2721a18,18,0,1,0,25.4558,0L28.6066,7.3934A15,15,0,0,1,28.6066,28.6066Z'/%3E%3C/g%3E%3C/svg%3E\\");
