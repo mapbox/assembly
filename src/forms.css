@@ -151,9 +151,9 @@
 .input:disabled,
 .textarea:disabled {
   pointer-events: none;
-  color: var(--darken50) !important;
-  background-color: var(--disabled-secondary-interactive-color) !important;
-  box-shadow: inset 0 0 0 1px var(--disabled-primary-interactive-color) !important;
+  color: var(--darken50);
+  background-color: var(--disabled-secondary-interactive-color);
+  box-shadow: inset 0 0 0 1px var(--disabled-primary-interactive-color);
 }
 
 /* Using the attribute selector instead of the pseudo-class `:read-only`
@@ -168,7 +168,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .input[readonly],
 .textarea[readonly] {
-  background-color: var(--disabled-secondary-interactive-color) !important;
+  background-color: var(--disabled-secondary-interactive-color);
 }
 
 /**
@@ -387,9 +387,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .select:disabled {
   pointer-events: none;
-  color: var(--darken25) !important;
-  background-color: var(--disabled-primary-interactive-color) !important;
-  border-color: var(--transparent) !important;
+  color: var(--darken25);
+  background-color: var(--disabled-primary-interactive-color);
+  border-color: var(--transparent);
 }
 
 .select:disabled + .select-arrow {
@@ -913,15 +913,18 @@ input:disabled {
 
 input:disabled + .checkbox,
 input:disabled + .radio,
-input:disabled + .switch {
+input:disabled + .switch,
+input:checked:disabled + .checkbox,
+input:checked:disabled + .radio,
+input:checked:disabled + .switch {
   pointer-events: none;
-  color: var(--darken25) !important;
-  background-color: var(--disabled-primary-interactive-color) !important;
-  border-color: var(--transparent) !important;
+  color: var(--darken25);
+  background-color: var(--disabled-primary-interactive-color);
+  border-color: var(--transparent);
 }
 
 input:disabled + .switch::after {
-  background-color: var(--darken25) !important;
+  background-color: var(--darken25);
 }
 
 /* State management for checkboxes and radio inputs */
@@ -974,11 +977,11 @@ input:checked + .toggle {
  */
 input:disabled + .toggle {
   pointer-events: none;
-  color: var(--darken25) !important;
-  border-color: var(--transparent) !important;
+  color: var(--darken25);
+  border-color: var(--transparent);
 }
 
 input:checked:disabled + .toggle {
-  background-color: var(--disabled-primary-interactive-color) !important;
-  color: var(--darken25) !important;
+  background-color: var(--disabled-primary-interactive-color);
+  color: var(--darken25);
 }
