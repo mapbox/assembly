@@ -76,6 +76,7 @@ button{
       -ms-user-select:none;
           user-select:none;
   cursor:pointer;
+  border-radius:0;
 }
 
 button:disabled{
@@ -12339,6 +12340,7 @@ button{
       -ms-user-select:none;
           user-select:none;
   cursor:pointer;
+  border-radius:0;
 }
 
 button:disabled{
