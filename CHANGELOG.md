@@ -1,9 +1,35 @@
 # Changelog
 
+## 0.19.0
+
+- [fix] Add `border-radius:0` to button reset to address recent changes in Chrome's default button style.
+- [breaking] Remove buggy `icon-inliner` class.
+- [breaking] Remove `icon--s` and `icon--l` classes.
+- [breaking] change default icon size to 1em x 1em
+- [style change] Remove hover states from radio, and checkbox, toggle form components.
+- [breaking] Refactor line heights and text sizes for form components.
+- [breaking] input and textarea components now use box-shadow to render borders, not border.
+- Adds `--xs` modifier classes to input, textarea, and select form components.
+- Add disabled styling to button elements with disabled property that have the `link` class.
+- [breaking] refactor border rules so they work as expected with media queries, add `border-{direction}--2` rules.
+- [breaking] remove some rarely used icons:
+  - antialias
+  - land
+  - landuse
+  - levels
+  - line-miter-limit
+  - line-round-limit
+  - minus-document
+  - plus-document
+  - ribbon
+- Add `no-print` class to hide content when printing webpages
+- [fix] ensure disabled buttons show default cursor, not pointer cursor.
+- [breaking] rename `clip` to `scroll-hidden`.
+- [fix] remove unecessary `!important` declarations on `:disabled`, and loading rules.
+
 ## 0.18.0
 
 - [style change] make small range input visually smaller. Doesn't change the metrics of the input, so this is not a breaking change.
-- [breaking] rename `clip` to `scroll-hidden`.
 
 ## 0.17.0
 
