@@ -14,12 +14,12 @@ class Entry extends React.Component {
   render() {
     const { props } = this;
 
-    const example = !props.parsedComment.example
-      ? null
-      : <HtmlExample
-          code={props.parsedComment.example.description}
-          copy={false}
-        />;
+    const example = !props.parsedComment.example ? null : (
+      <HtmlExample
+        code={props.parsedComment.example.description}
+        copy={false}
+      />
+    );
 
     let selectors;
     const selectorsTag = props.parsedComment.tags.find(
@@ -59,42 +59,39 @@ class Entry extends React.Component {
       }
     }
 
-    const getSelectorEl = selector =>
+    const getSelectorEl = selector => (
       <span
         key={selector}
-        id={`${selector.trim().replace(/\s+/g, '-').replace(/\./g, '')}`}
+        id={`${selector
+          .trim()
+          .replace(/\s+/g, '-')
+          .replace(/\./g, '')}`}
         className="mr3 pr3 px3 txt-mono color-blue-dark round bg-blue-faint mb3 inline-block"
       >
         {selector.trim()}
-      </span>;
+      </span>
+    );
 
     const selectorEls = selectors !== undefined && selectors.map(getSelectorEl);
     const collapsedSelectorEls =
       selectors !== undefined && selectors.slice(0, 15).map(getSelectorEl);
 
     const expandButton =
-      selectors !== undefined && selectors.length > 15
-        ? <button
-            data-button-expand
-            className="ml3 btn btn--xs btn--blue round"
-          >
-            See all
-          </button>
-        : null;
+      selectors !== undefined && selectors.length > 15 ? (
+        <button data-button-expand className="ml3 btn btn--xs btn--blue round">
+          See all
+        </button>
+      ) : null;
 
     const sourceUrl = `https://github.com/mapbox/assembly/blob/${pkg.version}/src/${props
       .parsedComment.source.filename}#L${props.parsedComment.source.line}`;
 
     return (
-      <div className="border-t border--2 border--gray-faint">
+      <div className="border-t border-t--2 border--gray-faint">
         <div className="grid-mxl grid--gut18-mxl pt36 pb60">
           <div className="col col--4-mxl pr18-ml mb6">
-            <div className="none">
-              {selectorEls}
-            </div>
-            <div>
-              {collapsedSelectorEls}
-            </div>
+            <div className="none">{selectorEls}</div>
+            <div>{collapsedSelectorEls}</div>
             {expandButton}
             <div className="mt12">
               <a
@@ -102,7 +99,7 @@ class Entry extends React.Component {
                 target="_blank"
                 className="txt-s link inline-block link--gray"
               >
-                <svg className="align-t inline-block mr6 mt3 icon icon--s">
+                <svg className="align-t inline-block mr6 mt3 icon w15 h15">
                   <use xlinkHref="#icon-code" />
                 </svg>
                 {props.parsedComment.source.filename}:{' '}

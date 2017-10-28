@@ -35,3 +35,18 @@
 .link.is-active {
   color: var(--default-primary-interactive-color-dark);
 }
+
+/**
+ * When a form element like `button` includes both the `link` class and the `disabled` attribute, it will be styled accordingly.
+ * The disabled property has no visual effect on `a` elements.
+ *
+ * @memberof Links
+ * @example
+ * <button href='#Links' disabled class='link'>A disabled link</button>
+ * <button href='#Links' disabled class='link link--red'>A disabled red link</button>
+ */
+.link:disabled {
+  pointer-events: none;
+  cursor: default;
+  color: var(--inactive-text-color);
+}

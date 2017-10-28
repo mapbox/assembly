@@ -2,7 +2,7 @@ import React from 'react';
 import { HtmlExample } from '../../html_example';
 import { Page } from '../../page';
 
-const basicSidebar = `<div class='flex-parent viewport-full relative clip'>
+const basicSidebar = `<div class='flex-parent viewport-full relative scroll-hidden'>
   <div class='flex-child w-full w240-ml absolute static-ml left bottom'>
     <div class='flex-parent flex-parent--column viewport-third h-full hmax-full bg-white'>
       <div class='flex-child flex-child--grow px12 py12 scroll-auto'>
@@ -17,7 +17,7 @@ const basicSidebar = `<div class='flex-parent viewport-full relative clip'>
   <div class='flex-child flex-child--grow bg-darken10 viewport-twothirds viewport-full-ml'></div>
 </div>`;
 
-const floatingSidebar = `<div class='viewport-full relative clip'>
+const floatingSidebar = `<div class='viewport-full relative scroll-hidden'>
   <div class='bg-darken10 viewport-twothirds viewport-full-ml absolute top left right bottom'></div>
   <div class='absolute top-ml left bottom z1 w-full w240-ml px12 py12-ml'>
     <div class='flex-parent flex-parent--column viewport-third h-auto-ml hmax-full bg-white round-ml shadow-darken10'>
@@ -36,11 +36,11 @@ export default class ExampleSidebarApps extends React.Component {
   render() {
     return (
       <Page>
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Full height sidebar
         </h2>
         <HtmlExample code={basicSidebar} />
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Floating full height sidebar
         </h2>
         <HtmlExample code={floatingSidebar} />

@@ -59,11 +59,11 @@ class Navigation extends React.Component {
         r.items.length === 0;
 
       const isDoc = r.name === 'Documentation';
-      const nestedItems = hideNestedItems
-        ? null
-        : <div className="mb6 ml12 ml0-mm txt-s">
-            {listNestedMembers(r.items, isDoc)}
-          </div>;
+      const nestedItems = hideNestedItems ? null : (
+        <div className="mb6 ml12 ml0-mm txt-s">
+          {listNestedMembers(r.items, isDoc)}
+        </div>
+      );
       return (
         <div key={r.name}>
           <a
@@ -89,7 +89,7 @@ class Navigation extends React.Component {
               href="/assembly/"
               className="flex-child flex-child--grow link link--blue block"
             >
-              <Logo className="icon icon--l" />
+              <Logo className="icon w36 h36" />
             </a>
             <div className="flex-child txt-s color-darken50">
               v{pkg.version}

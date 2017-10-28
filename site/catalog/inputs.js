@@ -40,7 +40,7 @@ export class Inputs extends React.Component {
   render() {
     return (
       <div>
-        <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
+        <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Text inputs
         </h2>
 
@@ -55,18 +55,18 @@ export class Inputs extends React.Component {
           Disabled
         </div>
         <div className="mb24">
-          {colors.map(c =>
+          {colors.map(c => (
             <InputEl key={c} color={c} border={c} disabled={true} />
-          )}
+          ))}
         </div>
 
         <div className="mb12 txt-bold color-darken50 txt-uppercase txt-s">
           Readonly
         </div>
         <div className="mb24">
-          {colors.map(c =>
+          {colors.map(c => (
             <InputEl key={c} color={c} border={c} readonly={true} />
-          )}
+          ))}
         </div>
 
         <div className="mb12 txt-bold txt-d ">Additional input types</div>

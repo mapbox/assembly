@@ -72,6 +72,11 @@ button {
   appearance: none;
   user-select: none;
   cursor: pointer;
+  border-radius: 0;
+}
+
+button:disabled {
+  cursor: default;
 }
 
 button::-moz-focus-inner {

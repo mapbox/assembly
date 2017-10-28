@@ -39,7 +39,7 @@ export default class Home extends React.Component {
             Assembly is an open source CSS framework that makes the hard parts
             of designing for the web easy.
           </p>
-          <h2 className="border-b border--2 border--gray-faint pb6 mt60 mb36 txt-l txt-bold">
+          <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb36 txt-l txt-bold">
             Getting started
           </h2>
           <p>Include in the head of your HTML the Assembly stylesheet.</p>
@@ -79,7 +79,7 @@ export default class Home extends React.Component {
             </a>.
           </p>
 
-          <h2 className="border-b border--2 border--gray-faint pb6 mt60 txt-l txt-bold">
+          <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 txt-l txt-bold">
             Philosophy
           </h2>
           <div className="grid grid--gut24 grid--gut36-ml">
@@ -114,7 +114,7 @@ export default class Home extends React.Component {
               </p>
             </div>
           </div>
-          <h2 className="border-b border--2 border--gray-faint pb6 mt60 txt-l txt-bold">
+          <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 txt-l txt-bold">
             Overview
           </h2>
 
