@@ -290,7 +290,7 @@ export default class Home extends React.Component {
                 <code className="txt-code">!important</code>. This ensures that
                 such classes always behave the same. Whenever you see the class{' '}
                 <code className="txt-code">bg-blue</code> on an element, that
-                element should have a pink background, regardless of its context
+                element should have a blue background, regardless of its context
                 and the other rules that apply to it.
               </p>
               <p className="mt12">
