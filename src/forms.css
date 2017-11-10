@@ -675,6 +675,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 .checkbox > .icon {
   position: absolute;
+  width: 18px;
+  height: 18px;
   top: -2px;
   left: -2px;
   right: -2px;
