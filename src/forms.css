@@ -589,7 +589,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .checkbox-container,
 .switch-container,
 .radio-container {
-  cursor: pointer;
   user-select: none;
   display: inline-flex;
 }
@@ -612,6 +611,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 .checkbox,
 .radio {
+  cursor: pointer;
   top: 3px;
   flex-shrink: 0;
   width: 18px;
@@ -675,6 +675,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 .checkbox > .icon {
   position: absolute;
+  width: 18px;
+  height: 18px;
   top: -2px;
   left: -2px;
   right: -2px;
@@ -759,6 +761,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * </label>
  */
 .switch {
+  cursor: pointer;
   top: 3px;
   flex-shrink: 0;
   position: relative;

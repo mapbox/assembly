@@ -1101,7 +1101,6 @@ textarea{
 .checkbox-container,
 .switch-container,
 .radio-container{
-  cursor:pointer;
   -webkit-user-select:none;
      -moz-user-select:none;
       -ms-user-select:none;
@@ -1126,6 +1125,7 @@ textarea{
 
 .checkbox,
 .radio{
+  cursor:pointer;
   top:3px;
   -webkit-flex-shrink:0;
           flex-shrink:0;
@@ -1154,6 +1154,8 @@ textarea{
 
 .checkbox > .icon{
   position:absolute;
+  width:18px;
+  height:18px;
   top:-2px;
   left:-2px;
   right:-2px;
@@ -1178,6 +1180,7 @@ textarea{
   display:none;
 }
 .switch{
+  cursor:pointer;
   top:3px;
   -webkit-flex-shrink:0;
           flex-shrink:0;
@@ -13365,7 +13368,6 @@ textarea{
 .checkbox-container,
 .switch-container,
 .radio-container{
-  cursor:pointer;
   -webkit-user-select:none;
      -moz-user-select:none;
       -ms-user-select:none;
@@ -13390,6 +13392,7 @@ textarea{
 
 .checkbox,
 .radio{
+  cursor:pointer;
   top:3px;
   -webkit-flex-shrink:0;
           flex-shrink:0;
@@ -13418,6 +13421,8 @@ textarea{
 
 .checkbox > .icon{
   position:absolute;
+  width:18px;
+  height:18px;
   top:-2px;
   left:-2px;
   right:-2px;
@@ -13442,6 +13447,7 @@ textarea{
   display:none;
 }
 .switch{
+  cursor:pointer;
   top:3px;
   -webkit-flex-shrink:0;
           flex-shrink:0;
