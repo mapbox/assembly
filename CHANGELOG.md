@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0
+
+- [fix] Add missing height and width to checkbox icons.
+- [fix] Set cursor style when hovering over form element, rather than the form element container, for better disabled state behavior.
+- 1.0.0!
+
 ## 0.19.0
 
 - [fix] Add `border-radius:0` to button reset to address recent changes in Chrome's default button style.
