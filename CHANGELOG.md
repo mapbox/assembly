@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.20.0
+
+- Add filter, flame, instagram, qT icons.
+- Vertically center chevron icons.
+- [fix] Add height and width to checkbox icons in `.checkbox` class so check icons are the right size.
+- [fix] On checkbox, swich, and radio components, set cursor style on the form element, rather than form container, for correct accurate cursor state when form element is disabled.
+
 ## 0.19.0
 
 - [fix] Add `border-radius:0` to button reset to address recent changes in Chrome's default button style.
