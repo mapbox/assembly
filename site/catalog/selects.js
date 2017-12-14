@@ -62,16 +62,6 @@ export class Selects extends React.Component {
                   <div className="select-arrow" />
                 </div>
               </div>
-              <div className="inline-block mr12">
-                <div className={selectContainerClass}>
-                  <select className={`${selectClass} select--xs`}>
-                    <option>firstoption</option>
-                    <option>two</option>
-                    <option>three</option>
-                  </select>
-                  <div className="select-arrow" />
-                </div>
-              </div>
             </div>
           );
         })}

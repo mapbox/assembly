@@ -90,19 +90,6 @@
 }
 
 /**
- * Make an input extra small.
- *
- * @memberof Inputs & textareas
- * @example
- * <input class='input input--xs' placeholder='extra small' />
- */
-.input--xs {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  padding: 0 4px;
-}
-
-/**
  * Style a textarea. Set the color of the border with a `textarea--border-{color} modifier (`*-dark` colors are not available).
  *
  * @memberof Inputs & textareas
@@ -127,19 +114,6 @@
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
   padding: 3px 6px;
-}
-
-/**
- * Make a textarea extra small.
- *
- * @memberof Inputs & textareas
- * @example
- * <textarea class='textarea textarea--xs'>extra small textarea</textarea>
- */
-.textarea--xs {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  padding: 0 3px;
 }
 
 /**
@@ -218,7 +192,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
   color: currentColor;
-  padding: 6px 30px 6px 12px; /* plus arrow */
+  padding: 6px 36px 6px 18px; /* plus arrow */
   cursor: pointer;
 }
 
@@ -286,35 +260,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * </div>
  */
 .select--s {
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-xs);
   line-height: var(--line-height-s);
-  padding: 3px 20px 3px 6px; /* plus arrow */
+  padding: 3px 26px 3px 12px; /* plus arrow */
 }
 
 .select--s + .select-arrow {
-  right: 8px;
-}
-
-/**
- * Make a select component extra small.
- *
- * @memberof Selects
- * @example
- * <div class='select-container'>
- *   <select class='select select--xs'>
- *     <option>one</option>
- *     <option>two</option>
- *   </select>
- *   <div class='select-arrow'></div>
- * </div>
- */
-.select--xs {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  padding: 0 20px 0 6px; /* plus arrow */
-}
-
-.select--xs + .select-arrow {
   right: 8px;
 }
 
