@@ -765,13 +765,37 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   cursor: pointer;
   color: var(--default-secondary-interactive-color);
   font-weight: bold;
-  padding: 0 12px;
-  border-radius: 13px;
+  font-size: var(--font-size-s);
+  padding: 6px 18px;
+  border-radius: 18px; /* fully round by default */
   background-color: var(--transparent);
   transition: color var(--transition),
     background-color var(--transition);
 }
 /** @endgroup */
+
+/**
+ * Make a toggle small.
+ *
+ * @memberof Toggle group
+ * @example
+ * <div class='toggle-group mr18'>
+ *   <label class='toggle-container'>
+ *     <input checked name='toggle' type='radio' />
+ *     <div class='toggle toggle--s'>mouse</div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='toggle' type='radio' />
+ *     <div class='toggle toggle--s'>cricket</div>
+ *   </label>
+ * </div>
+
+ */
+.toggle--s {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-s);
+  padding: 3px 12px;
+}
 
 /* align labels with small text */
 .switch--s-label,
