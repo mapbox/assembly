@@ -151,7 +151,7 @@
  *
  * @memberof Miscellaneous
  * @example
- * <div class='select-none'>You can't select this.</div>
+ * <div class='unselectable'>You can't select this.</div>
  */
 .unselectable {
   user-select: none;
@@ -171,11 +171,11 @@
 
 /**
  * Enable text selection on an element and its children.
- * Use to re-enable selection inside a parent with the `select-none` class.
+ * Use to re-enable selection inside a parent with the `unselectable` class.
  *
  * @memberof Miscellaneous
  * @example
- * <div class='select-none'><div class='select-text'>You can select this.</div></div>
+ * <div class='unselectable'><div class='selectable'>You can select this.</div></div>
  */
 .selectable {
   user-select: text;
