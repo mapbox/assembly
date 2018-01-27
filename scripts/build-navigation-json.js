@@ -187,7 +187,6 @@ function createNavigationTree() {
           'Switches',
           'Checkboxes',
           'Radios',
-          'Icons',
           'Triangles'
         ];
 
