@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.21.0
+
+- Added fade-in-out animation.
+- [fix] Fixing the unity svg.
+- [fix] Updates examples to use changed classname.
+
 ## 0.20.0
 
 - Add filter, flame, instagram, qT icons.
