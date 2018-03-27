@@ -1,21 +1,21 @@
-'use strict';
+"use strict";
 
-const fs = require('fs');
-const path = require('path');
-const globby = require('globby');
-const S3 = require('aws-sdk/clients/s3');
-const mime = require('mime');
-const pkg = require('../package');
+const fs = require("fs");
+const path = require("path");
+const globby = require("globby");
+const S3 = require("aws-sdk/clients/s3");
+const mime = require("mime");
+const pkg = require("../package");
 
 const bucket = new S3({
   params: {
-    Bucket: 'mapbox-assembly/v' + pkg.version
+    Bucket: "mapbox-assembly/v" + pkg.version
   }
 });
 
 const glob = [
-  path.join(__dirname, '../dist/opensans-*'),
-  path.join(__dirname, '../dist/assembly*')
+  path.join(__dirname, "../dist/opensans-*"),
+  path.join(__dirname, "../dist/assembly*")
 ];
 
 globby(glob)
@@ -23,10 +23,10 @@ globby(glob)
     const uploadFiles = files.map(file => {
       return bucket
         .upload({
-          ACL: 'public-read',
+          ACL: "public-read",
           Key: path.basename(file),
           Body: fs.createReadStream(file),
-          ContentType: mime.lookup(file)
+          ContentType: mime.getType(file)
         })
         .promise();
     });
@@ -34,7 +34,7 @@ globby(glob)
     return Promise.all(uploadFiles);
   })
   .then(() => {
-    console.log('DEPLOYED Assembly', pkg.version);
+    console.log("DEPLOYED Assembly", pkg.version);
   })
   .catch(err => {
     console.log(err.stack);
