@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.21.1
+
+- [fix] Clean up and update dependencies.
+
 ## 0.21.0
 
 - Added fade-in-out animation.
