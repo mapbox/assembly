@@ -1,29 +1,29 @@
-'use strict';
+"use strict";
 
-const fs = require('fs');
-const path = require('path');
-const pify = require('pify');
-const mkdirp = require('mkdirp');
-const PQueue = require('p-queue');
-const Concat = require('concat-with-sourcemaps');
-const postcss = require('postcss');
-const csso = require('csso');
-const reporter = require('postcss-reporter');
-const autoprefixer = require('autoprefixer');
-const initPostcssCustomProperties = require('postcss-custom-properties');
-const postcssCustomMedia = require('postcss-custom-media');
-const defaultVariables = require('../src/variables');
-const defaultMediaQueries = require('../src/media-queries');
-const timelog = require('./timelog');
-const buildColorVariants = require('./build-color-variants');
-const buildMediaVariants = require('./build-media-variants');
+const fs = require("fs");
+const path = require("path");
+const pify = require("pify");
+const mkdirp = require("mkdirp");
+const PQueue = require("p-queue");
+const Concat = require("concat-with-sourcemaps");
+const postcss = require("postcss");
+const csso = require("csso");
+const reporter = require("postcss-reporter");
+const autoprefixer = require("autoprefixer");
+const initPostcssCustomProperties = require("postcss-custom-properties");
+const postcssCustomMedia = require("postcss-custom-media");
+const defaultVariables = require("../src/variables");
+const defaultMediaQueries = require("../src/media-queries");
+const timelog = require("./timelog");
+const buildColorVariants = require("./build-color-variants");
+const buildMediaVariants = require("./build-media-variants");
 
 function getCssPath(name) {
   return path.join(__dirname, `../src/${name}.css`);
 }
 
 function handlePostcssError(error) {
-  if (error.name === 'CssSyntaxError') {
+  if (error.name === "CssSyntaxError") {
     process.stderr.write(error.message + error.showSourceCode());
   } else {
     throw error;
@@ -31,22 +31,22 @@ function handlePostcssError(error) {
 }
 
 const assemblyCssFiles = [
-  getCssPath('reset'),
-  getCssPath('focus'),
-  getCssPath('fonts'),
-  getCssPath('typography'),
-  getCssPath('tables'),
-  getCssPath('buttons'),
-  getCssPath('links'),
-  getCssPath('forms'),
-  getCssPath('theming'),
-  getCssPath('icons'),
-  getCssPath('layout'),
-  getCssPath('layout-scales'),
-  getCssPath('colors'),
-  getCssPath('triangles'),
-  getCssPath('animations'),
-  getCssPath('miscellaneous')
+  getCssPath("reset"),
+  getCssPath("focus"),
+  getCssPath("fonts"),
+  getCssPath("typography"),
+  getCssPath("tables"),
+  getCssPath("buttons"),
+  getCssPath("links"),
+  getCssPath("forms"),
+  getCssPath("theming"),
+  getCssPath("icons"),
+  getCssPath("layout"),
+  getCssPath("layout-scales"),
+  getCssPath("colors"),
+  getCssPath("triangles"),
+  getCssPath("animations"),
+  getCssPath("miscellaneous")
 ];
 
 /**
@@ -68,21 +68,21 @@ function buildCss(options) {
   options = Object.assign(
     {
       browsersList: [
-        'last 4 Chrome versions',
-        'last 4 Firefox versions',
-        'last 4 Safari versions',
-        'iOS >= 7',
-        'Android >= 4.4',
-        'IE >= 11'
+        "last 4 Chrome versions",
+        "last 4 Firefox versions",
+        "last 4 Safari versions",
+        "iOS >= 7",
+        "Android >= 4.4",
+        "IE >= 11"
       ]
     },
     options
   );
 
-  if (!options.quiet) timelog('Building CSS');
+  if (!options.quiet) timelog("Building CSS");
 
   const outfile =
-    options.outfile || path.join(__dirname, '../dist/assembly.css');
+    options.outfile || path.join(__dirname, "../dist/assembly.css");
   const outfileFilename = path.basename(outfile);
 
   const cssFiles =
@@ -90,7 +90,7 @@ function buildCss(options) {
       ? assemblyCssFiles
       : assemblyCssFiles.concat(options.files);
 
-  const concat = new Concat(true, outfile, '\n');
+  const concat = new Concat(true, outfile, "\n");
 
   const variableDefinitions = options.variables
     ? Object.assign({}, defaultVariables, options.variables)
@@ -100,7 +100,10 @@ function buildCss(options) {
     ? Object.assign({}, defaultMediaQueries, options.mediaQueries)
     : defaultMediaQueries;
 
-  const customProperties = initPostcssCustomProperties();
+  const customProperties = initPostcssCustomProperties({
+    preserve: false,
+    warnings: true
+  });
   customProperties.setVariables(variableDefinitions);
 
   const postcssPlugins = [
@@ -132,7 +135,7 @@ function buildCss(options) {
   }
 
   function processFile(cssFile, concat) {
-    return pify(fs.readFile)(cssFile, 'utf8').then(css => {
+    return pify(fs.readFile)(cssFile, "utf8").then(css => {
       return processCss(css, cssFile, concat);
     });
   }
@@ -144,7 +147,7 @@ function buildCss(options) {
     );
     return processCss(
       colorVariantCss,
-      path.join(__dirname, '../src/color-variants.css'),
+      path.join(__dirname, "../src/color-variants.css"),
       concat
     );
   }
@@ -153,7 +156,7 @@ function buildCss(options) {
     return buildMediaVariants().then(mediaVariantCss => {
       return processCss(
         mediaVariantCss,
-        path.join(__dirname, '../src/media-variants.css'),
+        path.join(__dirname, "../src/media-variants.css"),
         concat
       );
     });
@@ -165,16 +168,16 @@ function buildCss(options) {
     function writeMinifiedCss() {
       const minifiedCss = csso.minify(css).css;
       return pify(fs.writeFile)(
-        outfile.replace('.css', '.min.css'),
+        outfile.replace(".css", ".min.css"),
         minifiedCss,
-        'utf8'
+        "utf8"
       );
     }
 
     return pify(mkdirp)(path.dirname(outfile)).then(() => {
       return Promise.all([
-        pify(fs.writeFile)(outfile, css, 'utf8'),
-        pify(fs.writeFile)(`${outfile}.map`, concat.sourceMap, 'utf8'),
+        pify(fs.writeFile)(outfile, css, "utf8"),
+        pify(fs.writeFile)(`${outfile}.map`, concat.sourceMap, "utf8"),
         writeMinifiedCss()
       ]);
     });
@@ -193,7 +196,7 @@ function buildCss(options) {
     .catch(handlePostcssError)
     .then(() => writeDistCss(concat))
     .then(() => {
-      if (!options.quiet) timelog('Done building CSS');
+      if (!options.quiet) timelog("Done building CSS");
     });
 }
 
