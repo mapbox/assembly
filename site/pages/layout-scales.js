@@ -69,14 +69,10 @@ export default class LayoutScales extends React.Component {
       return (
         <div key={name} className="mb36">
           <div className="mb12">
-            <div className="inline-block txt-bold mr12">
-              {name}
-            </div>
+            <div className="inline-block txt-bold mr12">{name}</div>
             {classPatterns}
           </div>
-          <div className="flex-parent flex-parent--wrap">
-            {scale}
-          </div>
+          <div className="flex-parent flex-parent--wrap">{scale}</div>
         </div>
       );
     });

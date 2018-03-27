@@ -10,7 +10,11 @@ const parseString = xml2js.parseString;
 test('valid svgs ', t => {
   fs.readdir('./src/svgs/', (err, files) => {
     const svgFiles = files.filter(
-      file => file.split('.').pop().indexOf('svg') !== -1
+      file =>
+        file
+          .split('.')
+          .pop()
+          .indexOf('svg') !== -1
     );
 
     svgFiles.forEach((fileName, j) => {

@@ -32,6 +32,7 @@ module.exports = () => {
     applicationWrapperPath: path.join(
       __dirname,
       './site/application_wrapper.js'
-    )
+    ),
+    staticHtmlInlineDeferCss: false
   };
 };

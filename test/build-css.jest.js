@@ -23,7 +23,9 @@ function cleanup(tmp) {
 // Discard comments before comparison, because we don't care
 // what the comments are for these tests
 function discardComments(css) {
-  return postcss().use(postcssDiscardComments()).process(css).css;
+  return postcss()
+    .use(postcssDiscardComments())
+    .process(css).css;
 }
 
 describe('buildCss', () => {

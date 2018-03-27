@@ -39,35 +39,26 @@ const baseJsTemplate = options => {
 const spriteItems = [];
 
 function processSvgFile(filename) {
-  return new Promise((resolve, reject) => {
-    const extname = path.extname(filename);
-    if (extname !== '.svg') return resolve();
+  const extname = path.extname(filename);
+  if (extname !== '.svg') return Promise.resolve();
 
-    const basename = path.basename(filename, extname);
-    const handleError = err => {
-      console.log(`Error with icon "${basename}"`);
-      reject(err);
-    };
+  const basename = path.basename(filename, extname);
+  const handleError = err => {
+    console.log(`Error with icon "${basename}"`);
+    throw err;
+  };
 
-    fs.readFile(filename, 'utf8', (readError, content) => {
-      if (readError) return handleError(readError);
-      try {
-        svgo.optimize(content, optimizedContent => {
-          try {
-            spriteItems.push({
-              id: `icon-${basename}`,
-              svg: optimizedContent.data
-            });
-            resolve();
-          } catch (e) {
-            handleError(e);
-          }
-        });
-      } catch (e) {
-        handleError(e);
-      }
-    });
-  });
+  return pify(fs.readFile)(filename, 'utf8')
+    .then(content => {
+      return svgo.optimize(content);
+    })
+    .then(optimizedContent => {
+      spriteItems.push({
+        id: `icon-${basename}`,
+        svg: optimizedContent.data
+      });
+    })
+    .catch(handleError);
 }
 
 /**

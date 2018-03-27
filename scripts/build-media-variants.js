@@ -195,7 +195,9 @@ function buildMediaVariants() {
   const findRulesInTargetFiles = targetFiles.map(targetFile => {
     const filePath = path.join(__dirname, `../src/${targetFile}.css`);
     return pify(fs.readFile)(filePath, 'utf8').then(css => {
-      return postcss().use(findRules).process(css);
+      return postcss()
+        .use(findRules)
+        .process(css);
     });
   });
 
