@@ -36,10 +36,6 @@ export default class Documentation extends React.Component {
       addEntryAndMembers(entry, 1)
     );
 
-    return (
-      <Page>
-        {entryEls}
-      </Page>
-    );
+    return <Page>{entryEls}</Page>;
   }
 }

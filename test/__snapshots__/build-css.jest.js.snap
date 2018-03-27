@@ -8118,7 +8118,7 @@ input:checked:disabled + .toggle{
 .animation-pulse{ -webkit-animation:pulse 1.5s ease-in-out; animation:pulse 1.5s ease-in-out; }
 .animation-spin{ -webkit-animation:spin 1.5s linear; animation:spin 1.5s linear; }
 .animation-fade-in{ -webkit-animation:fadein 1.5s ease-in forwards; animation:fadein 1.5s ease-in forwards; }
-.animation-fade-out{ -webkit-animation:fadein 1.5s ease-out reverse forwards; animation:fadein 1.5s ease-out reverse forwards; }
+.animation-fade-out{ animation:fadein 1.5s ease-out reverse forwards; }
 .animation-fade-in-out{ -webkit-animation:fadeinout 1.5s ease-in-out forwards; animation:fadeinout 1.5s ease-in-out forwards; }
 .animation-shake{ -webkit-animation:shake 1.5s ease-in-out; animation:shake 1.5s ease-in-out; }
 .animation--speed-1{ -webkit-animation-duration:1s; animation-duration:1s; }
@@ -20398,7 +20398,7 @@ input:checked:disabled + .toggle{
 .animation-pulse{ -webkit-animation:pulse 1.5s ease-in-out; animation:pulse 1.5s ease-in-out; }
 .animation-spin{ -webkit-animation:spin 1.5s linear; animation:spin 1.5s linear; }
 .animation-fade-in{ -webkit-animation:fadein 1.5s ease-in forwards; animation:fadein 1.5s ease-in forwards; }
-.animation-fade-out{ -webkit-animation:fadein 1.5s ease-out reverse forwards; animation:fadein 1.5s ease-out reverse forwards; }
+.animation-fade-out{ animation:fadein 1.5s ease-out reverse forwards; }
 .animation-fade-in-out{ -webkit-animation:fadeinout 1.5s ease-in-out forwards; animation:fadeinout 1.5s ease-in-out forwards; }
 .animation-shake{ -webkit-animation:shake 1.5s ease-in-out; animation:shake 1.5s ease-in-out; }
 .animation--speed-1{ -webkit-animation-duration:1s; animation-duration:1s; }

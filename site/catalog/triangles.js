@@ -23,11 +23,11 @@ const colors = [
 const directions = ['u', 'r', 'b', 'r'];
 
 function TriangleEl(props) {
-  const triangleClass = `triangle${props.size
-    ? '-' + props.size
-    : ''} triangle${props.size
-    ? '-' + props.size
-    : ''}--${props.direction} color-${props.color}`;
+  const triangleClass = `triangle${
+    props.size ? '-' + props.size : ''
+  } triangle${props.size ? '-' + props.size : ''}--${props.direction} color-${
+    props.color
+  }`;
   return (
     <div className="inline-block mr18">
       <div className={triangleClass} />
@@ -44,11 +44,15 @@ export class Triangles extends React.Component {
         </h2>
 
         {directions.map(d =>
-          colors.map(c => <TriangleEl color={c} direction={d} size={null} />)
+          colors.map(c => (
+            <TriangleEl key={c} color={c} direction={d} size={null} />
+          ))
         )}
 
         {directions.map(d =>
-          colors.map(c => <TriangleEl color={c} direction={d} size="l" />)
+          colors.map(c => (
+            <TriangleEl key={c} color={c} direction={d} size="l" />
+          ))
         )}
       </div>
     );

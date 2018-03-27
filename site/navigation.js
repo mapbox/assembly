@@ -67,11 +67,9 @@ class Navigation extends React.Component {
       return (
         <div key={r.name}>
           <a
-            className={`txt-s txt-bold block color-blue-on-hover mb6 ${activePathname.startsWith(
-              r.route
-            )
-              ? 'color-blue'
-              : ''}`}
+            className={`txt-s txt-bold block color-blue-on-hover mb6 ${
+              activePathname.startsWith(r.route) ? 'color-blue' : ''
+            }`}
             href={`/assembly${r.route}`}
           >
             {r.name}

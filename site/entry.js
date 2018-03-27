@@ -83,8 +83,11 @@ class Entry extends React.Component {
         </button>
       ) : null;
 
-    const sourceUrl = `https://github.com/mapbox/assembly/blob/${pkg.version}/src/${props
-      .parsedComment.source.filename}#L${props.parsedComment.source.line}`;
+    const sourceUrl = `https://github.com/mapbox/assembly/blob/${
+      pkg.version
+    }/src/${props.parsedComment.source.filename}#L${
+      props.parsedComment.source.line
+    }`;
 
     return (
       <div className="border-t border-t--2 border--gray-faint">

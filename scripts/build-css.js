@@ -100,7 +100,10 @@ function buildCss(options) {
     ? Object.assign({}, defaultMediaQueries, options.mediaQueries)
     : defaultMediaQueries;
 
-  const customProperties = initPostcssCustomProperties();
+  const customProperties = initPostcssCustomProperties({
+    preserve: false,
+    warnings: true
+  });
   customProperties.setVariables(variableDefinitions);
 
   const postcssPlugins = [
@@ -160,7 +163,9 @@ function buildCss(options) {
   }
 
   function writeDistCss(concat) {
-    const css = `${concat.content}\n/*# sourceMappingURL=${outfileFilename}.map */`;
+    const css = `${
+      concat.content
+    }\n/*# sourceMappingURL=${outfileFilename}.map */`;
 
     function writeMinifiedCss() {
       const minifiedCss = csso.minify(css).css;

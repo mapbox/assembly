@@ -26,7 +26,7 @@ globby(glob)
           ACL: 'public-read',
           Key: path.basename(file),
           Body: fs.createReadStream(file),
-          ContentType: mime.lookup(file)
+          ContentType: mime.getType(file)
         })
         .promise();
     });
