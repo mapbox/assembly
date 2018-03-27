@@ -46,7 +46,9 @@ export default class Home extends React.Component {
           <div className="mt12 pre">
             <Lowlight
               language="html"
-              value={`<link href="https://api.mapbox.com/mapbox-assembly/v${pkg.version}/assembly.min.css" rel="stylesheet">`}
+              value={`<link href="https://api.mapbox.com/mapbox-assembly/v${
+                pkg.version
+              }/assembly.min.css" rel="stylesheet">`}
             />
           </div>
           <p className="mt24">
@@ -57,7 +59,9 @@ export default class Home extends React.Component {
           <div className="mt12 pre">
             <Lowlight
               language="html"
-              value={`<script async defer src="https://api.mapbox.com/mapbox-assembly/v${pkg.version}/assembly.js"></script>`}
+              value={`<script async defer src="https://api.mapbox.com/mapbox-assembly/v${
+                pkg.version
+              }/assembly.js"></script>`}
             />
           </div>
 
@@ -278,12 +282,8 @@ export default class Home extends React.Component {
                 declarations whose effect directly corresponds to a class name.
               </p>
               <p className="mt12">
-                For example, in the <code className="txt-code">
-                  .bg-blue
-                </code>{' '}
-                rule, the <code className="txt-code">
-                  background-color
-                </code>{' '}
+                For example, in the <code className="txt-code">.bg-blue</code>{' '}
+                rule, the <code className="txt-code">background-color</code>{' '}
                 declaration is <code className="txt-code">!important</code>. On
                 the <code className="txt-code">.pl20</code> rule, the{' '}
                 <code className="txt-code">padding-left</code> declaration is{' '}
@@ -311,9 +311,7 @@ export default class Home extends React.Component {
                 states
               </h3>
               <p className="mt12">
-                Assembly uses the <code className="txt-code">
-                  is-active
-                </code>{' '}
+                Assembly uses the <code className="txt-code">is-active</code>{' '}
                 state class to designate that an element is active and style it
                 accordingly.
               </p>
@@ -321,9 +319,8 @@ export default class Home extends React.Component {
                 The <code className="txt-code">is-active</code> state on buttons
                 and links darkens their color. And the{' '}
                 <code className="txt-code">*-on-active</code> state classes
-                (e.g. only <code className="txt-code">
-                  color-red-on-active
-                </code>) only take effect when combined with the{' '}
+                (e.g. only <code className="txt-code">color-red-on-active</code>)
+                only take effect when combined with the{' '}
                 <code className="txt-code">is-active</code> class.
               </p>
             </div>

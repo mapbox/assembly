@@ -28,9 +28,7 @@ export default class Examples extends React.Component {
             pasted. All the examples are fully responsive.
           </p>
         </div>
-        <div className="grid grid--gut24">
-          {this.getExamplesList()}
-        </div>
+        <div className="grid grid--gut24">{this.getExamplesList()}</div>
       </Page>
     );
   }

@@ -1,18 +1,18 @@
-"use strict";
+'use strict';
 
-const svgstore = require("svgstore");
-const _ = require("lodash");
-const fs = require("fs");
-const pify = require("pify");
-const path = require("path");
-const SVGO = require("svgo");
+const svgstore = require('svgstore');
+const _ = require('lodash');
+const fs = require('fs');
+const pify = require('pify');
+const path = require('path');
+const SVGO = require('svgo');
 
-const svgDir = path.join(__dirname, "../src/svgs");
+const svgDir = path.join(__dirname, '../src/svgs');
 const svgo = new SVGO({
   plugins: [
     {
       removeAttrs: {
-        attrs: "path:(fill|color|style|width|height|overflow)"
+        attrs: 'path:(fill|color|style|width|height|overflow)'
       }
     }
   ]
@@ -40,7 +40,7 @@ const spriteItems = [];
 
 function processSvgFile(filename) {
   const extname = path.extname(filename);
-  if (extname !== ".svg") return Promise.resolve();
+  if (extname !== '.svg') return Promise.resolve();
 
   const basename = path.basename(filename, extname);
   const handleError = err => {
@@ -48,7 +48,7 @@ function processSvgFile(filename) {
     throw err;
   };
 
-  return pify(fs.readFile)(filename, "utf8")
+  return pify(fs.readFile)(filename, 'utf8')
     .then(content => {
       return svgo.optimize(content);
     })
@@ -74,14 +74,14 @@ function buildSvgLoader(icons) {
     .then(filenames => {
       // Error if user tries to include icons that don't exist
       icons.forEach(svg => {
-        if (!filenames.includes(svg + ".svg")) {
+        if (!filenames.includes(svg + '.svg')) {
           throw new Error(`an icon matching ${svg} does not exist`);
         }
       });
 
       const files =
         icons.length !== 0
-          ? filenames.filter(f => icons.includes(f.split(".svg")[0]))
+          ? filenames.filter(f => icons.includes(f.split('.svg')[0]))
           : filenames;
 
       return Promise.all(
@@ -93,15 +93,15 @@ function buildSvgLoader(icons) {
     .then(() => {
       // This sorting is necessary to get a detemrinistic
       // order testable with snapshots
-      _.sortBy(spriteItems, "id").forEach(item =>
+      _.sortBy(spriteItems, 'id').forEach(item =>
         sprite.add(item.id, item.svg)
       );
       sprite
-        .element("svg")
-        .attr("id", "svg-symbols")
-        .attr("style", "display:none");
+        .element('svg')
+        .attr('id', 'svg-symbols')
+        .attr('style', 'display:none');
 
-      const cleanedSprite = sprite.toString().replace(/\n/g, "");
+      const cleanedSprite = sprite.toString().replace(/\n/g, '');
       const jsContent = baseJsTemplate({ svgSprite: cleanedSprite });
       return jsContent;
     });

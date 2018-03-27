@@ -1,10 +1,10 @@
-import ClipboardJS from "clipboard";
+import ClipboardJS from 'clipboard';
 
-const clipboard = new ClipboardJS("button[data-clipboard-text]");
+const clipboard = new ClipboardJS('button[data-clipboard-text]');
 
-clipboard.on("success", ev => {
-  ev.trigger.textContent = "Copied!";
+clipboard.on('success', ev => {
+  ev.trigger.textContent = 'Copied!';
   window.setTimeout(() => {
-    ev.trigger.textContent = "Copy";
+    ev.trigger.textContent = 'Copy';
   }, 800);
 });

@@ -25,16 +25,20 @@ const lightenColors = [
 ];
 
 function ToggleEl(props) {
-  const toggleClass = `toggle toggle--active-${props.activeColor} toggle--${props.color}`;
-  const toggleGroupClass = `mb12 mr12 toggle-group ${props.small
-    ? 'toggle-group--s txt-s'
-    : ''}`;
+  const toggleClass = `toggle toggle--active-${props.activeColor} toggle--${
+    props.color
+  }`;
+  const toggleGroupClass = `mb12 mr12 toggle-group ${
+    props.small ? 'toggle-group--s txt-s' : ''
+  }`;
   return (
     <div className={toggleGroupClass}>
       <label className="toggle-container">
         <input
           disabled={props.disabled}
-          name={`animal-${props.color}-${props.stroke}-${props.small}-${props.disabled}-${props.activeColor}`}
+          name={`animal-${props.color}-${props.stroke}-${props.small}-${
+            props.disabled
+          }-${props.activeColor}`}
           value="cow"
           type="radio"
         />
@@ -44,7 +48,9 @@ function ToggleEl(props) {
         <input
           defaultChecked
           disabled={props.disabled}
-          name={`animal-${props.color}-${props.stroke}-${props.small}-${props.disabled}-${props.activeColor}`}
+          name={`animal-${props.color}-${props.stroke}-${props.small}-${
+            props.disabled
+          }-${props.activeColor}`}
           value="horse"
           type="radio"
         />
@@ -53,7 +59,9 @@ function ToggleEl(props) {
       <label className="toggle-container">
         <input
           disabled={props.disabled}
-          name={`animal-${props.color}-${props.stroke}-${props.small}-${props.disabled}-${props.activeColor}`}
+          name={`animal-${props.color}-${props.stroke}-${props.small}-${
+            props.disabled
+          }-${props.activeColor}`}
           value="pig"
           type="radio"
         />
