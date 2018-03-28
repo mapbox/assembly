@@ -197,7 +197,7 @@ function buildMediaVariants() {
     return pify(fs.readFile)(filePath, 'utf8').then(css => {
       return postcss()
         .use(findRules)
-        .process(css);
+        .process(css, { from: filePath, to: filePath });
     });
   });
 

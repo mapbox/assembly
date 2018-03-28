@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.21.2
+
+- [fix] Avoid a PostCSS warning about `from` not being set.
+
 ## 0.21.1
 
 - [fix] Clean up and update dependencies.
