@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.21.3
+
+- [fix] Set `border: 0` in `reset.css`, instead of `border: none`.
+  Fixes an obscure bug where if you used the unminified CSS and set a `border-{side}` class on a `btn`, you'd see unwanted thick borders on all sides except the one you specified.
+
 ## 0.21.2
 
 - [fix] Avoid a PostCSS warning about `from` not being set.
