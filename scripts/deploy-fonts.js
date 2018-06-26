@@ -9,11 +9,11 @@ const pkg = require('../package');
 
 const bucket = new S3({
   params: {
-    Bucket: 'mapbox-assembly/v' + pkg.version
+    Bucket: 'mapbox-assembly/fonts'
   }
 });
 
-globby(path.join(__dirname, '../dist/assembly*'))
+globby(path.join(__dirname, '../fonts/opensans-*'))
   .then(files => {
     const uploadFiles = files.map(file => {
       return bucket
@@ -29,7 +29,7 @@ globby(path.join(__dirname, '../dist/assembly*'))
     return Promise.all(uploadFiles);
   })
   .then(() => {
-    console.log('DEPLOYED Assembly', pkg.version);
+    console.log('DEPLOYED fonts', pkg.version);
   })
   .catch(err => {
     console.log(err.stack);

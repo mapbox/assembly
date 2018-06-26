@@ -3,7 +3,6 @@
 const path = require('path');
 const buildCss = require('./build-css');
 const buildJs = require('./build-js');
-const copyFonts = require('./copy-fonts');
 
 function buildUserAssets(outdir, options) {
   options = options || {};
@@ -22,16 +21,7 @@ function buildUserAssets(outdir, options) {
     quiet: options.quiet || false
   };
 
-  const copyFontsOptions = {
-    outdir,
-    quiet: options.quiet || false
-  };
-
-  return Promise.all([
-    buildCss(buildCssOptions),
-    buildJs(buildJsOptions),
-    copyFonts(copyFontsOptions)
-  ]);
+  return Promise.all([buildCss(buildCssOptions), buildJs(buildJsOptions)]);
 }
 
 module.exports = buildUserAssets;
