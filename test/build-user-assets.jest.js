@@ -2,11 +2,9 @@
 
 jest.mock('../scripts/build-css');
 jest.mock('../scripts/build-js');
-jest.mock('../scripts/copy-fonts');
 
 const buildCss = require('../scripts/build-css');
 const buildJs = require('../scripts/build-js');
-const copyFonts = require('../scripts/copy-fonts');
 const path = require('path');
 const buildUserAssets = require('../scripts/build-user-assets');
 
@@ -22,11 +20,6 @@ describe('buildUserAssets', () => {
         outfile: '/path/to/outdir/assembly.js',
         quiet: false,
         icons: false
-      });
-      expect(copyFonts).toHaveBeenCalledTimes(1);
-      expect(copyFonts).toHaveBeenCalledWith({
-        outdir: '/path/to/outdir',
-        quiet: false
       });
     });
   });
@@ -67,11 +60,6 @@ describe('buildUserAssets', () => {
         outfile: '/path/to/another/outdir/assembly.js',
         quiet: true,
         icons: ['airplane']
-      });
-      expect(copyFonts).toHaveBeenCalledTimes(1);
-      expect(copyFonts).toHaveBeenCalledWith({
-        outdir: '/path/to/another/outdir',
-        quiet: true
       });
     });
   });
