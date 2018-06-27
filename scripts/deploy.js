@@ -13,12 +13,7 @@ const bucket = new S3({
   }
 });
 
-const glob = [
-  path.join(__dirname, '../dist/opensans-*'),
-  path.join(__dirname, '../dist/assembly*')
-];
-
-globby(glob)
+globby(path.join(__dirname, '../dist/assembly*'))
   .then(files => {
     const uploadFiles = files.map(file => {
       return bucket
