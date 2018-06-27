@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.22.0
 
 - [breaking] Fonts are no longer distributed with each version. Instead, fonts are served from `https://api.mapbox.com/mapbox-assembly/fonts/*` and referenced from the CSS with absolute URLs.
 
