@@ -96,7 +96,7 @@ The following configuration specifies colors for individual components. In this 
 
 ### Writing rules
 
-Assembly strives for flat, single rule declarations and avoids overrides whenever possible. Assembly makes all Atomic-style utility classes `!important`, so they cannot be overridden, and so they are guarateed to do what they say they do.
+Assembly strives for flat, single rule declarations and avoids overrides whenever possible. Assembly makes all Atomic-style utility classes `!important`, so they cannot be overridden, and so they are guaranteed to do what they say they do.
 
 ### Naming classes
 
