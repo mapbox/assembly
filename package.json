@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "precommit": "lint-staged",
-    "format": "prettier --write \"{,scripts/**/,site/**/,src/**/,test/**/}*.js\"",
+    "format": "prettier --write \"**/*.js\"",
     "deploy": "npm run build && node scripts/deploy",
     "clean-svgs": "node scripts/clean-svgs",
     "check-size": "node scripts/check-size",
@@ -89,7 +89,7 @@
     "nodemon": "^1.17.2",
     "npm-run-all": "^4.1.2",
     "postcss-discard-comments": "^2.0.4",
-    "prettier": "^1.11.1",
+    "prettier": "1.13.7",
     "pretty-bytes": "^4.0.2",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
