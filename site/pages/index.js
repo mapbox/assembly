@@ -14,13 +14,12 @@ import modifierImg from '../img/modifier.svg';
 import specificityImg from '../img/specificity.svg';
 import isActiveImg from '../img/is-active.svg';
 import focusImg from '../img/focus.svg';
+import defaultMediaQueries from '../../src/media-queries.json';
 
 import '../js/copy.js';
 import '../js/expander.js';
 
 Lowlight.registerLanguage('html', xmlLanguage);
-
-const defaultMediaQueries = require('../../src/media-queries');
 
 export default class Home extends React.Component {
   render() {

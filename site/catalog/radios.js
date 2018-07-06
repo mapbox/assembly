@@ -30,7 +30,14 @@ export class Radios extends React.Component {
             Radio
           </label>
           <label className="radio-container">
-            <input checked disabled id={id} name={id} value={id} type="radio" />
+            <input
+              checked={true}
+              disabled={true}
+              id={id}
+              name={id}
+              value={id}
+              type="radio"
+            />
             <div className={radioClass} />
             Radio
           </label>

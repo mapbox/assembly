@@ -15,12 +15,9 @@ const colors = [
 export class Checkboxes extends React.Component {
   render() {
     const checkmark = (
-      <svg
-        className="icon"
-        dangerouslySetInnerHTML={{
-          __html: '<use xlink:href="#icon-check"></use>'
-        }}
-      />
+      <svg className="icon">
+        <use xlinkHref="#icon-check" />
+      </svg>
     );
 
     const checkboxes = colors.map((color, i) => {
@@ -37,7 +34,7 @@ export class Checkboxes extends React.Component {
             Check me
           </label>
           <label className="checkbox-container">
-            <input checked disabled type="checkbox" />
+            <input checked={true} disabled={true} type="checkbox" />
             <div className={checkboxClass}>{checkmark}</div>
             Check me
           </label>

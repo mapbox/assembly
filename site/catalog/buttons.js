@@ -38,7 +38,7 @@ const getButtonEls = (color, i) => {
         <button className={buttonFillClass}>Fill</button>
       </div>
       <div className="inline-block mr18">
-        <button disabled className={buttonFillClass}>
+        <button disabled={true} className={buttonFillClass}>
           Fill
         </button>
       </div>
@@ -46,7 +46,7 @@ const getButtonEls = (color, i) => {
         <button className={`${buttonFillClass} round`}>Less round</button>
       </div>
       <div className="inline-block mr18">
-        <button disabled className={`${buttonFillClass} round`}>
+        <button disabled={true} className={`${buttonFillClass} round`}>
           Less round
         </button>
       </div>
@@ -56,7 +56,7 @@ const getButtonEls = (color, i) => {
             <button className={buttonStrokeClass}>Stroke</button>
           </div>
           <div className="inline-block mr18">
-            <button disabled className={buttonStrokeClass}>
+            <button disabled={true} className={buttonStrokeClass}>
               Stroke
             </button>
           </div>
