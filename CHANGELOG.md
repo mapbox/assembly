@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- [breaking] Drop support for Node 4 in custom build. **This has no effect on the client-side CSS or JS.**
+
 ## 0.22.0
 
 - [breaking] Fonts are no longer distributed with each version. Instead, fonts are served from `https://api.mapbox.com/mapbox-assembly/fonts/*` and referenced from the CSS with absolute URLs.
