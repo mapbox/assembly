@@ -1,9 +1,8 @@
 'use strict';
 
 const path = require('path');
-/* eslint-disable node/no-missing-require */
+// eslint-disable-next-line
 const navigationStructure = require('./_tmp_assembly/navigation.json');
-/* eslint-enable node/no-missing-require */
 
 module.exports = () => {
   return {
