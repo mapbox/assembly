@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import Lowlight from 'react-lowlight';
 import xmlLanguage from 'highlight.js/lib/languages/xml';

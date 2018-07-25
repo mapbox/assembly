@@ -1,5 +1,5 @@
 import React from 'react';
-import documentationData from '@mapbox/batfish/data/documentation-data';
+import documentationData from '@mapbox/batfish/data/documentation-data'; // eslint-disable-line
 import { Entry } from '../entry';
 import { Heading } from '../heading';
 import { Page } from '../page';

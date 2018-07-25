@@ -38,7 +38,7 @@ export class Selects extends React.Component {
                 <div className={selectContainerClass}>
                   <select className={selectClass}>
                     <option>firstoption</option>
-                    <option disabled>two</option>
+                    <option disabled={true}>two</option>
                     <option>three</option>
                   </select>
                   <div className="select-arrow" />
@@ -46,7 +46,7 @@ export class Selects extends React.Component {
               </div>
               <div className="inline-block mr12">
                 <div className={selectContainerClass}>
-                  <select className={selectClass} disabled>
+                  <select className={selectClass} disabled={true}>
                     <option>firstoption</option>
                     <option>two</option>
                     <option>three</option>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Page } from '../page';
+// eslint-disable-next-line
 import iconsList from '../../_tmp_assembly/icons.json';
 
 export default class Icons extends React.Component {

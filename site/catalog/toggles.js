@@ -46,7 +46,7 @@ function ToggleEl(props) {
       </label>
       <label className="toggle-container">
         <input
-          defaultChecked
+          defaultChecked={true}
           disabled={props.disabled}
           name={`animal-${props.color}-${props.stroke}-${props.small}-${
             props.disabled
