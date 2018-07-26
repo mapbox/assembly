@@ -21,7 +21,7 @@
     "build:site": "npm run build:css && npm run build:js && npm run generate-site-data && batfish build",
     "build:css": "npm run generate-css && node scripts/build-css",
     "build:js": "node scripts/build-js",
-    "build": "rm -rf dist && npm-run-all --parallel build:css build:js build:site",
+    "build": "rm -rf dist && npm-run-all --parallel build:css build:js",
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint .",
     "lint": "npm run lint:css && npm run lint:js",

@@ -96,14 +96,14 @@ The following configuration specifies colors for individual components. In this 
 
 ### Writing rules
 
-Assembly strives for flat, single rule declarations and avoids overrides whenever possible. Assembly makes all Atomic-style utility classes `!important`, so they cannot be overridden, and so they are guaranteed to do what they say they do.
+Assembly strives for flat, single rule declarations and avoids overrides whenever possible. Declarations are marked as `!important` for classes whose names directly correspond with what they do — e.g. `bg-blue`, `px12`. This way they cannot be overridden and so are guaranteed to actually do what they say they do.
 
 ### Naming classes
 
-- Keep names as short as possible.
-- Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.pt6` for `padding-top: 6px` instead of `.pt-small` or `.pt-1`.
-- If the number of utility classes describing a property is limited, Assembly classes use the suffixes, `xl`, `l`, `m`, `s`, `sm`.
-- Assembly doesn't have a top level namespace. Assembly is designed to provide fundamental rules that are used frequently and should be easy to type and remember. If you want to use your own css with base, consider namespacing that css.
+- Keep names as short as reasonable.
+- Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.pt6` for `padding-top: 6px` instead an abstract scale like `.pt-small` or `.pt-1`.
+- If the number of utility classes describing a property is limited and the variants are about size, Assembly classes use the suffixes `xl`, `l`, `m`, `s`, `sm`.
+- Assembly provides a reset that will affect the entire page, but other than that reset none of its rules should affect the styling of elements that don't bear Assembly classes.
 
 ### Media query class variants
 
@@ -113,7 +113,6 @@ Media query class variants (e.g. `block-mm` as a variant of `block`) are automat
 
 ### Tools
 
-- [Yarn](https://yarnpkg.com/) for installing packages.
 - [PostCSS](http://postcss.org/) for processing CSS. PostCSS parses CSS and runs it through plugins, and these are the plugins we're using:
   - [Autoprefixer](https://autoprefixer.github.io/) automatically adds vendor prefixes.
   - [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties) allows us to use variables for values, with the [CSS custom properties syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).
@@ -124,31 +123,31 @@ Media query class variants (e.g. `block-mm` as a variant of `block`) are automat
   - [svgstore](https://github.com/svgstore/svgstore) compiles our SVGs into a SVG "sprite" of sorts, allowing us to use [the latest and greatest SVG-based icon system](https://css-tricks.com/svg-sprites-use-better-icon-fonts/).
 - Documentation
   - [documentation-css](https://github.com/documentationjs/documentation-css) parses annotation comments in the CSS, outputting objects that can be used to build documentation.
-- [Browsersync](https://browsersync.io) provides a fancy development server.
+- [Batfish](https://github.com/mapbox/batfish) powers the website.
 
 ### Install and start
 
 ```bash
-yarn # Installs your `node_modules`
+npm ci # Installs your `node_modules`
 
 npm start # Builds everything, starts a dev server, rebuilds & reloads on changes
 
 npm run build:js # Build SVGs and other JS
 ```
 
+For other scripts, look in `package.json`.
+
 ### Releasing
 
-Development is done in the `dev-pages` branch, but releases are made from the `mb-pages` branch.
+Development is done in the `dev-pages` branch, but releases are made from the `mb-pages` branch. Here's how you cut a release:
 
-- Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/dev-pages/CHANGELOG.md).
-- Increment the version key in [`package.json`](https://github.com/mapbox/assembly/blob/dev-pages/package.json).
-- Merge these changes into the `mb-pages` branch. *Conduct the following steps from `mb-pages`*.
-- Tag the version in git. Use the exact version number, without any letters (e.g. `0.8.0` instead of `v0.8.0`).
-- Then `git push --tags`.
-- Publish the new version on npm via `npm publish`.
-- Run `npm run deploy` to upload the new version to s3. **Note** you will need
-to be authenticated on AWS to do so.
-
----
-
-For other scripts, look in `package.json`.
+- From `dev-pages`:
+  - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/dev-pages/CHANGELOG.md).
+  - Increment the version key in `package.json` and `package-lock.json`.
+  - Make sure all this is committed.
+  - Merge these changes into the `mb-pages` branch. *Conduct the following steps from `mb-pages`*.
+- From `mb-pages`:
+  - Create a tag. No message is necessary, since the changelog includes explanations of changes. For example: `git tag -a 0.8.0 -m ""`.
+  - Push the tag: `git push --tags`.
+  - Publish the new version on npm.
+  - Run `npm run deploy` to upload the new version to S3. **You will need to be authenticated.**
