@@ -730,22 +730,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * @example
  * <div class='toggle-group mr18'>
  *   <label class='toggle-container'>
- *     <input checked name='toggle' type='radio' />
+ *     <input checked name='toggle-1' type='radio' />
  *     <div class='toggle'>cat</div>
  *   </label>
  *   <label class='toggle-container'>
- *     <input name='toggle' type='radio' />
+ *     <input name='toggle-1' type='radio' />
  *     <div class='toggle'>dog</div>
- *   </label>
- * </div>
- * <div class='toggle-group txt-s mr18'>
- *   <label class='toggle-container'>
- *     <input checked name='toggle-2' type='radio' />
- *     <div class='toggle toggle--purple'>dragon</div>
- *   </label>
- *   <label class='toggle-container'>
- *     <input name='toggle-2' type='radio' />
- *     <div class='toggle toggle--purple'>phoenix</div>
  *   </label>
  * </div>
  */
@@ -781,11 +771,11 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * @example
  * <div class='toggle-group mr18'>
  *   <label class='toggle-container'>
- *     <input checked name='toggle' type='radio' />
+ *     <input checked name='toggle-small' type='radio' />
  *     <div class='toggle toggle--s'>mouse</div>
  *   </label>
  *   <label class='toggle-container'>
- *     <input name='toggle' type='radio' />
+ *     <input name='toggle-small' type='radio' />
  *     <div class='toggle toggle--s'>cricket</div>
  *   </label>
  * </div>
