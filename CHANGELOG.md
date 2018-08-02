@@ -2,6 +2,12 @@
 
 ## HEAD
 
+- [breaking] Remove `input--xs`, `select--xs`, and `btn--xs`. You should switch to the `--s` modifiers, which have been modified to merge the *best* of `--s` and `--xs`.
+- [add] `toggle--s` style.
+- [style change] Increase default horizontal padding on buttons and selects.
+- [style change] Scale down font sizes on selects, toggle groups, and small inputs.
+- [style change] Switch active states are no longer dark.
+- [style change] Toggle groups have metrics that are more similar to buttons.
 - [breaking] Drop support for Node 4 in custom build. **This has no effect on the client-side CSS or JS.**
 - [add] Add `switch--l`, for large switches.
 
