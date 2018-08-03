@@ -1209,6 +1209,15 @@ textarea{
   bottom:2px;
   transition:left 0.125s, background-color 0.125s;
 }
+.switch--l{
+  width:40px;
+  height:24px;
+  top:0px;
+}
+
+.switch--l::after{
+  width:calc(50% - 2px);
+}
 .toggle-group{
   display:-webkit-inline-flex;
   display:inline-flex;
@@ -13488,6 +13497,15 @@ textarea{
   top:2px;
   bottom:2px;
   transition:left 0.125s, background-color 0.125s;
+}
+.switch--l{
+  width:40px;
+  height:24px;
+  top:0px;
+}
+
+.switch--l::after{
+  width:calc(50% - 2px);
 }
 .toggle-group{
   display:-webkit-inline-flex;
