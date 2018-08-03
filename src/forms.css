@@ -804,7 +804,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .switch--l {
   width: 40px;
   height: 24px;
-  top: 0px;
+  top: 0;
 }
 
 .switch--l::after {
