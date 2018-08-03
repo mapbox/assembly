@@ -791,6 +791,27 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 /*
+ * Make a switch control large.
+ *
+ * @memberof Switches
+ * @example
+ * <label class='switch-container'>
+ *   <input type='checkbox' />
+ *   <div class='switch switch--l mr6'></div>
+ *   Really enabled
+ * </label>
+ */
+.switch--l {
+  width: 40px;
+  height: 24px;
+  top: 0;
+}
+
+.switch--l::after {
+  width: calc(50% - 2px);
+}
+
+/*
  * The toggle group component styles a set of `<input type=radio'>` elements. The markup must fit the following pattern:
  * - A wrapping `<div>` around all your radio options with the class `toggle-group`.
  * - For each radio option, a wrapping `<label>` with the class `toggle-container`.

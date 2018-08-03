@@ -3,6 +3,7 @@
 ## HEAD
 
 - [breaking] Drop support for Node 4 in custom build. **This has no effect on the client-side CSS or JS.**
+- [add] Add `switch--l`, for large switches.
 
 ## 0.22.0
 
