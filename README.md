@@ -144,10 +144,10 @@ Development is done in the `dev-pages` branch, but releases are made from the `m
 - From `dev-pages`:
   - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/dev-pages/CHANGELOG.md).
   - Increment the version key in `package.json` and `package-lock.json`.
-  - Make sure all this is committed.
+  - Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`.
   - Merge these changes into the `mb-pages` branch. *Conduct the following steps from `mb-pages`*.
 - From `mb-pages`:
   - Create a tag. No message is necessary, since the changelog includes explanations of changes. For example: `git tag -a 0.8.0 -m ""`.
   - Push the tag: `git push --tags`.
   - Publish the new version on npm.
-  - Run `npm run deploy` to upload the new version to S3. **You will need to be authenticated.**
+  - Deploy the changes. Talk to **@mapbox/frontend-platform** if you need help.
