@@ -90,19 +90,6 @@
 }
 
 /**
- * Make an input extra small.
- *
- * @memberof Inputs & textareas
- * @example
- * <input class='input input--xs' placeholder='extra small' />
- */
-.input--xs {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  padding: 0 4px;
-}
-
-/**
  * Style a textarea. Set the color of the border with a `textarea--border-{color} modifier (`*-dark` colors are not available).
  *
  * @memberof Inputs & textareas
@@ -127,19 +114,6 @@
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
   padding: 3px 6px;
-}
-
-/**
- * Make a textarea extra small.
- *
- * @memberof Inputs & textareas
- * @example
- * <textarea class='textarea textarea--xs'>extra small textarea</textarea>
- */
-.textarea--xs {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  padding: 0 3px;
 }
 
 /**
@@ -288,33 +262,10 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .select--s {
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
-  padding: 3px 20px 3px 6px; /* plus arrow */
+  padding: 3px 24px 3px 6px; /* plus arrow */
 }
 
 .select--s + .select-arrow {
-  right: 8px;
-}
-
-/**
- * Make a select component extra small.
- *
- * @memberof Selects
- * @example
- * <div class='select-container'>
- *   <select class='select select--xs'>
- *     <option>one</option>
- *     <option>two</option>
- *   </select>
- *   <div class='select-arrow'></div>
- * </div>
- */
-.select--xs {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  padding: 0 20px 0 6px; /* plus arrow */
-}
-
-.select--xs + .select-arrow {
   right: 8px;
 }
 
@@ -779,22 +730,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * @example
  * <div class='toggle-group mr18'>
  *   <label class='toggle-container'>
- *     <input checked name='toggle' type='radio' />
+ *     <input checked name='toggle-1' type='radio' />
  *     <div class='toggle'>cat</div>
  *   </label>
  *   <label class='toggle-container'>
- *     <input name='toggle' type='radio' />
+ *     <input name='toggle-1' type='radio' />
  *     <div class='toggle'>dog</div>
- *   </label>
- * </div>
- * <div class='toggle-group txt-s mr18'>
- *   <label class='toggle-container'>
- *     <input checked name='toggle-2' type='radio' />
- *     <div class='toggle toggle--purple'>dragon</div>
- *   </label>
- *   <label class='toggle-container'>
- *     <input name='toggle-2' type='radio' />
- *     <div class='toggle toggle--purple'>phoenix</div>
  *   </label>
  * </div>
  */
@@ -814,13 +755,37 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   cursor: pointer;
   color: var(--default-secondary-interactive-color);
   font-weight: bold;
-  padding: 0 12px;
-  border-radius: 13px;
+  font-size: var(--font-size-s);
+  padding: 6px 18px;
+  border-radius: 18px; /* fully round by default */
   background-color: var(--transparent);
   transition: color var(--transition),
     background-color var(--transition);
 }
 /** @endgroup */
+
+/**
+ * Make a toggle small.
+ *
+ * @memberof Toggle group
+ * @example
+ * <div class='toggle-group mr18'>
+ *   <label class='toggle-container'>
+ *     <input checked name='toggle-small' type='radio' />
+ *     <div class='toggle toggle--s'>mouse</div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='toggle-small' type='radio' />
+ *     <div class='toggle toggle--s'>cricket</div>
+ *   </label>
+ * </div>
+
+ */
+.toggle--s {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-s);
+  padding: 3px 12px;
+}
 
 /* align labels with small text */
 .switch--s-label,

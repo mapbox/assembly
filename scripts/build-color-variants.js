@@ -282,16 +282,13 @@ function buildColorVariants(variables, config) {
   variantGenerators.switch = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      // Darken background when hovered and when active
-      // Darken dot on hover when inactive only
       return (result += stripIndent(`
         .switch--${color} {
           color: var(--${color});
         }
 
         input:checked + .switch--${color} {
-          background-color: var(--${darkerShade});
+          background-color: var(--${color});
         }
 
         input:checked + .switch--dot-${color}::after {

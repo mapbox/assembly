@@ -78,10 +78,7 @@ class Entry extends React.Component {
 
     const expandButton =
       selectors !== undefined && selectors.length > 15 ? (
-        <button
-          data-button-expand={true}
-          className="ml3 btn btn--xs btn--blue round"
-        >
+        <button data-button-expand={true} className="ml3 btn btn--s btn--blue round">
           See all
         </button>
       ) : null;

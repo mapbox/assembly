@@ -29,9 +29,10 @@
   display: inline-block;
   font-weight: bold;
   background-color: var(--default-primary-interactive-color);
+  font-size: var(--font-size-s);
   color: var(--white);
   border-radius: 18px; /* fully round by default */
-  padding: 6px 12px;
+  padding: 6px 18px;
   text-align: center;
   transition: background-color var(--transition),
     border-color var(--transition),
@@ -77,24 +78,10 @@
  * <button class='btn btn--s'>Small</button>
  */
 .btn--s {
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-xs);
   line-height: var(--line-height-s);
   padding: 3px 12px;
   border-radius: 15px;
-}
-
-/**
- * Make a button extra small.
- *
- * @memberof Buttons
- * @example
- * <button class='btn btn--xs'>Extra small</button>
- */
-.btn--xs {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  padding: 0 6px;
-  border-radius: 14px;
 }
 
 /**
