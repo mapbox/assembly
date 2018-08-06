@@ -26,11 +26,9 @@ export class Selects extends React.Component {
 
         {colors.map(color => {
           let selectClass = 'select';
-          let selectStrokeClass = 'select select--stroke';
           const selectContainerClass = 'select-container';
           if (color !== null) {
-            selectClass += ` select--${color}`;
-            selectStrokeClass += ` select--stroke-${color}`;
+            selectClass += ` select--border-${color}`;
           }
           return (
             <div key={color} className="mb12">
@@ -74,20 +72,6 @@ export class Selects extends React.Component {
                   <div className="select-arrow" />
                 </div>
               </div>
-              {!/^(darken10|lighten10)$/.test(color) ? (
-                <span>
-                  <div className={selectContainerClass}>
-                    <select className={selectStrokeClass}>
-                      <option>firstoption</option>
-                      <option>two</option>
-                      <option>three</option>
-                    </select>
-                    <div className="select-arrow" />
-                  </div>
-                </span>
-              ) : (
-                ''
-              )}
             </div>
           );
         })}
