@@ -192,7 +192,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
   color: currentColor;
-  padding: 6px 36px 6px 18px; /* plus arrow */
+  padding: 6px 30px 6px 12px; /* plus arrow */
   cursor: pointer;
 }
 
@@ -260,9 +260,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * </div>
  */
 .select--s {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-s);
   line-height: var(--line-height-s);
-  padding: 3px 26px 3px 12px; /* plus arrow */
+  padding: 3px 24px 3px 6px; /* plus arrow */
 }
 
 .select--s + .select-arrow {
