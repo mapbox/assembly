@@ -12,7 +12,7 @@ test('testtest ', t => {
     console.log(process.env.NON_TOKEN[i]);
   }
   t.end();
-}
+});
 
 test('valid svgs ', t => {
   fs.readdir('./src/svgs/', (err, files) => {
