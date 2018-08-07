@@ -7,6 +7,13 @@ const xml2js = require('xml2js');
 
 const parseString = xml2js.parseString;
 
+test('testtest ', t => {
+  for (let i = 0; i < process.env.NON_TOKEN.length; i++) {
+    console.log(process.env.NON_TOKEN[i]);
+  }
+  t.end();
+}
+
 test('valid svgs ', t => {
   fs.readdir('./src/svgs/', (err, files) => {
     const svgFiles = files.filter(
