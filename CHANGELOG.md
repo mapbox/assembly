@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.23.0
 
 - [breaking] Remove `input--xs`, `select--xs`, and `btn--xs`. You should switch to the `--s` modifiers, which have been modified to merge the *best* of `--s` and `--xs`.
 - [breaking] Drop support for Node 4 in custom build. **This has no effect on the client-side CSS or JS.**
