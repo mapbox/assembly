@@ -29,18 +29,20 @@
  * @memberof Forms
  */
 .input,
-.textarea {
+.textarea,
+.select {
   box-shadow: inset 0 0 0 1px var(--gray-light);
   padding: 6px 12px;
   border-radius: var(--border-radius);
   transition: background-color var(--transition),
-    border-color var(--transition);
+    box-shadow var(--transition);
   display: block;
   width: 100%;
 }
 
 .input:focus,
-.textarea:focus {
+.textarea:focus,
+.select:focus {
   box-shadow: inset 0 0 0 1px var(--default-primary-interactive-color);
 }
 
@@ -88,19 +90,6 @@
 }
 
 /**
- * Make an input extra small.
- *
- * @memberof Inputs & textareas
- * @example
- * <input class='input input--xs' placeholder='extra small' />
- */
-.input--xs {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  padding: 0 4px;
-}
-
-/**
  * Style a textarea. Set the color of the border with a `textarea--border-{color} modifier (`*-dark` colors are not available).
  *
  * @memberof Inputs & textareas
@@ -128,19 +117,6 @@
 }
 
 /**
- * Make a textarea extra small.
- *
- * @memberof Inputs & textareas
- * @example
- * <textarea class='textarea textarea--xs'>extra small textarea</textarea>
- */
-.textarea--xs {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  padding: 0 3px;
-}
-
-/**
  * When `input` and `textarea` elements have a `disabled` attribute, they will be styled accordingly.
  *
  * @memberof Inputs & textareas
@@ -149,7 +125,8 @@
  * <textarea disabled class='textarea' placeholder='disabled' value='Disabled'>Disabled text</textarea>
  */
 .input:disabled,
-.textarea:disabled {
+.textarea:disabled,
+.select:disabled {
   pointer-events: none;
   color: var(--darken50);
   background-color: var(--disabled-secondary-interactive-color);
@@ -183,21 +160,21 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /*
  * Style a select component.
- * Set the background color by adding a `select--{color}` modifier to the `select` element (`*-dark` colors are not available).
+ * Set the border (and arrow) color by adding a `select--border-{color}` modifier to the `select` element (`*-dark` colors are not available).
  *
  * @memberof Selects
  * @group
  * @example
  * <div class='select-container'>
  *   <select class='select'>
- *     <option>one</option>
+ *     <option>default</option>
  *     <option>two</option>
  *   </select>
  *   <div class='select-arrow'></div>
  * </div>
  * <div class='select-container mt6'>
- *   <select class='select select--red'>
- *     <option>one</option>
+ *   <select class='select select--border-green'>
+ *     <option>green</option>
  *     <option>two</option>
  *   </select>
  *   <div class='select-arrow'></div>
@@ -206,33 +183,27 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .select-container {
   display: inline-flex;
   position: relative;
-  color: var(--white);
   align-items: center;
 }
 
 .select {
   appearance: none;
+  background-color: var(--transparent);
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
-  font-weight: bold;
   color: currentColor;
   padding: 6px 30px 6px 12px; /* plus arrow */
   cursor: pointer;
-  display: inline-block;
-  transition: color var(--transition),
-    background-color var(--transition);
-  border-radius: var(--border-radius);
-  background-color: var(--default-primary-interactive-color); /* match btn default state */
 }
 
 .select-arrow {
   position: absolute;
   right: 12px;
-  top: 50%;
+  top: calc(50% - 1px);
   pointer-events: none;
   border-left: 4px solid var(--transparent);
   border-right: 4px solid var(--transparent);
-  border-top: 5px solid currentColor;
+  border-top: 5px solid var(--gray-light);
   width: 8px;
   height: 8px;
   margin-top: -1px;
@@ -241,9 +212,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /** @endgroup */
 
-/* default hover state */
-.select:hover {
-  background-color: var(--default-primary-interactive-color-dark);
+.select:focus + .select-arrow {
+  border-top-color: var(--default-primary-interactive-color);
 }
 
 /* Some browsers color the option text and background, so reset that */
@@ -277,56 +247,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 /* End IE overrides */
 
 /**
- * Modify a select component so its text and borders are colored and its background transparent.
- * You can still change the color by adding a `select--{color}` modifier to the `select` element (`*-dark` colors are not available).
- *
- * @memberof Selects
- * @example
- * <div class='select-container'>
- *   <select class='select select--stroke'>
- *     <option>one</option>
- *     <option>two</option>
- *   </select>
- *   <div class='select-arrow'></div>
- * </div>
- */
-.select--stroke {
-  color: var(--gray);
-  background-color: var(--transparent);
-  box-shadow: inset 0 0 0 1px currentColor;
-}
-
-/**
- * Modify the `select--stroke` modifier to be 2 px wide instead of 1 px wide. This class will have no effect if not combined with `select--stroke`.
- *
- * @memberof Selects
- * @example
- * <div class='select-container'>
- *   <select class='select select--stroke select--stroke--2'>
- *     <option>one</option>
- *     <option>two</option>
- *   </select>
- *   <div class='select-arrow'></div>
- * </div>
- */
-.select--stroke--2 {
-  box-shadow: inset 0 0 0 2px currentColor;
-}
-
-.select--stroke + .select-arrow {
-  color: var(--gray);
-}
-
-.select--stroke:hover {
-  background-color: var(--transparent);
-  color: var(--gray-dark);
-}
-
-.select--stroke:hover + .select-arrow {
-  border-top-color: currentColor;
-}
-
-/**
  * Make a select component small.
  *
  * @memberof Selects
@@ -342,33 +262,10 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .select--s {
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
-  padding: 3px 20px 3px 6px; /* plus arrow */
+  padding: 3px 24px 3px 6px; /* plus arrow */
 }
 
 .select--s + .select-arrow {
-  right: 8px;
-}
-
-/**
- * Make a select component extra small.
- *
- * @memberof Selects
- * @example
- * <div class='select-container'>
- *   <select class='select select--xs'>
- *     <option>one</option>
- *     <option>two</option>
- *   </select>
- *   <div class='select-arrow'></div>
- * </div>
- */
-.select--xs {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  padding: 0 20px 0 6px; /* plus arrow */
-}
-
-.select--xs + .select-arrow {
   right: 8px;
 }
 
@@ -791,6 +688,27 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 /*
+ * Make a switch control large.
+ *
+ * @memberof Switches
+ * @example
+ * <label class='switch-container'>
+ *   <input type='checkbox' />
+ *   <div class='switch switch--l mr6'></div>
+ *   Really enabled
+ * </label>
+ */
+.switch--l {
+  width: 40px;
+  height: 24px;
+  top: 0;
+}
+
+.switch--l::after {
+  width: calc(50% - 2px);
+}
+
+/*
  * The toggle group component styles a set of `<input type=radio'>` elements. The markup must fit the following pattern:
  * - A wrapping `<div>` around all your radio options with the class `toggle-group`.
  * - For each radio option, a wrapping `<label>` with the class `toggle-container`.
@@ -812,22 +730,12 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  * @example
  * <div class='toggle-group mr18'>
  *   <label class='toggle-container'>
- *     <input checked name='toggle' type='radio' />
+ *     <input checked name='toggle-1' type='radio' />
  *     <div class='toggle'>cat</div>
  *   </label>
  *   <label class='toggle-container'>
- *     <input name='toggle' type='radio' />
+ *     <input name='toggle-1' type='radio' />
  *     <div class='toggle'>dog</div>
- *   </label>
- * </div>
- * <div class='toggle-group txt-s mr18'>
- *   <label class='toggle-container'>
- *     <input checked name='toggle-2' type='radio' />
- *     <div class='toggle toggle--purple'>dragon</div>
- *   </label>
- *   <label class='toggle-container'>
- *     <input name='toggle-2' type='radio' />
- *     <div class='toggle toggle--purple'>phoenix</div>
  *   </label>
  * </div>
  */
@@ -847,13 +755,37 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   cursor: pointer;
   color: var(--default-secondary-interactive-color);
   font-weight: bold;
-  padding: 0 12px;
-  border-radius: 13px;
+  font-size: var(--font-size-s);
+  padding: 6px 18px;
+  border-radius: 18px; /* fully round by default */
   background-color: var(--transparent);
   transition: color var(--transition),
     background-color var(--transition);
 }
 /** @endgroup */
+
+/**
+ * Make a toggle small.
+ *
+ * @memberof Toggle group
+ * @example
+ * <div class='toggle-group mr18'>
+ *   <label class='toggle-container'>
+ *     <input checked name='toggle-small' type='radio' />
+ *     <div class='toggle toggle--s'>mouse</div>
+ *   </label>
+ *   <label class='toggle-container'>
+ *     <input name='toggle-small' type='radio' />
+ *     <div class='toggle toggle--s'>cricket</div>
+ *   </label>
+ * </div>
+
+ */
+.toggle--s {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-s);
+  padding: 3px 12px;
+}
 
 /* align labels with small text */
 .switch--s-label,

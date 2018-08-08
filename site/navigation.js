@@ -3,6 +3,7 @@ import { withLocation } from '@mapbox/batfish/modules/with-location';
 import React from 'react';
 
 import { Logo } from './logo';
+// eslint-disable-next-line
 import navigationData from '../_tmp_assembly/navigation.json';
 import pkg from '../package.json';
 

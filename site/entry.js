@@ -78,7 +78,7 @@ class Entry extends React.Component {
 
     const expandButton =
       selectors !== undefined && selectors.length > 15 ? (
-        <button data-button-expand className="ml3 btn btn--xs btn--blue round">
+        <button data-button-expand={true} className="ml3 btn btn--s btn--blue round">
           See all
         </button>
       ) : null;
@@ -100,6 +100,7 @@ class Entry extends React.Component {
               <a
                 href={sourceUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="txt-s link inline-block link--gray"
               >
                 <svg className="align-t inline-block mr6 mt3 icon w15 h15">

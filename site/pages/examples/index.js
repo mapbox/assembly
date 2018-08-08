@@ -1,5 +1,5 @@
 import React from 'react';
-import examplesSubNavigationList from '@mapbox/batfish/data/examples-sub-navigation-list';
+import examplesSubNavigationList from '@mapbox/batfish/data/examples-sub-navigation-list'; // eslint-disable-line
 import { Page } from '../../page';
 
 export default class Examples extends React.Component {

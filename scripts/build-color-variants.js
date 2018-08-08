@@ -185,55 +185,36 @@ function buildColorVariants(variables, config) {
     return css;
   };
 
-  variantGenerators.selectFill = function(colors) {
-    return colors.reduce((result, color) => {
-      if (isNotAccessibleExceptButtons(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      return (result += stripIndent(`
-        .select--${color} {
-          background-color: var(--${color});
-        }
-
-        .select--${color}:hover {
-          background-color: var(--${darkerShade});
-        }
-      `));
-    }, '');
-  };
-
-  variantGenerators.selectStroke = function(colors) {
+  variantGenerators.select = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
       return (result += stripIndent(`
-        .select--stroke-${color} {
-          color: var(--${color});
-        }
-        .select--stroke-${color} + .select-arrow {
+        .select--border-${color} + .select-arrow {
           border-top-color: var(--${color});
         }
-        .select--stroke-${color}:hover {
-          color: var(--${darkerShade});
-        }
-        .select--stroke-${color}:hover + .select-arrow {
+
+        .select--border-${color}:focus + .select-arrow {
           border-top-color: var(--${darkerShade});
         }
       `));
     }, '');
   };
 
-  variantGenerators.inputTextarea = function(colors) {
+  variantGenerators.inputTextareaSelect = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
       return (result += stripIndent(`
         .textarea--border-${color},
-        .input--border-${color} {
+        .input--border-${color},
+        .select--border-${color} {
           box-shadow: inset 0 0 0 1px var(--${color});
         }
 
         .textarea--border-${color}:focus,
-        .input--border-${color}:focus {
+        .input--border-${color}:focus,
+        .select--border-${color}:focus {
           box-shadow: inset 0 0 0 1px var(--${darkerShade});
         }
       `));
@@ -301,16 +282,13 @@ function buildColorVariants(variables, config) {
   variantGenerators.switch = function(colors) {
     return colors.reduce((result, color) => {
       if (isNotAccessibleForForms(color)) return result;
-      const darkerShade = getDarkerShade(color);
-      // Darken background when hovered and when active
-      // Darken dot on hover when inactive only
       return (result += stripIndent(`
         .switch--${color} {
           color: var(--${color});
         }
 
         input:checked + .switch--${color} {
-          background-color: var(--${darkerShade});
+          background-color: var(--${color});
         }
 
         input:checked + .switch--dot-${color}::after {

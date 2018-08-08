@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import Lowlight from 'react-lowlight';
 import xmlLanguage from 'highlight.js/lib/languages/xml';
@@ -17,7 +18,7 @@ function HtmlExample(props) {
           <div className="absolute top right px12 py12">
             <button
               data-clipboard-text={props.code}
-              className="ml3 btn btn--xs btn--darken25 round js-clipboard"
+              className="ml3 btn btn--s btn--darken25 round js-clipboard"
             >
               Copy
             </button>

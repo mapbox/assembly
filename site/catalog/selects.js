@@ -26,11 +26,9 @@ export class Selects extends React.Component {
 
         {colors.map(color => {
           let selectClass = 'select';
-          let selectStrokeClass = 'select select--stroke';
           const selectContainerClass = 'select-container';
           if (color !== null) {
-            selectClass += ` select--${color}`;
-            selectStrokeClass += ` select--stroke-${color}`;
+            selectClass += ` select--border-${color}`;
           }
           return (
             <div key={color} className="mb12">
@@ -38,7 +36,7 @@ export class Selects extends React.Component {
                 <div className={selectContainerClass}>
                   <select className={selectClass}>
                     <option>firstoption</option>
-                    <option disabled>two</option>
+                    <option disabled={true}>two</option>
                     <option>three</option>
                   </select>
                   <div className="select-arrow" />
@@ -46,7 +44,7 @@ export class Selects extends React.Component {
               </div>
               <div className="inline-block mr12">
                 <div className={selectContainerClass}>
-                  <select className={selectClass} disabled>
+                  <select className={selectClass} disabled={true}>
                     <option>firstoption</option>
                     <option>two</option>
                     <option>three</option>
@@ -64,30 +62,6 @@ export class Selects extends React.Component {
                   <div className="select-arrow" />
                 </div>
               </div>
-              <div className="inline-block mr12">
-                <div className={selectContainerClass}>
-                  <select className={`${selectClass} select--xs`}>
-                    <option>firstoption</option>
-                    <option>two</option>
-                    <option>three</option>
-                  </select>
-                  <div className="select-arrow" />
-                </div>
-              </div>
-              {!/^(darken10|lighten10)$/.test(color) ? (
-                <span>
-                  <div className={selectContainerClass}>
-                    <select className={selectStrokeClass}>
-                      <option>firstoption</option>
-                      <option>two</option>
-                      <option>three</option>
-                    </select>
-                    <div className="select-arrow" />
-                  </div>
-                </span>
-              ) : (
-                ''
-              )}
             </div>
           );
         })}

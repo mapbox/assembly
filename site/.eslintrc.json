@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "@mapbox/eslint-config-mapbox/react",
+    "@mapbox/eslint-config-mapbox/import",
+    "@mapbox/eslint-config-mapbox/promise",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "react/prop-types": "off"
+  }
+}
