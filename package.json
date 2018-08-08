@@ -29,7 +29,7 @@
     "start": "concurrently -k -p \"{name}\" -n \"Batfish ,Assembly\" \"npm run build:css && npm run build:js && npm run generate-site-data && batfish start\" \"node scripts/watch-assembly-assets.js\"",
     "test:jest": "jest",
     "test:svgs": "tape test/test-icons.tape.js | tap-spec",
-    "test": "npm run lint && npm run test:svgs && npm run test:jest && npm run build:site"
+    "test": "npm run lint && npm run test:svgs && npm run test:jest"
   },
   "engines": {
     "node": ">=6",
