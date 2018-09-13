@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.23.1
+
+- Add line-center icon.
+
 ## 0.23.0
 
 - [breaking] Remove `input--xs`, `select--xs`, and `btn--xs`. You should switch to the `--s` modifiers, which have been modified to merge the *best* of `--s` and `--xs`.

@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/assembly",
-  "version": "0.23.0",
+  "version": "0.23.1",
   "description": "A CSS framework",
   "main": "index.js",
   "files": [
@@ -21,7 +21,8 @@
     "build:site": "npm run generate-site-data && batfish build",
     "build:css": "npm run generate-css && node scripts/build-css",
     "build:js": "node scripts/build-js",
-    "build": "rm -rf dist && npm-run-all --parallel build:css build:js && npm run build:site",
+    "build:assembly": "rm -rf dist && npm-run-all --parallel build:css build:js",
+    "build": "npm run build:assembly && npm run build:site",
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint .",
     "lint": "npm run lint:css && npm run lint:js",
@@ -29,7 +30,7 @@
     "start": "concurrently -k -p \"{name}\" -n \"Batfish ,Assembly\" \"npm run build:css && npm run build:js && npm run generate-site-data && batfish start\" \"node scripts/watch-assembly-assets.js\"",
     "test:jest": "jest",
     "test:svgs": "tape test/test-icons.tape.js | tap-spec",
-    "test": "npm run lint && npm run test:svgs && npm run test:jest"
+    "test": "npm run lint && npm run test:svgs && npm run test:jest && npm run build:assembly"
   },
   "engines": {
     "node": ">=6",
