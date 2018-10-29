@@ -8,6 +8,7 @@ module.exports = () => {
   return {
     siteBasePath: '/assembly/',
     siteOrigin: 'https://www.mapbox.com',
+    outputDirectory: path.join(__dirname, '_site'),
     stylesheets: [
       path.join(__dirname, './site/css/hljs.css'),
       path.join(__dirname, './dist/assembly.css')
