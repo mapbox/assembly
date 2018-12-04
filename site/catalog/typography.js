@@ -1,4 +1,5 @@
 import React from 'react';
+import placeholderImg from '../img/spacedog800.jpg';
 
 export class Typography extends React.Component {
   render() {
@@ -60,7 +61,7 @@ export class Typography extends React.Component {
               Cras mattis consectetur purus sit amet fermentum.
             </blockquote>
 
-            <img src="http://placehold.it/800" />
+            <img src={placeholderImg} />
 
             <p>
               Cras mattis consectetur purus sit amet fermentum. Praesent commodo
@@ -127,7 +128,7 @@ export class Typography extends React.Component {
               Cras mattis consectetur purus sit amet fermentum.
             </div>
 
-            <img className="mb12" src="http://placehold.it/800" />
+            <img className="mb12" src={placeholderImg} />
 
             <div className="txt-m mb12">
               Cras mattis consectetur purus sit amet fermentum. Praesent commodo
