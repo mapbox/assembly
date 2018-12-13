@@ -1,12 +1,12 @@
 # Assembly
 
-<img width='200px' src='https://rawgit.com/mapbox/assembly/dev-pages/assembly-logo.svg?v1'>
+<img width='200px' src='https://rawgit.com/mapbox/assembly/publisher-staging/assembly-logo.svg?v1'>
 
 A CSS framework that makes the hard parts of building anything on the web easy. We define the hard parts as: managing class specificity, designing cross-browser form components that work well with each other, creating a harmonious typographic scale, maintaining a baseline grid, and keeping responsive designs simple.
 
 For usage guidelines and documentation, check out https://labs.mapbox.com/assembly/.
 
-[![Build Status](https://travis-ci.com/mapbox/assembly.svg?token=FB2dZNVWaGo68KZnwz9M&branch=dev-pages)](https://travis-ci.com/mapbox/assembly)
+[![Build Status](https://travis-ci.com/mapbox/assembly.svg?token=FB2dZNVWaGo68KZnwz9M&branch=publisher-staging)](https://travis-ci.com/mapbox/assembly)
 
 ## Browser support
 
@@ -139,14 +139,14 @@ For other scripts, look in `package.json`.
 
 ### Releasing
 
-Development is done in the `dev-pages` branch, but releases are made from the `mb-pages` branch. Here's how you cut a release:
+Development is done in the `publisher-staging` branch, but releases are made from the `publisher-production` branch. Here's how you cut a release:
 
-- From `dev-pages`:
-  - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/dev-pages/CHANGELOG.md).
+- From `publisher-staging`:
+  - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/publisher-staging/CHANGELOG.md).
   - Increment the version key in `package.json` and `package-lock.json`.
   - Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`.
-  - Merge these changes into the `mb-pages` branch. *Conduct the following steps from `mb-pages`*.
-- From `mb-pages`:
+  - Merge these changes into the `publisher-production` branch. *Conduct the following steps from `publisher-production`*.
+- From `publisher-production`:
   - Create a tag. No message is necessary, since the changelog includes explanations of changes. For example: `git tag -a 0.8.0 -m ""`.
   - Push the tag: `git push --tags`.
   - Publish the new version on npm.
