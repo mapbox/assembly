@@ -24,7 +24,7 @@ Lowlight.registerLanguage('html', xmlLanguage);
 export default class Home extends React.Component {
   render() {
     return (
-      <Page>
+      <Page path="/">
         <div className="pt24">
           <div className="flex-parent-ml flex-parent--wrap-ml">
             <h1 className="flex-child-ml flex-child--grow-ml txt-h2 txt-bold">
