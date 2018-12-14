@@ -21,7 +21,7 @@ export default class Icons extends React.Component {
     });
 
     return (
-      <Page>
+      <Page path="/icons/">
         <h1 className="txt-h2 mb12 txt-bold pt24">Icons</h1>
         <div className="mb36 prose">
           <p>
