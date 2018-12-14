@@ -2,7 +2,10 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Navigation } from './navigation';
-import { prefixUrl } from '@mapbox/batfish/modules/prefix-url';
+import {
+  prefixUrl,
+  prefixUrlAbsolute
+} from '@mapbox/batfish/modules/prefix-url';
 import 'highlight.js';
 
 class Page extends React.Component {
@@ -21,6 +24,7 @@ class Page extends React.Component {
             rel="icon"
             type="image/x-icon"
           />
+          <link rel="canonical" href={prefixUrlAbsolute(this.props.path)} />
         </Helmet>
         <div className="scroll-auto viewport-full-mm w180-mm fixed-mm top left flex-parent-mm flex-parent--stretch-cross-mm">
           <Navigation />
@@ -34,7 +38,9 @@ class Page extends React.Component {
 }
 
 Page.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  // Should start and end with a slash.
+  path: PropTypes.string.isRequired
 };
 
 export { Page };

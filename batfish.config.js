@@ -7,7 +7,7 @@ const navigationStructure = require('./_tmp_assembly/navigation.json');
 module.exports = () => {
   return {
     siteBasePath: '/assembly/',
-    siteOrigin: 'https://www.mapbox.com',
+    siteOrigin: 'https://labs.mapbox.com',
     outputDirectory: path.join(__dirname, '_site'),
     stylesheets: [
       path.join(__dirname, './site/css/hljs.css'),

@@ -23,7 +23,7 @@ import { Flexbox } from '../catalog/flexbox';
 export default class Catalog extends React.Component {
   render() {
     return (
-      <Page>
+      <Page path="/catalog/">
         <div className="pt24">
           <h1 className="txt-h2 txt-bold mb18">Catalog</h1>
           <p className="col col--6-ml">

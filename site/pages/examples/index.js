@@ -17,7 +17,7 @@ export default class Examples extends React.Component {
 
   render() {
     return (
-      <Page>
+      <Page path="/examples/">
         <div className="py24">
           <h1 className="txt-h2 txt-bold mb18">Examples</h1>
           <p className="col col--6-ml">
