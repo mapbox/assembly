@@ -15,6 +15,7 @@ class Page extends React.Component {
       <div>
         <Helmet>
           <title>Assembly.css</title>
+          <link rel="canonical" href="https://labs.mapbox.com/assembly/" />
           <meta name="viewport" content="initial-scale=1.0 maximum-scale=1.0" />
           <link
             href={prefixUrl('favicon.ico')}
