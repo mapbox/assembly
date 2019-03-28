@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.23.2
+
+- Fix unnecessary vector data in `history.svg` icon.
+
 ## 0.23.1
 
 - Add line-center icon.
