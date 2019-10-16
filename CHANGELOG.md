@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.24.0
+
+- Add `unlock` icon.
+
 ## 0.23.2
 
 - Fix unnecessary vector data in `history.svg` icon.
@@ -10,7 +14,7 @@
 
 ## 0.23.0
 
-- [breaking] Remove `input--xs`, `select--xs`, and `btn--xs`. You should switch to the `--s` modifiers, which have been modified to merge the *best* of `--s` and `--xs`.
+- [breaking] Remove `input--xs`, `select--xs`, and `btn--xs`. You should switch to the `--s` modifiers, which have been modified to merge the _best_ of `--s` and `--xs`.
 - [breaking] Drop support for Node 4 in custom build. **This has no effect on the client-side CSS or JS.**
 - [style change] Selects are now styled like inputs, instead of buttons.
 - [style change] Increase default horizontal padding on buttons and selects.
