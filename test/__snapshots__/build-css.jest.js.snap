@@ -72,7 +72,6 @@ button{
      -moz-appearance:none;
           appearance:none;
   -webkit-user-select:none;
-     -moz-user-select:none;
       -ms-user-select:none;
           user-select:none;
   cursor:pointer;
@@ -451,11 +450,6 @@ legend{
   color:rgba(127, 127, 127, 0.45);
 }
 
-.input:-ms-input-placeholder,
-.textarea:-ms-input-placeholder{
-  color:rgba(127, 127, 127, 0.45);
-}
-
 .input::placeholder,
 .textarea::placeholder{
   color:rgba(127, 127, 127, 0.45);
@@ -723,7 +717,6 @@ legend{
 .switch-container,
 .radio-container{
   -webkit-user-select:none;
-     -moz-user-select:none;
       -ms-user-select:none;
           user-select:none;
   display:-webkit-inline-flex;
@@ -8267,7 +8260,6 @@ textarea{
 }
 .unselectable{
   -webkit-user-select:none;
-     -moz-user-select:none;
       -ms-user-select:none;
           user-select:none;
 }
@@ -8275,7 +8267,6 @@ textarea{
 @media screen and (min-width: 640px){
   .unselectable-mm{
     -webkit-user-select:none !important;
-       -moz-user-select:none !important;
         -ms-user-select:none !important;
             user-select:none !important;
   }
@@ -8284,14 +8275,12 @@ textarea{
 @media screen and (min-width: 760px){
   .unselectable-ml{
     -webkit-user-select:none !important;
-       -moz-user-select:none !important;
         -ms-user-select:none !important;
             user-select:none !important;
   }
 }
 .selectable{
   -webkit-user-select:text;
-     -moz-user-select:text;
       -ms-user-select:text;
           user-select:text;
 }
@@ -8299,7 +8288,6 @@ textarea{
 @media screen and (min-width: 640px){
   .selectable-mm{
     -webkit-user-select:text !important;
-       -moz-user-select:text !important;
         -ms-user-select:text !important;
             user-select:text !important;
   }
@@ -8308,7 +8296,6 @@ textarea{
 @media screen and (min-width: 760px){
   .selectable-ml{
     -webkit-user-select:text !important;
-       -moz-user-select:text !important;
         -ms-user-select:text !important;
             user-select:text !important;
   }
@@ -12064,7 +12051,6 @@ button{
      -moz-appearance:none;
           appearance:none;
   -webkit-user-select:none;
-     -moz-user-select:none;
       -ms-user-select:none;
           user-select:none;
   cursor:pointer;
@@ -12443,11 +12429,6 @@ legend{
   color:rgba(127, 127, 127, 0.45);
 }
 
-.input:-ms-input-placeholder,
-.textarea:-ms-input-placeholder{
-  color:rgba(127, 127, 127, 0.45);
-}
-
 .input::placeholder,
 .textarea::placeholder{
   color:rgba(127, 127, 127, 0.45);
@@ -12715,7 +12696,6 @@ legend{
 .switch-container,
 .radio-container{
   -webkit-user-select:none;
-     -moz-user-select:none;
       -ms-user-select:none;
           user-select:none;
   display:-webkit-inline-flex;
@@ -20259,7 +20239,6 @@ textarea{
 }
 .unselectable{
   -webkit-user-select:none;
-     -moz-user-select:none;
       -ms-user-select:none;
           user-select:none;
 }
@@ -20267,7 +20246,6 @@ textarea{
 @media screen and (min-width: 640px){
   .unselectable-mm{
     -webkit-user-select:none !important;
-       -moz-user-select:none !important;
         -ms-user-select:none !important;
             user-select:none !important;
   }
@@ -20276,14 +20254,12 @@ textarea{
 @media screen and (min-width: 800px){
   .unselectable-ml{
     -webkit-user-select:none !important;
-       -moz-user-select:none !important;
         -ms-user-select:none !important;
             user-select:none !important;
   }
 }
 .selectable{
   -webkit-user-select:text;
-     -moz-user-select:text;
       -ms-user-select:text;
           user-select:text;
 }
@@ -20291,7 +20267,6 @@ textarea{
 @media screen and (min-width: 640px){
   .selectable-mm{
     -webkit-user-select:text !important;
-       -moz-user-select:text !important;
         -ms-user-select:text !important;
             user-select:text !important;
   }
@@ -20300,7 +20275,6 @@ textarea{
 @media screen and (min-width: 800px){
   .selectable-ml{
     -webkit-user-select:text !important;
-       -moz-user-select:text !important;
         -ms-user-select:text !important;
             user-select:text !important;
   }
