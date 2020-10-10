@@ -8319,14 +8319,14 @@ textarea{
 .transition-none{
   transition:auto;
 }
-.scroll-always{
+.overflow-scroll{
   overflow:scroll !important;
 }
-.scroll-auto{
+.overflow-auto{
   overflow:auto !important;
   -webkit-overflow-scrolling:touch;
 }
-.scroll-hidden{
+.overflow-hidden{
   overflow:hidden !important;
 }
 .hide-visually{
@@ -20311,14 +20311,14 @@ textarea{
 .transition-none{
   transition:auto;
 }
-.scroll-always{
+.overflow-scroll{
   overflow:scroll !important;
 }
-.scroll-auto{
+.overflow-auto{
   overflow:auto !important;
   -webkit-overflow-scrolling:touch;
 }
-.scroll-hidden{
+.overflow-hidden{
   overflow:hidden !important;
 }
 .hide-visually{
