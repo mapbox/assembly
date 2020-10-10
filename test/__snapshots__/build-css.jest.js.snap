@@ -1003,7 +1003,8 @@ textarea{
   font-family:'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   font-size:90%;
 }
-.txt-bold{
+.txt-bold,
+.txt-strong{
   font-weight:bold !important;
 }
 .txt-h1{
@@ -12995,7 +12996,8 @@ textarea{
   font-family:'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;
   font-size:90%;
 }
-.txt-bold{
+.txt-bold,
+.txt-strong{
   font-weight:bold !important;
 }
 .txt-h1{

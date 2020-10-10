@@ -132,7 +132,8 @@ textarea {
  * @example
  * <div class='txt-bold'>txt-bold</div>
  */
-.txt-bold {
+.txt-bold,
+.txt-strong {
   font-weight: bold !important;
 }
 
