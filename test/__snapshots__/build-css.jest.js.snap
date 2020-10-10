@@ -1443,6 +1443,10 @@ textarea{
 .absolute{ position:absolute !important; }
 .relative{ position:relative !important; }
 .static{ position:static !important; }
+.sticky{
+  position:sticky !important;
+  position:-webkit-sticky !important;
+}
 .top{ top:0 !important; }
 .right{ right:0 !important; }
 .left{ left:0 !important; }
@@ -13435,6 +13439,10 @@ textarea{
 .absolute{ position:absolute !important; }
 .relative{ position:relative !important; }
 .static{ position:static !important; }
+.sticky{
+  position:sticky !important;
+  position:-webkit-sticky !important;
+}
 .top{ top:0 !important; }
 .right{ right:0 !important; }
 .left{ left:0 !important; }

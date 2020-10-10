@@ -214,6 +214,7 @@
  *   <div class="absolute bg-darken10 right">absolute</div>
  *   <div class="relative bg-darken10">relative</div>
  *   <div class="static bg-darken10">static</div>
+ *   <div class="sticky bg-darken10">static</div>
  *   <!--
  *    Fixed positioning would interfere with page
  *    <div class="fixed bg-darken10">fixed</div>
@@ -224,6 +225,10 @@
 .absolute { position: absolute !important; }
 .relative { position: relative !important; }
 .static { position: static !important; }
+.sticky {
+  position: sticky !important;
+  position: -webkit-sticky !important; /* stylelint-disable-line value-no-vendor-prefix */
+}
 /** @endgroup */
 
 /**
