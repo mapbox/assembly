@@ -5,7 +5,7 @@
  */
 
 /*
- * All a limiter to a wrapping element around a page layout. The limiter should never be placed inside other elements that have layout classes. Unlike many other classes in Assembly, the limiter class includes built-in media queries, designed to manage line lengths across screen sizes. The limiter's max width is 1200px.
+ * All a limiter to a wrapping element around a page layout. The limiter should never be placed inside other elements that have layout classes. Unlike many other classes in Assembly, the limiter class includes built-in media queries, designed to manage line lengths across screen sizes. The limiter's max width is 1200px. includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @memberof Layout
  * @example
