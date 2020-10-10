@@ -13,7 +13,7 @@ function HtmlExample(props) {
         className="border border--gray-light px12 py12 round-t"
         dangerouslySetInnerHTML={{ __html: props.code }}
       />
-      <div className="pre scroll-auto scroll-styled hmax240 border-l border-b border-r border--gray-light round-b relative">
+      <div className="pre overflow-auto scroll-styled hmax240 border-l border-b border-r border--gray-light round-b relative">
         {copy && (
           <div className="absolute top right px12 py12">
             <button

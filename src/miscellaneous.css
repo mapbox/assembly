@@ -8,13 +8,13 @@
  * Style scrollbars. Only works in Webkit-based browsers (Safari and Chrome).
  * On dark backgrounds, add the `scroll-styled--dark` modifier.
  *
- * **Use in combination with `scroll-auto`.**
+ * **Use in combination with `overflow-auto`.**
  *
  * @memberof Miscellaneous
    @selectors .scroll-styled
  * @example
- * <div class="scroll-styled scroll-auto h120"><div class='h240'></div></div>
- * <div class="scroll-styled scroll-styled--dark bg-gray-dark scroll-auto h120"><div class='h240'></div></div>
+ * <div class="scroll-styled overflow-auto h120"><div class='h240'></div></div>
+ * <div class="scroll-styled scroll-styled--dark bg-gray-dark overflow-auto h120"><div class='h240'></div></div>
 */
 .scroll-styled::-webkit-scrollbar {
   width: 6px;
@@ -220,9 +220,9 @@
  *
  * @memberof Miscellaneous
  * @example
- *   <div class='scroll-always'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+ *   <div class='overflow-scroll'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
  */
-.scroll-always {
+.overflow-scroll {
   overflow: scroll !important;
 }
 
@@ -231,9 +231,9 @@
  *
  * @memberof Miscellaneous
  * @example
- *   <div class='h60 scroll-auto'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+ *   <div class='h60 overflow-auto'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
  */
-.scroll-auto {
+.overflow-auto {
   overflow: auto !important;
   -webkit-overflow-scrolling: touch;
 }
@@ -243,9 +243,9 @@
  *
  * @memberof Miscellaneous
  * @example
- *   <div class='h60 scroll-hidden'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+ *   <div class='h60 overflow-hidden'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
  */
-.scroll-hidden {
+.overflow-hidden {
   overflow: hidden !important;
 }
 

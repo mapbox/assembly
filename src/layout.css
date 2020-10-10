@@ -470,7 +470,7 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex-parent flex-parent--wrap bg-darken10 scroll-hidden'>
+ * <div class='flex-parent flex-parent--wrap bg-darken10 overflow-hidden'>
  *  <div class='flex-child bg-darken10 w600'>child</div>
  *  <div class='flex-child bg-darken10 w600'>child</div>
  * </div>
@@ -565,7 +565,7 @@
 
 /**
  * Bleed utilities. Bleed classes allow an element inside a centered container to escape the container and meet the edge of the screen.
- * When using the bleed classes, consider adding the `.scroll-hidden` class on a parent element to prevent horizontal overflow.
+ * When using the bleed classes, consider adding the `.overflow-hidden` class on a parent element to prevent horizontal overflow.
  *
  * *Warning*: Bleeding elements will never bleed out to more than 50% of the viewport width.
  * So you should not make an element bleed to one side unless it's already on that half of
@@ -581,7 +581,7 @@
  *
  * @group
  * @example
- * <div class='bg-darken10 flex-parent flex-parent--center-main scroll-hidden'>
+ * <div class='bg-darken10 flex-parent flex-parent--center-main overflow-hidden'>
  *   <div class='w240 px12 py12 bg-darken10'>
  *     <div class='bg-darken10 bleed-r'>Right bleed</div>
  *   </div>
