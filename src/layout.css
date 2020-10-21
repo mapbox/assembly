@@ -225,10 +225,7 @@
 .absolute { position: absolute !important; }
 .relative { position: relative !important; }
 .static { position: static !important; }
-.sticky {
-  position: sticky !important;
-  position: -webkit-sticky !important; /* stylelint-disable-line value-no-vendor-prefix */
-}
+.sticky { position: sticky !important; }
 /** @endgroup */
 
 /**
