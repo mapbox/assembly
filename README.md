@@ -6,7 +6,7 @@ A CSS framework that makes the hard parts of building anything on the web easy. 
 
 For usage guidelines and documentation, check out https://labs.mapbox.com/assembly/.
 
-[![Build Status](https://travis-ci.com/mapbox/assembly.svg?token=FB2dZNVWaGo68KZnwz9M&branch=publisher-staging)](https://travis-ci.com/mapbox/assembly)
+[![Build Status](https://travis-ci.com/mapbox/assembly.svg?branch=publisher-staging)](https://travis-ci.com/mapbox/assembly)
 
 ## Browser support
 
