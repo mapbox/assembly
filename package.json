@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/assembly",
-  "version": "0.24.0",
+  "version": "0.25.0",
   "description": "A CSS framework",
   "main": "index.js",
   "files": [
@@ -67,7 +67,7 @@
     "uglify-js": "^3.4.3"
   },
   "devDependencies": {
-    "@mapbox/batfish": "^1.9.1",
+    "@mapbox/batfish": "2.1.0",
     "@mapbox/eslint-config-mapbox": "^1.2.1",
     "aws-sdk": "^2.270.1",
     "babel-eslint": "^8.2.5",
