@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.25.0
+
+- Add `horizon` icon.
+
 ## 0.24.0
 
 - Add `unlock` icon.
