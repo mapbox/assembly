@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.26.0
+
+- Add `drag` icon.
+
 ## 0.25.0
 
 - Add `horizon` icon.
