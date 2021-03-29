@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Update browser compatibility targets, drop IE11 support.
+
 ## 0.26.0
 
 - Add `drag` icon.

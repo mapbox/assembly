@@ -71,9 +71,11 @@ function buildCss(options) {
         'last 4 Chrome versions',
         'last 4 Firefox versions',
         'last 4 Safari versions',
-        'iOS >= 7',
-        'Android >= 4.4',
-        'IE >= 11'
+        'last 2 Edge versions',
+        'last 2 iOS versions',
+        'last 2 Android versions',
+        'not IE 11',
+        'not dead'
       ]
     },
     options
