@@ -111,10 +111,10 @@ function buildCss(options) {
   const postcssPlugins = [
     customProperties,
     postcssCustomMedia({
-      extensions: mediaQueryDefinitions
+      importFrom: { customMedia: mediaQueryDefinitions }
     }),
     autoprefixer({
-      browsers: options.browsersList
+      overrideBrowserslist: options.browsersList
     }),
     reporter()
   ];
