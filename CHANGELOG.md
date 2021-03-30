@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add `sticky` position rule.
+
 ## 0.26.0
 
 - Add `drag` icon.
