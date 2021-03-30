@@ -1,3 +1,5 @@
 version: v1
 defaults:
   - publisher
+config:
+  node_version: '14.x'
