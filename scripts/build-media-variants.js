@@ -16,7 +16,6 @@ const targetFiles = ['layout', 'theming', 'typography'];
 // These are the classes we'll build media variants for.
 const targetClassArray = [
   // Layout
-  'limiter',
   'grid',
   'col',
   'col--1',

@@ -2,22 +2,6 @@
 
 exports[`buildMediaVariants defaults 1`] = `
 "@media (--m-screen) {
-.limiter-mm {
-  padding-left: 24px;
-  padding-right: 24px;
-  width: 100%;
-}
-  .limiter-mm {
-    margin-left: auto;
-    margin-right: auto;
-    width: 91.666666666%;
-    max-width: 1200px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .limiter-mm {
-    width: 83.33333333%;
-  }
 .grid-mm {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -254,22 +238,6 @@ exports[`buildMediaVariants defaults 1`] = `
 }
 
 @media (--l-screen) {
-.limiter-ml {
-  padding-left: 24px;
-  padding-right: 24px;
-  width: 100%;
-}
-  .limiter-ml {
-    margin-left: auto;
-    margin-right: auto;
-    width: 91.666666666%;
-    max-width: 1200px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .limiter-ml {
-    width: 83.33333333%;
-  }
 .grid-ml {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -506,22 +474,6 @@ exports[`buildMediaVariants defaults 1`] = `
 }
 
 @media (--xl-screen) {
-.limiter-mxl {
-  padding-left: 24px;
-  padding-right: 24px;
-  width: 100%;
-}
-  .limiter-mxl {
-    margin-left: auto;
-    margin-right: auto;
-    width: 91.666666666%;
-    max-width: 1200px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .limiter-mxl {
-    width: 83.33333333%;
-  }
 .grid-mxl {
   display: flex !important;
   flex-wrap: wrap !important;
