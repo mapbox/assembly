@@ -63,6 +63,7 @@ const targetClassArray = [
   'absolute',
   'relative',
   'static',
+  'sticky',
   'top',
   'right',
   'left',
