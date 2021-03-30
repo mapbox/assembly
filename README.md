@@ -10,7 +10,7 @@ For usage guidelines and documentation, check out https://labs.mapbox.com/assemb
 
 ## Browser support
 
-Assembly targets IE 11+ and other modern browsers.
+Assembly targets modern versions of Chrome, Firefox, Safari, and Edge on desktop; Safari on iOS; and Chrome on Android.
 
 ## Custom Builds
 
@@ -40,42 +40,54 @@ Assembly.buildUserAssets('path/to/my/outdir', myOptions)
   These media queries are accessible in any stylesheets you append via the CSS custom media query syntax, e.g. `@media --media-query-name`.
 - **`colorVariants`**: An object or array specifying the color variants you would like added to `assembly.css`. This is documented in detail below.
 - **`icons`**: An array of icons names to include in Assembly. Names correspond to file names in `src/svgs/`. Use this option to decrease the size of assembly.js by only including the icons you need.
-- **`browsersList`**: A [Browserslist](https://github.com/ai/browserslist) array to be used by [Autoprefixer](https://github.com/postcss/autoprefixer). Default: `['last 4 versions', 'not ie < 10']`.
+- **`browsersList`**: A [Browserslist](https://github.com/ai/browserslist) array to be used by [Autoprefixer](https://github.com/postcss/autoprefixer). Default:
+
+  ```
+  [
+    'last 4 Chrome versions',
+    'last 4 Firefox versions',
+    'last 4 Safari versions',
+    'last 2 Edge versions',
+    'last 2 iOS versions',
+    'last 2 Android versions',
+    'not IE 11',
+    'not dead'
+  ]
+  ```
+
 - **`quiet`**: Suppress logs.
 
 ### `colorVariants` option
 
 If the `colorVariants` value is an array, it must be an array of color names corresponding to variables. All components will have color variants generated for all colors in the array.
 
-The following configuration specifies an array of default colors. All components will have these (and *only these*) color variants.
+The following configuration specifies an array of default colors. All components will have these (and _only these_) color variants.
 
 ```json
-[
-  "red",
-  "green-light"
-]
+["red", "green-light"]
 ```
 
 If the `colorVariants` value is an object, each property value must be an array of color names corresponding to variables. The property names designate which component each color array applies to:
-  - `default`: These colors apply to all components that are not otherwise specified.
-  - `buttonFill`: `*-dark` colors will not be used.
-  - `buttonStroke`: `*-dark` colors will not be used.
-  - `inputTextarea`: `*-dark` colors will not be used.
-  - `selectFill`: `*-dark` colors will not be used.
-  - `selectStroke`: `*-dark` colors will not be used.
-  - `checkbox`: `*-dark` colors will not be used.
-  - `radio`: `*-dark` colors will not be used.
-  - `switch`: `*-dark` colors will not be used.
-  - `toggle`: `*-dark` colors will not be used.
-  - `range`: `*-dark` colors will not be used.
-  - `color`
-  - `background`
-  - `link`: `*-dark` colors will not be used.
-  - `border`
-  - `hoverShadow`: Only `lighten*` and `darken*` colors will be used.
-  - `hoverBackground`
-  - `hoverColor`
-  - `hoverBorder`
+
+- `default`: These colors apply to all components that are not otherwise specified.
+- `buttonFill`: `*-dark` colors will not be used.
+- `buttonStroke`: `*-dark` colors will not be used.
+- `inputTextarea`: `*-dark` colors will not be used.
+- `selectFill`: `*-dark` colors will not be used.
+- `selectStroke`: `*-dark` colors will not be used.
+- `checkbox`: `*-dark` colors will not be used.
+- `radio`: `*-dark` colors will not be used.
+- `switch`: `*-dark` colors will not be used.
+- `toggle`: `*-dark` colors will not be used.
+- `range`: `*-dark` colors will not be used.
+- `color`
+- `background`
+- `link`: `*-dark` colors will not be used.
+- `border`
+- `hoverShadow`: Only `lighten*` and `darken*` colors will be used.
+- `hoverBackground`
+- `hoverColor`
+- `hoverBorder`
 
 The following configuration specifies colors for individual components. In this configuration, every component not specified will have the `default` color variants; specified components will have their specified color variants; and `switch` and `range` components will have no color variants (only the default will be available).
 
@@ -145,7 +157,7 @@ Development is done in the `publisher-staging` branch, but releases are made fro
   - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/publisher-staging/CHANGELOG.md).
   - Increment the version key in `package.json` and `package-lock.json`.
   - Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`.
-  - Merge these changes into the `publisher-production` branch. *Conduct the following steps from `publisher-production`*.
+  - Merge these changes into the `publisher-production` branch. _Conduct the following steps from `publisher-production`_.
 - From `publisher-production`:
   - Create a tag. No message is necessary, since the changelog includes explanations of changes. For example: `git tag -a 0.8.0 -m ""`.
   - Push the tag: `git push --tags`.
