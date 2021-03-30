@@ -1,7 +1,8 @@
 # Changelog
 
-## HEAD
+## Unreleased
 
+- Update browser compatibility targets, drop IE11 support.
 - Add `sticky` position rule.
 
 ## 0.26.0
