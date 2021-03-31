@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Remove grow, and add y offset to `shadow` classes.
 - Update browser compatibility targets, drop IE11 support.
 - [breaking] renamed `scroll-*` classes to `overflow-*`.
 - [add] `sticky` position rule.
