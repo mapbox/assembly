@@ -3,7 +3,8 @@
 ## Unreleased
 
 - Update browser compatibility targets, drop IE11 support.
-- Add `sticky` position rule.
+- [breaking] renamed `scroll-*` classes to `overflow-*`.
+- [add] `sticky` position rule.
 
 ## 0.26.0
 
