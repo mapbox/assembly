@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-- Update browser compatibility targets, drop IE11 support.
+- [breaking] Update browser compatibility targets, drop IE11 support.
+- [breaking] remove `txt-spacing4` class and add `txt-spacing05` class.
 - [breaking] renamed `scroll-*` classes to `overflow-*`.
 - [add] `sticky` position rule.
 
