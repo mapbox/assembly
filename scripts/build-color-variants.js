@@ -428,7 +428,7 @@ function buildColorVariants(variables, config) {
         return result;
       return (result += stripIndent(`
         .shadow-${color} {
-          box-shadow: 0 0 10px 2px var(--${color}) !important;
+          box-shadow: 0 2px 10px 0 var(--${color}) !important;
         }
       `));
     }, '');
@@ -441,14 +441,14 @@ function buildColorVariants(variables, config) {
        * @group
        * @memberof Shadows
        * @example
-       * <div class='mt6 shadow-darken25-bold'>shadow-darken25-bold</div>
+       * <div class='shadow-darken25-bold'>shadow-darken25-bold</div>
        */`);
     css += colors.reduce((result, color) => {
       if (!isSemitransparent(color) || isNotAccessibleExceptBg(color))
         return result;
       return (result += stripIndent(`
         .shadow-${color}-bold {
-          box-shadow: 0 0 30px 6px var(--${color}) !important;
+          box-shadow: 0 6px 30px 0 var(--${color}) !important;
         }
       `));
     }, '');
@@ -476,12 +476,12 @@ function buildColorVariants(variables, config) {
         .shadow-${color}-on-hover:hover,
         .shadow-${color}-on-active.is-active,
         .shadow-${color}-on-active.is-active:hover {
-          box-shadow: 0 0 10px 2px var(--${color}) !important;
+          box-shadow: 0 2px 10px 0 var(--${color}) !important;
         }
         .shadow-${color}-bold-on-hover:hover,
         .shadow-${color}-bold-on-active.is-active,
         .shadow-${color}-bold-on-active.is-active:hover {
-          box-shadow: 0 0 30px 6px var(--${color}) !important;
+          box-shadow: 0 6px 30px 0 var(--${color}) !important;
         }
       `));
     }, '');
