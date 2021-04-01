@@ -162,6 +162,7 @@ const targetClassArray = [
   'txt-xl',
   'txt-l',
   'txt-m',
+  'txt-ms',
   'txt-s',
   'txt-xs'
 ];
