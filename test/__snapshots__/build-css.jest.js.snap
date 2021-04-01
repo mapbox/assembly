@@ -163,6 +163,7 @@ legend{
 @font-face{
   font-family:'Open Sans';
   font-weight:400;
+  font-display:swap;
   src:url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-regular.v1.woff2') format('woff2'),
     url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-regular.v1.woff') format('woff');
 }
@@ -170,6 +171,7 @@ legend{
 @font-face{
   font-family:'Open Sans';
   font-weight:300;
+  font-display:swap;
   src:url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-light.v1.woff2') format('woff2'),
     url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-light.v1.woff') format('woff');
 }
@@ -177,6 +179,7 @@ legend{
 @font-face{
   font-family:'Open Sans';
   font-style:italic;
+  font-display:swap;
   src:url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-italic.v1.woff2') format('woff2'),
     url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-italic.v1.woff') format('woff');
 }
@@ -184,6 +187,7 @@ legend{
 @font-face{
   font-family:'Open Sans';
   font-weight:bold;
+  font-display:swap;
   src:url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-bold.v1.woff2') format('woff2'),
     url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-bold.v1.woff') format('woff');
 }
@@ -192,6 +196,7 @@ legend{
   font-family:'Open Sans';
   font-weight:bold;
   font-style:italic;
+  font-display:swap;
   src:url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-bolditalic.v1.woff2') format('woff2'),
     url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-bolditalic.v1.woff') format('woff');
 }
@@ -12038,6 +12043,7 @@ legend{
 @font-face{
   font-family:'Open Sans';
   font-weight:400;
+  font-display:swap;
   src:url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-regular.v1.woff2') format('woff2'),
     url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-regular.v1.woff') format('woff');
 }
@@ -12045,6 +12051,7 @@ legend{
 @font-face{
   font-family:'Open Sans';
   font-weight:300;
+  font-display:swap;
   src:url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-light.v1.woff2') format('woff2'),
     url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-light.v1.woff') format('woff');
 }
@@ -12052,6 +12059,7 @@ legend{
 @font-face{
   font-family:'Open Sans';
   font-style:italic;
+  font-display:swap;
   src:url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-italic.v1.woff2') format('woff2'),
     url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-italic.v1.woff') format('woff');
 }
@@ -12059,6 +12067,7 @@ legend{
 @font-face{
   font-family:'Open Sans';
   font-weight:bold;
+  font-display:swap;
   src:url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-bold.v1.woff2') format('woff2'),
     url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-bold.v1.woff') format('woff');
 }
@@ -12067,6 +12076,7 @@ legend{
   font-family:'Open Sans';
   font-weight:bold;
   font-style:italic;
+  font-display:swap;
   src:url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-bolditalic.v1.woff2') format('woff2'),
     url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-bolditalic.v1.woff') format('woff');
 }
