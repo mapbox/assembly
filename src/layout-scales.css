@@ -1527,6 +1527,14 @@ scripts/build-layout-scales.js to produce the output you want */
   max-width: 600px !important;
 }
 
+.wmax1200 {
+  max-width: 1200px !important;
+}
+
+.wmax1800 {
+  max-width: 1800px !important;
+}
+
 .wmax-full {
   max-width: 100% !important;
 }
@@ -3207,6 +3215,14 @@ scripts/build-layout-scales.js to produce the output you want */
     max-width: 600px !important;
   }
 
+  .wmax1200-mm {
+    max-width: 1200px !important;
+  }
+
+  .wmax1800-mm {
+    max-width: 1800px !important;
+  }
+
   .wmax-full-mm {
     max-width: 100% !important;
   }
@@ -4839,6 +4855,14 @@ scripts/build-layout-scales.js to produce the output you want */
     max-width: 600px !important;
   }
 
+  .wmax1200-ml {
+    max-width: 1200px !important;
+  }
+
+  .wmax1800-ml {
+    max-width: 1800px !important;
+  }
+
   .wmax-full-ml {
     max-width: 100% !important;
   }
@@ -6469,6 +6493,14 @@ scripts/build-layout-scales.js to produce the output you want */
 
   .wmax600-mxl {
     max-width: 600px !important;
+  }
+
+  .wmax1200-mxl {
+    max-width: 1200px !important;
+  }
+
+  .wmax1800-mxl {
+    max-width: 1800px !important;
   }
 
   .wmax-full-mxl {

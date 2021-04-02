@@ -4,40 +4,6 @@
  * @section Layout
  */
 
-/*
- * All a limiter to a wrapping element around a page layout. The limiter should never be placed inside other elements that have layout classes. Unlike many other classes in Assembly, the limiter class includes built-in media queries, designed to manage line lengths across screen sizes. The limiter's max width is 1200px.
- *
- * @memberof Layout
- * @example
- * <div>
- *  <div class='limiter border border--darken10 h24'>
- *   limiter
- *  </div>
- * </div>
- */
-.limiter {
-  padding-left: 24px;
-  padding-right: 24px;
-  width: 100%;
-}
-
-@media (--m-screen) {
-  .limiter {
-    margin-left: auto;
-    margin-right: auto;
-    width: 91.666666666%;
-    max-width: 1200px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media (--l-screen) {
-  .limiter {
-    width: 83.33333333%;
-  }
-}
-
 /**
  * Assembly uses a 12-column flexible grid with optional gutters.
  *
@@ -73,40 +39,6 @@
 /** @endgroup */
 
 /**
- * Specify a percentage-based width for a `col` in a grid. `col` elements that do _not_ have `col--{size}`
- * modifiers but are siblings of `col`s that do have modifiers, will retain their default behavior by proportionally
- * occupying the remaining space. `col--{size}` classes include `*-mm`, `*-ml`, and `*-mxl` variations
- * to target screen sizes.
- *
- * @group
- * @memberof Grid
- * @example
- * <div class='grid mt12'>
- *   <div class='col border border--darken10'>col</div>
- *   <div class='col border border--darken10'>col</div>
- *   <div class='col col--6 border border--darken10'>col--6</div>
- * </div>
- * <div class='grid'>
- *   <div class='col col--2 border border--darken10'>col--2</div>
- *   <div class='col col--4 border border--darken10'>col--4</div>
- *   <div class='col col--6 border border--darken10'>col--6</div>
- * </div>
- */
-.col--1 { flex: none; width: 08.3333% !important; }
-.col--2 { flex: none; width: 16.6666% !important; }
-.col--3 { flex: none; width: 25% !important; }
-.col--4 { flex: none; width: 33.3333% !important; }
-.col--5 { flex: none; width: 41.6666% !important; }
-.col--6 { flex: none; width: 50% !important; }
-.col--7 { flex: none; width: 58.3333% !important; }
-.col--8 { flex: none; width: 66.6666% !important; }
-.col--9 { flex: none; width: 75% !important; }
-.col--10 { flex: none; width: 83.3333% !important; }
-.col--11 { flex: none; width: 91.6666% !important; }
-.col--12 { flex: none; width: 100% !important; }
-/** @endgroup */
-
-/**
  * Apply to a `col` element to override a`col--{size}` rule and take on default `col`,occupying equal space with other `col` siblings.
  * This class is designed to be used with `*-mm`, `*-ml`, and `*-mxl` variations
  * to target screen sizes.
@@ -122,56 +54,6 @@
   width: auto !important;
   flex: auto;
 }
-
-/**
- * Apply a left offset to a grid column. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
- *
- *
- * @example
- * <div class='grid'>
- *   <div class='col col--6 col--offl6 border border--darken10'>col--6</div>
- * </div>
- * @memberof Grid
- * @group
- */
-.col--offl1 { margin-left: 08.3333% !important; }
-.col--offl2 { margin-left: 16.6666% !important; }
-.col--offl3 { margin-left: 25% !important; }
-.col--offl4 { margin-left: 33.3333% !important; }
-.col--offl5 { margin-left: 41.6666% !important; }
-.col--offl6 { margin-left: 50% !important; }
-.col--offl7 { margin-left: 58.3333% !important; }
-.col--offl8 { margin-left: 66.6666% !important; }
-.col--offl9 { margin-left: 75% !important; }
-.col--offl10 { margin-left: 83.3333% !important; }
-.col--offl11 { margin-left: 91.6666% !important; }
-.col--offl12 { margin-left: 100% !important; }
-/** @endgroup */
-
-/**
- * Apply a right offset to a grid column. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
- *
- * @example
- * <div class='grid'>
- *   <div class='col col--3 border border--darken10'>col--3</div>
- *   <div class='col col--6 col--offl3 border border--darken10'>col6 with offset</div>
- * </div>
- * @memberof Grid
- * @group
- */
-.col--offr1 { margin-right: 08.3333% !important; }
-.col--offr2 { margin-right: 16.6666% !important; }
-.col--offr3 { margin-right: 25% !important; }
-.col--offr4 { margin-right: 33.3333% !important; }
-.col--offr5 { margin-right: 41.6666% !important; }
-.col--offr6 { margin-right: 50% !important; }
-.col--offr7 { margin-right: 58.3333% !important; }
-.col--offr8 { margin-right: 66.6666% !important; }
-.col--offr9 { margin-right: 75% !important; }
-.col--offr10 { margin-right: 83.3333% !important; }
-.col--offr11 { margin-right: 91.6666% !important; }
-.col--offr12 { margin-right: 100% !important; }
-/** @endgroup */
 
 /**
  * Control the display style of elements.
