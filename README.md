@@ -12,6 +12,10 @@ For usage guidelines and documentation, check out https://labs.mapbox.com/assemb
 
 Assembly targets modern versions of Chrome, Firefox, Safari, and Edge on desktop; Safari on iOS; and Chrome on Android.
 
+## Usage
+
+See https://labs.mapbox.com/assembly/ for usage guidelines.
+
 ## Custom Builds
 
 Assembly exposes a JS module for creating custom builds. Why might you want to create a custom build?
