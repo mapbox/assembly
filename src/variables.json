@@ -75,18 +75,33 @@
 
   "focus-shadow": "0 0 0 3px rgba(137, 199, 216, 0.65)",
 
+  "font-size-h1": "36px",
+  "font-size-h2": "30px",
+  "font-size-h3": "24px",
+  "font-size-h4": "20px",
+  "font-size-h5": "16px",
+
+  "line-height-h1": "45px",
+  "line-height-h2": "36px",
+  "line-height-h3": "30px",
+  "line-height-h4": "25px",
+  "line-height-h5": "20px",
+
   "font-size-xl": "30px",
-  "font-size-l": "18px",
-  "font-size-m": "15px",
+  "font-size-l": "20px",
+  "font-size-m": "16px",
+  "font-size-ms": "14px",
   "font-size-s": "12px",
   "font-size-xs": "10px",
 
   "line-height-xl": "45px",
   "line-height-l": "30px",
   "line-height-m": "24px",
+  "line-height-ms": "21px",
   "line-height-s": "18px",
   "line-height-xs": "15px",
 
   "font-stack-base": "'Open Sans', sans-serif",
-  "font-stack-mono": "'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace"
+  "font-stack-mono":
+    "'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace"
 }
