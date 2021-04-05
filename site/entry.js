@@ -61,7 +61,7 @@ class Entry extends React.Component {
 
     const selectorElClasses = `mr3 pr3 px3 color-blue-dark round bg-blue-faint mb3 inline-block ${
       selectors.length > 1 ? 'txt-s' : ''
-    } ${selectors.length > 20 ? 'txt-xs' : ''}`;
+    }`;
 
     const getSelectorEl = selector => (
       <span
