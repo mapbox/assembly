@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+- Rework typographic scale. Numbers are in the format _(font-size/line-height)_:
+
+  | Selector | Old value | New value |
+  | -------- | :-------: | --------: |
+  | .txt-h1  | 45px/54px | 36px/45px |
+  | .txt-h2  | 35px/42px | 30px/36px |
+  | .txt-h3  | 30px/36px | 24px/30px |
+  | .txt-h4  | 18px/24px | 20px/25px |
+  | .txt-h5  | 15px/18px | 16px/20px |
+  | .txt-xl  | 30px/45px | 30px/45px |
+  | .txt-l   | 18px/30px | 20px/30px |
+  | .txt-m   | 15px/24px | 16px/24px |
+  | .txt-ms  |    N/A    | 14px/21px |
+  | .txt-s   | 12px/18px | 12px/18px |
+  | .txt-xs  | 10px/15px | 10px/15px |
+
 - Add `font-display:swap` to all @font-face declarations.
 - Remove grow, and add y offset to `shadow` classes.
 - [breaking] Update browser compatibility targets, drop IE11 support.
