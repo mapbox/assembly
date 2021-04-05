@@ -187,28 +187,28 @@ exports[`buildMediaVariants defaults 1`] = `
 .unround-br-mm { border-bottom-right-radius: 0 !important; }
 .unround-bl-mm { border-bottom-left-radius: 0 !important; }
 .txt-h1-mm {
-  font-size: 45px;
-  line-height: 54px;
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
 }
 
 .txt-h2-mm {
-  font-size: 35px;
-  line-height: 42px;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
 }
 
 .txt-h3-mm {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
 }
 
 .txt-h4-mm {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
 }
 
 .txt-h5-mm {
-  font-size: 15px;
-  line-height: 18px;
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
 }
 .txt-xl-mm {
   font-size: var(--font-size-xl);
@@ -223,6 +223,11 @@ exports[`buildMediaVariants defaults 1`] = `
 .txt-m-mm {
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
+}
+
+.txt-ms-mm {
+  font-size: var(--font-size-ms);
+  line-height: var(--line-height-ms);
 }
 
 .txt-s-mm {
@@ -422,28 +427,28 @@ exports[`buildMediaVariants defaults 1`] = `
 .unround-br-ml { border-bottom-right-radius: 0 !important; }
 .unround-bl-ml { border-bottom-left-radius: 0 !important; }
 .txt-h1-ml {
-  font-size: 45px;
-  line-height: 54px;
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
 }
 
 .txt-h2-ml {
-  font-size: 35px;
-  line-height: 42px;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
 }
 
 .txt-h3-ml {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
 }
 
 .txt-h4-ml {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
 }
 
 .txt-h5-ml {
-  font-size: 15px;
-  line-height: 18px;
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
 }
 .txt-xl-ml {
   font-size: var(--font-size-xl);
@@ -458,6 +463,11 @@ exports[`buildMediaVariants defaults 1`] = `
 .txt-m-ml {
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
+}
+
+.txt-ms-ml {
+  font-size: var(--font-size-ms);
+  line-height: var(--line-height-ms);
 }
 
 .txt-s-ml {
@@ -657,28 +667,28 @@ exports[`buildMediaVariants defaults 1`] = `
 .unround-br-mxl { border-bottom-right-radius: 0 !important; }
 .unround-bl-mxl { border-bottom-left-radius: 0 !important; }
 .txt-h1-mxl {
-  font-size: 45px;
-  line-height: 54px;
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
 }
 
 .txt-h2-mxl {
-  font-size: 35px;
-  line-height: 42px;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
 }
 
 .txt-h3-mxl {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
 }
 
 .txt-h4-mxl {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
 }
 
 .txt-h5-mxl {
-  font-size: 15px;
-  line-height: 18px;
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
 }
 .txt-xl-mxl {
   font-size: var(--font-size-xl);
@@ -693,6 +703,11 @@ exports[`buildMediaVariants defaults 1`] = `
 .txt-m-mxl {
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
+}
+
+.txt-ms-mxl {
+  font-size: var(--font-size-ms);
+  line-height: var(--line-height-ms);
 }
 
 .txt-s-mxl {

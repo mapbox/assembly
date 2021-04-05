@@ -502,7 +502,7 @@ legend{
   -webkit-appearance:none;
           appearance:none;
   background-color:transparent;
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
   color:currentColor;
   padding:6px 30px 6px 12px;
@@ -915,7 +915,7 @@ body,
 input,
 textarea{
   color:rgba(0, 0, 0, 0.75);
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
   font-family:'Open Sans', sans-serif;
   font-weight:normal;
@@ -987,28 +987,28 @@ textarea{
   font-weight:bold !important;
 }
 .txt-h1{
-  font-size:45px;
-  line-height:54px;
+  font-size:36px;
+  line-height:45px;
 }
 
 .txt-h2{
-  font-size:35px;
-  line-height:42px;
-}
-
-.txt-h3{
   font-size:30px;
   line-height:36px;
 }
 
+.txt-h3{
+  font-size:24px;
+  line-height:30px;
+}
+
 .txt-h4{
-  font-size:18px;
-  line-height:24px;
+  font-size:20px;
+  line-height:25px;
 }
 
 .txt-h5{
-  font-size:15px;
-  line-height:18px;
+  font-size:16px;
+  line-height:20px;
 }
 .txt-xl{
   font-size:30px;
@@ -1016,13 +1016,18 @@ textarea{
 }
 
 .txt-l{
-  font-size:18px;
+  font-size:20px;
   line-height:30px;
 }
 
 .txt-m{
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
+}
+
+.txt-ms{
+  font-size:14px;
+  line-height:21px;
 }
 
 .txt-s{
@@ -1154,21 +1159,13 @@ textarea{
 }
 .prose h1:not(.unprose){
   font-weight:bold;
-  font-size:45px;
-  line-height:54px;
+  font-size:36px;
+  line-height:45px;
   margin-bottom:12px;
   padding-top:36px;
 }
 
 .prose h2:not(.unprose){
-  font-weight:bold;
-  font-size:35px;
-  line-height:42px;
-  margin-bottom:12px;
-  padding-top:24px;
-}
-
-.prose h3:not(.unprose){
   font-weight:bold;
   font-size:30px;
   line-height:36px;
@@ -1176,10 +1173,18 @@ textarea{
   padding-top:24px;
 }
 
+.prose h3:not(.unprose){
+  font-weight:bold;
+  font-size:24px;
+  line-height:30px;
+  margin-bottom:12px;
+  padding-top:24px;
+}
+
 .prose h4:not(.unprose){
   font-weight:bold;
-  font-size:18px;
-  line-height:24px;
+  font-size:20px;
+  line-height:25px;
   margin-bottom:12px;
   padding-top:18px;
 }
@@ -1187,8 +1192,8 @@ textarea{
 .prose h5:not(.unprose),
 .prose h6:not(.unprose){
   font-weight:bold;
-  font-size:15px;
-  line-height:18px;
+  font-size:16px;
+  line-height:20px;
   margin-bottom:12px;
   padding-top:12px;
 }
@@ -11360,28 +11365,28 @@ input:checked + .switch--dot-transparent::after{
 .unround-br-mm{ border-bottom-right-radius:0 !important; }
 .unround-bl-mm{ border-bottom-left-radius:0 !important; }
 .txt-h1-mm{
-  font-size:45px;
-  line-height:54px;
+  font-size:36px;
+  line-height:45px;
 }
 
 .txt-h2-mm{
-  font-size:35px;
-  line-height:42px;
-}
-
-.txt-h3-mm{
   font-size:30px;
   line-height:36px;
 }
 
+.txt-h3-mm{
+  font-size:24px;
+  line-height:30px;
+}
+
 .txt-h4-mm{
-  font-size:18px;
-  line-height:24px;
+  font-size:20px;
+  line-height:25px;
 }
 
 .txt-h5-mm{
-  font-size:15px;
-  line-height:18px;
+  font-size:16px;
+  line-height:20px;
 }
 .txt-xl-mm{
   font-size:30px;
@@ -11389,13 +11394,18 @@ input:checked + .switch--dot-transparent::after{
 }
 
 .txt-l-mm{
-  font-size:18px;
+  font-size:20px;
   line-height:30px;
 }
 
 .txt-m-mm{
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
+}
+
+.txt-ms-mm{
+  font-size:14px;
+  line-height:21px;
 }
 
 .txt-s-mm{
@@ -11595,28 +11605,28 @@ input:checked + .switch--dot-transparent::after{
 .unround-br-ml{ border-bottom-right-radius:0 !important; }
 .unround-bl-ml{ border-bottom-left-radius:0 !important; }
 .txt-h1-ml{
-  font-size:45px;
-  line-height:54px;
+  font-size:36px;
+  line-height:45px;
 }
 
 .txt-h2-ml{
-  font-size:35px;
-  line-height:42px;
-}
-
-.txt-h3-ml{
   font-size:30px;
   line-height:36px;
 }
 
+.txt-h3-ml{
+  font-size:24px;
+  line-height:30px;
+}
+
 .txt-h4-ml{
-  font-size:18px;
-  line-height:24px;
+  font-size:20px;
+  line-height:25px;
 }
 
 .txt-h5-ml{
-  font-size:15px;
-  line-height:18px;
+  font-size:16px;
+  line-height:20px;
 }
 .txt-xl-ml{
   font-size:30px;
@@ -11624,13 +11634,18 @@ input:checked + .switch--dot-transparent::after{
 }
 
 .txt-l-ml{
-  font-size:18px;
+  font-size:20px;
   line-height:30px;
 }
 
 .txt-m-ml{
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
+}
+
+.txt-ms-ml{
+  font-size:14px;
+  line-height:21px;
 }
 
 .txt-s-ml{
@@ -11830,28 +11845,28 @@ input:checked + .switch--dot-transparent::after{
 .unround-br-mxl{ border-bottom-right-radius:0 !important; }
 .unround-bl-mxl{ border-bottom-left-radius:0 !important; }
 .txt-h1-mxl{
-  font-size:45px;
-  line-height:54px;
+  font-size:36px;
+  line-height:45px;
 }
 
 .txt-h2-mxl{
-  font-size:35px;
-  line-height:42px;
-}
-
-.txt-h3-mxl{
   font-size:30px;
   line-height:36px;
 }
 
+.txt-h3-mxl{
+  font-size:24px;
+  line-height:30px;
+}
+
 .txt-h4-mxl{
-  font-size:18px;
-  line-height:24px;
+  font-size:20px;
+  line-height:25px;
 }
 
 .txt-h5-mxl{
-  font-size:15px;
-  line-height:18px;
+  font-size:16px;
+  line-height:20px;
 }
 .txt-xl-mxl{
   font-size:30px;
@@ -11859,13 +11874,18 @@ input:checked + .switch--dot-transparent::after{
 }
 
 .txt-l-mxl{
-  font-size:18px;
+  font-size:20px;
   line-height:30px;
 }
 
 .txt-m-mxl{
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
+}
+
+.txt-ms-mxl{
+  font-size:14px;
+  line-height:21px;
 }
 
 .txt-s-mxl{
@@ -12382,7 +12402,7 @@ legend{
   -webkit-appearance:none;
           appearance:none;
   background-color:transparent;
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
   color:currentColor;
   padding:6px 30px 6px 12px;
@@ -12795,7 +12815,7 @@ body,
 input,
 textarea{
   color:rgba(0, 0, 0, 0.75);
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
   font-family:'Open Sans', sans-serif;
   font-weight:normal;
@@ -12867,28 +12887,28 @@ textarea{
   font-weight:bold !important;
 }
 .txt-h1{
-  font-size:45px;
-  line-height:54px;
+  font-size:36px;
+  line-height:45px;
 }
 
 .txt-h2{
-  font-size:35px;
-  line-height:42px;
-}
-
-.txt-h3{
   font-size:30px;
   line-height:36px;
 }
 
+.txt-h3{
+  font-size:24px;
+  line-height:30px;
+}
+
 .txt-h4{
-  font-size:18px;
-  line-height:24px;
+  font-size:20px;
+  line-height:25px;
 }
 
 .txt-h5{
-  font-size:15px;
-  line-height:18px;
+  font-size:16px;
+  line-height:20px;
 }
 .txt-xl{
   font-size:30px;
@@ -12896,13 +12916,18 @@ textarea{
 }
 
 .txt-l{
-  font-size:18px;
+  font-size:20px;
   line-height:30px;
 }
 
 .txt-m{
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
+}
+
+.txt-ms{
+  font-size:14px;
+  line-height:21px;
 }
 
 .txt-s{
@@ -13034,21 +13059,13 @@ textarea{
 }
 .prose h1:not(.unprose){
   font-weight:bold;
-  font-size:45px;
-  line-height:54px;
+  font-size:36px;
+  line-height:45px;
   margin-bottom:12px;
   padding-top:36px;
 }
 
 .prose h2:not(.unprose){
-  font-weight:bold;
-  font-size:35px;
-  line-height:42px;
-  margin-bottom:12px;
-  padding-top:24px;
-}
-
-.prose h3:not(.unprose){
   font-weight:bold;
   font-size:30px;
   line-height:36px;
@@ -13056,10 +13073,18 @@ textarea{
   padding-top:24px;
 }
 
+.prose h3:not(.unprose){
+  font-weight:bold;
+  font-size:24px;
+  line-height:30px;
+  margin-bottom:12px;
+  padding-top:24px;
+}
+
 .prose h4:not(.unprose){
   font-weight:bold;
-  font-size:18px;
-  line-height:24px;
+  font-size:20px;
+  line-height:25px;
   margin-bottom:12px;
   padding-top:18px;
 }
@@ -13067,8 +13092,8 @@ textarea{
 .prose h5:not(.unprose),
 .prose h6:not(.unprose){
   font-weight:bold;
-  font-size:15px;
-  line-height:18px;
+  font-size:16px;
+  line-height:20px;
   margin-bottom:12px;
   padding-top:12px;
 }
@@ -23258,28 +23283,28 @@ input:checked + .switch--dot-transparent::after{
 .unround-br-mm{ border-bottom-right-radius:0 !important; }
 .unround-bl-mm{ border-bottom-left-radius:0 !important; }
 .txt-h1-mm{
-  font-size:45px;
-  line-height:54px;
+  font-size:36px;
+  line-height:45px;
 }
 
 .txt-h2-mm{
-  font-size:35px;
-  line-height:42px;
-}
-
-.txt-h3-mm{
   font-size:30px;
   line-height:36px;
 }
 
+.txt-h3-mm{
+  font-size:24px;
+  line-height:30px;
+}
+
 .txt-h4-mm{
-  font-size:18px;
-  line-height:24px;
+  font-size:20px;
+  line-height:25px;
 }
 
 .txt-h5-mm{
-  font-size:15px;
-  line-height:18px;
+  font-size:16px;
+  line-height:20px;
 }
 .txt-xl-mm{
   font-size:30px;
@@ -23287,13 +23312,18 @@ input:checked + .switch--dot-transparent::after{
 }
 
 .txt-l-mm{
-  font-size:18px;
+  font-size:20px;
   line-height:30px;
 }
 
 .txt-m-mm{
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
+}
+
+.txt-ms-mm{
+  font-size:14px;
+  line-height:21px;
 }
 
 .txt-s-mm{
@@ -23493,28 +23523,28 @@ input:checked + .switch--dot-transparent::after{
 .unround-br-ml{ border-bottom-right-radius:0 !important; }
 .unround-bl-ml{ border-bottom-left-radius:0 !important; }
 .txt-h1-ml{
-  font-size:45px;
-  line-height:54px;
+  font-size:36px;
+  line-height:45px;
 }
 
 .txt-h2-ml{
-  font-size:35px;
-  line-height:42px;
-}
-
-.txt-h3-ml{
   font-size:30px;
   line-height:36px;
 }
 
+.txt-h3-ml{
+  font-size:24px;
+  line-height:30px;
+}
+
 .txt-h4-ml{
-  font-size:18px;
-  line-height:24px;
+  font-size:20px;
+  line-height:25px;
 }
 
 .txt-h5-ml{
-  font-size:15px;
-  line-height:18px;
+  font-size:16px;
+  line-height:20px;
 }
 .txt-xl-ml{
   font-size:30px;
@@ -23522,13 +23552,18 @@ input:checked + .switch--dot-transparent::after{
 }
 
 .txt-l-ml{
-  font-size:18px;
+  font-size:20px;
   line-height:30px;
 }
 
 .txt-m-ml{
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
+}
+
+.txt-ms-ml{
+  font-size:14px;
+  line-height:21px;
 }
 
 .txt-s-ml{
@@ -23728,28 +23763,28 @@ input:checked + .switch--dot-transparent::after{
 .unround-br-mxl{ border-bottom-right-radius:0 !important; }
 .unround-bl-mxl{ border-bottom-left-radius:0 !important; }
 .txt-h1-mxl{
-  font-size:45px;
-  line-height:54px;
+  font-size:36px;
+  line-height:45px;
 }
 
 .txt-h2-mxl{
-  font-size:35px;
-  line-height:42px;
-}
-
-.txt-h3-mxl{
   font-size:30px;
   line-height:36px;
 }
 
+.txt-h3-mxl{
+  font-size:24px;
+  line-height:30px;
+}
+
 .txt-h4-mxl{
-  font-size:18px;
-  line-height:24px;
+  font-size:20px;
+  line-height:25px;
 }
 
 .txt-h5-mxl{
-  font-size:15px;
-  line-height:18px;
+  font-size:16px;
+  line-height:20px;
 }
 .txt-xl-mxl{
   font-size:30px;
@@ -23757,13 +23792,18 @@ input:checked + .switch--dot-transparent::after{
 }
 
 .txt-l-mxl{
-  font-size:18px;
+  font-size:20px;
   line-height:30px;
 }
 
 .txt-m-mxl{
-  font-size:15px;
+  font-size:16px;
   line-height:24px;
+}
+
+.txt-ms-mxl{
+  font-size:14px;
+  line-height:21px;
 }
 
 .txt-s-mxl{
