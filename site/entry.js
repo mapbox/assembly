@@ -59,6 +59,10 @@ class Entry extends React.Component {
       }
     }
 
+    const selectorElClasses = `mr3 pr3 px3 color-blue-dark round bg-blue-faint mb3 inline-block ${
+      selectors.length > 1 ? 'txt-s' : ''
+    }`;
+
     const getSelectorEl = selector => (
       <span
         key={selector}
@@ -66,22 +70,13 @@ class Entry extends React.Component {
           .trim()
           .replace(/\s+/g, '-')
           .replace(/\./g, '')}`}
-        className="mr3 pr3 px3 txt-mono color-blue-dark round bg-blue-faint mb3 inline-block"
+        className={selectorElClasses}
       >
         {selector.trim()}
       </span>
     );
 
     const selectorEls = selectors !== undefined && selectors.map(getSelectorEl);
-    const collapsedSelectorEls =
-      selectors !== undefined && selectors.slice(0, 15).map(getSelectorEl);
-
-    const expandButton =
-      selectors !== undefined && selectors.length > 15 ? (
-        <button data-button-expand={true} className="ml3 btn btn--s btn--blue round">
-          See all
-        </button>
-      ) : null;
 
     const sourceUrl = `https://github.com/mapbox/assembly/blob/${
       pkg.version
@@ -93,9 +88,9 @@ class Entry extends React.Component {
       <div className="border-t border-t--2 border--gray-faint">
         <div className="grid-mxl grid--gut18-mxl pt36 pb60">
           <div className="col col--4-mxl pr18-ml mb6">
-            <div className="none">{selectorEls}</div>
-            <div>{collapsedSelectorEls}</div>
-            {expandButton}
+            <div className="txt-mono hmax240 overflow-auto scroll-styled">
+              {selectorEls}
+            </div>
             <div className="mt12">
               <a
                 href={sourceUrl}

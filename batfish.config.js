@@ -27,7 +27,7 @@ module.exports = () => {
     },
     fileLoaderExtensions: extensions => extensions.concat(['svg']),
     pagesDirectory: path.join(__dirname, './site/pages'),
-    webpackStaticIgnore: [/expander\.js$/, /copy\.js$/],
+    webpackStaticIgnore: [/copy\.js$/],
     vendorModules: ['highlight.js'],
     applicationWrapperPath: path.join(
       __dirname,

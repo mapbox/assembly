@@ -17,7 +17,6 @@ import focusImg from '../img/focus.svg';
 import defaultMediaQueries from '../../src/media-queries.json';
 
 import '../js/copy.js';
-import '../js/expander.js';
 
 Lowlight.registerLanguage('html', xmlLanguage);
 
