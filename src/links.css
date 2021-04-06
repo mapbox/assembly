@@ -18,7 +18,7 @@
  */
 .link {
   cursor: pointer;
-  color: var(--default-primary-interactive-color);
+  color: var(--default-button-color);
   transition: color var(--transition);
 }
 
@@ -33,7 +33,7 @@
  */
 .link:hover,
 .link.is-active {
-  color: var(--default-primary-interactive-color-dark);
+  color: var(--default-button-color-dark);
 }
 
 /**

@@ -28,7 +28,7 @@
 .btn {
   display: inline-block;
   font-weight: bold;
-  background-color: var(--default-primary-interactive-color);
+  background-color: var(--default-button-color);
   font-size: var(--font-size-s);
   color: var(--white);
   border-radius: 18px; /* fully round by default */
@@ -56,7 +56,7 @@
 .btn--stroke {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px currentColor;
-  color: var(--default-primary-interactive-color);
+  color: var(--default-button-color);
 }
 
 /**
@@ -97,13 +97,13 @@
  */
 .btn:hover,
 .btn.is-active {
-  background-color: var(--default-primary-interactive-color-dark);
+  background-color: var(--default-button-color-dark);
 }
 
 .btn--stroke:hover,
 .btn--stroke.is-active {
   background-color: transparent;
-  color: var(--default-primary-interactive-color-dark);
+  color: var(--default-button-color-dark);
 }
 
 /**
@@ -116,7 +116,7 @@
 .btn:disabled {
   pointer-events: none;
   color: var(--inactive-text-color);
-  background-color: var(--disabled-primary-interactive-color);
+  background-color: var(--disabled-interactive-color-dark);
   box-shadow: none;
 }
 

@@ -656,7 +656,7 @@ textarea {
 }
 
 .prose a:not(.unprose) {
-  color: var(--default-primary-interactive-color);
+  color: var(--default-button-color);
   text-decoration: underline;
 }
 
@@ -665,7 +665,7 @@ textarea {
 }
 
 .prose a:not(.unprose):hover {
-  color: var(--default-primary-interactive-color-dark);
+  color: var(--default-button-color-dark);
 }
 
 .prose--dark a:not(.unprose):hover {
