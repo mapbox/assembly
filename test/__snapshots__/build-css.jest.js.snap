@@ -880,7 +880,8 @@ input:checked:disabled + .switch{
   background-color:rgba(127, 127, 127, 0.25);
 }
 
-input:disabled + .switch::after{
+input:disabled + .switch::after,
+input:checked:disabled + .switch::after{
   background-color:rgba(0, 0, 0, 0.25);
 }
 input:checked + .checkbox > .icon,
@@ -12789,7 +12790,8 @@ input:checked:disabled + .switch{
   background-color:rgba(127, 127, 127, 0.25);
 }
 
-input:disabled + .switch::after{
+input:disabled + .switch::after,
+input:checked:disabled + .switch::after{
   background-color:rgba(0, 0, 0, 0.25);
 }
 input:checked + .checkbox > .icon,

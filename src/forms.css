@@ -871,7 +871,8 @@ input:checked:disabled + .switch {
   background-color: var(--disabled-interactive-color-dark);
 }
 
-input:disabled + .switch::after {
+input:disabled + .switch::after,
+input:checked:disabled + .switch::after {
   background-color: var(--darken25);
 }
 
