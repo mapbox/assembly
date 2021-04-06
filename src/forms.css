@@ -336,7 +336,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 4px;
   padding: 0;
   border: 0;
-  border-radius: 2px;
+  border-radius: 1px;
   background: currentColor;
   vertical-align: middle;
   cursor: pointer;
@@ -370,14 +370,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   background: currentColor;
   border: 0;
   box-shadow: none;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 .range > input::-ms-fill-upper {
   background: currentColor;
   border: 0;
   box-shadow: none;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 /* range thumb */
@@ -390,7 +390,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 20px;
   margin-top: -8px;
   border-radius: 50%;
-  border: 2px solid currentColor;
+  border: 1px solid currentColor;
   background: var(--white);
   cursor: pointer;
 }
@@ -401,7 +401,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid currentColor;
+  border: 1px solid currentColor;
   background: var(--white);
   cursor: pointer;
 }
@@ -413,7 +413,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 20px;
   margin-top: 0; /* Fixes Edge's vertical alignment */
   border-radius: 50%;
-  border: 2px solid currentColor;
+  border: 1px solid currentColor;
   background: var(--white);
   cursor: pointer;
 }
@@ -515,7 +515,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   height: 18px;
   border-radius: var(--border-radius);
   position: relative;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: var(--transparent);
   transition: color var(--transition),
@@ -665,7 +665,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   width: 30px;
   height: 18px;
   border-radius: 9999px;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: currentColor;
   color: var(--default-secondary-interactive-color);
