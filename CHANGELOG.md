@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- Refactor internal color variables so there is one set of variables for default button and link colors, and another set of variables for form controls.
+- Adjust stroke widths for toggles, checkboxes, and radios from 2px to 1px.
+- Change default form control colors from blue to gray for all form types.
+- Increase inset around `switch--l` from 2px to 3px.
+- Reduce height of `toggle` form element from 36px to 30px, and height of `toggle--s` from 24px to 18px.
+- Remove bold text rule from toggle elements.
+- Adjust the styling of disabled form controls to better differentiate active disabled and inactive disabled states.
 - Rework typographic scale. Numbers are in the format _(font-size/line-height)_:
 
   | Selector | Old value | New value |
