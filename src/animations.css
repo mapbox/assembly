@@ -33,10 +33,11 @@
  * @group
  * @memberof Animations
  * @example
+ * <div class="bg-blue inline-block mr18 w60 h60 round animation-spin animation--infinite animation--speed-025"></div>
+ * <div class="bg-blue inline-block mr18 w60 h60 round animation-spin animation--infinite animation--speed-05"></div>
  * <div class="bg-blue inline-block mr18 w60 h60 round animation-spin animation--infinite animation--speed-1"></div>
  * <div class="bg-blue inline-block mr18 w60 h60 round animation-spin animation--infinite animation--speed-2"></div>
  * <div class="bg-blue inline-block mr18 w60 h60 round animation-spin animation--infinite animation--speed-4"></div>
- * <div class="bg-blue inline-block mr18 w60 h60 round animation-spin animation--infinite animation--speed-8"></div>
  * <div class="bg-blue inline-block mr18 w60 h60 round animation-spin animation--infinite animation--delay"></div>
  */
 .animation--speed-025 { animation-duration: 250ms; }
