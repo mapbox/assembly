@@ -82,14 +82,16 @@
 .border--dash { border-style: dashed !important; }
 
 /**
- * Adjust the curve of an element's corners.
+ * Adjust the curve of an element's corners. All border classes include `*-mm`,
+ * `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @memberof Theming
  * @section Border radius
  */
 
 /**
- * Round the corners of elements. Target sides with `*-t`, `*-r`, `*-b`, `*-l`. Target corners with `*-tl`, `*-tr`, `*-bl`, `*-br`. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ * Round the corners of elements. Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
+ * Target corners with `*-tl`, `*-tr`, `*-bl`, `*-br`.
  *
  *
  * @group
