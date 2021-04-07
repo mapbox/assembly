@@ -8140,8 +8140,8 @@ textarea{
 .scroll-styled--dark::-webkit-scrollbar-thumb:hover{
   background:rgba(255, 255, 255, 0.4);
 }
-.loading::after,
-.loading--dark::after{
+.loading,
+.loading--dark{
   content:'';
   display:block;
   height:36px;
@@ -8154,16 +8154,12 @@ textarea{
 
 .loading--dark{
   color:#fff;
+  border-color:rgba(255, 255, 255, 0.25);
 }
 
-.loading--s::after{
+.loading--s{
   height:18px;
   width:18px;
-}
-
-.loading--dark::after{
-  border-color:rgba(255, 255, 255, 0.25);
-  border-top-color:currentColor;
 }
 
 @keyframes assembly-loading{
@@ -20047,8 +20043,8 @@ textarea{
 .scroll-styled--dark::-webkit-scrollbar-thumb:hover{
   background:rgba(255, 255, 255, 0.4);
 }
-.loading::after,
-.loading--dark::after{
+.loading,
+.loading--dark{
   content:'';
   display:block;
   height:36px;
@@ -20061,16 +20057,12 @@ textarea{
 
 .loading--dark{
   color:#fff;
+  border-color:rgba(255, 255, 255, 0.25);
 }
 
-.loading--s::after{
+.loading--s{
   height:18px;
   width:18px;
-}
-
-.loading--dark::after{
-  border-color:rgba(255, 255, 255, 0.25);
-  border-top-color:currentColor;
 }
 
 @keyframes assembly-loading{

@@ -64,8 +64,8 @@
  *   <div class="loading color-lighten50"></div>
  * </div>
  */
-.loading::after,
-.loading--dark::after {
+.loading,
+.loading--dark {
   content: '';
   display: block;
   height: 36px;
@@ -78,16 +78,12 @@
 
 .loading--dark {
   color: var(--white);
+  border-color: var(--lighten25);
 }
 
-.loading--s::after {
+.loading--s {
   height: 18px;
   width: 18px;
-}
-
-.loading--dark::after {
-  border-color: var(--lighten25);
-  border-top-color: currentColor;
 }
 
 /** @endgroup */
