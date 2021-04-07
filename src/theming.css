@@ -194,12 +194,17 @@
  * <div class='cursor-crosshair'>cursor-crosshair</div>
  * <div class='cursor-move'>cursor-move</div>
  * <div class='cursor-notallowed'>cursor-notallowed</div>
+ * <div class='cursor-grab'>cursor-grab</div>
+ * <div class='cursor-grabbing'>cursor-grabbing</div>
  */
 .cursor-default { cursor: default !important; }
 .cursor-pointer { cursor: pointer !important; }
 .cursor-crosshair { cursor: crosshair !important; }
 .cursor-move { cursor: move !important; }
 .cursor-notallowed { cursor: not-allowed !important; }
+.cursor-grab { cursor: grab !important; }
+.cursor-grabbing { cursor: grabbing !important; }
+
 /** @endgroup */
 
 /**
