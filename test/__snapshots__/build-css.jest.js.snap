@@ -8066,10 +8066,11 @@ textarea{
 .animation-fade-out{ animation:fadein 1.5s ease-out reverse forwards; }
 .animation-fade-in-out{ animation:fadeinout 1.5s ease-in-out forwards; }
 .animation-shake{ animation:shake 1.5s ease-in-out; }
+.animation--speed-025{ animation-duration:250ms; }
+.animation--speed-05{ animation-duration:500ms; }
 .animation--speed-1{ animation-duration:1s; }
 .animation--speed-2{ animation-duration:2s; }
 .animation--speed-4{ animation-duration:4s; }
-.animation--speed-8{ animation-duration:8s; }
 .animation--delay{ animation-delay:1s; }
 .animation--infinite{ animation-iteration-count:infinite; }
 
@@ -19968,10 +19969,11 @@ textarea{
 .animation-fade-out{ animation:fadein 1.5s ease-out reverse forwards; }
 .animation-fade-in-out{ animation:fadeinout 1.5s ease-in-out forwards; }
 .animation-shake{ animation:shake 1.5s ease-in-out; }
+.animation--speed-025{ animation-duration:250ms; }
+.animation--speed-05{ animation-duration:500ms; }
 .animation--speed-1{ animation-duration:1s; }
 .animation--speed-2{ animation-duration:2s; }
 .animation--speed-4{ animation-duration:4s; }
-.animation--speed-8{ animation-duration:8s; }
 .animation--delay{ animation-delay:1s; }
 .animation--infinite{ animation-iteration-count:infinite; }
 
