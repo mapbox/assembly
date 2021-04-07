@@ -64,8 +64,8 @@
  *   <div class="loading color-lighten50"></div>
  * </div>
  */
- .loading::after,
- .loading--dark::after {
+.loading::after,
+.loading--dark::after {
   content: '';
   display: block;
   height: 36px;
@@ -93,7 +93,9 @@
 /** @endgroup */
 
 @keyframes assembly-loading {
-  to {transform: rotate(360deg);}
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /**

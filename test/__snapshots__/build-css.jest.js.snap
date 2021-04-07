@@ -8140,8 +8140,8 @@ textarea{
 .scroll-styled--dark::-webkit-scrollbar-thumb:hover{
   background:rgba(255, 255, 255, 0.4);
 }
- .loading::after,
- .loading--dark::after{
+.loading::after,
+.loading--dark::after{
   content:'';
   display:block;
   height:36px;
@@ -8167,7 +8167,9 @@ textarea{
 }
 
 @keyframes assembly-loading{
-  to{transform:rotate(360deg);}
+  to{
+    transform:rotate(360deg);
+  }
 }
 .events-none{
   -webkit-touch-callout:none;
@@ -20045,8 +20047,8 @@ textarea{
 .scroll-styled--dark::-webkit-scrollbar-thumb:hover{
   background:rgba(255, 255, 255, 0.4);
 }
- .loading::after,
- .loading--dark::after{
+.loading::after,
+.loading--dark::after{
   content:'';
   display:block;
   height:36px;
@@ -20072,7 +20074,9 @@ textarea{
 }
 
 @keyframes assembly-loading{
-  to{transform:rotate(360deg);}
+  to{
+    transform:rotate(360deg);
+  }
 }
 .events-none{
   -webkit-touch-callout:none;
