@@ -39,10 +39,11 @@
  * <div class="bg-blue inline-block mr18 w60 h60 round animation-spin animation--infinite animation--speed-8"></div>
  * <div class="bg-blue inline-block mr18 w60 h60 round animation-spin animation--infinite animation--delay"></div>
  */
+.animation--speed-025 { animation-duration: 250ms; }
+.animation--speed-05 { animation-duration: 500ms; }
 .animation--speed-1 { animation-duration: 1s; }
 .animation--speed-2 { animation-duration: 2s; }
 .animation--speed-4 { animation-duration: 4s; }
-.animation--speed-8 { animation-duration: 8s; }
 .animation--delay { animation-delay: 1s; }
 /** @endgroup */
 
