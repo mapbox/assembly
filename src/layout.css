@@ -314,11 +314,11 @@
  * @example
  * <div class='h-viewport-1/3 bg-darken10'>h-viewport-1/3</div>
  */
-.h-viewport-1\/3  { height: 33.3333vh !important; }
-.h-viewport-1\/2  { height: 50vh !important; }
-.h-viewport-2\/3  { height: 66.6666vh !important; }
+.h-viewport-1\/3 { height: 33.3333vh !important; }
+.h-viewport-1\/2 { height: 50vh !important; }
+.h-viewport-2\/3 { height: 66.6666vh !important; }
 .h-viewport-9\/10 { height: 90vh !important; }
-.h-viewport-full  { height: 100vh !important; }
+.h-viewport-full { height: 100vh !important; }
 /** @endgroup */
 
 /**
@@ -329,12 +329,12 @@
  * @example
  * <div class='hmax-viewport-1/3 h-viewport-1/2 bg-darken10'>hmax-viewport-1/3</div>
  */
- .hmax-viewport-1\/3 { max-height: 33.3333vh !important; }
- .hmax-viewport-1\/2 { max-height: 50vh !important; }
- .hmax-viewport-2\/3 { max-height: 66.6666vh !important; }
- .hmax-viewport-9\/10 { max-height: 90vh !important; }
- .hmax-viewport-full { max-height: 100vh !important; }
- /** @endgroup */
+.hmax-viewport-1\/3 { max-height: 33.3333vh !important; }
+.hmax-viewport-1\/2 { max-height: 50vh !important; }
+.hmax-viewport-2\/3 { max-height: 66.6666vh !important; }
+.hmax-viewport-9\/10 { max-height: 90vh !important; }
+.hmax-viewport-full { max-height: 100vh !important; }
+/** @endgroup */
 
 /**
  * Flexbox utilities. All class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
