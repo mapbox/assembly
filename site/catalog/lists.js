@@ -8,7 +8,7 @@ export class Lists extends React.Component {
           Lists
         </h2>
         <div className="grid grid--gut12">
-          <div className="col col--4">
+          <div className="col w-1/3">
             <div className="mb12 txt-bold color-darken50 txt-uppercase txt-s">
               unstyled
             </div>
@@ -60,7 +60,7 @@ export class Lists extends React.Component {
             </ol>
           </div>
 
-          <div className="col col--4">
+          <div className="col w-1/3">
             <div className="mb12 txt-bold color-darken50 txt-uppercase txt-s">
               txt-ol/ul
             </div>
@@ -112,7 +112,7 @@ export class Lists extends React.Component {
             </ol>
           </div>
 
-          <div className="col col--4 prose">
+          <div className="col w-1/3 prose">
             <div className="mb12 txt-bold color-darken50 txt-uppercase txt-s">
               Prose
             </div>

@@ -3,17 +3,17 @@ import { HtmlExample } from '../../html_example';
 import { Page } from '../../page';
 
 const html = `<div class='grid grid--gut12 flex--stretch-cross'>
-  <div class='col col--4'>
+  <div class='col w-1/3'>
     <div class='h-full bg-darken10 px12 py12'>
       <div class='bg-darken10 h60'></div>
     </div>
   </div>
-  <div class='col col--4'>
+  <div class='col w-1/3'>
     <div class='h-full bg-darken10 px12 py12'>
       <div class='bg-darken10 h60'></div>
     </div>
   </div>
-  <div class='col col--4'>
+  <div class='col w-1/3'>
     <div class='h-full bg-darken10 px12 py12'>
       <div class='bg-darken10 h120'></div>
     </div>

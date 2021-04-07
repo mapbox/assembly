@@ -46,8 +46,8 @@
  * @memberof Grid
  * @example
  * <div class='grid'>
- *   <div class='col col--3 col--auto-ml border border--darken10'>col--3 col--auto-ml</div>
- *   <div class='col col--9 col--auto-ml border border--darken10'>col--9 col--auto-ml</div>
+ *   <div class='col w-1/4 col--auto-ml border border--darken10'>w-1/4 col--auto-ml</div>
+ *   <div class='col w-3/4 col--auto-ml border border--darken10'>w-3/4 col--auto-ml</div>
  * </div>
  */
 .col--auto {

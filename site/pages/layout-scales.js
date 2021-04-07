@@ -81,7 +81,7 @@ export default class LayoutScales extends React.Component {
       <Page path="/layout-scales/">
         <div className="mb24">
           <h1 className="txt-h2 txt-bold pt24 mb18">Layout Scales</h1>
-          <p className="col col--6-ml mb36">
+          <p className="col w-1/2-ml mb36">
             These are the numbers, corresponding to pixel values, available for
             each set of layout classes. All of these class sets include{' '}
             <code className="txt-code">*-mm</code>,{' '}

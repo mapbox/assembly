@@ -86,21 +86,21 @@ export default class Home extends React.Component {
             Philosophy
           </h2>
           <div className="grid grid--gut24 grid--gut36-ml">
-            <div className="col col--6-ml">
+            <div className="col w-1/2-ml">
               <h3 className="mt60 mb12 txt-bold">Comprehensive</h3>
               <p>
                 Assembly includes everything you need to fully implement
                 responsive, colorful web pages, web apps, dashboards, and more.
               </p>
             </div>
-            <div className="col col--6-ml">
+            <div className="col w-1/2-ml">
               <h3 className="mt60 mb12 txt-bold">Flexible</h3>
               <p>
                 The core of Assembly is a set of composable, atomic utility
                 classes covering most of your styling needs.
               </p>
             </div>
-            <div className="col col--6-ml">
+            <div className="col w-1/2-ml">
               <h3 className="mt60 mb12 txt-bold">Practical</h3>
               <p>
                 Complete reliance on atomic design can slow down development and
@@ -108,7 +108,7 @@ export default class Home extends React.Component {
                 opinions in the right places.
               </p>
             </div>
-            <div className="col col--6-ml">
+            <div className="col w-1/2-ml">
               <h3 className="mt60 mb12 txt-bold">Customizable</h3>
               <p>
                 Assembly exposes its build process in a public API. Customize

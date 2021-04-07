@@ -48,14 +48,14 @@ function buildLayoutScales() {
        *
        * @example
        * <div class='grid grid--gut12'>
-       *   <div class='col col--2'>
-       *     <div class='border border--darken10'>col--2</div>
+       *   <div class='col w-1/6'>
+       *     <div class='border border--darken10'>w-1/6</div>
        *   </div>
-       *   <div class='col col--4'>
-       *     <div class='border border--darken10'>col--4</div>
+       *   <div class='col w-1/3'>
+       *     <div class='border border--darken10'>w-1/3</div>
        *   </div>
-       *   <div class='col col--6'>
-       *     <div class='border border--darken10'>col--6</div>
+       *   <div class='col w-1/2'>
+       *     <div class='border border--darken10'>w-1/2</div>
        *   </div>
        * </div>
        * @memberof Grid
