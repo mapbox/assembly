@@ -63,10 +63,6 @@ const routes = [
         route: '/examples/equal-height-columns/'
       },
       {
-        name: 'Tile layout',
-        route: '/examples/tile-layout/'
-      },
-      {
         name: 'Tooltips',
         route: '/examples/tooltips/'
       },
