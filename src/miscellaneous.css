@@ -50,6 +50,7 @@
  * Style a loading spinner.
  * On dark backgrounds, add the `loading--dark` modifier.
  * For a smaller spinner, add the `loading--s` modifier.
+ * Use `color-*` classes to apply a custom color to the spinner handle.
  *
  * @group
  * @memberof Miscellaneous
@@ -58,35 +59,41 @@
  * <div class="loading loading--s"></div>
  * <div class="bg-gray-dark">
  *   <div class="loading loading--dark"></div>
- *   <div class="loading loading--dark loading--s"></div>
  * </div>
-*/
-.loading--dark::after,
-.loading::after {
+ * <div class="bg-gray">
+ *   <div class="loading color-lighten50"></div>
+ * </div>
+ */
+ .loading::after,
+ .loading--dark::after {
   content: '';
   display: block;
-  margin: auto;
   height: 36px;
   width: 36px;
-  animation: spin 0.8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  border-radius: 50%;
+  border: 3px solid var(--darken25);
+  border-top-color: currentColor;
+  animation: assembly-loading 0.8s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
+
+.loading--dark {
+  color: var(--white);
+}
+
 .loading--s::after {
   height: 18px;
   width: 18px;
 }
-.loading::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='36' height='36' viewBox='0 0 36 36'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23333;%7D.b%7Bopacity:0.1;%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M5.2721,5.2721,7.3934,7.3934a15,15,0,0,1,21.2132,0l2.1213-2.1213A18,18,0,0,0,5.2721,5.2721Z'/%3E%3Cg class='b'%3E%3Cpath d='M28.6066,28.6066A15,15,0,0,1,7.3934,7.3934L5.2721,5.2721a18,18,0,1,0,25.4558,0L28.6066,7.3934A15,15,0,0,1,28.6066,28.6066Z'/%3E%3C/g%3E%3C/svg%3E"); /* stylelint-disable-line string-quotes */
-}
-.loading--s::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='18' height='18' viewBox='0 0 18 18'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bopacity:0.1;%7D.b%7Bfill:%23333;%7D%3C/style%3E%3C/defs%3E%3Cg class='a'%3E%3Cpath d='M13.2426,13.2426A6,6,0,0,1,4.7574,4.7574L2.636,2.636a9,9,0,1,0,12.7279,0L13.2426,4.7574A6,6,0,0,1,13.2426,13.2426Z'/%3E%3C/g%3E%3Cpath class='b' d='M2.636,2.636,4.7574,4.7574a6,6,0,0,1,8.4853,0L15.364,2.636A9,9,0,0,0,2.636,2.636Z'/%3E%3C/svg%3E"); /* stylelint-disable-line string-quotes */
-}
+
 .loading--dark::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='36' height='36' viewBox='0 0 36 36'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23f7f7f7;%7D.b%7Bopacity:0.1;%7D.c%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M5.2721,5.2721,7.3934,7.3934a15,15,0,0,1,21.2132,0l2.1213-2.1213A18,18,0,0,0,5.2721,5.2721Z'/%3E%3Cg class='b'%3E%3Cpath class='c' d='M28.6066,28.6066A15,15,0,0,1,7.3934,7.3934L5.2721,5.2721a18,18,0,1,0,25.4558,0L28.6066,7.3934A15,15,0,0,1,28.6066,28.6066Z'/%3E%3C/g%3E%3C/svg%3E"); /* stylelint-disable-line string-quotes */
+  border-color: var(--lighten25);
+  border-top-color: currentColor;
 }
+
 /** @endgroup */
 
-.loading--dark.loading--s::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='18' height='18' viewBox='0 0 18 18'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bopacity:0.1;%7D.b%7Bfill:%23fff;%7D.c%7Bfill:%23f7f7f7;%7D%3C/style%3E%3C/defs%3E%3Cg class='a'%3E%3Cpath class='b' d='M13.2426,13.2426A6,6,0,0,1,4.7574,4.7574L2.636,2.636a9,9,0,1,0,12.7279,0L13.2426,4.7574A6,6,0,0,1,13.2426,13.2426Z'/%3E%3C/g%3E%3Cpath class='c' d='M2.636,2.636,4.7574,4.7574a6,6,0,0,1,8.4853,0L15.364,2.636A9,9,0,0,0,2.636,2.636Z'/%3E%3C/svg%3E"); /* stylelint-disable-line string-quotes */
+@keyframes assembly-loading {
+  to {transform: rotate(360deg);}
 }
 
 /**
