@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- [breaking] Rename viewport based height classes to better match naming convention, and add viewport based max height classes.
 - [add] Add new cursor classes for `cursor-grab` and `cursor-grabbing`.
 - [add] Add `Assembly.setFocusState` method to make it easier to programmatically change the value of `data-assembly-focus-control`.
 - Rework typographic scale. Numbers are in the format _(font-size/line-height)_:

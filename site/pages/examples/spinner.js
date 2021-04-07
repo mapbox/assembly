@@ -2,7 +2,7 @@ import React from 'react';
 import { HtmlExample } from '../../html_example';
 import { Page } from '../../page';
 
-const spinner = `<div class='viewport-full relative'>
+const spinner = `<div class='h-viewport-full relative'>
  <!-- the wrapper above is for documentation purposes only and not needed in practice !-->
   <div class='flex-parent flex-parent--center-cross flex-parent--center-main absolute top right bottom left bg-darken10 z5'>
     <div class='flex-child loading'></div>

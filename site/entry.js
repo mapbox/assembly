@@ -69,10 +69,11 @@ class Entry extends React.Component {
         id={`${selector
           .trim()
           .replace(/\s+/g, '-')
+          .replace(/\\/g, '')
           .replace(/\./g, '')}`}
         className={selectorElClasses}
       >
-        {selector.trim()}
+        {selector.trim().replace(/\\/g, '')}
       </span>
     );
 
