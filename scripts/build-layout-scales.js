@@ -44,6 +44,8 @@ function buildLayoutScales() {
   function buildFractionalRules(selectorPrefex, property) {
     let css = '';
     layoutScales.fractions.forEach(scale => {
+      console.log(scale[0]);
+
       css += buildMediaRules(mediaSuffix =>
         stripIndent(`
         .${selectorPrefex}${scale[0]}${mediaSuffix} {
