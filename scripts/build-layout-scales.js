@@ -41,6 +41,21 @@ function buildLayoutScales() {
     return mediaFree;
   }
 
+  function buildFractionalRules(selectorPrefex, property) {
+    let css = '';
+    layoutScales.fractions.forEach(scale => {
+      css += buildMediaRules(mediaSuffix =>
+        stripIndent(`
+        .${selectorPrefex}${scale[0]}${mediaSuffix} {
+          ${property}: ${scale[1]}% !important;
+        }
+      `)
+      );
+    });
+
+    return css;
+  }
+
   variantGenerators.gutter = function(scales) {
     let css = stripIndent(`
       /**
@@ -367,6 +382,22 @@ function buildLayoutScales() {
       `)
       );
     });
+    css += '\n/** @endgroup */\n';
+
+    css += stripIndent(`
+      /**
+       * Set a percentage-based width.
+       *
+       * @group
+       * @memberof Sizing
+       * @example
+       * <div class='grid'>
+       *   <div class='col w-1/2 bg-darken10'>w-1/2</div>
+       *   <div class='col w-1/4 bg-darken25'>w-1/4</div>
+       *   <div class='col w-1/4 bg-darken50'>w-1/4</div>
+       * </div>
+       */`);
+    css += buildFractionalRules('w', 'width');
     css += '\n/** @endgroup */\n';
 
     return css;
