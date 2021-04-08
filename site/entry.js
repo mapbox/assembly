@@ -72,7 +72,7 @@ class Entry extends React.Component {
           .replace(/\./g, '')}`}
         className={selectorElClasses}
       >
-        {selector.trim()}
+        {selector.trim().replace(/\\/g, '')}
       </span>
     );
 

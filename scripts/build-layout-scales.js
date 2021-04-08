@@ -41,15 +41,13 @@ function buildLayoutScales() {
     return mediaFree;
   }
 
-  function buildFractionalRules(selectorPrefex, property) {
+  function buildFractionalRules(selectorPrefex, property, unit) {
     let css = '';
     layoutScales.fractions.forEach(scale => {
-      console.log(scale[0]);
-
       css += buildMediaRules(mediaSuffix =>
         stripIndent(`
         .${selectorPrefex}${scale[0]}${mediaSuffix} {
-          ${property}: ${scale[1]}% !important;
+          ${property}: ${scale[1]}${unit} !important;
         }
       `)
       );
@@ -194,6 +192,20 @@ function buildLayoutScales() {
 
     css += stripIndent(`
       /**
+       * Apply percentage-based margin on the right.
+       *
+       * @group
+       * @memberof Margins
+       * @example
+       * <div class='grid'>
+       *   <div class='col mr-1/2 bg-darken10'>mr-1/2</div>
+       * </div>
+       */`);
+    css += buildFractionalRules('mr', 'margin-right', '%');
+    css += '\n/** @endgroup */\n';
+
+    css += stripIndent(`
+      /**
        * Apply margin on the bottom.
        *
        * The negative margin classes, <code>mb-neg</code>, can be useful for certain design patterns like underline tabs.
@@ -234,6 +246,19 @@ function buildLayoutScales() {
     });
     css += '\n/** @endgroup */\n';
 
+    css += stripIndent(`
+      /**
+       * Apply percentage-based margin on the left.
+       *
+       * @group
+       * @memberof Margins
+       * @example
+       * <div class='grid'>
+       *   <div class='col ml-1/2 bg-darken10'>ml-1/2</div>
+       * </div>
+       */`);
+    css += buildFractionalRules('ml', 'margin-left', '%');
+    css += '\n/** @endgroup */\n';
     return css;
   };
 
@@ -399,7 +424,7 @@ function buildLayoutScales() {
        *   <div class='col w-1/4 bg-darken50'>w-1/4</div>
        * </div>
        */`);
-    css += buildFractionalRules('w', 'width');
+    css += buildFractionalRules('w', 'width', '%');
     css += '\n/** @endgroup */\n';
 
     return css;
@@ -530,6 +555,52 @@ function buildLayoutScales() {
       `)
       );
     });
+    css += '\n/** @endgroup */\n';
+
+    return css;
+  };
+
+  variantGenerators.viewportHeight = function() {
+    let css = stripIndent(`
+      /**
+       * Set a viewport-based height.
+       *
+       * @group
+       * @memberof Sizing
+       * @example
+       * <div class='h-viewport-1/3 bg-darken10'>h-viewport-1/3</div>
+       */`);
+    css += buildMediaRules(mediaSuffix =>
+      stripIndent(`
+        .h-viewport-full${mediaSuffix} {
+          height: 100vh !important;
+        }
+      `)
+    );
+    css += buildFractionalRules('h-viewport', 'height', 'vh');
+    css += '\n/** @endgroup */\n';
+
+    return css;
+  };
+
+  variantGenerators.viewportMaxHeight = function() {
+    let css = stripIndent(`
+      /**
+       * Set a viewport-based max width.
+       *
+       * @group
+       * @memberof Sizing
+       * @example
+       * <div class='hmax-viewport-1/3 h-viewport-1/2 bg-darken10'>hmax-viewport-1/3</div>
+       */`);
+    css += buildMediaRules(mediaSuffix =>
+      stripIndent(`
+        .hmax-viewport-full${mediaSuffix} {
+          max-height: 100vh !important;
+        }
+      `)
+    );
+    css += buildFractionalRules('hmax-viewport', 'max-height', 'vh');
     css += '\n/** @endgroup */\n';
 
     return css;

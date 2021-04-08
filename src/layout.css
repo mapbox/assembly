@@ -188,21 +188,6 @@
  */
 
 /**
- * Set a viewport-based height.
- *
- * @group
- * @memberof Sizing
- * @example
- * <div class='viewport-third bg-darken10'>viewport-third</div>
- */
-.viewport-third { height: 33.3333vh !important; }
-.viewport-half { height: 50vh !important; }
-.viewport-twothirds { height: 66.6666vh !important; }
-.viewport-almost { height: 90vh !important; }
-.viewport-full { height: 100vh !important; }
-/** @endgroup */
-
-/**
  * Flexbox utilities. All class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * Usage must fit the following pattern:

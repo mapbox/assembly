@@ -2,7 +2,7 @@ import React from 'react';
 import { HtmlExample } from '../../html_example';
 import { Page } from '../../page';
 
-const tiles = `<div class='bg-darken10 viewport-half'>
+const tiles = `<div class='bg-darken10 h-viewport-1/2'>
 <!-- In practice, it makes sense to use this for the container instead:
 <div class='fixed top right bottom left overflow-auto'></div>-->
   <div class='flex flex--center-main pt36'>
