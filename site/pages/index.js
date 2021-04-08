@@ -52,7 +52,11 @@ export default class Home extends React.Component {
           <p className="mt24">
             Include the Assembly JavaScript anywhere in your HTML. It is safe to
             use the <code className="txt-code">async</code> and{' '}
-            <code className="txt-code">defer</code> attributes.
+            <code className="txt-code">defer</code> attributes. See{' '}
+            <a className="link" href="#js-api">
+              Javascript API
+            </a>{' '}
+            for details.
           </p>
           <div className="mt12 pre">
             <Lowlight
@@ -64,7 +68,8 @@ export default class Home extends React.Component {
           </div>
 
           <h3 className="mt60 mb12 txt-bold">HTML Template</h3>
-          <p>Get started right away with this bare bones HTML template.</p>
+
+          <p>Get started right away with this bare-bones HTML template.</p>
 
           <div className="mt12 pre">
             <Lowlight language="html" value={htmlTemplate} />
@@ -191,7 +196,7 @@ export default class Home extends React.Component {
               <h3 className="txt-bold">Customizable icons</h3>
               <p className="mt12">
                 Assembly comes with{' '}
-                <a className="txt-underline" href="icons/">
+                <a className="link" href="icons/">
                   more than 150 icons
                 </a>, intended to be used as inline SVGs. Inline SVGs are easy
                 to resize and color.
@@ -340,6 +345,85 @@ export default class Home extends React.Component {
               </p>
             </div>
           </div>
+        </div>
+
+        <h2
+          id="js-api"
+          className="border-b border-b--2 border--gray-faint pb6 mt60 mb36 txt-l txt-bold"
+        >
+          Javascript API
+        </h2>
+        <p>
+          By importing <code className="txt-code">assembly.js</code> into your
+          html page, you gain access to a set of functions on a global{' '}
+          <code>Assembly</code> namespace.
+        </p>
+
+        <h3 className="mt60 mb12 txt-bold">Focus state</h3>
+        <p className="mb24">
+          <code className="txt-code">assembly.js</code> adds event listeners
+          that show and hide focus states depending on whether user is
+          navigating with a keyboard or with a pointer device. If focus state is
+          on, an outline appears around focused elements. If focus state is off,
+          no outline appears. The Javascript API allows you to programmatically
+          override this focus state.
+        </p>
+        <h3 className="mb12 mt24 txt-bold">
+          <code className="txt-code">
+            Assembly.setFocusState(enable?: boolean): void
+          </code>
+        </h3>
+        <div className="prose">
+          <p>
+            Turn focus state on or off. Inverts focus state if called with no
+            argument.
+          </p>
+        </div>
+
+        <h3 className="mt60 mb12 txt-bold">Icons</h3>
+        <p className="mb24">
+          Use these function to add icons to the page or edit them
+          programmatically.
+        </p>
+        <h3 className="mb12 mt24 txt-bold">
+          <code className="txt-code">
+            Assembly.createIcon(iconName: string): SVGElement
+          </code>
+        </h3>
+        <div className="prose">
+          <p>
+            Returns an SVG element containing a <code>{'<use>'}</code> element
+            referencing the designated icon.
+          </p>
+          <p>
+            Throws an error if the designated icon does not exist in Assembly.
+          </p>
+        </div>
+        <h3 className="mb12 mt24 txt-bold">
+          <code className="txt-code">
+            Assembly.changeIcon(iconEl: SVGElement, iconName: string):
+            SVGElement
+          </code>
+        </h3>
+        <div className="prose">
+          <p>
+            Given an icon SVG element (<em>not</em> the <code>{'<use>'}</code>{' '}
+            element inside it), such as what <code>Assembly.createIcon</code>{' '}
+            returns, changes the icon and returns the SVG element.
+          </p>
+          <p>
+            Throws an error if the designated icon does not exist in Assembly.
+          </p>
+        </div>
+        <h3 className="mb12 mt24 txt-bold">
+          <code className="txt-code">
+            Assembly.iconExists(iconName: string): boolean
+          </code>
+        </h3>
+        <div className="prose">
+          <p>
+            Returns a boolean indicating whether an icon exists in Assembly.
+          </p>
         </div>
       </Page>
     );

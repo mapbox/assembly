@@ -82,14 +82,16 @@
 .border--dash { border-style: dashed !important; }
 
 /**
- * Adjust the curve of an element's corners.
+ * Adjust the curve of an element's corners. All border classes include `*-mm`,
+ * `*-ml`, and `*-mxl` variations to target screen sizes.
  *
  * @memberof Theming
  * @section Border radius
  */
 
 /**
- * Round the corners of elements. Target sides with `*-t`, `*-r`, `*-b`, `*-l`. Target corners with `*-tl`, `*-tr`, `*-bl`, `*-br`. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ * Round the corners of elements. Target sides with `*-t`, `*-r`, `*-b`, `*-l`.
+ * Target corners with `*-tl`, `*-tr`, `*-bl`, `*-br`.
  *
  *
  * @group
@@ -192,12 +194,17 @@
  * <div class='cursor-crosshair'>cursor-crosshair</div>
  * <div class='cursor-move'>cursor-move</div>
  * <div class='cursor-notallowed'>cursor-notallowed</div>
+ * <div class='cursor-grab'>cursor-grab</div>
+ * <div class='cursor-grabbing'>cursor-grabbing</div>
  */
 .cursor-default { cursor: default !important; }
 .cursor-pointer { cursor: pointer !important; }
 .cursor-crosshair { cursor: crosshair !important; }
 .cursor-move { cursor: move !important; }
 .cursor-notallowed { cursor: not-allowed !important; }
+.cursor-grab { cursor: grab !important; }
+.cursor-grabbing { cursor: grabbing !important; }
+
 /** @endgroup */
 
 /**
