@@ -1,7 +1,7 @@
 import React from 'react';
 
 const sizeCombos = [
-  ['full'],
+  ['-full'],
   ['-11/12', '-1/12'],
   ['-5/6', '-1/6'],
   ['-3/4', '-1/4'],
