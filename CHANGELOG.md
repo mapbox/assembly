@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- [breaking] Remove `btn--stroke--2` class.
 - [breaking] Allow `loading` spinners to be recolored and no longer set `margin: auto` on spinners. Breaking change because some layouts may be relying on `margin:auto`.
 - [add] Add new cursor classes for `cursor-grab` and `cursor-grabbing`.
 - [add] Add `Assembly.setFocusState` method to make it easier to programmatically change the value of `data-assembly-focus-control`.
