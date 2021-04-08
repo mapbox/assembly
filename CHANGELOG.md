@@ -2,11 +2,18 @@
 
 ## Unreleased
 
+- [internal] Refactor internal color variables so there is one set of variables for default button and link colors, and another set of variables for form controls.
+- [style change] Adjust stroke widths for toggles, checkboxes, and radios from 2px to 1px.
+- [style change] Change default form control colors from blue to gray for all form types.
+- [style change] Increase inset around `switch--l` from 2px to 3px.
+- [style change] Reduce height of `toggle` form element from 36px to 30px, and height of `toggle--s` from 24px to 18px.
+- [style change] Remove bold text rule from toggle elements.
+- [style change] Adjust the styling of disabled form controls to better differentiate active disabled and inactive disabled states.
 - [breaking] Remove `btn--stroke--2` class.
 - [breaking] Allow `loading` spinners to be recolored and no longer set `margin: auto` on spinners. Breaking change because some layouts may be relying on `margin:auto`.
 - [add] Add new cursor classes for `cursor-grab` and `cursor-grabbing`.
 - [add] Add `Assembly.setFocusState` method to make it easier to programmatically change the value of `data-assembly-focus-control`.
-- Rework typographic scale. Numbers are in the format _(font-size/line-height)_:
+- [style change] Rework typographic scale. Numbers are in the format _(font-size/line-height)_:
 
   | Selector | Old value | New value |
   | -------- | :-------: | --------: |
@@ -22,8 +29,8 @@
   | .txt-s   | 12px/18px | 12px/18px |
   | .txt-xs  | 10px/15px | 10px/15px |
 
-- Add `font-display:swap` to all @font-face declarations.
-- Remove grow, and add y offset to `shadow` classes.
+- [style change] Add `font-display:swap` to all @font-face declarations.
+- [style change] Remove grow, and add y offset to `shadow` classes.
 - [breaking] Update browser compatibility targets, drop IE11 support.
 - [breaking] remove `txt-spacing4` class and add `txt-spacing05` class.
 - [breaking] renamed `scroll-*` classes to `overflow-*`.

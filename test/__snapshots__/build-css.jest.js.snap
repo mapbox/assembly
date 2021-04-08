@@ -296,7 +296,7 @@ legend{
 }
 .btn:disabled{
   pointer-events:none;
-  color:rgba(127, 127, 127, 0.45);
+  color:rgba(64, 64, 64, 0.45);
   background-color:rgba(127, 127, 127, 0.25);
   box-shadow:none;
 }
@@ -304,8 +304,8 @@ legend{
 .btn.btn--stroke:disabled{
   pointer-events:none;
   background-color:transparent;
-  box-shadow:inset 0 0 0 1px rgba(127, 127, 127, 0.45);
-  color:rgba(127, 127, 127, 0.45);
+  box-shadow:inset 0 0 0 1px rgba(64, 64, 64, 0.45);
+  color:rgba(64, 64, 64, 0.45);
 }
 .btn--pill-stroke{
   position:relative;
@@ -388,7 +388,7 @@ legend{
 .link:disabled{
   pointer-events:none;
   cursor:default;
-  color:rgba(127, 127, 127, 0.45);
+  color:rgba(64, 64, 64, 0.45);
 }
 
 .fieldset,
@@ -419,12 +419,12 @@ legend{
 .input:focus,
 .textarea:focus,
 .select:focus{
-  box-shadow:inset 0 0 0 1px #448ee4;
+  box-shadow:inset 0 0 0 1px #666;
 }
 
 .input::placeholder,
 .textarea::placeholder{
-  color:rgba(127, 127, 127, 0.45);
+  color:rgba(64, 64, 64, 0.45);
 }
 .input::-ms-clear,
 .input::-ms-reveal{
@@ -499,7 +499,7 @@ legend{
 }
 
 .select:focus + .select-arrow{
-  border-top-color:#448ee4;
+  border-top-color:#666;
 }
 .select option{
   background-color:#fff;
@@ -712,7 +712,7 @@ legend{
   height:18px;
   border-radius:4px;
   position:relative;
-  border-width:2px;
+  border-width:1px;
   border-style:solid;
   border-color:transparent;
   transition:color 0.125s,
@@ -721,7 +721,7 @@ legend{
 }
 .checkbox{
   color:#fff;
-  border-color:#999;
+  border-color:#666;
   transition:color 0.125s,
     border 0.125s,
     background-color 0.125s;
@@ -735,15 +735,12 @@ legend{
   position:absolute;
   width:18px;
   height:18px;
-  top:-2px;
-  left:-2px;
-  right:-2px;
-  bottom:-2px;
+  inset:-1px;
   display:none;
 }
 .radio{
   border-radius:50%;
-  color:#999;
+  color:#666;
   border-color:currentColor;
 }
 
@@ -752,10 +749,7 @@ legend{
   background-color:currentColor;
   border-radius:50%;
   position:absolute;
-  top:2px;
-  left:2px;
-  right:2px;
-  bottom:2px;
+  inset:2px;
   display:none;
 }
 .switch{
@@ -766,10 +760,10 @@ legend{
   width:30px;
   height:18px;
   border-radius:9999px;
-  border-width:2px;
+  border-width:1px;
   border-style:solid;
   border-color:currentColor;
-  color:#999;
+  color:#666;
   transition:color 0.125s,
     background-color 0.125s,
     border-color 0.125s;
@@ -794,7 +788,9 @@ legend{
 }
 
 .switch--l::after{
-  width:calc(50% - 2px);
+  left:3px;
+  top:3px;
+  bottom:3px;
 }
 .toggle-group{
   display:inline-flex;
@@ -810,11 +806,10 @@ legend{
 .toggle{
   flex-shrink:0;
   cursor:pointer;
-  color:#999;
-  font-weight:bold;
+  color:#666;
   font-size:12px;
-  padding:6px 18px;
-  border-radius:18px;
+  padding:3px 18px;
+  border-radius:15px;
   background-color:transparent;
   transition:color 0.125s,
     background-color 0.125s;
@@ -822,7 +817,7 @@ legend{
 .toggle--s{
   font-size:10px;
   line-height:18px;
-  padding:3px 12px;
+  padding:0 12px;
 }
 .switch--s-label,
 .checkbox--s-label,
@@ -842,11 +837,26 @@ input:checked:disabled + .radio,
 input:checked:disabled + .switch{
   pointer-events:none;
   color:rgba(0, 0, 0, 0.25);
+}
+
+input:disabled + .switch{
+  border-color:rgba(127, 127, 127, 0.25);
+}
+
+input:disabled + .radio,
+input:disabled + .checkbox{
   background-color:rgba(127, 127, 127, 0.25);
   border-color:transparent;
 }
 
-input:disabled + .switch::after{
+input:checked:disabled + .checkbox,
+input:checked:disabled + .radio,
+input:checked:disabled + .switch{
+  background-color:rgba(127, 127, 127, 0.25);
+}
+
+input:disabled + .switch::after,
+input:checked:disabled + .switch::after{
   background-color:rgba(0, 0, 0, 0.25);
 }
 input:checked + .checkbox > .icon,
@@ -855,12 +865,12 @@ input:checked + .radio::before{
 }
 
 input:checked + .radio{
-  color:#448ee4;
+  color:#666;
 }
 
 input:checked + .checkbox{
-  border:2px solid transparent;
-  background-color:#448ee4;
+  border:1px solid transparent;
+  background-color:#666;
 }
 input:checked + .switch::after{
   left:calc(50% + 1px);
@@ -869,10 +879,10 @@ input:checked + .switch::after{
 
 input:checked + .switch{
   border-color:transparent;
-  background-color:#448ee4;
+  background-color:#666;
 }
 input:checked + .toggle{
-  background:#448ee4;
+  background:#666;
   color:#fff;
 }
 input:disabled + .toggle{
@@ -12174,7 +12184,7 @@ legend{
 }
 .btn:disabled{
   pointer-events:none;
-  color:rgba(127, 127, 127, 0.45);
+  color:rgba(64, 64, 64, 0.45);
   background-color:rgba(127, 127, 127, 0.25);
   box-shadow:none;
 }
@@ -12182,8 +12192,8 @@ legend{
 .btn.btn--stroke:disabled{
   pointer-events:none;
   background-color:transparent;
-  box-shadow:inset 0 0 0 1px rgba(127, 127, 127, 0.45);
-  color:rgba(127, 127, 127, 0.45);
+  box-shadow:inset 0 0 0 1px rgba(64, 64, 64, 0.45);
+  color:rgba(64, 64, 64, 0.45);
 }
 .btn--pill-stroke{
   position:relative;
@@ -12266,7 +12276,7 @@ legend{
 .link:disabled{
   pointer-events:none;
   cursor:default;
-  color:rgba(127, 127, 127, 0.45);
+  color:rgba(64, 64, 64, 0.45);
 }
 
 .fieldset,
@@ -12297,12 +12307,12 @@ legend{
 .input:focus,
 .textarea:focus,
 .select:focus{
-  box-shadow:inset 0 0 0 1px #448ee4;
+  box-shadow:inset 0 0 0 1px #666;
 }
 
 .input::placeholder,
 .textarea::placeholder{
-  color:rgba(127, 127, 127, 0.45);
+  color:rgba(64, 64, 64, 0.45);
 }
 .input::-ms-clear,
 .input::-ms-reveal{
@@ -12377,7 +12387,7 @@ legend{
 }
 
 .select:focus + .select-arrow{
-  border-top-color:#448ee4;
+  border-top-color:#666;
 }
 .select option{
   background-color:#fff;
@@ -12590,7 +12600,7 @@ legend{
   height:18px;
   border-radius:4px;
   position:relative;
-  border-width:2px;
+  border-width:1px;
   border-style:solid;
   border-color:transparent;
   transition:color 0.125s,
@@ -12599,7 +12609,7 @@ legend{
 }
 .checkbox{
   color:#fff;
-  border-color:#999;
+  border-color:#666;
   transition:color 0.125s,
     border 0.125s,
     background-color 0.125s;
@@ -12613,15 +12623,12 @@ legend{
   position:absolute;
   width:18px;
   height:18px;
-  top:-2px;
-  left:-2px;
-  right:-2px;
-  bottom:-2px;
+  inset:-1px;
   display:none;
 }
 .radio{
   border-radius:50%;
-  color:#999;
+  color:#666;
   border-color:currentColor;
 }
 
@@ -12630,10 +12637,7 @@ legend{
   background-color:currentColor;
   border-radius:50%;
   position:absolute;
-  top:2px;
-  left:2px;
-  right:2px;
-  bottom:2px;
+  inset:2px;
   display:none;
 }
 .switch{
@@ -12644,10 +12648,10 @@ legend{
   width:30px;
   height:18px;
   border-radius:9999px;
-  border-width:2px;
+  border-width:1px;
   border-style:solid;
   border-color:currentColor;
-  color:#999;
+  color:#666;
   transition:color 0.125s,
     background-color 0.125s,
     border-color 0.125s;
@@ -12672,7 +12676,9 @@ legend{
 }
 
 .switch--l::after{
-  width:calc(50% - 2px);
+  left:3px;
+  top:3px;
+  bottom:3px;
 }
 .toggle-group{
   display:inline-flex;
@@ -12688,11 +12694,10 @@ legend{
 .toggle{
   flex-shrink:0;
   cursor:pointer;
-  color:#999;
-  font-weight:bold;
+  color:#666;
   font-size:12px;
-  padding:6px 18px;
-  border-radius:18px;
+  padding:3px 18px;
+  border-radius:15px;
   background-color:transparent;
   transition:color 0.125s,
     background-color 0.125s;
@@ -12700,7 +12705,7 @@ legend{
 .toggle--s{
   font-size:10px;
   line-height:18px;
-  padding:3px 12px;
+  padding:0 12px;
 }
 .switch--s-label,
 .checkbox--s-label,
@@ -12720,11 +12725,26 @@ input:checked:disabled + .radio,
 input:checked:disabled + .switch{
   pointer-events:none;
   color:rgba(0, 0, 0, 0.25);
+}
+
+input:disabled + .switch{
+  border-color:rgba(127, 127, 127, 0.25);
+}
+
+input:disabled + .radio,
+input:disabled + .checkbox{
   background-color:rgba(127, 127, 127, 0.25);
   border-color:transparent;
 }
 
-input:disabled + .switch::after{
+input:checked:disabled + .checkbox,
+input:checked:disabled + .radio,
+input:checked:disabled + .switch{
+  background-color:rgba(127, 127, 127, 0.25);
+}
+
+input:disabled + .switch::after,
+input:checked:disabled + .switch::after{
   background-color:rgba(0, 0, 0, 0.25);
 }
 input:checked + .checkbox > .icon,
@@ -12733,12 +12753,12 @@ input:checked + .radio::before{
 }
 
 input:checked + .radio{
-  color:#448ee4;
+  color:#666;
 }
 
 input:checked + .checkbox{
-  border:2px solid transparent;
-  background-color:#448ee4;
+  border:1px solid transparent;
+  background-color:#666;
 }
 input:checked + .switch::after{
   left:calc(50% + 1px);
@@ -12747,10 +12767,10 @@ input:checked + .switch::after{
 
 input:checked + .switch{
   border-color:transparent;
-  background-color:#448ee4;
+  background-color:#666;
 }
 input:checked + .toggle{
-  background:#448ee4;
+  background:#666;
   color:#fff;
 }
 input:disabled + .toggle{
