@@ -532,6 +532,10 @@ legend{
 .select--s + .select-arrow{
   right:8px;
 }
+.select--border-0{
+  box-shadow:none !important;
+  padding:6px 30px 6px 0;
+}
 .select:disabled{
   pointer-events:none;
   color:rgba(0, 0, 0, 0.25);
@@ -12419,6 +12423,10 @@ legend{
 
 .select--s + .select-arrow{
   right:8px;
+}
+.select--border-0{
+  box-shadow:none !important;
+  padding:6px 30px 6px 0;
 }
 .select:disabled{
   pointer-events:none;
