@@ -42,7 +42,7 @@
 
 .input:focus,
 .textarea:focus,
-.select:focus {
+.select:focus .select--stroke {
   box-shadow: inset 0 0 0 1px var(--default-form-color);
 }
 
@@ -126,11 +126,11 @@
  */
 .input:disabled,
 .textarea:disabled,
-.select:disabled {
+.select--stroke:disabled {
   pointer-events: none;
   color: var(--darken50);
   background-color: var(--disabled-interactive-color);
-  box-shadow: inset 0 0 0 1px var(--disabled-interactive-color-dark);
+  box-shadow: inset 0 0 0 1px var(--disabled-interactive-color-dark) !important;
 }
 
 /* Using the attribute selector instead of the pseudo-class `:read-only`
@@ -160,7 +160,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /*
  * Style a select component.
- * Set the border (and arrow) color by adding a `select--border-{color}` modifier to the `select` element (`*-dark` colors are not available).
+ * Set the arrow color by adding a `select--{color}` modifier to the `select` element (`*-dark` colors are not available).
  *
  * @memberof Selects
  * @group
@@ -172,9 +172,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  *   </select>
  *   <div class='select-arrow'></div>
  * </div>
- * <div class='select-container mt6'>
- *   <select class='select select--border-green'>
- *     <option>green</option>
+ * <div class='select-container'>
+ *   <select class='select select--green'>
+ *     <option>default</option>
  *     <option>two</option>
  *   </select>
  *   <div class='select-arrow'></div>
@@ -192,8 +192,9 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
   color: currentColor;
-  padding: 6px 30px 6px 12px; /* plus arrow */
+  padding: 6px 30px 6px 0; /* plus arrow */
   cursor: pointer;
+  box-shadow: none;
 }
 
 .select-arrow {
@@ -212,7 +213,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /** @endgroup */
 
-.select:focus + .select-arrow {
+.select .select--stroke:focus + .select-arrow {
   border-top-color: var(--default-form-color);
 }
 
@@ -262,7 +263,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .select--s {
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
-  padding: 3px 24px 3px 6px; /* plus arrow */
+  padding: 3px 24px 3px 0; /* plus arrow */
 }
 
 .select--s + .select-arrow {
@@ -270,21 +271,33 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 /**
- * Make a select component borderless.
+ * Modify a select component so that it has a border.
+ * Set the border (and arrow) color by adding a `select--{color}` modifier to the `select` element along with the `select--stroke` modifier (`*-dark` colors are not available).
  *
  * @memberof Selects
  * @example
  * <div class='select-container'>
- *   <select class='select select--border-0'>
+ *   <select class='select select--stroke'>
  *     <option>one</option>
  *     <option>two</option>
  *   </select>
  *   <div class='select-arrow'></div>
  * </div>
+ * <div class='select-container mt6'>
+ *   <select class='select select--stroke select--green'>
+ *     <option>green</option>
+ *     <option>two</option>
+ *   </select>
+ *   <div class='select-arrow'></div>
+ * </div>
  */
-.select--border-0 {
-  box-shadow: none !important;
-  padding: 6px 30px 6px 0;
+.select--stroke {
+  padding: 6px 30px 6px 12px; /* plus arrow */
+  box-shadow: inset 0 0 0 1px var(--default-form-color-light);
+}
+
+.select--stroke .select--s {
+  padding: 3px 24px 3px 6px; /* plus arrow */
 }
 
 /**
@@ -299,12 +312,17 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  *   </select>
  *   <div class='select-arrow'></div>
  * </div>
+  * <div class='select-container'>
+ *   <select disabled class='select select--stroke'>
+ *     <option>one</option>
+ *     <option>two</option>
+ *   </select>
+ *   <div class='select-arrow'></div>
+ * </div>
  */
-.select:disabled {
+ .select:disabled {
   pointer-events: none;
-  color: var(--darken25);
-  background-color: var(--disabled-interactive-color-dark);
-  border-color: var(--transparent);
+  color: var(--inactive-text-color);
 }
 
 .select:disabled + .select-arrow {

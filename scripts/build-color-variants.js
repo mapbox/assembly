@@ -190,11 +190,11 @@ function buildColorVariants(variables, config) {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
       return (result += stripIndent(`
-        .select--border-${color} + .select-arrow {
+        .select--${color} + .select-arrow {
           border-top-color: var(--${color});
         }
 
-        .select--border-${color}:focus + .select-arrow {
+        .select--${color}:focus + .select-arrow {
           border-top-color: var(--${darkerShade});
         }
       `));
@@ -208,13 +208,13 @@ function buildColorVariants(variables, config) {
       return (result += stripIndent(`
         .textarea--border-${color},
         .input--border-${color},
-        .select--border-${color} {
+        .select--stroke.select--${color} {
           box-shadow: inset 0 0 0 1px var(--${color});
         }
 
         .textarea--border-${color}:focus,
         .input--border-${color}:focus,
-        .select--border-${color}:focus {
+        .select--stroke.select--${color}:focus {
           box-shadow: inset 0 0 0 1px var(--${darkerShade});
         }
       `));

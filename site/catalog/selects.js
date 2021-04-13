@@ -26,9 +26,11 @@ export class Selects extends React.Component {
 
         {colors.map(color => {
           let selectClass = 'select';
+          let selectClassStroke = 'select select--stroke';
           const selectContainerClass = 'select-container';
           if (color !== null) {
-            selectClass += ` select--border-${color}`;
+            selectClass += ` select--${color}`;
+            selectClassStroke += ` select--${color}`;
           }
           return (
             <div key={color} className="mb12">
@@ -55,6 +57,36 @@ export class Selects extends React.Component {
               <div className="inline-block mr12">
                 <div className={selectContainerClass}>
                   <select className={`${selectClass} select--s`}>
+                    <option>firstoption</option>
+                    <option>two</option>
+                    <option>three</option>
+                  </select>
+                  <div className="select-arrow" />
+                </div>
+              </div>
+              <div className="inline-block mr12">
+                <div className={selectContainerClass}>
+                  <select className={selectClassStroke}>
+                    <option>firstoption</option>
+                    <option disabled={true}>two</option>
+                    <option>three</option>
+                  </select>
+                  <div className="select-arrow" />
+                </div>
+              </div>
+              <div className="inline-block mr12">
+                <div className={selectContainerClass}>
+                  <select className={selectClassStroke} disabled={true}>
+                    <option>firstoption</option>
+                    <option>two</option>
+                    <option>three</option>
+                  </select>
+                  <div className="select-arrow" />
+                </div>
+              </div>
+              <div className="inline-block mr12">
+                <div className={selectContainerClass}>
+                  <select className={`${selectClassStroke} select--s`}>
                     <option>firstoption</option>
                     <option>two</option>
                     <option>three</option>
