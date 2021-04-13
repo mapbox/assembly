@@ -390,323 +390,323 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: transparent;
 }
 
-.select--border-gray + .select-arrow {
+.select--gray + .select-arrow {
   border-top-color: var(--gray);
 }
 
-.select--border-gray:focus + .select-arrow {
+.select--gray:focus + .select-arrow {
   border-top-color: var(--gray-dark);
 }
 
-.select--border-pink + .select-arrow {
+.select--pink + .select-arrow {
   border-top-color: var(--pink);
 }
 
-.select--border-pink:focus + .select-arrow {
+.select--pink:focus + .select-arrow {
   border-top-color: var(--pink-dark);
 }
 
-.select--border-red + .select-arrow {
+.select--red + .select-arrow {
   border-top-color: var(--red);
 }
 
-.select--border-red:focus + .select-arrow {
+.select--red:focus + .select-arrow {
   border-top-color: var(--red-dark);
 }
 
-.select--border-orange + .select-arrow {
+.select--orange + .select-arrow {
   border-top-color: var(--orange);
 }
 
-.select--border-orange:focus + .select-arrow {
+.select--orange:focus + .select-arrow {
   border-top-color: var(--orange-dark);
 }
 
-.select--border-yellow + .select-arrow {
+.select--yellow + .select-arrow {
   border-top-color: var(--yellow);
 }
 
-.select--border-yellow:focus + .select-arrow {
+.select--yellow:focus + .select-arrow {
   border-top-color: var(--yellow-dark);
 }
 
-.select--border-green + .select-arrow {
+.select--green + .select-arrow {
   border-top-color: var(--green);
 }
 
-.select--border-green:focus + .select-arrow {
+.select--green:focus + .select-arrow {
   border-top-color: var(--green-dark);
 }
 
-.select--border-blue + .select-arrow {
+.select--blue + .select-arrow {
   border-top-color: var(--blue);
 }
 
-.select--border-blue:focus + .select-arrow {
+.select--blue:focus + .select-arrow {
   border-top-color: var(--blue-dark);
 }
 
-.select--border-purple + .select-arrow {
+.select--purple + .select-arrow {
   border-top-color: var(--purple);
 }
 
-.select--border-purple:focus + .select-arrow {
+.select--purple:focus + .select-arrow {
   border-top-color: var(--purple-dark);
 }
 
-.select--border-darken25 + .select-arrow {
+.select--darken25 + .select-arrow {
   border-top-color: var(--darken25);
 }
 
-.select--border-darken25:focus + .select-arrow {
+.select--darken25:focus + .select-arrow {
   border-top-color: var(--darken50);
 }
 
-.select--border-darken50 + .select-arrow {
+.select--darken50 + .select-arrow {
   border-top-color: var(--darken50);
 }
 
-.select--border-darken50:focus + .select-arrow {
+.select--darken50:focus + .select-arrow {
   border-top-color: var(--darken75);
 }
 
-.select--border-darken75 + .select-arrow {
+.select--darken75 + .select-arrow {
   border-top-color: var(--darken75);
 }
 
-.select--border-darken75:focus + .select-arrow {
+.select--darken75:focus + .select-arrow {
   border-top-color: var(--black);
 }
 
-.select--border-lighten25 + .select-arrow {
+.select--lighten25 + .select-arrow {
   border-top-color: var(--lighten25);
 }
 
-.select--border-lighten25:focus + .select-arrow {
+.select--lighten25:focus + .select-arrow {
   border-top-color: var(--lighten50);
 }
 
-.select--border-lighten50 + .select-arrow {
+.select--lighten50 + .select-arrow {
   border-top-color: var(--lighten50);
 }
 
-.select--border-lighten50:focus + .select-arrow {
+.select--lighten50:focus + .select-arrow {
   border-top-color: var(--lighten75);
 }
 
-.select--border-lighten75 + .select-arrow {
+.select--lighten75 + .select-arrow {
   border-top-color: var(--lighten75);
 }
 
-.select--border-lighten75:focus + .select-arrow {
+.select--lighten75:focus + .select-arrow {
   border-top-color: var(--white);
 }
 
-.select--border-white + .select-arrow {
+.select--white + .select-arrow {
   border-top-color: var(--white);
 }
 
-.select--border-white:focus + .select-arrow {
+.select--white:focus + .select-arrow {
   border-top-color: var(--lighten75);
 }
 
-.select--border-transparent + .select-arrow {
+.select--transparent + .select-arrow {
   border-top-color: var(--transparent);
 }
 
-.select--border-transparent:focus + .select-arrow {
+.select--transparent:focus + .select-arrow {
   border-top-color: var(--darken10);
 }
 
 .textarea--border-gray,
 .input--border-gray,
-.select--border-gray {
+.select--stroke.select--gray {
   box-shadow: inset 0 0 0 1px var(--gray);
 }
 
 .textarea--border-gray:focus,
 .input--border-gray:focus,
-.select--border-gray:focus {
+.select--stroke.select--gray:focus {
   box-shadow: inset 0 0 0 1px var(--gray-dark);
 }
 
 .textarea--border-pink,
 .input--border-pink,
-.select--border-pink {
+.select--stroke.select--pink {
   box-shadow: inset 0 0 0 1px var(--pink);
 }
 
 .textarea--border-pink:focus,
 .input--border-pink:focus,
-.select--border-pink:focus {
+.select--stroke.select--pink:focus {
   box-shadow: inset 0 0 0 1px var(--pink-dark);
 }
 
 .textarea--border-red,
 .input--border-red,
-.select--border-red {
+.select--stroke.select--red {
   box-shadow: inset 0 0 0 1px var(--red);
 }
 
 .textarea--border-red:focus,
 .input--border-red:focus,
-.select--border-red:focus {
+.select--stroke.select--red:focus {
   box-shadow: inset 0 0 0 1px var(--red-dark);
 }
 
 .textarea--border-orange,
 .input--border-orange,
-.select--border-orange {
+.select--stroke.select--orange {
   box-shadow: inset 0 0 0 1px var(--orange);
 }
 
 .textarea--border-orange:focus,
 .input--border-orange:focus,
-.select--border-orange:focus {
+.select--stroke.select--orange:focus {
   box-shadow: inset 0 0 0 1px var(--orange-dark);
 }
 
 .textarea--border-yellow,
 .input--border-yellow,
-.select--border-yellow {
+.select--stroke.select--yellow {
   box-shadow: inset 0 0 0 1px var(--yellow);
 }
 
 .textarea--border-yellow:focus,
 .input--border-yellow:focus,
-.select--border-yellow:focus {
+.select--stroke.select--yellow:focus {
   box-shadow: inset 0 0 0 1px var(--yellow-dark);
 }
 
 .textarea--border-green,
 .input--border-green,
-.select--border-green {
+.select--stroke.select--green {
   box-shadow: inset 0 0 0 1px var(--green);
 }
 
 .textarea--border-green:focus,
 .input--border-green:focus,
-.select--border-green:focus {
+.select--stroke.select--green:focus {
   box-shadow: inset 0 0 0 1px var(--green-dark);
 }
 
 .textarea--border-blue,
 .input--border-blue,
-.select--border-blue {
+.select--stroke.select--blue {
   box-shadow: inset 0 0 0 1px var(--blue);
 }
 
 .textarea--border-blue:focus,
 .input--border-blue:focus,
-.select--border-blue:focus {
+.select--stroke.select--blue:focus {
   box-shadow: inset 0 0 0 1px var(--blue-dark);
 }
 
 .textarea--border-purple,
 .input--border-purple,
-.select--border-purple {
+.select--stroke.select--purple {
   box-shadow: inset 0 0 0 1px var(--purple);
 }
 
 .textarea--border-purple:focus,
 .input--border-purple:focus,
-.select--border-purple:focus {
+.select--stroke.select--purple:focus {
   box-shadow: inset 0 0 0 1px var(--purple-dark);
 }
 
 .textarea--border-darken25,
 .input--border-darken25,
-.select--border-darken25 {
+.select--stroke.select--darken25 {
   box-shadow: inset 0 0 0 1px var(--darken25);
 }
 
 .textarea--border-darken25:focus,
 .input--border-darken25:focus,
-.select--border-darken25:focus {
+.select--stroke.select--darken25:focus {
   box-shadow: inset 0 0 0 1px var(--darken50);
 }
 
 .textarea--border-darken50,
 .input--border-darken50,
-.select--border-darken50 {
+.select--stroke.select--darken50 {
   box-shadow: inset 0 0 0 1px var(--darken50);
 }
 
 .textarea--border-darken50:focus,
 .input--border-darken50:focus,
-.select--border-darken50:focus {
+.select--stroke.select--darken50:focus {
   box-shadow: inset 0 0 0 1px var(--darken75);
 }
 
 .textarea--border-darken75,
 .input--border-darken75,
-.select--border-darken75 {
+.select--stroke.select--darken75 {
   box-shadow: inset 0 0 0 1px var(--darken75);
 }
 
 .textarea--border-darken75:focus,
 .input--border-darken75:focus,
-.select--border-darken75:focus {
+.select--stroke.select--darken75:focus {
   box-shadow: inset 0 0 0 1px var(--black);
 }
 
 .textarea--border-lighten25,
 .input--border-lighten25,
-.select--border-lighten25 {
+.select--stroke.select--lighten25 {
   box-shadow: inset 0 0 0 1px var(--lighten25);
 }
 
 .textarea--border-lighten25:focus,
 .input--border-lighten25:focus,
-.select--border-lighten25:focus {
+.select--stroke.select--lighten25:focus {
   box-shadow: inset 0 0 0 1px var(--lighten50);
 }
 
 .textarea--border-lighten50,
 .input--border-lighten50,
-.select--border-lighten50 {
+.select--stroke.select--lighten50 {
   box-shadow: inset 0 0 0 1px var(--lighten50);
 }
 
 .textarea--border-lighten50:focus,
 .input--border-lighten50:focus,
-.select--border-lighten50:focus {
+.select--stroke.select--lighten50:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
 .textarea--border-lighten75,
 .input--border-lighten75,
-.select--border-lighten75 {
+.select--stroke.select--lighten75 {
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
 .textarea--border-lighten75:focus,
 .input--border-lighten75:focus,
-.select--border-lighten75:focus {
+.select--stroke.select--lighten75:focus {
   box-shadow: inset 0 0 0 1px var(--white);
 }
 
 .textarea--border-white,
 .input--border-white,
-.select--border-white {
+.select--stroke.select--white {
   box-shadow: inset 0 0 0 1px var(--white);
 }
 
 .textarea--border-white:focus,
 .input--border-white:focus,
-.select--border-white:focus {
+.select--stroke.select--white:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
 .textarea--border-transparent,
 .input--border-transparent,
-.select--border-transparent {
+.select--stroke.select--transparent {
   box-shadow: inset 0 0 0 1px var(--transparent);
 }
 
 .textarea--border-transparent:focus,
 .input--border-transparent:focus,
-.select--border-transparent:focus {
+.select--stroke.select--transparent:focus {
   box-shadow: inset 0 0 0 1px var(--darken10);
 }
 
@@ -3535,323 +3535,323 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: transparent;
 }
 
-.select--border-gray + .select-arrow {
+.select--gray + .select-arrow {
   border-top-color: var(--gray);
 }
 
-.select--border-gray:focus + .select-arrow {
+.select--gray:focus + .select-arrow {
   border-top-color: var(--gray-dark);
 }
 
-.select--border-pink + .select-arrow {
+.select--pink + .select-arrow {
   border-top-color: var(--pink);
 }
 
-.select--border-pink:focus + .select-arrow {
+.select--pink:focus + .select-arrow {
   border-top-color: var(--pink-dark);
 }
 
-.select--border-red + .select-arrow {
+.select--red + .select-arrow {
   border-top-color: var(--red);
 }
 
-.select--border-red:focus + .select-arrow {
+.select--red:focus + .select-arrow {
   border-top-color: var(--red-dark);
 }
 
-.select--border-orange + .select-arrow {
+.select--orange + .select-arrow {
   border-top-color: var(--orange);
 }
 
-.select--border-orange:focus + .select-arrow {
+.select--orange:focus + .select-arrow {
   border-top-color: var(--orange-dark);
 }
 
-.select--border-yellow + .select-arrow {
+.select--yellow + .select-arrow {
   border-top-color: var(--yellow);
 }
 
-.select--border-yellow:focus + .select-arrow {
+.select--yellow:focus + .select-arrow {
   border-top-color: var(--yellow-dark);
 }
 
-.select--border-green + .select-arrow {
+.select--green + .select-arrow {
   border-top-color: var(--green);
 }
 
-.select--border-green:focus + .select-arrow {
+.select--green:focus + .select-arrow {
   border-top-color: var(--green-dark);
 }
 
-.select--border-blue + .select-arrow {
+.select--blue + .select-arrow {
   border-top-color: var(--blue);
 }
 
-.select--border-blue:focus + .select-arrow {
+.select--blue:focus + .select-arrow {
   border-top-color: var(--blue-dark);
 }
 
-.select--border-purple + .select-arrow {
+.select--purple + .select-arrow {
   border-top-color: var(--purple);
 }
 
-.select--border-purple:focus + .select-arrow {
+.select--purple:focus + .select-arrow {
   border-top-color: var(--purple-dark);
 }
 
-.select--border-darken25 + .select-arrow {
+.select--darken25 + .select-arrow {
   border-top-color: var(--darken25);
 }
 
-.select--border-darken25:focus + .select-arrow {
+.select--darken25:focus + .select-arrow {
   border-top-color: var(--darken50);
 }
 
-.select--border-darken50 + .select-arrow {
+.select--darken50 + .select-arrow {
   border-top-color: var(--darken50);
 }
 
-.select--border-darken50:focus + .select-arrow {
+.select--darken50:focus + .select-arrow {
   border-top-color: var(--darken75);
 }
 
-.select--border-darken75 + .select-arrow {
+.select--darken75 + .select-arrow {
   border-top-color: var(--darken75);
 }
 
-.select--border-darken75:focus + .select-arrow {
+.select--darken75:focus + .select-arrow {
   border-top-color: var(--black);
 }
 
-.select--border-lighten25 + .select-arrow {
+.select--lighten25 + .select-arrow {
   border-top-color: var(--lighten25);
 }
 
-.select--border-lighten25:focus + .select-arrow {
+.select--lighten25:focus + .select-arrow {
   border-top-color: var(--lighten50);
 }
 
-.select--border-lighten50 + .select-arrow {
+.select--lighten50 + .select-arrow {
   border-top-color: var(--lighten50);
 }
 
-.select--border-lighten50:focus + .select-arrow {
+.select--lighten50:focus + .select-arrow {
   border-top-color: var(--lighten75);
 }
 
-.select--border-lighten75 + .select-arrow {
+.select--lighten75 + .select-arrow {
   border-top-color: var(--lighten75);
 }
 
-.select--border-lighten75:focus + .select-arrow {
+.select--lighten75:focus + .select-arrow {
   border-top-color: var(--white);
 }
 
-.select--border-white + .select-arrow {
+.select--white + .select-arrow {
   border-top-color: var(--white);
 }
 
-.select--border-white:focus + .select-arrow {
+.select--white:focus + .select-arrow {
   border-top-color: var(--lighten75);
 }
 
-.select--border-transparent + .select-arrow {
+.select--transparent + .select-arrow {
   border-top-color: var(--transparent);
 }
 
-.select--border-transparent:focus + .select-arrow {
+.select--transparent:focus + .select-arrow {
   border-top-color: var(--darken10);
 }
 
 .textarea--border-gray,
 .input--border-gray,
-.select--border-gray {
+.select--stroke.select--gray {
   box-shadow: inset 0 0 0 1px var(--gray);
 }
 
 .textarea--border-gray:focus,
 .input--border-gray:focus,
-.select--border-gray:focus {
+.select--stroke.select--gray:focus {
   box-shadow: inset 0 0 0 1px var(--gray-dark);
 }
 
 .textarea--border-pink,
 .input--border-pink,
-.select--border-pink {
+.select--stroke.select--pink {
   box-shadow: inset 0 0 0 1px var(--pink);
 }
 
 .textarea--border-pink:focus,
 .input--border-pink:focus,
-.select--border-pink:focus {
+.select--stroke.select--pink:focus {
   box-shadow: inset 0 0 0 1px var(--pink-dark);
 }
 
 .textarea--border-red,
 .input--border-red,
-.select--border-red {
+.select--stroke.select--red {
   box-shadow: inset 0 0 0 1px var(--red);
 }
 
 .textarea--border-red:focus,
 .input--border-red:focus,
-.select--border-red:focus {
+.select--stroke.select--red:focus {
   box-shadow: inset 0 0 0 1px var(--red-dark);
 }
 
 .textarea--border-orange,
 .input--border-orange,
-.select--border-orange {
+.select--stroke.select--orange {
   box-shadow: inset 0 0 0 1px var(--orange);
 }
 
 .textarea--border-orange:focus,
 .input--border-orange:focus,
-.select--border-orange:focus {
+.select--stroke.select--orange:focus {
   box-shadow: inset 0 0 0 1px var(--orange-dark);
 }
 
 .textarea--border-yellow,
 .input--border-yellow,
-.select--border-yellow {
+.select--stroke.select--yellow {
   box-shadow: inset 0 0 0 1px var(--yellow);
 }
 
 .textarea--border-yellow:focus,
 .input--border-yellow:focus,
-.select--border-yellow:focus {
+.select--stroke.select--yellow:focus {
   box-shadow: inset 0 0 0 1px var(--yellow-dark);
 }
 
 .textarea--border-green,
 .input--border-green,
-.select--border-green {
+.select--stroke.select--green {
   box-shadow: inset 0 0 0 1px var(--green);
 }
 
 .textarea--border-green:focus,
 .input--border-green:focus,
-.select--border-green:focus {
+.select--stroke.select--green:focus {
   box-shadow: inset 0 0 0 1px var(--green-dark);
 }
 
 .textarea--border-blue,
 .input--border-blue,
-.select--border-blue {
+.select--stroke.select--blue {
   box-shadow: inset 0 0 0 1px var(--blue);
 }
 
 .textarea--border-blue:focus,
 .input--border-blue:focus,
-.select--border-blue:focus {
+.select--stroke.select--blue:focus {
   box-shadow: inset 0 0 0 1px var(--blue-dark);
 }
 
 .textarea--border-purple,
 .input--border-purple,
-.select--border-purple {
+.select--stroke.select--purple {
   box-shadow: inset 0 0 0 1px var(--purple);
 }
 
 .textarea--border-purple:focus,
 .input--border-purple:focus,
-.select--border-purple:focus {
+.select--stroke.select--purple:focus {
   box-shadow: inset 0 0 0 1px var(--purple-dark);
 }
 
 .textarea--border-darken25,
 .input--border-darken25,
-.select--border-darken25 {
+.select--stroke.select--darken25 {
   box-shadow: inset 0 0 0 1px var(--darken25);
 }
 
 .textarea--border-darken25:focus,
 .input--border-darken25:focus,
-.select--border-darken25:focus {
+.select--stroke.select--darken25:focus {
   box-shadow: inset 0 0 0 1px var(--darken50);
 }
 
 .textarea--border-darken50,
 .input--border-darken50,
-.select--border-darken50 {
+.select--stroke.select--darken50 {
   box-shadow: inset 0 0 0 1px var(--darken50);
 }
 
 .textarea--border-darken50:focus,
 .input--border-darken50:focus,
-.select--border-darken50:focus {
+.select--stroke.select--darken50:focus {
   box-shadow: inset 0 0 0 1px var(--darken75);
 }
 
 .textarea--border-darken75,
 .input--border-darken75,
-.select--border-darken75 {
+.select--stroke.select--darken75 {
   box-shadow: inset 0 0 0 1px var(--darken75);
 }
 
 .textarea--border-darken75:focus,
 .input--border-darken75:focus,
-.select--border-darken75:focus {
+.select--stroke.select--darken75:focus {
   box-shadow: inset 0 0 0 1px var(--black);
 }
 
 .textarea--border-lighten25,
 .input--border-lighten25,
-.select--border-lighten25 {
+.select--stroke.select--lighten25 {
   box-shadow: inset 0 0 0 1px var(--lighten25);
 }
 
 .textarea--border-lighten25:focus,
 .input--border-lighten25:focus,
-.select--border-lighten25:focus {
+.select--stroke.select--lighten25:focus {
   box-shadow: inset 0 0 0 1px var(--lighten50);
 }
 
 .textarea--border-lighten50,
 .input--border-lighten50,
-.select--border-lighten50 {
+.select--stroke.select--lighten50 {
   box-shadow: inset 0 0 0 1px var(--lighten50);
 }
 
 .textarea--border-lighten50:focus,
 .input--border-lighten50:focus,
-.select--border-lighten50:focus {
+.select--stroke.select--lighten50:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
 .textarea--border-lighten75,
 .input--border-lighten75,
-.select--border-lighten75 {
+.select--stroke.select--lighten75 {
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
 .textarea--border-lighten75:focus,
 .input--border-lighten75:focus,
-.select--border-lighten75:focus {
+.select--stroke.select--lighten75:focus {
   box-shadow: inset 0 0 0 1px var(--white);
 }
 
 .textarea--border-white,
 .input--border-white,
-.select--border-white {
+.select--stroke.select--white {
   box-shadow: inset 0 0 0 1px var(--white);
 }
 
 .textarea--border-white:focus,
 .input--border-white:focus,
-.select--border-white:focus {
+.select--stroke.select--white:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
 .textarea--border-transparent,
 .input--border-transparent,
-.select--border-transparent {
+.select--stroke.select--transparent {
   box-shadow: inset 0 0 0 1px var(--transparent);
 }
 
 .textarea--border-transparent:focus,
 .input--border-transparent:focus,
-.select--border-transparent:focus {
+.select--stroke.select--transparent:focus {
   box-shadow: inset 0 0 0 1px var(--darken10);
 }
 
@@ -6347,43 +6347,43 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: transparent;
 }
 
-.select--border-red + .select-arrow {
+.select--red + .select-arrow {
   border-top-color: var(--red);
 }
 
-.select--border-red:focus + .select-arrow {
+.select--red:focus + .select-arrow {
   border-top-color: var(--red-dark);
 }
 
-.select--border-teal + .select-arrow {
+.select--teal + .select-arrow {
   border-top-color: var(--teal);
 }
 
-.select--border-teal:focus + .select-arrow {
+.select--teal:focus + .select-arrow {
   border-top-color: var(--teal-dark);
 }
 
 .textarea--border-red,
 .input--border-red,
-.select--border-red {
+.select--stroke.select--red {
   box-shadow: inset 0 0 0 1px var(--red);
 }
 
 .textarea--border-red:focus,
 .input--border-red:focus,
-.select--border-red:focus {
+.select--stroke.select--red:focus {
   box-shadow: inset 0 0 0 1px var(--red-dark);
 }
 
 .textarea--border-teal,
 .input--border-teal,
-.select--border-teal {
+.select--stroke.select--teal {
   box-shadow: inset 0 0 0 1px var(--teal);
 }
 
 .textarea--border-teal:focus,
 .input--border-teal:focus,
-.select--border-teal:focus {
+.select--stroke.select--teal:focus {
   box-shadow: inset 0 0 0 1px var(--teal-dark);
 }
 
@@ -6785,63 +6785,63 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: transparent;
 }
 
-.select--border-lighten50 + .select-arrow {
+.select--lighten50 + .select-arrow {
   border-top-color: var(--lighten50);
 }
 
-.select--border-lighten50:focus + .select-arrow {
+.select--lighten50:focus + .select-arrow {
   border-top-color: var(--lighten75);
 }
 
-.select--border-lighten25 + .select-arrow {
+.select--lighten25 + .select-arrow {
   border-top-color: var(--lighten25);
 }
 
-.select--border-lighten25:focus + .select-arrow {
+.select--lighten25:focus + .select-arrow {
   border-top-color: var(--lighten50);
 }
 
-.select--border-gray + .select-arrow {
+.select--gray + .select-arrow {
   border-top-color: var(--gray);
 }
 
-.select--border-gray:focus + .select-arrow {
+.select--gray:focus + .select-arrow {
   border-top-color: var(--gray-dark);
 }
 
 .textarea--border-lighten50,
 .input--border-lighten50,
-.select--border-lighten50 {
+.select--stroke.select--lighten50 {
   box-shadow: inset 0 0 0 1px var(--lighten50);
 }
 
 .textarea--border-lighten50:focus,
 .input--border-lighten50:focus,
-.select--border-lighten50:focus {
+.select--stroke.select--lighten50:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
 .textarea--border-lighten25,
 .input--border-lighten25,
-.select--border-lighten25 {
+.select--stroke.select--lighten25 {
   box-shadow: inset 0 0 0 1px var(--lighten25);
 }
 
 .textarea--border-lighten25:focus,
 .input--border-lighten25:focus,
-.select--border-lighten25:focus {
+.select--stroke.select--lighten25:focus {
   box-shadow: inset 0 0 0 1px var(--lighten50);
 }
 
 .textarea--border-gray,
 .input--border-gray,
-.select--border-gray {
+.select--stroke.select--gray {
   box-shadow: inset 0 0 0 1px var(--gray);
 }
 
 .textarea--border-gray:focus,
 .input--border-gray:focus,
-.select--border-gray:focus {
+.select--stroke.select--gray:focus {
   box-shadow: inset 0 0 0 1px var(--gray-dark);
 }
 
