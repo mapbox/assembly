@@ -90,7 +90,7 @@ function isNotAccessibleForForms(color) {
   return (
     color === 'black' ||
     /^(darken5|darken10|lighten5|lighten10)$/.test(color) ||
-    /(-dark|-light|-faint)$/.test(color)
+    /(-dark|-medium|-light|-lighter|-faint)$/.test(color)
   );
 }
 
@@ -145,10 +145,14 @@ function buildColorVariants(variables, config) {
     const colorShade = splitColor[1];
     switch (colorShade) {
       case 'faint':
+        return `${colorBase}-lighter`;
+      case 'lighter':
         return `${colorBase}-light`;
       case 'light':
         return colorBase;
       case undefined:
+        return `${colorBase}-medium`;
+      case 'medium':
         return `${colorBase}-dark`;
       case 'dark':
         throw new Error(
@@ -342,9 +346,9 @@ function buildColorVariants(variables, config) {
        * <div class='grid'>`);
     colors.forEach(color => {
       if (isNotAccessibleExceptBg(color)) return;
-      css += `\n *   <div class='col col--3 color-${color}'>color-${color}</div>`;
+      css += `\n *   <div class='col col--2 color-${color}'>color-${color}</div>`;
     });
-    css += `\n *   <div class='col col--3 color-text'>.color-text</div>`; // eslint-disable-line quotes
+    css += `\n *   <div class='col col--2 color-text'>.color-text</div>`; // eslint-disable-line quotes
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
       if (isNotAccessibleExceptBg(color)) return result;
@@ -377,7 +381,7 @@ function buildColorVariants(variables, config) {
        * @example
        * <div class='grid'>`);
     colors.forEach(color => {
-      css += `\n *   <div class='col col--3 bg-${color} py6 px6'>bg-${color}</div>`;
+      css += `\n *   <div class='col col--2 bg-${color} py6 px6'>bg-${color}</div>`;
     });
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
