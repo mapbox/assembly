@@ -8,56 +8,56 @@ const defaultVariables = require('../src/variables');
 
 const allColors = [
   'gray-dark',
-  'gray-medium',
+  'gray-deep',
   'gray',
   'gray-light',
   'gray-lighter',
   'gray-faint',
 
   'pink-dark',
-  'pink-medium',
+  'pink-deep',
   'pink',
   'pink-light',
   'pink-lighter',
   'pink-faint',
 
   'red-dark',
-  'red-medium',
+  'red-deep',
   'red',
   'red-light',
   'red-lighter',
   'red-faint',
 
   'orange-dark',
-  'orange-medium',
+  'orange-deep',
   'orange',
   'orange-light',
   'orange-lighter',
   'orange-faint',
 
   'yellow-dark',
-  'yellow-medium',
+  'yellow-deep',
   'yellow',
   'yellow-light',
   'yellow-lighter',
   'yellow-faint',
 
   'green-dark',
-  'green-medium',
+  'green-deep',
   'green',
   'green-light',
   'green-lighter',
   'green-faint',
 
   'blue-dark',
-  'blue-medium',
+  'blue-deep',
   'blue',
   'blue-light',
   'blue-lighter',
   'blue-faint',
 
   'purple-dark',
-  'purple-medium',
+  'purple-deep',
   'purple',
   'purple-light',
   'purple-lighter',
@@ -90,7 +90,7 @@ function isNotAccessibleForForms(color) {
   return (
     color === 'black' ||
     /^(darken5|darken10|lighten5|lighten10)$/.test(color) ||
-    /(-dark|-medium|-light|-lighter|-faint)$/.test(color)
+    /(-dark|-deep|-light|-lighter|-faint)$/.test(color)
   );
 }
 
@@ -151,8 +151,8 @@ function buildColorVariants(variables, config) {
       case 'light':
         return colorBase;
       case undefined:
-        return `${colorBase}-medium`;
-      case 'medium':
+        return `${colorBase}-deep`;
+      case 'deep':
         return `${colorBase}-dark`;
       case 'dark':
         throw new Error(

@@ -5,12 +5,12 @@ scripts/build-color-variants.js to produce the output you want */
 
 /* Color variants */
 
-.btn--gray-medium {
-  background-color: var(--gray-medium);
+.btn--gray-deep {
+  background-color: var(--gray-deep);
 }
 
-.btn--gray-medium:hover,
-.btn--gray-medium.is-active {
+.btn--gray-deep:hover,
+.btn--gray-deep.is-active {
   background-color: var(--gray-dark);
 }
 
@@ -20,7 +20,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--gray:hover,
 .btn--gray.is-active {
-  background-color: var(--gray-medium);
+  background-color: var(--gray-deep);
 }
 
 .btn--gray-light {
@@ -41,12 +41,12 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--gray-light);
 }
 
-.btn--pink-medium {
-  background-color: var(--pink-medium);
+.btn--pink-deep {
+  background-color: var(--pink-deep);
 }
 
-.btn--pink-medium:hover,
-.btn--pink-medium.is-active {
+.btn--pink-deep:hover,
+.btn--pink-deep.is-active {
   background-color: var(--pink-dark);
 }
 
@@ -56,7 +56,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--pink:hover,
 .btn--pink.is-active {
-  background-color: var(--pink-medium);
+  background-color: var(--pink-deep);
 }
 
 .btn--pink-light {
@@ -77,12 +77,12 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--pink-light);
 }
 
-.btn--red-medium {
-  background-color: var(--red-medium);
+.btn--red-deep {
+  background-color: var(--red-deep);
 }
 
-.btn--red-medium:hover,
-.btn--red-medium.is-active {
+.btn--red-deep:hover,
+.btn--red-deep.is-active {
   background-color: var(--red-dark);
 }
 
@@ -92,7 +92,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--red:hover,
 .btn--red.is-active {
-  background-color: var(--red-medium);
+  background-color: var(--red-deep);
 }
 
 .btn--red-light {
@@ -113,12 +113,12 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--red-light);
 }
 
-.btn--orange-medium {
-  background-color: var(--orange-medium);
+.btn--orange-deep {
+  background-color: var(--orange-deep);
 }
 
-.btn--orange-medium:hover,
-.btn--orange-medium.is-active {
+.btn--orange-deep:hover,
+.btn--orange-deep.is-active {
   background-color: var(--orange-dark);
 }
 
@@ -128,7 +128,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--orange:hover,
 .btn--orange.is-active {
-  background-color: var(--orange-medium);
+  background-color: var(--orange-deep);
 }
 
 .btn--orange-light {
@@ -149,12 +149,12 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--orange-light);
 }
 
-.btn--yellow-medium {
-  background-color: var(--yellow-medium);
+.btn--yellow-deep {
+  background-color: var(--yellow-deep);
 }
 
-.btn--yellow-medium:hover,
-.btn--yellow-medium.is-active {
+.btn--yellow-deep:hover,
+.btn--yellow-deep.is-active {
   background-color: var(--yellow-dark);
 }
 
@@ -164,7 +164,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--yellow:hover,
 .btn--yellow.is-active {
-  background-color: var(--yellow-medium);
+  background-color: var(--yellow-deep);
 }
 
 .btn--yellow-light {
@@ -185,12 +185,12 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--yellow-light);
 }
 
-.btn--green-medium {
-  background-color: var(--green-medium);
+.btn--green-deep {
+  background-color: var(--green-deep);
 }
 
-.btn--green-medium:hover,
-.btn--green-medium.is-active {
+.btn--green-deep:hover,
+.btn--green-deep.is-active {
   background-color: var(--green-dark);
 }
 
@@ -200,7 +200,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--green:hover,
 .btn--green.is-active {
-  background-color: var(--green-medium);
+  background-color: var(--green-deep);
 }
 
 .btn--green-light {
@@ -221,12 +221,12 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--green-light);
 }
 
-.btn--blue-medium {
-  background-color: var(--blue-medium);
+.btn--blue-deep {
+  background-color: var(--blue-deep);
 }
 
-.btn--blue-medium:hover,
-.btn--blue-medium.is-active {
+.btn--blue-deep:hover,
+.btn--blue-deep.is-active {
   background-color: var(--blue-dark);
 }
 
@@ -236,7 +236,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--blue:hover,
 .btn--blue.is-active {
-  background-color: var(--blue-medium);
+  background-color: var(--blue-deep);
 }
 
 .btn--blue-light {
@@ -257,12 +257,12 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--blue-light);
 }
 
-.btn--purple-medium {
-  background-color: var(--purple-medium);
+.btn--purple-deep {
+  background-color: var(--purple-deep);
 }
 
-.btn--purple-medium:hover,
-.btn--purple-medium.is-active {
+.btn--purple-deep:hover,
+.btn--purple-deep.is-active {
   background-color: var(--purple-dark);
 }
 
@@ -272,7 +272,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--purple:hover,
 .btn--purple.is-active {
-  background-color: var(--purple-medium);
+  background-color: var(--purple-deep);
 }
 
 .btn--purple-light {
@@ -389,7 +389,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--gray:hover,
 .btn--stroke.btn--gray.is-active {
-  color: var(--gray-medium);
+  color: var(--gray-deep);
 }
 
 .btn--stroke.btn--pink {
@@ -398,7 +398,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--pink:hover,
 .btn--stroke.btn--pink.is-active {
-  color: var(--pink-medium);
+  color: var(--pink-deep);
 }
 
 .btn--stroke.btn--red {
@@ -407,7 +407,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--red:hover,
 .btn--stroke.btn--red.is-active {
-  color: var(--red-medium);
+  color: var(--red-deep);
 }
 
 .btn--stroke.btn--orange {
@@ -416,7 +416,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--orange:hover,
 .btn--stroke.btn--orange.is-active {
-  color: var(--orange-medium);
+  color: var(--orange-deep);
 }
 
 .btn--stroke.btn--yellow {
@@ -425,7 +425,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--yellow:hover,
 .btn--stroke.btn--yellow.is-active {
-  color: var(--yellow-medium);
+  color: var(--yellow-deep);
 }
 
 .btn--stroke.btn--green {
@@ -434,7 +434,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--green:hover,
 .btn--stroke.btn--green.is-active {
-  color: var(--green-medium);
+  color: var(--green-deep);
 }
 
 .btn--stroke.btn--blue {
@@ -443,7 +443,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--blue:hover,
 .btn--stroke.btn--blue.is-active {
-  color: var(--blue-medium);
+  color: var(--blue-deep);
 }
 
 .btn--stroke.btn--purple {
@@ -452,7 +452,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--purple:hover,
 .btn--stroke.btn--purple.is-active {
-  color: var(--purple-medium);
+  color: var(--purple-deep);
 }
 
 .btn--stroke.btn--darken25 {
@@ -536,7 +536,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-gray:focus + .select-arrow {
-  border-top-color: var(--gray-medium);
+  border-top-color: var(--gray-deep);
 }
 
 .select--border-pink + .select-arrow {
@@ -544,7 +544,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-pink:focus + .select-arrow {
-  border-top-color: var(--pink-medium);
+  border-top-color: var(--pink-deep);
 }
 
 .select--border-red + .select-arrow {
@@ -552,7 +552,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-red:focus + .select-arrow {
-  border-top-color: var(--red-medium);
+  border-top-color: var(--red-deep);
 }
 
 .select--border-orange + .select-arrow {
@@ -560,7 +560,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-orange:focus + .select-arrow {
-  border-top-color: var(--orange-medium);
+  border-top-color: var(--orange-deep);
 }
 
 .select--border-yellow + .select-arrow {
@@ -568,7 +568,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-yellow:focus + .select-arrow {
-  border-top-color: var(--yellow-medium);
+  border-top-color: var(--yellow-deep);
 }
 
 .select--border-green + .select-arrow {
@@ -576,7 +576,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-green:focus + .select-arrow {
-  border-top-color: var(--green-medium);
+  border-top-color: var(--green-deep);
 }
 
 .select--border-blue + .select-arrow {
@@ -584,7 +584,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-blue:focus + .select-arrow {
-  border-top-color: var(--blue-medium);
+  border-top-color: var(--blue-deep);
 }
 
 .select--border-purple + .select-arrow {
@@ -592,7 +592,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-purple:focus + .select-arrow {
-  border-top-color: var(--purple-medium);
+  border-top-color: var(--purple-deep);
 }
 
 .select--border-darken25 + .select-arrow {
@@ -668,7 +668,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-gray:focus,
 .input--border-gray:focus,
 .select--border-gray:focus {
-  box-shadow: inset 0 0 0 1px var(--gray-medium);
+  box-shadow: inset 0 0 0 1px var(--gray-deep);
 }
 
 .textarea--border-pink,
@@ -680,7 +680,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-pink:focus,
 .input--border-pink:focus,
 .select--border-pink:focus {
-  box-shadow: inset 0 0 0 1px var(--pink-medium);
+  box-shadow: inset 0 0 0 1px var(--pink-deep);
 }
 
 .textarea--border-red,
@@ -692,7 +692,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-red:focus,
 .input--border-red:focus,
 .select--border-red:focus {
-  box-shadow: inset 0 0 0 1px var(--red-medium);
+  box-shadow: inset 0 0 0 1px var(--red-deep);
 }
 
 .textarea--border-orange,
@@ -704,7 +704,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-orange:focus,
 .input--border-orange:focus,
 .select--border-orange:focus {
-  box-shadow: inset 0 0 0 1px var(--orange-medium);
+  box-shadow: inset 0 0 0 1px var(--orange-deep);
 }
 
 .textarea--border-yellow,
@@ -716,7 +716,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-yellow:focus,
 .input--border-yellow:focus,
 .select--border-yellow:focus {
-  box-shadow: inset 0 0 0 1px var(--yellow-medium);
+  box-shadow: inset 0 0 0 1px var(--yellow-deep);
 }
 
 .textarea--border-green,
@@ -728,7 +728,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-green:focus,
 .input--border-green:focus,
 .select--border-green:focus {
-  box-shadow: inset 0 0 0 1px var(--green-medium);
+  box-shadow: inset 0 0 0 1px var(--green-deep);
 }
 
 .textarea--border-blue,
@@ -740,7 +740,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-blue:focus,
 .input--border-blue:focus,
 .select--border-blue:focus {
-  box-shadow: inset 0 0 0 1px var(--blue-medium);
+  box-shadow: inset 0 0 0 1px var(--blue-deep);
 }
 
 .textarea--border-purple,
@@ -752,7 +752,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-purple:focus,
 .input--border-purple:focus,
 .select--border-purple:focus {
-  box-shadow: inset 0 0 0 1px var(--purple-medium);
+  box-shadow: inset 0 0 0 1px var(--purple-deep);
 }
 
 .textarea--border-darken25,
@@ -1488,49 +1488,49 @@ input:checked + .switch--dot-transparent::after {
  * @example
  * <div class='grid'>
  *   <div class='col col--2 color-gray-dark'>color-gray-dark</div>
- *   <div class='col col--2 color-gray-medium'>color-gray-medium</div>
+ *   <div class='col col--2 color-gray-deep'>color-gray-deep</div>
  *   <div class='col col--2 color-gray'>color-gray</div>
  *   <div class='col col--2 color-gray-light'>color-gray-light</div>
  *   <div class='col col--2 color-gray-lighter'>color-gray-lighter</div>
  *   <div class='col col--2 color-gray-faint'>color-gray-faint</div>
  *   <div class='col col--2 color-pink-dark'>color-pink-dark</div>
- *   <div class='col col--2 color-pink-medium'>color-pink-medium</div>
+ *   <div class='col col--2 color-pink-deep'>color-pink-deep</div>
  *   <div class='col col--2 color-pink'>color-pink</div>
  *   <div class='col col--2 color-pink-light'>color-pink-light</div>
  *   <div class='col col--2 color-pink-lighter'>color-pink-lighter</div>
  *   <div class='col col--2 color-pink-faint'>color-pink-faint</div>
  *   <div class='col col--2 color-red-dark'>color-red-dark</div>
- *   <div class='col col--2 color-red-medium'>color-red-medium</div>
+ *   <div class='col col--2 color-red-deep'>color-red-deep</div>
  *   <div class='col col--2 color-red'>color-red</div>
  *   <div class='col col--2 color-red-light'>color-red-light</div>
  *   <div class='col col--2 color-red-lighter'>color-red-lighter</div>
  *   <div class='col col--2 color-red-faint'>color-red-faint</div>
  *   <div class='col col--2 color-orange-dark'>color-orange-dark</div>
- *   <div class='col col--2 color-orange-medium'>color-orange-medium</div>
+ *   <div class='col col--2 color-orange-deep'>color-orange-deep</div>
  *   <div class='col col--2 color-orange'>color-orange</div>
  *   <div class='col col--2 color-orange-light'>color-orange-light</div>
  *   <div class='col col--2 color-orange-lighter'>color-orange-lighter</div>
  *   <div class='col col--2 color-orange-faint'>color-orange-faint</div>
  *   <div class='col col--2 color-yellow-dark'>color-yellow-dark</div>
- *   <div class='col col--2 color-yellow-medium'>color-yellow-medium</div>
+ *   <div class='col col--2 color-yellow-deep'>color-yellow-deep</div>
  *   <div class='col col--2 color-yellow'>color-yellow</div>
  *   <div class='col col--2 color-yellow-light'>color-yellow-light</div>
  *   <div class='col col--2 color-yellow-lighter'>color-yellow-lighter</div>
  *   <div class='col col--2 color-yellow-faint'>color-yellow-faint</div>
  *   <div class='col col--2 color-green-dark'>color-green-dark</div>
- *   <div class='col col--2 color-green-medium'>color-green-medium</div>
+ *   <div class='col col--2 color-green-deep'>color-green-deep</div>
  *   <div class='col col--2 color-green'>color-green</div>
  *   <div class='col col--2 color-green-light'>color-green-light</div>
  *   <div class='col col--2 color-green-lighter'>color-green-lighter</div>
  *   <div class='col col--2 color-green-faint'>color-green-faint</div>
  *   <div class='col col--2 color-blue-dark'>color-blue-dark</div>
- *   <div class='col col--2 color-blue-medium'>color-blue-medium</div>
+ *   <div class='col col--2 color-blue-deep'>color-blue-deep</div>
  *   <div class='col col--2 color-blue'>color-blue</div>
  *   <div class='col col--2 color-blue-light'>color-blue-light</div>
  *   <div class='col col--2 color-blue-lighter'>color-blue-lighter</div>
  *   <div class='col col--2 color-blue-faint'>color-blue-faint</div>
  *   <div class='col col--2 color-purple-dark'>color-purple-dark</div>
- *   <div class='col col--2 color-purple-medium'>color-purple-medium</div>
+ *   <div class='col col--2 color-purple-deep'>color-purple-deep</div>
  *   <div class='col col--2 color-purple'>color-purple</div>
  *   <div class='col col--2 color-purple-light'>color-purple-light</div>
  *   <div class='col col--2 color-purple-lighter'>color-purple-lighter</div>
@@ -1553,8 +1553,8 @@ input:checked + .switch--dot-transparent::after {
   color: var(--gray-dark) !important;
 }
 
-.color-gray-medium {
-  color: var(--gray-medium) !important;
+.color-gray-deep {
+  color: var(--gray-deep) !important;
 }
 
 .color-gray {
@@ -1577,8 +1577,8 @@ input:checked + .switch--dot-transparent::after {
   color: var(--pink-dark) !important;
 }
 
-.color-pink-medium {
-  color: var(--pink-medium) !important;
+.color-pink-deep {
+  color: var(--pink-deep) !important;
 }
 
 .color-pink {
@@ -1601,8 +1601,8 @@ input:checked + .switch--dot-transparent::after {
   color: var(--red-dark) !important;
 }
 
-.color-red-medium {
-  color: var(--red-medium) !important;
+.color-red-deep {
+  color: var(--red-deep) !important;
 }
 
 .color-red {
@@ -1625,8 +1625,8 @@ input:checked + .switch--dot-transparent::after {
   color: var(--orange-dark) !important;
 }
 
-.color-orange-medium {
-  color: var(--orange-medium) !important;
+.color-orange-deep {
+  color: var(--orange-deep) !important;
 }
 
 .color-orange {
@@ -1649,8 +1649,8 @@ input:checked + .switch--dot-transparent::after {
   color: var(--yellow-dark) !important;
 }
 
-.color-yellow-medium {
-  color: var(--yellow-medium) !important;
+.color-yellow-deep {
+  color: var(--yellow-deep) !important;
 }
 
 .color-yellow {
@@ -1673,8 +1673,8 @@ input:checked + .switch--dot-transparent::after {
   color: var(--green-dark) !important;
 }
 
-.color-green-medium {
-  color: var(--green-medium) !important;
+.color-green-deep {
+  color: var(--green-deep) !important;
 }
 
 .color-green {
@@ -1697,8 +1697,8 @@ input:checked + .switch--dot-transparent::after {
   color: var(--blue-dark) !important;
 }
 
-.color-blue-medium {
-  color: var(--blue-medium) !important;
+.color-blue-deep {
+  color: var(--blue-deep) !important;
 }
 
 .color-blue {
@@ -1721,8 +1721,8 @@ input:checked + .switch--dot-transparent::after {
   color: var(--purple-dark) !important;
 }
 
-.color-purple-medium {
-  color: var(--purple-medium) !important;
+.color-purple-deep {
+  color: var(--purple-deep) !important;
 }
 
 .color-purple {
@@ -1804,49 +1804,49 @@ input:checked + .switch--dot-transparent::after {
  * @example
  * <div class='grid'>
  *   <div class='col col--2 bg-gray-dark py6 px6'>bg-gray-dark</div>
- *   <div class='col col--2 bg-gray-medium py6 px6'>bg-gray-medium</div>
+ *   <div class='col col--2 bg-gray-deep py6 px6'>bg-gray-deep</div>
  *   <div class='col col--2 bg-gray py6 px6'>bg-gray</div>
  *   <div class='col col--2 bg-gray-light py6 px6'>bg-gray-light</div>
  *   <div class='col col--2 bg-gray-lighter py6 px6'>bg-gray-lighter</div>
  *   <div class='col col--2 bg-gray-faint py6 px6'>bg-gray-faint</div>
  *   <div class='col col--2 bg-pink-dark py6 px6'>bg-pink-dark</div>
- *   <div class='col col--2 bg-pink-medium py6 px6'>bg-pink-medium</div>
+ *   <div class='col col--2 bg-pink-deep py6 px6'>bg-pink-deep</div>
  *   <div class='col col--2 bg-pink py6 px6'>bg-pink</div>
  *   <div class='col col--2 bg-pink-light py6 px6'>bg-pink-light</div>
  *   <div class='col col--2 bg-pink-lighter py6 px6'>bg-pink-lighter</div>
  *   <div class='col col--2 bg-pink-faint py6 px6'>bg-pink-faint</div>
  *   <div class='col col--2 bg-red-dark py6 px6'>bg-red-dark</div>
- *   <div class='col col--2 bg-red-medium py6 px6'>bg-red-medium</div>
+ *   <div class='col col--2 bg-red-deep py6 px6'>bg-red-deep</div>
  *   <div class='col col--2 bg-red py6 px6'>bg-red</div>
  *   <div class='col col--2 bg-red-light py6 px6'>bg-red-light</div>
  *   <div class='col col--2 bg-red-lighter py6 px6'>bg-red-lighter</div>
  *   <div class='col col--2 bg-red-faint py6 px6'>bg-red-faint</div>
  *   <div class='col col--2 bg-orange-dark py6 px6'>bg-orange-dark</div>
- *   <div class='col col--2 bg-orange-medium py6 px6'>bg-orange-medium</div>
+ *   <div class='col col--2 bg-orange-deep py6 px6'>bg-orange-deep</div>
  *   <div class='col col--2 bg-orange py6 px6'>bg-orange</div>
  *   <div class='col col--2 bg-orange-light py6 px6'>bg-orange-light</div>
  *   <div class='col col--2 bg-orange-lighter py6 px6'>bg-orange-lighter</div>
  *   <div class='col col--2 bg-orange-faint py6 px6'>bg-orange-faint</div>
  *   <div class='col col--2 bg-yellow-dark py6 px6'>bg-yellow-dark</div>
- *   <div class='col col--2 bg-yellow-medium py6 px6'>bg-yellow-medium</div>
+ *   <div class='col col--2 bg-yellow-deep py6 px6'>bg-yellow-deep</div>
  *   <div class='col col--2 bg-yellow py6 px6'>bg-yellow</div>
  *   <div class='col col--2 bg-yellow-light py6 px6'>bg-yellow-light</div>
  *   <div class='col col--2 bg-yellow-lighter py6 px6'>bg-yellow-lighter</div>
  *   <div class='col col--2 bg-yellow-faint py6 px6'>bg-yellow-faint</div>
  *   <div class='col col--2 bg-green-dark py6 px6'>bg-green-dark</div>
- *   <div class='col col--2 bg-green-medium py6 px6'>bg-green-medium</div>
+ *   <div class='col col--2 bg-green-deep py6 px6'>bg-green-deep</div>
  *   <div class='col col--2 bg-green py6 px6'>bg-green</div>
  *   <div class='col col--2 bg-green-light py6 px6'>bg-green-light</div>
  *   <div class='col col--2 bg-green-lighter py6 px6'>bg-green-lighter</div>
  *   <div class='col col--2 bg-green-faint py6 px6'>bg-green-faint</div>
  *   <div class='col col--2 bg-blue-dark py6 px6'>bg-blue-dark</div>
- *   <div class='col col--2 bg-blue-medium py6 px6'>bg-blue-medium</div>
+ *   <div class='col col--2 bg-blue-deep py6 px6'>bg-blue-deep</div>
  *   <div class='col col--2 bg-blue py6 px6'>bg-blue</div>
  *   <div class='col col--2 bg-blue-light py6 px6'>bg-blue-light</div>
  *   <div class='col col--2 bg-blue-lighter py6 px6'>bg-blue-lighter</div>
  *   <div class='col col--2 bg-blue-faint py6 px6'>bg-blue-faint</div>
  *   <div class='col col--2 bg-purple-dark py6 px6'>bg-purple-dark</div>
- *   <div class='col col--2 bg-purple-medium py6 px6'>bg-purple-medium</div>
+ *   <div class='col col--2 bg-purple-deep py6 px6'>bg-purple-deep</div>
  *   <div class='col col--2 bg-purple py6 px6'>bg-purple</div>
  *   <div class='col col--2 bg-purple-light py6 px6'>bg-purple-light</div>
  *   <div class='col col--2 bg-purple-lighter py6 px6'>bg-purple-lighter</div>
@@ -1870,8 +1870,8 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--gray-dark) !important;
 }
 
-.bg-gray-medium {
-  background-color: var(--gray-medium) !important;
+.bg-gray-deep {
+  background-color: var(--gray-deep) !important;
 }
 
 .bg-gray {
@@ -1894,8 +1894,8 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--pink-dark) !important;
 }
 
-.bg-pink-medium {
-  background-color: var(--pink-medium) !important;
+.bg-pink-deep {
+  background-color: var(--pink-deep) !important;
 }
 
 .bg-pink {
@@ -1918,8 +1918,8 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--red-dark) !important;
 }
 
-.bg-red-medium {
-  background-color: var(--red-medium) !important;
+.bg-red-deep {
+  background-color: var(--red-deep) !important;
 }
 
 .bg-red {
@@ -1942,8 +1942,8 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--orange-dark) !important;
 }
 
-.bg-orange-medium {
-  background-color: var(--orange-medium) !important;
+.bg-orange-deep {
+  background-color: var(--orange-deep) !important;
 }
 
 .bg-orange {
@@ -1966,8 +1966,8 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--yellow-dark) !important;
 }
 
-.bg-yellow-medium {
-  background-color: var(--yellow-medium) !important;
+.bg-yellow-deep {
+  background-color: var(--yellow-deep) !important;
 }
 
 .bg-yellow {
@@ -1990,8 +1990,8 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--green-dark) !important;
 }
 
-.bg-green-medium {
-  background-color: var(--green-medium) !important;
+.bg-green-deep {
+  background-color: var(--green-deep) !important;
 }
 
 .bg-green {
@@ -2014,8 +2014,8 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--blue-dark) !important;
 }
 
-.bg-blue-medium {
-  background-color: var(--blue-medium) !important;
+.bg-blue-deep {
+  background-color: var(--blue-deep) !important;
 }
 
 .bg-blue {
@@ -2038,8 +2038,8 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--purple-dark) !important;
 }
 
-.bg-purple-medium {
-  background-color: var(--purple-medium) !important;
+.bg-purple-deep {
+  background-color: var(--purple-deep) !important;
 }
 
 .bg-purple {
@@ -2118,7 +2118,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--gray:hover,
 .link--gray.is-active {
-  color: var(--gray-medium);
+  color: var(--gray-deep);
 }
 
 .link--pink {
@@ -2127,7 +2127,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--pink:hover,
 .link--pink.is-active {
-  color: var(--pink-medium);
+  color: var(--pink-deep);
 }
 
 .link--red {
@@ -2136,7 +2136,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--red:hover,
 .link--red.is-active {
-  color: var(--red-medium);
+  color: var(--red-deep);
 }
 
 .link--orange {
@@ -2145,7 +2145,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--orange:hover,
 .link--orange.is-active {
-  color: var(--orange-medium);
+  color: var(--orange-deep);
 }
 
 .link--yellow {
@@ -2154,7 +2154,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--yellow:hover,
 .link--yellow.is-active {
-  color: var(--yellow-medium);
+  color: var(--yellow-deep);
 }
 
 .link--green {
@@ -2163,7 +2163,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--green:hover,
 .link--green.is-active {
-  color: var(--green-medium);
+  color: var(--green-deep);
 }
 
 .link--blue {
@@ -2172,7 +2172,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--blue:hover,
 .link--blue.is-active {
-  color: var(--blue-medium);
+  color: var(--blue-deep);
 }
 
 .link--purple {
@@ -2181,7 +2181,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--purple:hover,
 .link--purple.is-active {
-  color: var(--purple-medium);
+  color: var(--purple-deep);
 }
 
 .link--darken25 {
@@ -2268,8 +2268,8 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--gray-dark) !important;
 }
 
-.border--gray-medium {
-  border-color: var(--gray-medium) !important;
+.border--gray-deep {
+  border-color: var(--gray-deep) !important;
 }
 
 .border--gray {
@@ -2292,8 +2292,8 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--pink-dark) !important;
 }
 
-.border--pink-medium {
-  border-color: var(--pink-medium) !important;
+.border--pink-deep {
+  border-color: var(--pink-deep) !important;
 }
 
 .border--pink {
@@ -2316,8 +2316,8 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--red-dark) !important;
 }
 
-.border--red-medium {
-  border-color: var(--red-medium) !important;
+.border--red-deep {
+  border-color: var(--red-deep) !important;
 }
 
 .border--red {
@@ -2340,8 +2340,8 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--orange-dark) !important;
 }
 
-.border--orange-medium {
-  border-color: var(--orange-medium) !important;
+.border--orange-deep {
+  border-color: var(--orange-deep) !important;
 }
 
 .border--orange {
@@ -2364,8 +2364,8 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--yellow-dark) !important;
 }
 
-.border--yellow-medium {
-  border-color: var(--yellow-medium) !important;
+.border--yellow-deep {
+  border-color: var(--yellow-deep) !important;
 }
 
 .border--yellow {
@@ -2388,8 +2388,8 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--green-dark) !important;
 }
 
-.border--green-medium {
-  border-color: var(--green-medium) !important;
+.border--green-deep {
+  border-color: var(--green-deep) !important;
 }
 
 .border--green {
@@ -2412,8 +2412,8 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--blue-dark) !important;
 }
 
-.border--blue-medium {
-  border-color: var(--blue-medium) !important;
+.border--blue-deep {
+  border-color: var(--blue-deep) !important;
 }
 
 .border--blue {
@@ -2436,8 +2436,8 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--purple-dark) !important;
 }
 
-.border--purple-medium {
-  border-color: var(--purple-medium) !important;
+.border--purple-deep {
+  border-color: var(--purple-deep) !important;
 }
 
 .border--purple {
@@ -2702,10 +2702,10 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--gray-dark) !important;
 }
 
-.bg-gray-medium-on-hover:hover,
-.bg-gray-medium-on-active.is-active,
-.bg-gray-medium-on-active.is-active:hover {
-  background-color: var(--gray-medium) !important;
+.bg-gray-deep-on-hover:hover,
+.bg-gray-deep-on-active.is-active,
+.bg-gray-deep-on-active.is-active:hover {
+  background-color: var(--gray-deep) !important;
 }
 
 .bg-gray-on-hover:hover,
@@ -2738,10 +2738,10 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--pink-dark) !important;
 }
 
-.bg-pink-medium-on-hover:hover,
-.bg-pink-medium-on-active.is-active,
-.bg-pink-medium-on-active.is-active:hover {
-  background-color: var(--pink-medium) !important;
+.bg-pink-deep-on-hover:hover,
+.bg-pink-deep-on-active.is-active,
+.bg-pink-deep-on-active.is-active:hover {
+  background-color: var(--pink-deep) !important;
 }
 
 .bg-pink-on-hover:hover,
@@ -2774,10 +2774,10 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--red-dark) !important;
 }
 
-.bg-red-medium-on-hover:hover,
-.bg-red-medium-on-active.is-active,
-.bg-red-medium-on-active.is-active:hover {
-  background-color: var(--red-medium) !important;
+.bg-red-deep-on-hover:hover,
+.bg-red-deep-on-active.is-active,
+.bg-red-deep-on-active.is-active:hover {
+  background-color: var(--red-deep) !important;
 }
 
 .bg-red-on-hover:hover,
@@ -2810,10 +2810,10 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--orange-dark) !important;
 }
 
-.bg-orange-medium-on-hover:hover,
-.bg-orange-medium-on-active.is-active,
-.bg-orange-medium-on-active.is-active:hover {
-  background-color: var(--orange-medium) !important;
+.bg-orange-deep-on-hover:hover,
+.bg-orange-deep-on-active.is-active,
+.bg-orange-deep-on-active.is-active:hover {
+  background-color: var(--orange-deep) !important;
 }
 
 .bg-orange-on-hover:hover,
@@ -2846,10 +2846,10 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--yellow-dark) !important;
 }
 
-.bg-yellow-medium-on-hover:hover,
-.bg-yellow-medium-on-active.is-active,
-.bg-yellow-medium-on-active.is-active:hover {
-  background-color: var(--yellow-medium) !important;
+.bg-yellow-deep-on-hover:hover,
+.bg-yellow-deep-on-active.is-active,
+.bg-yellow-deep-on-active.is-active:hover {
+  background-color: var(--yellow-deep) !important;
 }
 
 .bg-yellow-on-hover:hover,
@@ -2882,10 +2882,10 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--green-dark) !important;
 }
 
-.bg-green-medium-on-hover:hover,
-.bg-green-medium-on-active.is-active,
-.bg-green-medium-on-active.is-active:hover {
-  background-color: var(--green-medium) !important;
+.bg-green-deep-on-hover:hover,
+.bg-green-deep-on-active.is-active,
+.bg-green-deep-on-active.is-active:hover {
+  background-color: var(--green-deep) !important;
 }
 
 .bg-green-on-hover:hover,
@@ -2918,10 +2918,10 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--blue-dark) !important;
 }
 
-.bg-blue-medium-on-hover:hover,
-.bg-blue-medium-on-active.is-active,
-.bg-blue-medium-on-active.is-active:hover {
-  background-color: var(--blue-medium) !important;
+.bg-blue-deep-on-hover:hover,
+.bg-blue-deep-on-active.is-active,
+.bg-blue-deep-on-active.is-active:hover {
+  background-color: var(--blue-deep) !important;
 }
 
 .bg-blue-on-hover:hover,
@@ -2954,10 +2954,10 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--purple-dark) !important;
 }
 
-.bg-purple-medium-on-hover:hover,
-.bg-purple-medium-on-active.is-active,
-.bg-purple-medium-on-active.is-active:hover {
-  background-color: var(--purple-medium) !important;
+.bg-purple-deep-on-hover:hover,
+.bg-purple-deep-on-active.is-active,
+.bg-purple-deep-on-active.is-active:hover {
+  background-color: var(--purple-deep) !important;
 }
 
 .bg-purple-on-hover:hover,
@@ -3080,10 +3080,10 @@ input:checked + .switch--dot-transparent::after {
   color: var(--gray-dark) !important;
 }
 
-.color-gray-medium-on-hover:hover,
-.color-gray-medium-on-active.is-active,
-.color-gray-medium-on-active.is-active:hover {
-  color: var(--gray-medium) !important;
+.color-gray-deep-on-hover:hover,
+.color-gray-deep-on-active.is-active,
+.color-gray-deep-on-active.is-active:hover {
+  color: var(--gray-deep) !important;
 }
 
 .color-gray-on-hover:hover,
@@ -3116,10 +3116,10 @@ input:checked + .switch--dot-transparent::after {
   color: var(--pink-dark) !important;
 }
 
-.color-pink-medium-on-hover:hover,
-.color-pink-medium-on-active.is-active,
-.color-pink-medium-on-active.is-active:hover {
-  color: var(--pink-medium) !important;
+.color-pink-deep-on-hover:hover,
+.color-pink-deep-on-active.is-active,
+.color-pink-deep-on-active.is-active:hover {
+  color: var(--pink-deep) !important;
 }
 
 .color-pink-on-hover:hover,
@@ -3152,10 +3152,10 @@ input:checked + .switch--dot-transparent::after {
   color: var(--red-dark) !important;
 }
 
-.color-red-medium-on-hover:hover,
-.color-red-medium-on-active.is-active,
-.color-red-medium-on-active.is-active:hover {
-  color: var(--red-medium) !important;
+.color-red-deep-on-hover:hover,
+.color-red-deep-on-active.is-active,
+.color-red-deep-on-active.is-active:hover {
+  color: var(--red-deep) !important;
 }
 
 .color-red-on-hover:hover,
@@ -3188,10 +3188,10 @@ input:checked + .switch--dot-transparent::after {
   color: var(--orange-dark) !important;
 }
 
-.color-orange-medium-on-hover:hover,
-.color-orange-medium-on-active.is-active,
-.color-orange-medium-on-active.is-active:hover {
-  color: var(--orange-medium) !important;
+.color-orange-deep-on-hover:hover,
+.color-orange-deep-on-active.is-active,
+.color-orange-deep-on-active.is-active:hover {
+  color: var(--orange-deep) !important;
 }
 
 .color-orange-on-hover:hover,
@@ -3224,10 +3224,10 @@ input:checked + .switch--dot-transparent::after {
   color: var(--yellow-dark) !important;
 }
 
-.color-yellow-medium-on-hover:hover,
-.color-yellow-medium-on-active.is-active,
-.color-yellow-medium-on-active.is-active:hover {
-  color: var(--yellow-medium) !important;
+.color-yellow-deep-on-hover:hover,
+.color-yellow-deep-on-active.is-active,
+.color-yellow-deep-on-active.is-active:hover {
+  color: var(--yellow-deep) !important;
 }
 
 .color-yellow-on-hover:hover,
@@ -3260,10 +3260,10 @@ input:checked + .switch--dot-transparent::after {
   color: var(--green-dark) !important;
 }
 
-.color-green-medium-on-hover:hover,
-.color-green-medium-on-active.is-active,
-.color-green-medium-on-active.is-active:hover {
-  color: var(--green-medium) !important;
+.color-green-deep-on-hover:hover,
+.color-green-deep-on-active.is-active,
+.color-green-deep-on-active.is-active:hover {
+  color: var(--green-deep) !important;
 }
 
 .color-green-on-hover:hover,
@@ -3296,10 +3296,10 @@ input:checked + .switch--dot-transparent::after {
   color: var(--blue-dark) !important;
 }
 
-.color-blue-medium-on-hover:hover,
-.color-blue-medium-on-active.is-active,
-.color-blue-medium-on-active.is-active:hover {
-  color: var(--blue-medium) !important;
+.color-blue-deep-on-hover:hover,
+.color-blue-deep-on-active.is-active,
+.color-blue-deep-on-active.is-active:hover {
+  color: var(--blue-deep) !important;
 }
 
 .color-blue-on-hover:hover,
@@ -3332,10 +3332,10 @@ input:checked + .switch--dot-transparent::after {
   color: var(--purple-dark) !important;
 }
 
-.color-purple-medium-on-hover:hover,
-.color-purple-medium-on-active.is-active,
-.color-purple-medium-on-active.is-active:hover {
-  color: var(--purple-medium) !important;
+.color-purple-deep-on-hover:hover,
+.color-purple-deep-on-active.is-active,
+.color-purple-deep-on-active.is-active:hover {
+  color: var(--purple-deep) !important;
 }
 
 .color-purple-on-hover:hover,
@@ -3446,10 +3446,10 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--gray-dark) !important;
 }
 
-.border--gray-medium-on-hover:hover,
-.border--gray-medium-on-active.is-active,
-.border--gray-medium-on-active.is-active:hover {
-  border-color: var(--gray-medium) !important;
+.border--gray-deep-on-hover:hover,
+.border--gray-deep-on-active.is-active,
+.border--gray-deep-on-active.is-active:hover {
+  border-color: var(--gray-deep) !important;
 }
 
 .border--gray-on-hover:hover,
@@ -3482,10 +3482,10 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--pink-dark) !important;
 }
 
-.border--pink-medium-on-hover:hover,
-.border--pink-medium-on-active.is-active,
-.border--pink-medium-on-active.is-active:hover {
-  border-color: var(--pink-medium) !important;
+.border--pink-deep-on-hover:hover,
+.border--pink-deep-on-active.is-active,
+.border--pink-deep-on-active.is-active:hover {
+  border-color: var(--pink-deep) !important;
 }
 
 .border--pink-on-hover:hover,
@@ -3518,10 +3518,10 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--red-dark) !important;
 }
 
-.border--red-medium-on-hover:hover,
-.border--red-medium-on-active.is-active,
-.border--red-medium-on-active.is-active:hover {
-  border-color: var(--red-medium) !important;
+.border--red-deep-on-hover:hover,
+.border--red-deep-on-active.is-active,
+.border--red-deep-on-active.is-active:hover {
+  border-color: var(--red-deep) !important;
 }
 
 .border--red-on-hover:hover,
@@ -3554,10 +3554,10 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--orange-dark) !important;
 }
 
-.border--orange-medium-on-hover:hover,
-.border--orange-medium-on-active.is-active,
-.border--orange-medium-on-active.is-active:hover {
-  border-color: var(--orange-medium) !important;
+.border--orange-deep-on-hover:hover,
+.border--orange-deep-on-active.is-active,
+.border--orange-deep-on-active.is-active:hover {
+  border-color: var(--orange-deep) !important;
 }
 
 .border--orange-on-hover:hover,
@@ -3590,10 +3590,10 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--yellow-dark) !important;
 }
 
-.border--yellow-medium-on-hover:hover,
-.border--yellow-medium-on-active.is-active,
-.border--yellow-medium-on-active.is-active:hover {
-  border-color: var(--yellow-medium) !important;
+.border--yellow-deep-on-hover:hover,
+.border--yellow-deep-on-active.is-active,
+.border--yellow-deep-on-active.is-active:hover {
+  border-color: var(--yellow-deep) !important;
 }
 
 .border--yellow-on-hover:hover,
@@ -3626,10 +3626,10 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--green-dark) !important;
 }
 
-.border--green-medium-on-hover:hover,
-.border--green-medium-on-active.is-active,
-.border--green-medium-on-active.is-active:hover {
-  border-color: var(--green-medium) !important;
+.border--green-deep-on-hover:hover,
+.border--green-deep-on-active.is-active,
+.border--green-deep-on-active.is-active:hover {
+  border-color: var(--green-deep) !important;
 }
 
 .border--green-on-hover:hover,
@@ -3662,10 +3662,10 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--blue-dark) !important;
 }
 
-.border--blue-medium-on-hover:hover,
-.border--blue-medium-on-active.is-active,
-.border--blue-medium-on-active.is-active:hover {
-  border-color: var(--blue-medium) !important;
+.border--blue-deep-on-hover:hover,
+.border--blue-deep-on-active.is-active,
+.border--blue-deep-on-active.is-active:hover {
+  border-color: var(--blue-deep) !important;
 }
 
 .border--blue-on-hover:hover,
@@ -3698,10 +3698,10 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--purple-dark) !important;
 }
 
-.border--purple-medium-on-hover:hover,
-.border--purple-medium-on-active.is-active,
-.border--purple-medium-on-active.is-active:hover {
-  border-color: var(--purple-medium) !important;
+.border--purple-deep-on-hover:hover,
+.border--purple-deep-on-active.is-active,
+.border--purple-deep-on-active.is-active:hover {
+  border-color: var(--purple-deep) !important;
 }
 
 .border--purple-on-hover:hover,
