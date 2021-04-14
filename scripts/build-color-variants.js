@@ -190,6 +190,14 @@ function buildColorVariants(variables, config) {
       if (isNotAccessibleForForms(color)) return result;
       const darkerShade = getDarkerShade(color);
       return (result += stripIndent(`
+        .select--${color} {
+          color: var(--${color});
+        }
+
+        .select--${color}:focus {
+          color: var(--${darkerShade});
+        }
+
         .select--${color} + .select-arrow {
           border-top-color: var(--${color});
         }

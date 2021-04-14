@@ -387,12 +387,28 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: transparent;
 }
 
+.select--gray {
+  color: var(--gray);
+}
+
+.select--gray:focus {
+  color: var(--gray-dark);
+}
+
 .select--gray + .select-arrow {
   border-top-color: var(--gray);
 }
 
 .select--gray:focus + .select-arrow {
   border-top-color: var(--gray-dark);
+}
+
+.select--pink {
+  color: var(--pink);
+}
+
+.select--pink:focus {
+  color: var(--pink-dark);
 }
 
 .select--pink + .select-arrow {
@@ -403,12 +419,28 @@ scripts/build-color-variants.js to produce the output you want */
   border-top-color: var(--pink-dark);
 }
 
+.select--red {
+  color: var(--red);
+}
+
+.select--red:focus {
+  color: var(--red-dark);
+}
+
 .select--red + .select-arrow {
   border-top-color: var(--red);
 }
 
 .select--red:focus + .select-arrow {
   border-top-color: var(--red-dark);
+}
+
+.select--orange {
+  color: var(--orange);
+}
+
+.select--orange:focus {
+  color: var(--orange-dark);
 }
 
 .select--orange + .select-arrow {
@@ -419,12 +451,28 @@ scripts/build-color-variants.js to produce the output you want */
   border-top-color: var(--orange-dark);
 }
 
+.select--yellow {
+  color: var(--yellow);
+}
+
+.select--yellow:focus {
+  color: var(--yellow-dark);
+}
+
 .select--yellow + .select-arrow {
   border-top-color: var(--yellow);
 }
 
 .select--yellow:focus + .select-arrow {
   border-top-color: var(--yellow-dark);
+}
+
+.select--green {
+  color: var(--green);
+}
+
+.select--green:focus {
+  color: var(--green-dark);
 }
 
 .select--green + .select-arrow {
@@ -435,12 +483,28 @@ scripts/build-color-variants.js to produce the output you want */
   border-top-color: var(--green-dark);
 }
 
+.select--blue {
+  color: var(--blue);
+}
+
+.select--blue:focus {
+  color: var(--blue-dark);
+}
+
 .select--blue + .select-arrow {
   border-top-color: var(--blue);
 }
 
 .select--blue:focus + .select-arrow {
   border-top-color: var(--blue-dark);
+}
+
+.select--purple {
+  color: var(--purple);
+}
+
+.select--purple:focus {
+  color: var(--purple-dark);
 }
 
 .select--purple + .select-arrow {
@@ -451,12 +515,28 @@ scripts/build-color-variants.js to produce the output you want */
   border-top-color: var(--purple-dark);
 }
 
+.select--darken25 {
+  color: var(--darken25);
+}
+
+.select--darken25:focus {
+  color: var(--darken50);
+}
+
 .select--darken25 + .select-arrow {
   border-top-color: var(--darken25);
 }
 
 .select--darken25:focus + .select-arrow {
   border-top-color: var(--darken50);
+}
+
+.select--darken50 {
+  color: var(--darken50);
+}
+
+.select--darken50:focus {
+  color: var(--darken75);
 }
 
 .select--darken50 + .select-arrow {
@@ -467,12 +547,28 @@ scripts/build-color-variants.js to produce the output you want */
   border-top-color: var(--darken75);
 }
 
+.select--darken75 {
+  color: var(--darken75);
+}
+
+.select--darken75:focus {
+  color: var(--black);
+}
+
 .select--darken75 + .select-arrow {
   border-top-color: var(--darken75);
 }
 
 .select--darken75:focus + .select-arrow {
   border-top-color: var(--black);
+}
+
+.select--lighten25 {
+  color: var(--lighten25);
+}
+
+.select--lighten25:focus {
+  color: var(--lighten50);
 }
 
 .select--lighten25 + .select-arrow {
@@ -483,12 +579,28 @@ scripts/build-color-variants.js to produce the output you want */
   border-top-color: var(--lighten50);
 }
 
+.select--lighten50 {
+  color: var(--lighten50);
+}
+
+.select--lighten50:focus {
+  color: var(--lighten75);
+}
+
 .select--lighten50 + .select-arrow {
   border-top-color: var(--lighten50);
 }
 
 .select--lighten50:focus + .select-arrow {
   border-top-color: var(--lighten75);
+}
+
+.select--lighten75 {
+  color: var(--lighten75);
+}
+
+.select--lighten75:focus {
+  color: var(--white);
 }
 
 .select--lighten75 + .select-arrow {
@@ -499,12 +611,28 @@ scripts/build-color-variants.js to produce the output you want */
   border-top-color: var(--white);
 }
 
+.select--white {
+  color: var(--white);
+}
+
+.select--white:focus {
+  color: var(--lighten75);
+}
+
 .select--white + .select-arrow {
   border-top-color: var(--white);
 }
 
 .select--white:focus + .select-arrow {
   border-top-color: var(--lighten75);
+}
+
+.select--transparent {
+  color: var(--transparent);
+}
+
+.select--transparent:focus {
+  color: var(--darken10);
 }
 
 .select--transparent + .select-arrow {
@@ -523,7 +651,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-gray:focus,
 .input--border-gray:focus,
-.select--gray:focus .select--stroke {
+.select--stroke.select--gray:focus {
   box-shadow: inset 0 0 0 1px var(--gray-dark);
 }
 
@@ -535,7 +663,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-pink:focus,
 .input--border-pink:focus,
-.select--pink:focus .select--stroke {
+.select--stroke.select--pink:focus {
   box-shadow: inset 0 0 0 1px var(--pink-dark);
 }
 
@@ -547,7 +675,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-red:focus,
 .input--border-red:focus,
-.select--red:focus .select--stroke {
+.select--stroke.select--red:focus {
   box-shadow: inset 0 0 0 1px var(--red-dark);
 }
 
@@ -559,7 +687,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-orange:focus,
 .input--border-orange:focus,
-.select--orange:focus .select--stroke {
+.select--stroke.select--orange:focus {
   box-shadow: inset 0 0 0 1px var(--orange-dark);
 }
 
@@ -571,7 +699,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-yellow:focus,
 .input--border-yellow:focus,
-.select--yellow:focus .select--stroke {
+.select--stroke.select--yellow:focus {
   box-shadow: inset 0 0 0 1px var(--yellow-dark);
 }
 
@@ -583,7 +711,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-green:focus,
 .input--border-green:focus,
-.select--green:focus .select--stroke {
+.select--stroke.select--green:focus {
   box-shadow: inset 0 0 0 1px var(--green-dark);
 }
 
@@ -595,7 +723,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-blue:focus,
 .input--border-blue:focus,
-.select--blue:focus .select--stroke {
+.select--stroke.select--blue:focus {
   box-shadow: inset 0 0 0 1px var(--blue-dark);
 }
 
@@ -607,7 +735,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-purple:focus,
 .input--border-purple:focus,
-.select--purple:focus .select--stroke {
+.select--stroke.select--purple:focus {
   box-shadow: inset 0 0 0 1px var(--purple-dark);
 }
 
@@ -619,7 +747,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-darken25:focus,
 .input--border-darken25:focus,
-.select--darken25:focus .select--stroke {
+.select--stroke.select--darken25:focus {
   box-shadow: inset 0 0 0 1px var(--darken50);
 }
 
@@ -631,7 +759,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-darken50:focus,
 .input--border-darken50:focus,
-.select--darken50:focus .select--stroke {
+.select--stroke.select--darken50:focus {
   box-shadow: inset 0 0 0 1px var(--darken75);
 }
 
@@ -643,7 +771,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-darken75:focus,
 .input--border-darken75:focus,
-.select--darken75:focus .select--stroke {
+.select--stroke.select--darken75:focus {
   box-shadow: inset 0 0 0 1px var(--black);
 }
 
@@ -655,7 +783,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-lighten25:focus,
 .input--border-lighten25:focus,
-.select--lighten25:focus .select--stroke {
+.select--stroke.select--lighten25:focus {
   box-shadow: inset 0 0 0 1px var(--lighten50);
 }
 
@@ -667,7 +795,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-lighten50:focus,
 .input--border-lighten50:focus,
-.select--lighten50:focus .select--stroke {
+.select--stroke.select--lighten50:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
@@ -679,7 +807,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-lighten75:focus,
 .input--border-lighten75:focus,
-.select--lighten75:focus .select--stroke {
+.select--stroke.select--lighten75:focus {
   box-shadow: inset 0 0 0 1px var(--white);
 }
 
@@ -691,7 +819,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-white:focus,
 .input--border-white:focus,
-.select--white:focus .select--stroke {
+.select--stroke.select--white:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
@@ -703,7 +831,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .textarea--border-transparent:focus,
 .input--border-transparent:focus,
-.select--transparent:focus .select--stroke {
+.select--stroke.select--transparent:focus {
   box-shadow: inset 0 0 0 1px var(--darken10);
 }
 
