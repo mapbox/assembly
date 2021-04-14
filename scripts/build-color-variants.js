@@ -99,7 +99,7 @@ function isNotAccessibleExceptButtons(color) {
   return (
     color === 'black' ||
     /^(darken5|lighten5)$/.test(color) ||
-    /(-faint|-dark)$/.test(color)
+    /(-faint|-lighter|-deep|-dark)$/.test(color)
   );
 }
 
@@ -145,14 +145,10 @@ function buildColorVariants(variables, config) {
     const colorShade = splitColor[1];
     switch (colorShade) {
       case 'faint':
-        return `${colorBase}-lighter`;
-      case 'lighter':
         return `${colorBase}-light`;
       case 'light':
         return colorBase;
       case undefined:
-        return `${colorBase}-deep`;
-      case 'deep':
         return `${colorBase}-dark`;
       case 'dark':
         throw new Error(
