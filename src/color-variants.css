@@ -5,22 +5,13 @@ scripts/build-color-variants.js to produce the output you want */
 
 /* Color variants */
 
-.btn--gray-deep {
-  background-color: var(--gray-deep);
-}
-
-.btn--gray-deep:hover,
-.btn--gray-deep.is-active {
-  background-color: var(--gray-dark);
-}
-
 .btn--gray {
   background-color: var(--gray);
 }
 
 .btn--gray:hover,
 .btn--gray.is-active {
-  background-color: var(--gray-deep);
+  background-color: var(--gray-dark);
 }
 
 .btn--gray-light {
@@ -32,31 +23,13 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--gray);
 }
 
-.btn--gray-lighter {
-  background-color: var(--gray-lighter);
-}
-
-.btn--gray-lighter:hover,
-.btn--gray-lighter.is-active {
-  background-color: var(--gray-light);
-}
-
-.btn--pink-deep {
-  background-color: var(--pink-deep);
-}
-
-.btn--pink-deep:hover,
-.btn--pink-deep.is-active {
-  background-color: var(--pink-dark);
-}
-
 .btn--pink {
   background-color: var(--pink);
 }
 
 .btn--pink:hover,
 .btn--pink.is-active {
-  background-color: var(--pink-deep);
+  background-color: var(--pink-dark);
 }
 
 .btn--pink-light {
@@ -68,31 +41,13 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--pink);
 }
 
-.btn--pink-lighter {
-  background-color: var(--pink-lighter);
-}
-
-.btn--pink-lighter:hover,
-.btn--pink-lighter.is-active {
-  background-color: var(--pink-light);
-}
-
-.btn--red-deep {
-  background-color: var(--red-deep);
-}
-
-.btn--red-deep:hover,
-.btn--red-deep.is-active {
-  background-color: var(--red-dark);
-}
-
 .btn--red {
   background-color: var(--red);
 }
 
 .btn--red:hover,
 .btn--red.is-active {
-  background-color: var(--red-deep);
+  background-color: var(--red-dark);
 }
 
 .btn--red-light {
@@ -104,31 +59,13 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--red);
 }
 
-.btn--red-lighter {
-  background-color: var(--red-lighter);
-}
-
-.btn--red-lighter:hover,
-.btn--red-lighter.is-active {
-  background-color: var(--red-light);
-}
-
-.btn--orange-deep {
-  background-color: var(--orange-deep);
-}
-
-.btn--orange-deep:hover,
-.btn--orange-deep.is-active {
-  background-color: var(--orange-dark);
-}
-
 .btn--orange {
   background-color: var(--orange);
 }
 
 .btn--orange:hover,
 .btn--orange.is-active {
-  background-color: var(--orange-deep);
+  background-color: var(--orange-dark);
 }
 
 .btn--orange-light {
@@ -140,31 +77,13 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--orange);
 }
 
-.btn--orange-lighter {
-  background-color: var(--orange-lighter);
-}
-
-.btn--orange-lighter:hover,
-.btn--orange-lighter.is-active {
-  background-color: var(--orange-light);
-}
-
-.btn--yellow-deep {
-  background-color: var(--yellow-deep);
-}
-
-.btn--yellow-deep:hover,
-.btn--yellow-deep.is-active {
-  background-color: var(--yellow-dark);
-}
-
 .btn--yellow {
   background-color: var(--yellow);
 }
 
 .btn--yellow:hover,
 .btn--yellow.is-active {
-  background-color: var(--yellow-deep);
+  background-color: var(--yellow-dark);
 }
 
 .btn--yellow-light {
@@ -176,31 +95,13 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--yellow);
 }
 
-.btn--yellow-lighter {
-  background-color: var(--yellow-lighter);
-}
-
-.btn--yellow-lighter:hover,
-.btn--yellow-lighter.is-active {
-  background-color: var(--yellow-light);
-}
-
-.btn--green-deep {
-  background-color: var(--green-deep);
-}
-
-.btn--green-deep:hover,
-.btn--green-deep.is-active {
-  background-color: var(--green-dark);
-}
-
 .btn--green {
   background-color: var(--green);
 }
 
 .btn--green:hover,
 .btn--green.is-active {
-  background-color: var(--green-deep);
+  background-color: var(--green-dark);
 }
 
 .btn--green-light {
@@ -212,31 +113,13 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--green);
 }
 
-.btn--green-lighter {
-  background-color: var(--green-lighter);
-}
-
-.btn--green-lighter:hover,
-.btn--green-lighter.is-active {
-  background-color: var(--green-light);
-}
-
-.btn--blue-deep {
-  background-color: var(--blue-deep);
-}
-
-.btn--blue-deep:hover,
-.btn--blue-deep.is-active {
-  background-color: var(--blue-dark);
-}
-
 .btn--blue {
   background-color: var(--blue);
 }
 
 .btn--blue:hover,
 .btn--blue.is-active {
-  background-color: var(--blue-deep);
+  background-color: var(--blue-dark);
 }
 
 .btn--blue-light {
@@ -248,31 +131,13 @@ scripts/build-color-variants.js to produce the output you want */
   background-color: var(--blue);
 }
 
-.btn--blue-lighter {
-  background-color: var(--blue-lighter);
-}
-
-.btn--blue-lighter:hover,
-.btn--blue-lighter.is-active {
-  background-color: var(--blue-light);
-}
-
-.btn--purple-deep {
-  background-color: var(--purple-deep);
-}
-
-.btn--purple-deep:hover,
-.btn--purple-deep.is-active {
-  background-color: var(--purple-dark);
-}
-
 .btn--purple {
   background-color: var(--purple);
 }
 
 .btn--purple:hover,
 .btn--purple.is-active {
-  background-color: var(--purple-deep);
+  background-color: var(--purple-dark);
 }
 
 .btn--purple-light {
@@ -282,15 +147,6 @@ scripts/build-color-variants.js to produce the output you want */
 .btn--purple-light:hover,
 .btn--purple-light.is-active {
   background-color: var(--purple);
-}
-
-.btn--purple-lighter {
-  background-color: var(--purple-lighter);
-}
-
-.btn--purple-lighter:hover,
-.btn--purple-lighter.is-active {
-  background-color: var(--purple-light);
 }
 
 .btn--darken10 {
@@ -389,7 +245,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--gray:hover,
 .btn--stroke.btn--gray.is-active {
-  color: var(--gray-deep);
+  color: var(--gray-dark);
 }
 
 .btn--stroke.btn--pink {
@@ -398,7 +254,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--pink:hover,
 .btn--stroke.btn--pink.is-active {
-  color: var(--pink-deep);
+  color: var(--pink-dark);
 }
 
 .btn--stroke.btn--red {
@@ -407,7 +263,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--red:hover,
 .btn--stroke.btn--red.is-active {
-  color: var(--red-deep);
+  color: var(--red-dark);
 }
 
 .btn--stroke.btn--orange {
@@ -416,7 +272,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--orange:hover,
 .btn--stroke.btn--orange.is-active {
-  color: var(--orange-deep);
+  color: var(--orange-dark);
 }
 
 .btn--stroke.btn--yellow {
@@ -425,7 +281,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--yellow:hover,
 .btn--stroke.btn--yellow.is-active {
-  color: var(--yellow-deep);
+  color: var(--yellow-dark);
 }
 
 .btn--stroke.btn--green {
@@ -434,7 +290,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--green:hover,
 .btn--stroke.btn--green.is-active {
-  color: var(--green-deep);
+  color: var(--green-dark);
 }
 
 .btn--stroke.btn--blue {
@@ -443,7 +299,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--blue:hover,
 .btn--stroke.btn--blue.is-active {
-  color: var(--blue-deep);
+  color: var(--blue-dark);
 }
 
 .btn--stroke.btn--purple {
@@ -452,7 +308,7 @@ scripts/build-color-variants.js to produce the output you want */
 
 .btn--stroke.btn--purple:hover,
 .btn--stroke.btn--purple.is-active {
-  color: var(--purple-deep);
+  color: var(--purple-dark);
 }
 
 .btn--stroke.btn--darken25 {
@@ -536,7 +392,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-gray:focus + .select-arrow {
-  border-top-color: var(--gray-deep);
+  border-top-color: var(--gray-dark);
 }
 
 .select--border-pink + .select-arrow {
@@ -544,7 +400,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-pink:focus + .select-arrow {
-  border-top-color: var(--pink-deep);
+  border-top-color: var(--pink-dark);
 }
 
 .select--border-red + .select-arrow {
@@ -552,7 +408,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-red:focus + .select-arrow {
-  border-top-color: var(--red-deep);
+  border-top-color: var(--red-dark);
 }
 
 .select--border-orange + .select-arrow {
@@ -560,7 +416,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-orange:focus + .select-arrow {
-  border-top-color: var(--orange-deep);
+  border-top-color: var(--orange-dark);
 }
 
 .select--border-yellow + .select-arrow {
@@ -568,7 +424,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-yellow:focus + .select-arrow {
-  border-top-color: var(--yellow-deep);
+  border-top-color: var(--yellow-dark);
 }
 
 .select--border-green + .select-arrow {
@@ -576,7 +432,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-green:focus + .select-arrow {
-  border-top-color: var(--green-deep);
+  border-top-color: var(--green-dark);
 }
 
 .select--border-blue + .select-arrow {
@@ -584,7 +440,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-blue:focus + .select-arrow {
-  border-top-color: var(--blue-deep);
+  border-top-color: var(--blue-dark);
 }
 
 .select--border-purple + .select-arrow {
@@ -592,7 +448,7 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--border-purple:focus + .select-arrow {
-  border-top-color: var(--purple-deep);
+  border-top-color: var(--purple-dark);
 }
 
 .select--border-darken25 + .select-arrow {
@@ -668,7 +524,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-gray:focus,
 .input--border-gray:focus,
 .select--border-gray:focus {
-  box-shadow: inset 0 0 0 1px var(--gray-deep);
+  box-shadow: inset 0 0 0 1px var(--gray-dark);
 }
 
 .textarea--border-pink,
@@ -680,7 +536,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-pink:focus,
 .input--border-pink:focus,
 .select--border-pink:focus {
-  box-shadow: inset 0 0 0 1px var(--pink-deep);
+  box-shadow: inset 0 0 0 1px var(--pink-dark);
 }
 
 .textarea--border-red,
@@ -692,7 +548,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-red:focus,
 .input--border-red:focus,
 .select--border-red:focus {
-  box-shadow: inset 0 0 0 1px var(--red-deep);
+  box-shadow: inset 0 0 0 1px var(--red-dark);
 }
 
 .textarea--border-orange,
@@ -704,7 +560,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-orange:focus,
 .input--border-orange:focus,
 .select--border-orange:focus {
-  box-shadow: inset 0 0 0 1px var(--orange-deep);
+  box-shadow: inset 0 0 0 1px var(--orange-dark);
 }
 
 .textarea--border-yellow,
@@ -716,7 +572,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-yellow:focus,
 .input--border-yellow:focus,
 .select--border-yellow:focus {
-  box-shadow: inset 0 0 0 1px var(--yellow-deep);
+  box-shadow: inset 0 0 0 1px var(--yellow-dark);
 }
 
 .textarea--border-green,
@@ -728,7 +584,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-green:focus,
 .input--border-green:focus,
 .select--border-green:focus {
-  box-shadow: inset 0 0 0 1px var(--green-deep);
+  box-shadow: inset 0 0 0 1px var(--green-dark);
 }
 
 .textarea--border-blue,
@@ -740,7 +596,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-blue:focus,
 .input--border-blue:focus,
 .select--border-blue:focus {
-  box-shadow: inset 0 0 0 1px var(--blue-deep);
+  box-shadow: inset 0 0 0 1px var(--blue-dark);
 }
 
 .textarea--border-purple,
@@ -752,7 +608,7 @@ scripts/build-color-variants.js to produce the output you want */
 .textarea--border-purple:focus,
 .input--border-purple:focus,
 .select--border-purple:focus {
-  box-shadow: inset 0 0 0 1px var(--purple-deep);
+  box-shadow: inset 0 0 0 1px var(--purple-dark);
 }
 
 .textarea--border-darken25,
@@ -2118,7 +1974,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--gray:hover,
 .link--gray.is-active {
-  color: var(--gray-deep);
+  color: var(--gray-dark);
 }
 
 .link--pink {
@@ -2127,7 +1983,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--pink:hover,
 .link--pink.is-active {
-  color: var(--pink-deep);
+  color: var(--pink-dark);
 }
 
 .link--red {
@@ -2136,7 +1992,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--red:hover,
 .link--red.is-active {
-  color: var(--red-deep);
+  color: var(--red-dark);
 }
 
 .link--orange {
@@ -2145,7 +2001,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--orange:hover,
 .link--orange.is-active {
-  color: var(--orange-deep);
+  color: var(--orange-dark);
 }
 
 .link--yellow {
@@ -2154,7 +2010,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--yellow:hover,
 .link--yellow.is-active {
-  color: var(--yellow-deep);
+  color: var(--yellow-dark);
 }
 
 .link--green {
@@ -2163,7 +2019,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--green:hover,
 .link--green.is-active {
-  color: var(--green-deep);
+  color: var(--green-dark);
 }
 
 .link--blue {
@@ -2172,7 +2028,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--blue:hover,
 .link--blue.is-active {
-  color: var(--blue-deep);
+  color: var(--blue-dark);
 }
 
 .link--purple {
@@ -2181,7 +2037,7 @@ input:checked + .switch--dot-transparent::after {
 
 .link--purple:hover,
 .link--purple.is-active {
-  color: var(--purple-deep);
+  color: var(--purple-dark);
 }
 
 .link--darken25 {
