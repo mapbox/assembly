@@ -556,6 +556,7 @@ legend{
   margin:0;
   border:0;
   background:transparent;
+  cursor:pointer;
 }
 .range > input::-webkit-slider-runnable-track{
   width:100%;
@@ -614,7 +615,7 @@ legend{
   height:20px;
   margin-top:-8px;
   border-radius:50%;
-  border:2px solid currentColor;
+  border:1px solid currentColor;
   background:#fff;
   cursor:pointer;
 }
@@ -626,7 +627,7 @@ legend{
   width:20px;
   height:20px;
   border-radius:50%;
-  border:2px solid currentColor;
+  border:1px solid currentColor;
   background:#fff;
   cursor:pointer;
 }
@@ -639,7 +640,7 @@ legend{
   height:20px;
   margin-top:0;
   border-radius:50%;
-  border:2px solid currentColor;
+  border:1px solid currentColor;
   background:#fff;
   cursor:pointer;
 }
@@ -12444,6 +12445,7 @@ legend{
   margin:0;
   border:0;
   background:transparent;
+  cursor:pointer;
 }
 .range > input::-webkit-slider-runnable-track{
   width:100%;
@@ -12502,7 +12504,7 @@ legend{
   height:20px;
   margin-top:-8px;
   border-radius:50%;
-  border:2px solid currentColor;
+  border:1px solid currentColor;
   background:#fff;
   cursor:pointer;
 }
@@ -12514,7 +12516,7 @@ legend{
   width:20px;
   height:20px;
   border-radius:50%;
-  border:2px solid currentColor;
+  border:1px solid currentColor;
   background:#fff;
   cursor:pointer;
 }
@@ -12527,7 +12529,7 @@ legend{
   height:20px;
   margin-top:0;
   border-radius:50%;
-  border:2px solid currentColor;
+  border:1px solid currentColor;
   background:#fff;
   cursor:pointer;
 }
