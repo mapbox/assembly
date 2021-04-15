@@ -163,7 +163,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /*
  * Style a select component.
- * Set the arrow color by adding a `select--{color}` modifier to the `select` element (`*-dark` colors are not available).
+ * Set the text and arrow color by adding a `select--{color}` modifier to the `select` element (`*-dark` colors are not available).
  *
  * @memberof Selects
  * @group
@@ -279,7 +279,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 
 /**
  * Modify a select component so that it has a border.
- * Set the border (and arrow) color by adding a `select--{color}` modifier to the `select` element along with the `select--stroke` modifier (`*-dark` colors are not available).
+ * Set the border and arrow color by adding a `select--{color}` modifier to the `select` element along with the `select--stroke` modifier (`*-dark` colors are not available).
+ * Note that the `select--stroke` modifier changes how the color modifier is interpreted. 
  *
  * @memberof Selects
  * @example
