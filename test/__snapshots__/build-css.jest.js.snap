@@ -421,6 +421,10 @@ legend{
   box-shadow:inset 0 0 0 1px #666;
 }
 
+.select.select--stroke:focus{
+  box-shadow:inset 0 0 0 1px #666, 0 0 0 3px rgba(137, 199, 216, 0.65);
+}
+
 .input::placeholder,
 .textarea::placeholder{
   color:rgba(64, 64, 64, 0.45);
@@ -12489,6 +12493,10 @@ legend{
 .input:focus,
 .textarea:focus{
   box-shadow:inset 0 0 0 1px #666;
+}
+
+.select.select--stroke:focus{
+  box-shadow:inset 0 0 0 1px #666, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .input::placeholder,
