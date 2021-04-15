@@ -398,6 +398,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--gray-dark);
 }
 
+.select--gray:hover {
+  color: var(--gray-dark);
+}
+
 .select--gray + .select-arrow {
   border-top-color: var(--gray);
 }
@@ -411,6 +415,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--pink:focus {
+  color: var(--pink-dark);
+}
+
+.select--pink:hover {
   color: var(--pink-dark);
 }
 
@@ -430,6 +438,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--red-dark);
 }
 
+.select--red:hover {
+  color: var(--red-dark);
+}
+
 .select--red + .select-arrow {
   border-top-color: var(--red);
 }
@@ -443,6 +455,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--orange:focus {
+  color: var(--orange-dark);
+}
+
+.select--orange:hover {
   color: var(--orange-dark);
 }
 
@@ -462,6 +478,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--yellow-dark);
 }
 
+.select--yellow:hover {
+  color: var(--yellow-dark);
+}
+
 .select--yellow + .select-arrow {
   border-top-color: var(--yellow);
 }
@@ -475,6 +495,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--green:focus {
+  color: var(--green-dark);
+}
+
+.select--green:hover {
   color: var(--green-dark);
 }
 
@@ -494,6 +518,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--blue-dark);
 }
 
+.select--blue:hover {
+  color: var(--blue-dark);
+}
+
 .select--blue + .select-arrow {
   border-top-color: var(--blue);
 }
@@ -507,6 +535,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--purple:focus {
+  color: var(--purple-dark);
+}
+
+.select--purple:hover {
   color: var(--purple-dark);
 }
 
@@ -526,6 +558,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--darken50);
 }
 
+.select--darken25:hover {
+  color: var(--darken50);
+}
+
 .select--darken25 + .select-arrow {
   border-top-color: var(--darken25);
 }
@@ -539,6 +575,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--darken50:focus {
+  color: var(--darken75);
+}
+
+.select--darken50:hover {
   color: var(--darken75);
 }
 
@@ -558,6 +598,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--black);
 }
 
+.select--darken75:hover {
+  color: var(--black);
+}
+
 .select--darken75 + .select-arrow {
   border-top-color: var(--darken75);
 }
@@ -571,6 +615,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--lighten25:focus {
+  color: var(--lighten50);
+}
+
+.select--lighten25:hover {
   color: var(--lighten50);
 }
 
@@ -590,6 +638,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--lighten75);
 }
 
+.select--lighten50:hover {
+  color: var(--lighten75);
+}
+
 .select--lighten50 + .select-arrow {
   border-top-color: var(--lighten50);
 }
@@ -603,6 +655,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--lighten75:focus {
+  color: var(--white);
+}
+
+.select--lighten75:hover {
   color: var(--white);
 }
 
@@ -622,6 +678,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--lighten75);
 }
 
+.select--white:hover {
+  color: var(--lighten75);
+}
+
 .select--white + .select-arrow {
   border-top-color: var(--white);
 }
@@ -635,6 +695,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--transparent:focus {
+  color: var(--darken10);
+}
+
+.select--transparent:hover {
   color: var(--darken10);
 }
 
@@ -3719,6 +3783,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--gray-dark);
 }
 
+.select--gray:hover {
+  color: var(--gray-dark);
+}
+
 .select--gray + .select-arrow {
   border-top-color: var(--gray);
 }
@@ -3732,6 +3800,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--pink:focus {
+  color: var(--pink-dark);
+}
+
+.select--pink:hover {
   color: var(--pink-dark);
 }
 
@@ -3751,6 +3823,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--red-dark);
 }
 
+.select--red:hover {
+  color: var(--red-dark);
+}
+
 .select--red + .select-arrow {
   border-top-color: var(--red);
 }
@@ -3764,6 +3840,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--orange:focus {
+  color: var(--orange-dark);
+}
+
+.select--orange:hover {
   color: var(--orange-dark);
 }
 
@@ -3783,6 +3863,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--yellow-dark);
 }
 
+.select--yellow:hover {
+  color: var(--yellow-dark);
+}
+
 .select--yellow + .select-arrow {
   border-top-color: var(--yellow);
 }
@@ -3796,6 +3880,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--green:focus {
+  color: var(--green-dark);
+}
+
+.select--green:hover {
   color: var(--green-dark);
 }
 
@@ -3815,6 +3903,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--blue-dark);
 }
 
+.select--blue:hover {
+  color: var(--blue-dark);
+}
+
 .select--blue + .select-arrow {
   border-top-color: var(--blue);
 }
@@ -3828,6 +3920,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--purple:focus {
+  color: var(--purple-dark);
+}
+
+.select--purple:hover {
   color: var(--purple-dark);
 }
 
@@ -3847,6 +3943,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--darken50);
 }
 
+.select--darken25:hover {
+  color: var(--darken50);
+}
+
 .select--darken25 + .select-arrow {
   border-top-color: var(--darken25);
 }
@@ -3860,6 +3960,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--darken50:focus {
+  color: var(--darken75);
+}
+
+.select--darken50:hover {
   color: var(--darken75);
 }
 
@@ -3879,6 +3983,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--black);
 }
 
+.select--darken75:hover {
+  color: var(--black);
+}
+
 .select--darken75 + .select-arrow {
   border-top-color: var(--darken75);
 }
@@ -3892,6 +4000,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--lighten25:focus {
+  color: var(--lighten50);
+}
+
+.select--lighten25:hover {
   color: var(--lighten50);
 }
 
@@ -3911,6 +4023,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--lighten75);
 }
 
+.select--lighten50:hover {
+  color: var(--lighten75);
+}
+
 .select--lighten50 + .select-arrow {
   border-top-color: var(--lighten50);
 }
@@ -3924,6 +4040,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--lighten75:focus {
+  color: var(--white);
+}
+
+.select--lighten75:hover {
   color: var(--white);
 }
 
@@ -3943,6 +4063,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--lighten75);
 }
 
+.select--white:hover {
+  color: var(--lighten75);
+}
+
 .select--white + .select-arrow {
   border-top-color: var(--white);
 }
@@ -3956,6 +4080,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--transparent:focus {
+  color: var(--darken10);
+}
+
+.select--transparent:hover {
   color: var(--darken10);
 }
 
@@ -6707,6 +6835,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--red-dark);
 }
 
+.select--red:hover {
+  color: var(--red-dark);
+}
+
 .select--red + .select-arrow {
   border-top-color: var(--red);
 }
@@ -6720,6 +6852,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--teal:focus {
+  color: var(--teal-dark);
+}
+
+.select--teal:hover {
   color: var(--teal-dark);
 }
 
@@ -7167,6 +7303,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--lighten75);
 }
 
+.select--lighten50:hover {
+  color: var(--lighten75);
+}
+
 .select--lighten50 + .select-arrow {
   border-top-color: var(--lighten50);
 }
@@ -7183,6 +7323,10 @@ scripts/build-color-variants.js to produce the output you want */
   color: var(--lighten50);
 }
 
+.select--lighten25:hover {
+  color: var(--lighten50);
+}
+
 .select--lighten25 + .select-arrow {
   border-top-color: var(--lighten25);
 }
@@ -7196,6 +7340,10 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .select--gray:focus {
+  color: var(--gray-dark);
+}
+
+.select--gray:hover {
   color: var(--gray-dark);
 }
 

@@ -198,6 +198,10 @@ function buildColorVariants(variables, config) {
           color: var(--${darkerShade});
         }
 
+        .select--${color}:hover {
+          color: var(--${darkerShade});
+        }
+
         .select--${color} + .select-arrow {
           border-top-color: var(--${color});
         }
