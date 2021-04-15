@@ -229,7 +229,7 @@ function buildColorVariants(variables, config) {
           box-shadow: inset 0 0 0 1px var(--${darkerShade});
         }
 
-        .select--stroke.select--${color}:focus {
+        [data-assembly-focus-control='visible'] .select--stroke.select--${color}:focus {
           box-shadow: inset 0 0 0 1px var(--${darkerShade}), var(--focus-shadow);
         }
       `));

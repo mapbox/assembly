@@ -718,7 +718,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--gray-dark);
 }
 
-.select--stroke.select--gray:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--gray:focus {
   box-shadow: inset 0 0 0 1px var(--gray-dark), var(--focus-shadow);
 }
 
@@ -733,7 +733,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--pink-dark);
 }
 
-.select--stroke.select--pink:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--pink:focus {
   box-shadow: inset 0 0 0 1px var(--pink-dark), var(--focus-shadow);
 }
 
@@ -748,7 +748,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--red-dark);
 }
 
-.select--stroke.select--red:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--red:focus {
   box-shadow: inset 0 0 0 1px var(--red-dark), var(--focus-shadow);
 }
 
@@ -763,7 +763,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--orange-dark);
 }
 
-.select--stroke.select--orange:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--orange:focus {
   box-shadow: inset 0 0 0 1px var(--orange-dark), var(--focus-shadow);
 }
 
@@ -778,7 +778,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--yellow-dark);
 }
 
-.select--stroke.select--yellow:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--yellow:focus {
   box-shadow: inset 0 0 0 1px var(--yellow-dark), var(--focus-shadow);
 }
 
@@ -793,7 +793,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--green-dark);
 }
 
-.select--stroke.select--green:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--green:focus {
   box-shadow: inset 0 0 0 1px var(--green-dark), var(--focus-shadow);
 }
 
@@ -808,7 +808,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--blue-dark);
 }
 
-.select--stroke.select--blue:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--blue:focus {
   box-shadow: inset 0 0 0 1px var(--blue-dark), var(--focus-shadow);
 }
 
@@ -823,7 +823,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--purple-dark);
 }
 
-.select--stroke.select--purple:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--purple:focus {
   box-shadow: inset 0 0 0 1px var(--purple-dark), var(--focus-shadow);
 }
 
@@ -838,7 +838,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--darken50);
 }
 
-.select--stroke.select--darken25:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--darken25:focus {
   box-shadow: inset 0 0 0 1px var(--darken50), var(--focus-shadow);
 }
 
@@ -853,7 +853,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--darken75);
 }
 
-.select--stroke.select--darken50:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--darken50:focus {
   box-shadow: inset 0 0 0 1px var(--darken75), var(--focus-shadow);
 }
 
@@ -868,7 +868,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--black);
 }
 
-.select--stroke.select--darken75:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--darken75:focus {
   box-shadow: inset 0 0 0 1px var(--black), var(--focus-shadow);
 }
 
@@ -883,7 +883,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--lighten50);
 }
 
-.select--stroke.select--lighten25:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--lighten25:focus {
   box-shadow: inset 0 0 0 1px var(--lighten50), var(--focus-shadow);
 }
 
@@ -898,7 +898,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
-.select--stroke.select--lighten50:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--lighten50:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75), var(--focus-shadow);
 }
 
@@ -913,7 +913,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--white);
 }
 
-.select--stroke.select--lighten75:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--lighten75:focus {
   box-shadow: inset 0 0 0 1px var(--white), var(--focus-shadow);
 }
 
@@ -928,7 +928,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--lighten75);
 }
 
-.select--stroke.select--white:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--white:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75), var(--focus-shadow);
 }
 
@@ -943,7 +943,7 @@ scripts/build-color-variants.js to produce the output you want */
   box-shadow: inset 0 0 0 1px var(--darken10);
 }
 
-.select--stroke.select--transparent:focus {
+[data-assembly-focus-control='visible'] .select--stroke.select--transparent:focus {
   box-shadow: inset 0 0 0 1px var(--darken10), var(--focus-shadow);
 }
 
