@@ -421,7 +421,7 @@ legend{
   box-shadow:inset 0 0 0 1px #666;
 }
 
-.select.select--stroke:focus{
+[data-assembly-focus-control='visible'] .select.select--stroke:focus{
   box-shadow:inset 0 0 0 1px #666, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
@@ -12564,7 +12564,7 @@ legend{
   box-shadow:inset 0 0 0 1px #666;
 }
 
-.select.select--stroke:focus{
+[data-assembly-focus-control='visible'] .select.select--stroke:focus{
   box-shadow:inset 0 0 0 1px #666, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 

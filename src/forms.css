@@ -45,7 +45,7 @@
   box-shadow: inset 0 0 0 1px var(--default-form-color);
 }
 
-.select.select--stroke:focus {
+[data-assembly-focus-control='visible'] .select.select--stroke:focus {
   box-shadow: inset 0 0 0 1px var(--default-form-color), var(--focus-shadow);
 }
 
