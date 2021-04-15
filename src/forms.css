@@ -41,14 +41,13 @@
 }
 
 .input:focus,
-.textarea:focus,
-.select.select--stroke:focus {
+.textarea:focus {
   box-shadow: inset 0 0 0 1px var(--default-form-color);
 }
 
-.select:focus {
+/* .select:focus {
   box-shadow: none;
-}
+} */
 
 .input::placeholder,
 .textarea::placeholder {

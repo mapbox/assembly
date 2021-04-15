@@ -650,9 +650,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-gray:focus,
-.input--border-gray:focus,
-.select--stroke.select--gray:focus {
+.input--border-gray:focus {
   box-shadow: inset 0 0 0 1px var(--gray-dark);
+}
+
+.select--stroke.select--gray:focus {
+  box-shadow: inset 0 0 0 1px var(--gray-dark), var(--focus-shadow);
 }
 
 .textarea--border-pink,
@@ -662,9 +665,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-pink:focus,
-.input--border-pink:focus,
-.select--stroke.select--pink:focus {
+.input--border-pink:focus {
   box-shadow: inset 0 0 0 1px var(--pink-dark);
+}
+
+.select--stroke.select--pink:focus {
+  box-shadow: inset 0 0 0 1px var(--pink-dark), var(--focus-shadow);
 }
 
 .textarea--border-red,
@@ -674,9 +680,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-red:focus,
-.input--border-red:focus,
-.select--stroke.select--red:focus {
+.input--border-red:focus {
   box-shadow: inset 0 0 0 1px var(--red-dark);
+}
+
+.select--stroke.select--red:focus {
+  box-shadow: inset 0 0 0 1px var(--red-dark), var(--focus-shadow);
 }
 
 .textarea--border-orange,
@@ -686,9 +695,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-orange:focus,
-.input--border-orange:focus,
-.select--stroke.select--orange:focus {
+.input--border-orange:focus {
   box-shadow: inset 0 0 0 1px var(--orange-dark);
+}
+
+.select--stroke.select--orange:focus {
+  box-shadow: inset 0 0 0 1px var(--orange-dark), var(--focus-shadow);
 }
 
 .textarea--border-yellow,
@@ -698,9 +710,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-yellow:focus,
-.input--border-yellow:focus,
-.select--stroke.select--yellow:focus {
+.input--border-yellow:focus {
   box-shadow: inset 0 0 0 1px var(--yellow-dark);
+}
+
+.select--stroke.select--yellow:focus {
+  box-shadow: inset 0 0 0 1px var(--yellow-dark), var(--focus-shadow);
 }
 
 .textarea--border-green,
@@ -710,9 +725,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-green:focus,
-.input--border-green:focus,
-.select--stroke.select--green:focus {
+.input--border-green:focus {
   box-shadow: inset 0 0 0 1px var(--green-dark);
+}
+
+.select--stroke.select--green:focus {
+  box-shadow: inset 0 0 0 1px var(--green-dark), var(--focus-shadow);
 }
 
 .textarea--border-blue,
@@ -722,9 +740,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-blue:focus,
-.input--border-blue:focus,
-.select--stroke.select--blue:focus {
+.input--border-blue:focus {
   box-shadow: inset 0 0 0 1px var(--blue-dark);
+}
+
+.select--stroke.select--blue:focus {
+  box-shadow: inset 0 0 0 1px var(--blue-dark), var(--focus-shadow);
 }
 
 .textarea--border-purple,
@@ -734,9 +755,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-purple:focus,
-.input--border-purple:focus,
-.select--stroke.select--purple:focus {
+.input--border-purple:focus {
   box-shadow: inset 0 0 0 1px var(--purple-dark);
+}
+
+.select--stroke.select--purple:focus {
+  box-shadow: inset 0 0 0 1px var(--purple-dark), var(--focus-shadow);
 }
 
 .textarea--border-darken25,
@@ -746,9 +770,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-darken25:focus,
-.input--border-darken25:focus,
-.select--stroke.select--darken25:focus {
+.input--border-darken25:focus {
   box-shadow: inset 0 0 0 1px var(--darken50);
+}
+
+.select--stroke.select--darken25:focus {
+  box-shadow: inset 0 0 0 1px var(--darken50), var(--focus-shadow);
 }
 
 .textarea--border-darken50,
@@ -758,9 +785,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-darken50:focus,
-.input--border-darken50:focus,
-.select--stroke.select--darken50:focus {
+.input--border-darken50:focus {
   box-shadow: inset 0 0 0 1px var(--darken75);
+}
+
+.select--stroke.select--darken50:focus {
+  box-shadow: inset 0 0 0 1px var(--darken75), var(--focus-shadow);
 }
 
 .textarea--border-darken75,
@@ -770,9 +800,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-darken75:focus,
-.input--border-darken75:focus,
-.select--stroke.select--darken75:focus {
+.input--border-darken75:focus {
   box-shadow: inset 0 0 0 1px var(--black);
+}
+
+.select--stroke.select--darken75:focus {
+  box-shadow: inset 0 0 0 1px var(--black), var(--focus-shadow);
 }
 
 .textarea--border-lighten25,
@@ -782,9 +815,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-lighten25:focus,
-.input--border-lighten25:focus,
-.select--stroke.select--lighten25:focus {
+.input--border-lighten25:focus {
   box-shadow: inset 0 0 0 1px var(--lighten50);
+}
+
+.select--stroke.select--lighten25:focus {
+  box-shadow: inset 0 0 0 1px var(--lighten50), var(--focus-shadow);
 }
 
 .textarea--border-lighten50,
@@ -794,9 +830,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-lighten50:focus,
-.input--border-lighten50:focus,
-.select--stroke.select--lighten50:focus {
+.input--border-lighten50:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75);
+}
+
+.select--stroke.select--lighten50:focus {
+  box-shadow: inset 0 0 0 1px var(--lighten75), var(--focus-shadow);
 }
 
 .textarea--border-lighten75,
@@ -806,9 +845,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-lighten75:focus,
-.input--border-lighten75:focus,
-.select--stroke.select--lighten75:focus {
+.input--border-lighten75:focus {
   box-shadow: inset 0 0 0 1px var(--white);
+}
+
+.select--stroke.select--lighten75:focus {
+  box-shadow: inset 0 0 0 1px var(--white), var(--focus-shadow);
 }
 
 .textarea--border-white,
@@ -818,9 +860,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-white:focus,
-.input--border-white:focus,
-.select--stroke.select--white:focus {
+.input--border-white:focus {
   box-shadow: inset 0 0 0 1px var(--lighten75);
+}
+
+.select--stroke.select--white:focus {
+  box-shadow: inset 0 0 0 1px var(--lighten75), var(--focus-shadow);
 }
 
 .textarea--border-transparent,
@@ -830,9 +875,12 @@ scripts/build-color-variants.js to produce the output you want */
 }
 
 .textarea--border-transparent:focus,
-.input--border-transparent:focus,
-.select--stroke.select--transparent:focus {
+.input--border-transparent:focus {
   box-shadow: inset 0 0 0 1px var(--darken10);
+}
+
+.select--stroke.select--transparent:focus {
+  box-shadow: inset 0 0 0 1px var(--darken10), var(--focus-shadow);
 }
 
 .checkbox--gray {

@@ -417,13 +417,8 @@ legend{
 }
 
 .input:focus,
-.textarea:focus,
-.select.select--stroke:focus{
+.textarea:focus{
   box-shadow:inset 0 0 0 1px #666;
-}
-
-.select:focus{
-  box-shadow:none;
 }
 
 .input::placeholder,
@@ -8928,9 +8923,12 @@ textarea{
 }
 
 .textarea--border-gray:focus,
-.input--border-gray:focus,
-.select--stroke.select--gray:focus{
+.input--border-gray:focus{
   box-shadow:inset 0 0 0 1px #2d2d2d;
+}
+
+.select--stroke.select--gray:focus{
+  box-shadow:inset 0 0 0 1px #2d2d2d, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-pink,
@@ -8940,9 +8938,12 @@ textarea{
 }
 
 .textarea--border-pink:focus,
-.input--border-pink:focus,
-.select--stroke.select--pink:focus{
+.input--border-pink:focus{
   box-shadow:inset 0 0 0 1px #ab084b;
+}
+
+.select--stroke.select--pink:focus{
+  box-shadow:inset 0 0 0 1px #ab084b, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-red,
@@ -8952,9 +8953,12 @@ textarea{
 }
 
 .textarea--border-red:focus,
-.input--border-red:focus,
-.select--stroke.select--red:focus{
+.input--border-red:focus{
   box-shadow:inset 0 0 0 1px #a30003;
+}
+
+.select--stroke.select--red:focus{
+  box-shadow:inset 0 0 0 1px #a30003, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-orange,
@@ -8964,9 +8968,12 @@ textarea{
 }
 
 .textarea--border-orange:focus,
-.input--border-orange:focus,
-.select--stroke.select--orange:focus{
+.input--border-orange:focus{
   box-shadow:inset 0 0 0 1px #bc3a00;
+}
+
+.select--stroke.select--orange:focus{
+  box-shadow:inset 0 0 0 1px #bc3a00, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-yellow,
@@ -8976,9 +8983,12 @@ textarea{
 }
 
 .textarea--border-yellow:focus,
-.input--border-yellow:focus,
-.select--stroke.select--yellow:focus{
+.input--border-yellow:focus{
   box-shadow:inset 0 0 0 1px #d9a100;
+}
+
+.select--stroke.select--yellow:focus{
+  box-shadow:inset 0 0 0 1px #d9a100, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-green,
@@ -8988,9 +8998,12 @@ textarea{
 }
 
 .textarea--border-green:focus,
-.input--border-green:focus,
-.select--stroke.select--green:focus{
+.input--border-green:focus{
   box-shadow:inset 0 0 0 1px #006427;
+}
+
+.select--stroke.select--green:focus{
+  box-shadow:inset 0 0 0 1px #006427, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-blue,
@@ -9000,9 +9013,12 @@ textarea{
 }
 
 .textarea--border-blue:focus,
-.input--border-blue:focus,
-.select--stroke.select--blue:focus{
+.input--border-blue:focus{
   box-shadow:inset 0 0 0 1px #223B53;
+}
+
+.select--stroke.select--blue:focus{
+  box-shadow:inset 0 0 0 1px #223B53, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-purple,
@@ -9012,9 +9028,12 @@ textarea{
 }
 
 .textarea--border-purple:focus,
-.input--border-purple:focus,
-.select--stroke.select--purple:focus{
+.input--border-purple:focus{
   box-shadow:inset 0 0 0 1px #440067;
+}
+
+.select--stroke.select--purple:focus{
+  box-shadow:inset 0 0 0 1px #440067, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-darken25,
@@ -9024,9 +9043,12 @@ textarea{
 }
 
 .textarea--border-darken25:focus,
-.input--border-darken25:focus,
-.select--stroke.select--darken25:focus{
+.input--border-darken25:focus{
   box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.select--stroke.select--darken25:focus{
+  box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.5), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-darken50,
@@ -9036,9 +9058,12 @@ textarea{
 }
 
 .textarea--border-darken50:focus,
-.input--border-darken50:focus,
-.select--stroke.select--darken50:focus{
+.input--border-darken50:focus{
   box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.75);
+}
+
+.select--stroke.select--darken50:focus{
+  box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.75), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-darken75,
@@ -9048,9 +9073,12 @@ textarea{
 }
 
 .textarea--border-darken75:focus,
-.input--border-darken75:focus,
-.select--stroke.select--darken75:focus{
+.input--border-darken75:focus{
   box-shadow:inset 0 0 0 1px #000;
+}
+
+.select--stroke.select--darken75:focus{
+  box-shadow:inset 0 0 0 1px #000, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-lighten25,
@@ -9060,9 +9088,12 @@ textarea{
 }
 
 .textarea--border-lighten25:focus,
-.input--border-lighten25:focus,
-.select--stroke.select--lighten25:focus{
+.input--border-lighten25:focus{
   box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.select--stroke.select--lighten25:focus{
+  box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.5), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-lighten50,
@@ -9072,9 +9103,12 @@ textarea{
 }
 
 .textarea--border-lighten50:focus,
-.input--border-lighten50:focus,
-.select--stroke.select--lighten50:focus{
+.input--border-lighten50:focus{
   box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.select--stroke.select--lighten50:focus{
+  box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.75), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-lighten75,
@@ -9084,9 +9118,12 @@ textarea{
 }
 
 .textarea--border-lighten75:focus,
-.input--border-lighten75:focus,
-.select--stroke.select--lighten75:focus{
+.input--border-lighten75:focus{
   box-shadow:inset 0 0 0 1px #fff;
+}
+
+.select--stroke.select--lighten75:focus{
+  box-shadow:inset 0 0 0 1px #fff, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-white,
@@ -9096,9 +9133,12 @@ textarea{
 }
 
 .textarea--border-white:focus,
-.input--border-white:focus,
-.select--stroke.select--white:focus{
+.input--border-white:focus{
   box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.select--stroke.select--white:focus{
+  box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.75), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-transparent,
@@ -9108,9 +9148,12 @@ textarea{
 }
 
 .textarea--border-transparent:focus,
-.input--border-transparent:focus,
-.select--stroke.select--transparent:focus{
+.input--border-transparent:focus{
   box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.select--stroke.select--transparent:focus{
+  box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .checkbox--gray{
@@ -12444,13 +12487,8 @@ legend{
 }
 
 .input:focus,
-.textarea:focus,
-.select.select--stroke:focus{
+.textarea:focus{
   box-shadow:inset 0 0 0 1px #666;
-}
-
-.select:focus{
-  box-shadow:none;
 }
 
 .input::placeholder,
@@ -20941,9 +20979,12 @@ textarea{
 }
 
 .textarea--border-gray:focus,
-.input--border-gray:focus,
-.select--stroke.select--gray:focus{
+.input--border-gray:focus{
   box-shadow:inset 0 0 0 1px #2d2d2d;
+}
+
+.select--stroke.select--gray:focus{
+  box-shadow:inset 0 0 0 1px #2d2d2d, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-pink,
@@ -20953,9 +20994,12 @@ textarea{
 }
 
 .textarea--border-pink:focus,
-.input--border-pink:focus,
-.select--stroke.select--pink:focus{
+.input--border-pink:focus{
   box-shadow:inset 0 0 0 1px #ab084b;
+}
+
+.select--stroke.select--pink:focus{
+  box-shadow:inset 0 0 0 1px #ab084b, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-red,
@@ -20965,9 +21009,12 @@ textarea{
 }
 
 .textarea--border-red:focus,
-.input--border-red:focus,
-.select--stroke.select--red:focus{
+.input--border-red:focus{
   box-shadow:inset 0 0 0 1px #a30003;
+}
+
+.select--stroke.select--red:focus{
+  box-shadow:inset 0 0 0 1px #a30003, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-orange,
@@ -20977,9 +21024,12 @@ textarea{
 }
 
 .textarea--border-orange:focus,
-.input--border-orange:focus,
-.select--stroke.select--orange:focus{
+.input--border-orange:focus{
   box-shadow:inset 0 0 0 1px #bc3a00;
+}
+
+.select--stroke.select--orange:focus{
+  box-shadow:inset 0 0 0 1px #bc3a00, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-yellow,
@@ -20989,9 +21039,12 @@ textarea{
 }
 
 .textarea--border-yellow:focus,
-.input--border-yellow:focus,
-.select--stroke.select--yellow:focus{
+.input--border-yellow:focus{
   box-shadow:inset 0 0 0 1px #d9a100;
+}
+
+.select--stroke.select--yellow:focus{
+  box-shadow:inset 0 0 0 1px #d9a100, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-green,
@@ -21001,9 +21054,12 @@ textarea{
 }
 
 .textarea--border-green:focus,
-.input--border-green:focus,
-.select--stroke.select--green:focus{
+.input--border-green:focus{
   box-shadow:inset 0 0 0 1px #006427;
+}
+
+.select--stroke.select--green:focus{
+  box-shadow:inset 0 0 0 1px #006427, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-blue,
@@ -21013,9 +21069,12 @@ textarea{
 }
 
 .textarea--border-blue:focus,
-.input--border-blue:focus,
-.select--stroke.select--blue:focus{
+.input--border-blue:focus{
   box-shadow:inset 0 0 0 1px #295b97;
+}
+
+.select--stroke.select--blue:focus{
+  box-shadow:inset 0 0 0 1px #295b97, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-purple,
@@ -21025,9 +21084,12 @@ textarea{
 }
 
 .textarea--border-purple:focus,
-.input--border-purple:focus,
-.select--stroke.select--purple:focus{
+.input--border-purple:focus{
   box-shadow:inset 0 0 0 1px #440067;
+}
+
+.select--stroke.select--purple:focus{
+  box-shadow:inset 0 0 0 1px #440067, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-darken25,
@@ -21037,9 +21099,12 @@ textarea{
 }
 
 .textarea--border-darken25:focus,
-.input--border-darken25:focus,
-.select--stroke.select--darken25:focus{
+.input--border-darken25:focus{
   box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.select--stroke.select--darken25:focus{
+  box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.5), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-darken50,
@@ -21049,9 +21114,12 @@ textarea{
 }
 
 .textarea--border-darken50:focus,
-.input--border-darken50:focus,
-.select--stroke.select--darken50:focus{
+.input--border-darken50:focus{
   box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.75);
+}
+
+.select--stroke.select--darken50:focus{
+  box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.75), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-darken75,
@@ -21061,9 +21129,12 @@ textarea{
 }
 
 .textarea--border-darken75:focus,
-.input--border-darken75:focus,
-.select--stroke.select--darken75:focus{
+.input--border-darken75:focus{
   box-shadow:inset 0 0 0 1px #000;
+}
+
+.select--stroke.select--darken75:focus{
+  box-shadow:inset 0 0 0 1px #000, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-lighten25,
@@ -21073,9 +21144,12 @@ textarea{
 }
 
 .textarea--border-lighten25:focus,
-.input--border-lighten25:focus,
-.select--stroke.select--lighten25:focus{
+.input--border-lighten25:focus{
   box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.select--stroke.select--lighten25:focus{
+  box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.5), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-lighten50,
@@ -21085,9 +21159,12 @@ textarea{
 }
 
 .textarea--border-lighten50:focus,
-.input--border-lighten50:focus,
-.select--stroke.select--lighten50:focus{
+.input--border-lighten50:focus{
   box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.select--stroke.select--lighten50:focus{
+  box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.75), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-lighten75,
@@ -21097,9 +21174,12 @@ textarea{
 }
 
 .textarea--border-lighten75:focus,
-.input--border-lighten75:focus,
-.select--stroke.select--lighten75:focus{
+.input--border-lighten75:focus{
   box-shadow:inset 0 0 0 1px #fff;
+}
+
+.select--stroke.select--lighten75:focus{
+  box-shadow:inset 0 0 0 1px #fff, 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-white,
@@ -21109,9 +21189,12 @@ textarea{
 }
 
 .textarea--border-white:focus,
-.input--border-white:focus,
-.select--stroke.select--white:focus{
+.input--border-white:focus{
   box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.select--stroke.select--white:focus{
+  box-shadow:inset 0 0 0 1px rgba(255, 255, 255, 0.75), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .textarea--border-transparent,
@@ -21121,9 +21204,12 @@ textarea{
 }
 
 .textarea--border-transparent:focus,
-.input--border-transparent:focus,
-.select--stroke.select--transparent:focus{
+.input--border-transparent:focus{
   box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.select--stroke.select--transparent:focus{
+  box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
 .checkbox--gray{

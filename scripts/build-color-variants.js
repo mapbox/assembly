@@ -221,9 +221,12 @@ function buildColorVariants(variables, config) {
         }
 
         .textarea--border-${color}:focus,
-        .input--border-${color}:focus,
-        .select--stroke.select--${color}:focus {
+        .input--border-${color}:focus {
           box-shadow: inset 0 0 0 1px var(--${darkerShade});
+        }
+
+        .select--stroke.select--${color}:focus {
+          box-shadow: inset 0 0 0 1px var(--${darkerShade}), var(--focus-shadow);
         }
       `));
     }, '');
