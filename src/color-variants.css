@@ -1582,55 +1582,75 @@ input:checked + .switch--dot-transparent::after {
  * @group
  * @memberof Text colors
  * @example
- * <div class='grid'>
- *   <div class='col col--3 color-gray-dark'>color-gray-dark</div>
- *   <div class='col col--3 color-gray'>color-gray</div>
- *   <div class='col col--3 color-gray-light'>color-gray-light</div>
- *   <div class='col col--3 color-gray-faint'>color-gray-faint</div>
- *   <div class='col col--3 color-pink-dark'>color-pink-dark</div>
- *   <div class='col col--3 color-pink'>color-pink</div>
- *   <div class='col col--3 color-pink-light'>color-pink-light</div>
- *   <div class='col col--3 color-pink-faint'>color-pink-faint</div>
- *   <div class='col col--3 color-red-dark'>color-red-dark</div>
- *   <div class='col col--3 color-red'>color-red</div>
- *   <div class='col col--3 color-red-light'>color-red-light</div>
- *   <div class='col col--3 color-red-faint'>color-red-faint</div>
- *   <div class='col col--3 color-orange-dark'>color-orange-dark</div>
- *   <div class='col col--3 color-orange'>color-orange</div>
- *   <div class='col col--3 color-orange-light'>color-orange-light</div>
- *   <div class='col col--3 color-orange-faint'>color-orange-faint</div>
- *   <div class='col col--3 color-yellow-dark'>color-yellow-dark</div>
- *   <div class='col col--3 color-yellow'>color-yellow</div>
- *   <div class='col col--3 color-yellow-light'>color-yellow-light</div>
- *   <div class='col col--3 color-yellow-faint'>color-yellow-faint</div>
- *   <div class='col col--3 color-green-dark'>color-green-dark</div>
- *   <div class='col col--3 color-green'>color-green</div>
- *   <div class='col col--3 color-green-light'>color-green-light</div>
- *   <div class='col col--3 color-green-faint'>color-green-faint</div>
- *   <div class='col col--3 color-blue-dark'>color-blue-dark</div>
- *   <div class='col col--3 color-blue'>color-blue</div>
- *   <div class='col col--3 color-blue-light'>color-blue-light</div>
- *   <div class='col col--3 color-blue-faint'>color-blue-faint</div>
- *   <div class='col col--3 color-purple-dark'>color-purple-dark</div>
- *   <div class='col col--3 color-purple'>color-purple</div>
- *   <div class='col col--3 color-purple-light'>color-purple-light</div>
- *   <div class='col col--3 color-purple-faint'>color-purple-faint</div>
- *   <div class='col col--3 color-darken10'>color-darken10</div>
- *   <div class='col col--3 color-darken25'>color-darken25</div>
- *   <div class='col col--3 color-darken50'>color-darken50</div>
- *   <div class='col col--3 color-darken75'>color-darken75</div>
- *   <div class='col col--3 color-lighten10'>color-lighten10</div>
- *   <div class='col col--3 color-lighten25'>color-lighten25</div>
- *   <div class='col col--3 color-lighten50'>color-lighten50</div>
- *   <div class='col col--3 color-lighten75'>color-lighten75</div>
- *   <div class='col col--3 color-white'>color-white</div>
- *   <div class='col col--3 color-black'>color-black</div>
- *   <div class='col col--3 color-transparent'>color-transparent</div>
- *   <div class='col col--3 color-text'>.color-text</div>
+ * <div class='txt-s grid'>
+ *   <div class='col col--2 color-gray-dark'>color-gray-dark</div>
+ *   <div class='col col--2 color-gray-deep'>color-gray-deep</div>
+ *   <div class='col col--2 color-gray'>color-gray</div>
+ *   <div class='col col--2 color-gray-light'>color-gray-light</div>
+ *   <div class='col col--2 color-gray-lighter'>color-gray-lighter</div>
+ *   <div class='col col--2 color-gray-faint'>color-gray-faint</div>
+ *   <div class='col col--2 color-pink-dark'>color-pink-dark</div>
+ *   <div class='col col--2 color-pink-deep'>color-pink-deep</div>
+ *   <div class='col col--2 color-pink'>color-pink</div>
+ *   <div class='col col--2 color-pink-light'>color-pink-light</div>
+ *   <div class='col col--2 color-pink-lighter'>color-pink-lighter</div>
+ *   <div class='col col--2 color-pink-faint'>color-pink-faint</div>
+ *   <div class='col col--2 color-red-dark'>color-red-dark</div>
+ *   <div class='col col--2 color-red-deep'>color-red-deep</div>
+ *   <div class='col col--2 color-red'>color-red</div>
+ *   <div class='col col--2 color-red-light'>color-red-light</div>
+ *   <div class='col col--2 color-red-lighter'>color-red-lighter</div>
+ *   <div class='col col--2 color-red-faint'>color-red-faint</div>
+ *   <div class='col col--2 color-orange-dark'>color-orange-dark</div>
+ *   <div class='col col--2 color-orange-deep'>color-orange-deep</div>
+ *   <div class='col col--2 color-orange'>color-orange</div>
+ *   <div class='col col--2 color-orange-light'>color-orange-light</div>
+ *   <div class='col col--2 color-orange-lighter'>color-orange-lighter</div>
+ *   <div class='col col--2 color-orange-faint'>color-orange-faint</div>
+ *   <div class='col col--2 color-yellow-dark'>color-yellow-dark</div>
+ *   <div class='col col--2 color-yellow-deep'>color-yellow-deep</div>
+ *   <div class='col col--2 color-yellow'>color-yellow</div>
+ *   <div class='col col--2 color-yellow-light'>color-yellow-light</div>
+ *   <div class='col col--2 color-yellow-lighter'>color-yellow-lighter</div>
+ *   <div class='col col--2 color-yellow-faint'>color-yellow-faint</div>
+ *   <div class='col col--2 color-green-dark'>color-green-dark</div>
+ *   <div class='col col--2 color-green-deep'>color-green-deep</div>
+ *   <div class='col col--2 color-green'>color-green</div>
+ *   <div class='col col--2 color-green-light'>color-green-light</div>
+ *   <div class='col col--2 color-green-lighter'>color-green-lighter</div>
+ *   <div class='col col--2 color-green-faint'>color-green-faint</div>
+ *   <div class='col col--2 color-blue-dark'>color-blue-dark</div>
+ *   <div class='col col--2 color-blue-deep'>color-blue-deep</div>
+ *   <div class='col col--2 color-blue'>color-blue</div>
+ *   <div class='col col--2 color-blue-light'>color-blue-light</div>
+ *   <div class='col col--2 color-blue-lighter'>color-blue-lighter</div>
+ *   <div class='col col--2 color-blue-faint'>color-blue-faint</div>
+ *   <div class='col col--2 color-purple-dark'>color-purple-dark</div>
+ *   <div class='col col--2 color-purple-deep'>color-purple-deep</div>
+ *   <div class='col col--2 color-purple'>color-purple</div>
+ *   <div class='col col--2 color-purple-light'>color-purple-light</div>
+ *   <div class='col col--2 color-purple-lighter'>color-purple-lighter</div>
+ *   <div class='col col--2 color-purple-faint'>color-purple-faint</div>
+ *   <div class='col col--2 color-darken10'>color-darken10</div>
+ *   <div class='col col--2 color-darken25'>color-darken25</div>
+ *   <div class='col col--2 color-darken50'>color-darken50</div>
+ *   <div class='col col--2 color-darken75'>color-darken75</div>
+ *   <div class='col col--2 color-lighten10'>color-lighten10</div>
+ *   <div class='col col--2 color-lighten25'>color-lighten25</div>
+ *   <div class='col col--2 color-lighten50'>color-lighten50</div>
+ *   <div class='col col--2 color-lighten75'>color-lighten75</div>
+ *   <div class='col col--2 color-white'>color-white</div>
+ *   <div class='col col--2 color-black'>color-black</div>
+ *   <div class='col col--2 color-transparent'>color-transparent</div>
+ *   <div class='col col--2 color-text'>color-text</div>
  * </div>
  */
 .color-gray-dark {
   color: var(--gray-dark) !important;
+}
+
+.color-gray-deep {
+  color: var(--gray-deep) !important;
 }
 
 .color-gray {
@@ -1641,12 +1661,20 @@ input:checked + .switch--dot-transparent::after {
   color: var(--gray-light) !important;
 }
 
+.color-gray-lighter {
+  color: var(--gray-lighter) !important;
+}
+
 .color-gray-faint {
   color: var(--gray-faint) !important;
 }
 
 .color-pink-dark {
   color: var(--pink-dark) !important;
+}
+
+.color-pink-deep {
+  color: var(--pink-deep) !important;
 }
 
 .color-pink {
@@ -1657,12 +1685,20 @@ input:checked + .switch--dot-transparent::after {
   color: var(--pink-light) !important;
 }
 
+.color-pink-lighter {
+  color: var(--pink-lighter) !important;
+}
+
 .color-pink-faint {
   color: var(--pink-faint) !important;
 }
 
 .color-red-dark {
   color: var(--red-dark) !important;
+}
+
+.color-red-deep {
+  color: var(--red-deep) !important;
 }
 
 .color-red {
@@ -1673,12 +1709,20 @@ input:checked + .switch--dot-transparent::after {
   color: var(--red-light) !important;
 }
 
+.color-red-lighter {
+  color: var(--red-lighter) !important;
+}
+
 .color-red-faint {
   color: var(--red-faint) !important;
 }
 
 .color-orange-dark {
   color: var(--orange-dark) !important;
+}
+
+.color-orange-deep {
+  color: var(--orange-deep) !important;
 }
 
 .color-orange {
@@ -1689,12 +1733,20 @@ input:checked + .switch--dot-transparent::after {
   color: var(--orange-light) !important;
 }
 
+.color-orange-lighter {
+  color: var(--orange-lighter) !important;
+}
+
 .color-orange-faint {
   color: var(--orange-faint) !important;
 }
 
 .color-yellow-dark {
   color: var(--yellow-dark) !important;
+}
+
+.color-yellow-deep {
+  color: var(--yellow-deep) !important;
 }
 
 .color-yellow {
@@ -1705,12 +1757,20 @@ input:checked + .switch--dot-transparent::after {
   color: var(--yellow-light) !important;
 }
 
+.color-yellow-lighter {
+  color: var(--yellow-lighter) !important;
+}
+
 .color-yellow-faint {
   color: var(--yellow-faint) !important;
 }
 
 .color-green-dark {
   color: var(--green-dark) !important;
+}
+
+.color-green-deep {
+  color: var(--green-deep) !important;
 }
 
 .color-green {
@@ -1721,12 +1781,20 @@ input:checked + .switch--dot-transparent::after {
   color: var(--green-light) !important;
 }
 
+.color-green-lighter {
+  color: var(--green-lighter) !important;
+}
+
 .color-green-faint {
   color: var(--green-faint) !important;
 }
 
 .color-blue-dark {
   color: var(--blue-dark) !important;
+}
+
+.color-blue-deep {
+  color: var(--blue-deep) !important;
 }
 
 .color-blue {
@@ -1737,6 +1805,10 @@ input:checked + .switch--dot-transparent::after {
   color: var(--blue-light) !important;
 }
 
+.color-blue-lighter {
+  color: var(--blue-lighter) !important;
+}
+
 .color-blue-faint {
   color: var(--blue-faint) !important;
 }
@@ -1745,12 +1817,20 @@ input:checked + .switch--dot-transparent::after {
   color: var(--purple-dark) !important;
 }
 
+.color-purple-deep {
+  color: var(--purple-deep) !important;
+}
+
 .color-purple {
   color: var(--purple) !important;
 }
 
 .color-purple-light {
   color: var(--purple-light) !important;
+}
+
+.color-purple-lighter {
+  color: var(--purple-lighter) !important;
 }
 
 .color-purple-faint {
@@ -1819,55 +1899,75 @@ input:checked + .switch--dot-transparent::after {
  * @memberof Background colors
  * @example
  * <div class='grid'>
- *   <div class='col col--3 bg-gray-dark py6 px6'>bg-gray-dark</div>
- *   <div class='col col--3 bg-gray py6 px6'>bg-gray</div>
- *   <div class='col col--3 bg-gray-light py6 px6'>bg-gray-light</div>
- *   <div class='col col--3 bg-gray-faint py6 px6'>bg-gray-faint</div>
- *   <div class='col col--3 bg-pink-dark py6 px6'>bg-pink-dark</div>
- *   <div class='col col--3 bg-pink py6 px6'>bg-pink</div>
- *   <div class='col col--3 bg-pink-light py6 px6'>bg-pink-light</div>
- *   <div class='col col--3 bg-pink-faint py6 px6'>bg-pink-faint</div>
- *   <div class='col col--3 bg-red-dark py6 px6'>bg-red-dark</div>
- *   <div class='col col--3 bg-red py6 px6'>bg-red</div>
- *   <div class='col col--3 bg-red-light py6 px6'>bg-red-light</div>
- *   <div class='col col--3 bg-red-faint py6 px6'>bg-red-faint</div>
- *   <div class='col col--3 bg-orange-dark py6 px6'>bg-orange-dark</div>
- *   <div class='col col--3 bg-orange py6 px6'>bg-orange</div>
- *   <div class='col col--3 bg-orange-light py6 px6'>bg-orange-light</div>
- *   <div class='col col--3 bg-orange-faint py6 px6'>bg-orange-faint</div>
- *   <div class='col col--3 bg-yellow-dark py6 px6'>bg-yellow-dark</div>
- *   <div class='col col--3 bg-yellow py6 px6'>bg-yellow</div>
- *   <div class='col col--3 bg-yellow-light py6 px6'>bg-yellow-light</div>
- *   <div class='col col--3 bg-yellow-faint py6 px6'>bg-yellow-faint</div>
- *   <div class='col col--3 bg-green-dark py6 px6'>bg-green-dark</div>
- *   <div class='col col--3 bg-green py6 px6'>bg-green</div>
- *   <div class='col col--3 bg-green-light py6 px6'>bg-green-light</div>
- *   <div class='col col--3 bg-green-faint py6 px6'>bg-green-faint</div>
- *   <div class='col col--3 bg-blue-dark py6 px6'>bg-blue-dark</div>
- *   <div class='col col--3 bg-blue py6 px6'>bg-blue</div>
- *   <div class='col col--3 bg-blue-light py6 px6'>bg-blue-light</div>
- *   <div class='col col--3 bg-blue-faint py6 px6'>bg-blue-faint</div>
- *   <div class='col col--3 bg-purple-dark py6 px6'>bg-purple-dark</div>
- *   <div class='col col--3 bg-purple py6 px6'>bg-purple</div>
- *   <div class='col col--3 bg-purple-light py6 px6'>bg-purple-light</div>
- *   <div class='col col--3 bg-purple-faint py6 px6'>bg-purple-faint</div>
- *   <div class='col col--3 bg-darken5 py6 px6'>bg-darken5</div>
- *   <div class='col col--3 bg-darken10 py6 px6'>bg-darken10</div>
- *   <div class='col col--3 bg-darken25 py6 px6'>bg-darken25</div>
- *   <div class='col col--3 bg-darken50 py6 px6'>bg-darken50</div>
- *   <div class='col col--3 bg-darken75 py6 px6'>bg-darken75</div>
- *   <div class='col col--3 bg-lighten5 py6 px6'>bg-lighten5</div>
- *   <div class='col col--3 bg-lighten10 py6 px6'>bg-lighten10</div>
- *   <div class='col col--3 bg-lighten25 py6 px6'>bg-lighten25</div>
- *   <div class='col col--3 bg-lighten50 py6 px6'>bg-lighten50</div>
- *   <div class='col col--3 bg-lighten75 py6 px6'>bg-lighten75</div>
- *   <div class='col col--3 bg-white py6 px6'>bg-white</div>
- *   <div class='col col--3 bg-black py6 px6'>bg-black</div>
- *   <div class='col col--3 bg-transparent py6 px6'>bg-transparent</div>
+ *   <div class='col col--2 bg-gray-dark py6 px6'>bg-gray-dark</div>
+ *   <div class='col col--2 bg-gray-deep py6 px6'>bg-gray-deep</div>
+ *   <div class='col col--2 bg-gray py6 px6'>bg-gray</div>
+ *   <div class='col col--2 bg-gray-light py6 px6'>bg-gray-light</div>
+ *   <div class='col col--2 bg-gray-lighter py6 px6'>bg-gray-lighter</div>
+ *   <div class='col col--2 bg-gray-faint py6 px6'>bg-gray-faint</div>
+ *   <div class='col col--2 bg-pink-dark py6 px6'>bg-pink-dark</div>
+ *   <div class='col col--2 bg-pink-deep py6 px6'>bg-pink-deep</div>
+ *   <div class='col col--2 bg-pink py6 px6'>bg-pink</div>
+ *   <div class='col col--2 bg-pink-light py6 px6'>bg-pink-light</div>
+ *   <div class='col col--2 bg-pink-lighter py6 px6'>bg-pink-lighter</div>
+ *   <div class='col col--2 bg-pink-faint py6 px6'>bg-pink-faint</div>
+ *   <div class='col col--2 bg-red-dark py6 px6'>bg-red-dark</div>
+ *   <div class='col col--2 bg-red-deep py6 px6'>bg-red-deep</div>
+ *   <div class='col col--2 bg-red py6 px6'>bg-red</div>
+ *   <div class='col col--2 bg-red-light py6 px6'>bg-red-light</div>
+ *   <div class='col col--2 bg-red-lighter py6 px6'>bg-red-lighter</div>
+ *   <div class='col col--2 bg-red-faint py6 px6'>bg-red-faint</div>
+ *   <div class='col col--2 bg-orange-dark py6 px6'>bg-orange-dark</div>
+ *   <div class='col col--2 bg-orange-deep py6 px6'>bg-orange-deep</div>
+ *   <div class='col col--2 bg-orange py6 px6'>bg-orange</div>
+ *   <div class='col col--2 bg-orange-light py6 px6'>bg-orange-light</div>
+ *   <div class='col col--2 bg-orange-lighter py6 px6'>bg-orange-lighter</div>
+ *   <div class='col col--2 bg-orange-faint py6 px6'>bg-orange-faint</div>
+ *   <div class='col col--2 bg-yellow-dark py6 px6'>bg-yellow-dark</div>
+ *   <div class='col col--2 bg-yellow-deep py6 px6'>bg-yellow-deep</div>
+ *   <div class='col col--2 bg-yellow py6 px6'>bg-yellow</div>
+ *   <div class='col col--2 bg-yellow-light py6 px6'>bg-yellow-light</div>
+ *   <div class='col col--2 bg-yellow-lighter py6 px6'>bg-yellow-lighter</div>
+ *   <div class='col col--2 bg-yellow-faint py6 px6'>bg-yellow-faint</div>
+ *   <div class='col col--2 bg-green-dark py6 px6'>bg-green-dark</div>
+ *   <div class='col col--2 bg-green-deep py6 px6'>bg-green-deep</div>
+ *   <div class='col col--2 bg-green py6 px6'>bg-green</div>
+ *   <div class='col col--2 bg-green-light py6 px6'>bg-green-light</div>
+ *   <div class='col col--2 bg-green-lighter py6 px6'>bg-green-lighter</div>
+ *   <div class='col col--2 bg-green-faint py6 px6'>bg-green-faint</div>
+ *   <div class='col col--2 bg-blue-dark py6 px6'>bg-blue-dark</div>
+ *   <div class='col col--2 bg-blue-deep py6 px6'>bg-blue-deep</div>
+ *   <div class='col col--2 bg-blue py6 px6'>bg-blue</div>
+ *   <div class='col col--2 bg-blue-light py6 px6'>bg-blue-light</div>
+ *   <div class='col col--2 bg-blue-lighter py6 px6'>bg-blue-lighter</div>
+ *   <div class='col col--2 bg-blue-faint py6 px6'>bg-blue-faint</div>
+ *   <div class='col col--2 bg-purple-dark py6 px6'>bg-purple-dark</div>
+ *   <div class='col col--2 bg-purple-deep py6 px6'>bg-purple-deep</div>
+ *   <div class='col col--2 bg-purple py6 px6'>bg-purple</div>
+ *   <div class='col col--2 bg-purple-light py6 px6'>bg-purple-light</div>
+ *   <div class='col col--2 bg-purple-lighter py6 px6'>bg-purple-lighter</div>
+ *   <div class='col col--2 bg-purple-faint py6 px6'>bg-purple-faint</div>
+ *   <div class='col col--2 bg-darken5 py6 px6'>bg-darken5</div>
+ *   <div class='col col--2 bg-darken10 py6 px6'>bg-darken10</div>
+ *   <div class='col col--2 bg-darken25 py6 px6'>bg-darken25</div>
+ *   <div class='col col--2 bg-darken50 py6 px6'>bg-darken50</div>
+ *   <div class='col col--2 bg-darken75 py6 px6'>bg-darken75</div>
+ *   <div class='col col--2 bg-lighten5 py6 px6'>bg-lighten5</div>
+ *   <div class='col col--2 bg-lighten10 py6 px6'>bg-lighten10</div>
+ *   <div class='col col--2 bg-lighten25 py6 px6'>bg-lighten25</div>
+ *   <div class='col col--2 bg-lighten50 py6 px6'>bg-lighten50</div>
+ *   <div class='col col--2 bg-lighten75 py6 px6'>bg-lighten75</div>
+ *   <div class='col col--2 bg-white py6 px6'>bg-white</div>
+ *   <div class='col col--2 bg-black py6 px6'>bg-black</div>
+ *   <div class='col col--2 bg-transparent py6 px6'>bg-transparent</div>
  * </div>
  */
 .bg-gray-dark {
   background-color: var(--gray-dark) !important;
+}
+
+.bg-gray-deep {
+  background-color: var(--gray-deep) !important;
 }
 
 .bg-gray {
@@ -1878,12 +1978,20 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--gray-light) !important;
 }
 
+.bg-gray-lighter {
+  background-color: var(--gray-lighter) !important;
+}
+
 .bg-gray-faint {
   background-color: var(--gray-faint) !important;
 }
 
 .bg-pink-dark {
   background-color: var(--pink-dark) !important;
+}
+
+.bg-pink-deep {
+  background-color: var(--pink-deep) !important;
 }
 
 .bg-pink {
@@ -1894,12 +2002,20 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--pink-light) !important;
 }
 
+.bg-pink-lighter {
+  background-color: var(--pink-lighter) !important;
+}
+
 .bg-pink-faint {
   background-color: var(--pink-faint) !important;
 }
 
 .bg-red-dark {
   background-color: var(--red-dark) !important;
+}
+
+.bg-red-deep {
+  background-color: var(--red-deep) !important;
 }
 
 .bg-red {
@@ -1910,12 +2026,20 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--red-light) !important;
 }
 
+.bg-red-lighter {
+  background-color: var(--red-lighter) !important;
+}
+
 .bg-red-faint {
   background-color: var(--red-faint) !important;
 }
 
 .bg-orange-dark {
   background-color: var(--orange-dark) !important;
+}
+
+.bg-orange-deep {
+  background-color: var(--orange-deep) !important;
 }
 
 .bg-orange {
@@ -1926,12 +2050,20 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--orange-light) !important;
 }
 
+.bg-orange-lighter {
+  background-color: var(--orange-lighter) !important;
+}
+
 .bg-orange-faint {
   background-color: var(--orange-faint) !important;
 }
 
 .bg-yellow-dark {
   background-color: var(--yellow-dark) !important;
+}
+
+.bg-yellow-deep {
+  background-color: var(--yellow-deep) !important;
 }
 
 .bg-yellow {
@@ -1942,12 +2074,20 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--yellow-light) !important;
 }
 
+.bg-yellow-lighter {
+  background-color: var(--yellow-lighter) !important;
+}
+
 .bg-yellow-faint {
   background-color: var(--yellow-faint) !important;
 }
 
 .bg-green-dark {
   background-color: var(--green-dark) !important;
+}
+
+.bg-green-deep {
+  background-color: var(--green-deep) !important;
 }
 
 .bg-green {
@@ -1958,12 +2098,20 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--green-light) !important;
 }
 
+.bg-green-lighter {
+  background-color: var(--green-lighter) !important;
+}
+
 .bg-green-faint {
   background-color: var(--green-faint) !important;
 }
 
 .bg-blue-dark {
   background-color: var(--blue-dark) !important;
+}
+
+.bg-blue-deep {
+  background-color: var(--blue-deep) !important;
 }
 
 .bg-blue {
@@ -1974,6 +2122,10 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--blue-light) !important;
 }
 
+.bg-blue-lighter {
+  background-color: var(--blue-lighter) !important;
+}
+
 .bg-blue-faint {
   background-color: var(--blue-faint) !important;
 }
@@ -1982,12 +2134,20 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--purple-dark) !important;
 }
 
+.bg-purple-deep {
+  background-color: var(--purple-deep) !important;
+}
+
 .bg-purple {
   background-color: var(--purple) !important;
 }
 
 .bg-purple-light {
   background-color: var(--purple-light) !important;
+}
+
+.bg-purple-lighter {
+  background-color: var(--purple-lighter) !important;
 }
 
 .bg-purple-faint {
@@ -2204,12 +2364,20 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--gray-dark) !important;
 }
 
+.border--gray-deep {
+  border-color: var(--gray-deep) !important;
+}
+
 .border--gray {
   border-color: var(--gray) !important;
 }
 
 .border--gray-light {
   border-color: var(--gray-light) !important;
+}
+
+.border--gray-lighter {
+  border-color: var(--gray-lighter) !important;
 }
 
 .border--gray-faint {
@@ -2220,12 +2388,20 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--pink-dark) !important;
 }
 
+.border--pink-deep {
+  border-color: var(--pink-deep) !important;
+}
+
 .border--pink {
   border-color: var(--pink) !important;
 }
 
 .border--pink-light {
   border-color: var(--pink-light) !important;
+}
+
+.border--pink-lighter {
+  border-color: var(--pink-lighter) !important;
 }
 
 .border--pink-faint {
@@ -2236,12 +2412,20 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--red-dark) !important;
 }
 
+.border--red-deep {
+  border-color: var(--red-deep) !important;
+}
+
 .border--red {
   border-color: var(--red) !important;
 }
 
 .border--red-light {
   border-color: var(--red-light) !important;
+}
+
+.border--red-lighter {
+  border-color: var(--red-lighter) !important;
 }
 
 .border--red-faint {
@@ -2252,12 +2436,20 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--orange-dark) !important;
 }
 
+.border--orange-deep {
+  border-color: var(--orange-deep) !important;
+}
+
 .border--orange {
   border-color: var(--orange) !important;
 }
 
 .border--orange-light {
   border-color: var(--orange-light) !important;
+}
+
+.border--orange-lighter {
+  border-color: var(--orange-lighter) !important;
 }
 
 .border--orange-faint {
@@ -2268,12 +2460,20 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--yellow-dark) !important;
 }
 
+.border--yellow-deep {
+  border-color: var(--yellow-deep) !important;
+}
+
 .border--yellow {
   border-color: var(--yellow) !important;
 }
 
 .border--yellow-light {
   border-color: var(--yellow-light) !important;
+}
+
+.border--yellow-lighter {
+  border-color: var(--yellow-lighter) !important;
 }
 
 .border--yellow-faint {
@@ -2284,12 +2484,20 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--green-dark) !important;
 }
 
+.border--green-deep {
+  border-color: var(--green-deep) !important;
+}
+
 .border--green {
   border-color: var(--green) !important;
 }
 
 .border--green-light {
   border-color: var(--green-light) !important;
+}
+
+.border--green-lighter {
+  border-color: var(--green-lighter) !important;
 }
 
 .border--green-faint {
@@ -2300,12 +2508,20 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--blue-dark) !important;
 }
 
+.border--blue-deep {
+  border-color: var(--blue-deep) !important;
+}
+
 .border--blue {
   border-color: var(--blue) !important;
 }
 
 .border--blue-light {
   border-color: var(--blue-light) !important;
+}
+
+.border--blue-lighter {
+  border-color: var(--blue-lighter) !important;
 }
 
 .border--blue-faint {
@@ -2316,12 +2532,20 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--purple-dark) !important;
 }
 
+.border--purple-deep {
+  border-color: var(--purple-deep) !important;
+}
+
 .border--purple {
   border-color: var(--purple) !important;
 }
 
 .border--purple-light {
   border-color: var(--purple-light) !important;
+}
+
+.border--purple-lighter {
+  border-color: var(--purple-lighter) !important;
 }
 
 .border--purple-faint {
@@ -2574,6 +2798,12 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--gray-dark) !important;
 }
 
+.bg-gray-deep-on-hover:hover,
+.bg-gray-deep-on-active.is-active,
+.bg-gray-deep-on-active.is-active:hover {
+  background-color: var(--gray-deep) !important;
+}
+
 .bg-gray-on-hover:hover,
 .bg-gray-on-active.is-active,
 .bg-gray-on-active.is-active:hover {
@@ -2584,6 +2814,12 @@ input:checked + .switch--dot-transparent::after {
 .bg-gray-light-on-active.is-active,
 .bg-gray-light-on-active.is-active:hover {
   background-color: var(--gray-light) !important;
+}
+
+.bg-gray-lighter-on-hover:hover,
+.bg-gray-lighter-on-active.is-active,
+.bg-gray-lighter-on-active.is-active:hover {
+  background-color: var(--gray-lighter) !important;
 }
 
 .bg-gray-faint-on-hover:hover,
@@ -2598,6 +2834,12 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--pink-dark) !important;
 }
 
+.bg-pink-deep-on-hover:hover,
+.bg-pink-deep-on-active.is-active,
+.bg-pink-deep-on-active.is-active:hover {
+  background-color: var(--pink-deep) !important;
+}
+
 .bg-pink-on-hover:hover,
 .bg-pink-on-active.is-active,
 .bg-pink-on-active.is-active:hover {
@@ -2608,6 +2850,12 @@ input:checked + .switch--dot-transparent::after {
 .bg-pink-light-on-active.is-active,
 .bg-pink-light-on-active.is-active:hover {
   background-color: var(--pink-light) !important;
+}
+
+.bg-pink-lighter-on-hover:hover,
+.bg-pink-lighter-on-active.is-active,
+.bg-pink-lighter-on-active.is-active:hover {
+  background-color: var(--pink-lighter) !important;
 }
 
 .bg-pink-faint-on-hover:hover,
@@ -2622,6 +2870,12 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--red-dark) !important;
 }
 
+.bg-red-deep-on-hover:hover,
+.bg-red-deep-on-active.is-active,
+.bg-red-deep-on-active.is-active:hover {
+  background-color: var(--red-deep) !important;
+}
+
 .bg-red-on-hover:hover,
 .bg-red-on-active.is-active,
 .bg-red-on-active.is-active:hover {
@@ -2632,6 +2886,12 @@ input:checked + .switch--dot-transparent::after {
 .bg-red-light-on-active.is-active,
 .bg-red-light-on-active.is-active:hover {
   background-color: var(--red-light) !important;
+}
+
+.bg-red-lighter-on-hover:hover,
+.bg-red-lighter-on-active.is-active,
+.bg-red-lighter-on-active.is-active:hover {
+  background-color: var(--red-lighter) !important;
 }
 
 .bg-red-faint-on-hover:hover,
@@ -2646,6 +2906,12 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--orange-dark) !important;
 }
 
+.bg-orange-deep-on-hover:hover,
+.bg-orange-deep-on-active.is-active,
+.bg-orange-deep-on-active.is-active:hover {
+  background-color: var(--orange-deep) !important;
+}
+
 .bg-orange-on-hover:hover,
 .bg-orange-on-active.is-active,
 .bg-orange-on-active.is-active:hover {
@@ -2656,6 +2922,12 @@ input:checked + .switch--dot-transparent::after {
 .bg-orange-light-on-active.is-active,
 .bg-orange-light-on-active.is-active:hover {
   background-color: var(--orange-light) !important;
+}
+
+.bg-orange-lighter-on-hover:hover,
+.bg-orange-lighter-on-active.is-active,
+.bg-orange-lighter-on-active.is-active:hover {
+  background-color: var(--orange-lighter) !important;
 }
 
 .bg-orange-faint-on-hover:hover,
@@ -2670,6 +2942,12 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--yellow-dark) !important;
 }
 
+.bg-yellow-deep-on-hover:hover,
+.bg-yellow-deep-on-active.is-active,
+.bg-yellow-deep-on-active.is-active:hover {
+  background-color: var(--yellow-deep) !important;
+}
+
 .bg-yellow-on-hover:hover,
 .bg-yellow-on-active.is-active,
 .bg-yellow-on-active.is-active:hover {
@@ -2680,6 +2958,12 @@ input:checked + .switch--dot-transparent::after {
 .bg-yellow-light-on-active.is-active,
 .bg-yellow-light-on-active.is-active:hover {
   background-color: var(--yellow-light) !important;
+}
+
+.bg-yellow-lighter-on-hover:hover,
+.bg-yellow-lighter-on-active.is-active,
+.bg-yellow-lighter-on-active.is-active:hover {
+  background-color: var(--yellow-lighter) !important;
 }
 
 .bg-yellow-faint-on-hover:hover,
@@ -2694,6 +2978,12 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--green-dark) !important;
 }
 
+.bg-green-deep-on-hover:hover,
+.bg-green-deep-on-active.is-active,
+.bg-green-deep-on-active.is-active:hover {
+  background-color: var(--green-deep) !important;
+}
+
 .bg-green-on-hover:hover,
 .bg-green-on-active.is-active,
 .bg-green-on-active.is-active:hover {
@@ -2704,6 +2994,12 @@ input:checked + .switch--dot-transparent::after {
 .bg-green-light-on-active.is-active,
 .bg-green-light-on-active.is-active:hover {
   background-color: var(--green-light) !important;
+}
+
+.bg-green-lighter-on-hover:hover,
+.bg-green-lighter-on-active.is-active,
+.bg-green-lighter-on-active.is-active:hover {
+  background-color: var(--green-lighter) !important;
 }
 
 .bg-green-faint-on-hover:hover,
@@ -2718,6 +3014,12 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--blue-dark) !important;
 }
 
+.bg-blue-deep-on-hover:hover,
+.bg-blue-deep-on-active.is-active,
+.bg-blue-deep-on-active.is-active:hover {
+  background-color: var(--blue-deep) !important;
+}
+
 .bg-blue-on-hover:hover,
 .bg-blue-on-active.is-active,
 .bg-blue-on-active.is-active:hover {
@@ -2728,6 +3030,12 @@ input:checked + .switch--dot-transparent::after {
 .bg-blue-light-on-active.is-active,
 .bg-blue-light-on-active.is-active:hover {
   background-color: var(--blue-light) !important;
+}
+
+.bg-blue-lighter-on-hover:hover,
+.bg-blue-lighter-on-active.is-active,
+.bg-blue-lighter-on-active.is-active:hover {
+  background-color: var(--blue-lighter) !important;
 }
 
 .bg-blue-faint-on-hover:hover,
@@ -2742,6 +3050,12 @@ input:checked + .switch--dot-transparent::after {
   background-color: var(--purple-dark) !important;
 }
 
+.bg-purple-deep-on-hover:hover,
+.bg-purple-deep-on-active.is-active,
+.bg-purple-deep-on-active.is-active:hover {
+  background-color: var(--purple-deep) !important;
+}
+
 .bg-purple-on-hover:hover,
 .bg-purple-on-active.is-active,
 .bg-purple-on-active.is-active:hover {
@@ -2752,6 +3066,12 @@ input:checked + .switch--dot-transparent::after {
 .bg-purple-light-on-active.is-active,
 .bg-purple-light-on-active.is-active:hover {
   background-color: var(--purple-light) !important;
+}
+
+.bg-purple-lighter-on-hover:hover,
+.bg-purple-lighter-on-active.is-active,
+.bg-purple-lighter-on-active.is-active:hover {
+  background-color: var(--purple-lighter) !important;
 }
 
 .bg-purple-faint-on-hover:hover,
@@ -2856,6 +3176,12 @@ input:checked + .switch--dot-transparent::after {
   color: var(--gray-dark) !important;
 }
 
+.color-gray-deep-on-hover:hover,
+.color-gray-deep-on-active.is-active,
+.color-gray-deep-on-active.is-active:hover {
+  color: var(--gray-deep) !important;
+}
+
 .color-gray-on-hover:hover,
 .color-gray-on-active.is-active,
 .color-gray-on-active.is-active:hover {
@@ -2866,6 +3192,12 @@ input:checked + .switch--dot-transparent::after {
 .color-gray-light-on-active.is-active,
 .color-gray-light-on-active.is-active:hover {
   color: var(--gray-light) !important;
+}
+
+.color-gray-lighter-on-hover:hover,
+.color-gray-lighter-on-active.is-active,
+.color-gray-lighter-on-active.is-active:hover {
+  color: var(--gray-lighter) !important;
 }
 
 .color-gray-faint-on-hover:hover,
@@ -2880,6 +3212,12 @@ input:checked + .switch--dot-transparent::after {
   color: var(--pink-dark) !important;
 }
 
+.color-pink-deep-on-hover:hover,
+.color-pink-deep-on-active.is-active,
+.color-pink-deep-on-active.is-active:hover {
+  color: var(--pink-deep) !important;
+}
+
 .color-pink-on-hover:hover,
 .color-pink-on-active.is-active,
 .color-pink-on-active.is-active:hover {
@@ -2890,6 +3228,12 @@ input:checked + .switch--dot-transparent::after {
 .color-pink-light-on-active.is-active,
 .color-pink-light-on-active.is-active:hover {
   color: var(--pink-light) !important;
+}
+
+.color-pink-lighter-on-hover:hover,
+.color-pink-lighter-on-active.is-active,
+.color-pink-lighter-on-active.is-active:hover {
+  color: var(--pink-lighter) !important;
 }
 
 .color-pink-faint-on-hover:hover,
@@ -2904,6 +3248,12 @@ input:checked + .switch--dot-transparent::after {
   color: var(--red-dark) !important;
 }
 
+.color-red-deep-on-hover:hover,
+.color-red-deep-on-active.is-active,
+.color-red-deep-on-active.is-active:hover {
+  color: var(--red-deep) !important;
+}
+
 .color-red-on-hover:hover,
 .color-red-on-active.is-active,
 .color-red-on-active.is-active:hover {
@@ -2914,6 +3264,12 @@ input:checked + .switch--dot-transparent::after {
 .color-red-light-on-active.is-active,
 .color-red-light-on-active.is-active:hover {
   color: var(--red-light) !important;
+}
+
+.color-red-lighter-on-hover:hover,
+.color-red-lighter-on-active.is-active,
+.color-red-lighter-on-active.is-active:hover {
+  color: var(--red-lighter) !important;
 }
 
 .color-red-faint-on-hover:hover,
@@ -2928,6 +3284,12 @@ input:checked + .switch--dot-transparent::after {
   color: var(--orange-dark) !important;
 }
 
+.color-orange-deep-on-hover:hover,
+.color-orange-deep-on-active.is-active,
+.color-orange-deep-on-active.is-active:hover {
+  color: var(--orange-deep) !important;
+}
+
 .color-orange-on-hover:hover,
 .color-orange-on-active.is-active,
 .color-orange-on-active.is-active:hover {
@@ -2938,6 +3300,12 @@ input:checked + .switch--dot-transparent::after {
 .color-orange-light-on-active.is-active,
 .color-orange-light-on-active.is-active:hover {
   color: var(--orange-light) !important;
+}
+
+.color-orange-lighter-on-hover:hover,
+.color-orange-lighter-on-active.is-active,
+.color-orange-lighter-on-active.is-active:hover {
+  color: var(--orange-lighter) !important;
 }
 
 .color-orange-faint-on-hover:hover,
@@ -2952,6 +3320,12 @@ input:checked + .switch--dot-transparent::after {
   color: var(--yellow-dark) !important;
 }
 
+.color-yellow-deep-on-hover:hover,
+.color-yellow-deep-on-active.is-active,
+.color-yellow-deep-on-active.is-active:hover {
+  color: var(--yellow-deep) !important;
+}
+
 .color-yellow-on-hover:hover,
 .color-yellow-on-active.is-active,
 .color-yellow-on-active.is-active:hover {
@@ -2962,6 +3336,12 @@ input:checked + .switch--dot-transparent::after {
 .color-yellow-light-on-active.is-active,
 .color-yellow-light-on-active.is-active:hover {
   color: var(--yellow-light) !important;
+}
+
+.color-yellow-lighter-on-hover:hover,
+.color-yellow-lighter-on-active.is-active,
+.color-yellow-lighter-on-active.is-active:hover {
+  color: var(--yellow-lighter) !important;
 }
 
 .color-yellow-faint-on-hover:hover,
@@ -2976,6 +3356,12 @@ input:checked + .switch--dot-transparent::after {
   color: var(--green-dark) !important;
 }
 
+.color-green-deep-on-hover:hover,
+.color-green-deep-on-active.is-active,
+.color-green-deep-on-active.is-active:hover {
+  color: var(--green-deep) !important;
+}
+
 .color-green-on-hover:hover,
 .color-green-on-active.is-active,
 .color-green-on-active.is-active:hover {
@@ -2986,6 +3372,12 @@ input:checked + .switch--dot-transparent::after {
 .color-green-light-on-active.is-active,
 .color-green-light-on-active.is-active:hover {
   color: var(--green-light) !important;
+}
+
+.color-green-lighter-on-hover:hover,
+.color-green-lighter-on-active.is-active,
+.color-green-lighter-on-active.is-active:hover {
+  color: var(--green-lighter) !important;
 }
 
 .color-green-faint-on-hover:hover,
@@ -3000,6 +3392,12 @@ input:checked + .switch--dot-transparent::after {
   color: var(--blue-dark) !important;
 }
 
+.color-blue-deep-on-hover:hover,
+.color-blue-deep-on-active.is-active,
+.color-blue-deep-on-active.is-active:hover {
+  color: var(--blue-deep) !important;
+}
+
 .color-blue-on-hover:hover,
 .color-blue-on-active.is-active,
 .color-blue-on-active.is-active:hover {
@@ -3010,6 +3408,12 @@ input:checked + .switch--dot-transparent::after {
 .color-blue-light-on-active.is-active,
 .color-blue-light-on-active.is-active:hover {
   color: var(--blue-light) !important;
+}
+
+.color-blue-lighter-on-hover:hover,
+.color-blue-lighter-on-active.is-active,
+.color-blue-lighter-on-active.is-active:hover {
+  color: var(--blue-lighter) !important;
 }
 
 .color-blue-faint-on-hover:hover,
@@ -3024,6 +3428,12 @@ input:checked + .switch--dot-transparent::after {
   color: var(--purple-dark) !important;
 }
 
+.color-purple-deep-on-hover:hover,
+.color-purple-deep-on-active.is-active,
+.color-purple-deep-on-active.is-active:hover {
+  color: var(--purple-deep) !important;
+}
+
 .color-purple-on-hover:hover,
 .color-purple-on-active.is-active,
 .color-purple-on-active.is-active:hover {
@@ -3034,6 +3444,12 @@ input:checked + .switch--dot-transparent::after {
 .color-purple-light-on-active.is-active,
 .color-purple-light-on-active.is-active:hover {
   color: var(--purple-light) !important;
+}
+
+.color-purple-lighter-on-hover:hover,
+.color-purple-lighter-on-active.is-active,
+.color-purple-lighter-on-active.is-active:hover {
+  color: var(--purple-lighter) !important;
 }
 
 .color-purple-faint-on-hover:hover,
@@ -3126,6 +3542,12 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--gray-dark) !important;
 }
 
+.border--gray-deep-on-hover:hover,
+.border--gray-deep-on-active.is-active,
+.border--gray-deep-on-active.is-active:hover {
+  border-color: var(--gray-deep) !important;
+}
+
 .border--gray-on-hover:hover,
 .border--gray-on-active.is-active,
 .border--gray-on-active.is-active:hover {
@@ -3136,6 +3558,12 @@ input:checked + .switch--dot-transparent::after {
 .border--gray-light-on-active.is-active,
 .border--gray-light-on-active.is-active:hover {
   border-color: var(--gray-light) !important;
+}
+
+.border--gray-lighter-on-hover:hover,
+.border--gray-lighter-on-active.is-active,
+.border--gray-lighter-on-active.is-active:hover {
+  border-color: var(--gray-lighter) !important;
 }
 
 .border--gray-faint-on-hover:hover,
@@ -3150,6 +3578,12 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--pink-dark) !important;
 }
 
+.border--pink-deep-on-hover:hover,
+.border--pink-deep-on-active.is-active,
+.border--pink-deep-on-active.is-active:hover {
+  border-color: var(--pink-deep) !important;
+}
+
 .border--pink-on-hover:hover,
 .border--pink-on-active.is-active,
 .border--pink-on-active.is-active:hover {
@@ -3160,6 +3594,12 @@ input:checked + .switch--dot-transparent::after {
 .border--pink-light-on-active.is-active,
 .border--pink-light-on-active.is-active:hover {
   border-color: var(--pink-light) !important;
+}
+
+.border--pink-lighter-on-hover:hover,
+.border--pink-lighter-on-active.is-active,
+.border--pink-lighter-on-active.is-active:hover {
+  border-color: var(--pink-lighter) !important;
 }
 
 .border--pink-faint-on-hover:hover,
@@ -3174,6 +3614,12 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--red-dark) !important;
 }
 
+.border--red-deep-on-hover:hover,
+.border--red-deep-on-active.is-active,
+.border--red-deep-on-active.is-active:hover {
+  border-color: var(--red-deep) !important;
+}
+
 .border--red-on-hover:hover,
 .border--red-on-active.is-active,
 .border--red-on-active.is-active:hover {
@@ -3184,6 +3630,12 @@ input:checked + .switch--dot-transparent::after {
 .border--red-light-on-active.is-active,
 .border--red-light-on-active.is-active:hover {
   border-color: var(--red-light) !important;
+}
+
+.border--red-lighter-on-hover:hover,
+.border--red-lighter-on-active.is-active,
+.border--red-lighter-on-active.is-active:hover {
+  border-color: var(--red-lighter) !important;
 }
 
 .border--red-faint-on-hover:hover,
@@ -3198,6 +3650,12 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--orange-dark) !important;
 }
 
+.border--orange-deep-on-hover:hover,
+.border--orange-deep-on-active.is-active,
+.border--orange-deep-on-active.is-active:hover {
+  border-color: var(--orange-deep) !important;
+}
+
 .border--orange-on-hover:hover,
 .border--orange-on-active.is-active,
 .border--orange-on-active.is-active:hover {
@@ -3208,6 +3666,12 @@ input:checked + .switch--dot-transparent::after {
 .border--orange-light-on-active.is-active,
 .border--orange-light-on-active.is-active:hover {
   border-color: var(--orange-light) !important;
+}
+
+.border--orange-lighter-on-hover:hover,
+.border--orange-lighter-on-active.is-active,
+.border--orange-lighter-on-active.is-active:hover {
+  border-color: var(--orange-lighter) !important;
 }
 
 .border--orange-faint-on-hover:hover,
@@ -3222,6 +3686,12 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--yellow-dark) !important;
 }
 
+.border--yellow-deep-on-hover:hover,
+.border--yellow-deep-on-active.is-active,
+.border--yellow-deep-on-active.is-active:hover {
+  border-color: var(--yellow-deep) !important;
+}
+
 .border--yellow-on-hover:hover,
 .border--yellow-on-active.is-active,
 .border--yellow-on-active.is-active:hover {
@@ -3232,6 +3702,12 @@ input:checked + .switch--dot-transparent::after {
 .border--yellow-light-on-active.is-active,
 .border--yellow-light-on-active.is-active:hover {
   border-color: var(--yellow-light) !important;
+}
+
+.border--yellow-lighter-on-hover:hover,
+.border--yellow-lighter-on-active.is-active,
+.border--yellow-lighter-on-active.is-active:hover {
+  border-color: var(--yellow-lighter) !important;
 }
 
 .border--yellow-faint-on-hover:hover,
@@ -3246,6 +3722,12 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--green-dark) !important;
 }
 
+.border--green-deep-on-hover:hover,
+.border--green-deep-on-active.is-active,
+.border--green-deep-on-active.is-active:hover {
+  border-color: var(--green-deep) !important;
+}
+
 .border--green-on-hover:hover,
 .border--green-on-active.is-active,
 .border--green-on-active.is-active:hover {
@@ -3256,6 +3738,12 @@ input:checked + .switch--dot-transparent::after {
 .border--green-light-on-active.is-active,
 .border--green-light-on-active.is-active:hover {
   border-color: var(--green-light) !important;
+}
+
+.border--green-lighter-on-hover:hover,
+.border--green-lighter-on-active.is-active,
+.border--green-lighter-on-active.is-active:hover {
+  border-color: var(--green-lighter) !important;
 }
 
 .border--green-faint-on-hover:hover,
@@ -3270,6 +3758,12 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--blue-dark) !important;
 }
 
+.border--blue-deep-on-hover:hover,
+.border--blue-deep-on-active.is-active,
+.border--blue-deep-on-active.is-active:hover {
+  border-color: var(--blue-deep) !important;
+}
+
 .border--blue-on-hover:hover,
 .border--blue-on-active.is-active,
 .border--blue-on-active.is-active:hover {
@@ -3280,6 +3774,12 @@ input:checked + .switch--dot-transparent::after {
 .border--blue-light-on-active.is-active,
 .border--blue-light-on-active.is-active:hover {
   border-color: var(--blue-light) !important;
+}
+
+.border--blue-lighter-on-hover:hover,
+.border--blue-lighter-on-active.is-active,
+.border--blue-lighter-on-active.is-active:hover {
+  border-color: var(--blue-lighter) !important;
 }
 
 .border--blue-faint-on-hover:hover,
@@ -3294,6 +3794,12 @@ input:checked + .switch--dot-transparent::after {
   border-color: var(--purple-dark) !important;
 }
 
+.border--purple-deep-on-hover:hover,
+.border--purple-deep-on-active.is-active,
+.border--purple-deep-on-active.is-active:hover {
+  border-color: var(--purple-deep) !important;
+}
+
 .border--purple-on-hover:hover,
 .border--purple-on-active.is-active,
 .border--purple-on-active.is-active:hover {
@@ -3304,6 +3810,12 @@ input:checked + .switch--dot-transparent::after {
 .border--purple-light-on-active.is-active,
 .border--purple-light-on-active.is-active:hover {
   border-color: var(--purple-light) !important;
+}
+
+.border--purple-lighter-on-hover:hover,
+.border--purple-lighter-on-active.is-active,
+.border--purple-lighter-on-active.is-active:hover {
+  border-color: var(--purple-lighter) !important;
 }
 
 .border--purple-faint-on-hover:hover,
