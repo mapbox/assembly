@@ -6,7 +6,7 @@ const simple = `<div class='bg-blue-faint color-blue inline-block px6 py3 txt-xs
   screamin dealz
 </div>`;
 
-const tip = `<div class='bg-green-faint color-green inline-block px6 py3 txt-xs txt-bold round-full'>
+const tip = `<div class='bg-green-lighter color-green-deep inline-block px6 py3 txt-xs txt-bold round-full'>
   <svg class='icon w15 h15 inline-block align-middle'><use xlink:href='#icon-info'></use></svg>
   Did you know?
 </div>`;
