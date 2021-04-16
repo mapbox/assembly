@@ -139,22 +139,22 @@ legend{
 [data-assembly-focus-control='visible'] input:focus + .toggle{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] .range{
+[data-assembly-focus-control='visible'] input[type=range]{
   box-shadow:none;
 }
-[data-assembly-focus-control='visible'] .range:focus::-webkit-slider-thumb{
+[data-assembly-focus-control='visible'] input[type=range]:focus::-webkit-slider-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] .range:focus::-ms-fill-upper{
+[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-fill-upper{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] .range:focus::-ms-fill-lower{
+[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-fill-lower{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] .range:focus::-ms-thumb{
+[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] .range:focus::-moz-range-thumb{
+[data-assembly-focus-control='visible'] input[type=range]:focus::-moz-range-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
@@ -12028,22 +12028,22 @@ legend{
 [data-assembly-focus-control='visible'] input:focus + .toggle{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] .range{
+[data-assembly-focus-control='visible'] input[type=range]{
   box-shadow:none;
 }
-[data-assembly-focus-control='visible'] .range:focus::-webkit-slider-thumb{
+[data-assembly-focus-control='visible'] input[type=range]:focus::-webkit-slider-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] .range:focus::-ms-fill-upper{
+[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-fill-upper{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] .range:focus::-ms-fill-lower{
+[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-fill-lower{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] .range:focus::-ms-thumb{
+[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] .range:focus::-moz-range-thumb{
+[data-assembly-focus-control='visible'] input[type=range]:focus::-moz-range-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
