@@ -29,7 +29,7 @@ class Page extends React.Component {
         <div className="overflow-auto h-viewport-full-mm w180-mm fixed-mm top left flex-mm flex--stretch-cross-mm">
           <Navigation />
         </div>
-        <div className="ml180-mm limiter w-auto pl60-mm pr60-mm mb60 mt24">
+        <div className="ml180-mm w-full px24 w-11/12-mm wmax1200-mm px60-mm mb60 mt24">
           {this.props.children}
         </div>
       </div>

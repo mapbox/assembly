@@ -46,7 +46,7 @@ function buildLayoutScales() {
     layoutScales.fractions.forEach(scale => {
       css += buildMediaRules(mediaSuffix =>
         stripIndent(`
-        .${selectorPrefex}${scale[0]}${mediaSuffix} {
+        .${selectorPrefex}-${scale[0]}${mediaSuffix} {
           ${property}: ${scale[1]}${unit} !important;
         }
       `)
