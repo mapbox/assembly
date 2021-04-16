@@ -8,43 +8,59 @@ const defaultVariables = require('../src/variables');
 
 const allColors = [
   'gray-dark',
+  'gray-deep',
   'gray',
   'gray-light',
+  'gray-lighter',
   'gray-faint',
 
   'pink-dark',
+  'pink-deep',
   'pink',
   'pink-light',
+  'pink-lighter',
   'pink-faint',
 
   'red-dark',
+  'red-deep',
   'red',
   'red-light',
+  'red-lighter',
   'red-faint',
 
   'orange-dark',
+  'orange-deep',
   'orange',
   'orange-light',
+  'orange-lighter',
   'orange-faint',
 
   'yellow-dark',
+  'yellow-deep',
   'yellow',
   'yellow-light',
+  'yellow-lighter',
   'yellow-faint',
 
   'green-dark',
+  'green-deep',
   'green',
   'green-light',
+  'green-lighter',
   'green-faint',
 
   'blue-dark',
+  'blue-deep',
   'blue',
   'blue-light',
+  'blue-lighter',
   'blue-faint',
 
   'purple-dark',
+  'purple-deep',
   'purple',
   'purple-light',
+  'purple-lighter',
   'purple-faint',
 
   'darken5',
@@ -74,16 +90,16 @@ function isNotAccessibleForForms(color) {
   return (
     color === 'black' ||
     /^(darken5|darken10|lighten5|lighten10)$/.test(color) ||
-    /(-dark|-light|-faint)$/.test(color)
+    /(-dark|-deep|-light|-lighter|-faint)$/.test(color)
   );
 }
 
-function isNotAccessibleExceptButtons(color) {
+function isNotAccessibleForButtons(color) {
   // Elements that are primarily defined by their background can have looser requirements.
   return (
     color === 'black' ||
     /^(darken5|lighten5)$/.test(color) ||
-    /(-faint|-dark)$/.test(color)
+    /(-faint|-lighter|-deep|-dark)$/.test(color)
   );
 }
 
@@ -147,7 +163,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.buttonFill = function(colors) {
     return colors.reduce((result, color) => {
-      if (isNotAccessibleExceptButtons(color)) return result;
+      if (isNotAccessibleForButtons(color)) return result;
       const darkerShade = getDarkerShade(color);
       return (result += stripIndent(`
         .btn--${color} {
@@ -338,12 +354,12 @@ function buildColorVariants(variables, config) {
        * @group
        * @memberof Text colors
        * @example
-       * <div class='grid'>`);
+       * <div class='txt-s grid'>`);
     colors.forEach(color => {
       if (isNotAccessibleExceptBg(color)) return;
-      css += `\n *   <div class='col col--3 color-${color}'>color-${color}</div>`;
+      css += `\n *   <div class='col col--2 color-${color}'>color-${color}</div>`;
     });
-    css += `\n *   <div class='col col--3 color-text'>.color-text</div>`; // eslint-disable-line quotes
+    css += `\n *   <div class='col col--2 color-text'>color-text</div>`; // eslint-disable-line quotes
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
       if (isNotAccessibleExceptBg(color)) return result;
@@ -376,7 +392,7 @@ function buildColorVariants(variables, config) {
        * @example
        * <div class='grid'>`);
     colors.forEach(color => {
-      css += `\n *   <div class='col col--3 bg-${color} py6 px6'>bg-${color}</div>`;
+      css += `\n *   <div class='col col--2 bg-${color} py6 px6'>bg-${color}</div>`;
     });
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
