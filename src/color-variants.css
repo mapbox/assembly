@@ -1342,7 +1342,7 @@ input:checked + .switch--dot-transparent::after {
  * @group
  * @memberof Text colors
  * @example
- * <div class='grid'>
+ * <div class='txt-s grid'>
  *   <div class='col col--2 color-gray-dark'>color-gray-dark</div>
  *   <div class='col col--2 color-gray-deep'>color-gray-deep</div>
  *   <div class='col col--2 color-gray'>color-gray</div>
@@ -1402,7 +1402,7 @@ input:checked + .switch--dot-transparent::after {
  *   <div class='col col--2 color-white'>color-white</div>
  *   <div class='col col--2 color-black'>color-black</div>
  *   <div class='col col--2 color-transparent'>color-transparent</div>
- *   <div class='col col--2 color-text'>.color-text</div>
+ *   <div class='col col--2 color-text'>color-text</div>
  * </div>
  */
 .color-gray-dark {

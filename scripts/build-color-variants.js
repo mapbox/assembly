@@ -94,7 +94,7 @@ function isNotAccessibleForForms(color) {
   );
 }
 
-function isNotAccessibleExceptButtons(color) {
+function isNotAccessibleForButtons(color) {
   // Elements that are primarily defined by their background can have looser requirements.
   return (
     color === 'black' ||
@@ -163,7 +163,7 @@ function buildColorVariants(variables, config) {
 
   variantGenerators.buttonFill = function(colors) {
     return colors.reduce((result, color) => {
-      if (isNotAccessibleExceptButtons(color)) return result;
+      if (isNotAccessibleForButtons(color)) return result;
       const darkerShade = getDarkerShade(color);
       return (result += stripIndent(`
         .btn--${color} {
@@ -339,12 +339,12 @@ function buildColorVariants(variables, config) {
        * @group
        * @memberof Text colors
        * @example
-       * <div class='grid'>`);
+       * <div class='txt-s grid'>`);
     colors.forEach(color => {
       if (isNotAccessibleExceptBg(color)) return;
       css += `\n *   <div class='col col--2 color-${color}'>color-${color}</div>`;
     });
-    css += `\n *   <div class='col col--2 color-text'>.color-text</div>`; // eslint-disable-line quotes
+    css += `\n *   <div class='col col--2 color-text'>color-text</div>`; // eslint-disable-line quotes
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
       if (isNotAccessibleExceptBg(color)) return result;

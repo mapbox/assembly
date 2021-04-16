@@ -1345,7 +1345,7 @@ input:checked + .switch--dot-transparent::after {
  * @group
  * @memberof Text colors
  * @example
- * <div class='grid'>
+ * <div class='txt-s grid'>
  *   <div class='col col--2 color-gray-dark'>color-gray-dark</div>
  *   <div class='col col--2 color-gray-deep'>color-gray-deep</div>
  *   <div class='col col--2 color-gray'>color-gray</div>
@@ -1405,7 +1405,7 @@ input:checked + .switch--dot-transparent::after {
  *   <div class='col col--2 color-white'>color-white</div>
  *   <div class='col col--2 color-black'>color-black</div>
  *   <div class='col col--2 color-transparent'>color-transparent</div>
- *   <div class='col col--2 color-text'>.color-text</div>
+ *   <div class='col col--2 color-text'>color-text</div>
  * </div>
  */
 .color-gray-dark {
@@ -5002,7 +5002,7 @@ input:checked + .switch--dot-transparent::after {
  * @group
  * @memberof Text colors
  * @example
- * <div class='grid'>
+ * <div class='txt-s grid'>
  *   <div class='col col--2 color-gray-dark'>color-gray-dark</div>
  *   <div class='col col--2 color-gray-deep'>color-gray-deep</div>
  *   <div class='col col--2 color-gray'>color-gray</div>
@@ -5062,7 +5062,7 @@ input:checked + .switch--dot-transparent::after {
  *   <div class='col col--2 color-white'>color-white</div>
  *   <div class='col col--2 color-black'>color-black</div>
  *   <div class='col col--2 color-transparent'>color-transparent</div>
- *   <div class='col col--2 color-text'>.color-text</div>
+ *   <div class='col col--2 color-text'>color-text</div>
  * </div>
  */
 .color-gray-dark {
@@ -7500,12 +7500,12 @@ input:checked + .switch--dot-teal::after {
  * @group
  * @memberof Text colors
  * @example
- * <div class='grid'>
+ * <div class='txt-s grid'>
  *   <div class='col col--2 color-red'>color-red</div>
  *   <div class='col col--2 color-teal'>color-teal</div>
  *   <div class='col col--2 color-teal-dark'>color-teal-dark</div>
  *   <div class='col col--2 color-green-light'>color-green-light</div>
- *   <div class='col col--2 color-text'>.color-text</div>
+ *   <div class='col col--2 color-text'>color-text</div>
  * </div>
  */
 .color-red {
@@ -7955,11 +7955,11 @@ input:checked + .toggle--active-gray {
  * @group
  * @memberof Text colors
  * @example
- * <div class='grid'>
+ * <div class='txt-s grid'>
  *   <div class='col col--2 color-lighten50'>color-lighten50</div>
  *   <div class='col col--2 color-lighten25'>color-lighten25</div>
  *   <div class='col col--2 color-gray'>color-gray</div>
- *   <div class='col col--2 color-text'>.color-text</div>
+ *   <div class='col col--2 color-text'>color-text</div>
  * </div>
  */
 .color-lighten50 {
