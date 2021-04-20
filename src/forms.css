@@ -324,11 +324,18 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .range > input {
   appearance: none;
   width: 100%;
-  padding: 0;
   margin: 0;
   border: 0;
   background: var(--transparent);
   cursor: pointer;
+  padding: 8px 0; /* widen clickable track area */
+}
+
+/* remove additional padding for firefox */
+@-moz-document url-prefix('') {
+  .range > input {
+    padding: 0;
+  }
 }
 
 /* range track */
@@ -431,6 +438,17 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .range--s {
   height: 24px;
+}
+
+.range--s > input {
+  padding: 4px 0; /* widen clickable track area */
+}
+
+/* remove additional padding for firefox */
+@-moz-document url-prefix('') {
+  .range--s > input {
+    padding: 0;
+  }
 }
 
 /* range small track */

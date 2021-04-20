@@ -139,22 +139,22 @@ legend{
 [data-assembly-focus-control='visible'] input:focus + .toggle{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] input[type=range]{
+[data-assembly-focus-control='visible'] .range input[type=range]{
   box-shadow:none;
 }
-[data-assembly-focus-control='visible'] input[type=range]:focus::-webkit-slider-thumb{
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-webkit-slider-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-fill-upper{
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-ms-fill-upper{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-fill-lower{
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-ms-fill-lower{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-thumb{
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-ms-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] input[type=range]:focus::-moz-range-thumb{
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-moz-range-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
@@ -552,11 +552,16 @@ legend{
   -webkit-appearance:none;
           appearance:none;
   width:100%;
-  padding:0;
   margin:0;
   border:0;
   background:transparent;
   cursor:pointer;
+  padding:8px 0;
+}
+@-moz-document url-prefix(''){
+  .range > input{
+    padding:0;
+  }
 }
 .range > input::-webkit-slider-runnable-track{
   width:100%;
@@ -646,6 +651,15 @@ legend{
 }
 .range--s{
   height:24px;
+}
+
+.range--s > input{
+  padding:4px 0;
+}
+@-moz-document url-prefix(''){
+  .range--s > input{
+    padding:0;
+  }
 }
 .range--s > input::-webkit-slider-runnable-track{
   height:2px;
@@ -12028,22 +12042,22 @@ legend{
 [data-assembly-focus-control='visible'] input:focus + .toggle{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] input[type=range]{
+[data-assembly-focus-control='visible'] .range input[type=range]{
   box-shadow:none;
 }
-[data-assembly-focus-control='visible'] input[type=range]:focus::-webkit-slider-thumb{
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-webkit-slider-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-fill-upper{
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-ms-fill-upper{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-fill-lower{
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-ms-fill-lower{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] input[type=range]:focus::-ms-thumb{
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-ms-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
-[data-assembly-focus-control='visible'] input[type=range]:focus::-moz-range-thumb{
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-moz-range-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 
@@ -12441,11 +12455,16 @@ legend{
   -webkit-appearance:none;
           appearance:none;
   width:100%;
-  padding:0;
   margin:0;
   border:0;
   background:transparent;
   cursor:pointer;
+  padding:8px 0;
+}
+@-moz-document url-prefix(''){
+  .range > input{
+    padding:0;
+  }
 }
 .range > input::-webkit-slider-runnable-track{
   width:100%;
@@ -12535,6 +12554,15 @@ legend{
 }
 .range--s{
   height:24px;
+}
+
+.range--s > input{
+  padding:4px 0;
+}
+@-moz-document url-prefix(''){
+  .range--s > input{
+    padding:0;
+  }
 }
 .range--s > input::-webkit-slider-runnable-track{
   height:2px;
