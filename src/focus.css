@@ -16,22 +16,22 @@
 }
 
 /* Range focus */
-[data-assembly-focus-control='visible'] .range {
+[data-assembly-focus-control='visible'] .range input[type=range] {
   box-shadow: none;
 }
-[data-assembly-focus-control='visible'] .range:focus::-webkit-slider-thumb {
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-webkit-slider-thumb {
   box-shadow: var(--focus-shadow);
 }
-[data-assembly-focus-control='visible'] .range:focus::-ms-fill-upper {
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-ms-fill-upper {
   box-shadow: var(--focus-shadow);
 }
-[data-assembly-focus-control='visible'] .range:focus::-ms-fill-lower {
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-ms-fill-lower {
   box-shadow: var(--focus-shadow);
 }
-[data-assembly-focus-control='visible'] .range:focus::-ms-thumb {
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-ms-thumb {
   box-shadow: var(--focus-shadow);
 }
-[data-assembly-focus-control='visible'] .range:focus::-moz-range-thumb {
+[data-assembly-focus-control='visible'] .range input[type=range]:focus::-moz-range-thumb {
   box-shadow: var(--focus-shadow);
 }
 
