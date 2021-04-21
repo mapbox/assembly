@@ -400,7 +400,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-radius: 50%;
   border: 1px solid currentColor;
   background: var(--white);
-  cursor: pointer;
+  cursor: grab;
 }
 
 .range > input::-moz-range-thumb {
@@ -411,7 +411,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-radius: 50%;
   border: 1px solid currentColor;
   background: var(--white);
-  cursor: pointer;
+  cursor: grab;
 }
 
 .range > input::-ms-thumb {
@@ -423,7 +423,19 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-radius: 50%;
   border: 1px solid currentColor;
   background: var(--white);
-  cursor: pointer;
+  cursor: grab;
+}
+
+.range > input::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+
+.range > input::-moz-range-thumb:active {
+  cursor: grabbing;
+}
+
+.range > input::-ms-thumb:active {
+  cursor: grabbing;
 }
 
 /*

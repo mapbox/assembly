@@ -622,7 +622,7 @@ legend{
   border-radius:50%;
   border:1px solid currentColor;
   background:#fff;
-  cursor:pointer;
+  cursor:grab;
 }
 
 .range > input::-moz-range-thumb{
@@ -634,7 +634,7 @@ legend{
   border-radius:50%;
   border:1px solid currentColor;
   background:#fff;
-  cursor:pointer;
+  cursor:grab;
 }
 
 .range > input::-ms-thumb{
@@ -647,7 +647,19 @@ legend{
   border-radius:50%;
   border:1px solid currentColor;
   background:#fff;
-  cursor:pointer;
+  cursor:grab;
+}
+
+.range > input::-webkit-slider-thumb:active{
+  cursor:grabbing;
+}
+
+.range > input::-moz-range-thumb:active{
+  cursor:grabbing;
+}
+
+.range > input::-ms-thumb:active{
+  cursor:grabbing;
 }
 .range--s{
   height:24px;
@@ -12525,7 +12537,7 @@ legend{
   border-radius:50%;
   border:1px solid currentColor;
   background:#fff;
-  cursor:pointer;
+  cursor:grab;
 }
 
 .range > input::-moz-range-thumb{
@@ -12537,7 +12549,7 @@ legend{
   border-radius:50%;
   border:1px solid currentColor;
   background:#fff;
-  cursor:pointer;
+  cursor:grab;
 }
 
 .range > input::-ms-thumb{
@@ -12550,7 +12562,19 @@ legend{
   border-radius:50%;
   border:1px solid currentColor;
   background:#fff;
-  cursor:pointer;
+  cursor:grab;
+}
+
+.range > input::-webkit-slider-thumb:active{
+  cursor:grabbing;
+}
+
+.range > input::-moz-range-thumb:active{
+  cursor:grabbing;
+}
+
+.range > input::-ms-thumb:active{
+  cursor:grabbing;
 }
 .range--s{
   height:24px;
