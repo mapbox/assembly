@@ -31,17 +31,17 @@ function cleanSvg(svg, fileName) {
   delete svg.defs;
   delete svg['sodipodi:namedview'];
 
-  // Remove all properties but viewbox from svg.
+  // Remove most properties from svg.
   Object.keys(svg.$).forEach(k => {
-    if (k !== 'viewBox') delete svg.$[k];
+    if (!['xmlns', 'viewBox'].includes(k)) delete svg.$[k];
   });
 
   function cleanPaths(path) {
     path.forEach(p => {
-      // Remove all properties but d from paths.
+      // Remove fill from paths.
       if (p.$ && Object.keys(p.$).length) {
         Object.keys(p.$).forEach(k => {
-          if (k !== 'd') delete p.$[k];
+          if (!['d', 'fill-rule', 'clip-rule'].includes(k)) delete p.$[k];
         });
       }
     });

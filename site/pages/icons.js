@@ -10,12 +10,12 @@ export default class Icons extends React.Component {
       return (
         <div
           key={icon}
-          className="col--6 col--4-ml col--3-mxl flex-parent flex-parent--center-cross flex-child px12 py12 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light"
+          className="col col--3 col--2-ml col--1-mxl mb12 py12 px3 flex-parent flex-parent--column flex-parent--center-cross"
         >
-          <svg className="icon h18 w18 mr3">
+          <svg className="icon h18 w18">
             <use xlinkHref={`#icon-${icon}`} />
           </svg>
-          <span className="txt-s color-gray">{icon}</span>
+          <span className="mt12 txt-xs inline-block color-gray">{icon}</span>
         </div>
       );
     });
@@ -33,7 +33,7 @@ export default class Icons extends React.Component {
             </a>.
           </p>
         </div>
-        <div className="flex-parent flex-parent--wrap txt-mono">{iconEls}</div>
+        <div className="grid txt-mono align-center">{iconEls}</div>
       </Page>
     );
   }
