@@ -103,7 +103,7 @@ class Navigation extends React.Component {
             className="color-blue-on-hover txt-s flex-parent flex-parent--center-cross"
             href="https://github.com/mapbox/assembly/"
           >
-            <svg className="icon">
+            <svg className="icon txt-m">
               <use xlinkHref="#icon-github" />
             </svg>
             <div className="ml6">View on GitHub</div>
