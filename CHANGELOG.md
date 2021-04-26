@@ -2,6 +2,29 @@
 
 ## Unreleased
 
+- [breaking] Removes the following icons:
+  - `adjust-stroke`
+  - `android`
+  - `apple`
+  - `facebook`
+  - `instagram`
+  - `js`
+  - `lifebouy`
+  - `linkedin`
+  - `nofolder`
+  - `qt`
+  - `slack`
+  - `tooltip`
+  - `unity`
+  - `wechat`
+- [add] Add icons:
+  - `boolean`
+  - `eject`
+  - `fast-forward`
+  - `pause`
+  - `play`
+  - `sync`
+- [style change] Redraw all SVG icons.
 - [internal] Refactor internal color variables so there is one set of variables for default button and link colors, and another set of variables for form controls.
 - [style change] Adjust stroke widths for toggles, checkboxes, and radios from 2px to 1px.
 - [style change] Change default form control colors from blue to gray for all form types.
