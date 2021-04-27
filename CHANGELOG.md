@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.0.0
 
 - [add] New `wmax-{n}` values:
   - `wmax-1200`
