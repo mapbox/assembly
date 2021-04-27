@@ -9,15 +9,15 @@ export class Typography extends React.Component {
           Typography
         </h2>
         <div className="grid grid--gut12">
-          <div className="mb18 col col--6 txt-m txt-bold color-darken50 txt-uppercase txt-s">
+          <div className="mb18 col w-1/2 txt-m txt-bold color-darken50 txt-uppercase txt-s">
             Styled with prose
           </div>
-          <div className="mb18 col col--6 txt-m txt-bold color-darken50 txt-uppercase txt-s">
+          <div className="mb18 col w-1/2 txt-m txt-bold color-darken50 txt-uppercase txt-s">
             Styled with classes
           </div>
         </div>
         <div className="grid grid--gut12">
-          <div className="col col--6 prose">
+          <div className="col w-1/2 prose">
             <h1>Aenean Elit Parturient Malesuada Euismod</h1>
             <p>
               Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus,
@@ -78,7 +78,7 @@ export class Typography extends React.Component {
           </div>
 
           {/* without prose class, should be identical. Note i added a bunch of placeholder margin classes because these are still subject to change */}
-          <div className="col col--6">
+          <div className="col w-1/2">
             {/* note there is no top margin here, on the first element in the container */}
             <div className="txt-h1 txt-bold mb12">
               Aenean Elit Parturient Malesuada Euismod

@@ -9,14 +9,14 @@ exports[`buildLayoutScales defaults 1`] = `
  *
  * @example
  * <div class='grid grid--gut12'>
- *   <div class='col col--2'>
- *     <div class='border border--darken10'>col--2</div>
+ *   <div class='col w-1/6'>
+ *     <div class='border border--darken10'>w-1/6</div>
  *   </div>
- *   <div class='col col--4'>
- *     <div class='border border--darken10'>col--4</div>
+ *   <div class='col w-1/3'>
+ *     <div class='border border--darken10'>w-1/3</div>
  *   </div>
- *   <div class='col col--6'>
- *     <div class='border border--darken10'>col--6</div>
+ *   <div class='col w-1/2'>
+ *     <div class='border border--darken10'>w-1/2</div>
  *   </div>
  * </div>
  * @memberof Grid
@@ -699,6 +699,62 @@ exports[`buildLayoutScales defaults 1`] = `
 /** @endgroup */
 
 /**
+ * Apply percentage-based margin on the right.
+ *
+ * @group
+ * @memberof Margins
+ * @example
+ * <div class='grid'>
+ *   <div class='col mr-1/2 bg-darken10'>mr-1/2</div>
+ * </div>
+ */
+.mr-1\\\\/12 {
+  margin-right: 8.3333% !important;
+}
+
+.mr-1\\\\/6 {
+  margin-right: 16.6666% !important;
+}
+
+.mr-1\\\\/4 {
+  margin-right: 25% !important;
+}
+
+.mr-1\\\\/3 {
+  margin-right: 33.3333% !important;
+}
+
+.mr-5\\\\/12 {
+  margin-right: 41.6666% !important;
+}
+
+.mr-1\\\\/2 {
+  margin-right: 50% !important;
+}
+
+.mr-7\\\\/12 {
+  margin-right: 58.3333% !important;
+}
+
+.mr-2\\\\/3 {
+  margin-right: 66.6666% !important;
+}
+
+.mr-3\\\\/4 {
+  margin-right: 75% !important;
+}
+
+.mr-5\\\\/6 {
+  margin-right: 83.3333% !important;
+}
+
+.mr-11\\\\/12 {
+  margin-right: 91.6666% !important;
+}
+
+/** @endgroup */
+
+/**
  * Apply margin on the bottom.
  *
  * The negative margin classes, <code>mb-neg</code>, can be useful for certain design patterns like underline tabs.
@@ -948,6 +1004,62 @@ exports[`buildLayoutScales defaults 1`] = `
 
 .ml360 {
   margin-left: 360px !important;
+}
+
+/** @endgroup */
+
+/**
+ * Apply percentage-based margin on the left.
+ *
+ * @group
+ * @memberof Margins
+ * @example
+ * <div class='grid'>
+ *   <div class='col ml-1/2 bg-darken10'>ml-1/2</div>
+ * </div>
+ */
+.ml-1\\\\/12 {
+  margin-left: 8.3333% !important;
+}
+
+.ml-1\\\\/6 {
+  margin-left: 16.6666% !important;
+}
+
+.ml-1\\\\/4 {
+  margin-left: 25% !important;
+}
+
+.ml-1\\\\/3 {
+  margin-left: 33.3333% !important;
+}
+
+.ml-5\\\\/12 {
+  margin-left: 41.6666% !important;
+}
+
+.ml-1\\\\/2 {
+  margin-left: 50% !important;
+}
+
+.ml-7\\\\/12 {
+  margin-left: 58.3333% !important;
+}
+
+.ml-2\\\\/3 {
+  margin-left: 66.6666% !important;
+}
+
+.ml-3\\\\/4 {
+  margin-left: 75% !important;
+}
+
+.ml-5\\\\/6 {
+  margin-left: 83.3333% !important;
+}
+
+.ml-11\\\\/12 {
+  margin-left: 91.6666% !important;
 }
 
 /** @endgroup */
@@ -1457,6 +1569,64 @@ exports[`buildLayoutScales defaults 1`] = `
 /** @endgroup */
 
 /**
+ * Set a percentage-based width.
+ *
+ * @group
+ * @memberof Sizing
+ * @example
+ * <div class='grid'>
+ *   <div class='col w-1/2 bg-darken10'>w-1/2</div>
+ *   <div class='col w-1/4 bg-darken25'>w-1/4</div>
+ *   <div class='col w-1/4 bg-darken50'>w-1/4</div>
+ * </div>
+ */
+.w-1\\\\/12 {
+  width: 8.3333% !important;
+}
+
+.w-1\\\\/6 {
+  width: 16.6666% !important;
+}
+
+.w-1\\\\/4 {
+  width: 25% !important;
+}
+
+.w-1\\\\/3 {
+  width: 33.3333% !important;
+}
+
+.w-5\\\\/12 {
+  width: 41.6666% !important;
+}
+
+.w-1\\\\/2 {
+  width: 50% !important;
+}
+
+.w-7\\\\/12 {
+  width: 58.3333% !important;
+}
+
+.w-2\\\\/3 {
+  width: 66.6666% !important;
+}
+
+.w-3\\\\/4 {
+  width: 75% !important;
+}
+
+.w-5\\\\/6 {
+  width: 83.3333% !important;
+}
+
+.w-11\\\\/12 {
+  width: 91.6666% !important;
+}
+
+/** @endgroup */
+
+/**
  * Set an element's maximum width.
  *
  * In addition to numeric values, there are \`wmax-full\` and \`wmax-none\` classes.
@@ -1524,6 +1694,14 @@ exports[`buildLayoutScales defaults 1`] = `
 
 .wmax600 {
   max-width: 600px !important;
+}
+
+.wmax1200 {
+  max-width: 1200px !important;
+}
+
+.wmax1800 {
+  max-width: 1800px !important;
 }
 
 .wmax-full {
@@ -1844,6 +2022,122 @@ exports[`buildLayoutScales defaults 1`] = `
 
 .hmin-full {
   min-height: 100% !important;
+}
+
+/** @endgroup */
+
+/**
+ * Set a viewport-based height.
+ *
+ * @group
+ * @memberof Sizing
+ * @example
+ * <div class='h-viewport-1/3 bg-darken10'>h-viewport-1/3</div>
+ */
+.h-viewport-full {
+  height: 100vh !important;
+}
+
+.h-viewport-1\\\\/12 {
+  height: 8.3333vh !important;
+}
+
+.h-viewport-1\\\\/6 {
+  height: 16.6666vh !important;
+}
+
+.h-viewport-1\\\\/4 {
+  height: 25vh !important;
+}
+
+.h-viewport-1\\\\/3 {
+  height: 33.3333vh !important;
+}
+
+.h-viewport-5\\\\/12 {
+  height: 41.6666vh !important;
+}
+
+.h-viewport-1\\\\/2 {
+  height: 50vh !important;
+}
+
+.h-viewport-7\\\\/12 {
+  height: 58.3333vh !important;
+}
+
+.h-viewport-2\\\\/3 {
+  height: 66.6666vh !important;
+}
+
+.h-viewport-3\\\\/4 {
+  height: 75vh !important;
+}
+
+.h-viewport-5\\\\/6 {
+  height: 83.3333vh !important;
+}
+
+.h-viewport-11\\\\/12 {
+  height: 91.6666vh !important;
+}
+
+/** @endgroup */
+
+/**
+ * Set a viewport-based max width.
+ *
+ * @group
+ * @memberof Sizing
+ * @example
+ * <div class='hmax-viewport-1/3 h-viewport-1/2 bg-darken10'>hmax-viewport-1/3</div>
+ */
+.hmax-viewport-full {
+  max-height: 100vh !important;
+}
+
+.hmax-viewport-1\\\\/12 {
+  max-height: 8.3333vh !important;
+}
+
+.hmax-viewport-1\\\\/6 {
+  max-height: 16.6666vh !important;
+}
+
+.hmax-viewport-1\\\\/4 {
+  max-height: 25vh !important;
+}
+
+.hmax-viewport-1\\\\/3 {
+  max-height: 33.3333vh !important;
+}
+
+.hmax-viewport-5\\\\/12 {
+  max-height: 41.6666vh !important;
+}
+
+.hmax-viewport-1\\\\/2 {
+  max-height: 50vh !important;
+}
+
+.hmax-viewport-7\\\\/12 {
+  max-height: 58.3333vh !important;
+}
+
+.hmax-viewport-2\\\\/3 {
+  max-height: 66.6666vh !important;
+}
+
+.hmax-viewport-3\\\\/4 {
+  max-height: 75vh !important;
+}
+
+.hmax-viewport-5\\\\/6 {
+  max-height: 83.3333vh !important;
+}
+
+.hmax-viewport-11\\\\/12 {
+  max-height: 91.6666vh !important;
 }
 
 /** @endgroup */
@@ -2482,6 +2776,50 @@ exports[`buildLayoutScales defaults 1`] = `
     margin-right: 360px !important;
   }
 
+  .mr-1\\\\/12-mm {
+    margin-right: 8.3333% !important;
+  }
+
+  .mr-1\\\\/6-mm {
+    margin-right: 16.6666% !important;
+  }
+
+  .mr-1\\\\/4-mm {
+    margin-right: 25% !important;
+  }
+
+  .mr-1\\\\/3-mm {
+    margin-right: 33.3333% !important;
+  }
+
+  .mr-5\\\\/12-mm {
+    margin-right: 41.6666% !important;
+  }
+
+  .mr-1\\\\/2-mm {
+    margin-right: 50% !important;
+  }
+
+  .mr-7\\\\/12-mm {
+    margin-right: 58.3333% !important;
+  }
+
+  .mr-2\\\\/3-mm {
+    margin-right: 66.6666% !important;
+  }
+
+  .mr-3\\\\/4-mm {
+    margin-right: 75% !important;
+  }
+
+  .mr-5\\\\/6-mm {
+    margin-right: 83.3333% !important;
+  }
+
+  .mr-11\\\\/12-mm {
+    margin-right: 91.6666% !important;
+  }
+
   .mb-neg1-mm {
     margin-bottom: -1px !important;
   }
@@ -2712,6 +3050,50 @@ exports[`buildLayoutScales defaults 1`] = `
 
   .ml360-mm {
     margin-left: 360px !important;
+  }
+
+  .ml-1\\\\/12-mm {
+    margin-left: 8.3333% !important;
+  }
+
+  .ml-1\\\\/6-mm {
+    margin-left: 16.6666% !important;
+  }
+
+  .ml-1\\\\/4-mm {
+    margin-left: 25% !important;
+  }
+
+  .ml-1\\\\/3-mm {
+    margin-left: 33.3333% !important;
+  }
+
+  .ml-5\\\\/12-mm {
+    margin-left: 41.6666% !important;
+  }
+
+  .ml-1\\\\/2-mm {
+    margin-left: 50% !important;
+  }
+
+  .ml-7\\\\/12-mm {
+    margin-left: 58.3333% !important;
+  }
+
+  .ml-2\\\\/3-mm {
+    margin-left: 66.6666% !important;
+  }
+
+  .ml-3\\\\/4-mm {
+    margin-left: 75% !important;
+  }
+
+  .ml-5\\\\/6-mm {
+    margin-left: 83.3333% !important;
+  }
+
+  .ml-11\\\\/12-mm {
+    margin-left: 91.6666% !important;
   }
 
   .py0-mm {
@@ -3146,6 +3528,50 @@ exports[`buildLayoutScales defaults 1`] = `
     width: auto !important;
   }
 
+  .w-1\\\\/12-mm {
+    width: 8.3333% !important;
+  }
+
+  .w-1\\\\/6-mm {
+    width: 16.6666% !important;
+  }
+
+  .w-1\\\\/4-mm {
+    width: 25% !important;
+  }
+
+  .w-1\\\\/3-mm {
+    width: 33.3333% !important;
+  }
+
+  .w-5\\\\/12-mm {
+    width: 41.6666% !important;
+  }
+
+  .w-1\\\\/2-mm {
+    width: 50% !important;
+  }
+
+  .w-7\\\\/12-mm {
+    width: 58.3333% !important;
+  }
+
+  .w-2\\\\/3-mm {
+    width: 66.6666% !important;
+  }
+
+  .w-3\\\\/4-mm {
+    width: 75% !important;
+  }
+
+  .w-5\\\\/6-mm {
+    width: 83.3333% !important;
+  }
+
+  .w-11\\\\/12-mm {
+    width: 91.6666% !important;
+  }
+
   .wmax0-mm {
     max-width: 0 !important;
   }
@@ -3204,6 +3630,14 @@ exports[`buildLayoutScales defaults 1`] = `
 
   .wmax600-mm {
     max-width: 600px !important;
+  }
+
+  .wmax1200-mm {
+    max-width: 1200px !important;
+  }
+
+  .wmax1800-mm {
+    max-width: 1800px !important;
   }
 
   .wmax-full-mm {
@@ -3476,6 +3910,102 @@ exports[`buildLayoutScales defaults 1`] = `
 
   .hmin-full-mm {
     min-height: 100% !important;
+  }
+
+  .h-viewport-full-mm {
+    height: 100vh !important;
+  }
+
+  .h-viewport-1\\\\/12-mm {
+    height: 8.3333vh !important;
+  }
+
+  .h-viewport-1\\\\/6-mm {
+    height: 16.6666vh !important;
+  }
+
+  .h-viewport-1\\\\/4-mm {
+    height: 25vh !important;
+  }
+
+  .h-viewport-1\\\\/3-mm {
+    height: 33.3333vh !important;
+  }
+
+  .h-viewport-5\\\\/12-mm {
+    height: 41.6666vh !important;
+  }
+
+  .h-viewport-1\\\\/2-mm {
+    height: 50vh !important;
+  }
+
+  .h-viewport-7\\\\/12-mm {
+    height: 58.3333vh !important;
+  }
+
+  .h-viewport-2\\\\/3-mm {
+    height: 66.6666vh !important;
+  }
+
+  .h-viewport-3\\\\/4-mm {
+    height: 75vh !important;
+  }
+
+  .h-viewport-5\\\\/6-mm {
+    height: 83.3333vh !important;
+  }
+
+  .h-viewport-11\\\\/12-mm {
+    height: 91.6666vh !important;
+  }
+
+  .hmax-viewport-full-mm {
+    max-height: 100vh !important;
+  }
+
+  .hmax-viewport-1\\\\/12-mm {
+    max-height: 8.3333vh !important;
+  }
+
+  .hmax-viewport-1\\\\/6-mm {
+    max-height: 16.6666vh !important;
+  }
+
+  .hmax-viewport-1\\\\/4-mm {
+    max-height: 25vh !important;
+  }
+
+  .hmax-viewport-1\\\\/3-mm {
+    max-height: 33.3333vh !important;
+  }
+
+  .hmax-viewport-5\\\\/12-mm {
+    max-height: 41.6666vh !important;
+  }
+
+  .hmax-viewport-1\\\\/2-mm {
+    max-height: 50vh !important;
+  }
+
+  .hmax-viewport-7\\\\/12-mm {
+    max-height: 58.3333vh !important;
+  }
+
+  .hmax-viewport-2\\\\/3-mm {
+    max-height: 66.6666vh !important;
+  }
+
+  .hmax-viewport-3\\\\/4-mm {
+    max-height: 75vh !important;
+  }
+
+  .hmax-viewport-5\\\\/6-mm {
+    max-height: 83.3333vh !important;
+  }
+
+  .hmax-viewport-11\\\\/12-mm {
+    max-height: 91.6666vh !important;
   }
 
 }
@@ -4114,6 +4644,50 @@ exports[`buildLayoutScales defaults 1`] = `
     margin-right: 360px !important;
   }
 
+  .mr-1\\\\/12-ml {
+    margin-right: 8.3333% !important;
+  }
+
+  .mr-1\\\\/6-ml {
+    margin-right: 16.6666% !important;
+  }
+
+  .mr-1\\\\/4-ml {
+    margin-right: 25% !important;
+  }
+
+  .mr-1\\\\/3-ml {
+    margin-right: 33.3333% !important;
+  }
+
+  .mr-5\\\\/12-ml {
+    margin-right: 41.6666% !important;
+  }
+
+  .mr-1\\\\/2-ml {
+    margin-right: 50% !important;
+  }
+
+  .mr-7\\\\/12-ml {
+    margin-right: 58.3333% !important;
+  }
+
+  .mr-2\\\\/3-ml {
+    margin-right: 66.6666% !important;
+  }
+
+  .mr-3\\\\/4-ml {
+    margin-right: 75% !important;
+  }
+
+  .mr-5\\\\/6-ml {
+    margin-right: 83.3333% !important;
+  }
+
+  .mr-11\\\\/12-ml {
+    margin-right: 91.6666% !important;
+  }
+
   .mb-neg1-ml {
     margin-bottom: -1px !important;
   }
@@ -4344,6 +4918,50 @@ exports[`buildLayoutScales defaults 1`] = `
 
   .ml360-ml {
     margin-left: 360px !important;
+  }
+
+  .ml-1\\\\/12-ml {
+    margin-left: 8.3333% !important;
+  }
+
+  .ml-1\\\\/6-ml {
+    margin-left: 16.6666% !important;
+  }
+
+  .ml-1\\\\/4-ml {
+    margin-left: 25% !important;
+  }
+
+  .ml-1\\\\/3-ml {
+    margin-left: 33.3333% !important;
+  }
+
+  .ml-5\\\\/12-ml {
+    margin-left: 41.6666% !important;
+  }
+
+  .ml-1\\\\/2-ml {
+    margin-left: 50% !important;
+  }
+
+  .ml-7\\\\/12-ml {
+    margin-left: 58.3333% !important;
+  }
+
+  .ml-2\\\\/3-ml {
+    margin-left: 66.6666% !important;
+  }
+
+  .ml-3\\\\/4-ml {
+    margin-left: 75% !important;
+  }
+
+  .ml-5\\\\/6-ml {
+    margin-left: 83.3333% !important;
+  }
+
+  .ml-11\\\\/12-ml {
+    margin-left: 91.6666% !important;
   }
 
   .py0-ml {
@@ -4778,6 +5396,50 @@ exports[`buildLayoutScales defaults 1`] = `
     width: auto !important;
   }
 
+  .w-1\\\\/12-ml {
+    width: 8.3333% !important;
+  }
+
+  .w-1\\\\/6-ml {
+    width: 16.6666% !important;
+  }
+
+  .w-1\\\\/4-ml {
+    width: 25% !important;
+  }
+
+  .w-1\\\\/3-ml {
+    width: 33.3333% !important;
+  }
+
+  .w-5\\\\/12-ml {
+    width: 41.6666% !important;
+  }
+
+  .w-1\\\\/2-ml {
+    width: 50% !important;
+  }
+
+  .w-7\\\\/12-ml {
+    width: 58.3333% !important;
+  }
+
+  .w-2\\\\/3-ml {
+    width: 66.6666% !important;
+  }
+
+  .w-3\\\\/4-ml {
+    width: 75% !important;
+  }
+
+  .w-5\\\\/6-ml {
+    width: 83.3333% !important;
+  }
+
+  .w-11\\\\/12-ml {
+    width: 91.6666% !important;
+  }
+
   .wmax0-ml {
     max-width: 0 !important;
   }
@@ -4836,6 +5498,14 @@ exports[`buildLayoutScales defaults 1`] = `
 
   .wmax600-ml {
     max-width: 600px !important;
+  }
+
+  .wmax1200-ml {
+    max-width: 1200px !important;
+  }
+
+  .wmax1800-ml {
+    max-width: 1800px !important;
   }
 
   .wmax-full-ml {
@@ -5108,6 +5778,102 @@ exports[`buildLayoutScales defaults 1`] = `
 
   .hmin-full-ml {
     min-height: 100% !important;
+  }
+
+  .h-viewport-full-ml {
+    height: 100vh !important;
+  }
+
+  .h-viewport-1\\\\/12-ml {
+    height: 8.3333vh !important;
+  }
+
+  .h-viewport-1\\\\/6-ml {
+    height: 16.6666vh !important;
+  }
+
+  .h-viewport-1\\\\/4-ml {
+    height: 25vh !important;
+  }
+
+  .h-viewport-1\\\\/3-ml {
+    height: 33.3333vh !important;
+  }
+
+  .h-viewport-5\\\\/12-ml {
+    height: 41.6666vh !important;
+  }
+
+  .h-viewport-1\\\\/2-ml {
+    height: 50vh !important;
+  }
+
+  .h-viewport-7\\\\/12-ml {
+    height: 58.3333vh !important;
+  }
+
+  .h-viewport-2\\\\/3-ml {
+    height: 66.6666vh !important;
+  }
+
+  .h-viewport-3\\\\/4-ml {
+    height: 75vh !important;
+  }
+
+  .h-viewport-5\\\\/6-ml {
+    height: 83.3333vh !important;
+  }
+
+  .h-viewport-11\\\\/12-ml {
+    height: 91.6666vh !important;
+  }
+
+  .hmax-viewport-full-ml {
+    max-height: 100vh !important;
+  }
+
+  .hmax-viewport-1\\\\/12-ml {
+    max-height: 8.3333vh !important;
+  }
+
+  .hmax-viewport-1\\\\/6-ml {
+    max-height: 16.6666vh !important;
+  }
+
+  .hmax-viewport-1\\\\/4-ml {
+    max-height: 25vh !important;
+  }
+
+  .hmax-viewport-1\\\\/3-ml {
+    max-height: 33.3333vh !important;
+  }
+
+  .hmax-viewport-5\\\\/12-ml {
+    max-height: 41.6666vh !important;
+  }
+
+  .hmax-viewport-1\\\\/2-ml {
+    max-height: 50vh !important;
+  }
+
+  .hmax-viewport-7\\\\/12-ml {
+    max-height: 58.3333vh !important;
+  }
+
+  .hmax-viewport-2\\\\/3-ml {
+    max-height: 66.6666vh !important;
+  }
+
+  .hmax-viewport-3\\\\/4-ml {
+    max-height: 75vh !important;
+  }
+
+  .hmax-viewport-5\\\\/6-ml {
+    max-height: 83.3333vh !important;
+  }
+
+  .hmax-viewport-11\\\\/12-ml {
+    max-height: 91.6666vh !important;
   }
 
 }
@@ -5746,6 +6512,50 @@ exports[`buildLayoutScales defaults 1`] = `
     margin-right: 360px !important;
   }
 
+  .mr-1\\\\/12-mxl {
+    margin-right: 8.3333% !important;
+  }
+
+  .mr-1\\\\/6-mxl {
+    margin-right: 16.6666% !important;
+  }
+
+  .mr-1\\\\/4-mxl {
+    margin-right: 25% !important;
+  }
+
+  .mr-1\\\\/3-mxl {
+    margin-right: 33.3333% !important;
+  }
+
+  .mr-5\\\\/12-mxl {
+    margin-right: 41.6666% !important;
+  }
+
+  .mr-1\\\\/2-mxl {
+    margin-right: 50% !important;
+  }
+
+  .mr-7\\\\/12-mxl {
+    margin-right: 58.3333% !important;
+  }
+
+  .mr-2\\\\/3-mxl {
+    margin-right: 66.6666% !important;
+  }
+
+  .mr-3\\\\/4-mxl {
+    margin-right: 75% !important;
+  }
+
+  .mr-5\\\\/6-mxl {
+    margin-right: 83.3333% !important;
+  }
+
+  .mr-11\\\\/12-mxl {
+    margin-right: 91.6666% !important;
+  }
+
   .mb-neg1-mxl {
     margin-bottom: -1px !important;
   }
@@ -5976,6 +6786,50 @@ exports[`buildLayoutScales defaults 1`] = `
 
   .ml360-mxl {
     margin-left: 360px !important;
+  }
+
+  .ml-1\\\\/12-mxl {
+    margin-left: 8.3333% !important;
+  }
+
+  .ml-1\\\\/6-mxl {
+    margin-left: 16.6666% !important;
+  }
+
+  .ml-1\\\\/4-mxl {
+    margin-left: 25% !important;
+  }
+
+  .ml-1\\\\/3-mxl {
+    margin-left: 33.3333% !important;
+  }
+
+  .ml-5\\\\/12-mxl {
+    margin-left: 41.6666% !important;
+  }
+
+  .ml-1\\\\/2-mxl {
+    margin-left: 50% !important;
+  }
+
+  .ml-7\\\\/12-mxl {
+    margin-left: 58.3333% !important;
+  }
+
+  .ml-2\\\\/3-mxl {
+    margin-left: 66.6666% !important;
+  }
+
+  .ml-3\\\\/4-mxl {
+    margin-left: 75% !important;
+  }
+
+  .ml-5\\\\/6-mxl {
+    margin-left: 83.3333% !important;
+  }
+
+  .ml-11\\\\/12-mxl {
+    margin-left: 91.6666% !important;
   }
 
   .py0-mxl {
@@ -6410,6 +7264,50 @@ exports[`buildLayoutScales defaults 1`] = `
     width: auto !important;
   }
 
+  .w-1\\\\/12-mxl {
+    width: 8.3333% !important;
+  }
+
+  .w-1\\\\/6-mxl {
+    width: 16.6666% !important;
+  }
+
+  .w-1\\\\/4-mxl {
+    width: 25% !important;
+  }
+
+  .w-1\\\\/3-mxl {
+    width: 33.3333% !important;
+  }
+
+  .w-5\\\\/12-mxl {
+    width: 41.6666% !important;
+  }
+
+  .w-1\\\\/2-mxl {
+    width: 50% !important;
+  }
+
+  .w-7\\\\/12-mxl {
+    width: 58.3333% !important;
+  }
+
+  .w-2\\\\/3-mxl {
+    width: 66.6666% !important;
+  }
+
+  .w-3\\\\/4-mxl {
+    width: 75% !important;
+  }
+
+  .w-5\\\\/6-mxl {
+    width: 83.3333% !important;
+  }
+
+  .w-11\\\\/12-mxl {
+    width: 91.6666% !important;
+  }
+
   .wmax0-mxl {
     max-width: 0 !important;
   }
@@ -6468,6 +7366,14 @@ exports[`buildLayoutScales defaults 1`] = `
 
   .wmax600-mxl {
     max-width: 600px !important;
+  }
+
+  .wmax1200-mxl {
+    max-width: 1200px !important;
+  }
+
+  .wmax1800-mxl {
+    max-width: 1800px !important;
   }
 
   .wmax-full-mxl {
@@ -6740,6 +7646,102 @@ exports[`buildLayoutScales defaults 1`] = `
 
   .hmin-full-mxl {
     min-height: 100% !important;
+  }
+
+  .h-viewport-full-mxl {
+    height: 100vh !important;
+  }
+
+  .h-viewport-1\\\\/12-mxl {
+    height: 8.3333vh !important;
+  }
+
+  .h-viewport-1\\\\/6-mxl {
+    height: 16.6666vh !important;
+  }
+
+  .h-viewport-1\\\\/4-mxl {
+    height: 25vh !important;
+  }
+
+  .h-viewport-1\\\\/3-mxl {
+    height: 33.3333vh !important;
+  }
+
+  .h-viewport-5\\\\/12-mxl {
+    height: 41.6666vh !important;
+  }
+
+  .h-viewport-1\\\\/2-mxl {
+    height: 50vh !important;
+  }
+
+  .h-viewport-7\\\\/12-mxl {
+    height: 58.3333vh !important;
+  }
+
+  .h-viewport-2\\\\/3-mxl {
+    height: 66.6666vh !important;
+  }
+
+  .h-viewport-3\\\\/4-mxl {
+    height: 75vh !important;
+  }
+
+  .h-viewport-5\\\\/6-mxl {
+    height: 83.3333vh !important;
+  }
+
+  .h-viewport-11\\\\/12-mxl {
+    height: 91.6666vh !important;
+  }
+
+  .hmax-viewport-full-mxl {
+    max-height: 100vh !important;
+  }
+
+  .hmax-viewport-1\\\\/12-mxl {
+    max-height: 8.3333vh !important;
+  }
+
+  .hmax-viewport-1\\\\/6-mxl {
+    max-height: 16.6666vh !important;
+  }
+
+  .hmax-viewport-1\\\\/4-mxl {
+    max-height: 25vh !important;
+  }
+
+  .hmax-viewport-1\\\\/3-mxl {
+    max-height: 33.3333vh !important;
+  }
+
+  .hmax-viewport-5\\\\/12-mxl {
+    max-height: 41.6666vh !important;
+  }
+
+  .hmax-viewport-1\\\\/2-mxl {
+    max-height: 50vh !important;
+  }
+
+  .hmax-viewport-7\\\\/12-mxl {
+    max-height: 58.3333vh !important;
+  }
+
+  .hmax-viewport-2\\\\/3-mxl {
+    max-height: 66.6666vh !important;
+  }
+
+  .hmax-viewport-3\\\\/4-mxl {
+    max-height: 75vh !important;
+  }
+
+  .hmax-viewport-5\\\\/6-mxl {
+    max-height: 83.3333vh !important;
+  }
+
+  .hmax-viewport-11\\\\/12-mxl {
+    max-height: 91.6666vh !important;
   }
 
 }

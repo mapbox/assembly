@@ -78,7 +78,7 @@
     "property-case": "lower",
     "property-no-unknown": true,
     "property-no-vendor-prefix": true,
-    "selector-class-pattern": "^[a-z]+[0-9]*(-{1,2}(?!small|medium|large|md|lg|top|bottom|left|right)[a-z0-9]+?)*$",
+    "selector-class-pattern": "^[a-z]+[0-9]*(-{1,2}(?!small|medium|large|md|lg|top|bottom|left|right)[\\\\/a-z0-9]+?)*$",
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,
