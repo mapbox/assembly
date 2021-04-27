@@ -2,29 +2,29 @@ import React from 'react';
 import { HtmlExample } from '../../html_example';
 import { Page } from '../../page';
 
-const basic = `<div class='flex-parent-inline flex-parent--center-cross flex-parent--column'>
-  <div class='flex-child px6 py6 bg-darken75 color-white align-center  round txt-bold txt-s'>Hello world!</div>
-  <span class='flex-child triangle triangle--d'></span>
+const basic = `<div class='inline-flex flex--center-cross flex--column'>
+  <div class='px6 py6 bg-darken75 color-white align-center  round txt-bold txt-s'>Hello world!</div>
+  <span class='triangle triangle--d'></span>
 </div>`;
 
-const basic_right = `<div class='flex-parent-inline flex-parent--center-cross'>
-  <span class='flex-child triangle triangle--l'></span>
-  <div class='flex-child px6 py6 round txt-bold txt-s align-center bg-darken75 color-white'>Hello world!</div>
+const basic_right = `<div class='inline-flex flex--center-cross'>
+  <span class='triangle triangle--l'></span>
+  <div class='px6 py6 round txt-bold txt-s align-center bg-darken75 color-white'>Hello world!</div>
 </div>`;
 
-const basic_left = `<div class='flex-parent-inline flex-parent--center-cross'>
-  <div class='flex-child px6 py6 round txt-bold txt-s align-center bg-darken75 color-white'>Hello world!</div>
-  <span class='flex-child triangle triangle--r'></span>
+const basic_left = `<div class='inline-flex flex--center-cross'>
+  <div class='px6 py6 round txt-bold txt-s align-center bg-darken75 color-white'>Hello world!</div>
+  <span class='triangle triangle--r'></span>
 </div>`;
 
-const basic_with_closure = `<div class='flex-parent-inline flex-parent--center-cross flex-parent--column'>
-  <div class='flex-child relative px18 py18 round txt-bold txt-s align-center bg-darken75 color-white'>
-    <button class='flex-child absolute top right'>
-      <svg class='flex-child icon link color-white'><use xlink:href='#icon-close'></use></svg>
+const basic_with_closure = `<div class='inline-flex flex--center-cross flex--column'>
+  <div class='relative px18 py18 round txt-bold txt-s align-center bg-darken75 color-white'>
+    <button class='absolute top right'>
+      <svg class='icon link color-white mt3 mr3'><use xlink:href='#icon-close'></use></svg>
     </button>
     Hello world!
   </div>
-  <span class='flex-child triangle triangle--d color-darken75'></span>
+  <span class='triangle triangle--d color-darken75'></span>
 </div>`;
 
 export default class ExampleTooltips extends React.Component {

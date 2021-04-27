@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- [breaking] Remove `flex-child`, rename `flex-parent` to `flex`, rename `flex-parent-inline` to `inline-flex`, and rename all `flex-parent` and `flex-child` modifiers to match new scheme.
 - [breaking] Removes the following icons:
   - `adjust-stroke`
   - `android`

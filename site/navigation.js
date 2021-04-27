@@ -77,26 +77,22 @@ class Navigation extends React.Component {
     });
 
     return (
-      <div className="flex-parent-mm flex-parent--column-mm w-full">
-        <div className="flex-child">
-          <div className="flex-parent hmin60 mt24 mb18 mx24">
-            <a
-              href="/assembly/"
-              className="flex-child flex-child--grow link link--blue block"
-            >
-              <Logo className="icon w36 h36" />
-            </a>
-            <div className="flex-child txt-s color-darken50">
-              v{pkg.version}
-            </div>
-          </div>
+      <div className="flex-mm flex--column-mm w-full">
+        <div className="flex hmin60 mt24 mb18 mx24">
+          <a
+            href="/assembly/"
+            className="flex-child-grow link link--blue block"
+          >
+            <Logo className="icon w36 h36" />
+          </a>
+          <div className="txt-s color-darken50">v{pkg.version}</div>
         </div>
-        <div className="flex-child flex-child--grow-mm overflow-auto scroll-styled pr18 pl24">
+        <div className="flex-child-grow-mm overflow-auto scroll-styled pr18 pl24">
           {navEls}
         </div>
         <div className="mt12 mb24 mx24">
           <a
-            className="color-blue-on-hover txt-s flex-parent flex-parent--center-cross"
+            className="color-blue-on-hover txt-s flex flex--center-cross"
             href="https://github.com/mapbox/assembly/"
           >
             <svg className="icon txt-m">

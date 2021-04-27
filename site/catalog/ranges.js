@@ -55,13 +55,13 @@ export class Ranges extends React.Component {
           {colors.map(c => <RangesEl key={c} color={c} size={'s'} />)}
         </div>
 
-        <div className="mb12 flex-parent flex-parent--center-cross">
+        <div className="mb12 flex flex--center-cross">
           <input className="input w240" />
           <div className="range w240">
             <input type="range" />
           </div>
         </div>
-        <div className="mb12 flex-parent flex-parent--center-cross">
+        <div className="mb12 flex flex--center-cross">
           <input className="input input--s w240" />
           <div className="range range--s w240">
             <input type="range" />
