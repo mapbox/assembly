@@ -404,22 +404,22 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex flex-–center-main bg-darken10'>
+ * <div class='flex flex--center-main bg-darken10'>
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex-–center-main { justify-content: center !important; }
+.flex--center-main { justify-content: center !important; }
 
 /**
  * Center an element's children on the cross axis.
  *
  * @memberof Flexbox
  * @example
- * <div class='flex flex-–center-cross bg-darken10 h120'>
+ * <div class='flex flex--center-cross bg-darken10 h120'>
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex-–center-cross { align-items: center !important; }
+.flex--center-cross { align-items: center !important; }
 
 /**
  * Align an element's children to the start of the cross axis.
@@ -484,11 +484,11 @@
  *
  * @memberof Flexbox
  * @example
- * <div class='flex flex-–stretch-cross bg-darken10 h120'>
+ * <div class='flex flex--stretch-cross bg-darken10 h120'>
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex-–stretch-cross { align-items: stretch !important; }
+.flex--stretch-cross { align-items: stretch !important; }
 
 /**
  * Evenly distribute children across the line, so first child is at the start
@@ -567,7 +567,7 @@
  *
  * @group
  * @example
- * <div class='bg-darken10 flex flex-–center-main overflow-hidden'>
+ * <div class='bg-darken10 flex flex--center-main overflow-hidden'>
  *   <div class='w240 px12 py12 bg-darken10'>
  *     <div class='bg-darken10 bleed-r'>Right bleed</div>
  *   </div>

@@ -38,7 +38,7 @@ const basicLegendTwo = `<div class='w240 round shadow-darken10 px12 py12 txt-s'>
 
 const radiusLegend = `<div class='w240 round shadow-darken10 px12 py12 txt-s'>
   <strong class='block mb6'>Title description</strong>
-  <div class='flex flex-–center-main flex-–center-cross align-center'>
+  <div class='flex flex--center-main flex--center-cross align-center'>
     <div class='flex-child-grow wmin24'>
       <span class='inline-block w3 h3 round-full bg-blue'></span>
     </div>

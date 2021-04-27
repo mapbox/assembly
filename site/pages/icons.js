@@ -10,7 +10,7 @@ export default class Icons extends React.Component {
       return (
         <div
           key={icon}
-          className="col col--3 col--2-ml col--1-mxl mb12 py12 px3 flex flex--column flex-–center-cross"
+          className="col col--3 col--2-ml col--1-mxl mb12 py12 px3 flex flex--column flex--center-cross"
         >
           <svg className="icon h18 w18">
             <use xlinkHref={`#icon-${icon}`} />

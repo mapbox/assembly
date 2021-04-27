@@ -96,7 +96,7 @@ class Navigation extends React.Component {
         </div>
         <div className="mt12 mb24 mx24">
           <a
-            className="color-blue-on-hover txt-s flex flex-–center-cross"
+            className="color-blue-on-hover txt-s flex flex--center-cross"
             href="https://github.com/mapbox/assembly/"
           >
             <svg className="icon txt-m">

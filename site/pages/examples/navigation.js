@@ -23,7 +23,7 @@ const underlinedTabs = `<div class='bg-gray border-b border--black flex h40 txt-
   Changing content
 </div>`;
 
-const breadcrumbs = `<div class='inline-flex flex-–center-cross txt-s'>
+const breadcrumbs = `<div class='inline-flex flex--center-cross txt-s'>
   <a href='#' class='link link--darken50'>One</a>
   <svg class='icon'><use xlink:href='#icon-caret-right'/></svg>
   <a href='#' class='link link--darken50'>Two</a>

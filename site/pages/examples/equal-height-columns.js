@@ -2,7 +2,7 @@ import React from 'react';
 import { HtmlExample } from '../../html_example';
 import { Page } from '../../page';
 
-const html = `<div class='grid grid--gut12 flex-–stretch-cross'>
+const html = `<div class='grid grid--gut12 flex--stretch-cross'>
   <div class='col col--4'>
     <div class='h-full bg-darken10 px12 py12'>
       <div class='bg-darken10 h60'></div>
@@ -36,7 +36,7 @@ export default class ExampleEqualHeightColumns extends React.Component {
             flexbox powers.
           </p>
           <p>
-            The key here is to add <code>flex-–stretch-cross</code> to the{' '}
+            The key here is to add <code>flex--stretch-cross</code> to the{' '}
             <code>grid</code>, and add <code>h-full</code> to the <em>child</em>{' '}
             of the <code>col</code> element, which is the one with the
             background color.
