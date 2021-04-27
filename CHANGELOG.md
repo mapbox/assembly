@@ -2,6 +2,35 @@
 
 ## Unreleased
 
+- [add] New `wmax-{n}` values:
+  - `wmax-1200`
+  - `wmax-1800`
+- [breaking] Remove `col--{n}` & `col--off{'r' | 'l'}{n}` rules in favor of general purpose percentage based rules:
+  - `w-1/12`, `mr-1/12`, `ml-1/12`
+  - `w-1/6`, `mr-1/6`, `ml-1/6`
+  - `w-1/4`, `mr-1/4`, `ml-1/4`
+  - `w-1/3`, `mr-1/3`, `ml-1/3`
+  - `w-5/12`, `mr-5/12`, `ml-5/12`
+  - `w-1/2`, `mr-1/2`, `ml-1/2`
+  - `w-7/12`, `mr-7/12`, `ml-7/12`
+  - `w-2/3`, `mr-2/3`, `ml-2/3`
+  - `w-3/4`, `mr-3/4`, `ml-3/4`
+  - `w-5/6`, `mr-5/6`, `ml-5/6`
+  - `w-11/12`, `mr-11/12`, `ml-11/12`
+- [add] New percentage-based viewport values:
+  - `h-viewport-1/12`
+  - `h-viewport-1/6`
+  - `h-viewport-1/4`
+  - `h-viewport-5/12`
+  - `h-viewport-7/12`
+  - `h-viewport-5/6`
+  - `h-viewport-11/12`
+- [breaking] Rename `viewport-third` to `h-viewport-1/3`.
+- [breaking] Rename `viewport-half` to `h-viewport-1/2`.
+- [breaking] Rename `viewport-twothirds` to `h-viewport-2/3`.
+- [breaking] Remove `viewport-almost`.
+- [breaking] Remove `viewport` in favor of class composition.
+- [breaking] Remove `flex-basis: 0` from `col` class. Any elements using `col` without a width set will see visual differences.
 - [breaking] Remove `flex-child`, rename `flex-parent` to `flex`, rename `flex-parent-inline` to `inline-flex`, and rename all `flex-parent` and `flex-child` modifiers to match new scheme.
 - [breaking] Removes the following icons:
   - `adjust-stroke`
