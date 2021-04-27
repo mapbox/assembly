@@ -21,7 +21,7 @@ class Navigation extends React.Component {
       level = level || 0;
       if (!items || items.length === 0) return null;
       return items.map(member => {
-        let linkContainerClasses, style;
+        let linkContainerClasses;
         let linkClasses = 'color-blue-on-hover relative mr12 mr0-mm pb3 txt-s';
         linkClasses += ` ml${6 * (level + 1)}-mm`;
         if (member.route === activePathname) {
@@ -30,7 +30,6 @@ class Navigation extends React.Component {
         if (level === 0 && isDoc) {
           linkContainerClasses = 'block mt6';
           linkClasses += ' txt-uppercase color-darken50';
-          style = { letterSpacing: '1px' };
         } else {
           linkContainerClasses = 'inline-block block-mm ';
         }
@@ -41,7 +40,7 @@ class Navigation extends React.Component {
 
         return (
           <div key={member.name} className={linkContainerClasses}>
-            <a style={style} className={linkClasses} href={href}>
+            <a className={linkClasses} href={href}>
               {member.name}
             </a>
             {nestedItems}
@@ -50,12 +49,9 @@ class Navigation extends React.Component {
       });
     }
 
-    const filteredNavData = navigationList.filter(n => {
-      return n.name !== 'Home';
-    });
-    const navEls = filteredNavData.map(r => {
+    const navEls = navigationList.map(r => {
       const hideNestedItems =
-        !activePathname.startsWith(r.route) ||
+        activePathname !== r.route ||
         r.items === undefined ||
         r.items.length === 0;
 
@@ -69,7 +65,7 @@ class Navigation extends React.Component {
         <div key={r.name}>
           <a
             className={`txt-s txt-bold block color-blue-on-hover mb6 ${
-              activePathname.startsWith(r.route) ? 'color-blue' : ''
+              activePathname === r.route ? 'color-blue' : ''
             }`}
             href={`/assembly${r.route}`}
           >
