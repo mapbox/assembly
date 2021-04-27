@@ -30,10 +30,13 @@ export default class Home extends React.Component {
             <div className="mt18 color-darken50">v{pkg.version}</div>
           </div>
           <p className="txt-l mt18">
-            Assembly is an open source CSS framework that makes the hard parts
-            of designing for the web easy.
+            Assembly is an atomic CSS framework with great default form element
+            styles. Use it, and your team will never have to write CSS again.
           </p>
-          <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb36 txt-l txt-bold">
+          <h2
+            id="getting-started"
+            className="border-b border-b--2 border--gray-faint pb6 mt60 mb36 txt-l txt-bold"
+          >
             Getting started
           </h2>
           <p>Include in the head of your HTML the Assembly stylesheet.</p>
@@ -49,7 +52,7 @@ export default class Home extends React.Component {
             Include the Assembly JavaScript anywhere in your HTML. It is safe to
             use the <code className="txt-code">async</code> and{' '}
             <code className="txt-code">defer</code> attributes. See{' '}
-            <a className="link" href="#js-api">
+            <a className="link" href="#javascript-api">
               Javascript API
             </a>{' '}
             for details.
@@ -82,7 +85,10 @@ export default class Home extends React.Component {
             </a>.
           </p>
 
-          <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 txt-l txt-bold">
+          <h2
+            id="philosophy"
+            className="border-b border-b--2 border--gray-faint pb6 mt60 txt-l txt-bold"
+          >
             Philosophy
           </h2>
           <div className="grid grid--gut24 grid--gut36-ml">
@@ -117,9 +123,36 @@ export default class Home extends React.Component {
               </p>
             </div>
           </div>
-          <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 txt-l txt-bold">
+          <h2
+            id="overview"
+            className="border-b border-b--2 border--gray-faint pb6 mt60 txt-l txt-bold"
+          >
             Overview
           </h2>
+
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
+              <img src={modifierImg} />
+            </div>
+            <div>
+              <h3 className="txt-bold">Classes and modifier classes</h3>
+              <p className="mt12">
+                A double-hyphen in a class name (e.g.{' '}
+                <code className="txt-code">border--blue</code>) indicates that
+                the class is a <span className="txt-em">modifier class</span>. A
+                modifier class extends the class whose name precedes the
+                double-hyphen (e.g.{' '}
+                <code className="txt-code">border--blue</code> modifies{' '}
+                <code className="txt-code">border</code>;{' '}
+                <code className="txt-code">flex-child--grow</code> modifies{' '}
+                <code className="txt-code">flex-child</code>). And{' '}
+                <span className="txt-em">
+                  modifier classes should only ever be used in combination with
+                  the class they modify
+                </span>: modifier classes will not work well on their own.
+              </p>
+            </div>
+          </div>
 
           <div className="mt60 flex-mm">
             <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
@@ -163,23 +196,6 @@ export default class Home extends React.Component {
                 applied to. A heading <em>style</em>, or a button <em>style</em>,
                 can be applied to <em>any</em> element by applying the
                 appropriate classes.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt60 flex-mm">
-            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-              <img src={boxModelImg} />
-            </div>
-            <div>
-              <h3 className="txt-bold">More intuitive box model</h3>
-              <p className="mt12">
-                The <code className="txt-code">border-box</code> box model
-                allows for more intuitive styling than the default{' '}
-                <code className="txt-code">content-box</code> model. For
-                example, when you set a <code className="txt-code">w360</code>{' '}
-                class, your element will always be 360 pixels wide, regardless
-                of its padding and borders.
               </p>
             </div>
           </div>
@@ -246,30 +262,6 @@ export default class Home extends React.Component {
 
           <div className="mt60 flex-mm">
             <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-              <img src={modifierImg} />
-            </div>
-            <div>
-              <h3 className="txt-bold">Classes and modifier classes</h3>
-              <p className="mt12">
-                A double-hyphen in a class name (e.g.{' '}
-                <code className="txt-code">border--blue</code>) indicates that
-                the class is a <span className="txt-em">modifier class</span>. A
-                modifier class extends the class whose name precedes the
-                double-hyphen (e.g.{' '}
-                <code className="txt-code">border--blue</code> modifies{' '}
-                <code className="txt-code">border</code>;{' '}
-                <code className="txt-code">flex--column</code> modifies{' '}
-                <code className="txt-code">flex</code>). And{' '}
-                <span className="txt-em">
-                  modifier classes should only ever be used in combination with
-                  the class they modify
-                </span>: modifier classes will not work well on their own.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt60 flex-mm">
-            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
               <img src={specificityImg} />
             </div>
             <div>
@@ -296,6 +288,23 @@ export default class Home extends React.Component {
                 For dynamic styles, responsive classes (described above) provide
                 some additional flexibility. But if you need even more, you
                 should use custom CSS instead of a utility class.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
+              <img src={boxModelImg} />
+            </div>
+            <div>
+              <h3 className="txt-bold">More intuitive box model</h3>
+              <p className="mt12">
+                The <code className="txt-code">border-box</code> box model
+                allows for more intuitive styling than the default{' '}
+                <code className="txt-code">content-box</code> model. For
+                example, when you set a <code className="txt-code">w360</code>{' '}
+                class, your element will always be 360 pixels wide, regardless
+                of its padding and borders.
               </p>
             </div>
           </div>
@@ -344,7 +353,7 @@ export default class Home extends React.Component {
         </div>
 
         <h2
-          id="js-api"
+          id="javascript-api"
           className="border-b border-b--2 border--gray-faint pb6 mt60 mb36 txt-l txt-bold"
         >
           Javascript API

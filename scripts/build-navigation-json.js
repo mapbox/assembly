@@ -92,6 +92,25 @@ function createNavigationTree() {
 
     // Add component and one-off props for components.
     switch (r.name) {
+      case 'Home': {
+        const sections = [
+          'Getting started',
+          'Philosophy',
+          'Overview',
+          'Javascript API'
+        ];
+
+        // Build out secondary navigation
+        r.items = sections.map(item => {
+          return {
+            name: item,
+            route: '#' + item.toLowerCase().replace(' ', '-'),
+            items: []
+          };
+        });
+
+        break;
+      }
       case 'Documentation': {
         const cssFilePaths = globby.sync(path.join(__dirname, '../src/*.css'));
         const documentationData = documentationCss
