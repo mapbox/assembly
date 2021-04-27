@@ -18,7 +18,7 @@ const warning = `<div class='bg-orange-faint color-orange-dark inline-block px6 
   </button>
 </div>`;
 
-const chip = `<div class='flex-parent flex-parent--center-cross flex-parent-inline relative w240'>
+const chip = `<div class='flex flex--center-cross inline-flex relative w240'>
   <div class='bg-blue-faint round-l col col--6 px12 py12'>
     <strong class='txt-s color-blue'>This</strong>
   </div>

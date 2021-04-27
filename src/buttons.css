@@ -118,7 +118,7 @@
 
 /**
  * Create pill button groups.
- * Pill groups must be wrapped in a `flex-parent-inline` container.
+ * Pill groups must be wrapped in a `inline-flex` container.
  * Every button in a pill group must have
  * - a `btn` class
  * - any `btn--*` modifiers you want (e.g. `btn--stroke`)
@@ -126,13 +126,13 @@
  * - a `btn--pill-*` modifier specifying its position (e.g. `btn--pill-hc`)
  *
  * For *horizontal* pills, use
- * - `flex-parent-inline` on the container
+ * - `inline-flex` on the container
  * - `btn btn--pill(-stroke) btn--pill-hc` (center)
  * - `btn btn--pill(-stroke) btn--pill-hl` (left)
  * - `btn btn--pill(-stroke) btn--pill-hr` (right)
  *
  * For *vertical* pills, use
- * - `flex-parent-inline flex-parent--column` on the container
+ * - `inline-flex flex--column` on the container
  * - `btn btn--pill(-stroke) btn--pill-vc` (center)
  * - `btn btn--pill(-stroke) btn--pill-vt` (top)
  * - `btn btn--pill(-stroke) btn--pill-vb` (bottom)
@@ -141,12 +141,12 @@
  *
  * @memberof Buttons
  * @example
- * <div class="flex-parent-inline">
+ * <div class="inline-flex">
  *   <button class="btn btn--pill btn--pill-hl">Left</button>
  *   <button class="btn btn--pill btn--pill-hc">Center</button>
  *   <button class="btn btn--pill btn--pill-hr">Right</button>
  * </div>
- * <div class="flex-parent-inline flex-parent--column">
+ * <div class="inline-flex flex--column">
  *   <button class="btn btn--stroke btn--pill-stroke btn--pill-vt">Top</button>
  *   <button class="btn btn--pill-stroke btn--pill-vc is-active">Center</button>
  *   <button class="btn btn--stroke btn--pill-stroke btn--pill-vb">Bottom</button>
