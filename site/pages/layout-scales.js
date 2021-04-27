@@ -11,6 +11,10 @@ const classSets = {
     classPatterns: ['mx{n}', 'my{n}', 'ml{n}', 'mt{n}', 'mr{n}', 'mb{n}'],
     scale: scales.margin
   },
+  'Margins (percentage-based)': {
+    classPatterns: ['mr-{fraction}', 'ml-{fraction}'],
+    scale: scales.fractions
+  },
   Paddings: {
     classPatterns: ['px{n}', 'py{n}', 'pl{n}', 'pt{n}', 'pr{n}', 'pb{n}'],
     scale: scales.padding
@@ -18,6 +22,10 @@ const classSets = {
   Widths: {
     classPatterns: ['w{n}'],
     scale: scales.width
+  },
+  'Widths (percentage-based)': {
+    classPatterns: ['w-{fraction}'],
+    scale: scales.fractions
   },
   'Max-Widths': {
     classPatterns: ['wmax{n}'],
@@ -45,12 +53,14 @@ export default class LayoutScales extends React.Component {
   render() {
     const rows = Object.keys(classSets).map(name => {
       const data = classSets[name];
-      const scale = data.scale.map(number => {
-        const numberClasses =
-          'w60 txt-s txt-mono align-r pr6 py3 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light color-gray';
+      const scale = data.scale.map(v => {
+        const value = typeof v === 'object' ? v[0].replace(/\\/, '') : v;
         return (
-          <span key={number} className={numberClasses}>
-            {number}
+          <span
+            key={value}
+            className="w60 txt-s txt-mono align-r pr6 py3 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light color-gray"
+          >
+            {value}
           </span>
         );
       });
@@ -81,7 +91,7 @@ export default class LayoutScales extends React.Component {
       <Page path="/layout-scales/">
         <div className="mb24">
           <h1 className="txt-h2 txt-bold pt24 mb18">Layout Scales</h1>
-          <p className="col col--6-ml mb36">
+          <p className="col w-1/2-ml mb36">
             These are the numbers, corresponding to pixel values, available for
             each set of layout classes. All of these class sets include{' '}
             <code className="txt-code">*-mm</code>,{' '}

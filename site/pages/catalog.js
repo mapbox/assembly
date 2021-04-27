@@ -26,7 +26,7 @@ export default class Catalog extends React.Component {
       <Page path="/catalog/">
         <div className="pt24">
           <h1 className="txt-h2 txt-bold mb18">Catalog</h1>
-          <p className="col col--6-ml">
+          <p className="col w-1/2-ml">
             A catalog of Assembly variations for reference and debugging
             purposes.
           </p>

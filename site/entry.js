@@ -72,7 +72,7 @@ class Entry extends React.Component {
           .replace(/\./g, '')}`}
         className={selectorElClasses}
       >
-        {selector.trim()}
+        {selector.trim().replace(/\\/g, '')}
       </span>
     );
 
@@ -87,7 +87,7 @@ class Entry extends React.Component {
     return (
       <div className="border-t border-t--2 border--gray-faint">
         <div className="grid-mxl grid--gut18-mxl pt36 pb60">
-          <div className="col col--4-mxl pr18-ml mb6">
+          <div className="col w-1/3-mxl pr18-ml mb6">
             <div className="txt-mono hmax240 overflow-auto scroll-styled">
               {selectorEls}
             </div>
@@ -106,7 +106,7 @@ class Entry extends React.Component {
               </a>
             </div>
           </div>
-          <div className="col col--8-mxl">
+          <div className="col w-2/3-mxl">
             <div className="mb24 prose">
               {
                 remark()
