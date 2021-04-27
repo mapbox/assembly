@@ -351,7 +351,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  *
  * Style a range element.
  *
- * The best way to vertically align range elements with other items on the same row is to wrap the row in a `flex-parent flex-parent--center-cross` container.
+ * The best way to vertically align range elements with other items on the same row is to wrap the row in a `flex flex--center-cross` container.
  * For more details, read about the [flexbox classes](#Flexbox).
  *
  * @memberof Ranges
@@ -818,7 +818,6 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 }
 
 .toggle-container {
-  display: block; /* Same IE-flexbug-anticipation as with flex-child */
   max-width: 100%;
 }
 
