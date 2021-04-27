@@ -20,7 +20,7 @@ const basic_left = `<div class='inline-flex flex--center-cross'>
 const basic_with_closure = `<div class='inline-flex flex--center-cross flex--column'>
   <div class='relative px18 py18 round txt-bold txt-s align-center bg-darken75 color-white'>
     <button class='absolute top right'>
-      <svg class='icon link color-white'><use xlink:href='#icon-close'></use></svg>
+      <svg class='icon link color-white mt3 mr3'><use xlink:href='#icon-close'></use></svg>
     </button>
     Hello world!
   </div>
