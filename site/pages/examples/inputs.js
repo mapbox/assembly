@@ -2,20 +2,20 @@ import React from 'react';
 import { HtmlExample } from '../../html_example';
 import { Page } from '../../page';
 
-const inputWithButton = `<div class='flex-parent'>
+const inputWithButton = `<div class='flex'>
   <input class='input border-r--0 round-l' placeholder='Search'>
   <button class='btn px24 round-r'>Search</button>
 </div>`;
 
 const inputWithIcon = `<div class='relative'>
-  <div class='absolute flex-parent flex-parent--center-cross flex-parent--center-main w36 h36'>
+  <div class='absolute flex flex--center-cross flex--center-main w36 h36'>
     <svg class='icon'><use xlink:href='#icon-search'></use></svg>
   </div>
   <input class='input pl36' placeholder='Search'>
 </div>`;
 
 const inputWithSpinner = `<div class='relative'>
-  <div class='absolute top right flex-parent flex-parent--center-cross flex-parent--center-main w36 h36'>
+  <div class='absolute top right flex flex--center-cross flex--center-main w36 h36'>
     <span class='loading loading--s' />
   </div>
   <input class='input pr36' placeholder='Search'>

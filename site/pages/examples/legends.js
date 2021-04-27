@@ -15,8 +15,8 @@ const basicLegend = `<div class='w240 round shadow-darken10 px12 py12 txt-s'>
     <div class='col bg-red-dark h12'></div>
   </div>
   <div class='grid txt-xs'>
-    <div class='col flex-child--grow'>Low</div>
-    <div class='col flex-child--grow align-r'>High</div>
+    <div class='col flex-child-grow'>Low</div>
+    <div class='col flex-child-grow align-r'>High</div>
   </div>
 </div>`;
 
@@ -38,20 +38,20 @@ const basicLegendTwo = `<div class='w240 round shadow-darken10 px12 py12 txt-s'>
 
 const radiusLegend = `<div class='w240 round shadow-darken10 px12 py12 txt-s'>
   <strong class='block mb6'>Title description</strong>
-  <div class='flex-parent flex-parent--center-main flex-parent--center-cross align-center'>
-    <div class='flex-child flex-child--grow wmin24'>
+  <div class='flex flex--center-main flex--center-cross align-center'>
+    <div class='flex-child-grow wmin24'>
       <span class='inline-block w3 h3 round-full bg-blue'></span>
     </div>
-    <div class='flex-child flex-child--grow wmin24'>
+    <div class='flex-child-grow wmin24'>
       <span class='inline-block w6 h6 round-full bg-blue'></span>
     </div>
-    <div class='flex-child flex-child--grow wmin24'>
+    <div class='flex-child-grow wmin24'>
       <span class='inline-block w12 h12 round-full bg-blue'></span>
     </div>
-    <div class='flex-child flex-child--grow wmin24'>
+    <div class='flex-child-grow wmin24'>
       <span class='inline-block w18 h18 round-full bg-blue'></span>
     </div>
-    <div class='flex-child flex-child--grow wmin24'>
+    <div class='flex-child-grow wmin24'>
       <span class='inline-block w24 h24 round-full bg-blue'></span>
     </div>
   </div>

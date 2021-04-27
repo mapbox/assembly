@@ -8,7 +8,7 @@ export class Pills extends React.Component {
           Button pills
         </h2>
 
-        <div className="flex-parent mb18">
+        <div className="flex mb18">
           <button className="btn btn--pill btn--pill-hl">Confirm</button>
           <button className="btn btn--pill btn--pill-hc is-active">
             Confirm
@@ -19,7 +19,7 @@ export class Pills extends React.Component {
           <button className="btn btn--pill btn--pill-hr">Confirm</button>
         </div>
 
-        <div className="flex-parent mb18">
+        <div className="flex mb18">
           <button className="btn btn--red btn--stroke btn--pill-stroke btn--pill-hl round btn--fill">
             Confirm
           </button>
@@ -34,7 +34,7 @@ export class Pills extends React.Component {
           </button>
         </div>
 
-        <div className="mb18 flex-parent-inline flex-parent--column">
+        <div className="mb18 inline-flex flex--column">
           <button className="btn btn--orange btn--s btn--pill btn--pill-vt">
             Confirm
           </button>
@@ -49,7 +49,7 @@ export class Pills extends React.Component {
           </button>
         </div>
 
-        <div className="mb18 ml18 flex-parent-inline flex-parent--column">
+        <div className="mb18 ml18 inline-flex flex--column">
           <button className="btn btn--s btn--pill-stroke btn--pill-vt round">
             Confirm
           </button>

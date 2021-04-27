@@ -47,7 +47,7 @@ export default class LayoutScales extends React.Component {
       const data = classSets[name];
       const scale = data.scale.map(number => {
         const numberClasses =
-          'flex-child w60 txt-s txt-mono align-r pr6 py3 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light color-gray';
+          'w60 txt-s txt-mono align-r pr6 py3 border-b border-t border-l ml-neg1 mb-neg1 border-r border--gray-light color-gray';
         return (
           <span key={number} className={numberClasses}>
             {number}
@@ -72,7 +72,7 @@ export default class LayoutScales extends React.Component {
             <div className="inline-block txt-bold mr12">{name}</div>
             {classPatterns}
           </div>
-          <div className="flex-parent flex-parent--wrap">{scale}</div>
+          <div className="flex flex--wrap">{scale}</div>
         </div>
       );
     });
