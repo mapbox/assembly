@@ -25,13 +25,9 @@ export default class Home extends React.Component {
     return (
       <Page path="/">
         <div className="pt24">
-          <div className="flex-parent-ml flex-parent--wrap-ml">
-            <h1 className="flex-child-ml flex-child--grow-ml txt-h2 txt-bold">
-              Assembly.css
-            </h1>
-            <div className="flex-child-ml mt18 color-darken50">
-              v{pkg.version}
-            </div>
+          <div className="flex-ml flex--wrap-ml">
+            <h1 className="flex-child-grow-ml txt-h2 txt-bold">Assembly.css</h1>
+            <div className="mt18 color-darken50">v{pkg.version}</div>
           </div>
           <p className="txt-l mt18">
             Assembly is an open source CSS framework that makes the hard parts
@@ -125,8 +121,8 @@ export default class Home extends React.Component {
             Overview
           </h2>
 
-          <div className="mt60 flex-parent-mm">
-            <div className="flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60">
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
               <img src={baselineGridImg} />
             </div>
             <div>
@@ -142,8 +138,8 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-          <div className="mt60 flex-parent-mm">
-            <div className="flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60">
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
               <img src={defaultsImg} />
             </div>
             <div>
@@ -171,8 +167,8 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-          <div className="mt60 flex-parent-mm">
-            <div className="flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60">
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
               <img src={boxModelImg} />
             </div>
             <div>
@@ -188,8 +184,8 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-          <div className="mt60 flex-parent-mm">
-            <div className="flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60">
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
               <img src={customIconsImg} />
             </div>
             <div>
@@ -204,8 +200,8 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-          <div className="mt60 flex-parent-mm">
-            <div className="flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60">
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
               <img src={mediaQueriesImg} />
             </div>
             <div>
@@ -248,8 +244,8 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-          <div className="mt60 flex-parent-mm">
-            <div className="flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60">
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
               <img src={modifierImg} />
             </div>
             <div>
@@ -262,8 +258,8 @@ export default class Home extends React.Component {
                 double-hyphen (e.g.{' '}
                 <code className="txt-code">border--blue</code> modifies{' '}
                 <code className="txt-code">border</code>;{' '}
-                <code className="txt-code">flex-child--grow</code> modifies{' '}
-                <code className="txt-code">flex-child</code>). And{' '}
+                <code className="txt-code">flex--column</code> modifies{' '}
+                <code className="txt-code">flex</code>). And{' '}
                 <span className="txt-em">
                   modifier classes should only ever be used in combination with
                   the class they modify
@@ -272,8 +268,8 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-          <div className="mt60 flex-parent-mm">
-            <div className="flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60">
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
               <img src={specificityImg} />
             </div>
             <div>
@@ -304,8 +300,8 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-          <div className="mt60 flex-parent-mm">
-            <div className="flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60">
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
               <img src={isActiveImg} />
             </div>
             <div>
@@ -329,8 +325,8 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-          <div className="mt60 flex-parent-mm">
-            <div className="flex-child flex-child--no-shrink mr24 mb0-mm mb18 w60 h60">
+          <div className="mt60 flex-mm">
+            <div className="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
               <img src={focusImg} />
             </div>
             <div>

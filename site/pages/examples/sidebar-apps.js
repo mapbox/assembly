@@ -2,10 +2,10 @@ import React from 'react';
 import { HtmlExample } from '../../html_example';
 import { Page } from '../../page';
 
-const basicSidebar = `<div class='flex-parent viewport-full relative overflow-hidden'>
-  <div class='flex-child w-full w240-ml absolute static-ml left bottom'>
-    <div class='flex-parent flex-parent--column viewport-third h-full hmax-full bg-white'>
-      <div class='flex-child flex-child--grow px12 py12 overflow-auto'>
+const basicSidebar = `<div class='flex viewport-full relative overflow-hidden'>
+  <div class='w-full w240-ml absolute static-ml left bottom'>
+    <div class='flex flex--column viewport-third h-full hmax-full bg-white'>
+      <div class='flex-child-grow px12 py12 overflow-auto'>
         <h3 class='txt-m txt-bold mb6'>Title here</h3>
         <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>
@@ -14,13 +14,13 @@ const basicSidebar = `<div class='flex-parent viewport-full relative overflow-hi
       </footer>
     </div>
   </div>
-  <div class='flex-child flex-child--grow bg-darken10 viewport-twothirds viewport-full-ml'></div>
+  <div class='flex-child-grow bg-darken10 viewport-twothirds viewport-full-ml'></div>
 </div>`;
 
 const floatingSidebar = `<div class='viewport-full relative overflow-hidden'>
   <div class='bg-darken10 viewport-twothirds viewport-full-ml absolute top left right bottom'></div>
   <div class='absolute top-ml left bottom z1 w-full w240-ml px12 py12-ml events-none'>
-    <div class='flex-parent flex-parent--column viewport-third h-auto-ml hmax-full bg-white round-ml shadow-darken10 events-all'>
+    <div class='flex flex--column viewport-third h-auto-ml hmax-full bg-white round-ml shadow-darken10 events-all'>
       <div class='px12 py12 overflow-auto'>
         <h3 class='txt-m txt-bold mb6'>Title here</h3>
         <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>

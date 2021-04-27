@@ -5,8 +5,8 @@ import { Page } from '../../page';
 const tiles = `<div class='bg-darken10 viewport-half'>
 <!-- In practice, it makes sense to use this for the container instead:
 <div class='fixed top right bottom left overflow-auto'></div>-->
-  <div class='flex-parent flex-parent--center-main pt36'>
-    <div class='flex-child bg-white round relative w600'>
+  <div class='flex flex-–center-main pt36'>
+    <div class='bg-white round relative w600'>
       <button class='absolute top right px12 py12'>
         <svg class='icon link color-darken50'><use xlink:href='#icon-close'></use></svg>
       </button>
