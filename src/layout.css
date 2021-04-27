@@ -508,7 +508,7 @@
  * This is useful when you have one or more elements of
  * fixed width, and another element that should take up the remaining space in the row.
  *
- * Typically, you will also want to apply the `flex-child-no-shrink` to the element in the row with a fixed width.
+ * Typically, you will also want to apply the `flex-child-no-shrink` class to the element in the row with a fixed width.
  *
  * @memberof Flexbox
  * @example
