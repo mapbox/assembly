@@ -21,7 +21,7 @@ const colors = [
 ];
 
 function LinkEl(props) {
-  let linkClasses = 'link col col--4 inline mb6';
+  let linkClasses = 'link col w-1/3 inline mb6';
   if (props.color) linkClasses += ` link--${props.color}`;
   return (
     <div className="grid">
@@ -42,13 +42,13 @@ export class Links extends React.Component {
 
         <div className="mb12">
           <div className="grid">
-            <div className="col col--4 mb12 txt-bold color-darken50 txt-uppercase txt-s">
+            <div className="col w-1/3 mb12 txt-bold color-darken50 txt-uppercase txt-s">
               Standard
             </div>
-            <div className="col col--4 mb12 txt-bold color-darken50 txt-uppercase txt-s">
+            <div className="col w-1/3 mb12 txt-bold color-darken50 txt-uppercase txt-s">
               Underline on hover
             </div>
-            <div className="col col--4 mb12 txt-bold color-darken50 txt-uppercase txt-s">
+            <div className="col w-1/3 mb12 txt-bold color-darken50 txt-uppercase txt-s">
               Active
             </div>
           </div>

@@ -357,9 +357,9 @@ function buildColorVariants(variables, config) {
        * <div class='txt-s grid'>`);
     colors.forEach(color => {
       if (isNotAccessibleExceptBg(color)) return;
-      css += `\n *   <div class='col col--2 color-${color}'>color-${color}</div>`;
+      css += `\n *   <div class='col w-1/4 color-${color}'>color-${color}</div>`;
     });
-    css += `\n *   <div class='col col--2 color-text'>color-text</div>`; // eslint-disable-line quotes
+    css += `\n *   <div class='col w-1/4 color-text'>color-text</div>`; // eslint-disable-line quotes
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
       if (isNotAccessibleExceptBg(color)) return result;
@@ -392,7 +392,7 @@ function buildColorVariants(variables, config) {
        * @example
        * <div class='grid'>`);
     colors.forEach(color => {
-      css += `\n *   <div class='col col--2 bg-${color} py6 px6'>bg-${color}</div>`;
+      css += `\n *   <div class='col w-1/4 bg-${color} py6 px6'>bg-${color}</div>`;
     });
     css += '\n * </div>\n */';
     css += colors.reduce((result, color) => {
