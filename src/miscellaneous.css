@@ -78,6 +78,7 @@
 .loading--dark {
   color: var(--white);
   border-color: var(--lighten25);
+  border-top-color: currentColor;
 }
 
 .loading--s {
