@@ -3,6 +3,7 @@
 ## 1.0.1
 
 - [fix] Fix bug where handle on `loading--dark` was not visible.
+- [fix] Fix issues with checkbox psuedo element size and positioning.
 
 ## 1.0.0
 
