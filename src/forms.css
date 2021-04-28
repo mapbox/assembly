@@ -750,7 +750,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   position: absolute;
   display: block;
   border-radius: 50%;
-  width: calc(50% - 3px);
+  width: calc(50% - 2px);
   left: 2px;
   top: 2px;
   bottom: 2px;
@@ -778,6 +778,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   left: 3px;
   top: 3px;
   bottom: 3px;
+  width: calc(50% - 3px);
 }
 
 /*
@@ -968,7 +969,7 @@ input:checked + .checkbox {
 
 /* state management for switches */
 input:checked + .switch::after {
-  left: calc(50% + 1px);
+  left: 50%;
   background-color: var(--white);
 }
 
