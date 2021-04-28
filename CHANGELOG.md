@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- [fix] Fix bug where handle on `loading--dark` was not visible.
+
 ## 1.0.0
 
 - [add] New `wmax-{n}` values:
