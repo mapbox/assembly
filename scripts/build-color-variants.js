@@ -77,11 +77,15 @@ const allColors = [
 
   'white',
   'black',
-  'transparent'
+  'transparent',
+
+  'disabled10',
+  'disabled25',
+  'disabled75'
 ];
 
 function isSemitransparent(color) {
-  return /^(lighten|darken)/.test(color);
+  return /^(disabled|lighten|darken)/.test(color);
 }
 
 function isNotAccessibleForForms(color) {
@@ -89,7 +93,9 @@ function isNotAccessibleForForms(color) {
   // for accessibility and to save space.
   return (
     color === 'black' ||
-    /^(darken5|darken10|lighten5|lighten10)$/.test(color) ||
+    /^(disabled10|disabled25|disabled75|darken5|darken10|lighten5|lighten10)$/.test(
+      color
+    ) ||
     /(-dark|-deep|-light|-lighter|-faint)$/.test(color)
   );
 }
@@ -98,7 +104,7 @@ function isNotAccessibleForButtons(color) {
   // Elements that are primarily defined by their background can have looser requirements.
   return (
     color === 'black' ||
-    /^(darken5|lighten5)$/.test(color) ||
+    /^(disabled10|disabled25|disabled75|darken5|lighten5)$/.test(color) ||
     /(-faint|-lighter|-deep|-dark)$/.test(color)
   );
 }
@@ -371,7 +377,7 @@ function buildColorVariants(variables, config) {
     }, '');
     css += stripIndent(`
       .color-text {
-        color: var(--text-color) !important;
+        color: var(--gray-dark) !important;
       }
     `);
     return (css += '\n/** @endgroup */\n');

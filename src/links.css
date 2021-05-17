@@ -18,7 +18,7 @@
  */
 .link {
   cursor: pointer;
-  color: var(--default-button-color);
+  color: var(--blue);
   transition: color var(--transition);
 }
 
@@ -33,7 +33,7 @@
  */
 .link:hover,
 .link.is-active {
-  color: var(--default-button-color-dark);
+  color: var(--blue-dark);
 }
 
 /**
@@ -48,5 +48,5 @@
 .link:disabled {
   pointer-events: none;
   cursor: default;
-  color: var(--inactive-text-color);
+  color: var(--disabled75);
 }
