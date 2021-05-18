@@ -11,7 +11,7 @@
 body,
 input,
 textarea {
-  color: var(--text-color);
+  color: var(--gray-dark);
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
   font-family: var(--font-stack-base);
@@ -590,7 +590,7 @@ textarea {
  *
  * @memberof Prose
  * @example
- * <div class="prose prose--dark bg-gray">
+ * <div class="prose prose--dark bg-gray-deep">
  *   <h1>Tortor Porta</h1>
  *   <small>Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.</small>
  *   <hr/>
@@ -656,7 +656,7 @@ textarea {
 }
 
 .prose a:not(.unprose) {
-  color: var(--default-button-color);
+  color: var(--blue);
   text-decoration: underline;
 }
 
@@ -665,7 +665,7 @@ textarea {
 }
 
 .prose a:not(.unprose):hover {
-  color: var(--default-button-color-dark);
+  color: var(--blue-dark);
 }
 
 .prose--dark a:not(.unprose):hover {

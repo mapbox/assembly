@@ -11,7 +11,7 @@
 
 /**
  * Apply a button style.
- * To change the background color of a button, use a `btn--{color}` modifier  (`*-dark` colors are not available).
+ * To change the background color of a button, use a `btn--{color}` modifier  (`*-deep` and `*-dark` colors are not available).
  * Buttons have white text unless combined with a [`color-*`](#Text-colors) class.
  * Buttons have fully rounded corners unless combined with a [`round-*`](#Border-radius) class.
  *
@@ -28,7 +28,7 @@
 .btn {
   display: inline-block;
   font-weight: bold;
-  background-color: var(--default-button-color);
+  background-color: var(--blue);
   font-size: var(--font-size-s);
   color: var(--white);
   border-radius: 18px; /* fully round by default */
@@ -42,7 +42,7 @@
 /**
  * Modify a button so its text and borders are colored and its background transparent.
  * The border color and text color will always match.
- * To change the text and border color, use a `btn--{color}` modifier (`*-dark` colors are not available).
+ * To change the text and border color, use a `btn--{color}` modifier (`*-deep` colors are not available).
  *
  * @memberof Buttons
  * @example
@@ -56,7 +56,7 @@
 .btn--stroke {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px currentColor;
-  color: var(--default-button-color);
+  color: var(--blue);
 }
 
 /**
@@ -86,13 +86,13 @@
  */
 .btn:hover,
 .btn.is-active {
-  background-color: var(--default-button-color-dark);
+  background-color: var(--blue-deep);
 }
 
 .btn--stroke:hover,
 .btn--stroke.is-active {
   background-color: transparent;
-  color: var(--default-button-color-dark);
+  color: var(--blue-deep);
 }
 
 /**
@@ -104,16 +104,16 @@
  */
 .btn:disabled {
   pointer-events: none;
-  color: var(--inactive-text-color);
-  background-color: var(--disabled-interactive-color-dark);
+  color: var(--disabled75);
+  background-color: var(--disabled25);
   box-shadow: none;
 }
 
 .btn.btn--stroke:disabled {
   pointer-events: none;
   background-color: transparent;
-  box-shadow: inset 0 0 0 1px var(--inactive-text-color);
-  color: var(--inactive-text-color);
+  box-shadow: inset 0 0 0 1px var(--disabled75);
+  color: var(--disabled75);
 }
 
 /**

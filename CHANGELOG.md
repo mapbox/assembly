@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+- [style change] Slightly saturate `darken` colors, and make disabled state colors legible against both light and dark backgrounds.
+- [style change] Use `-deep` modifiers for active/hover states instead of `-dark`.
+- [internal] Simplify internal color variables.
+
 ## 1.0.1
 
 - [fix] Fix bug where handle on `loading--dark` was not visible.
