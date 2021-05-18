@@ -19,7 +19,7 @@ These classes have been renamed to make room for new viewport width classes:
 
 `flex-child` has been removed and `flex-child--{x}` modifiers are no longer modifiers:
 
-- `flex-child` no longer exists. In almost all cases it did nothing in any browser except IE11, so you should remoce all instances of this class.
+- `flex-child` no longer exists. In almost all cases it did nothing in any browser except IE11, so you be safe to remove all instances of this class.
 - `flex-child--grow` → `flex-child-grow`
 - `flex-child--no-shrink` → `flex-child-no-shrink`
 
