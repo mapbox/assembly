@@ -31,7 +31,7 @@
 .input,
 .textarea,
 .select {
-  box-shadow: inset 0 0 0 1px var(--default-form-color-light);
+  box-shadow: inset 0 0 0 1px var(--gray-light);
   padding: 6px 12px;
   border-radius: var(--border-radius);
   transition: background-color var(--transition),
@@ -42,16 +42,16 @@
 
 .input:focus,
 .textarea:focus {
-  box-shadow: inset 0 0 0 1px var(--default-form-color);
+  box-shadow: inset 0 0 0 1px var(--gray);
 }
 
 [data-assembly-focus-control='visible'] .select.select--stroke:focus {
-  box-shadow: inset 0 0 0 1px var(--default-form-color), var(--focus-shadow);
+  box-shadow: inset 0 0 0 1px var(--gray), var(--focus-shadow);
 }
 
 .input::placeholder,
 .textarea::placeholder {
-  color: var(--inactive-text-color);
+  color: var(--disabled75);
 }
 
 /* Remove bad padding and unique cancel button from IE and Safari inputs */
@@ -93,7 +93,7 @@
 }
 
 /**
- * Style a textarea. Set the color of the border with a `textarea--border-{color} modifier (`*-dark` colors are not available).
+ * Style a textarea. Set the color of the border with a `textarea--border-{color} modifier (`*-deep` and `*-dark` colors are not available).
  *
  * @memberof Inputs & textareas
  * @example
@@ -132,8 +132,8 @@
 .select--stroke:disabled {
   pointer-events: none;
   color: var(--darken50);
-  background-color: var(--disabled-interactive-color);
-  box-shadow: inset 0 0 0 1px var(--disabled-interactive-color-dark) !important;
+  background-color: var(--disabled10);
+  box-shadow: inset 0 0 0 1px var(--disabled25) !important;
 }
 
 /* Using the attribute selector instead of the pseudo-class `:read-only`
@@ -148,7 +148,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .input[readonly],
 .textarea[readonly] {
-  background-color: var(--disabled-interactive-color);
+  background-color: var(--disabled10);
 }
 
 /**
@@ -207,7 +207,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   pointer-events: none;
   border-left: 4px solid var(--transparent);
   border-right: 4px solid var(--transparent);
-  border-top: 5px solid var(--default-form-color);
+  border-top: 5px solid var(--gray);
   width: 8px;
   height: 8px;
   margin-top: -1px;
@@ -217,17 +217,17 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 /** @endgroup */
 
 .select:hover {
-  color: var(--default-form-color-dark);
+  color: var(--gray-deep);
 }
 
 .select:focus + .select-arrow {
-  border-top-color: var(--default-form-color);
+  border-top-color: var(--gray);
 }
 
 /* Some browsers color the option text and background, so reset that */
 .select option {
   background-color: var(--white);
-  color: var(--text-color);
+  color: var(--gray-deep);
 }
 
 .select option:disabled {
@@ -237,7 +237,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 /* IE overrides */
 .select::-ms-expand { display: none; }
 /* IE actually colors the options, so they can't be white */
-.select option { color: var(--text-color); }
+.select option { color: var(--gray-deep); }
 /* Remove purple highlight in HC mode */
 @media all and (-ms-high-contrast: active) {
   .select:focus::-ms-value {
@@ -301,8 +301,8 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .select--stroke {
   padding: 6px 30px 6px 12px; /* plus arrow */
-  box-shadow: inset 0 0 0 1px var(--default-form-color-light);
-  color: var(--default-form-color) !important;
+  box-shadow: inset 0 0 0 1px var(--gray-light);
+  color: var(--gray) !important;
 }
 
 .select--stroke .select--s {
@@ -331,7 +331,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .select:disabled {
   pointer-events: none;
-  color: var(--inactive-text-color);
+  color: var(--disabled75);
 }
 
 .select:disabled + .select-arrow {
@@ -549,14 +549,14 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  *   <input disabled type='range' />
  * </div>
  */
-.range > input:disabled::-webkit-slider-runnable-track { background: var(--disabled-interactive-color-dark); }
-.range > input:disabled::-moz-range-track { background: var(--disabled-interactive-color-dark); }
-.range > input:disabled::-ms-fill-upper { background: var(--disabled-interactive-color-dark); }
-.range > input:disabled::-ms-fill-lower { background: var(--disabled-interactive-color-dark); }
+.range > input:disabled::-webkit-slider-runnable-track { background: var(--disabled25); }
+.range > input:disabled::-moz-range-track { background: var(--disabled25); }
+.range > input:disabled::-ms-fill-upper { background: var(--disabled25); }
+.range > input:disabled::-ms-fill-lower { background: var(--disabled25); }
 
-.range > input:disabled::-webkit-slider-thumb { border-color: var(--disabled-interactive-color-dark); background: var(--gray-faint); }
-.range > input:disabled::-ms-thumb { border-color: var(--disabled-interactive-color-dark); background: var(--gray-faint); }
-.range > input:disabled::-moz-range-thumb { border-color: var(--disabled-interactive-color-dark); background: var(--gray-faint); }
+.range > input:disabled::-webkit-slider-thumb { border-color: var(--disabled25); background: var(--gray-faint); }
+.range > input:disabled::-ms-thumb { border-color: var(--disabled25); background: var(--gray-faint); }
+.range > input:disabled::-moz-range-thumb { border-color: var(--disabled25); background: var(--gray-faint); }
 
 /* shared form styles */
 .checkbox-container,
@@ -634,7 +634,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .checkbox {
   color: var(--white);
-  border-color: var(--default-form-color);
+  border-color: var(--gray);
   transition: color var(--transition),
     border var(--transition),
     background-color var(--transition);
@@ -685,7 +685,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
  */
 .radio {
   border-radius: 50%;
-  color: var(--default-form-color);
+  color: var(--gray);
   border-color: currentColor;
 }
 
@@ -738,7 +738,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
   border-width: 1px;
   border-style: solid;
   border-color: currentColor;
-  color: var(--default-form-color);
+  color: var(--gray);
   transition: color var(--transition),
     background-color var(--transition),
     border-color var(--transition);
@@ -825,7 +825,7 @@ because it seems to be more cross-browser consistent with all HTML5 input types 
 .toggle {
   flex-shrink: 0;
   cursor: pointer;
-  color: var(--default-form-color);
+  color: var(--gray);
   font-size: var(--font-size-s);
   padding: 3px 18px;
   border-radius: 15px; /* fully round by default */
@@ -932,19 +932,19 @@ input:checked:disabled + .switch {
 }
 
 input:disabled + .switch {
-  border-color: var(--disabled-interactive-color-dark);
+  border-color: var(--disabled25);
 }
 
 input:disabled + .radio,
 input:disabled + .checkbox {
-  background-color: var(--disabled-interactive-color-dark);
+  background-color: var(--disabled25);
   border-color: var(--transparent);
 }
 
 input:checked:disabled + .checkbox,
 input:checked:disabled + .radio,
 input:checked:disabled + .switch {
-  background-color: var(--disabled-interactive-color-dark);
+  background-color: var(--disabled25);
 }
 
 input:disabled + .switch::after,
@@ -959,12 +959,12 @@ input:checked + .radio::before {
 }
 
 input:checked + .radio {
-  color: var(--default-form-color);
+  color: var(--gray);
 }
 
 input:checked + .checkbox {
   border: 1px solid var(--transparent);
-  background-color: var(--default-form-color);
+  background-color: var(--gray);
 }
 
 /* state management for switches */
@@ -975,12 +975,12 @@ input:checked + .switch::after {
 
 input:checked + .switch {
   border-color: var(--transparent);
-  background-color: var(--default-form-color);
+  background-color: var(--gray);
 }
 
 /* state management for toggles */
 input:checked + .toggle {
-  background: var(--default-form-color);
+  background: var(--gray);
   color: var(--white);
 }
 
@@ -1007,6 +1007,6 @@ input:disabled + .toggle {
 }
 
 input:checked:disabled + .toggle {
-  background-color: var(--disabled-interactive-color-dark);
+  background-color: var(--disabled25);
   color: var(--darken25);
 }

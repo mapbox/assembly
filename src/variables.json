@@ -1,5 +1,5 @@
 {
-  "gray-dark": "#2C3031",
+  "gray-dark": "#1a2224",
   "gray-deep": "#4D5255",
   "gray": "#757D82",
   "gray-light": "#C7CACC",
@@ -55,11 +55,11 @@
   "purple-lighter": "#E7E0F1",
   "purple-faint": "#F3F1F6",
 
-  "darken5": "rgba(0, 0, 0, 0.05)",
-  "darken10": "rgba(0, 0, 0, 0.1)",
-  "darken25": "rgba(0, 0, 0, 0.25)",
-  "darken50": "rgba(0, 0, 0, 0.5)",
-  "darken75": "rgba(0, 0, 0, 0.75)",
+  "darken5": "rgba(26, 34, 36, 0.05)",
+  "darken10": "rgba(26, 34, 36, 0.1)",
+  "darken25": "rgba(26, 34, 36, 0.25)",
+  "darken50": "rgba(26, 34, 36, 0.5)",
+  "darken75": "rgba(26, 34, 36, 0.75)",
 
   "lighten5": "rgba(255, 255, 255, 0.05)",
   "lighten10": "rgba(255, 255, 255, 0.1)",
@@ -71,19 +71,9 @@
   "white": "#fff",
   "transparent": "transparent",
 
-  "disabled-interactive-color": "rgba(127, 127, 127, 0.1)",
-  "disabled-interactive-color-dark": "rgba(127, 127, 127, 0.25)",
-
-  "inactive-text-color": "rgba(64, 64, 64, 0.45)",
-
-  "text-color": "rgba(0, 0, 0, 0.75)",
-
-  "default-button-color": "#448ee4",
-  "default-button-color-dark": "#346db0",
-
-  "default-form-color-light": "#ccc",
-  "default-form-color": "#666",
-  "default-form-color-dark": "#2d2d2d",
+  "disabled10": "rgba(158, 163, 167, 0.1)",
+  "disabled25": "rgba(158, 163, 167, 0.25)",
+  "disabled75": "rgba(158, 163, 167, 0.75)",
 
   "border-radius": "4px",
   "border-radius-bold": "8px",
