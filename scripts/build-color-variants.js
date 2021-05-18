@@ -155,7 +155,7 @@ function buildColorVariants(variables, config) {
       case 'light':
         return colorBase;
       case undefined:
-        return `${colorBase}-dark`;
+        return `${colorBase}-deep`;
       case 'dark':
         throw new Error(
           `Dark variants not allowed as base colors: use "${colorBase}" instead of "${color}"`
@@ -377,7 +377,7 @@ function buildColorVariants(variables, config) {
     }, '');
     css += stripIndent(`
       .color-text {
-        color: var(--gray-dark) !important;
+        color: var(--gray-deep) !important;
       }
     `);
     return (css += '\n/** @endgroup */\n');
