@@ -77,15 +77,11 @@ const allColors = [
 
   'white',
   'black',
-  'transparent',
-
-  'disabled10',
-  'disabled25',
-  'disabled75'
+  'transparent'
 ];
 
 function isSemitransparent(color) {
-  return /^(disabled|lighten|darken)/.test(color);
+  return /^(lighten|darken)/.test(color);
 }
 
 function isNotAccessibleForForms(color) {
@@ -93,9 +89,7 @@ function isNotAccessibleForForms(color) {
   // for accessibility and to save space.
   return (
     color === 'black' ||
-    /^(disabled10|disabled25|disabled75|darken5|darken10|lighten5|lighten10)$/.test(
-      color
-    ) ||
+    /^(darken5|darken10|lighten5|lighten10)$/.test(color) ||
     /(-dark|-deep|-light|-lighter|-faint)$/.test(color)
   );
 }
@@ -104,7 +98,7 @@ function isNotAccessibleForButtons(color) {
   // Elements that are primarily defined by their background can have looser requirements.
   return (
     color === 'black' ||
-    /^(disabled10|disabled25|disabled75|darken5|lighten5)$/.test(color) ||
+    /^(darken5|lighten5)$/.test(color) ||
     /(-faint|-lighter|-deep|-dark)$/.test(color)
   );
 }
