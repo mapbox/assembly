@@ -47,7 +47,7 @@ These classes have been renamed to make room for new viewport width classes:
 
 ### Changes to `col--{x}` modifiers
 
-`col--{n}` & `col--off{'r' | 'l'}{n}` classes have been replaced by generic percentage based width classes. A direct find and replace should work reliably:
+`col--{n}` & `col--off{'r' | 'l'}{n}` classes have been replaced by generic percentage based width classes.
 
 - `col--1` → `w-1/12`
 - `col--2` → `w-1/6`
@@ -60,7 +60,6 @@ These classes have been renamed to make room for new viewport width classes:
 - `col--9` → `w-3/4`
 - `col--10` → `w-5/6`
 - `col--11` → `w-11/12`
-
 - `col--offr1` → `mr-1/12`
 - `col--offr2` → `mr-1/6`
 - `col--offr3` → `mr-1/4`
@@ -72,7 +71,6 @@ These classes have been renamed to make room for new viewport width classes:
 - `col--offr9` → `mr-3/4`
 - `col--offr10` → `mr-5/6`
 - `col--offr11` → `mr-11/12`
-
 - `col--offl1` → `ml-1/12`
 - `col--offl2` → `ml-1/6`
 - `col--offl3` → `ml-1/4`
