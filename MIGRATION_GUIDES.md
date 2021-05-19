@@ -19,7 +19,7 @@ These classes have been renamed to make room for new viewport width classes:
 
 `flex-child` has been removed and `flex-child--{x}` modifiers are no longer modifiers:
 
-- `flex-child` no longer exists. In almost all cases it did nothing in any browser except IE11, so you be safe to remove all instances of this class.
+- `flex-child` no longer exists. In almost all cases it did nothing in any browser except IE11, so you can safely to remove all instances of this class.
 - `flex-child--grow` → `flex-child-grow`
 - `flex-child--no-shrink` → `flex-child-no-shrink`
 
@@ -99,11 +99,11 @@ Previously, `loading` included `margin:auto` to center the loader horizontally b
 
 ### `limiter` removal
 
-Before 1.0.0, Assembly had a complex limiter class that was convenient but inflexible. You can use these existing classes to exactly imitate limiter: `wmax1200 w-11/12-mm w-5/6-ml mx-auto px24 px0-mm`.
+Before 1.0.0, Assembly had a complex limiter class that was convenient but inflexible. You can use these existing classes to exactly imitate `limiter`: `wmax1200 w-11/12-mm w-5/6-ml mx-auto px24 px0-mm`.
 
 ### Icon removal
 
-Every icon has been redrawn in 1.0.0 but some icons have been removed. If you use any of the following icons, seek an alternative source:
+Every icon has been redrawn in 1.0.0 and some icons have been removed. If you use any of the following icons, seek an alternative source:
 
 - `adjust-stroke`
 - `android`
