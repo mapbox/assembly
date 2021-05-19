@@ -93,7 +93,7 @@ All `scroll-{*}` classes except `scroll-styled` have been renamed to to `overflo
 
 ### Changes to `loading`
 
-Previously, `loading` included `margin:auto` to center the loader horizontally by default. Add `mx-auto` to the `loading` elemen to reintroduce this behavior.
+Previously, `loading` included `margin:auto` to center the loader horizontally by default. Add `mx-auto` to the `loading` element to reintroduce this behavior.
 
 ### `limiter` removal
 
