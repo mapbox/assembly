@@ -75,17 +75,6 @@ export class Grids extends React.Component {
         </h2>
 
         <h3 className="mb12 txt-m txt-bold color-darken50 txt-uppercase txt-s">
-          Uncontrolled grid
-        </h3>
-        <div className="txt-s grid mb18">
-          {[...Array(12)].map((_, i) => (
-            <div key={i} className="col">
-              <div className="border px3 py3">col</div>
-            </div>
-          ))}
-        </div>
-
-        <h3 className="mb12 txt-m txt-bold color-darken50 txt-uppercase txt-s">
           Standard controlled grid
         </h3>
         {GridEls}
