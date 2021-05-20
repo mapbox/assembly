@@ -192,7 +192,7 @@ function buildLayoutScales() {
 
     css += stripIndent(`
       /**
-       * Apply percentage-based margin on the right. When using with \`col\`, add a width class or \`col--auto\` to define the size of the element.
+       * Apply percentage-based margin on the right. When using with \`col\`, add a width class, \`col--auto\`, or both to define the size of the element.
        *
        * @group
        * @memberof Margins
@@ -248,7 +248,7 @@ function buildLayoutScales() {
 
     css += stripIndent(`
       /**
-       * Apply percentage-based margin on the left. When using with \`col\`, add a width class or \`col--auto\` to define the size of the element.
+       * Apply percentage-based margin on the left. When using with \`col\`, add a width class, \`col--auto\`, or both to define the size of the element.
        *
        * @group
        * @memberof Margins
