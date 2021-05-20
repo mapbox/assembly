@@ -700,13 +700,13 @@ scripts/build-layout-scales.js to produce the output you want */
 /** @endgroup */
 
 /**
- * Apply percentage-based margin on the right.
+ * Apply percentage-based margin on the right. When using with `col`, add a width class or `col--auto` to define the size of the element.
  *
  * @group
  * @memberof Margins
  * @example
  * <div class='grid'>
- *   <div class='col mr-1/2 bg-darken10'>mr-1/2</div>
+ *   <div class='col w-1/2 mr-1/2 bg-darken10'>mr-1/2</div>
  * </div>
  */
 .mr-1\/12 {
@@ -1010,13 +1010,13 @@ scripts/build-layout-scales.js to produce the output you want */
 /** @endgroup */
 
 /**
- * Apply percentage-based margin on the left.
+ * Apply percentage-based margin on the left. When using with `col`, add a width class or `col--auto` to define the size of the element.
  *
  * @group
  * @memberof Margins
  * @example
  * <div class='grid'>
- *   <div class='col ml-1/2 bg-darken10'>ml-1/2</div>
+ *   <div class='col w-1/2 ml-1/2 bg-darken10'>ml-1/2</div>
  * </div>
  */
 .ml-1\/12 {

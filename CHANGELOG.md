@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- [breaking] Remove `flex-grow` from `col`. To define the width of `col` in a grid, add a width class, `col--auto`, or both.
+
 ## 1.1.0
 
 - [style change] Slightly saturate `darken` colors, and make disabled state colors legible against both light and dark backgrounds.

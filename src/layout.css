@@ -12,17 +12,17 @@
  */
 
 /**
- * Grids require at minimum two elements: A parent with the class `grid` and a child with the class `col`. By default, each `col` in a grid will occupy equal space. The `grid` class includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+ * Grids require at minimum two elements: A parent with the class `grid` and a child with the class `col`. To define the width of `col` in a grid, add a width class, `col--auto`, or both. The `grid` class includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
- * When using these classes, do not apply left or right margin or padding directly to the \`grid\` or \`col\` elements or you will face unexpected side-effects.
+ * When using these classes, do not apply left or right margin or padding directly to the `grid` or `col` elements or you will face unexpected side-effects.
  *
  * @group
  * @memberof Grid
  * @example
  * <div class='grid'>
- *   <div class='col border border--darken10'>one</div>
- *   <div class='col border border--darken10'>two</div>
- *   <div class='col border border--darken10'>three</div>
+ *   <div class='col w-1/3 border border--darken10'>one</div>
+ *   <div class='col w-1/3 border border--darken10'>two</div>
+ *   <div class='col w-1/3 border border--darken10'>three</div>
  * </div>
  */
 .grid {
@@ -32,13 +32,12 @@
 .col {
   display: block;
   max-width: 100%;
-  flex-grow: 1;
   flex-shrink: 1;
 }
 /** @endgroup */
 
 /**
- * Apply to a `col` element to override a`col--{size}` rule and take on default `col`,occupying equal space with other `col` siblings.
+ * Apply to a `col` element to override a`col--{size}` rule and take on default `col`, occupying equal space with other `col` siblings.
  * This class is designed to be used with `*-mm`, `*-ml`, and `*-mxl` variations
  * to target screen sizes.
  *

@@ -9,7 +9,6 @@ exports[`buildMediaVariants defaults 1`] = `
 .col-mm {
   display: block;
   max-width: 100%;
-  flex-grow: 1;
   flex-shrink: 1;
 }
 .col--auto-mm {
@@ -203,7 +202,6 @@ exports[`buildMediaVariants defaults 1`] = `
 .col-ml {
   display: block;
   max-width: 100%;
-  flex-grow: 1;
   flex-shrink: 1;
 }
 .col--auto-ml {
@@ -397,7 +395,6 @@ exports[`buildMediaVariants defaults 1`] = `
 .col-mxl {
   display: block;
   max-width: 100%;
-  flex-grow: 1;
   flex-shrink: 1;
 }
 .col--auto-mxl {
