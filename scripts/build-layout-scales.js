@@ -192,13 +192,13 @@ function buildLayoutScales() {
 
     css += stripIndent(`
       /**
-       * Apply percentage-based margin on the right.
+       * Apply percentage-based margin on the right. When using with \`col\`, add a width class, \`col--auto\`, or both to define the size of the element.
        *
        * @group
        * @memberof Margins
        * @example
        * <div class='grid'>
-       *   <div class='col mr-1/2 bg-darken10'>mr-1/2</div>
+       *   <div class='col w-1/2 mr-1/2 bg-darken10'>mr-1/2</div>
        * </div>
        */`);
     css += buildFractionalRules('mr', 'margin-right', '%');
@@ -248,13 +248,13 @@ function buildLayoutScales() {
 
     css += stripIndent(`
       /**
-       * Apply percentage-based margin on the left.
+       * Apply percentage-based margin on the left. When using with \`col\`, add a width class, \`col--auto\`, or both to define the size of the element.
        *
        * @group
        * @memberof Margins
        * @example
        * <div class='grid'>
-       *   <div class='col ml-1/2 bg-darken10'>ml-1/2</div>
+       *   <div class='col w-1/2 ml-1/2 bg-darken10'>ml-1/2</div>
        * </div>
        */`);
     css += buildFractionalRules('ml', 'margin-left', '%');

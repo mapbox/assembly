@@ -3,6 +3,7 @@
 ## Unreleased
 
 - [fix] Clean up and update dependencies.
+- [breaking] Remove `flex-grow` from `col`. To define the width of `col` in a grid, add a width class, `col--auto`, or both.
 
 ## 1.1.0
 
