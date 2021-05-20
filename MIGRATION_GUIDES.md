@@ -19,7 +19,7 @@ These classes have been renamed to make room for new viewport width classes:
 
 `flex-child` has been removed and `flex-child--{x}` modifiers are no longer modifiers:
 
-- `flex-child` no longer exists. In almost all cases it did nothing in any browser except IE11, so you can safely to remove all instances of this class.
+- `flex-child` no longer exists. In almost all cases, it only impacted rendering in IE11, so you may safely to remove all instances of this class.
 - `flex-child--grow` → `flex-child-grow`
 - `flex-child--no-shrink` → `flex-child-no-shrink`
 
@@ -43,11 +43,11 @@ These classes have been renamed to make room for new viewport width classes:
 
 ### Changes to `col`
 
-`col` no longer declares `flex-basis:0`. You might see subtle changes in column layouts where `col` elements now take up more horizontal space than they previously did. Add a percentage width class alongside `col` to give your columns whatever width you desire.
+`col` no longer declares `flex-basis:0` or `flex-grow: 1;`. As a result, elements that use the `col` class without a width class will no longer grow to fill available space. To reintroduce the previous behavior, add the `col--auto` modifier to elements that use `col` without a width class.
 
 ### Changes to `col--{x}` modifiers
 
-`col--{n}` & `col--off{'r' | 'l'}{n}` classes have been replaced by generic percentage based width classes.
+Generic percentage based width classes now take the place of `col--{n}` & `col--off{'r' | 'l'}{n}` modifier classes.
 
 - `col--1` → `w-1/12`
 - `col--2` → `w-1/6`
