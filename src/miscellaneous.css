@@ -77,8 +77,9 @@
 
 .loading--dark {
   color: var(--white);
-  border-color: var(--lighten25);
-  border-top-color: currentColor;
+  border-left-color: var(--lighten25);
+  border-right-color: var(--lighten25);
+  border-bottom-color: var(--lighten25);
 }
 
 .loading--s {
