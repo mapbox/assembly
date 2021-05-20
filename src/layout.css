@@ -14,7 +14,7 @@
 /**
  * Grids require at minimum two elements: A parent with the class `grid` and a child with the class `col`. To define the width of `col` in a grid, add a width class, `col--auto`, or both. The `grid` class includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
  *
- * When using these classes, do not apply left or right margin or padding directly to the `grid` or `col` elements or you will face unexpected side-effects.
+ * To avoid unexpected side-effects, do not add margin left or right to `grid` and do not add padding left or right to `col`.
  *
  * @group
  * @memberof Grid
