@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- [fix] Clean up and update dependencies.
+
 ## 1.1.0
 
 - [style change] Slightly saturate `darken` colors, and make disabled state colors legible against both light and dark backgrounds.
