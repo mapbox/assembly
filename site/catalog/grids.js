@@ -7,7 +7,7 @@ const sizeCombos = [
   ['-3/4', '-1/4'],
   ['-2/3', '-1/3'],
   ['-7/12', '-5/12'],
-  ['-1/2', '1/2'],
+  ['-1/2', '-1/2'],
   ['-1/3', '-1/3', '-1/3'],
   ['-1/4', '-1/4', '-1/2'],
   ['-1/6', '-1/6', '-2/3'],
@@ -73,17 +73,6 @@ export class Grids extends React.Component {
         <h2 className="border-b border-b--2 border--gray-faint pb6 mt60 mb24 txt-l txt-bold">
           Grid
         </h2>
-
-        <h3 className="mb12 txt-m txt-bold color-darken50 txt-uppercase txt-s">
-          Uncontrolled grid
-        </h3>
-        <div className="txt-s grid mb18">
-          {[...Array(12)].map((_, i) => (
-            <div key={i} className="col">
-              <div className="border px3 py3">col</div>
-            </div>
-          ))}
-        </div>
 
         <h3 className="mb12 txt-m txt-bold color-darken50 txt-uppercase txt-s">
           Standard controlled grid

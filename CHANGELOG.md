@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0
+
+- [internal] Clean up and update dependencies.
+- [fix] Fix bug with handle not appearing on `loading--dark` when using minified CSS.
+- [fix] Remove `flex-grow` from `col` in order to ensure, by default, `col` class behaves as expected when used with width classes like `w-1/2`. This fix does require adding the `col--auto` class to `col` when using without a width class.
+
 ## 1.1.0
 
 - [style change] Slightly saturate `darken` colors, and make disabled state colors legible against both light and dark backgrounds.
