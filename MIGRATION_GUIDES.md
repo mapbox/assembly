@@ -157,3 +157,11 @@ Every icon has been redrawn in 1.0.0 and some icons have been removed. If you us
   margin-top: -2px;
 }
 ```
+
+### Changes to element sizes, colors, and default styles
+
+- The height of `toggle` is now 30px, down from 36px and the height of `toggle-s` is now 18px, down from 24px.
+- The default form control color is gray, originally blue, for all form types.
+- The typographic scale has been updated. Notably `txt-m` is now 16px, up from 15px and many headings have a smaller font-size.
+- Shadow classes now have a y-offset.
+- The default `select` is now borderless. To add a border, use `select--stroke`.
