@@ -14,6 +14,7 @@ exports[`buildMediaVariants defaults 1`] = `
 .col--auto-mm {
   width: auto !important;
   flex: auto;
+  flex-basis: 0;
 }
 .inline-mm { display: inline !important; }
 .block-mm { display: block !important; }
@@ -207,6 +208,7 @@ exports[`buildMediaVariants defaults 1`] = `
 .col--auto-ml {
   width: auto !important;
   flex: auto;
+  flex-basis: 0;
 }
 .inline-ml { display: inline !important; }
 .block-ml { display: block !important; }
@@ -400,6 +402,7 @@ exports[`buildMediaVariants defaults 1`] = `
 .col--auto-mxl {
   width: auto !important;
   flex: auto;
+  flex-basis: 0;
 }
 .inline-mxl { display: inline !important; }
 .block-mxl { display: block !important; }

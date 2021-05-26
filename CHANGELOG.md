@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1
+
+- [fix] Fix bug where `col col--auto` was taking content width into account when setting col size.
+
 ## 1.2.0
 
 - [internal] Clean up and update dependencies.

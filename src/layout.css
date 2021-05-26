@@ -51,6 +51,7 @@
 .col--auto {
   width: auto !important;
   flex: auto;
+  flex-basis: 0;
 }
 
 /**
