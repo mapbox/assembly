@@ -60,6 +60,7 @@ Generic percentage based width classes now take the place of `col--{n}` & `col--
 - `col--9` → `w-3/4`
 - `col--10` → `w-5/6`
 - `col--11` → `w-11/12`
+- `col--12` → `w-full`
 - `col--offr1` → `mr-1/12`
 - `col--offr2` → `mr-1/6`
 - `col--offr3` → `mr-1/4`
@@ -119,6 +120,17 @@ Every icon has been redrawn in 1.0.0 and some icons have been removed. If you us
 - `wechat`
 
 ### Other removed classes
+
+`col--offl12` and `col--offr12` no longer exist. Reintroduce them with:
+
+```css
+.col--offl12 {
+  margin-left: 100% !important;
+}
+.col--offr12 {
+  margin-right: 100% !important;
+}
+```
 
 `txt-spacing4` no longer exists. Reintroduce it with:
 
