@@ -16,6 +16,10 @@ Assembly targets modern versions of Chrome, Firefox, Safari, and Edge on desktop
 
 See https://labs.mapbox.com/assembly/ for usage guidelines.
 
+## Migration
+
+See our [`Migration guides`](https://github.com/mapbox/assembly/blob/publisher-staging/MIGRATION_GUIDES.md) to understand what changes you might need to make when upgrading Assembly in your project.
+
 ## Custom Builds
 
 Assembly exposes a JS module for creating custom builds. Why might you want to create a custom build?
