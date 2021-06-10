@@ -88,7 +88,7 @@ Generic percentage based width classes now take the place of `col--{n}` & `col--
 
 All `scroll-{*}` classes except `scroll-styled` have been renamed to to `overflow-{*}`.
 
-- `scroll-scroll` → `overflow-scroll`
+- `scroll-always` → `overflow-scroll`
 - `scroll-auto` → `overflow-auto`
 - `scroll-hidden` → `overflow-hidden`
 
