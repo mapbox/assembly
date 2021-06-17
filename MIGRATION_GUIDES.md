@@ -14,6 +14,7 @@ These classes have been renamed to make room for new viewport width classes:
 - `viewport-half` → `h-viewport-1/2`
 - `viewport-twothirds` → `h-viewport-2/3`
 - `viewport-almost` → `h-viewport-11/12`
+- `viewport-full` → `h-viewport-full`
 
 ### Changes to `flex` and `flex-child`
 
