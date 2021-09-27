@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- [add] Add back `android` and `ios` (renamed from `apple`) icons.
+
 ## 1.2.1
 
 - [fix] Fix bug where `col col--auto` was taking content width into account when setting col size.
