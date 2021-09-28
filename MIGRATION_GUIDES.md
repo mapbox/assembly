@@ -106,8 +106,7 @@ Before 1.0.0, Assembly had a complex limiter class that was convenient but infle
 Every icon has been redrawn in 1.0.0 and some icons have been removed. If you use any of the following icons, seek an alternative source:
 
 - `adjust-stroke`
-- `android`
-- `apple`
+- `apple` renamed to `ios`
 - `facebook`
 - `instagram`
 - `js`
