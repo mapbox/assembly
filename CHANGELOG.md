@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0
+
+- [add] Add back `android` and `ios` (renamed from `apple`) icons.
+
 ## 1.2.1
 
 - [fix] Fix bug where `col col--auto` was taking content width into account when setting col size.
@@ -50,7 +54,7 @@
 - [breaking] Rename `viewport-half` to `h-viewport-1/2`.
 - [breaking] Rename `viewport-twothirds` to `h-viewport-2/3`.
 - [breaking] Remove `viewport-almost`.
-- [breaking] Remove `viewport` in favor of class composition.
+- [breaking] Remove `limiter` class.
 - [breaking] Remove `flex-basis: 0` from `col` class. Any elements using `col` without a width set will see visual differences.
 - [breaking] Remove `flex-child`, rename `flex-parent` to `flex`, rename `flex-parent-inline` to `inline-flex`, and rename all `flex-parent` and `flex-child` modifiers to match new scheme.
 - [breaking] Removes the following icons:
