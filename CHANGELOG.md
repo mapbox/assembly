@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.3.0
 
 - [add] Add back `android` and `ios` (renamed from `apple`) icons.
 
