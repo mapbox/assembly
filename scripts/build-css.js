@@ -10,7 +10,7 @@ const postcss = require('postcss');
 const csso = require('csso');
 const reporter = require('postcss-reporter');
 const autoprefixer = require('autoprefixer');
-const initPostcssCustomProperties = require('postcss-custom-properties');
+const postcssCustomProperties = require('postcss-custom-properties');
 const postcssCustomMedia = require('postcss-custom-media');
 const defaultVariables = require('../src/variables');
 const defaultMediaQueries = require('../src/media-queries');
@@ -102,11 +102,13 @@ function buildCss(options) {
     ? Object.assign({}, defaultMediaQueries, options.mediaQueries)
     : defaultMediaQueries;
 
-  const customProperties = initPostcssCustomProperties({
+  const customProperties = postcssCustomProperties({
     preserve: false,
-    warnings: true
+    warnings: true,
+    importFrom: {
+      customProperties: variableDefinitions
+    }
   });
-  customProperties.setVariables(variableDefinitions);
 
   const postcssPlugins = [
     customProperties,
