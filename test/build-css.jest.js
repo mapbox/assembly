@@ -47,11 +47,11 @@ describe('buildCss', () => {
         path.join(__dirname, './fixtures/a.css')
       ],
       variables: {
-        'blue-dark': '#223B53',
-        blue: '#3887BE',
-        'blue-light': '#52A1D8',
-        'blue-faint': '#F4F7FB',
-        beige: '#FFF8DC' // New color
+        '--blue-dark': '#223B53',
+        '--blue': '#3887BE',
+        '--blue-light': '#52A1D8',
+        '--blue-faint': '#F4F7FB',
+        '--beige': '#FFF8DC' // New color
       },
       mediaQueries: {
         '--l-screen': 'screen and (min-width: 760px)',
