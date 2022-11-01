@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.5.0
+
+- [add] Add `folder-move` icon.
+
+## 1.4.0
+
+- [internal] Update production packages along side some dev packages with security vunerabilities
+  - `globby`
+  - `optimize-js`
+  - `postcss-custom-properties`
+  - `svgo`
+  - `svgstore`
+  - `highlight`
+  - `nodemon`
+  - `remark`
+
 ## 1.3.0
 
 - [add] Add back `android` and `ios` (renamed from `apple`) icons.

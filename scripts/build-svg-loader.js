@@ -5,18 +5,19 @@ const _ = require('lodash');
 const fs = require('fs');
 const pify = require('pify');
 const path = require('path');
-const SVGO = require('svgo');
+const { optimize } = require('svgo');
 
 const svgDir = path.join(__dirname, '../src/svgs');
-const svgo = new SVGO({
+const options = {
   plugins: [
     {
-      removeAttrs: {
+      name: 'removeAttrs',
+      params: {
         attrs: 'path:(fill|color|style|width|height|overflow)'
       }
     }
   ]
-});
+};
 
 const baseJsTemplate = options => {
   return `
@@ -50,7 +51,7 @@ function processSvgFile(filename) {
 
   return pify(fs.readFile)(filename, 'utf8')
     .then(content => {
-      return svgo.optimize(content);
+      return optimize(content, options);
     })
     .then(optimizedContent => {
       spriteItems.push({

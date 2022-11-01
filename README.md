@@ -169,5 +169,5 @@ Development is done in the `publisher-staging` branch, but releases are made fro
 - From `publisher-production`:
   - Create a tag. No message is necessary, since the changelog includes explanations of changes. For example: `git tag -a 0.8.0 -m ""`.
   - Push the tag: `git push --tags`.
-  - Publish the new version on npm.
+  - Publish the new version on npm: `mbx npm publish`
   - Deploy the changes. Talk to **@mapbox/frontend-platform** if you need help.
