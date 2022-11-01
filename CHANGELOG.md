@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.1
+
+- [internal] Update configuration for `remark-react`
+
 ## 1.5.0
 
 - [add] Add `folder-move` icon.
