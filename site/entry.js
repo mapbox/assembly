@@ -110,7 +110,7 @@ class Entry extends React.Component {
             <div className="mb24 prose">
               {
                 remark()
-                  .use(reactRenderer)
+                  .use(reactRenderer, { createElement: React.createElement })
                   .processSync(props.parsedComment.description).contents
               }
             </div>
