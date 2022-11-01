@@ -16,7 +16,7 @@ class Heading extends React.Component {
         <div className="prose">
           {
             remark()
-              .use(reactRenderer)
+              .use(reactRenderer, { createElement: React.createElement })
               .processSync(props.parsedComment.description).contents
           }
         </div>
