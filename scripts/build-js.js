@@ -5,7 +5,6 @@ const path = require('path');
 const mkdirp = require('mkdirp');
 const pify = require('pify');
 const UglifyJS = require('uglify-js');
-const optimizeJs = require('optimize-js');
 const timelog = require('./timelog');
 const buildSvgLoader = require('./build-svg-loader');
 
@@ -42,7 +41,7 @@ function buildJs(options) {
       if (uglifyResult.error) {
         throw uglifyResult.error;
       }
-      return optimizeJs(uglifyResult.code);
+      return uglifyResult.code;
     })
     .then(optimizedJs => {
       return pify(mkdirp)(path.dirname(outfile)).then(() => {

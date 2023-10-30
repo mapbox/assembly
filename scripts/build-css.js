@@ -98,6 +98,8 @@ function buildCss(options) {
     ? Object.assign({}, defaultVariables, options.variables)
     : defaultVariables;
 
+  console.log('variableDefinitions', variableDefinitions);
+
   const mediaQueryDefinitions = options.mediaQueries
     ? Object.assign({}, defaultMediaQueries, options.mediaQueries)
     : defaultMediaQueries;
