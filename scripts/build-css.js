@@ -10,6 +10,8 @@ const postcss = require('postcss');
 const csso = require('csso');
 const reporter = require('postcss-reporter');
 const autoprefixer = require('autoprefixer');
+const postcssCustomProperties = require('postcss-custom-properties');
+const postcssCustomMedia = require('postcss-custom-media');
 const defaultVariables = require('../src/variables');
 const defaultMediaQueries = require('../src/media-queries');
 const timelog = require('./timelog');
@@ -96,26 +98,22 @@ function buildCss(options) {
     ? Object.assign({}, defaultVariables, options.variables)
     : defaultVariables;
 
-  console.log('variableDefinitions', variableDefinitions);
-
   const mediaQueryDefinitions = options.mediaQueries
     ? Object.assign({}, defaultMediaQueries, options.mediaQueries)
     : defaultMediaQueries;
 
-  console.log('mediaQueryDefinitions', mediaQueryDefinitions);
-
-  // const customProperties = postcssCustomProperties({
-  //   preserve: false,
-  //   warnings: true,
-  //   importFrom: {
-  //     customProperties: variableDefinitions
-  //   }
-  // });
+  const customProperties = postcssCustomProperties({
+    preserve: false,
+    warnings: true,
+    importFrom: {
+      customProperties: variableDefinitions
+    }
+  });
 
   const postcssPlugins = [
-    require('../node_modules/postcss-jit-props')({
-      variableDefinitions,
-      mediaQueryDefinitions
+    customProperties,
+    postcssCustomMedia({
+      importFrom: { customMedia: mediaQueryDefinitions }
     }),
     autoprefixer({
       overrideBrowserslist: options.browsersList

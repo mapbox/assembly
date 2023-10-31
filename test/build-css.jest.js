@@ -10,7 +10,7 @@ const os = require('os');
 const crypto = require('crypto');
 const buildCss = require('../scripts/build-css');
 
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
+jest.setTimeout(30000)
 
 function getTmp() {
   return path.join(os.tmpdir(), crypto.randomBytes(16).toString('hex'));
