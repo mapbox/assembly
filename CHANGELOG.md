@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.0
+
+- [fix] Update Dependencies
+
 ## 1.5.1
 
 - [internal] Update configuration for `remark-react`
