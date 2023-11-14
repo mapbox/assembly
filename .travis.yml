@@ -1,8 +1,7 @@
+dist: jammy
 language: node_js
 node_js:
-  - "14"
+  - 18
 cache:
   directories:
     - $HOME/.npm
-before_install:
-  - npm install npm@7

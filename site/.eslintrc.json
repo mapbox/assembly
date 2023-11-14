@@ -9,7 +9,7 @@
     "@mapbox/eslint-config-mapbox/promise",
     "prettier"
   ],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "rules": {
     "react/prop-types": "off"
   }
