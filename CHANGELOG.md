@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.0
+
+- [add] Add `model` icon.
+- [add] Add `slot` icon.
+
 ## 1.6.0
 
 - [fix] Update Dependencies
