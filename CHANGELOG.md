@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.8.0
+
+- [add] Add `speaker` icon.
+- [add] Add `battery` icon.
+- [add] Add `charger` icon.
+
 ## 1.7.0
 
 - [add] Add `model` icon.
