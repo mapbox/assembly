@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.8.1
+
+- [fix] Minor icon inconsistencies.
+
 ## 1.8.0
 
 - [add] Add `speaker` icon.
