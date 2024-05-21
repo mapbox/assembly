@@ -33,10 +33,6 @@
     "test:svgs": "tape test/test-icons.tape.js | tap-spec",
     "test": "npm run lint && npm run test:svgs && npm run test:jest && npm run build:assembly"
   },
-  "engines": {
-    "node": ">=14",
-    "npm": ">=6"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mapbox/assembly.git"
