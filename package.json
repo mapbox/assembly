@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/assembly",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "A CSS framework",
   "main": "index.js",
   "files": [
@@ -32,10 +32,6 @@
     "jest-watch": "jest --watch",
     "test:svgs": "tape test/test-icons.tape.js | tap-spec",
     "test": "npm run lint && npm run test:svgs && npm run test:jest && npm run build:assembly"
-  },
-  "engines": {
-    "node": ">=14",
-    "npm": ">=6"
   },
   "repository": {
     "type": "git",
