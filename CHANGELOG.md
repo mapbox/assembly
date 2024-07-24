@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.8.3
+
+- [fix] Fix open-in icon
+
 ## 1.8.2
 
 - [add] Add open-in icon
