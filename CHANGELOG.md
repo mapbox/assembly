@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.8.4
+
+- [add] Add interact icon
+
 ## 1.8.3
 
 - [fix] Fix open-in icon
