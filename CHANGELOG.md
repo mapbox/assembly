@@ -1,16 +1,20 @@
 # Changelog
 
+## 1.9.0
+
+- [add] Add `snow` icon
+
 ## 1.8.4
 
-- [add] Add interact icon
+- [add] Add `interact` icon
 
 ## 1.8.3
 
-- [fix] Fix open-in icon
+- [fix] Fix `open-in` icon
 
 ## 1.8.2
 
-- [add] Add open-in icon
+- [add] Add `open-in` icon
 
 ## 1.8.1
 
