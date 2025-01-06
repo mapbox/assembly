@@ -1,5 +1,7 @@
 'use strict';
 
+require('./src/md4-shim');
+
 const path = require('path');
 // eslint-disable-next-line
 const navigationStructure = require('./_tmp_assembly/navigation.json');
