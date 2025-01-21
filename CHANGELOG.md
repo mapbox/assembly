@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.1
+
+- [add] Modify `snow` icon
+
 ## 1.9.0
 
 - [add] Add `snow` icon
