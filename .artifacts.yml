@@ -4,6 +4,6 @@ publisher:
   - filter: on-branch
     name: publisher-branches
     config:
-      node_version: 14.x
+      node_version: 18.x
       site_build_dir: _site
       npm_build_script: build
