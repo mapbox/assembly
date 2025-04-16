@@ -2,7 +2,7 @@
 
 ## 1.9.2
 
-- [add] Add `ml-auto`, `mr-auto`, and `mx-auto`
+- [add] Add `ml-auto` and `mr-auto`
 
 ## 1.9.1
 
