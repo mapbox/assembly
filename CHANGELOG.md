@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.2
+
+- [add] Add `ml-auto` and `mr-auto`
+
 ## 1.9.1
 
 - [add] Modify `snow` icon
