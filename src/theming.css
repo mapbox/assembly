@@ -204,6 +204,8 @@
 .cursor-notallowed { cursor: not-allowed !important; }
 .cursor-grab { cursor: grab !important; }
 .cursor-grabbing { cursor: grabbing !important; }
+.cursor-col-resize { cursor: col-resize !important; }
+.cursor-row-resize { cursor: row-resize !important; }
 
 /** @endgroup */
 
