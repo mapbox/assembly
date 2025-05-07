@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.0
+
+- [add] Add `cursor-col-resize` and `cursor-row-resize`
+
 ## 1.9.2
 
 - [add] Add `ml-auto` and `mr-auto`
