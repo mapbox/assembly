@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.11.0
+
+- [add] Add `select`, `elipse`, `pen`, and `square` icons.
+
 ## 1.10.0
 
 - [add] Add `cursor-col-resize` and `cursor-row-resize`
