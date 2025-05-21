@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.11.1
+
+- [fix] Revise `select`, `pen`
+- [fix] Fix misspelling of `square` icons.
+
 ## 1.11.0
 
 - [add] Add `select`, `elipse`, `pen`, and `square` icons.
