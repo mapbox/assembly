@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.12.0
+
+- [add] Add `split` and `swipe` icons.
+- [fix] Run clean command on drawing icons.
+- [fix] Adjust `pen` to be optically larger
+
 ## 1.11.1
 
 - [fix] Revise `select`, `pen`
