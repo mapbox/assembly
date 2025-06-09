@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.12.1
+
+- [fix] Revise `pen`, `swipe`.
+
 ## 1.12.0
 
 - [add] Add `split` and `swipe` icons.
