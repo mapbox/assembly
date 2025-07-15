@@ -163,13 +163,18 @@
  */
 
 /**
- * Set `auto` margins on left and right. This pattern is useful for horizontally centering block elements.
+ * Set `auto` margins on left and right. This pattern is useful for horizontally centering block elements 
+ * or aligning block elements to the start or end of their container.
  *
  * @example
  * <div class='mx-auto w60 bg-darken10'>mx-auto</div>
+ * <div class='ml-auto w60 bg-darken10'>ml-auto</div>
+ * <div class='mr-auto w60 bg-darken10'>mr-auto</div>
  * @memberof Margins
  */
 .mx-auto { margin-left: auto !important; margin-right: auto !important; }
+.ml-auto { margin-left: auto !important; }
+.mr-auto { margin-right: auto !important; }
 
 /**
  * All padding classes fit the following pattern: `m<side><size>`.

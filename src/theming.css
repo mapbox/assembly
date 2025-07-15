@@ -196,6 +196,8 @@
  * <div class='cursor-notallowed'>cursor-notallowed</div>
  * <div class='cursor-grab'>cursor-grab</div>
  * <div class='cursor-grabbing'>cursor-grabbing</div>
+ * <div class='cursor-col-resize'>cursor-col-resize</div>
+ * <div class='cursor-row-resize'>cursor-row-resize</div>
  */
 .cursor-default { cursor: default !important; }
 .cursor-pointer { cursor: pointer !important; }
@@ -204,6 +206,8 @@
 .cursor-notallowed { cursor: not-allowed !important; }
 .cursor-grab { cursor: grab !important; }
 .cursor-grabbing { cursor: grabbing !important; }
+.cursor-col-resize { cursor: col-resize !important; }
+.cursor-row-resize { cursor: row-resize !important; }
 
 /** @endgroup */
 

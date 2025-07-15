@@ -1,16 +1,51 @@
 # Changelog
 
+## 1.12.1
+
+- [fix] Revise `pen`, `swipe`.
+
+## 1.12.0
+
+- [add] Add `split` and `swipe` icons.
+- [fix] Run clean command on drawing icons.
+- [fix] Adjust `pen` to be optically larger
+
+## 1.11.1
+
+- [fix] Revise `select`, `pen`
+- [fix] Fix misspelling of `square` icons.
+
+## 1.11.0
+
+- [add] Add `select`, `elipse`, `pen`, and `square` icons.
+
+## 1.10.0
+
+- [add] Add `cursor-col-resize` and `cursor-row-resize`
+
+## 1.9.2
+
+- [add] Add `ml-auto` and `mr-auto`
+
+## 1.9.1
+
+- [add] Modify `snow` icon
+
+## 1.9.0
+
+- [add] Add `snow` icon
+
 ## 1.8.4
 
-- [add] Add interact icon
+- [add] Add `interact` icon
 
 ## 1.8.3
 
-- [fix] Fix open-in icon
+- [fix] Fix `open-in` icon
 
 ## 1.8.2
 
-- [add] Add open-in icon
+- [add] Add `open-in` icon
 
 ## 1.8.1
 
