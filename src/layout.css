@@ -72,10 +72,18 @@
  * <div class="inline-block bg-darken10">inline-block</div>
  * <div class="none bg-darken10">none</div>
  */
-.inline { display: inline !important; }
-.block { display: block !important; }
-.inline-block { display: inline-block !important; }
-.none { display: none !important; }
+.inline {
+  display: inline !important;
+}
+.block {
+  display: block !important;
+}
+.inline-block {
+  display: inline-block !important;
+}
+.none {
+  display: none !important;
+}
 /** @endgroup */
 
 /**
@@ -102,11 +110,21 @@
  *   -->
  * </div>
  */
-.fixed { position: fixed !important; }
-.absolute { position: absolute !important; }
-.relative { position: relative !important; }
-.static { position: static !important; }
-.sticky { position: sticky !important; }
+.fixed {
+  position: fixed !important;
+}
+.absolute {
+  position: absolute !important;
+}
+.relative {
+  position: relative !important;
+}
+.static {
+  position: static !important;
+}
+.sticky {
+  position: sticky !important;
+}
 /** @endgroup */
 
 /**
@@ -122,10 +140,18 @@
  *   <div class="absolute bg-darken10 top left right align-center">top left right</div>
  * </div>
  */
-.top { top: 0 !important; }
-.right { right: 0 !important; }
-.left { left: 0 !important; }
-.bottom { bottom: 0 !important; }
+.top {
+  top: 0 !important;
+}
+.right {
+  right: 0 !important;
+}
+.left {
+  left: 0 !important;
+}
+.bottom {
+  bottom: 0 !important;
+}
 /** @endgroup */
 
 /**
@@ -141,13 +167,27 @@
  *   <div class="absolute z1-neg1 bg-blue px6 py6 mt24 ml60">z-neg1</div>
  * </div>
  */
-.z-neg1 { z-index: -1 !important; }
-.z0 { z-index: 0 !important; }
-.z1 { z-index: 1 !important; }
-.z2 { z-index: 2 !important; }
-.z3 { z-index: 3 !important; }
-.z4 { z-index: 4 !important; }
-.z5 { z-index: 5 !important; }
+.z-neg1 {
+  z-index: -1 !important;
+}
+.z0 {
+  z-index: 0 !important;
+}
+.z1 {
+  z-index: 1 !important;
+}
+.z2 {
+  z-index: 2 !important;
+}
+.z3 {
+  z-index: 3 !important;
+}
+.z4 {
+  z-index: 4 !important;
+}
+.z5 {
+  z-index: 5 !important;
+}
 /** @endgroup */
 
 /**
@@ -163,7 +203,7 @@
  */
 
 /**
- * Set `auto` margins on left and right. This pattern is useful for horizontally centering block elements 
+ * Set `auto` margins on left and right. This pattern is useful for horizontally centering block elements
  * or aligning block elements to the start or end of their container.
  *
  * @example
@@ -172,9 +212,16 @@
  * <div class='mr-auto w60 bg-darken10'>mr-auto</div>
  * @memberof Margins
  */
-.mx-auto { margin-left: auto !important; margin-right: auto !important; }
-.ml-auto { margin-left: auto !important; }
-.mr-auto { margin-right: auto !important; }
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+.mr-auto {
+  margin-right: auto !important;
+}
 
 /**
  * All padding classes fit the following pattern: `m<side><size>`.
@@ -214,8 +261,12 @@
  * <div class='bg-darken10 flex'>flex</div>
  * <div class='bg-darken10 inline-flex'>inline-flex</div>
  */
-.flex { display: flex !important; }
-.inline-flex { display: inline-flex !important; }
+.flex {
+  display: flex !important;
+}
+.inline-flex {
+  display: inline-flex !important;
+}
 /** @endgroup */
 
 /**
@@ -229,7 +280,9 @@
  *  <span>3</span>
  * </div>
  */
-.flex--column { flex-direction: column !important; }
+.flex--column {
+  flex-direction: column !important;
+}
 
 /**
  * Set the direction of the main axis to bottom-to-top (default is left-to-right).
@@ -242,7 +295,9 @@
  *  <span>3</span>
  * </div>
  */
-.flex--column-reverse { flex-direction: column-reverse !important; }
+.flex--column-reverse {
+  flex-direction: column-reverse !important;
+}
 
 /**
  * Set the direction of the main axis to left-to-right (the default value of `flex`).
@@ -255,7 +310,9 @@
  *  <span>3</span>
  * </div>
  */
-.flex--row { flex-direction: row !important; }
+.flex--row {
+  flex-direction: row !important;
+}
 
 /**
  * Set the direction of the main axis to right-to-left (default is left-to-right).
@@ -268,7 +325,9 @@
  *  <span>3</span>
  * </div>
  */
-.flex--row-reverse { flex-direction: row-reverse !important; }
+.flex--row-reverse {
+  flex-direction: row-reverse !important;
+}
 
 /**
  * Center an element's children on the main axis.
@@ -279,7 +338,9 @@
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex--center-main { justify-content: center !important; }
+.flex--center-main {
+  justify-content: center !important;
+}
 
 /**
  * Center an element's children on the cross axis.
@@ -290,7 +351,9 @@
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex--center-cross { align-items: center !important; }
+.flex--center-cross {
+  align-items: center !important;
+}
 
 /**
  * Align an element's children to the start of the cross axis.
@@ -302,7 +365,9 @@
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex--start-cross { align-items: flex-start !important; }
+.flex--start-cross {
+  align-items: flex-start !important;
+}
 
 /**
  * Align an element's children to the start of the main axis.
@@ -313,7 +378,9 @@
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex--start-main { justify-content: flex-start !important; }
+.flex--start-main {
+  justify-content: flex-start !important;
+}
 
 /**
  * Align an element's children to the end of the cross axis.
@@ -325,7 +392,9 @@
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex--end-cross { align-items: flex-end !important; }
+.flex--end-cross {
+  align-items: flex-end !important;
+}
 
 /**
  * Align an element's children to the end of the main axis.
@@ -336,7 +405,9 @@
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex--end-main { justify-content: flex-end !important; }
+.flex--end-main {
+  justify-content: flex-end !important;
+}
 
 /**
  * Allow children to wrap. By default, they are all forced onto one line.
@@ -348,7 +419,9 @@
  *  <div class='bg-darken10 w600'>child</div>
  * </div>
  */
-.flex--wrap { flex-wrap: wrap !important; }
+.flex--wrap {
+  flex-wrap: wrap !important;
+}
 
 /**
  * Stretch children to fill the parent container along the cross axis.
@@ -359,7 +432,9 @@
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex--stretch-cross { align-items: stretch !important; }
+.flex--stretch-cross {
+  align-items: stretch !important;
+}
 
 /**
  * Evenly distribute children across the line, so first child is at the start
@@ -372,7 +447,9 @@
  *  <div class='bg-darken10'>child</div>
  * </div>
  */
-.flex--space-between-main { justify-content: space-between !important; }
+.flex--space-between-main {
+  justify-content: space-between !important;
+}
 
 /**
  * Make a child to grow to fill whatever space is available in the main axis of the parent container.
@@ -479,9 +556,15 @@
  * <div class='bg-darken10'> without .clearfix </div>
  * <div class='fl unfloat'>unfloat</div>
  */
-.fl { float: left !important; }
-.fr { float: right !important; }
-.unfloat { float: none !important; }
+.fl {
+  float: left !important;
+}
+.fr {
+  float: right !important;
+}
+.unfloat {
+  float: none !important;
+}
 .clearfix::after {
   content: '' !important;
   display: block !important;
