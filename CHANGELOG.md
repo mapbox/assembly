@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.12.2
+
+- [internal] Fix security vulnerabilities and eslint
+  - postcss and micromatch packages updated
+
 ## 1.12.1
 
 - [fix] Revise `pen`, `swipe`.
