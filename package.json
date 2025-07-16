@@ -53,7 +53,7 @@
     "mkdirp": "^0.5.1",
     "p-queue": "^2.4.2",
     "pify": "^3.0.0",
-    "postcss": "^8.4.31",
+    "postcss": "^8.5.6",
     "postcss-custom-media": "^8",
     "postcss-custom-properties": "^12.1.8",
     "postcss-reporter": "^7.0.5",
@@ -122,5 +122,8 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "overrides": {
+    "micromatch": "4.0.8"
   }
 }

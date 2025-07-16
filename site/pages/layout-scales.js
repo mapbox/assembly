@@ -54,7 +54,7 @@ export default class LayoutScales extends React.Component {
     const rows = Object.keys(classSets).map(name => {
       const data = classSets[name];
       const scale = data.scale.map(v => {
-        const value = typeof v === 'object' ? v[0].replace(/\\/, '') : v;
+        const value = typeof v === 'object' ? v[0].replace(/\\/g, '') : v;
         return (
           <span
             key={value}
