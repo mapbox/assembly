@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.12.2
+
+- [internal] Fix security vulnerabilities and eslint
+  - postcss and micromatch packages updated
+
+## 1.12.1
+
+- [fix] Revise `pen`, `swipe`.
+
+## 1.12.0
+
+- [add] Add `split` and `swipe` icons.
+- [fix] Run clean command on drawing icons.
+- [fix] Adjust `pen` to be optically larger
+
+## 1.11.1
+
+- [fix] Revise `select`, `pen`
+- [fix] Fix misspelling of `square` icons.
+
+## 1.11.0
+
+- [add] Add `select`, `elipse`, `pen`, and `square` icons.
+
 ## 1.10.0
 
 - [add] Add `cursor-col-resize` and `cursor-row-resize`
