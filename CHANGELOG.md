@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.0
+
+- [add] `exclude`, `intersect`, `subtract`, and `union` icons.
+
 ## 1.12.2
 
 - [internal] Fix security vulnerabilities and eslint
