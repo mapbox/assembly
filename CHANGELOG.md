@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.1
+
+- [fix] regex vulnerability on `Assembly.iconExists`.
+
 ## 1.13.0
 
 - [add] `exclude`, `intersect`, `subtract`, and `union` icons.
