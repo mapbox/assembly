@@ -13,11 +13,11 @@ try {
     if (alg !== 'md4') return;
     if (printed) return;
     printed = true;
-    console.warn('MD4 is unsupported, replacing it with MD5');
+    console.warn('MD4 is unsupported, replacing it with SHA-256');
   };
   const createHash = crypto.createHash;
   crypto.createHash = (alg, ...params) => {
     print(alg);
-    return createHash(alg === 'md4' ? 'md5' : alg, ...params);
+    return createHash(alg === 'md4' ? 'sha256' : alg, ...params);
   };
 }
