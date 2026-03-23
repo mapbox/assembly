@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.14.1
+
+- Upgrade globby to 11.1.0
+
 ## 1.14.0
 
 - [add] `lasso` icon.
