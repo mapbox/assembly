@@ -2,7 +2,7 @@
 
 ## 1.15.0
 
-- [add] `dawn`, `dusk` icons.
+- [add] `sunrise`, `sunset` icons.
 - [fix] `lasso` icon.
 
 ## 1.14.1
