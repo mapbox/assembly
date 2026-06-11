@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.15.0
+
+- [add] `sunrise`, `sunset` icons.
+- [fix] `lasso` icon.
+
 ## 1.14.1
 
 - Upgrade globby to 11.1.0
