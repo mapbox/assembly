@@ -2,8 +2,8 @@
 
 ## 1.15.0
 
-- [add] `sunrise`, `sunset`, and `moon-crescent` icons.
-- [fix] `sun` icon.
+- [add] `dawn`, `dusk` icons.
+- [fix] `lasso` icon.
 
 ## 1.14.1
 
