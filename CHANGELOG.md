@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.15.1
+- [fix] `horizon` icon
+
 ## 1.15.0
 
 - [add] `sunrise`, `sunset` icons.
