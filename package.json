@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/assembly",
-  "version": "1.15.1",
+  "version": "1.15.2",
   "description": "A CSS framework",
   "main": "index.js",
   "files": [
@@ -126,5 +126,8 @@
   },
   "overrides": {
     "micromatch": "4.0.8"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
