@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.16.0
+- [add] `ai` icon
+
 ## 1.15.1
 - [fix] `horizon` icon
 
