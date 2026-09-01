@@ -6,8 +6,6 @@ A CSS framework that makes the hard parts of building anything on the web easy. 
 
 For usage guidelines and documentation, check out https://labs.mapbox.com/assembly/.
 
-[![Build Status](https://travis-ci.com/mapbox/assembly.svg?branch=publisher-staging)](https://travis-ci.com/mapbox/assembly)
-
 ## Browser support
 
 Assembly targets modern versions of Chrome, Firefox, Safari, and Edge on desktop; Safari on iOS; and Chrome on Android.
@@ -44,7 +42,7 @@ Assembly.buildUserAssets('path/to/my/outdir', myOptions)
 - **`files`**: An array of file paths to stylesheets you would like to append to `assembly.css`. These will be processed through Assembly's PostCSS pipeline.
 - **`variables`**: An object whose properties will override and add to `src/variables.json`. Use this option to change or add variables.
   These variables are accessible in any stylesheets you append via the CSS custom properties syntax, e.g. `var(--property-name)`.
-- **`mediaQueries`**: An object whose properties will override and add to `src/mediaQueries.json`. Use this option to change or add media queries.
+- **`mediaQueries`**: An object whose properties will override and add to `src/media-queries.json`. Use this option to change or add media queries.
   These media queries are accessible in any stylesheets you append via the CSS custom media query syntax, e.g. `@media --media-query-name`.
 - **`colorVariants`**: An object or array specifying the color variants you would like added to `assembly.css`. This is documented in detail below.
 - **`icons`**: An array of icons names to include in Assembly. Names correspond to file names in `src/svgs/`. Use this option to decrease the size of assembly.js by only including the icons you need.
@@ -122,7 +120,7 @@ Assembly strives for flat, single rule declarations and avoids overrides wheneve
 
 - Keep names as short as reasonable.
 - Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.pt6` for `padding-top: 6px` instead an abstract scale like `.pt-small` or `.pt-1`.
-- If the number of utility classes describing a property is limited and the variants are about size, Assembly classes use the suffixes `xl`, `l`, `m`, `s`, `sm`.
+- If the number of utility classes describing a property is limited and the variants are about size, Assembly classes use the suffixes `xl`, `l`, `m`, `s`, `xs`.
 - Assembly provides a reset that will affect the entire page, but other than that reset none of its rules should affect the styling of elements that don't bear Assembly classes.
 
 ### Media query class variants
