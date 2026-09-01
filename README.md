@@ -1,6 +1,6 @@
 # Assembly
 
-<img width='200px' src='https://rawgit.com/mapbox/assembly/publisher-staging/assembly-logo.svg?v1'>
+<img width='200px' src='./assembly-logo.svg' alt="assembly logo">
 
 A CSS framework that makes the hard parts of building anything on the web easy. We define the hard parts as: managing class specificity, designing cross-browser form components that work well with each other, creating a harmonious typographic scale, maintaining a baseline grid, and keeping responsive designs simple.
 
