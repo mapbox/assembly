@@ -6,7 +6,7 @@ const pify = require('pify');
 const fs = require('fs');
 const os = require('os');
 const crypto = require('crypto');
-const buildJs = require('../scripts/build-js');
+const buildJs = require('../src/build-js');
 
 function getTmp() {
   return path.join(os.tmpdir(), crypto.randomBytes(16).toString('hex'));

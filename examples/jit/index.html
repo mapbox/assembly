@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assembly JIT example</title>
+    <link rel="stylesheet" href="assembly.css" />
+  </head>
+  <body class="bg-gray-faint">
+    <header class="bg-blue color-white px12 py18">
+      <div class="wmax600 mx-auto">
+        <h1 class="txt-h3 txt-bold">Assembly JIT</h1>
+        <p class="txt-s mt6">
+          CSS is generated from the class names on this page. Rebuild with
+          <span class="txt-mono txt-xs">node examples/jit/build.mjs</span>.
+        </p>
+      </div>
+    </header>
+
+    <main class="wmax600 mx-auto px12 py18">
+      <div class="flex flex--wrap flex--center-cross gap12 mb18">
+        <button class="btn">Save</button>
+        <button class="btn btn--stroke">Cancel</button>
+        <a class="link" href="#cards">Skip to cards</a>
+      </div>
+
+      <section id="cards" class="gridbox gridbox--cols1 gridbox--cols3-ml gap12">
+        <article class="bg-white round border border--gray-light px12 py18">
+          <h2 class="txt-s txt-bold mb6">Flex + gap</h2>
+          <p class="txt-s color-gray">
+            <code class="txt-mono">gap12</code> spaces the buttons above.
+          </p>
+        </article>
+        <article
+          class="bg-white round border border--gray-light px12 py18 gridbox-child-col2-ml"
+        >
+          <h2 class="txt-s txt-bold mb6">CSS Grid</h2>
+          <p class="txt-s color-gray">
+            <code class="txt-mono">gridbox</code> is real CSS Grid.
+            <code class="txt-mono">grid</code> stays the flex 12-column system.
+          </p>
+        </article>
+        <article class="bg-white round border border--gray-light px12 py18">
+          <h2 class="txt-s txt-bold mb6">Tree-shaken</h2>
+          <p class="txt-s color-gray">
+            Unused utilities such as large padding or other colors are not in
+            <code class="txt-mono">assembly.css</code>.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

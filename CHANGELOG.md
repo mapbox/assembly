@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.0
+
+- [breaking] Rebuild Assembly's CSS pipeline on [UnoCSS](https://unocss.dev/). Class names and `buildUserAssets` stay compatible; the generated stylesheet's formatting, comments, and source maps may differ. Node.js 18+ is required.
+- [add] Export `presetAssembly()` for on-demand UnoCSS builds that keep Assembly class names. Pass `{ safelist: true }` only when you want the full prebuilt utility set.
+- [add] `gap{size}`, `gapx{size}`, and `gapy{size}` on the padding scale, with `*-mm` / `*-ml` / `*-mxl` variants. Use with `flex` or `gridbox`; do not combine with `grid--gut*` or percentage `w-*` columns on `grid`.
+- [add] CSS Grid via `gridbox` / `inline-gridbox`, `gridbox--cols{n}` / `gridbox--rows{n}` (1–12), child spans, auto-flow, and alignment. The existing `grid` / `col` 12-column flex system is unchanged.
+- [add] `examples/jit` — a sample app that generates only the utilities used in its markup (no reset or component preflight).
+- [add] `aspect-{ratio}` / `aspect-auto`, `object-{contain,cover,fill,none,scale-down}`, `flex--space-around-main` / `flex--space-evenly-main`, `gridbox--space-around` / `gridbox--space-evenly`, and transform utilities (`rotate{deg}`, `scale{percent}`, `translate-x{n}` / `translate-y{n}`).
+- [internal] Assembly utilities are UnoCSS rules in `src/preset/`. Reset and component CSS live in `src/preset/base.js`. The package build is `src/build-*.js`. The documentation site is VitePress under `docs/`.
+
 ## 1.16.0
 - [add] `ai` icon
 

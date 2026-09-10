@@ -1,0 +1,29 @@
+.header-anchor {
+  display: none;
+}
+
+div[class^='language-'] > button.copy,
+div[class^='language-'] > span.lang {
+  display: none;
+}
+
+.pre [class^='language-'] {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.pre .shiki,
+.pre .shiki code {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: inherit;
+}
+
+.shiki span {
+  color: var(--shiki-light);
+}

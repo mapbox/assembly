@@ -1,0 +1,34 @@
+/* JIT utilities from examples/jit/index.html. No reset or component CSS. Do not edit. */
+.btn{display:inline-block;font-weight:bold;background-color:#0F71FA;font-size:12px;color:#fff;border-radius:18px;padding:6px 18px;text-align:center;transition:background-color 0.125s, border-color 0.125s, color 0.125s;}
+.btn--stroke{background-color:transparent;box-shadow:inset 0 0 0 1px currentColor;color:#0F71FA;}
+.link{cursor:pointer;color:#0F71FA;transition:color 0.125s;}
+.txt-mono{font-family:'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas', monospace;font-size:90%;}
+.txt-bold{font-weight:bold !important;}
+.txt-h3{font-size:24px;line-height:30px;}
+.txt-s{font-size:12px;line-height:18px;}
+.txt-xs{font-size:10px;line-height:15px;}
+.border{border-style:solid;border-width:1px;}
+.round{border-radius:4px !important;}
+.mx-auto{margin-left:auto !important;margin-right:auto !important;}
+.flex{display:flex !important;}
+.flex--center-cross{align-items:center !important;}
+.flex--wrap{flex-wrap:wrap !important;}
+.gridbox{display:grid !important;}
+.mt6{margin-top:6px !important;}
+.mb6{margin-bottom:6px !important;}
+.mb18{margin-bottom:18px !important;}
+.gap12{gap:12px !important;}
+.gridbox--cols1{grid-template-columns:repeat(1, minmax(0, 1fr)) !important;}
+.px12{padding-left:12px !important;padding-right:12px !important;}
+.py18{padding-top:18px !important;padding-bottom:18px !important;}
+.wmax600{max-width:600px !important;}
+.color-gray{ color:#757D82 !important; }
+.color-white{ color:#fff !important; }
+.bg-gray-faint{ background-color:#F7F8F8 !important; }
+.bg-blue{ background-color:#0F71FA !important; }
+.bg-white{ background-color:#fff !important; }
+.border--gray-light{ border-color:#C7CACC !important; }
+@media screen and (min-width: 800px){
+.gridbox-child-col2-ml{grid-column:span 2 !important;}
+.gridbox--cols3-ml{grid-template-columns:repeat(3, minmax(0, 1fr)) !important;}
+}
