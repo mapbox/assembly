@@ -56,6 +56,14 @@ describe('presetAssembly', () => {
     expect(stdout).toContain('.gap12');
     expect(stdout).toContain('.gridbox');
     expect(stdout).toContain('.gridbox--cols3');
+    expect(stdout).toContain('.rotate30');
+    expect(stdout).toContain('rotate:30deg');
+    expect(stdout).toContain('.translate-x48');
+    expect(stdout).toContain('translate:48px 0');
+    expect(stdout).toContain('.w-2\\/5');
+    expect(stdout).toContain('width:40%');
+    expect(stdout).not.toContain('.mt48');
+    expect(stdout).not.toContain('.mr-2\\/5');
     expect(stdout).not.toContain('.px24');
     expect(stdout).not.toContain('.flex-mm');
     expect(stdout).not.toContain('.bg-red');

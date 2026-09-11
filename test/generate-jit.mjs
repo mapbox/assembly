@@ -9,7 +9,7 @@ const uno = await createGenerator({
 });
 
 const generated = await uno.generate(
-  'px12 flex bg-blue gap12 gridbox gridbox--cols3',
+  'px12 flex bg-blue gap12 gridbox gridbox--cols3 rotate30 translate-x48 w-2/5 mt48 mr-2/5',
   {
     preflights: false,
     safelist: false

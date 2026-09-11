@@ -48,6 +48,25 @@
           </p>
         </article>
       </section>
+
+      <section class="mt18 bg-white round border border--gray-light px12 py18">
+        <h2 class="txt-s txt-bold mb6">Values outside the prebuilt scale</h2>
+        <p class="txt-s color-gray mb12">
+          Pixel utilities stay on the documented scale. Transforms and
+          percentage widths do not, so on-demand CSS can emit
+          <code class="txt-mono">rotate30</code>,
+          <code class="txt-mono">translate-x48</code>, and
+          <code class="txt-mono">w-2/5</code>.
+        </p>
+        <div class="flex flex--center-cross">
+          <div class="rotate30 translate-x48 bg-blue w60 h60"></div>
+          <div class="ml36 bg-gray-faint w-full">
+            <div class="w-2/5 bg-blue color-white txt-xs txt-mono px6 py6">
+              w-2/5
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

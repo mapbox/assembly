@@ -11,7 +11,7 @@ function cssValue(v) {
   if (typeof v === 'string' && v.indexOf('neg') !== -1) {
     return `-${v.replace('-neg', '')}px`;
   }
-  if (v === 0) return '0';
+  if (v === 0 || v === '0') return '0';
   return `${v}px`;
 }
 
@@ -23,15 +23,37 @@ function fractionName(raw) {
   return raw.replace(/\\/g, '');
 }
 
+function fractionPercent(numer, denom) {
+  const d = Number(denom);
+  if (!d) return;
+  return (Number(numer) / d) * 100;
+}
+
 function wrapMediaFromSelector(rawSelector, css) {
   const media = rawSelector.match(/-m(m|l|xl)$/);
   if (!media) return css;
   return `@media (--${media[1]}-screen) {\n${css}\n}`;
 }
 
+function rotateDeg(scale) {
+  if (String(scale).indexOf('neg') !== -1) {
+    return `-${String(scale).replace('-neg', '')}deg`;
+  }
+  return `${scale}deg`;
+}
+
+const NUMERIC_SUFFIX = '(-neg\\d+|\\d+)';
+
 function addStaticScale(rules, safelist, className, decls) {
   rules.push([className, decls]);
   withMediaClasses(className).forEach(token => safelist.push(token));
+}
+
+function addDynamicNumeric(rules, prefix, declsFromScale) {
+  rules.push([
+    new RegExp(`^${prefix}${NUMERIC_SUFFIX}$`),
+    ([, scale]) => declsFromScale(scale)
+  ]);
 }
 
 function layoutScaleRules() {
@@ -43,13 +65,13 @@ function layoutScaleRules() {
       safelist.push(token)
     );
   });
+  const gutterScale = new Set(layoutScales.gutter.map(String));
   rules.push([
     /^grid--gut(.+)$/,
     ([, scale], { rawSelector }) => {
-      const original = layoutScales.gutter.find(g => String(g) === scale);
-      if (original === undefined) return;
+      if (!gutterScale.has(scale)) return;
       const sel = toEscapedSelector(rawSelector);
-      const val = cssValue(original);
+      const val = cssValue(scale);
       const css = [
         `${sel} { margin-left: -${val}; }`,
         `${sel} > .col,`,
@@ -124,12 +146,8 @@ function layoutScaleRules() {
   });
 
   layoutScales.rotate.forEach(scale => {
-    const deg =
-      typeof scale === 'string' && scale.indexOf('neg') !== -1
-        ? `-${scale.replace('-neg', '')}deg`
-        : `${scale}deg`;
     addStaticScale(rules, safelist, `rotate${scale}`, {
-      rotate: important(deg)
+      rotate: important(rotateDeg(scale))
     });
   });
 
@@ -207,6 +225,41 @@ function layoutScaleRules() {
   addStaticScale(rules, safelist, 'hmax-viewport-full', {
     'max-height': important('100vh')
   });
+
+  addDynamicNumeric(rules, 'rotate', scale => ({
+    rotate: important(rotateDeg(scale))
+  }));
+  addDynamicNumeric(rules, 'translate-x', scale => ({
+    translate: important(`${cssValue(scale)} 0`)
+  }));
+  addDynamicNumeric(rules, 'translate-y', scale => ({
+    translate: important(`0 ${cssValue(scale)}`)
+  }));
+
+  rules.push([
+    /^scale(\d+)$/,
+    ([, scale]) => ({ scale: important(String(Number(scale) / 100)) })
+  ]);
+
+  rules.push([
+    /^w-(\d+)\/(\d+)$/,
+    ([, numer, denom]) => {
+      const pct = fractionPercent(numer, denom);
+      if (pct == null) return;
+      return { width: important(`${pct}%`) };
+    }
+  ]);
+
+  rules.push([
+    /^(h|hmax)-viewport-(\d+)\/(\d+)$/,
+    ([, prefix, numer, denom]) => {
+      const pct = fractionPercent(numer, denom);
+      if (pct == null) return;
+      const value = important(`${pct}vh`);
+      if (prefix === 'h') return { height: value };
+      return { 'max-height': value };
+    }
+  ]);
 
   return { rules, safelist };
 }

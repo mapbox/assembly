@@ -33,8 +33,8 @@ function classSelectors(css) {
   const names = new Set();
   postcss.parse(css).walkRules(rule => {
     rule.selectors.forEach(selector => {
-      const found = selector.trim().match(/^\.([a-zA-Z0-9_-]+)/);
-      if (found) names.add(found[1]);
+      const found = selector.trim().match(/^\.(\S+)/);
+      if (found) names.add(found[1].replace(/\\/g, ''));
     });
   });
   return names;
