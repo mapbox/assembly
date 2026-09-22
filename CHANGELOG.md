@@ -1,5 +1,37 @@
 # Changelog
 
+## 1.16.0
+- [add] `ai` icon
+
+## 1.15.1
+- [fix] `horizon` icon
+
+## 1.15.0
+
+- [add] `sunrise`, `sunset` icons.
+- [fix] `lasso` icon.
+
+## 1.14.1
+
+- Upgrade globby to 11.1.0
+
+## 1.14.0
+
+- [add] `lasso` icon.
+
+## 1.13.1
+
+- [fix] regex vulnerability on `Assembly.iconExists`.
+
+## 1.13.0
+
+- [add] `exclude`, `intersect`, `subtract`, and `union` icons.
+
+## 1.12.2
+
+- [internal] Fix security vulnerabilities and eslint
+  - postcss and micromatch packages updated
+
 ## 1.12.1
 
 - [fix] Revise `pen`, `swipe`.
