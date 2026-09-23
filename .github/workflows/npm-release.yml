@@ -45,17 +45,12 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version-file: .nvmrc
+          node-version: 24
           cache: npm
 
-      - name: Upgrade npm for OIDC trusted publishing support
-        run: npm install -g npm@^11.5.1
-
-      - name: Configure CodeArtifact npm credentials
-        uses: mapbox/gha@action-configure-codeartifact-credentials-v1
-        with:
-          repo-type: npm
-
+      # assembly is a public repo, so it can't use mapbox/gha (internal-visibility) -
+      # not needed anyway, since assembly's only @mapbox/* deps (batfish,
+      # eslint-config-mapbox) are public npm packages resolved straight from npmjs.
       - name: Install npm dependencies
         run: npm ci --no-fund --no-audit --prefer-offline
 
