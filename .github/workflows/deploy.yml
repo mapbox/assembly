@@ -2,53 +2,76 @@ name: Deploy
 
 on:
   push:
-    branches: [staging, production]
+    tags:
+      - '*'
 
 env:
   bucket: '{ "staging": "labs.mapbox.com-staging/assembly", "production": "labs.mapbox.com/assembly" }'
 
 jobs:
   deploy:
-    name: Deploy to ${{ matrix.environment }}
+    name: "Deploy ${{ github.ref_name }}"
     runs-on: ubuntu-latest
+    environment: ${{ (contains(github.ref_name, '.dev') || contains(github.ref_name, '-dev')) && 'staging' || 'production' }}
     permissions:
       id-token: write
       contents: read
-    strategy:
-      matrix:
-        environment: [staging, production]
-        exclude:
-          - environment: ${{ github.ref_name != 'staging' && 'staging' }}
-          - environment: ${{ github.ref_name != 'production' && 'production' }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract package version from package.json
+        run: |
+          packageVersion=$(jq -r .version package.json)
+          echo "versionTag=v$packageVersion" >> "$GITHUB_ENV"
+
+      - name: Verify tag matches package.json version
+        if: ${{ github.ref_name != env.versionTag }}
+        run: |
+          echo "Tag ${{ github.ref_name }} does not match package.json version (expected ${{ env.versionTag }})."
+          exit 1
+
+      - name: Enforce main branch for production releases
+        # Dev releases (.dev/-dev) are exempt - they're meant for testing from
+        # any branch before a real release is cut from main.
+        if: ${{ !contains(github.ref_name, '.dev') && !contains(github.ref_name, '-dev') }}
+        run: |
+          git fetch origin main --depth=1
+          if ! git merge-base --is-ancestor ${{ github.sha }} origin/main; then
+            echo "Production releases must be tagged from a commit on main."
+            exit 1
+          fi
+
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: npm
 
-      - name: Configure AWS Credentials
-        uses: mapbox/configure-aws-credentials-internal@v5
-        with:
-          target-account-id: ${{ vars.AWS_ACCOUNT_ID_DEFAULT }}
-
-      - name: Configure CodeArtifact npm credentials
-        uses: mapbox/gha@action-configure-codeartifact-credentials-v1
-        with:
-          repo-type: npm
-
       - name: Install npm dependencies
         run: npm ci --no-fund --no-audit --prefer-offline
 
-      - name: Build for ${{ matrix.environment }}
+      - name: Build
         run: npm run build
 
-      - name: Sync files ${{ matrix.environment }}
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::234858372212:role/assembly-deploy
+          aws-region: us-east-1
+
+      - name: Deploy CDN build (mapbox-assembly)
+        # Uploads dist/assembly* to mapbox-assembly/v<version>/, public-read - see
+        # scripts/deploy.js. Versioned per release (dev or prod), so no
+        # staging/production split needed for this bucket.
+        run: node scripts/deploy.js
+
+      - name: Sync docs site files
         run: aws s3 sync _site ${{ env.targetBucket }} --exclude "*.html" --exclude "*.xml" --cache-control "max-age=31536000"
         env:
-          targetBucket: s3://${{ fromJson(env.bucket)[matrix.environment] }}
+          targetBucket: s3://${{ (contains(github.ref_name, '.dev') || contains(github.ref_name, '-dev')) && fromJson(env.bucket).staging || fromJson(env.bucket).production }}
 
-      - name: Sync html files to ${{ matrix.environment }}
+      - name: Sync docs site html files
         run: aws s3 sync _site ${{ env.targetBucket }} --exclude "*" --include "*.html" --include "*.xml" --cache-control "max-age=10,stale-while-revalidate=60"
         env:
-          targetBucket: s3://${{ fromJson(env.bucket)[matrix.environment] }}
+          targetBucket: s3://${{ (contains(github.ref_name, '.dev') || contains(github.ref_name, '-dev')) && fromJson(env.bucket).staging || fromJson(env.bucket).production }}
