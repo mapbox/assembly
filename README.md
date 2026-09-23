@@ -167,5 +167,5 @@ Development and releases both happen on `main` (a single branch — no more `pub
 - This triggers two GitHub Actions workflows off the tag push:
   - `NPM release`, which publishes to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC) — no npm token needed.
   - `Deploy`, which uploads the versioned CDN build to `mapbox-assembly` (`scripts/deploy.js`) and syncs the docs site (`_site`) to `labs.mapbox.com`.
-- Tags containing `.dev` or `-dev` (e.g. `v0.8.0.dev.0`, `v0.8.0-dev.0`) are dev releases: they publish under the npm `dev` dist-tag instead of `latest`, deploy the docs site to `labs.mapbox.com-staging` instead of production, and can be cut from any branch (not just `main`) for testing.
+- Any prerelease tag (a version containing `-`, e.g. `v0.8.0-dev.0`) is a dev release: it publishes under the npm `dev` dist-tag instead of `latest`, deploys the docs site to `labs.mapbox.com-staging` instead of production, and can be cut from any branch (not just `main`) for testing.
 - Non-dev tags must point to a commit on `main`, or both workflows fail fast.
