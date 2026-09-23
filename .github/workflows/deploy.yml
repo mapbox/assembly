@@ -61,10 +61,9 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy CDN build (mapbox-assembly)
-        # Uploads dist/assembly* to mapbox-assembly/v<version>/, public-read - see
-        # scripts/deploy.js. Versioned per release (dev or prod), so no
-        # staging/production split needed for this bucket.
-        run: node scripts/deploy.js
+        # Versioned per release (dev or prod), so no staging/production split
+        # needed for this bucket.
+        run: aws s3 cp dist/ "s3://mapbox-assembly/${{ env.versionTag }}/" --recursive --exclude "*" --include "assembly*" --acl public-read
 
       - name: Sync docs site files
         run: aws s3 sync _site ${{ env.targetBucket }} --exclude "*.html" --exclude "*.xml" --cache-control "max-age=31536000"
