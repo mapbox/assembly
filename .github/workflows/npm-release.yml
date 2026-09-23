@@ -5,32 +5,67 @@ on:
     tags:
       - '*'
 
+env:
+  CI: true
+
 jobs:
-  verify-tag:
+  publish:
+    name: "Publish ${{ github.ref_name }}"
     runs-on: ubuntu-latest
+    environment: npm-release
     permissions:
+      id-token: write
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - name: Verify tag matches package.json version
+        with:
+          fetch-depth: 0
+
+      - name: Extract package version from package.json
         run: |
           packageVersion=$(jq -r .version package.json)
-          expectedTag="v$packageVersion"
-          if [ "${{ github.ref_name }}" != "$expectedTag" ]; then
-            echo "Tag ${{ github.ref_name }} does not match package.json version ($expectedTag expected)."
+          echo "versionTag=v$packageVersion" >> "$GITHUB_ENV"
+
+      - name: Verify tag matches package.json version
+        if: ${{ github.ref_name != env.versionTag }}
+        run: |
+          echo "Tag ${{ github.ref_name }} does not match package.json version (expected ${{ env.versionTag }})."
+          exit 1
+
+      - name: Enforce publisher-production branch for production releases
+        # Dev releases (.dev/-dev) are exempt - they're meant for testing from
+        # any branch before a real release is cut from publisher-production.
+        if: ${{ !contains(github.ref_name, '.dev') && !contains(github.ref_name, '-dev') }}
+        run: |
+          git fetch origin publisher-production --depth=1
+          if ! git merge-base --is-ancestor ${{ github.sha }} origin/publisher-production; then
+            echo "Production releases must be tagged from a commit on publisher-production."
             exit 1
           fi
 
-  npm-release:
-    needs: verify-tag
-    uses: mapbox/gha-public/.github/workflows/workflow-npm-oidc-publish.yml@main
-    permissions:
-      id-token: write
-      contents: write
-    with:
-      # Tags containing ".dev" or "-dev" (e.g. v1.2.3.dev.0, v1.2.3-dev.0) publish
-      # under the "dev" npm dist-tag instead of "latest".
-      npm-tag: ${{ (contains(github.ref_name, '.dev') || contains(github.ref_name, '-dev')) && 'dev' || 'latest' }}
-      environment: npm-release
-      run-tests: false
-      create-github-release: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Upgrade npm for OIDC trusted publishing support
+        run: npm install -g npm@^11.5.1
+
+      - name: Configure CodeArtifact npm credentials
+        uses: mapbox/gha@action-configure-codeartifact-credentials-v1
+        with:
+          repo-type: npm
+
+      - name: Install npm dependencies
+        run: npm ci --no-fund --no-audit --prefer-offline
+
+      - name: Build
+        run: npm run build --if-present
+
+      - name: Release production
+        if: ${{ !contains(github.ref_name, '.dev') && !contains(github.ref_name, '-dev') }}
+        run: npm publish
+
+      - name: Release development
+        if: ${{ contains(github.ref_name, '.dev') || contains(github.ref_name, '-dev') }}
+        run: npm publish --tag dev
