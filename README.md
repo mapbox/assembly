@@ -168,5 +168,5 @@ Development is done in the `publisher-staging` branch, but releases are made fro
   - Create a tag matching the version, prefixed with `v`. For example: `git tag v0.8.0`.
   - Push the tag: `git push origin v0.8.0`.
   - This triggers the `NPM release` GitHub Actions workflow, which publishes to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC) — no npm token needed.
-  - Tags containing `.dev` (e.g. `v0.8.0.dev.0`) publish under the npm `dev` dist-tag instead of `latest`, for testing a release without affecting `latest` consumers.
+  - Tags containing `.dev` or `-dev` (e.g. `v0.8.0.dev.0`, `v0.8.0-dev.0`) publish under the npm `dev` dist-tag instead of `latest`, for testing a release without affecting `latest` consumers.
   - Deploy the changes (`deploy.yml` runs automatically on push to `staging`/`production`). Talk to **@mapbox/frontend-platform** if you need help.

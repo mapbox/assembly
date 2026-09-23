@@ -28,11 +28,9 @@ jobs:
       id-token: write
       contents: write
     with:
-      # Tags containing ".dev" (e.g. v1.2.3.dev.0) publish under the "dev" npm dist-tag
-      # instead of "latest", same convention as core-styles.
-      npm-tag: ${{ contains(github.ref_name, '.dev') && 'dev' || 'latest' }}
+      # Tags containing ".dev" or "-dev" (e.g. v1.2.3.dev.0, v1.2.3-dev.0) publish
+      # under the "dev" npm dist-tag instead of "latest".
+      npm-tag: ${{ (contains(github.ref_name, '.dev') || contains(github.ref_name, '-dev')) && 'dev' || 'latest' }}
       environment: npm-release
       run-tests: false
-      # The tag already exists (it's what triggered this workflow), so the
-      # reusable workflow's own tag-creation step would fail - skip it.
       create-github-release: false
