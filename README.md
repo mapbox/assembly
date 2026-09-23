@@ -157,16 +157,15 @@ For other scripts, look in `package.json`.
 
 ### Releasing
 
-Development is done in the `publisher-staging` branch, but releases are made from the `publisher-production` branch. Here's how you cut a release:
+Development and releases both happen on `main` (a single branch — no more `publisher-staging`/`publisher-production` split). Here's how you cut a release:
 
-- From `publisher-staging`:
-  - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/publisher-staging/CHANGELOG.md).
-  - Increment the version key in `package.json` and `package-lock.json`.
-  - Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`.
-  - Merge these changes into the `publisher-production` branch. _Conduct the following steps from `publisher-production`_.
-- From `publisher-production`:
-  - Create a tag matching the version, prefixed with `v`. For example: `git tag v0.8.0`.
-  - Push the tag: `git push origin v0.8.0`.
-  - This triggers the `NPM release` GitHub Actions workflow, which publishes to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC) — no npm token needed.
-  - Tags containing `.dev` or `-dev` (e.g. `v0.8.0.dev.0`, `v0.8.0-dev.0`) publish under the npm `dev` dist-tag instead of `latest`, for testing a release without affecting `latest` consumers.
-  - Deploy the changes (`deploy.yml` runs automatically on push to `staging`/`production`). Talk to **@mapbox/frontend-platform** if you need help.
+- Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/main/CHANGELOG.md).
+- Increment the version key in `package.json` and `package-lock.json`.
+- Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`, and merged to `main`.
+- Create a tag matching the version, prefixed with `v`. For example: `git tag v0.8.0`.
+- Push the tag: `git push origin v0.8.0`.
+- This triggers two GitHub Actions workflows off the tag push:
+  - `NPM release`, which publishes to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC) — no npm token needed.
+  - `Deploy`, which uploads the versioned CDN build to `mapbox-assembly` (`scripts/deploy.js`) and syncs the docs site (`_site`) to `labs.mapbox.com`.
+- Tags containing `.dev` or `-dev` (e.g. `v0.8.0.dev.0`, `v0.8.0-dev.0`) are dev releases: they publish under the npm `dev` dist-tag instead of `latest`, deploy the docs site to `labs.mapbox.com-staging` instead of production, and can be cut from any branch (not just `main`) for testing.
+- Non-dev tags must point to a commit on `main`, or both workflows fail fast.
