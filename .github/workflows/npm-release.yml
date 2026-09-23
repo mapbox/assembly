@@ -1,15 +1,38 @@
 name: NPM release
 
 on:
-  workflow_dispatch:
+  push:
+    tags:
+      - '*'
 
 jobs:
+  verify-tag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify tag matches package.json version
+        run: |
+          packageVersion=$(jq -r .version package.json)
+          expectedTag="v$packageVersion"
+          if [ "${{ github.ref_name }}" != "$expectedTag" ]; then
+            echo "Tag ${{ github.ref_name }} does not match package.json version ($expectedTag expected)."
+            exit 1
+          fi
+
   npm-release:
+    needs: verify-tag
     uses: mapbox/gha-public/.github/workflows/workflow-npm-oidc-publish.yml@main
     permissions:
       id-token: write
       contents: write
     with:
-      create-github-release: true
+      # Tags containing ".dev" (e.g. v1.2.3.dev.0) publish under the "dev" npm dist-tag
+      # instead of "latest", same convention as core-styles.
+      npm-tag: ${{ contains(github.ref_name, '.dev') && 'dev' || 'latest' }}
       environment: npm-release
       run-tests: false
+      # The tag already exists (it's what triggered this workflow), so the
+      # reusable workflow's own tag-creation step would fail - skip it.
+      create-github-release: false
