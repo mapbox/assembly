@@ -57,7 +57,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::234858372212:role/assembly-deploy
+          role-to-assume: arn:aws:iam::234858372212:role/assembly-s3-access
           aws-region: us-east-1
 
       - name: Deploy CDN build (mapbox-assembly)
