@@ -4,8 +4,10 @@
   var xlinkNS = 'http://www.w3.org/1999/xlink';
 
   Assembly.iconExists = function(iconName) {
-    return new RegExp('id=[\'"]icon-' + iconName + '[\'"]').test(
-      Assembly._svgSprite
+    if (!/^[a-zA-Z0-9-]+$/.test(iconName)) return false;
+    return (
+      Assembly._svgSprite.includes('id="icon-' + iconName + '"') ||
+      Assembly._svgSprite.includes("id='icon-" + iconName + "'")
     );
   };
 
