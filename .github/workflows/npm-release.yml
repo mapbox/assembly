@@ -51,9 +51,6 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
 
-      # assembly is a public repo, so it can't use mapbox/gha (internal-visibility) -
-      # not needed anyway, since assembly's only @mapbox/* deps (batfish,
-      # eslint-config-mapbox) are public npm packages resolved straight from npmjs.
       - name: Install npm dependencies
         run: npm ci --no-fund --no-audit --prefer-offline
 
