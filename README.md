@@ -168,5 +168,5 @@ Development is done in the `publisher-staging` branch, but releases are made fro
   - Create a tag matching the version, prefixed with `v`. For example: `git tag v0.8.0`.
   - Push the tag: `git push origin v0.8.0`.
   - This triggers the `NPM release` GitHub Actions workflow, which publishes to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC) — no npm token needed.
-- Any prerelease tag (a version containing `-`, e.g. `v0.8.0-dev.0`) publishes under the npm `dev` dist-tag instead of `latest`, and can be cut from any branch (not just `publisher-production`) for testing.
+- Any prerelease tag (a version containing `-`, e.g. `v0.8.0-dev.0`) publishes under the npm `dev` dist-tag instead of `latest`, and can be cut from any branch for testing.
 - Non-dev tags must point to a commit on `publisher-production`, or the workflow fails fast.
