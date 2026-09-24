@@ -33,9 +33,8 @@ jobs:
           exit 1
 
       - name: Enforce main branch for production releases
-        # Dev releases (any prerelease version, e.g. 1.16.1-dev.0) are exempt -
-        # they're meant for testing from any branch before a real release is
-        # cut from main.
+        # Dev releases (any prerelease version, e.g. 1.16.1-dev.0) can be cut
+        # from any branch; production releases are always cut from main.
         if: ${{ !contains(github.ref_name, '-') }}
         run: |
           git fetch origin main --depth=1
@@ -49,9 +48,6 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
 
-      # assembly is a public repo, so it can't use mapbox/gha (internal-visibility) -
-      # not needed anyway, since assembly's only @mapbox/* deps (batfish,
-      # eslint-config-mapbox) are public npm packages resolved straight from npmjs.
       - name: Install npm dependencies
         run: npm ci --no-fund --no-audit --prefer-offline
 
