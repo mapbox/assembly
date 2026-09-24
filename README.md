@@ -1,12 +1,10 @@
 # Assembly
 
-<img width='200px' src='https://rawgit.com/mapbox/assembly/publisher-staging/assembly-logo.svg?v1'>
+<img width='200px' src='./assembly-logo.svg' alt="assembly logo">
 
 A CSS framework that makes the hard parts of building anything on the web easy. We define the hard parts as: managing class specificity, designing cross-browser form components that work well with each other, creating a harmonious typographic scale, maintaining a baseline grid, and keeping responsive designs simple.
 
 For usage guidelines and documentation, check out https://labs.mapbox.com/assembly/.
-
-[![Build Status](https://travis-ci.com/mapbox/assembly.svg?branch=publisher-staging)](https://travis-ci.com/mapbox/assembly)
 
 ## Browser support
 
@@ -44,7 +42,7 @@ Assembly.buildUserAssets('path/to/my/outdir', myOptions)
 - **`files`**: An array of file paths to stylesheets you would like to append to `assembly.css`. These will be processed through Assembly's PostCSS pipeline.
 - **`variables`**: An object whose properties will override and add to `src/variables.json`. Use this option to change or add variables.
   These variables are accessible in any stylesheets you append via the CSS custom properties syntax, e.g. `var(--property-name)`.
-- **`mediaQueries`**: An object whose properties will override and add to `src/mediaQueries.json`. Use this option to change or add media queries.
+- **`mediaQueries`**: An object whose properties will override and add to `src/media-queries.json`. Use this option to change or add media queries.
   These media queries are accessible in any stylesheets you append via the CSS custom media query syntax, e.g. `@media --media-query-name`.
 - **`colorVariants`**: An object or array specifying the color variants you would like added to `assembly.css`. This is documented in detail below.
 - **`icons`**: An array of icons names to include in Assembly. Names correspond to file names in `src/svgs/`. Use this option to decrease the size of assembly.js by only including the icons you need.
@@ -122,7 +120,7 @@ Assembly strives for flat, single rule declarations and avoids overrides wheneve
 
 - Keep names as short as reasonable.
 - Use real number values in utility class names to describe the value the utility class applies _in cases where the number of utility classes describing a particular property could be unlimited_. For example, `.pt6` for `padding-top: 6px` instead an abstract scale like `.pt-small` or `.pt-1`.
-- If the number of utility classes describing a property is limited and the variants are about size, Assembly classes use the suffixes `xl`, `l`, `m`, `s`, `sm`.
+- If the number of utility classes describing a property is limited and the variants are about size, Assembly classes use the suffixes `xl`, `l`, `m`, `s`, `xs`.
 - Assembly provides a reset that will affect the entire page, but other than that reset none of its rules should affect the styling of elements that don't bear Assembly classes.
 
 ### Media query class variants
@@ -159,7 +157,7 @@ For other scripts, look in `package.json`.
 
 ### Releasing
 
-Development is done in the `publisher-staging` branch, but releases are made from the `publisher-production` branch. Here's how you cut a release:
+Development is done in the `publisher-staging` branch, but releases are made from the `publisher-production` branch (these branches will go away once the old Publisher-triggered deploy is retired, in favor of a single `main` branch). Here's how you cut a release:
 
 - From `publisher-staging`:
   - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/publisher-staging/CHANGELOG.md).
@@ -167,7 +165,8 @@ Development is done in the `publisher-staging` branch, but releases are made fro
   - Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`.
   - Merge these changes into the `publisher-production` branch. _Conduct the following steps from `publisher-production`_.
 - From `publisher-production`:
-  - Create a tag. No message is necessary, since the changelog includes explanations of changes. For example: `git tag -a 0.8.0 -m ""`.
-  - Push the tag: `git push --tags`.
-  - Publish the new version on npm: `mbx npm publish`
-  - Deploy the changes. Talk to **@mapbox/frontend-platform** if you need help.
+  - Create a tag matching the version, prefixed with `v`. For example: `git tag v0.8.0`.
+  - Push the tag: `git push origin v0.8.0`.
+  - This triggers the `NPM release` GitHub Actions workflow, which publishes to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC) — no npm token needed.
+- Any prerelease tag (a version containing `-`, e.g. `v0.8.0-dev.0`) publishes under the npm `dev` dist-tag instead of `latest`, and can be cut from any branch for testing.
+- Non-dev tags must point to a commit on `publisher-production`, or the workflow fails fast.

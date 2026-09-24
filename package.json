@@ -1,7 +1,10 @@
 {
   "name": "@mapbox/assembly",
-  "version": "1.15.1",
+  "version": "1.16.0",
   "description": "A CSS framework",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "files": [
     "dist",
