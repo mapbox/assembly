@@ -157,13 +157,16 @@ For other scripts, look in `package.json`.
 
 ### Releasing
 
-Releases happen from `main`. Here's how you cut a release:
+Development is done in the `publisher-staging` branch, but releases are made from the `publisher-production` branch (these branches will go away once the old Publisher-triggered deploy is retired, in favor of a single `main` branch). Here's how you cut a release:
 
-- Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/main/CHANGELOG.md).
-- Increment the version key in `package.json` and `package-lock.json`.
-- Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`, and merged to `main`.
-- Create a tag matching the version, prefixed with `v`. For example: `git tag v0.8.0`.
-- Push the tag: `git push origin v0.8.0`.
-- This triggers the `NPM release` GitHub Actions workflow, which publishes to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC) — no npm token needed.
-- Any prerelease tag (a version containing `-`, e.g. `v0.8.0-dev.0`) publishes under the npm `dev` dist-tag instead of `latest`, and can be cut from any branch (not just `main`) for testing.
-- Non-dev tags must point to a commit on `main`, or the workflow fails fast.
+- From `publisher-staging`:
+  - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/publisher-staging/CHANGELOG.md).
+  - Increment the version key in `package.json` and `package-lock.json`.
+  - Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`.
+  - Merge these changes into the `publisher-production` branch. _Conduct the following steps from `publisher-production`_.
+- From `publisher-production`:
+  - Create a tag matching the version, prefixed with `v`. For example: `git tag v0.8.0`.
+  - Push the tag: `git push origin v0.8.0`.
+  - This triggers the `NPM release` GitHub Actions workflow, which publishes to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC) — no npm token needed.
+- Any prerelease tag (a version containing `-`, e.g. `v0.8.0-dev.0`) publishes under the npm `dev` dist-tag instead of `latest`, and can be cut from any branch (not just `publisher-production`) for testing.
+- Non-dev tags must point to a commit on `publisher-production`, or the workflow fails fast.
