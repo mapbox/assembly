@@ -32,15 +32,14 @@ jobs:
           echo "Tag ${{ github.ref_name }} does not match package.json version (expected ${{ env.versionTag }})."
           exit 1
 
-      - name: Enforce publisher-production branch for production releases
+      - name: Enforce main branch for production releases
         # Dev releases (any prerelease version, e.g. 1.16.1-dev.0) can be cut
-        # from any branch; production releases are always cut from
-        # publisher-production.
+        # from any branch; production releases are always cut from main.
         if: ${{ !contains(github.ref_name, '-') }}
         run: |
-          git fetch origin publisher-production --depth=1
-          if ! git merge-base --is-ancestor ${{ github.sha }} origin/publisher-production; then
-            echo "Production releases must be tagged from a commit on publisher-production."
+          git fetch origin main --depth=1
+          if ! git merge-base --is-ancestor ${{ github.sha }} origin/main; then
+            echo "Production releases must be tagged from a commit on main."
             exit 1
           fi
 

@@ -14,7 +14,6 @@
   "scripts": {
     "precommit": "lint-staged",
     "format": "prettier --write \"**/*.js\"",
-    "deploy": "npm run build && node scripts/deploy",
     "clean-svgs": "node scripts/clean-svgs",
     "check-size": "node scripts/check-size",
     "generate-css": "node scripts/build-color-variants.js && node scripts/build-layout-scales.js",
@@ -71,7 +70,6 @@
     "@babel/preset-react": "^7.13.13",
     "@mapbox/batfish": "^2.3.0",
     "@mapbox/eslint-config-mapbox": "^3.0.0",
-    "aws-sdk": "^2.270.1",
     "clipboard": "^2.0.1",
     "concurrently": "^3.6.0",
     "del": "^3.0.0",
