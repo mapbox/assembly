@@ -1,5 +1,5 @@
 <script setup>
-import { computed, nextTick, ref, watch } from 'vue';
+import { computed, ref } from 'vue';
 
 const props = defineProps({
   encoded: { type: String, required: true },
@@ -9,29 +9,6 @@ const props = defineProps({
 const html = computed(() => decodeURIComponent(props.encoded));
 const highlightedHtml = computed(() => decodeURIComponent(props.highlighted));
 const copied = ref(false);
-const preview = ref(null);
-
-function stripPageProseFromAnchors(root) {
-  if (!root) return;
-  Array.from(root.querySelectorAll('a')).forEach((anchor) => {
-    const nestedProse = anchor.closest('.prose');
-    if (!nestedProse || root.contains(nestedProse)) return;
-    anchor.classList.add('unprose');
-  });
-}
-
-watch(
-  html,
-  async () => {
-    await nextTick();
-    stripPageProseFromAnchors(preview.value);
-  },
-  { immediate: true }
-);
-
-watch(preview, (el) => {
-  stripPageProseFromAnchors(el);
-});
 
 async function copy() {
   await navigator.clipboard.writeText(html.value);
@@ -45,7 +22,6 @@ async function copy() {
 <template>
   <div class="unprose mb24">
     <div
-      ref="preview"
       class="example-html border border--gray-light px12 py12 round-t"
       v-html="html"
     />

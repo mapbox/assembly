@@ -2,7 +2,7 @@
 
 Create general-purpose triangle-shaped elements. Great for dialog boxes and tooltips.
 
-## Style simple small triangles
+### Style simple small triangles
 
 Style simple small triangles.
 
@@ -13,7 +13,7 @@ Style simple small triangles.
 <div class='triangle--l triangle color-pink inline-block'></div>
 ```
 
-## Style large triangles
+### Style large triangles
 
 Style large triangles.
 

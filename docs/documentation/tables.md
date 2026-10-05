@@ -2,7 +2,7 @@
 
 Use tables to display tabular data.
 
-## Apply standard table styling
+### Apply standard table styling
 
 <p class="txt-mono">`.table`</p>
 
@@ -29,7 +29,7 @@ Apply standard table styling.
 </table>
 ```
 
-## Invert a table's colors so it is legible against a dark background
+### Invert a table's colors so it is legible against a dark background
 
 Invert a table's colors so it is legible against a dark background.
 
@@ -56,7 +56,7 @@ Invert a table's colors so it is legible against a dark background.
 </div>
 ```
 
-## Any columns whose widths are *not* specified (by their top cells) will be equally distributed across the available space
+### Any columns whose widths are *not* specified (by their top cells) will be equally distributed across the available space
 
 Any columns whose widths are *not* specified (by their top cells) will be equally distributed across the available space.
 

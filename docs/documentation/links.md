@@ -4,7 +4,7 @@ Create clickable, hoverable, focusable, colored text.
 These classes are often used for actual `<a>` elements with `href` attributes,
 but might prove useful for `<button>`s, as well, depending on semantics.
 
-## Style a link
+### Style a link
 
 Style a link. By default, the `link` class turns text blue, and provides dark blue hover and active states. Change the color with a `link--{color}` modifier.
 Links are underlined when focused.
@@ -14,7 +14,7 @@ Links are underlined when focused.
 <a href='#Links' class='link link--red'>A red link</a>
 ```
 
-## Apply a darker active state to links by adding the `is-active` class
+### Apply a darker active state to links by adding the `is-active` class
 
 <p class="txt-mono">`.link.is-active`</p>
 
@@ -25,7 +25,7 @@ Apply a darker active state to links by adding the `is-active` class.
 <a href='#Links' class='link link--red is-active'>Red and active</a>
 ```
 
-## When a form element like `button` includes both the `link` class and the `disabled` attribute, it will be styled accordingly
+### When a form element like `button` includes both the `link` class and the `disabled` attribute, it will be styled accordingly
 
 <p class="txt-mono">`.link:disabled`</p>
 
