@@ -273,12 +273,26 @@ function headingOpens(tokens, tag) {
     .filter(index => index >= 0);
 }
 
-function styleHeadings(tokens) {
-  tokens.forEach(token => {
-    if (token.type !== 'heading_open') return;
-    if (token.tag === 'h1')
-      token.attrJoin('class', 'txt-h2 txt-bold mb18 pt24');
-    if (token.tag === 'h2') token.attrJoin('class', 'txt-l txt-bold pt12 mt12');
+const HEADING_CLASSES = {
+  h1: 'txt-h2 txt-bold mb18 pt24',
+  h2: 'txt-l txt-bold pt12 mt12'
+};
+
+function linkToSelf(state, heading, inline) {
+  const open = new state.Token('link_open', 'a', 1);
+  open.attrs = [['class', 'block'], ['href', `#${heading.attrGet('id')}`]];
+  inline.children = [
+    open,
+    ...inline.children,
+    new state.Token('link_close', 'a', -1)
+  ];
+}
+
+function styleHeadings(state) {
+  state.tokens.forEach((token, index) => {
+    if (token.type !== 'heading_open' || !HEADING_CLASSES[token.tag]) return;
+    token.attrJoin('class', HEADING_CLASSES[token.tag]);
+    linkToSelf(state, token, state.tokens[index + 1]);
   });
 }
 
@@ -286,7 +300,7 @@ export function documentationLayout(md) {
   md.core.ruler.push('documentation_layout', state => {
     if (!isDocPage(state.env)) return;
     expandColorGrids(state);
-    styleHeadings(state.tokens);
+    styleHeadings(state);
     headingOpens(state.tokens, 'h2')
       .reverse()
       .forEach(index => wrapIntro(state, index));
