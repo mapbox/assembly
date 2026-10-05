@@ -2,17 +2,12 @@
 import { computed, nextTick, ref, watch } from 'vue';
 
 const props = defineProps({
-  encoded: { type: String, default: '' },
-  code: { type: String, default: '' },
-  highlighted: { type: String, default: '' }
+  encoded: { type: String, required: true },
+  highlighted: { type: String, required: true }
 });
 
-const html = computed(() =>
-  (props.code || decodeURIComponent(props.encoded)).replace(/\n$/, '')
-);
-const highlightedHtml = computed(() =>
-  props.highlighted ? decodeURIComponent(props.highlighted) : ''
-);
+const html = computed(() => decodeURIComponent(props.encoded));
+const highlightedHtml = computed(() => decodeURIComponent(props.highlighted));
 const copied = ref(false);
 const preview = ref(null);
 
@@ -62,8 +57,7 @@ async function copy() {
           {{ copied ? 'Copied!' : 'Copy' }}
         </button>
       </div>
-      <div v-if="highlightedHtml" v-html="highlightedHtml" />
-      <template v-else>{{ html }}</template>
+      <div v-html="highlightedHtml" />
     </div>
   </div>
 </template>

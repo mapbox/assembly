@@ -140,4 +140,4 @@ const nav = [
   { name: 'Layout Scales', href: '/layout-scales' }
 ];
 
-export { nav, catalogLinks, exampleLinks };
+export { nav, exampleLinks };

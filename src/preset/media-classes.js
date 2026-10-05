@@ -126,6 +126,5 @@ function withMediaClasses(className) {
 
 module.exports = {
   MEDIA_VARIANT_CLASSES,
-  MEDIA_SCREEN_KEYS,
   withMediaClasses
 };

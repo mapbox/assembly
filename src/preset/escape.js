@@ -8,7 +8,4 @@ function toEscapedSelector(raw) {
   return `.${escapeSelector(raw)}`;
 }
 
-module.exports = {
-  escapeSelector,
-  toEscapedSelector
-};
+module.exports = { toEscapedSelector };

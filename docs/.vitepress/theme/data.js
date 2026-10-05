@@ -30,14 +30,4 @@ function formColors() {
   return ALL_COLORS.filter(color => !isNotAccessibleForForms(color));
 }
 
-export {
-  ALL_COLORS,
-  scales,
-  colorNames,
-  scaleToken,
-  buttonColors,
-  formColors,
-  isNotAccessibleForButtons,
-  isNotAccessibleForForms,
-  isNotAccessibleExceptBg
-};
+export { ALL_COLORS, scales, colorNames, scaleToken, buttonColors, formColors };

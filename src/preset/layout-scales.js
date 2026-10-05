@@ -153,4 +153,4 @@ function layoutScaleRules() {
   return { rules, safelist };
 }
 
-module.exports = { layoutScaleRules, cssValue, fractionName };
+module.exports = { layoutScaleRules };
