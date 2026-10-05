@@ -1,19 +1,9 @@
 import {
   ALL_COLORS,
-  isNotAccessibleExceptBg,
   isNotAccessibleForButtons,
   isNotAccessibleForForms
 } from '../../../src/preset/color-utils.js';
 import scales from '../../../src/scales.json';
-
-function colorNames(kind) {
-  if (kind === 'color') {
-    return ALL_COLORS.filter(color => !isNotAccessibleExceptBg(color)).concat([
-      'text'
-    ]);
-  }
-  return ALL_COLORS.slice();
-}
 
 function scaleToken(value) {
   if (Array.isArray(value)) {
@@ -30,4 +20,4 @@ function formColors() {
   return ALL_COLORS.filter(color => !isNotAccessibleForForms(color));
 }
 
-export { ALL_COLORS, scales, colorNames, scaleToken, buttonColors, formColors };
+export { ALL_COLORS, scales, scaleToken, buttonColors, formColors };

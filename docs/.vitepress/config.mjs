@@ -85,6 +85,7 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico` }]
   ],
   outDir: '../_site',
+  srcExclude: ['documentation/!(index).md'],
   cleanUrls: true,
   appearance: false,
   vite: {

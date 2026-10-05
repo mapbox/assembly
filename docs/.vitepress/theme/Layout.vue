@@ -90,7 +90,7 @@ function useProse() {
     current !== '/' &&
     current !== '/catalog' &&
     !current.startsWith('/examples') &&
-    !(current.startsWith('/documentation') && current !== '/documentation')
+    !current.startsWith('/documentation')
   );
 }
 

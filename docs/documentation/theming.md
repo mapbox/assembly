@@ -39,9 +39,9 @@ Make a border dashed instead of solid.
 <div class='border border--dash'>border--dash</div>
 ```
 
-### Apply a [color](/documentation/colors) to a border
+### Apply a [color](/documentation/#colors) to a border
 
-Apply a [color](/documentation/colors) to a border.
+Apply a [color](/documentation/#colors) to a border.
 
 ```example
 <div class='border border--red'>border--red</div>

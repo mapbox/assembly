@@ -8,8 +8,8 @@ The `input` class styles input types `text`, `password`, `email`,
 `datetime`, `search`, `tel`, `url`, and `number`. The `textarea` class styles the `<textarea>` element.
 
 Both form elements fill the width of their container, by default.
-You should adjust the widths of inputs and textareas by adding [`w*` width classes](/documentation/layout#sizing)
-or controlling the widths of their containers, e.g. with [`grid` classes](/documentation/layout#grid).
+You should adjust the widths of inputs and textareas by adding [`w*` width classes](/documentation/#sizing)
+or controlling the widths of their containers, e.g. with [`grid` classes](/documentation/#grid).
 
 ### Style a text input. Set the color of the border with a `input--border-{color}` modifier (`*-dark` colors are not available)
 
@@ -175,7 +175,7 @@ The `range` class styles the `<input type='range'>` element. The markup must fit
 Style a range element.
 
 The best way to vertically align range elements with other items on the same row is to wrap the row in a `flex flex--center-cross` container.
-For more details, read about the [flexbox classes](/documentation/layout#flexbox).
+For more details, read about the [flexbox classes](/documentation/#flexbox).
 
 ```example
 <div class='range'>

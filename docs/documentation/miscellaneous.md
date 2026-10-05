@@ -79,9 +79,9 @@ Apply a subtle animated transition when changing CSS properties on an element. S
 <div class='bg-blue-on-hover transition'>Hover over me</div>
 ```
 
-### Disable an animated transition on elements like [`btn`](/documentation/buttons) that have default transitions
+### Disable an animated transition on elements like [`btn`](/documentation/#buttons) that have default transitions
 
-Disable an animated transition on elements like [`btn`](/documentation/buttons) that have default transitions.
+Disable an animated transition on elements like [`btn`](/documentation/#buttons) that have default transitions.
 
 ```example
 <div class='btn transition-none'>transition-none</div>

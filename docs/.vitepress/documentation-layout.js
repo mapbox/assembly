@@ -1,8 +1,23 @@
+import {
+  ALL_COLORS,
+  isNotAccessibleExceptBg
+} from '../../src/preset/color-utils.js';
 import { htmlExampleMarkup } from './html-example-markup.js';
+
+const COLOR_GRIDS = {
+  color: {
+    names: ALL_COLORS.filter(color => !isNotAccessibleExceptBg(color)).concat(
+      'text'
+    ),
+    gridClass: 'txt-s grid',
+    itemClass: ''
+  },
+  bg: { names: ALL_COLORS, gridClass: 'grid', itemClass: ' py6 px6' }
+};
 
 function isDocPage(env) {
   const file = env?.relativePath || '';
-  return file.startsWith('documentation/') && file !== 'documentation/index.md';
+  return file.startsWith('documentation/');
 }
 
 function headingCloseIndex(tokens, openIndex) {
@@ -26,6 +41,38 @@ function htmlToken(state, content) {
   const token = new state.Token('html_block', '', 0);
   token.content = content;
   return token;
+}
+
+function fenceToken(state, info, content) {
+  const token = new state.Token('fence', 'code', 0);
+  token.info = info;
+  token.content = content;
+  return token;
+}
+
+function expandColorGrids(state) {
+  state.tokens = state.tokens.flatMap(token => {
+    const [kind, prefix] = token.info.trim().split(/\s+/);
+    if (token.type !== 'fence' || kind !== 'color-grid') return [token];
+    const { names, gridClass, itemClass } = COLOR_GRIDS[prefix];
+    const classes = names.map(name => `${prefix}-${name}`);
+    const items = classes.map(
+      name => `  <div class='col w-1/4 ${name}${itemClass}'>${name}</div>`
+    );
+    return [
+      htmlToken(
+        state,
+        `<p class="txt-mono">${classes
+          .map(name => `\`.${name}\``)
+          .join(' ')}</p>\n`
+      ),
+      fenceToken(
+        state,
+        'example',
+        `<div class='${gridClass}'>\n${items.join('\n')}\n</div>\n`
+      )
+    ];
+  });
 }
 
 function tokenText(token) {
@@ -91,13 +138,14 @@ function unique(values) {
   return values.filter((value, index) => values.indexOf(value) === index);
 }
 
-function selectorsFromExample(content, file) {
+function selectorsFromExample(content, section) {
   const classes = unique(classesFromExample(content));
-  const kept = file.includes('typography.md')
-    ? classes.filter(name =>
-        /^(txt-|align-|pre$|pre--|prose|unprose)/.test(name)
-      )
-    : classes.filter(name => !isDemoChrome(name));
+  const kept =
+    section === 'Typography'
+      ? classes.filter(name =>
+          /^(txt-|align-|pre$|pre--|prose|unprose)/.test(name)
+        )
+      : classes.filter(name => !isDemoChrome(name));
   return (kept.length > 0 ? kept : classes).map(name => `.${name}`);
 }
 
@@ -108,12 +156,20 @@ function exampleContent(tokens) {
   return fence ? fence.content : '';
 }
 
-function entrySelectors(inner, file) {
+function entrySelectors(inner, section) {
   const fromMono = unique(selectorsFromMono(inner));
   if (fromMono.length > 0) return fromMono;
   const example = exampleContent(inner);
   if (!example) return [];
-  return selectorsFromExample(example, file);
+  return selectorsFromExample(example, section);
+}
+
+function sectionTitle(tokens, index) {
+  const h1 = tokens.findLastIndex(
+    (token, i) =>
+      i < index && token.type === 'heading_open' && token.tag === 'h1'
+  );
+  return headingText(tokens, h1);
 }
 
 function escapeAttr(value) {
@@ -130,7 +186,10 @@ function pillsHtml(selectors) {
       : 'mr3 py3 color-blue-deep round bg-blue-faint mb3 inline-block px6';
   return selectors
     .map(selector => {
-      const id = selector.trim().replace(/\s+/g, '-').replace(/\./g, '');
+      const id = selector
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/\./g, '');
       const label = escapeAttr(selector.replace(/\\/g, ''));
       return `<span id="${id}" class="${pillClass}">${label}</span>`;
     })
@@ -144,7 +203,7 @@ function wrapH3Entry(state, openIndex, md) {
   const nextOpen = nextHeadingOpen(tokens, closeIndex + 1);
   const end = nextOpen === -1 ? tokens.length : nextOpen;
   const inner = tokens.slice(closeIndex + 1, end);
-  const selectors = entrySelectors(inner, state.env?.relativePath || '');
+  const selectors = entrySelectors(inner, sectionTitle(tokens, openIndex));
   const fenceAt = inner.findIndex(
     token => token.type === 'fence' && token.info.trim() === 'example'
   );
@@ -156,10 +215,7 @@ function wrapH3Entry(state, openIndex, md) {
   const descHtml = md.renderer.render(description, md.options, state.env);
   const exampleHtml = rest
     .filter(token => token.type === 'fence' && token.info.trim() === 'example')
-    .map(
-      token =>
-        htmlExampleMarkup(md.options.highlight, token.content)
-    )
+    .map(token => htmlExampleMarkup(md.options.highlight, token.content))
     .join('\n');
   tokens.splice(
     openIndex,
@@ -169,7 +225,9 @@ function wrapH3Entry(state, openIndex, md) {
       `<div class="border-t border-t--2 border--gray-faint">
 <div class="grid-mxl grid--gut18-mxl pt36 pb60">
 <div class="col w-1/3-mxl pr18-ml mb6">
-<div class="txt-mono hmax240 overflow-auto scroll-styled">${pillsHtml(selectors)}</div>
+<div class="txt-mono hmax240 overflow-auto scroll-styled">${pillsHtml(
+        selectors
+      )}</div>
 </div>
 <div class="col w-2/3-mxl">
 <div class="mb24 prose">${descHtml}</div>
@@ -208,8 +266,9 @@ function wrapAllH3(state, md) {
 
 function headingOpens(tokens, tag) {
   return tokens
-    .map((token, index) =>
-      token.type === 'heading_open' && token.tag === tag ? index : -1
+    .map(
+      (token, index) =>
+        token.type === 'heading_open' && token.tag === tag ? index : -1
     )
     .filter(index => index >= 0);
 }
@@ -217,7 +276,8 @@ function headingOpens(tokens, tag) {
 function styleHeadings(tokens) {
   tokens.forEach(token => {
     if (token.type !== 'heading_open') return;
-    if (token.tag === 'h1') token.attrJoin('class', 'txt-h2 txt-bold mb18 pt24');
+    if (token.tag === 'h1')
+      token.attrJoin('class', 'txt-h2 txt-bold mb18 pt24');
     if (token.tag === 'h2') token.attrJoin('class', 'txt-l txt-bold pt12 mt12');
   });
 }
@@ -225,11 +285,14 @@ function styleHeadings(tokens) {
 export function documentationLayout(md) {
   md.core.ruler.push('documentation_layout', state => {
     if (!isDocPage(state.env)) return;
+    expandColorGrids(state);
     styleHeadings(state.tokens);
     headingOpens(state.tokens, 'h2')
       .reverse()
       .forEach(index => wrapIntro(state, index));
-    headingOpens(state.tokens, 'h1').forEach(index => wrapIntro(state, index));
+    headingOpens(state.tokens, 'h1')
+      .reverse()
+      .forEach(index => wrapIntro(state, index));
     wrapAllH3(state, md);
   });
 }

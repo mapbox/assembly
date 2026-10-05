@@ -32,15 +32,19 @@ const catalogLinks = [
   { name: 'Triangles', id: 'Triangles' }
 ];
 
-function headingItems(href, names) {
-  return names.map(name => ({
+function docLink(name) {
+  return {
     name,
-    href: `${href}#${name
+    href: `/documentation/#${name
       .toLowerCase()
       .replace(/&/g, '')
       .replace(/\s+/g, '-')
       .replace(/-+/g, '-')}`
-  }));
+  };
+}
+
+function docSection(name, headings = []) {
+  return Object.assign(docLink(name), { items: headings.map(docLink) });
 }
 
 const nav = [
@@ -59,68 +63,41 @@ const nav = [
     href: '/documentation/',
     isDoc: true,
     items: [
-      {
-        name: 'Typography',
-        href: '/documentation/typography',
-        items: headingItems('/documentation/typography', [
-          'Type basics',
-          'Type utils',
-          'Prose'
-        ])
-      },
-      {
-        name: 'Layout',
-        href: '/documentation/layout',
-        items: headingItems('/documentation/layout', [
-          'Grid',
-          'Display',
-          'Positioning',
-          'Margins',
-          'Padding',
-          'Sizing',
-          'Flexbox',
-          'Layout utils'
-        ])
-      },
-      {
-        name: 'Theming',
-        href: '/documentation/theming',
-        items: headingItems('/documentation/theming', [
-          'Borders',
-          'Border radius',
-          'Shadows',
-          'Cursors',
-          'Opacity'
-        ])
-      },
-      {
-        name: 'Colors',
-        href: '/documentation/colors',
-        items: headingItems('/documentation/colors', [
-          'Text colors',
-          'Background colors'
-        ])
-      },
-      { name: 'Icons', href: '/documentation/icons' },
-      { name: 'Buttons', href: '/documentation/buttons' },
-      { name: 'Links', href: '/documentation/links' },
-      {
-        name: 'Forms',
-        href: '/documentation/forms',
-        items: headingItems('/documentation/forms', [
-          'Inputs & textareas',
-          'Selects',
-          'Ranges',
-          'Checkboxes',
-          'Radio buttons',
-          'Switches',
-          'Toggle group'
-        ])
-      },
-      { name: 'Tables', href: '/documentation/tables' },
-      { name: 'Animations', href: '/documentation/animations' },
-      { name: 'Triangles', href: '/documentation/triangles' },
-      { name: 'Miscellaneous', href: '/documentation/miscellaneous' }
+      docSection('Typography', ['Type basics', 'Type utils', 'Prose']),
+      docSection('Layout', [
+        'Grid',
+        'Display',
+        'Positioning',
+        'Margins',
+        'Padding',
+        'Sizing',
+        'Flexbox',
+        'Layout utils'
+      ]),
+      docSection('Theming', [
+        'Borders',
+        'Border radius',
+        'Shadows',
+        'Cursors',
+        'Opacity'
+      ]),
+      docSection('Colors', ['Text colors', 'Background colors']),
+      docSection('Icons'),
+      docSection('Buttons'),
+      docSection('Links'),
+      docSection('Forms', [
+        'Inputs & textareas',
+        'Selects',
+        'Ranges',
+        'Checkboxes',
+        'Radio buttons',
+        'Switches',
+        'Toggle group'
+      ]),
+      docSection('Tables'),
+      docSection('Animations'),
+      docSection('Triangles'),
+      docSection('Miscellaneous')
     ]
   },
   {

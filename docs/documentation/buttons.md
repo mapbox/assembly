@@ -5,14 +5,14 @@ Not a `<div>` or `<span>` with a click handler, and not an `<a>` without an `hre
 `<button>` is semantically appropriate for anything with a click handler that changes the page dynamically.
 `<button>`s receive focus, handle keyboard events, can be disabled, and are fully accessible.
 
-For actual links, you should usually use an `<a>` with the [`link`](/documentation/links) class.
+For actual links, you should usually use an `<a>` with the [`link`](/documentation/#links) class.
 
 ### Apply a button style
 
 Apply a button style.
 To change the background color of a button, use a `btn--{color}` modifier  (`*-deep` and `*-dark` colors are not available).
-Buttons have white text unless combined with a [`color-*`](/documentation/colors#text-colors) class.
-Buttons have fully rounded corners unless combined with a [`round-*`](/documentation/theming#border-radius) class.
+Buttons have white text unless combined with a [`color-*`](/documentation/#text-colors) class.
+Buttons have fully rounded corners unless combined with a [`round-*`](/documentation/#border-radius) class.
 
 ```example
 <button class='btn'>Default</button>
