@@ -1,0 +1,150 @@
+'use strict';
+
+const layoutScales = require('../scales.json');
+const { withMediaClasses } = require('./media-classes');
+
+function cssValue(v) {
+  if (v === '-full') return '100%';
+  if (v === '-auto') return 'auto';
+  if (v === '-none') return 'none';
+  if (typeof v === 'string' && v.indexOf('neg') !== -1) {
+    return `-${v.replace('-neg', '')}px`;
+  }
+  if (v === 0 || v === '0') return '0';
+  return `${v}px`;
+}
+
+function important(value) {
+  return `${value} !important`;
+}
+
+function fractionName(raw) {
+  return raw.replace(/\\/g, '');
+}
+
+function addStaticScale(rules, safelist, className, decls) {
+  rules.push([className, decls]);
+  withMediaClasses(className).forEach(token => safelist.push(token));
+}
+
+function layoutScaleRules() {
+  const rules = [];
+  const safelist = [];
+
+  layoutScales.gutter.forEach(scale => {
+    withMediaClasses(`grid--gut${scale}`).forEach(token =>
+      safelist.push(token)
+    );
+  });
+  const gutterScale = new Set(layoutScales.gutter.map(String));
+  rules.push([
+    /^grid--gut(.+)$/,
+    ([, scale], { symbols }) => {
+      if (!gutterScale.has(scale)) return;
+      const val = cssValue(scale);
+      return [
+        { 'margin-left': `-${val}` },
+        {
+          [symbols.selector]: s =>
+            ['col', 'col-mm', 'col-ml', 'col-mxl']
+              .map(col => `${s} > .${col}`)
+              .join(', '),
+          'padding-left': val
+        }
+      ];
+    }
+  ]);
+
+  layoutScales.margin.forEach(scale => {
+    const value = important(cssValue(scale));
+    addStaticScale(rules, safelist, `my${scale}`, {
+      'margin-top': value,
+      'margin-bottom': value
+    });
+    addStaticScale(rules, safelist, `mx${scale}`, {
+      'margin-left': value,
+      'margin-right': value
+    });
+    addStaticScale(rules, safelist, `mt${scale}`, { 'margin-top': value });
+    addStaticScale(rules, safelist, `mr${scale}`, { 'margin-right': value });
+    addStaticScale(rules, safelist, `mb${scale}`, { 'margin-bottom': value });
+    addStaticScale(rules, safelist, `ml${scale}`, { 'margin-left': value });
+  });
+
+  layoutScales.fractions.forEach(scale => {
+    const name = fractionName(scale[0]);
+    const value = important(`${scale[1]}%`);
+    addStaticScale(rules, safelist, `mr-${name}`, { 'margin-right': value });
+    addStaticScale(rules, safelist, `ml-${name}`, { 'margin-left': value });
+    addStaticScale(rules, safelist, `w-${name}`, { width: value });
+    addStaticScale(rules, safelist, `h-viewport-${name}`, {
+      height: important(`${scale[1]}vh`)
+    });
+    addStaticScale(rules, safelist, `hmax-viewport-${name}`, {
+      'max-height': important(`${scale[1]}vh`)
+    });
+  });
+
+  layoutScales.padding.forEach(scale => {
+    const value = important(cssValue(scale));
+    addStaticScale(rules, safelist, `py${scale}`, {
+      'padding-top': value,
+      'padding-bottom': value
+    });
+    addStaticScale(rules, safelist, `px${scale}`, {
+      'padding-left': value,
+      'padding-right': value
+    });
+    addStaticScale(rules, safelist, `pt${scale}`, { 'padding-top': value });
+    addStaticScale(rules, safelist, `pr${scale}`, { 'padding-right': value });
+    addStaticScale(rules, safelist, `pb${scale}`, { 'padding-bottom': value });
+    addStaticScale(rules, safelist, `pl${scale}`, { 'padding-left': value });
+  });
+
+  layoutScales.width.forEach(scale => {
+    addStaticScale(rules, safelist, `w${scale}`, {
+      width: important(cssValue(scale))
+    });
+  });
+
+  layoutScales.maxWidth.forEach(scale => {
+    addStaticScale(rules, safelist, `wmax${scale}`, {
+      'max-width': important(cssValue(scale))
+    });
+  });
+
+  layoutScales.minWidth.forEach(scale => {
+    addStaticScale(rules, safelist, `wmin${scale}`, {
+      'min-width': important(cssValue(scale))
+    });
+  });
+
+  layoutScales.height.forEach(scale => {
+    addStaticScale(rules, safelist, `h${scale}`, {
+      height: important(cssValue(scale))
+    });
+  });
+
+  layoutScales.maxHeight.forEach(scale => {
+    addStaticScale(rules, safelist, `hmax${scale}`, {
+      'max-height': important(cssValue(scale))
+    });
+  });
+
+  layoutScales.minHeight.forEach(scale => {
+    addStaticScale(rules, safelist, `hmin${scale}`, {
+      'min-height': important(cssValue(scale))
+    });
+  });
+
+  addStaticScale(rules, safelist, 'h-viewport-full', {
+    height: important('100vh')
+  });
+  addStaticScale(rules, safelist, 'hmax-viewport-full', {
+    'max-height': important('100vh')
+  });
+
+  return { rules, safelist };
+}
+
+module.exports = { layoutScaleRules };
