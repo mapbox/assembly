@@ -63,7 +63,7 @@ module.exports = {
 
 The prebuilt `assembly.css` is generated with `presetAssembly({ safelist: true })` so every class is present. Do not pass `safelist: true` in an app that wants on-demand CSS.
 
-`options.variables`, `options.colorVariants`, and `options.files` match the `buildUserAssets` options of the same names.
+`options.colorVariants` and `options.files` match the `buildUserAssets` options of the same names. Variable overrides are applied in the PostCSS step above, not by the preset.
 
 ### buildUserAssets(outdir[, options])
 

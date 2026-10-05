@@ -100,7 +100,6 @@ async function buildCss(options) {
     : defaultMediaQueries;
 
   const generatedCss = await generateUnoCss({
-    variables: opts.variables,
     colorVariants: opts.colorVariants,
     files: opts.files
   });

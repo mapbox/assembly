@@ -32,7 +32,6 @@ function mediaSafelist(utilityTokens) {
  * UnoCSS preset that emits Assembly's class names and design tokens.
  *
  * @param {Object} [options]
- * @param {Object} [options.variables] - Variable overrides (same as buildUserAssets).
  * @param {Object|Array} [options.colorVariants] - Color variant config.
  * @param {Array<string>} [options.files] - Extra stylesheets appended after Assembly.
  * @param {boolean} [options.safelist=false] - When true, emit every Assembly
