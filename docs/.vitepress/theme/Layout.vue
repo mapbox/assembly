@@ -100,13 +100,7 @@ function useProse() {
 onMounted(() => {
   updateHash();
   window.addEventListener('hashchange', updateHash);
-  if (document.querySelector('script[data-assembly]')) return;
-  const script = document.createElement('script');
-  script.src = `${import.meta.env.BASE_URL}assembly.js`;
-  script.async = true;
-  script.defer = true;
-  script.dataset.assembly = 'true';
-  document.body.appendChild(script);
+  import('../../../dist/assembly.js');
 });
 
 onUnmounted(() => {

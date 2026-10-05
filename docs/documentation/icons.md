@@ -4,7 +4,9 @@ Assembly uses an SVG icon sprite. To load the sprite, you must must include [`as
 
 **Please read [the Icons page](/icons) to learn more about the available icons and the [Javascript API section of the home page](/#javascript-api) to learn how to use them.**
 
-### The `icon` class must be appled to an `<svg>` element
+```selectors
+.icon
+```
 
 The `icon` class must be appled to an `<svg>` element.
 Inside the `<svg>`, insert a `<use>` element whose `xlink:href` attribute

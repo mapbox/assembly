@@ -12,34 +12,6 @@ const pkg = JSON.parse(
   fs.readFileSync(path.resolve(configDir, '../../package.json'), 'utf8')
 );
 const base = '/assembly/';
-const distJs = path.resolve(configDir, '../../dist/assembly.js');
-
-function assemblyJsPlugin() {
-  return {
-    name: 'assembly-js',
-    configureServer(server) {
-      server.middlewares.use((req, res, next) => {
-        const url = (req.url || '').split('?')[0];
-        if (url !== '/assembly.js' && url !== '/assembly/assembly.js') {
-          next();
-          return;
-        }
-        if (!fs.existsSync(distJs)) {
-          next();
-          return;
-        }
-        res.setHeader('Content-Type', 'application/javascript');
-        fs.createReadStream(distJs).pipe(res);
-      });
-    },
-    closeBundle() {
-      const outDir = path.resolve(configDir, '../../_site');
-      if (fs.existsSync(distJs) && fs.existsSync(outDir)) {
-        fs.copyFileSync(distJs, path.join(outDir, 'assembly.js'));
-      }
-    }
-  };
-}
 
 function packageVersion(md) {
   md.core.ruler.push('package_version', state => {
@@ -75,7 +47,6 @@ export default defineConfig({
   cleanUrls: true,
   appearance: false,
   vite: {
-    plugins: [assemblyJsPlugin()],
     server: {
       fs: {
         allow: ['..']

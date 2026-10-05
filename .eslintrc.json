@@ -3,6 +3,12 @@
     "@mapbox/eslint-config-mapbox",
     "prettier"
   ],
+  "rules": {
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      { "ignores": ["dynamicImport"] }
+    ]
+  },
   "overrides": [
     {
       "files": ["*.mjs", "docs/.vitepress/**/*.js"],

@@ -2,8 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execFile } = require('child_process');
-const { promisify } = require('util');
 const postcss = require('postcss');
 const csso = require('csso');
 const reporter = require('postcss-reporter');
@@ -13,8 +11,7 @@ const postcssCustomMedia = require('postcss-custom-media');
 const defaultVariables = require('./variables');
 const defaultMediaQueries = require('./media-queries');
 const timelog = require('./timelog');
-
-const execFileAsync = promisify(execFile);
+const { presetAssembly } = require('./preset');
 
 const DEFAULT_BROWSERS = [
   'last 4 Chrome versions',
@@ -27,14 +24,13 @@ const DEFAULT_BROWSERS = [
   'not dead'
 ];
 
-// @unocss/core is ESM-only, and Jest can't load it in-process.
 async function generateUnoCss(presetOptions) {
-  const { stdout } = await execFileAsync(
-    process.execPath,
-    [path.join(__dirname, 'generate-uno.mjs'), JSON.stringify(presetOptions)],
-    { maxBuffer: 20 * 1024 * 1024 }
-  );
-  return stdout;
+  const { createGenerator } = await import('@unocss/core');
+  const uno = await createGenerator({
+    presets: [presetAssembly(presetOptions)]
+  });
+  const { css } = await uno.generate('', { safelist: true, preflights: true });
+  return css;
 }
 
 /**
@@ -74,7 +70,8 @@ async function buildCss(options) {
 
   const generatedCss = await generateUnoCss({
     colorVariants: opts.colorVariants,
-    files: opts.files
+    files: opts.files,
+    safelist: true
   });
 
   const postcssPlugins = [

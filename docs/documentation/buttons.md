@@ -7,7 +7,9 @@ Not a `<div>` or `<span>` with a click handler, and not an `<a>` without an `hre
 
 For actual links, you should usually use an `<a>` with the [`link`](/documentation/#links) class.
 
-### Apply a button style
+```selectors
+.btn
+```
 
 Apply a button style.
 To change the background color of a button, use a `btn--{color}` modifier  (`*-deep` and `*-dark` colors are not available).
@@ -24,7 +26,9 @@ Buttons have fully rounded corners unless combined with a [`round-*`](/documenta
 </div>
 ```
 
-### Modify a button so its text and borders are colored and its background transparent
+```selectors
+.btn--stroke
+```
 
 Modify a button so its text and borders are colored and its background transparent.
 The border color and text color will always match.
@@ -39,7 +43,9 @@ To change the text and border color, use a `btn--{color}` modifier (`*-deep` col
 </div>
 ```
 
-### Make a button small
+```selectors
+.btn--s
+```
 
 Make a button small.
 
@@ -47,9 +53,10 @@ Make a button small.
 <button class='btn btn--s'>Small</button>
 ```
 
-### Apply a darker active state to buttons by adding the `is-active` class
-
-<p class="txt-mono">`.btn.is-active` `.btn--stroke.is-active`</p>
+```selectors
+.btn.is-active
+.btn--stroke.is-active
+```
 
 Apply a darker active state to buttons by adding the `is-active` class.
 
@@ -60,9 +67,9 @@ Apply a darker active state to buttons by adding the `is-active` class.
 <button class='btn btn--stroke btn--red is-active'>Red and active</button>
 ```
 
-### When a button has the `disabled` attribute, it will be styled accordingly
-
-<p class="txt-mono">`.btn:disabled`</p>
+```selectors
+.btn:disabled
+```
 
 When a button has the `disabled` attribute, it will be styled accordingly.
 
@@ -70,7 +77,9 @@ When a button has the `disabled` attribute, it will be styled accordingly.
 <button disabled class='btn'>Disabled button</button>
 ```
 
-### Create pill button groups
+```selectors
+.btn--pill-stroke
+```
 
 Create pill button groups.
 Pill groups must be wrapped in a `inline-flex` container.

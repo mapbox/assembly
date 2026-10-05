@@ -11,9 +11,9 @@ Both form elements fill the width of their container, by default.
 You should adjust the widths of inputs and textareas by adding [`w*` width classes](/documentation/#sizing)
 or controlling the widths of their containers, e.g. with [`grid` classes](/documentation/#grid).
 
-### Style a text input. Set the color of the border with a `input--border-{color}` modifier (`*-dark` colors are not available)
-
-<p class="txt-mono">`.input`</p>
+```selectors
+.input
+```
 
 Style a text input. Set the color of the border with a `input--border-{color}` modifier (`*-dark` colors are not available).
 
@@ -22,7 +22,9 @@ Style a text input. Set the color of the border with a `input--border-{color}` m
 <input class='input input--border-green w240' placeholder='green' />
 ```
 
-### Make an input small
+```selectors
+.input--s
+```
 
 Make an input small.
 
@@ -30,7 +32,9 @@ Make an input small.
 <input class='input input--s' placeholder='small' />
 ```
 
-### Style a textarea. Set the color of the border with a `textarea--border-{color}` modifier (`*-deep` and `*-dark` colors are not available)
+```selectors
+.textarea
+```
 
 Style a textarea. Set the color of the border with a `textarea--border-{color}` modifier (`*-deep` and `*-dark` colors are not available).
 
@@ -39,7 +43,9 @@ Style a textarea. Set the color of the border with a `textarea--border-{color}` 
 <textarea placeholder='pink' class='textarea textarea--border-pink w240'></textarea>
 ```
 
-### Make a textarea extra small
+```selectors
+.textarea--s
+```
 
 Make a textarea extra small.
 
@@ -47,9 +53,11 @@ Make a textarea extra small.
 <textarea class='textarea textarea--s'>small textarea</textarea>
 ```
 
-### When `input` and `textarea` elements have a `disabled` attribute, they will be styled accordingly
-
-<p class="txt-mono">`.input:disabled` `.textarea:disabled` `.select--stroke:disabled`</p>
+```selectors
+.input:disabled
+.textarea:disabled
+.select--stroke:disabled
+```
 
 When `input` and `textarea` elements have a `disabled` attribute, they will be styled accordingly.
 
@@ -58,9 +66,10 @@ When `input` and `textarea` elements have a `disabled` attribute, they will be s
 <textarea disabled class='textarea' placeholder='disabled' value='Disabled'>Disabled text</textarea>
 ```
 
-### When `input` and `textarea` elements have a `readonly` attribute, they will be styled accordingly
-
-<p class="txt-mono">`.input[readonly]` `.textarea[readonly]`</p>
+```selectors
+.input[readonly]
+.textarea[readonly]
+```
 
 When `input` and `textarea` elements have a `readonly` attribute, they will be styled accordingly.
 
@@ -76,7 +85,11 @@ The select component styles the `<select>` element. The markup must fit the foll
 - A `<select>` element with the `select` class.
 - A `<div>` with the `select-arrow` class.
 
-### Style a select component
+```selectors
+.select-container
+.select
+.select-arrow
+```
 
 Style a select component.
 Set the text and arrow color by adding a `select--{color}` modifier to the `select` element (`*-dark` colors are not available).
@@ -98,9 +111,9 @@ Set the text and arrow color by adding a `select--{color}` modifier to the `sele
 </div>
 ```
 
-### Make a select component small
-
-<p class="txt-mono">`.select--s + .select-arrow`</p>
+```selectors
+.select--s
+```
 
 Make a select component small.
 
@@ -114,9 +127,9 @@ Make a select component small.
 </div>
 ```
 
-### Modify a select component so that it has a border
-
-<p class="txt-mono">`.select--stroke .select--s`</p>
+```selectors
+.select--stroke
+```
 
 Modify a select component so that it has a border.
 Set the border and arrow color by adding a `select--{color}` modifier to the `select` element along with the `select--stroke` modifier (`*-dark` colors are not available).
@@ -139,9 +152,9 @@ Note that the `select--stroke` modifier changes how the color modifier is interp
 </div>
 ```
 
-### When the `select` element has the `disabled` attribute, the component will be styled accordingly
-
-<p class="txt-mono">`.select:disabled`</p>
+```selectors
+.select:disabled
+```
 
 When the `select` element has the `disabled` attribute, the component will be styled accordingly.
 
@@ -168,9 +181,9 @@ The `range` class styles the `<input type='range'>` element. The markup must fit
 - A wrapping `<div>` with the `range` class.
 - An `<input type='range'>` element.
 
-### Style a range element
-
-<p class="txt-mono">`.range > input`</p>
+```selectors
+.range
+```
 
 Style a range element.
 
@@ -183,9 +196,9 @@ For more details, read about the [flexbox classes](/documentation/#flexbox).
 </div>
 ```
 
-### Make a range element small
-
-<p class="txt-mono">`.range--s`</p>
+```selectors
+.range--s
+```
 
 Make a range element small.
 
@@ -195,9 +208,11 @@ Make a range element small.
 </div>
 ```
 
-### When a range element has the `disabled` attribute, it will be styled accordingly
+```selectors
+.range:disabled
+```
 
-<p class="txt-mono">`.range:disabled`</p>
+When a range element has the `disabled` attribute, it will be styled accordingly.
 
 ```example
 <div class='range'>
@@ -214,7 +229,9 @@ The checkbox component styles the `<input type='checkbox' />` element. The marku
 - A `<div>` with the class `checkbox`
   containing an `<svg>` with the chosen icon (usually `#icon-check`).
 
-### Style a checkbox with a label
+```selectors
+.checkbox
+```
 
 Style a checkbox with a label. Change the color of the checkbox with a `checkbox--{color}` modifier (`*-dark` colors are not available).
 Adjust the line height of the checkbox to match a label with small text with the `checkbox--s-label` modifier.
@@ -236,9 +253,9 @@ Adjust the line height of the checkbox to match a label with small text with the
   </label>
 ```
 
-### When a checkbox has the `disabled` attribute, it will be styled accordingly
-
-<p class="txt-mono">`input:disabled + .checkbox`</p>
+```selectors
+input:disabled + .checkbox
+```
 
 When a checkbox has the `disabled` attribute, it will be styled accordingly.
 
@@ -265,9 +282,9 @@ The radio component styles the `<input type='radio'>` element. The markup must f
   class to separate the radio from its label.
 - A `<div>` with the class `radio`.
 
-### Style a radio button
-
-<p class="txt-mono">`.radio`</p>
+```selectors
+.radio
+```
 
 Style a radio button. Change the color of the radio button with a `radio--{color}` modifier (`*-dark` colors are not available).
 Adjust the line height of the radio button to match a label with small text with the `radio--s-label` modifier.
@@ -285,9 +302,9 @@ Adjust the line height of the radio button to match a label with small text with
 </label>
 ```
 
-### When a radio button has the `disabled` attribute, it will be styled accordingly
-
-<p class="txt-mono">`input:disabled + .radio`</p>
+```selectors
+input:disabled + .radio
+```
 
 When a radio button has the `disabled` attribute, it will be styled accordingly.
 
@@ -310,9 +327,9 @@ The switch component styles the `<input type='checkbox' />` element. The markup 
   class to separate the radio from its label.
 - A `<div>` with the class `switch`.
 
-### Style a switch
-
-<p class="txt-mono">`.switch`</p>
+```selectors
+.switch
+```
 
 Style a switch.
 Change the color of the dot when inactive, the border when inactive,
@@ -331,9 +348,9 @@ Change the color of the dot when active with a `switch--dot-{color}` modifier. A
 </label>
 ```
 
-### Make a switch control large
-
-<p class="txt-mono">`.switch--l`</p>
+```selectors
+.switch--l
+```
 
 Make a switch control large.
 
@@ -345,9 +362,9 @@ Make a switch control large.
 </label>
 ```
 
-### When a switch has the `disabled` attribute, it will be styled accordingly
-
-<p class="txt-mono">`input:disabled + .switch`</p>
+```selectors
+input:disabled + .switch
+```
 
 When a switch has the `disabled` attribute, it will be styled accordingly.
 
@@ -370,7 +387,11 @@ The toggle group component styles a set of `<input type=radio'>` elements. The m
 - For each radio option, an `<input type='radio'>`.
 - For each radio option, a `<div>` with the class `toggle`.
 
-### Style a toggle group
+```selectors
+.toggle-group
+.toggle-container
+.toggle
+```
 
 Style a toggle group.
 Change the inactive toggle text color and the active toggle background color with a `toggle--{color}` modifier (`*-dark` colors are not available).
@@ -390,7 +411,9 @@ Change the border radiuses of toggle groups inside small text with `toggle-group
 </div>
 ```
 
-### Make a toggle small
+```selectors
+.toggle--s
+```
 
 Make a toggle small.
 
@@ -407,9 +430,9 @@ Make a toggle small.
 </div>
 ```
 
-### When a toggle group input has the `disabled` attribute, it will be styled accordingly
-
-<p class="txt-mono">`input:disabled + .toggle`</p>
+```selectors
+input:disabled + .toggle
+```
 
 When a toggle group input has the `disabled` attribute, it will be styled accordingly.
 

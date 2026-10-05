@@ -22,12 +22,6 @@ function fractionName(raw) {
   return raw.replace(/\\/g, '');
 }
 
-function wrapMediaFromSelector(rawSelector, css) {
-  const media = rawSelector.match(/-m(m|l|xl)$/);
-  if (!media) return css;
-  return `@media (--${media[1]}-screen) {\n${css}\n}`;
-}
-
 function addStaticScale(rules, safelist, className, decls) {
   rules.push([className, decls]);
   withMediaClasses(className).forEach(token => safelist.push(token));
@@ -45,18 +39,19 @@ function layoutScaleRules() {
   const gutterScale = new Set(layoutScales.gutter.map(String));
   rules.push([
     /^grid--gut(.+)$/,
-    ([, scale], { rawSelector }) => {
+    ([, scale], { symbols }) => {
       if (!gutterScale.has(scale)) return;
-      const sel = `.${rawSelector}`;
       const val = cssValue(scale);
-      const css = [
-        `${sel} { margin-left: -${val}; }`,
-        `${sel} > .col,`,
-        `${sel} > .col-mm,`,
-        `${sel} > .col-ml,`,
-        `${sel} > .col-mxl { padding-left: ${val}; }`
-      ].join('\n');
-      return wrapMediaFromSelector(rawSelector, css);
+      return [
+        { 'margin-left': `-${val}` },
+        {
+          [symbols.selector]: s =>
+            ['col', 'col-mm', 'col-ml', 'col-mxl']
+              .map(col => `${s} > .${col}`)
+              .join(', '),
+          'padding-left': val
+        }
+      ];
     }
   ]);
 

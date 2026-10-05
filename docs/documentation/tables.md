@@ -2,9 +2,9 @@
 
 Use tables to display tabular data.
 
-### Apply standard table styling
-
-<p class="txt-mono">`.table`</p>
+```selectors
+.table
+```
 
 Apply standard table styling.
 
@@ -29,7 +29,9 @@ Apply standard table styling.
 </table>
 ```
 
-### Invert a table's colors so it is legible against a dark background
+```selectors
+.table--dark
+```
 
 Invert a table's colors so it is legible against a dark background.
 
@@ -56,8 +58,11 @@ Invert a table's colors so it is legible against a dark background.
 </div>
 ```
 
-### Any columns whose widths are *not* specified (by their top cells) will be equally distributed across the available space
+```selectors
+.table--fixed
+```
 
+Force the width of all columns in a table to be determined by any *designated* widths of columns in the first row, independent of each cell's content.
 Any columns whose widths are *not* specified (by their top cells) will be equally distributed across the available space.
 
 ```example

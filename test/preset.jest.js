@@ -1,12 +1,14 @@
 'use strict';
 
-const path = require('path');
-const { execFile } = require('child_process');
-const { promisify } = require('util');
 const { presetAssembly } = require('../src/preset');
 const { MEDIA_VARIANT_CLASSES } = require('../src/preset/media-classes');
 
-const execFileAsync = promisify(execFile);
+async function generateJit(markup) {
+  const { createGenerator } = await import('@unocss/core');
+  const uno = await createGenerator({ presets: [presetAssembly()] });
+  const { css } = await uno.generate(markup, { preflights: false });
+  return css;
+}
 
 describe('presetAssembly', () => {
   test('omits the full safelist in JIT mode', () => {
@@ -33,16 +35,27 @@ describe('presetAssembly', () => {
   });
 
   test('JIT generate emits only requested utilities', async () => {
-    const { stdout } = await execFileAsync(process.execPath, [
-      path.join(__dirname, 'generate-jit.mjs')
-    ]);
-    expect(stdout).toContain('.px12');
-    expect(stdout).toContain('.flex');
-    expect(stdout).toContain('.bg-blue');
-    expect(stdout).not.toContain('.mt48');
-    expect(stdout).not.toContain('.mr-2\\/5');
-    expect(stdout).not.toContain('.px24');
-    expect(stdout).not.toContain('.flex-mm');
-    expect(stdout).not.toContain('.bg-red');
+    const css = await generateJit('px12 flex bg-blue mt48 mr-2/5');
+    expect(css).toContain('.px12');
+    expect(css).toContain('.flex');
+    expect(css).toContain('.bg-blue');
+    expect(css).not.toContain('.mt48');
+    expect(css).not.toContain('.mr-2\\/5');
+    expect(css).not.toContain('.px24');
+    expect(css).not.toContain('.flex-mm');
+    expect(css).not.toContain('.bg-red');
+  });
+
+  test('media variants wrap color utilities', async () => {
+    const css = await generateJit('bg-blue-mm btn--red-ml grid--gut12-mxl');
+    expect(css).toMatch(
+      /@media \(--m-screen\)\{\n\.bg-blue-mm\{background-color:var\(--blue\) !important;\}/
+    );
+    expect(css).toContain(
+      '.btn--stroke.btn--red-ml:hover, .btn--stroke.btn--red-ml.is-active'
+    );
+    expect(css).toContain('.grid--gut12-mxl > .col');
+    expect(css).not.toMatch(/\.bg-blue\{/);
+    expect(css).not.toMatch(/\.btn--red[{:.,\s]/);
   });
 });

@@ -27,8 +27,8 @@
     "lint:js": "eslint .",
     "lint": "npm run lint:js",
     "serve": "vitepress preview docs",
-    "test:jest": "jest",
-    "jest-watch": "jest --watch",
+    "test:jest": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "jest-watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
     "test:svgs": "tape test/test-icons.tape.js | tap-spec",
     "test": "npm run lint && npm run test:svgs && npm run test:jest && npm run build:assembly"
   },

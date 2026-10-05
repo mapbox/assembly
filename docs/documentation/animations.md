@@ -2,7 +2,14 @@
 
 Animations and animation modifiers.
 
-### Transition and reaction animations. By default, these run once for 1.5 seconds
+```selectors
+.animation-pulse
+.animation-spin
+.animation-fade-in
+.animation-fade-out
+.animation-fade-in-out
+.animation-shake
+```
 
 Transition and reaction animations. By default, these run once for 1.5 seconds.
 
@@ -15,7 +22,14 @@ Transition and reaction animations. By default, these run once for 1.5 seconds.
 <div class="bg-blue inline-block mr18 w60 h60 round animation-shake animation--infinite"></div>
 ```
 
-### Animation duration modifiers
+```selectors
+.animation--speed-025
+.animation--speed-05
+.animation--speed-1
+.animation--speed-2
+.animation--speed-4
+.animation--delay
+```
 
 Animation duration modifiers.
 Change animation duration with an `animation--speed-{seconds}` modifier.
@@ -30,7 +44,9 @@ Add a 1 second delay with `animation--delay`.
 <div class="bg-blue inline-block mr18 w60 h60 round animation-spin animation--infinite animation--delay"></div>
 ```
 
-### Repeat an animation infinitely with a `animation--infinite` modifier
+```selectors
+.animation--infinite
+```
 
 Repeat an animation infinitely with a `animation--infinite` modifier.
 
