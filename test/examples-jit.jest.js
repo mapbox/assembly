@@ -60,8 +60,11 @@ describe('examples/jit', () => {
       'px24',
       'py24',
       'bg-red',
-      'grid--gut24',
-      'w-1/2',
+      'gap24',
+      'grid',
+      'grid--gut12',
+      'gridbox--cols3',
+      'gridbox--cols12',
       'flex-mm',
       'animation-pulse'
     ].forEach(name => {

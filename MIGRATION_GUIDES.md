@@ -25,6 +25,12 @@ export default defineConfig({
 
 `presetAssembly()` tree-shakes utilities from your source. The prebuilt `assembly.css` uses `presetAssembly({ safelist: true })`. Reset, forms, buttons, and other component CSS are preflight and always included.
 
+New layout utilities, additive with 1.x class names:
+
+- `gap12` / `gapx12` / `gapy12` (padding scale) for flex and CSS Grid spacing.
+- `gridbox` for CSS Grid. Keep `grid` / `col` / `grid--gut*` for the 12-column flex system.
+- `aspect-16/9`, `object-cover`, `flex--space-evenly-main`, `rotate90`, `scale50`, `translate-x12`.
+
 ## 1.0.0+
 
 Version 1.0.0 of Assembly introduces breaking changes – learn how to resolve them with this handy guide.
