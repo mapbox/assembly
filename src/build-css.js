@@ -1,9 +1,7 @@
 'use strict';
 
 const fs = require('fs');
-const os = require('os');
 const path = require('path');
-const crypto = require('crypto');
 const { execFile } = require('child_process');
 const { promisify } = require('util');
 const postcss = require('postcss');
@@ -29,39 +27,14 @@ const DEFAULT_BROWSERS = [
   'not dead'
 ];
 
-function handlePostcssError(error) {
-  if (error.name === 'CssSyntaxError') {
-    process.stderr.write(error.message + error.showSourceCode());
-    return;
-  }
-  throw error;
-}
-
-async function processWithPostcss(plugins, css, processOpts) {
-  try {
-    return await postcss(plugins).process(css, processOpts);
-  } catch (error) {
-    handlePostcssError(error);
-    throw error;
-  }
-}
-
+// @unocss/core is ESM-only, and Jest can't load it in-process.
 async function generateUnoCss(presetOptions) {
-  const optionsFile = path.join(
-    os.tmpdir(),
-    `assembly-uno-${crypto.randomBytes(8).toString('hex')}.json`
+  const { stdout } = await execFileAsync(
+    process.execPath,
+    [path.join(__dirname, 'generate-uno.mjs'), JSON.stringify(presetOptions)],
+    { maxBuffer: 20 * 1024 * 1024 }
   );
-  await fs.promises.writeFile(optionsFile, JSON.stringify(presetOptions));
-  try {
-    const { stdout } = await execFileAsync(
-      process.execPath,
-      [path.join(__dirname, 'generate-uno.mjs'), optionsFile],
-      { maxBuffer: 20 * 1024 * 1024 }
-    );
-    return stdout;
-  } finally {
-    await fs.promises.rm(optionsFile, { force: true });
-  }
+  return stdout;
 }
 
 /**
@@ -121,7 +94,7 @@ async function buildCss(options) {
     reporter()
   ];
 
-  const postcssResult = await processWithPostcss(postcssPlugins, generatedCss, {
+  const postcssResult = await postcss(postcssPlugins).process(generatedCss, {
     from: outfile,
     to: outfile,
     map: {

@@ -5,8 +5,8 @@ function isLight(color) {
   return Boolean(color && (/^lighten/.test(color) || color === 'white'));
 }
 
-const colors = [null].concat(formColors().filter(color => !isLight(color)));
-const lightenColors = formColors().filter(isLight);
+const colors = [null].concat(formColors.filter(color => !isLight(color)));
+const lightenColors = formColors.filter(isLight);
 const animals = ['cow', 'horse', 'pig'];
 
 function toggleClass(color, activeColor) {

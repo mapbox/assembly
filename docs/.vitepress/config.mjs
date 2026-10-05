@@ -41,20 +41,6 @@ function assemblyJsPlugin() {
   };
 }
 
-function colorUtilsEsm() {
-  return {
-    name: 'color-utils-esm',
-    transform(code, id) {
-      const file = id.split('?')[0].replace(/\\/g, '/');
-      if (!file.endsWith('/src/preset/color-utils.js')) return null;
-      return code.replace(
-        /module\.exports = \{([^}]+)\};?\s*$/,
-        'export {$1};'
-      );
-    }
-  };
-}
-
 function packageVersion(md) {
   md.core.ruler.push('package_version', state => {
     state.tokens.forEach(token => {
@@ -89,7 +75,7 @@ export default defineConfig({
   cleanUrls: true,
   appearance: false,
   vite: {
-    plugins: [assemblyJsPlugin(), colorUtilsEsm()],
+    plugins: [assemblyJsPlugin()],
     server: {
       fs: {
         allow: ['..']
@@ -97,10 +83,7 @@ export default defineConfig({
     }
   },
   markdown: {
-    theme: {
-      light: hljsGithub,
-      dark: hljsGithub
-    },
+    theme: hljsGithub,
     anchor: {
       permalink: false
     },

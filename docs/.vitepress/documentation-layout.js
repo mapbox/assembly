@@ -179,7 +179,7 @@ function escapeAttr(value) {
     .replace(/</g, '&lt;');
 }
 
-function pillsHtml(selectors) {
+function pillsHtml(selectors, usedIds) {
   const pillClass =
     selectors.length > 1
       ? 'mr3 py3 color-blue-deep round bg-blue-faint mb3 inline-block txt-s px3'
@@ -191,12 +191,14 @@ function pillsHtml(selectors) {
         .replace(/\s+/g, '-')
         .replace(/\./g, '');
       const label = escapeAttr(selector.replace(/\\/g, ''));
-      return `<span id="${id}" class="${pillClass}">${label}</span>`;
+      const idAttr = usedIds.has(id) ? '' : ` id="${id}"`;
+      usedIds.add(id);
+      return `<span${idAttr} class="${pillClass}">${label}</span>`;
     })
     .join('');
 }
 
-function wrapH3Entry(state, openIndex, md) {
+function wrapH3Entry(state, openIndex, md, usedIds) {
   const tokens = state.tokens;
   const closeIndex = headingCloseIndex(tokens, openIndex);
   const title = headingText(tokens, openIndex);
@@ -226,7 +228,8 @@ function wrapH3Entry(state, openIndex, md) {
 <div class="grid-mxl grid--gut18-mxl pt36 pb60">
 <div class="col w-1/3-mxl pr18-ml mb6">
 <div class="txt-mono hmax240 overflow-auto scroll-styled">${pillsHtml(
-        selectors
+        selectors,
+        usedIds
       )}</div>
 </div>
 <div class="col w-2/3-mxl">
@@ -255,13 +258,13 @@ function wrapIntro(state, openIndex) {
   );
 }
 
-function wrapAllH3(state, md) {
+function wrapAllH3(state, md, usedIds) {
   const start = state.tokens.findIndex(
     token => token.type === 'heading_open' && token.tag === 'h3'
   );
   if (start === -1) return;
-  wrapH3Entry(state, start, md);
-  wrapAllH3(state, md);
+  wrapH3Entry(state, start, md, usedIds);
+  wrapAllH3(state, md, usedIds);
 }
 
 function headingOpens(tokens, tag) {
@@ -307,6 +310,11 @@ export function documentationLayout(md) {
     headingOpens(state.tokens, 'h1')
       .reverse()
       .forEach(index => wrapIntro(state, index));
-    wrapAllH3(state, md);
+    const headingIds = ['h1', 'h2'].flatMap(tag =>
+      headingOpens(state.tokens, tag).map(index =>
+        state.tokens[index].attrGet('id')
+      )
+    );
+    wrapAllH3(state, md, new Set(headingIds));
   });
 }

@@ -1,9 +1,7 @@
 'use strict';
 
 const svgstore = require('svgstore');
-const _ = require('lodash');
 const fs = require('fs');
-const pify = require('pify');
 const path = require('path');
 const { optimize } = require('svgo');
 
@@ -49,7 +47,8 @@ function processSvgFile(filename) {
     throw err;
   };
 
-  return pify(fs.readFile)(filename, 'utf8')
+  return fs.promises
+    .readFile(filename, 'utf8')
     .then(content => {
       return optimize(content, options);
     })
@@ -71,7 +70,8 @@ function processSvgFile(filename) {
 function buildSvgLoader(icons) {
   const sprite = svgstore();
 
-  return pify(fs.readdir)(svgDir)
+  return fs.promises
+    .readdir(svgDir)
     .then(filenames => {
       // Error if user tries to include icons that don't exist
       icons.forEach(svg => {
@@ -94,9 +94,9 @@ function buildSvgLoader(icons) {
     .then(() => {
       // This sorting is necessary to get a detemrinistic
       // order testable with snapshots
-      _.sortBy(spriteItems, 'id').forEach(item =>
-        sprite.add(item.id, item.svg)
-      );
+      spriteItems
+        .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
+        .forEach(item => sprite.add(item.id, item.svg));
       sprite
         .element('svg')
         .attr('id', 'svg-symbols')

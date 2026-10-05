@@ -1,7 +1,6 @@
 'use strict';
 
 const layoutScales = require('../scales.json');
-const { toEscapedSelector } = require('./escape');
 const { withMediaClasses } = require('./media-classes');
 
 function cssValue(v) {
@@ -48,7 +47,7 @@ function layoutScaleRules() {
     /^grid--gut(.+)$/,
     ([, scale], { rawSelector }) => {
       if (!gutterScale.has(scale)) return;
-      const sel = toEscapedSelector(rawSelector);
+      const sel = `.${rawSelector}`;
       const val = cssValue(scale);
       const css = [
         `${sel} { margin-left: -${val}; }`,

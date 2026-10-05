@@ -1,7 +1,7 @@
 <script setup>
 import { formColors } from '../data.js';
 
-const colors = [null].concat(formColors());
+const colors = [null].concat(formColors);
 
 function selectClass(color, extras) {
   return ['select', color ? `select--${color}` : '', extras].filter(Boolean).join(' ');

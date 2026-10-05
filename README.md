@@ -170,7 +170,7 @@ Media query class variants (e.g. `block-mm` as a variant of `block`) are generat
 
 ### Tools
 
-- [UnoCSS](https://unocss.dev/) generates Assembly utilities from `presetAssembly()` (`src/preset/utilities.js`, layout scales, color rules, media-query variants, and `src/preset/base.js` for reset/forms).
+- [UnoCSS](https://unocss.dev/) generates Assembly utilities from `presetAssembly()` (`src/preset/utilities.js`, layout scales, color rules, media-query variants, and `src/preset/base.css` for reset/forms).
 - [PostCSS](http://postcss.org/) for processing CSS. PostCSS parses CSS and runs it through plugins, and these are the plugins we're using:
   - [Autoprefixer](https://autoprefixer.github.io/) automatically adds vendor prefixes.
   - [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties) allows us to use variables for values, with the [CSS custom properties syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).

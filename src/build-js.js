@@ -2,8 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const mkdirp = require('mkdirp');
-const pify = require('pify');
 const UglifyJS = require('uglify-js');
 const timelog = require('./timelog');
 const buildSvgLoader = require('./build-svg-loader');
@@ -44,9 +42,9 @@ function buildJs(options) {
       return uglifyResult.code;
     })
     .then(optimizedJs => {
-      return pify(mkdirp)(path.dirname(outfile)).then(() => {
-        return pify(fs.writeFile)(outfile, optimizedJs);
-      });
+      return fs.promises
+        .mkdir(path.dirname(outfile), { recursive: true })
+        .then(() => fs.promises.writeFile(outfile, optimizedJs));
     })
     .then(() => {
       if (!options.quiet) timelog('Done building JS');
@@ -58,7 +56,7 @@ function concatJs() {
   // Deterministic order needed for tests
   return Promise.all(
     jsFiles.map((jsFile, index) => {
-      return pify(fs.readFile)(jsFile, 'utf8').then(jsFileContent => {
+      return fs.promises.readFile(jsFile, 'utf8').then(jsFileContent => {
         result[index] = jsFileContent;
       });
     })

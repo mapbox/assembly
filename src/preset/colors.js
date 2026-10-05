@@ -10,22 +10,13 @@ const {
   colorsFor
 } = require('./color-utils');
 
-function escapeRegex(value) {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
 function colorRules(config) {
   const resolved = resolveColorVariants(config);
-  const cssByClass = {};
-  const order = [];
+  const cssByClass = new Map();
 
   function append(className, css) {
-    if (cssByClass[className] === undefined) {
-      order.push(className);
-      cssByClass[className] = css;
-      return;
-    }
-    cssByClass[className] += `\n${css}`;
+    const existing = cssByClass.get(className);
+    cssByClass.set(className, existing ? `${existing}\n${css}` : css);
   }
 
   colorsFor(resolved, 'buttonFill').forEach(color => {
@@ -213,11 +204,8 @@ input:checked + .switch--${color} { background-color: var(--${color}); }`
   });
 
   return {
-    rules: order.map(className => [
-      new RegExp(`^${escapeRegex(className)}$`),
-      () => cssByClass[className]
-    ]),
-    safelist: order.slice(),
+    rules: [...cssByClass],
+    safelist: [...cssByClass.keys()],
     preflight: '.btn.btn--stroke { background-color: transparent; }'
   };
 }

@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const { mediaVariant } = require('./preset/variants');
 const { layoutScaleRules } = require('./preset/layout-scales');
 const { colorRules } = require('./preset/colors');
@@ -9,7 +10,6 @@ const {
   MEDIA_VARIANT_CLASSES,
   withMediaClasses
 } = require('./preset/media-classes');
-const { baseCss } = require('./preset/base');
 
 function mediaSafelist(utilityTokens) {
   const known = new Set(utilityTokens);
@@ -67,7 +67,8 @@ function presetAssembly(options) {
     preflights: [
       {
         layer: 'preflights',
-        getCSS: () => baseCss()
+        getCSS: () =>
+          fs.readFileSync(path.join(__dirname, 'preset/base.css'), 'utf8')
       },
       {
         layer: 'colors',

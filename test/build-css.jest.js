@@ -3,7 +3,6 @@
 const path = require('path');
 const postcss = require('postcss');
 const postcssDiscardComments = require('postcss-discard-comments');
-const del = require('del');
 const fs = require('fs');
 const os = require('os');
 const crypto = require('crypto');
@@ -16,7 +15,7 @@ function getTmp() {
 }
 
 function cleanup(tmp) {
-  return del(tmp, { force: true });
+  return fs.promises.rm(tmp, { force: true });
 }
 
 function discardComments(css) {

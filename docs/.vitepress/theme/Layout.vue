@@ -1,11 +1,18 @@
 <script setup>
 import { Content, useRoute, withBase } from 'vitepress';
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted, ref, watch } from 'vue';
 import pkg from '../../../package.json';
 import { nav } from './site-nav.js';
 import Logo from './Logo.vue';
 
 const route = useRoute();
+const currentHash = ref('');
+
+function updateHash() {
+  currentHash.value = decodeURIComponent(window.location.hash.slice(1));
+}
+
+watch(() => route.path, updateHash);
 
 function stripBase(path) {
   const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
@@ -48,14 +55,10 @@ function isExact(href) {
   return normalized(route.path) === normalized(splitHref(href).path);
 }
 
-function currentHash() {
-  return (route.hash || '').replace(/^#/, '');
-}
-
 function isNestedActive(href) {
   const { path, hash } = splitHref(href);
   if (hash) {
-    return isExact(path) && currentHash() === hash;
+    return isExact(path) && currentHash.value === hash;
   }
   return isExact(path);
 }
@@ -95,6 +98,8 @@ function useProse() {
 }
 
 onMounted(() => {
+  updateHash();
+  window.addEventListener('hashchange', updateHash);
   if (document.querySelector('script[data-assembly]')) return;
   const script = document.createElement('script');
   script.src = `${import.meta.env.BASE_URL}assembly.js`;
@@ -102,6 +107,10 @@ onMounted(() => {
   script.defer = true;
   script.dataset.assembly = 'true';
   document.body.appendChild(script);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('hashchange', updateHash);
 });
 </script>
 

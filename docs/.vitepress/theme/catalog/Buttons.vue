@@ -5,8 +5,8 @@ function isLight(color) {
   return Boolean(color && (/^lighten/.test(color) || color === 'white'));
 }
 
-const colors = [null].concat(buttonColors().filter(color => !isLight(color)));
-const lightenColors = buttonColors().filter(isLight);
+const colors = [null].concat(buttonColors.filter(color => !isLight(color)));
+const lightenColors = buttonColors.filter(isLight);
 
 function fillClass(color) {
   return color ? `btn btn--${color}` : 'btn';
