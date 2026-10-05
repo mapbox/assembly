@@ -23,41 +23,6 @@ const classSets = [
     scale: scales.padding
   },
   {
-    name: 'Gaps',
-    classPatterns: ['gap{n}', 'gapx{n}', 'gapy{n}'],
-    scale: scales.gap
-  },
-  {
-    name: 'Gridbox tracks',
-    classPatterns: [
-      'gridbox--cols{n}',
-      'gridbox--rows{n}',
-      'gridbox-child-col{n}',
-      'gridbox-child-row{n}'
-    ],
-    scale: scales.gridTrack
-  },
-  {
-    name: 'Aspect ratios',
-    classPatterns: ['aspect-{ratio}'],
-    scale: scales.aspectRatio
-  },
-  {
-    name: 'Rotations',
-    classPatterns: ['rotate{n}'],
-    scale: scales.rotate
-  },
-  {
-    name: 'Scales',
-    classPatterns: ['scale{n}'],
-    scale: scales.scale
-  },
-  {
-    name: 'Translates',
-    classPatterns: ['translate-x{n}', 'translate-y{n}'],
-    scale: scales.margin
-  },
-  {
     name: 'Widths',
     classPatterns: ['w{n}'],
     scale: scales.width

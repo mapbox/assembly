@@ -77,36 +77,9 @@ describe('buildCss', () => {
     expect(declsForSelector(stripped, '.grid--gut12')).toEqual({
       'margin-left': '-12px'
     });
-    expect(declsForSelector(stripped, '.gap12')).toEqual({
-      gap: '12px !important'
-    });
     expect(declsForSelector(stripped, '.grid')).toEqual({
       display: 'flex !important',
       'flex-wrap': 'wrap !important'
-    });
-    expect(declsForSelector(stripped, '.gridbox')).toEqual({
-      display: 'grid !important'
-    });
-    expect(declsForSelector(stripped, '.gridbox--cols3')).toEqual({
-      'grid-template-columns': 'repeat(3, minmax(0, 1fr)) !important'
-    });
-    expect(declsForSelector(stripped, '.aspect-16\\/9')).toEqual({
-      'aspect-ratio': '16/9 !important'
-    });
-    expect(declsForSelector(stripped, '.object-cover')).toEqual({
-      'object-fit': 'cover !important'
-    });
-    expect(declsForSelector(stripped, '.flex--space-evenly-main')).toEqual({
-      'justify-content': 'space-evenly !important'
-    });
-    expect(declsForSelector(stripped, '.rotate90')).toEqual({
-      rotate: '90deg !important'
-    });
-    expect(declsForSelector(stripped, '.scale50')).toEqual({
-      scale: '0.5 !important'
-    });
-    expect(declsForSelector(stripped, '.translate-x12')).toEqual({
-      translate: '12px 0 !important'
     });
     expect(declsForSelector(stripped, '.btn')['background-color']).toBe(
       '#0F71FA'

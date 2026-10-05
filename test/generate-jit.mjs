@@ -8,12 +8,9 @@ const uno = await createGenerator({
   presets: [presetAssembly()]
 });
 
-const generated = await uno.generate(
-  'px12 flex bg-blue gap12 gridbox gridbox--cols3 rotate30 translate-x48 w-2/5 mt48 mr-2/5',
-  {
-    preflights: false,
-    safelist: false
-  }
-);
+const generated = await uno.generate('px12 flex bg-blue mt48 mr-2/5', {
+  preflights: false,
+  safelist: false
+});
 
 process.stdout.write(generated.css);

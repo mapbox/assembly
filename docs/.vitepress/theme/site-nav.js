@@ -35,7 +35,11 @@ const catalogLinks = [
 function headingItems(href, names) {
   return names.map(name => ({
     name,
-    href: `${href}#${name.toLowerCase().replace(/&/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`
+    href: `${href}#${name
+      .toLowerCase()
+      .replace(/&/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')}`
   }));
 }
 
@@ -73,13 +77,8 @@ const nav = [
           'Positioning',
           'Margins',
           'Padding',
-          'Gap',
           'Sizing',
           'Flexbox',
-          'Gridbox',
-          'Aspect ratio',
-          'Object fit',
-          'Transforms',
           'Layout utils'
         ])
       },
