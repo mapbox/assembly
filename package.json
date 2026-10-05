@@ -13,9 +13,9 @@
   "scripts": {
     "precommit": "lint-staged",
     "format": "prettier --write \"**/*.js\"",
-    "deploy": "npm run build:assembly && node src/deploy",
-    "clean-svgs": "node src/clean-svgs",
-    "check-size": "node src/check-size",
+    "deploy": "npm run build:assembly && node scripts/deploy",
+    "clean-svgs": "node scripts/clean-svgs",
+    "check-size": "node scripts/check-size",
     "example:jit": "node examples/jit/build.mjs",
     "build:css": "node src/build-css.js",
     "build:js": "node src/build-js.js",
@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/mapbox/assembly#readme",
   "engines": {
-    "node": ">=18"
+    "node": ">=24"
   },
   "dependencies": {
     "@unocss/core": "^66.10.1",

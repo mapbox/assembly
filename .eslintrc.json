@@ -17,22 +17,6 @@
       "rules": {
         "node/no-unsupported-features/es-syntax": "off"
       }
-    },
-    {
-      "files": [
-        "src/deploy.js",
-        "src/clean-svgs.js",
-        "src/check-size.js"
-      ],
-      "env": {
-        "node": true
-      },
-      "parserOptions": {
-        "sourceType": "script"
-      },
-      "rules": {
-        "strict": "off"
-      }
     }
   ]
 }
