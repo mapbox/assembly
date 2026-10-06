@@ -323,18 +323,18 @@ When a radio button has the `disabled` attribute, it will be styled accordingly.
 
 The switch component styles the `<input type='checkbox' />` element. The markup must fit the following pattern:
 - A wrapping `<label>` with the class `switch-container`.
-- An `<input type='checkbox' />`. You may want to add a `mr*` margin-right
-  class to separate the radio from its label.
-- A `<div>` with the class `switch`.
+- An `<input type='checkbox' />` as a direct child of the container.
+- A `<div>` with the class `switch`. It can sit anywhere inside the container,
+  so a label can come before or after it. You may want to add a `mr*` or `ml*`
+  margin class to separate the switch from its label.
 
 ```selectors
 .switch
 ```
 
-Style a switch.
-Change the color of the dot when inactive, the border when inactive,
-and the background when active with a `switch--{color}` modifier (`*-dark` colors are not available).
-Change the color of the dot when active with a `switch--dot-{color}` modifier. Adjust the line height of the switch to match a label with small text with the `switch--s-label` modifier.
+Style a switch. It is 24px tall to match small inputs like `input--s`.
+Change the track color with a `switch--{color}` modifier: its `-light` shade when inactive and the full color when active (`*-dark` colors are not available).
+Change the color of the dot when active with a `switch--dot-{color}` modifier.
 
 ```example
 <label class='switch-container'>
@@ -352,7 +352,7 @@ Change the color of the dot when active with a `switch--dot-{color}` modifier. A
 .switch--l
 ```
 
-Make a switch control large.
+Make a switch 36px tall to match the default `input` height.
 
 ```example
 <label class='switch-container'>

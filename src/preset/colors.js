@@ -1,6 +1,7 @@
 'use strict';
 
 const {
+  ALL_COLORS,
   isSemitransparent,
   isNotAccessibleForForms,
   isNotAccessibleForButtons,
@@ -11,6 +12,8 @@ const {
 } = require('./color-utils');
 
 const important = value => `${value} !important`;
+const switchChecked = s =>
+  `:is(input:checked + ${s}, .switch-container:has(> input:checked) ${s})`;
 
 function colorRules(config) {
   const resolved = resolveColorVariants(config);
@@ -121,13 +124,16 @@ function colorRules(config) {
 
   colorsFor(resolved, 'switch').forEach(color => {
     if (isNotAccessibleForForms(color)) return;
+    const track = ALL_COLORS.includes(`${color}-light`)
+      ? [[s => s, { 'background-color': `var(--${color}-light)` }]]
+      : [];
     append(`switch--${color}`, [
-      [s => s, { color: `var(--${color})` }],
-      [s => `input:checked + ${s}`, { 'background-color': `var(--${color})` }]
+      ...track,
+      [switchChecked, { 'background-color': `var(--${color})` }]
     ]);
     append(`switch--dot-${color}`, [
       [
-        s => `input:checked + ${s}::after`,
+        s => `${switchChecked(s)}::after`,
         { 'background-color': `var(--${color})` }
       ]
     ]);
