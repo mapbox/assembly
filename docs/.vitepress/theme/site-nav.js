@@ -70,8 +70,13 @@ const nav = [
         'Positioning',
         'Margins',
         'Padding',
+        'Gap',
         'Sizing',
         'Flexbox',
+        'Gridbox',
+        'Aspect ratio',
+        'Object fit',
+        'Transforms',
         'Layout utils'
       ]),
       docSection('Theming', [

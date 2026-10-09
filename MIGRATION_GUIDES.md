@@ -27,6 +27,12 @@ export default defineConfig({
 
 The generated CSS still uses Assembly's CSS variables and custom media queries, so it needs a PostCSS step with `postcss-custom-properties` and `postcss-custom-media`. See [`presetAssembly` in the README](README.md#presetassemblyoptions) for the config.
 
+New layout utilities, additive with 1.x class names:
+
+- `gap12` / `gapx12` / `gapy12` (padding scale) for flex and CSS Grid spacing.
+- `gridbox` for CSS Grid. Keep `grid` / `col` / `grid--gut*` for the 12-column flex system.
+- `aspect-16/9`, `object-cover`, `flex--space-evenly-main`, `rotate90`, `scale50`, `translate-x12`.
+
 ## 1.0.0+
 
 Version 1.0.0 of Assembly introduces breaking changes – learn how to resolve them with this handy guide.

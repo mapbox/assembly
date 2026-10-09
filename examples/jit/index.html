@@ -18,38 +18,53 @@
     </header>
 
     <main class="wmax600 mx-auto px12 py18">
-      <div class="flex flex--wrap flex--center-cross mb18">
-        <button class="btn mr12">Save</button>
-        <button class="btn btn--stroke mr12">Cancel</button>
+      <div class="flex flex--wrap flex--center-cross gap12 mb18">
+        <button class="btn">Save</button>
+        <button class="btn btn--stroke">Cancel</button>
         <a class="link" href="#cards">Skip to cards</a>
       </div>
 
-      <section id="cards" class="grid grid--gut12">
-        <div class="col w-full w-1/3-ml mb12">
-          <article class="bg-white round border border--gray-light px12 py18">
-            <h2 class="txt-s txt-bold mb6">Flex</h2>
-            <p class="txt-s color-gray">
-              <code class="txt-mono">flex</code> lays out the buttons above.
-            </p>
-          </article>
-        </div>
-        <div class="col w-full w-2/3-ml mb12">
-          <article class="bg-white round border border--gray-light px12 py18">
-            <h2 class="txt-s txt-bold mb6">Grid</h2>
-            <p class="txt-s color-gray">
-              <code class="txt-mono">grid</code> and
-              <code class="txt-mono">col</code> are the 12-column flex system.
-            </p>
-          </article>
-        </div>
-        <div class="col w-full">
-          <article class="bg-white round border border--gray-light px12 py18">
-            <h2 class="txt-s txt-bold mb6">Tree-shaken</h2>
-            <p class="txt-s color-gray">
-              Unused utilities such as large padding or other colors are not in
-              <code class="txt-mono">assembly.css</code>.
-            </p>
-          </article>
+      <section id="cards" class="gridbox gridbox--cols1 gridbox--cols3-ml gap12">
+        <article class="bg-white round border border--gray-light px12 py18">
+          <h2 class="txt-s txt-bold mb6">Flex + gap</h2>
+          <p class="txt-s color-gray">
+            <code class="txt-mono">gap12</code> spaces the buttons above.
+          </p>
+        </article>
+        <article
+          class="bg-white round border border--gray-light px12 py18 gridbox-child-col2-ml"
+        >
+          <h2 class="txt-s txt-bold mb6">CSS Grid</h2>
+          <p class="txt-s color-gray">
+            <code class="txt-mono">gridbox</code> is real CSS Grid.
+            <code class="txt-mono">grid</code> stays the flex 12-column system.
+          </p>
+        </article>
+        <article class="bg-white round border border--gray-light px12 py18">
+          <h2 class="txt-s txt-bold mb6">Tree-shaken</h2>
+          <p class="txt-s color-gray">
+            Unused utilities such as large padding or other colors are not in
+            <code class="txt-mono">assembly.css</code>.
+          </p>
+        </article>
+      </section>
+
+      <section class="mt18 bg-white round border border--gray-light px12 py18">
+        <h2 class="txt-s txt-bold mb6">Values outside the prebuilt scale</h2>
+        <p class="txt-s color-gray mb12">
+          Pixel utilities stay on the documented scale. Transforms and
+          percentage widths do not, so on-demand CSS can emit
+          <code class="txt-mono">rotate30</code>,
+          <code class="txt-mono">translate-x48</code>, and
+          <code class="txt-mono">w-2/5</code>.
+        </p>
+        <div class="flex flex--center-cross">
+          <div class="rotate30 translate-x48 bg-blue w60 h60"></div>
+          <div class="ml36 bg-gray-faint w-full">
+            <div class="w-2/5 bg-blue color-white txt-xs txt-mono px6 py6">
+              w-2/5
+            </div>
+          </div>
         </div>
       </section>
     </main>

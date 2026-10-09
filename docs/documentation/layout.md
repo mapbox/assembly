@@ -5,6 +5,7 @@ Define the size, shape, and content flow of your markup.
 ## Grid
 
 Assembly uses a 12-column flexible grid with optional gutters.
+`grid` is flexbox (`display: flex`). For CSS Grid, use [`gridbox`](#gridbox).
 
 ```selectors
 .grid
@@ -338,6 +339,52 @@ Apply padding on the left.
 
 ```example
 <div class='pl24 bg-darken10'>pl24</div>
+```
+
+## Gap
+
+Gap utilities fit `gap{size}`, `gapx{size}`, and `gapy{size}` on the padding scale.
+Class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+Use with `flex`, `inline-flex`, or `gridbox`. Do not combine with `grid--gut*` or percentage `w-*` columns on `grid`.
+
+```selectors
+.gap{gap}
+```
+
+Apply `gap` on both axes.
+
+```example
+<div class='flex flex--wrap gap12'>
+  <div class='bg-darken10 px6'>a</div>
+  <div class='bg-darken10 px6'>b</div>
+  <div class='bg-darken10 px6'>c</div>
+</div>
+```
+
+```selectors
+.gapx{gap}
+```
+
+Apply `column-gap` (horizontal gap).
+
+```example
+<div class='flex gapx12'>
+  <div class='bg-darken10 px6'>a</div>
+  <div class='bg-darken10 px6'>b</div>
+</div>
+```
+
+```selectors
+.gapy{gap}
+```
+
+Apply `row-gap` (vertical gap).
+
+```example
+<div class='flex flex--column gapy12'>
+  <div class='bg-darken10 px6'>a</div>
+  <div class='bg-darken10 px6'>b</div>
+</div>
 ```
 
 ## Sizing
@@ -675,6 +722,32 @@ and last child is at the end.
 ```
 
 ```selectors
+.flex--space-around-main
+```
+
+Distribute children with equal space around each item on the main axis.
+
+```example
+<div class='flex flex--space-around-main bg-darken10'>
+ <div class='bg-darken10'>child</div>
+ <div class='bg-darken10'>child</div>
+</div>
+```
+
+```selectors
+.flex--space-evenly-main
+```
+
+Distribute children with equal space between and around items on the main axis.
+
+```example
+<div class='flex flex--space-evenly-main bg-darken10'>
+ <div class='bg-darken10'>child</div>
+ <div class='bg-darken10'>child</div>
+</div>
+```
+
+```selectors
 .flex-child-grow
 ```
 
@@ -706,6 +779,221 @@ This class prevents that default shrinkage, forcing siblings to accommodate the 
  <div class='border w120'>child</div>
  <div class='border w120'>child</div>
 </div>
+```
+
+## Gridbox
+
+CSS Grid utilities. All class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+
+`gridbox` does not replace [`grid`](#grid). Keep using `grid` / `col` / `grid--gut*` for the 12-column flex system.
+
+Usage:
+- Put `gridbox` or `inline-gridbox` on the parent.
+- Set columns with `gridbox--cols{n}` (1–12). Use `gap{size}` for spacing.
+- Span children with `gridbox-child-col{n}` and `gridbox-child-row{n}`.
+
+```selectors
+.gridbox
+.inline-gridbox
+```
+
+Establish an element as a CSS Grid parent.
+
+```example
+<div class='gridbox gridbox--cols3 gap12'>
+  <div class='border border--darken10 px6'>1</div>
+  <div class='border border--darken10 px6'>2</div>
+  <div class='border border--darken10 px6'>3</div>
+</div>
+```
+
+```selectors
+.gridbox--row
+.gridbox--column
+.gridbox--dense
+.gridbox--column-dense
+```
+
+Set `grid-auto-flow`. `gridbox--row` is the CSS default; use it to override a column flow.
+
+```example
+<div class='gridbox gridbox--column gap6 h120'>
+  <div class='border border--darken10 px6'>1</div>
+  <div class='border border--darken10 px6'>2</div>
+  <div class='border border--darken10 px6'>3</div>
+</div>
+```
+
+```selectors
+.gridbox--center
+.gridbox--stretch
+.gridbox--start
+.gridbox--end
+```
+
+Align items inside their grid areas with `place-items`.
+
+```example
+<div class='gridbox gridbox--cols2 gridbox--center gap12 h120'>
+  <div class='border border--darken10 px6'>center</div>
+  <div class='border border--darken10 px6'>center</div>
+</div>
+```
+
+```selectors
+.gridbox--space-between
+.gridbox--space-around
+.gridbox--space-evenly
+```
+
+Distribute extra space between grid tracks.
+
+```example
+<div class='gridbox gridbox--cols3 gridbox--space-between'>
+  <div class='border border--darken10 px6'>1</div>
+  <div class='border border--darken10 px6'>2</div>
+  <div class='border border--darken10 px6'>3</div>
+</div>
+```
+
+```selectors
+.gridbox--cols{gridTrack}
+```
+
+Set the number of equal columns on a `gridbox`.
+
+```example
+<div class='gridbox gridbox--cols3 gap12'>
+  <div class='border border--darken10 px6'>1</div>
+  <div class='border border--darken10 px6'>2</div>
+  <div class='border border--darken10 px6'>3</div>
+</div>
+```
+
+```selectors
+.gridbox--rows{gridTrack}
+```
+
+Set the number of equal rows on a `gridbox`.
+
+```example
+<div class='gridbox gridbox--cols2 gridbox--rows2 gap12 h120'>
+  <div class='border border--darken10'>1</div>
+  <div class='border border--darken10'>2</div>
+  <div class='border border--darken10'>3</div>
+  <div class='border border--darken10'>4</div>
+</div>
+```
+
+```selectors
+.gridbox-child-col{gridTrack}
+```
+
+Span columns on a `gridbox` child.
+
+```example
+<div class='gridbox gridbox--cols4 gap12'>
+  <div class='gridbox-child-col2 border border--darken10 px6'>span 2</div>
+  <div class='border border--darken10 px6'>1</div>
+  <div class='border border--darken10 px6'>1</div>
+</div>
+```
+
+```selectors
+.gridbox-child-row{gridTrack}
+```
+
+Span rows on a `gridbox` child.
+
+```example
+<div class='gridbox gridbox--cols2 gridbox--rows2 gap12 h120'>
+  <div class='gridbox-child-row2 border border--darken10'>span 2 rows</div>
+  <div class='border border--darken10'>1</div>
+  <div class='border border--darken10'>1</div>
+</div>
+```
+
+## Aspect ratio
+
+Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+
+```selectors
+.aspect-auto
+.aspect-1/1
+.aspect-4/3
+.aspect-3/2
+.aspect-16/9
+.aspect-21/9
+.aspect-3/4
+.aspect-9/16
+```
+
+Set `aspect-ratio`. `aspect-auto` resets it.
+
+```example
+<div class='aspect-16/9 w-full bg-darken10'>aspect-16/9</div>
+```
+
+## Object fit
+
+```selectors
+.object-contain
+.object-cover
+.object-fill
+.object-none
+.object-scale-down
+```
+
+Set `object-fit` on replaced elements such as `img` and `video`.
+Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+
+```example
+<div class='w120 h60 bg-blue object-cover'>object-cover</div>
+```
+
+## Transforms
+
+Transform utilities use the individual `rotate`, `scale`, and `translate` properties so they compose.
+Class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+
+```selectors
+.rotate{rotate}
+```
+
+Rotate an element. Combines with `scale*` and `translate-*`.
+
+```example
+<div class='rotate45 bg-blue w60 h60'></div>
+```
+
+```selectors
+.scale{scale}
+```
+
+Scale an element. `scale100` is `1`. Combines with `rotate*` and `translate-*`.
+
+```example
+<div class='scale50 bg-blue w60 h60'></div>
+```
+
+```selectors
+.translate-x{margin}
+```
+
+Translate on the x axis. Uses the margin scale, including negatives.
+
+```example
+<div class='translate-x12 bg-blue w60 h60'></div>
+```
+
+```selectors
+.translate-y{margin}
+```
+
+Translate on the y axis. Uses the margin scale, including negatives.
+
+```example
+<div class='translate-y12 bg-blue w60 h60'></div>
 ```
 
 ## Layout utils
