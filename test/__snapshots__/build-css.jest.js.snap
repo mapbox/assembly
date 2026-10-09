@@ -245,6 +245,24 @@ legend{
   input[type='range']:focus::-moz-range-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
+:root:not([data-assembly-focus-control])
+  input:focus-visible
+  + :is(.checkbox, .radio, .switch, .toggle){
+  box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
+}
+:root:not([data-assembly-focus-control]) .range input[type='range']{
+  outline:0;
+}
+:root:not([data-assembly-focus-control])
+  .range
+  input[type='range']:focus-visible::-webkit-slider-thumb{
+  box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
+}
+:root:not([data-assembly-focus-control])
+  .range
+  input[type='range']:focus-visible::-moz-range-thumb{
+  box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
+}
 [data-assembly-focus-control] .range::-moz-focus-outer{
   border:0;
 }
@@ -4737,6 +4755,24 @@ legend{
 [data-assembly-focus-control='visible']
   .range
   input[type='range']:focus::-moz-range-thumb{
+  box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
+}
+:root:not([data-assembly-focus-control])
+  input:focus-visible
+  + :is(.checkbox, .radio, .switch, .toggle){
+  box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
+}
+:root:not([data-assembly-focus-control]) .range input[type='range']{
+  outline:0;
+}
+:root:not([data-assembly-focus-control])
+  .range
+  input[type='range']:focus-visible::-webkit-slider-thumb{
+  box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
+}
+:root:not([data-assembly-focus-control])
+  .range
+  input[type='range']:focus-visible::-moz-range-thumb{
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 [data-assembly-focus-control] .range::-moz-focus-outer{
