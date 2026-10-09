@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const { mediaVariant } = require('./preset/variants');
 const { layoutScaleRules } = require('./preset/layout-scales');
 const { colorRules } = require('./preset/colors');
@@ -9,7 +10,6 @@ const {
   MEDIA_VARIANT_CLASSES,
   withMediaClasses
 } = require('./preset/media-classes');
-const { baseCss } = require('./preset/base');
 
 function mediaSafelist(utilityTokens) {
   const known = new Set(utilityTokens);
@@ -32,7 +32,6 @@ function mediaSafelist(utilityTokens) {
  * UnoCSS preset that emits Assembly's class names and design tokens.
  *
  * @param {Object} [options]
- * @param {Object} [options.variables] - Variable overrides (same as buildUserAssets).
  * @param {Object|Array} [options.colorVariants] - Color variant config.
  * @param {Array<string>} [options.files] - Extra stylesheets appended after Assembly.
  * @param {boolean} [options.safelist=false] - When true, emit every Assembly
@@ -68,7 +67,8 @@ function presetAssembly(options) {
     preflights: [
       {
         layer: 'preflights',
-        getCSS: () => baseCss()
+        getCSS: () =>
+          fs.readFileSync(path.join(__dirname, 'preset/base.css'), 'utf8')
       },
       {
         layer: 'colors',

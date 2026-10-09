@@ -7,7 +7,10 @@ Define the size, shape, and content flow of your markup.
 Assembly uses a 12-column flexible grid with optional gutters.
 `grid` is flexbox (`display: flex`). For CSS Grid, use [`gridbox`](#gridbox).
 
-### Grids require at minimum two elements: A parent with the class `grid` and a child with the class `col`
+```selectors
+.grid
+.col
+```
 
 Grids require at minimum two elements: A parent with the class `grid` and a child with the class `col`. To define the width of `col` in a grid, add a width class, `col--auto`, or both. The `grid` class includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
@@ -21,7 +24,9 @@ To avoid unexpected side-effects, do not add margin left or right to `grid` and 
 </div>
 ```
 
-### Apply to a `col` element to override a `col--{size}` rule and take on default `col`, occupying equal space with other `col` siblings
+```selectors
+.col--auto
+```
 
 Apply to a `col` element to override a `col--{size}` rule and take on default `col`, occupying equal space with other `col` siblings.
 This class is designed to be used with `*-mm`, `*-ml`, and `*-mxl` variations
@@ -34,7 +39,18 @@ to target screen sizes.
 </div>
 ```
 
-### Apply column gutters to all columns in a grid by adding a `grid--gut{size}` modifier to the `grid` element
+```selectors
+.grid--gut0
+.grid--gut3
+.grid--gut6
+.grid--gut12
+.grid--gut18
+.grid--gut24
+.grid--gut30
+.grid--gut36
+.grid--gut60
+.grid--gut120
+```
 
 Apply column gutters to all columns in a grid by adding a `grid--gut{size}` modifier to the `grid` element. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
@@ -56,7 +72,12 @@ Apply column gutters to all columns in a grid by adding a `grid--gut{size}` modi
 
 Control the display style of elements.
 
-### Set an element's `display` property value. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes
+```selectors
+.inline
+.block
+.inline-block
+.none
+```
 
 Set an element's `display` property value. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
@@ -71,7 +92,13 @@ Set an element's `display` property value. Class set includes `*-mm`, `*-ml`, an
 
 Classes for basic positioning. For flexbox positioning rules, see the documentation for [flexbox](#flexbox) utilities.
 
-### Set an element's `position` property value. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes
+```selectors
+.fixed
+.absolute
+.relative
+.static
+.sticky
+```
 
 Set an element's `position` property value. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
@@ -88,7 +115,12 @@ Set an element's `position` property value. Class set includes `*-mm`, `*-ml`, a
 </div>
 ```
 
-### Pin a positioned element against a side of its container
+```selectors
+.top
+.right
+.left
+.bottom
+```
 
 Pin a positioned element against a side of its container. Positioning classes can be combined to stretch elements across the top, bottom, left, or right sides of their container. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
@@ -101,7 +133,15 @@ Pin a positioned element against a side of its container. Positioning classes ca
 </div>
 ```
 
-### Override default stacking order by setting an element's `z-index` property value
+```selectors
+.z-neg1
+.z0
+.z1
+.z2
+.z3
+.z4
+.z5
+```
 
 Override default stacking order by setting an element's `z-index` property value. Whenever possible, rely on built-in stacking order and avoid using these classes. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
@@ -118,7 +158,9 @@ Override default stacking order by setting an element's `z-index` property value
 All margin classes fit the following pattern: `m<side><size>`.
 And all margin class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
-### Set `auto` margins on left and right
+```selectors
+.mx-auto
+```
 
 Set `auto` margins on left and right. This pattern is useful for horizontally centering block elements or aligning block elements to the start or end of their container.
 
@@ -128,7 +170,9 @@ Set `auto` margins on left and right. This pattern is useful for horizontally ce
 <div class='mr-auto w60 bg-darken10'>mr-auto</div>
 ```
 
-### Apply margin on the top and bottom
+```selectors
+.my{margin}
+```
 
 Apply margin on the top and bottom.
 
@@ -136,7 +180,9 @@ Apply margin on the top and bottom.
 <div class='my24 bg-darken10'>my24</div>
 ```
 
-### Apply margin on the left and right
+```selectors
+.mx{margin}
+```
 
 Apply margin on the left and right.
 
@@ -144,7 +190,9 @@ Apply margin on the left and right.
 <div class='mx24 bg-darken10'>mx24</div>
 ```
 
-### Apply margin on the top
+```selectors
+.mt{margin}
+```
 
 Apply margin on the top.
 
@@ -152,7 +200,9 @@ Apply margin on the top.
 <div class='mt24 bg-darken10'>mt24</div>
 ```
 
-### Apply margin on the right
+```selectors
+.mr{margin}
+```
 
 Apply margin on the right.
 
@@ -160,7 +210,19 @@ Apply margin on the right.
 <div class='mr24 bg-darken10'>mr24</div>
 ```
 
-### Apply percentage-based margin on the right. When using with `col`, add a width class, `col--auto`, or both to define the size of the element
+```selectors
+.mr-1/12
+.mr-1/6
+.mr-1/4
+.mr-1/3
+.mr-5/12
+.mr-1/2
+.mr-7/12
+.mr-2/3
+.mr-3/4
+.mr-5/6
+.mr-11/12
+```
 
 Apply percentage-based margin on the right. When using with `col`, add a width class, `col--auto`, or both to define the size of the element.
 
@@ -170,7 +232,9 @@ Apply percentage-based margin on the right. When using with `col`, add a width c
 </div>
 ```
 
-### Apply margin on the bottom
+```selectors
+.mb{margin}
+```
 
 Apply margin on the bottom.
 
@@ -180,7 +244,9 @@ The negative margin classes, <code>mb-neg</code>, can be useful for certain desi
 <div class='mb24 bg-darken10'>mb24</div>
 ```
 
-### Apply margin on the left
+```selectors
+.ml{margin}
+```
 
 Apply margin on the left.
 
@@ -188,7 +254,19 @@ Apply margin on the left.
 <div class='ml24 bg-darken10'>ml24</div>
 ```
 
-### Apply percentage-based margin on the left. When using with `col`, add a width class, `col--auto`, or both to define the size of the element
+```selectors
+.ml-1/12
+.ml-1/6
+.ml-1/4
+.ml-1/3
+.ml-5/12
+.ml-1/2
+.ml-7/12
+.ml-2/3
+.ml-3/4
+.ml-5/6
+.ml-11/12
+```
 
 Apply percentage-based margin on the left. When using with `col`, add a width class, `col--auto`, or both to define the size of the element.
 
@@ -203,7 +281,9 @@ Apply percentage-based margin on the left. When using with `col`, add a width cl
 All padding classes fit the following pattern: `m<side><size>`.
 And all padding class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
-### Apply padding on the top and bottom
+```selectors
+.py{margin}
+```
 
 Apply padding on the top and bottom.
 
@@ -211,7 +291,9 @@ Apply padding on the top and bottom.
 <div class='py24 bg-darken10'>py24</div>
 ```
 
-### Apply padding on the left and right
+```selectors
+.px{margin}
+```
 
 Apply padding on the left and right.
 
@@ -219,7 +301,9 @@ Apply padding on the left and right.
 <div class='px24 bg-darken10'>px24</div>
 ```
 
-### Apply padding on the top
+```selectors
+.pt{margin}
+```
 
 Apply padding on the top.
 
@@ -227,7 +311,9 @@ Apply padding on the top.
 <div class='pt24 bg-darken10'>pt24</div>
 ```
 
-### Apply padding on the right
+```selectors
+.pr{margin}
+```
 
 Apply padding on the right.
 
@@ -235,7 +321,9 @@ Apply padding on the right.
 <div class='pr24 bg-darken10 align-r'>pr24</div>
 ```
 
-### Apply padding on the bottom
+```selectors
+.pb{margin}
+```
 
 Apply padding on the bottom.
 
@@ -243,7 +331,9 @@ Apply padding on the bottom.
 <div class='pb24 bg-darken10'>pb24</div>
 ```
 
-### Apply padding on the left
+```selectors
+.pl{margin}
+```
 
 Apply padding on the left.
 
@@ -257,10 +347,11 @@ Gap utilities fit `gap{size}`, `gapx{size}`, and `gapy{size}` on the padding sca
 Class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 Use with `flex`, `inline-flex`, or `gridbox`. Do not combine with `grid--gut*` or percentage `w-*` columns on `grid`.
 
-### Apply `gap` on both axes. Use with `flex`, `inline-flex`, or `gridbox`
+```selectors
+.gap{gap}
+```
 
-Apply `gap` on both axes. Use with `flex`, `inline-flex`, or `gridbox`.
-Do not combine with `grid--gut*` or percentage `w-*` columns on `grid`.
+Apply `gap` on both axes.
 
 ```example
 <div class='flex flex--wrap gap12'>
@@ -270,7 +361,9 @@ Do not combine with `grid--gut*` or percentage `w-*` columns on `grid`.
 </div>
 ```
 
-### Apply `column-gap` (horizontal gap)
+```selectors
+.gapx{gap}
+```
 
 Apply `column-gap` (horizontal gap).
 
@@ -281,7 +374,9 @@ Apply `column-gap` (horizontal gap).
 </div>
 ```
 
-### Apply `row-gap` (vertical gap)
+```selectors
+.gapy{gap}
+```
 
 Apply `row-gap` (vertical gap).
 
@@ -297,7 +392,9 @@ Apply `row-gap` (vertical gap).
 All sizing classes fit the following pattern: `<w|h><min|max><size>` or `<w|h><min|max>-full` for `100%`.
 And all sizing class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
-### Set an element's width
+```selectors
+.w{width}
+```
 
 Set an element's width.
 
@@ -307,7 +404,19 @@ In addition to numeric values, there are `w-full` and `w-auto` classes.
 <div class='w60 bg-darken10'>w60</div>
 ```
 
-### Set a percentage-based width
+```selectors
+.w-1/12
+.w-1/6
+.w-1/4
+.w-1/3
+.w-5/12
+.w-1/2
+.w-7/12
+.w-2/3
+.w-3/4
+.w-5/6
+.w-11/12
+```
 
 Set a percentage-based width.
 
@@ -319,7 +428,9 @@ Set a percentage-based width.
 </div>
 ```
 
-### Set an element's maximum width
+```selectors
+.wmax{maxWidth}
+```
 
 Set an element's maximum width.
 
@@ -329,7 +440,9 @@ In addition to numeric values, there are `wmax-full` and `wmax-none` classes.
 <div class='wmax6 bg-darken10'>wmax6</div>
 ```
 
-### Set an element's minimum width
+```selectors
+.wmin{width}
+```
 
 Set an element's minimum width.
 
@@ -339,7 +452,9 @@ In addition to numeric values, there is the `wmin-full` class.
 <div class='inline-block wmin60 bg-darken10'>wmin60</div>
 ```
 
-### Set an element's height
+```selectors
+.h{width}
+```
 
 Set an element's height.
 
@@ -349,7 +464,9 @@ In addition to numeric values, there are `h-full` and `h-auto` classes.
 <div class='h24 bg-darken10'>h24</div>
 ```
 
-### Set an element's maximum height
+```selectors
+.hmax{maxWidth}
+```
 
 Set an element's maximum height.
 
@@ -359,7 +476,9 @@ In addition to numeric values, there are `hmax-full` and `hmax-none` classes.
 <div class='hmax12 bg-darken10'>hmax12</div>
 ```
 
-### Set an element's minimum height
+```selectors
+.hmin{width}
+```
 
 Set an element's minimum height.
 
@@ -369,7 +488,20 @@ In addition to numeric values, there is the `hmin-full` class.
 <div class='hmin60 bg-darken10'>hmin60</div>
 ```
 
-### Set a viewport-based height
+```selectors
+.h-viewport-full
+.h-viewport-1/12
+.h-viewport-1/6
+.h-viewport-1/4
+.h-viewport-1/3
+.h-viewport-5/12
+.h-viewport-1/2
+.h-viewport-7/12
+.h-viewport-2/3
+.h-viewport-3/4
+.h-viewport-5/6
+.h-viewport-11/12
+```
 
 Set a viewport-based height.
 
@@ -377,7 +509,20 @@ Set a viewport-based height.
 <div class='h-viewport-1/3 bg-darken10'>h-viewport-1/3</div>
 ```
 
-### Set a viewport-based max width
+```selectors
+.hmax-viewport-full
+.hmax-viewport-1/12
+.hmax-viewport-1/6
+.hmax-viewport-1/4
+.hmax-viewport-1/3
+.hmax-viewport-5/12
+.hmax-viewport-1/2
+.hmax-viewport-7/12
+.hmax-viewport-2/3
+.hmax-viewport-3/4
+.hmax-viewport-5/6
+.hmax-viewport-11/12
+```
 
 Set a viewport-based max width.
 
@@ -394,7 +539,10 @@ Usage must fit the following pattern:
 - By default, the `main` axis is horizontal and the `cross` axis is vertical. The axes can be inverted with the use of `flex--column`.
 - To learn about how the flexbox system works, check out ["A Complete Guide to Flexbox"](https://css-tricks.com/snippets/css/a-guide-to-flexbox).
 
-### Establish an element as a flex parent
+```selectors
+.flex
+.inline-flex
+```
 
 Establish an element as a flex parent.
 These classes allow the use of `flex--*` modifiers, and `flex-child-*` classes on children.
@@ -404,7 +552,9 @@ These classes allow the use of `flex--*` modifiers, and `flex-child-*` classes o
 <div class='bg-darken10 inline-flex'>inline-flex</div>
 ```
 
-### Set the direction of the main axis to top-to-bottom (default is left-to-right)
+```selectors
+.flex--column
+```
 
 Set the direction of the main axis to top-to-bottom (default is left-to-right).
 
@@ -416,7 +566,9 @@ Set the direction of the main axis to top-to-bottom (default is left-to-right).
 </div>
 ```
 
-### Set the direction of the main axis to bottom-to-top (default is left-to-right)
+```selectors
+.flex--column-reverse
+```
 
 Set the direction of the main axis to bottom-to-top (default is left-to-right).
 
@@ -428,7 +580,11 @@ Set the direction of the main axis to bottom-to-top (default is left-to-right).
 </div>
 ```
 
-### Set the direction of the main axis to left-to-right (the default value of `flex`)
+```selectors
+.flex--row
+```
+
+Set the direction of the main axis to left-to-right (the default value of `flex`).
 
 ```example
 <div class='bg-darken10 flex flex--row'>
@@ -438,7 +594,9 @@ Set the direction of the main axis to bottom-to-top (default is left-to-right).
 </div>
 ```
 
-### Set the direction of the main axis to right-to-left (default is left-to-right)
+```selectors
+.flex--row-reverse
+```
 
 Set the direction of the main axis to right-to-left (default is left-to-right).
 
@@ -450,7 +608,9 @@ Set the direction of the main axis to right-to-left (default is left-to-right).
 </div>
 ```
 
-### Center an element's children on the main axis
+```selectors
+.flex--center-main
+```
 
 Center an element's children on the main axis.
 
@@ -460,7 +620,9 @@ Center an element's children on the main axis.
 </div>
 ```
 
-### Center an element's children on the cross axis
+```selectors
+.flex--center-cross
+```
 
 Center an element's children on the cross axis.
 
@@ -470,7 +632,9 @@ Center an element's children on the cross axis.
 </div>
 ```
 
-### Align an element's children to the start of the cross axis
+```selectors
+.flex--start-cross
+```
 
 Align an element's children to the start of the cross axis.
 
@@ -481,7 +645,9 @@ Align an element's children to the start of the cross axis.
 </div>
 ```
 
-### Align an element's children to the start of the main axis
+```selectors
+.flex--start-main
+```
 
 Align an element's children to the start of the main axis.
 
@@ -491,7 +657,9 @@ Align an element's children to the start of the main axis.
 </div>
 ```
 
-### Align an element's children to the end of the cross axis
+```selectors
+.flex--end-cross
+```
 
 Align an element's children to the end of the cross axis.
 
@@ -502,7 +670,9 @@ Align an element's children to the end of the cross axis.
 </div>
 ```
 
-### Align an element's children to the end of the main axis
+```selectors
+.flex--end-main
+```
 
 Align an element's children to the end of the main axis.
 
@@ -512,7 +682,9 @@ Align an element's children to the end of the main axis.
 </div>
 ```
 
-### Allow children to wrap. By default, they are all forced onto one line
+```selectors
+.flex--wrap
+```
 
 Allow children to wrap. By default, they are all forced onto one line.
 
@@ -523,7 +695,9 @@ Allow children to wrap. By default, they are all forced onto one line.
 </div>
 ```
 
-### Stretch children to fill the parent container along the cross axis
+```selectors
+.flex--stretch-cross
+```
 
 Stretch children to fill the parent container along the cross axis.
 
@@ -533,7 +707,9 @@ Stretch children to fill the parent container along the cross axis.
 </div>
 ```
 
-### Evenly distribute children across the line, so first child is at the start
+```selectors
+.flex--space-between-main
+```
 
 Evenly distribute children across the line, so first child is at the start
 and last child is at the end.
@@ -545,7 +721,9 @@ and last child is at the end.
 </div>
 ```
 
-### Distribute children with equal space around each item on the main axis
+```selectors
+.flex--space-around-main
+```
 
 Distribute children with equal space around each item on the main axis.
 
@@ -556,7 +734,9 @@ Distribute children with equal space around each item on the main axis.
 </div>
 ```
 
-### Distribute children with equal space between and around items on the main axis
+```selectors
+.flex--space-evenly-main
+```
 
 Distribute children with equal space between and around items on the main axis.
 
@@ -567,7 +747,9 @@ Distribute children with equal space between and around items on the main axis.
 </div>
 ```
 
-### Make a child grow to fill whatever space is available in the main axis of the parent container
+```selectors
+.flex-child-grow
+```
 
 Make a child grow to fill whatever space is available in the main axis of the parent container.
 This is useful when you have one or more elements of
@@ -582,7 +764,9 @@ Typically, you will also want to apply the `flex-child-no-shrink` class to the e
 </div>
 ```
 
-### Prevent a child from shrinking below its width value
+```selectors
+.flex-child-no-shrink
+```
 
 Prevent a child from shrinking below its width value.
 
@@ -608,7 +792,10 @@ Usage:
 - Set columns with `gridbox--cols{n}` (1–12). Use `gap{size}` for spacing.
 - Span children with `gridbox-child-col{n}` and `gridbox-child-row{n}`.
 
-### Establish an element as a CSS Grid parent
+```selectors
+.gridbox
+.inline-gridbox
+```
 
 Establish an element as a CSS Grid parent.
 
@@ -620,7 +807,12 @@ Establish an element as a CSS Grid parent.
 </div>
 ```
 
-### Set `grid-auto-flow`. `gridbox--row` is the CSS default; use it to override a column flow
+```selectors
+.gridbox--row
+.gridbox--column
+.gridbox--dense
+.gridbox--column-dense
+```
 
 Set `grid-auto-flow`. `gridbox--row` is the CSS default; use it to override a column flow.
 
@@ -632,7 +824,12 @@ Set `grid-auto-flow`. `gridbox--row` is the CSS default; use it to override a co
 </div>
 ```
 
-### Align items inside their grid areas with `place-items`
+```selectors
+.gridbox--center
+.gridbox--stretch
+.gridbox--start
+.gridbox--end
+```
 
 Align items inside their grid areas with `place-items`.
 
@@ -643,7 +840,11 @@ Align items inside their grid areas with `place-items`.
 </div>
 ```
 
-### Distribute extra space between grid tracks
+```selectors
+.gridbox--space-between
+.gridbox--space-around
+.gridbox--space-evenly
+```
 
 Distribute extra space between grid tracks.
 
@@ -655,7 +856,9 @@ Distribute extra space between grid tracks.
 </div>
 ```
 
-### Set the number of equal columns on a `gridbox`
+```selectors
+.gridbox--cols{gridTrack}
+```
 
 Set the number of equal columns on a `gridbox`.
 
@@ -667,7 +870,9 @@ Set the number of equal columns on a `gridbox`.
 </div>
 ```
 
-### Set the number of equal rows on a `gridbox`
+```selectors
+.gridbox--rows{gridTrack}
+```
 
 Set the number of equal rows on a `gridbox`.
 
@@ -680,7 +885,9 @@ Set the number of equal rows on a `gridbox`.
 </div>
 ```
 
-### Span columns on a `gridbox` child
+```selectors
+.gridbox-child-col{gridTrack}
+```
 
 Span columns on a `gridbox` child.
 
@@ -692,7 +899,9 @@ Span columns on a `gridbox` child.
 </div>
 ```
 
-### Span rows on a `gridbox` child
+```selectors
+.gridbox-child-row{gridTrack}
+```
 
 Span rows on a `gridbox` child.
 
@@ -706,10 +915,18 @@ Span rows on a `gridbox` child.
 
 ## Aspect ratio
 
-Aspect-ratio classes fit `aspect-{ratio}` (`aspect-1/1`, `aspect-16/9`, `aspect-auto`).
-Class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
-### Set `aspect-ratio`. `aspect-auto` resets it
+```selectors
+.aspect-auto
+.aspect-1/1
+.aspect-4/3
+.aspect-3/2
+.aspect-16/9
+.aspect-21/9
+.aspect-3/4
+.aspect-9/16
+```
 
 Set `aspect-ratio`. `aspect-auto` resets it.
 
@@ -718,6 +935,14 @@ Set `aspect-ratio`. `aspect-auto` resets it.
 ```
 
 ## Object fit
+
+```selectors
+.object-contain
+.object-cover
+.object-fill
+.object-none
+.object-scale-down
+```
 
 Set `object-fit` on replaced elements such as `img` and `video`.
 Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
@@ -729,10 +954,11 @@ Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes
 ## Transforms
 
 Transform utilities use the individual `rotate`, `scale`, and `translate` properties so they compose.
-Rotate and scale classes fit `rotate{deg}` / `scale{percent}`; translate classes fit `translate-x{n}` / `translate-y{n}` on the margin scale.
 Class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
-### Rotate an element. Combines with `scale*` and `translate-*`
+```selectors
+.rotate{rotate}
+```
 
 Rotate an element. Combines with `scale*` and `translate-*`.
 
@@ -740,7 +966,9 @@ Rotate an element. Combines with `scale*` and `translate-*`.
 <div class='rotate45 bg-blue w60 h60'></div>
 ```
 
-### Scale an element. `scale100` is `1`. Combines with `rotate*` and `translate-*`
+```selectors
+.scale{scale}
+```
 
 Scale an element. `scale100` is `1`. Combines with `rotate*` and `translate-*`.
 
@@ -748,7 +976,9 @@ Scale an element. `scale100` is `1`. Combines with `rotate*` and `translate-*`.
 <div class='scale50 bg-blue w60 h60'></div>
 ```
 
-### Translate on the x axis. Uses the margin scale, including negatives
+```selectors
+.translate-x{margin}
+```
 
 Translate on the x axis. Uses the margin scale, including negatives.
 
@@ -756,7 +986,9 @@ Translate on the x axis. Uses the margin scale, including negatives.
 <div class='translate-x12 bg-blue w60 h60'></div>
 ```
 
-### Translate on the y axis. Uses the margin scale, including negatives
+```selectors
+.translate-y{margin}
+```
 
 Translate on the y axis. Uses the margin scale, including negatives.
 
@@ -768,7 +1000,12 @@ Translate on the y axis. Uses the margin scale, including negatives.
 
 Extra layout utilities.
 
-### Bleed utilities. Bleed classes allow an element inside a centered container to escape the container and meet the edge of the screen
+```selectors
+.bleed
+.bleed-r
+.bleed-l
+.unbleed
+```
 
 Bleed utilities. Bleed classes allow an element inside a centered container to escape the container and meet the edge of the screen.
 When using the bleed classes, consider adding the `.overflow-hidden` class on a parent element to prevent horizontal overflow.
@@ -793,7 +1030,12 @@ and `flex-child-grow`.
 </div>
 ```
 
-### Float utilities. Class set (except `clearfix`) includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes
+```selectors
+.fl
+.fr
+.unfloat
+.clearfix
+```
 
 Float utilities. Class set (except `clearfix`) includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 

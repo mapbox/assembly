@@ -3,7 +3,6 @@
 const path = require('path');
 const postcss = require('postcss');
 const postcssDiscardComments = require('postcss-discard-comments');
-const del = require('del');
 const fs = require('fs');
 const os = require('os');
 const crypto = require('crypto');
@@ -16,7 +15,7 @@ function getTmp() {
 }
 
 function cleanup(tmp) {
-  return del(tmp, { force: true });
+  return fs.promises.rm(tmp, { force: true });
 }
 
 function discardComments(css) {
@@ -28,7 +27,7 @@ function discardComments(css) {
 function declsForSelector(css, selector) {
   const decls = {};
   postcss.parse(css).walkRules(rule => {
-    if (rule.selector !== selector) return;
+    if (!rule.selectors.includes(selector)) return;
     if (rule.parent && rule.parent.type === 'atrule') return;
     rule.walkDecls(decl => {
       decls[decl.prop] = decl.important
@@ -42,7 +41,7 @@ function declsForSelector(css, selector) {
 function mediaParamsForSelector(css, selector) {
   const params = [];
   postcss.parse(css).walkRules(rule => {
-    if (rule.selector !== selector) return;
+    if (!rule.selectors.includes(selector)) return;
     if (
       rule.parent &&
       rule.parent.type === 'atrule' &&

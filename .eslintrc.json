@@ -3,13 +3,15 @@
     "@mapbox/eslint-config-mapbox",
     "prettier"
   ],
-  "ignorePatterns": [
-    "docs/.vitepress/**",
-    "_site"
-  ],
+  "rules": {
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      { "ignores": ["dynamicImport"] }
+    ]
+  },
   "overrides": [
     {
-      "files": ["*.mjs"],
+      "files": ["*.mjs", "docs/.vitepress/**/*.js"],
       "parserOptions": {
         "ecmaVersion": 2022,
         "sourceType": "module"

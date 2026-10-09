@@ -1,7 +1,5 @@
 <script setup>
-const icons = Object.keys(import.meta.glob('../../../src/svgs/*.svg'))
-  .map(file => file.replace(/^.*\//, '').replace(/\.svg$/, ''))
-  .sort();
+import { data as icons } from './icons.data.js';
 </script>
 
 <template>

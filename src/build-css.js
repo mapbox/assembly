@@ -1,11 +1,7 @@
 'use strict';
 
 const fs = require('fs');
-const os = require('os');
 const path = require('path');
-const crypto = require('crypto');
-const { execFile } = require('child_process');
-const { promisify } = require('util');
 const postcss = require('postcss');
 const csso = require('csso');
 const reporter = require('postcss-reporter');
@@ -15,8 +11,7 @@ const postcssCustomMedia = require('postcss-custom-media');
 const defaultVariables = require('./variables');
 const defaultMediaQueries = require('./media-queries');
 const timelog = require('./timelog');
-
-const execFileAsync = promisify(execFile);
+const { presetAssembly } = require('./preset');
 
 const DEFAULT_BROWSERS = [
   'last 4 Chrome versions',
@@ -29,39 +24,13 @@ const DEFAULT_BROWSERS = [
   'not dead'
 ];
 
-function handlePostcssError(error) {
-  if (error.name === 'CssSyntaxError') {
-    process.stderr.write(error.message + error.showSourceCode());
-    return;
-  }
-  throw error;
-}
-
-async function processWithPostcss(plugins, css, processOpts) {
-  try {
-    return await postcss(plugins).process(css, processOpts);
-  } catch (error) {
-    handlePostcssError(error);
-    throw error;
-  }
-}
-
 async function generateUnoCss(presetOptions) {
-  const optionsFile = path.join(
-    os.tmpdir(),
-    `assembly-uno-${crypto.randomBytes(8).toString('hex')}.json`
-  );
-  await fs.promises.writeFile(optionsFile, JSON.stringify(presetOptions));
-  try {
-    const { stdout } = await execFileAsync(
-      process.execPath,
-      [path.join(__dirname, 'generate-uno.mjs'), optionsFile],
-      { maxBuffer: 20 * 1024 * 1024 }
-    );
-    return stdout;
-  } finally {
-    await fs.promises.rm(optionsFile, { force: true });
-  }
+  const { createGenerator } = await import('@unocss/core');
+  const uno = await createGenerator({
+    presets: [presetAssembly(presetOptions)]
+  });
+  const { css } = await uno.generate('', { safelist: true, preflights: true });
+  return css;
 }
 
 /**
@@ -100,9 +69,9 @@ async function buildCss(options) {
     : defaultMediaQueries;
 
   const generatedCss = await generateUnoCss({
-    variables: opts.variables,
     colorVariants: opts.colorVariants,
-    files: opts.files
+    files: opts.files,
+    safelist: true
   });
 
   const postcssPlugins = [
@@ -122,7 +91,7 @@ async function buildCss(options) {
     reporter()
   ];
 
-  const postcssResult = await processWithPostcss(postcssPlugins, generatedCss, {
+  const postcssResult = await postcss(postcssPlugins).process(generatedCss, {
     from: outfile,
     to: outfile,
     map: {

@@ -1,7 +1,3 @@
-.header-anchor {
-  display: none;
-}
-
 div[class^='language-'] > button.copy,
 div[class^='language-'] > span.lang {
   display: none;
@@ -22,8 +18,4 @@ div[class^='language-'] > span.lang {
   font-size: inherit;
   line-height: inherit;
   white-space: inherit;
-}
-
-.shiki span {
-  color: var(--shiki-light);
 }

@@ -2,9 +2,11 @@
 
 Assembly uses an SVG icon sprite. To load the sprite, you must must include [`assembly.js`](https://labs.mapbox.com/assembly/) on your page.
 
-**Please read [the Icons page](/assembly/icons) to learn more about the available icons and the [Javascript API section of the home page](/assembly#js-api) to learn how to use them.**
+**Please read [the Icons page](/icons) to learn more about the available icons and the [Javascript API section of the home page](/#javascript-api) to learn how to use them.**
 
-## The `icon` class must be appled to an `<svg>` element
+```selectors
+.icon
+```
 
 The `icon` class must be appled to an `<svg>` element.
 Inside the `<svg>`, insert a `<use>` element whose `xlink:href` attribute
@@ -14,7 +16,7 @@ Change the size of icons by applying `w{size}` and `h{size}` classes to the svg.
 
 Be aware that *icons are block-level*.
 
-To see a list of all available icons, visit [the icons page](/assembly/icons).
+To see a list of all available icons, visit [the icons page](/icons).
 
 ```example
 <svg class='icon'><use xlink:href='#icon-paint'/></svg>

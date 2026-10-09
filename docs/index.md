@@ -5,7 +5,7 @@ title: Assembly.css
 <div class="pt24">
   <div class="flex-ml flex--wrap-ml">
     <h1 class="flex-child-grow-ml txt-h2 txt-bold">Assembly.css</h1>
-    <div class="mt18 color-darken50">v2.0.0</div>
+    <div class="mt18 color-darken50">v%VERSION%</div>
   </div>
   <p class="txt-l mt18">
     Assembly is an atomic CSS framework with great default form element styles. Use it, and your team will never have to write CSS again.
@@ -17,7 +17,7 @@ title: Assembly.css
 <p>Include in the head of your HTML the Assembly stylesheet.</p>
 
 ```html
-<link href="https://api.mapbox.com/mapbox-assembly/v2.0.0/assembly.min.css" rel="stylesheet">
+<link href="https://api.mapbox.com/mapbox-assembly/v%VERSION%/assembly.min.css" rel="stylesheet">
 ```
 
 <p class="mt24">
@@ -25,7 +25,7 @@ title: Assembly.css
 </p>
 
 ```html
-<script async defer src="https://api.mapbox.com/mapbox-assembly/v2.0.0/assembly.js"></script>
+<script async defer src="https://api.mapbox.com/mapbox-assembly/v%VERSION%/assembly.js"></script>
 ```
 
 <h3 class="mt60 mb12 txt-bold">HTML Template</h3>
@@ -39,8 +39,8 @@ title: Assembly.css
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='shortcut icon' href='Your favicon path goes here' type='image/x-icon'>
-  <link href='https://api.mapbox.com/mapbox-assembly/v2.0.0/assembly.min.css' rel='stylesheet'>
-  <script async defer src='https://api.mapbox.com/mapbox-assembly/v2.0.0/assembly.js'></script>
+  <link href='https://api.mapbox.com/mapbox-assembly/v%VERSION%/assembly.min.css' rel='stylesheet'>
+  <script async defer src='https://api.mapbox.com/mapbox-assembly/v%VERSION%/assembly.js'></script>
 </head>
 <body>
   <!-- Your page... -->
@@ -76,7 +76,7 @@ title: Assembly.css
 
 <div class="mt60 flex-mm">
   <div class="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-    <img src="./img/modifier.svg" alt="" />
+    <img src="/img/modifier.svg" alt="" />
   </div>
   <div>
     <h3 class="txt-bold">Classes and modifier classes</h3>
@@ -88,7 +88,7 @@ title: Assembly.css
 
 <div class="mt60 flex-mm">
   <div class="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-    <img src="./img/baseline-grid.svg" alt="" />
+    <img src="/img/baseline-grid.svg" alt="" />
   </div>
   <div>
     <h3 class="txt-bold">6 pixel baseline grid</h3>
@@ -100,7 +100,7 @@ title: Assembly.css
 
 <div class="mt60 flex-mm">
   <div class="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-    <img src="./img/defaults.svg" alt="" />
+    <img src="/img/defaults.svg" alt="" />
   </div>
   <div>
     <h3 class="txt-bold">No default styling for semantic elements</h3>
@@ -115,7 +115,7 @@ title: Assembly.css
 
 <div class="mt60 flex-mm">
   <div class="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-    <img src="./img/custom-icons.svg" alt="" />
+    <img src="/img/custom-icons.svg" alt="" />
   </div>
   <div>
     <h3 class="txt-bold">Customizable icons</h3>
@@ -127,7 +127,7 @@ title: Assembly.css
 
 <div class="mt60 flex-mm">
   <div class="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-    <img src="./img/media-queries.svg" alt="" />
+    <img src="/img/media-queries.svg" alt="" />
   </div>
   <div>
     <h3 class="txt-bold">Media queries are mobile-first</h3>
@@ -149,7 +149,7 @@ title: Assembly.css
 
 <div class="mt60 flex-mm">
   <div class="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-    <img src="./img/specificity.svg" alt="" />
+    <img src="/img/specificity.svg" alt="" />
   </div>
   <div>
     <h3 class="txt-bold">Utility classes have maximum specificity</h3>
@@ -167,7 +167,7 @@ title: Assembly.css
 
 <div class="mt60 flex-mm">
   <div class="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-    <img src="./img/box-model.svg" alt="" />
+    <img src="/img/box-model.svg" alt="" />
   </div>
   <div>
     <h3 class="txt-bold">More intuitive box model</h3>
@@ -179,7 +179,7 @@ title: Assembly.css
 
 <div class="mt60 flex-mm">
   <div class="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-    <img src="./img/is-active.svg" alt="" />
+    <img src="/img/is-active.svg" alt="" />
   </div>
   <div>
     <h3 class="txt-bold"><code class="txt-code">is-active</code> applies active states</h3>
@@ -194,7 +194,7 @@ title: Assembly.css
 
 <div class="mt60 flex-mm">
   <div class="flex-child-no-shrink mr24 mb0-mm mb18 w60 h60">
-    <img src="./img/focus.svg" alt="" />
+    <img src="/img/focus.svg" alt="" />
   </div>
   <div>
     <h3 class="txt-bold">Focus outlines as needed</h3>

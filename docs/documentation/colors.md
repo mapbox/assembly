@@ -1,7 +1,3 @@
-<script setup>
-import ColorGrid from '../.vitepress/theme/ColorGrid.vue';
-</script>
-
 # Colors
 
 Background and text colors. Colors include dark, light, and faint variations.
@@ -10,11 +6,21 @@ Only use `-faint` text colors on dark backgrounds.
 
 ## Text colors
 
+```selectors
+.color-{color}
+```
+
 Apply a text color with `color-{name}`.
 
-<ColorGrid prefix="color" />
+```color-grid color
+```
 
-### Hover and active
+```selectors
+.color-{color}-on-hover
+.color-{color}-on-active
+```
+
+Apply a text color on hover and active states.
 
 ```example
 <div class='color-red-on-hover'>color-red-on-hover</div>
@@ -24,11 +30,21 @@ Apply a text color with `color-{name}`.
 
 ## Background colors
 
+```selectors
+.bg-{color}
+```
+
 Apply a background color with `bg-{name}`.
 
-<ColorGrid prefix="bg" extra-class="py6 px6" />
+```color-grid bg
+```
 
-### Hover and active
+```selectors
+.bg-{color}-on-hover
+.bg-{color}-on-active
+```
+
+Apply a background color on hover and active states.
 
 ```example
 <div class='bg-darken25-on-hover'>bg-darken25-on-hover</div>

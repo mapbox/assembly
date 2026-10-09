@@ -1,7 +1,7 @@
 <script setup>
 import { formColors } from '../data.js';
 
-const colors = [null].concat(formColors());
+const colors = [null].concat(formColors);
 
 function inputClass(color, extra) {
   return ['input', 'w240', color ? `input--border-${color}` : '', extra]

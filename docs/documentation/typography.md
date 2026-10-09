@@ -10,9 +10,9 @@ or by creating [`prose`](#prose) sections. All typographic styles can be applied
 
 Classes for font size and line height, lists, block quotes, code blocks, and more.
 
-### Style text like a keyboard button
-
-<p class="txt-mono">`.txt-kbd`</p>
+```selectors
+.txt-kbd
+```
 
 Style text like a keyboard button.
 
@@ -20,9 +20,9 @@ Style text like a keyboard button.
 You entered <kbd class='txt-kbd'>Flamingo</kbd>.
 ```
 
-### Style subscript text: small and below the standard line
-
-<p class="txt-mono">`.txt-sub`</p>
+```selectors
+.txt-sub
+```
 
 Style subscript text: small and below the standard line.
 
@@ -30,9 +30,9 @@ Style subscript text: small and below the standard line.
 The chemical formula of water is H<sub class='txt-sub'>2</sub>O.
 ```
 
-### Style a code block
-
-<p class="txt-mono">`.pre`</p>
+```selectors
+.pre
+```
 
 Style a code block.
 
@@ -44,9 +44,9 @@ end</code>
 </pre>
 ```
 
-### Style text as inline code
-
-<p class="txt-mono">`.txt-code`</p>
+```selectors
+.txt-code
+```
 
 Style text as inline code.
 
@@ -54,7 +54,13 @@ Style text as inline code.
 Make sure you <code class='txt-code'>git checkout</code> the repository.
 ```
 
-### Classes for the headline text scale. Line heights are 1.3333 times font size or less
+```selectors
+.txt-h1
+.txt-h2
+.txt-h3
+.txt-h4
+.txt-h5
+```
 
 Classes for the headline text scale. Line heights are 1.3333 times font size or less.
 All text size classes include `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
@@ -67,7 +73,14 @@ All text size classes include `-mm`, `-ml`, and `-mxl` variations to target scre
 <div class='txt-h5'>Malesuada Pharetra Ridiculus</div>
 ```
 
-### Classes for the body text scale. Line heights are 1.5 times font size or more
+```selectors
+.txt-xl
+.txt-l
+.txt-m
+.txt-ms
+.txt-s
+.txt-xs
+```
 
 Classes for the body text scale. Line heights are 1.5 times font size or more.
 All text size classes include `-mm`, `-ml`, and `-mxl` variations to target screen sizes.
@@ -81,9 +94,9 @@ All text size classes include `-mm`, `-ml`, and `-mxl` variations to target scre
 <div class='txt-xs'>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
 ```
 
-### Style an abbreviation or acronym
-
-<p class="txt-mono">`.txt-abbr`</p>
+```selectors
+.txt-abbr
+```
 
 Style an abbreviation or acronym.
 
@@ -91,9 +104,9 @@ Style an abbreviation or acronym.
 How do you feel about <abbr title='Cascading Style Sheets' class='txt-abbr'>CSS</abbr>?
 ```
 
-### Style a line separating two blocks of text
-
-<p class="txt-mono">`.txt-hr`</p>
+```selectors
+.txt-hr
+```
 
 Style a line separating two blocks of text.
 
@@ -101,9 +114,11 @@ Style a line separating two blocks of text.
 <hr class='txt-hr'>
 ```
 
-### Style an unordered list. Works with any element type if the list items use the `txt-li` class, but you should almost always use it with a `<ul>` element
+```selectors
+.txt-ul
+```
 
-<p class="txt-mono">`.txt-ul`</p>
+Style an unordered list. Works with any element type if the list items use the `txt-li` class, but you should almost always use it with a `<ul>` element.
 
 ```example
 <div class='txt-ul'>
@@ -113,9 +128,11 @@ Style a line separating two blocks of text.
 </div>
 ```
 
-### Style an ordered list. This does *not* work (in Firefox) without semantic elements `<ol>` and `<li>`, so use those
+```selectors
+.txt-ol
+```
 
-<p class="txt-mono">`.txt-ol`</p>
+Style an ordered list. This does *not* work (in Firefox) without semantic elements `<ol>` and `<li>`, so use those.
 
 ```example
 <ol class='txt-ol'>
@@ -125,9 +142,9 @@ Style a line separating two blocks of text.
 </ol>
 ```
 
-### Style a block quotation
-
-<p class="txt-mono">`.txt-blockquote`</p>
+```selectors
+.txt-blockquote
+```
 
 Style a block quotation.
 
@@ -135,9 +152,9 @@ Style a block quotation.
 <div class='txt-blockquote'>Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.</div>
 ```
 
-### Style superscript text: small and above the standard line
-
-<p class="txt-mono">`.txt-sup`</p>
+```selectors
+.txt-sup
+```
 
 Style superscript text: small and above the standard line.
 
@@ -149,7 +166,9 @@ Planet earth is seven years old. <sup class='txt-sup'>citation needed</sup>
 
 Single-purpose classes for styling text.
 
-### Apply Assembly's monospaced font stack
+```selectors
+.txt-mono
+```
 
 Apply Assembly's monospaced font stack.
 
@@ -157,7 +176,9 @@ Apply Assembly's monospaced font stack.
 <div class='txt-mono'>txt-mono</div>
 ```
 
-### Apply a bold font weight
+```selectors
+.txt-bold
+```
 
 Apply a bold font weight.
 
@@ -165,7 +186,9 @@ Apply a bold font weight.
 <div class='txt-bold'>txt-bold</div>
 ```
 
-### Apply a light font weight
+```selectors
+.txt-light
+```
 
 Apply a light font weight.
 
@@ -173,7 +196,9 @@ Apply a light font weight.
 <div class='txt-light'>txt-light</div>
 ```
 
-### Apply a normal font weight
+```selectors
+.txt-normal
+```
 
 Apply a normal font weight.
 
@@ -181,7 +206,9 @@ Apply a normal font weight.
 <div class='txt-normal'>txt-normal</div>
 ```
 
-### Italicize text
+```selectors
+.txt-em
+```
 
 Italicize text.
 
@@ -189,7 +216,9 @@ Italicize text.
 <div class='txt-em'>em</div>
 ```
 
-### Capitalize all letters in an element
+```selectors
+.txt-uppercase
+```
 
 Capitalize all letters in an element.
 
@@ -197,7 +226,9 @@ Capitalize all letters in an element.
 <div class='txt-uppercase'>UpPeRcAsE</div>
 ```
 
-### Lowercase all letters in an element
+```selectors
+.txt-lowercase
+```
 
 Lowercase all letters in an element.
 
@@ -205,7 +236,9 @@ Lowercase all letters in an element.
 <div class='txt-lowercase'>LoWeRcAsE</div>
 ```
 
-### Capitalize all words in an element
+```selectors
+.txt-capitalize
+```
 
 Capitalize all words in an element.
 
@@ -213,9 +246,9 @@ Capitalize all words in an element.
 <div class='txt-capitalize'>all words are capitalized</div>
 ```
 
-### Capitalize the first letter in an element
-
-<p class="txt-mono">`.txt-capitalize-first`</p>
+```selectors
+.txt-capitalize-first
+```
 
 Capitalize the first letter in an element.
 
@@ -223,7 +256,9 @@ Capitalize the first letter in an element.
 <div class='txt-capitalize-first'>first word only is capitalized</div>
 ```
 
-### Underline text
+```selectors
+.txt-underline
+```
 
 Underline text.
 
@@ -231,9 +266,9 @@ Underline text.
 <div class='txt-underline'>txt-underline</div>
 ```
 
-### Underline text on hover
-
-<p class="txt-mono">`.txt-underline-on-hover`</p>
+```selectors
+.txt-underline-on-hover
+```
 
 Underline text on hover.
 
@@ -241,9 +276,9 @@ Underline text on hover.
 <span class='txt-underline-on-hover'>txt-underline-on-hover</span>
 ```
 
-### Strikethrough text
-
-<p class="txt-mono">`.txt-strike`</p>
+```selectors
+.txt-strike
+```
 
 Strikethrough text.
 
@@ -251,7 +286,9 @@ Strikethrough text.
 <div class='txt-strike'>txt-strike</div>
 ```
 
-### Prevent text from wrapping
+```selectors
+.txt-nowrap
+```
 
 Prevent text from wrapping.
 
@@ -261,7 +298,9 @@ Prevent text from wrapping.
 </div>
 ```
 
-### Allow words to break across lines
+```selectors
+.txt-break-word
+```
 
 Allow words to break across lines.
 
@@ -271,7 +310,9 @@ Allow words to break across lines.
 </div>
 ```
 
-### Truncate text to a single line contained within the width
+```selectors
+.txt-truncate
+```
 
 Truncate text to a single line contained within the width
 of its container, ending with an ellipsis if it overflows.
@@ -282,7 +323,11 @@ of its container, ending with an ellipsis if it overflows.
 </div>
 ```
 
-### Apply extra space between letters
+```selectors
+.txt-spacing05
+.txt-spacing1
+.txt-spacing2
+```
 
 Apply extra space between letters.
 
@@ -291,7 +336,14 @@ Apply extra space between letters.
 <div class='txt-spacing2'>way spaced out</div>
 ```
 
-### Apply text shadows
+```selectors
+.txt-shadow-darken10
+.txt-shadow-darken25
+.txt-shadow-darken50
+.txt-shadow-lighten10
+.txt-shadow-lighten25
+.txt-shadow-lighten50
+```
 
 Apply text shadows.
 
@@ -304,7 +356,11 @@ Apply text shadows.
 <div class='txt-shadow-lighten50 bg-darken75'>ghost world</div>
 ```
 
-### Control the horizontal alignment of an element's inline children
+```selectors
+.align-l
+.align-r
+.align-center
+```
 
 Control the horizontal alignment of an element's inline children.
 
@@ -314,7 +370,11 @@ Control the horizontal alignment of an element's inline children.
 <div class='align-center'>.align-center</div>
 ```
 
-### Control the vertical alignment of an inline or table-cell element
+```selectors
+.align-t
+.align-b
+.align-middle
+```
 
 Control the vertical alignment of an inline or table-cell element.
 
@@ -338,9 +398,9 @@ Control the vertical alignment of an inline or table-cell element.
 Conveniently style large blocks of semantic markup.
 `prose` is designed to only be used when content is generated by a markdown processor and you don't have control over each element's class list.
 
-### Apply appropriate styles based on semantic markup. Supported elements are:
-
-<p class="txt-mono">`.prose`</p>
+```selectors
+.prose
+```
 
 Apply appropriate styles based on semantic markup. Supported elements are:
 `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `table`, `small`, `ul`, `ol`, `a`, `abbr`, `hr`, `blockquote`, `kbd`, `sub`, `sup`, `code`, `pre`, `del`, `s`, `img`, and `video`.
@@ -354,9 +414,9 @@ Apply appropriate styles based on semantic markup. Supported elements are:
 </div>
 ```
 
-### Remove prose styling. Useful when you need to display, for example, a custom form inside an otherwise consistently-styled document
-
-<p class="txt-mono">`.unprose`</p>
+```selectors
+.unprose
+```
 
 Remove prose styling. Useful when you need to display, for example, a custom form inside an otherwise consistently-styled document.
 
@@ -371,7 +431,9 @@ Remove prose styling. Useful when you need to display, for example, a custom for
 </div>
 ```
 
-### Invert the coloring of textual content inside `prose` sections, so it is legible against dark backgrounds
+```selectors
+.prose--dark
+```
 
 Invert the coloring of textual content inside `prose` sections, so it is legible against dark backgrounds.
 

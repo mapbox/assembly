@@ -39,9 +39,31 @@ export default defineConfig({
 });
 ```
 
+The generated CSS uses Assembly's CSS variables (`var(--blue)`) and custom media queries (`@media (--m-screen)`), which browsers can't resolve on their own. Run it through PostCSS with the same plugins `buildUserAssets` uses, pointed at Assembly's variable and media query definitions:
+
+```js
+// postcss.config.js
+const variables = require('@mapbox/assembly/src/variables.json');
+const mediaQueries = require('@mapbox/assembly/src/media-queries.json');
+
+module.exports = {
+  plugins: [
+    require('postcss-custom-properties')({
+      preserve: false,
+      importFrom: { customProperties: variables }
+    }),
+    require('postcss-custom-media')({
+      importFrom: { customMedia: mediaQueries }
+    })
+  ]
+};
+```
+
+`importFrom` requires `postcss-custom-properties@12` and `postcss-custom-media@8`; later major versions removed it. To change a variable or breakpoint, override its entry in these objects. `examples/jit/build.mjs` shows the full pipeline.
+
 The prebuilt `assembly.css` is generated with `presetAssembly({ safelist: true })` so every class is present. Do not pass `safelist: true` in an app that wants on-demand CSS.
 
-`options.variables`, `options.colorVariants`, and `options.files` match the `buildUserAssets` options of the same names.
+`options.colorVariants` and `options.files` match the `buildUserAssets` options of the same names. Variable overrides are applied in the PostCSS step above, not by the preset.
 
 ### buildUserAssets(outdir[, options])
 
@@ -148,12 +170,12 @@ Media query class variants (e.g. `block-mm` as a variant of `block`) are generat
 
 ### Tools
 
-- [UnoCSS](https://unocss.dev/) generates Assembly utilities from `presetAssembly()` (`src/preset/utilities.js`, layout scales, color rules, media-query variants, and `src/preset/base.js` for reset/forms).
+- [UnoCSS](https://unocss.dev/) generates Assembly utilities from `presetAssembly()` (`src/preset/utilities.js`, layout scales, color rules, media-query variants, and `src/preset/base.css` for reset/forms).
 - [PostCSS](http://postcss.org/) for processing CSS. PostCSS parses CSS and runs it through plugins, and these are the plugins we're using:
   - [Autoprefixer](https://autoprefixer.github.io/) automatically adds vendor prefixes.
   - [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties) allows us to use variables for values, with the [CSS custom properties syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).
   - [postcss-custom-media](https://github.com/postcss/postcss-custom-media) allows us to use variables for media queries, with the [CSS custom media queries syntax](https://www.w3.org/TR/2016/WD-mediaqueries-4-20160126/#custom-mq).
-- [PostCSS](http://postcss.org/) for processing CSS. PostCSS parses CSS and runs it through plugins, and these are the plugins we're using:
+- SVGs
   - [svgstore](https://github.com/svgstore/svgstore) compiles our SVGs into a SVG "sprite" of sorts, allowing us to use [the latest and greatest SVG-based icon system](https://css-tricks.com/svg-sprites-use-better-icon-fonts/).
 - [VitePress](https://vitepress.dev/) powers the website.
 

@@ -2,9 +2,9 @@
 
 Extra rules that come in handy.
 
-## Style scrollbars. Only works in Webkit-based browsers (Safari and Chrome)
-
-<p class="txt-mono">`.scroll-styled`</p>
+```selectors
+.scroll-styled
+```
 
 Style scrollbars. Only works in Webkit-based browsers (Safari and Chrome).
 On dark backgrounds, add the `scroll-styled--dark` modifier.
@@ -16,7 +16,11 @@ On dark backgrounds, add the `scroll-styled--dark` modifier.
 <div class="scroll-styled scroll-styled--dark bg-gray-dark overflow-auto h120"><div class='h240'></div></div>
 ```
 
-## Style a loading spinner
+```selectors
+.loading
+.loading--dark
+.loading--s
+```
 
 Style a loading spinner.
 On dark backgrounds, add the `loading--dark` modifier.
@@ -34,7 +38,9 @@ Use `color-*` classes to apply a custom color to the spinner handle.
 </div>
 ```
 
-## Disable touch and click events on an element and its children
+```selectors
+.events-none
+```
 
 Disable touch and click events on an element and
 its children. Be aware that this rule does not disable keyboard events,
@@ -45,7 +51,9 @@ its click event.
 <div class='btn events-none'>You can't click this</div>
 ```
 
-## Enable touch and click events on an element and its children
+```selectors
+.events-all
+```
 
 Enable touch and click events on an element and
 its children. Use to re-enable such events inside a parent with the `events-none` class.
@@ -54,7 +62,9 @@ its children. Use to re-enable such events inside a parent with the `events-none
 <div class='events-none'><div class='events-all'>You can click this.</div></div>
 ```
 
-## Disable text selection on an element and its children
+```selectors
+.unselectable
+```
 
 Disable text selection on an element and its children. Use only in cases where accidental text selection causes user frustration.
 
@@ -62,7 +72,9 @@ Disable text selection on an element and its children. Use only in cases where a
 <div class='unselectable'>You can't select this.</div>
 ```
 
-## Enable text selection on an element and its children
+```selectors
+.selectable
+```
 
 Enable text selection on an element and its children.
 Use to re-enable selection inside a parent with the `unselectable` class.
@@ -71,7 +83,9 @@ Use to re-enable selection inside a parent with the `unselectable` class.
 <div class='unselectable'><div class='selectable'>You can select this.</div></div>
 ```
 
-## Apply a subtle animated transition when changing CSS properties on an element
+```selectors
+.transition
+```
 
 Apply a subtle animated transition when changing CSS properties on an element. See MDN's [list of CSS animated properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties) for every property effected by this class.
 
@@ -79,15 +93,19 @@ Apply a subtle animated transition when changing CSS properties on an element. S
 <div class='bg-blue-on-hover transition'>Hover over me</div>
 ```
 
-## Disable an animated transition on elements like [`btn`](/documentation/buttons) that have default transitions
+```selectors
+.transition-none
+```
 
-Disable an animated transition on elements like [`btn`](/documentation/buttons) that have default transitions.
+Disable an animated transition on elements like [`btn`](/documentation/#buttons) that have default transitions.
 
 ```example
 <div class='btn transition-none'>transition-none</div>
 ```
 
-## Always show scrollbars
+```selectors
+.overflow-scroll
+```
 
 Always show scrollbars.
 
@@ -95,7 +113,9 @@ Always show scrollbars.
 <div class='overflow-scroll'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 ```
 
-## Display scrollbars if content flows beyond the edge of the element
+```selectors
+.overflow-auto
+```
 
 Display scrollbars if content flows beyond the edge of the element.
 
@@ -103,7 +123,9 @@ Display scrollbars if content flows beyond the edge of the element.
 <div class='h60 overflow-auto'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 ```
 
-## Hide content if it extends beyond the edge of the containing element
+```selectors
+.overflow-hidden
+```
 
 Hide content if it extends beyond the edge of the containing element.
 
@@ -111,7 +133,9 @@ Hide content if it extends beyond the edge of the containing element.
 <div class='h60 overflow-hidden'>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 ```
 
-## Hide an element *visually*, but keep it available to screen readers
+```selectors
+.hide-visually
+```
 
 Hide an element *visually*, but keep it available to screen readers.
 
@@ -120,9 +144,9 @@ Hide an element *visually*, but keep it available to screen readers.
 <div>There is a sentence above this that you cannot see.</div>
 ```
 
-## Apply display none when rendering page for print
-
-<p class="txt-mono">`.none-print`</p>
+```selectors
+.none-print
+```
 
 Apply display none when rendering page for print.
 

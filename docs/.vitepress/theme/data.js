@@ -1,19 +1,5 @@
-import {
-  ALL_COLORS,
-  isNotAccessibleExceptBg,
-  isNotAccessibleForButtons,
-  isNotAccessibleForForms
-} from '../../../src/preset/color-utils.js';
+import { data as colors } from './colors.data.js';
 import scales from '../../../src/scales.json';
-
-function colorNames(kind) {
-  if (kind === 'color') {
-    return ALL_COLORS.filter(color => !isNotAccessibleExceptBg(color)).concat([
-      'text'
-    ]);
-  }
-  return ALL_COLORS.slice();
-}
 
 function scaleToken(value) {
   if (Array.isArray(value)) {
@@ -22,22 +8,8 @@ function scaleToken(value) {
   return String(value).replace(/\\/g, '');
 }
 
-function buttonColors() {
-  return ALL_COLORS.filter(color => !isNotAccessibleForButtons(color));
-}
+const ALL_COLORS = colors.all;
+const buttonColors = colors.button;
+const formColors = colors.form;
 
-function formColors() {
-  return ALL_COLORS.filter(color => !isNotAccessibleForForms(color));
-}
-
-export {
-  ALL_COLORS,
-  scales,
-  colorNames,
-  scaleToken,
-  buttonColors,
-  formColors,
-  isNotAccessibleForButtons,
-  isNotAccessibleForForms,
-  isNotAccessibleExceptBg
-};
+export { ALL_COLORS, scales, scaleToken, buttonColors, formColors };

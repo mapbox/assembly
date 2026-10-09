@@ -1,7 +1,7 @@
 <script setup>
 import { formColors } from '../data.js';
 
-const colors = [null].concat(formColors());
+const colors = [null].concat(formColors);
 
 function switchClass(color, handleColor) {
   return [

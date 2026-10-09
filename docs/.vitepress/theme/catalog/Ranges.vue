@@ -1,7 +1,7 @@
 <script setup>
 import { formColors } from '../data.js';
 
-const colors = [null].concat(formColors());
+const colors = [null].concat(formColors);
 
 function rangeClass(color, size) {
   return ['range', 'w240', color ? `range--${color}` : '', size ? `range--${size}` : '']

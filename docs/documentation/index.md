@@ -1,16 +1,27 @@
-# Documentation
+---
+title: Documentation
+---
 
-Assembly's class reference.
+<!--@include: ./typography.md-->
 
-- [Typography](/documentation/typography)
-- [Layout](/documentation/layout)
-- [Theming](/documentation/theming)
-- [Colors](/documentation/colors)
-- [Icons](/documentation/icons)
-- [Buttons](/documentation/buttons)
-- [Links](/documentation/links)
-- [Forms](/documentation/forms)
-- [Tables](/documentation/tables)
-- [Animations](/documentation/animations)
-- [Triangles](/documentation/triangles)
-- [Miscellaneous](/documentation/miscellaneous)
+<!--@include: ./layout.md-->
+
+<!--@include: ./theming.md-->
+
+<!--@include: ./colors.md-->
+
+<!--@include: ./icons.md-->
+
+<!--@include: ./buttons.md-->
+
+<!--@include: ./links.md-->
+
+<!--@include: ./forms.md-->
+
+<!--@include: ./tables.md-->
+
+<!--@include: ./animations.md-->
+
+<!--@include: ./triangles.md-->
+
+<!--@include: ./miscellaneous.md-->

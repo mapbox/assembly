@@ -1,7 +1,6 @@
 'use strict';
 
 const layoutScales = require('../scales.json');
-const { toEscapedSelector } = require('./escape');
 const { withMediaClasses } = require('./media-classes');
 
 function cssValue(v) {
@@ -27,12 +26,6 @@ function fractionPercent(numer, denom) {
   const d = Number(denom);
   if (!d) return;
   return (Number(numer) / d) * 100;
-}
-
-function wrapMediaFromSelector(rawSelector, css) {
-  const media = rawSelector.match(/-m(m|l|xl)$/);
-  if (!media) return css;
-  return `@media (--${media[1]}-screen) {\n${css}\n}`;
 }
 
 function rotateDeg(scale) {
@@ -68,18 +61,19 @@ function layoutScaleRules() {
   const gutterScale = new Set(layoutScales.gutter.map(String));
   rules.push([
     /^grid--gut(.+)$/,
-    ([, scale], { rawSelector }) => {
+    ([, scale], { symbols }) => {
       if (!gutterScale.has(scale)) return;
-      const sel = toEscapedSelector(rawSelector);
       const val = cssValue(scale);
-      const css = [
-        `${sel} { margin-left: -${val}; }`,
-        `${sel} > .col,`,
-        `${sel} > .col-mm,`,
-        `${sel} > .col-ml,`,
-        `${sel} > .col-mxl { padding-left: ${val}; }`
-      ].join('\n');
-      return wrapMediaFromSelector(rawSelector, css);
+      return [
+        { 'margin-left': `-${val}` },
+        {
+          [symbols.selector]: s =>
+            ['col', 'col-mm', 'col-ml', 'col-mxl']
+              .map(col => `${s} > .${col}`)
+              .join(', '),
+          'padding-left': val
+        }
+      ];
     }
   ]);
 
@@ -264,4 +258,4 @@ function layoutScaleRules() {
   return { rules, safelist };
 }
 
-module.exports = { layoutScaleRules, cssValue, fractionName };
+module.exports = { layoutScaleRules };

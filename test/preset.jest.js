@@ -1,12 +1,14 @@
 'use strict';
 
-const path = require('path');
-const { execFile } = require('child_process');
-const { promisify } = require('util');
 const { presetAssembly } = require('../src/preset');
 const { MEDIA_VARIANT_CLASSES } = require('../src/preset/media-classes');
 
-const execFileAsync = promisify(execFile);
+async function generateJit(markup) {
+  const { createGenerator } = await import('@unocss/core');
+  const uno = await createGenerator({ presets: [presetAssembly()] });
+  const { css } = await uno.generate(markup, { preflights: false });
+  return css;
+}
 
 describe('presetAssembly', () => {
   test('omits the full safelist in JIT mode', () => {
@@ -47,27 +49,40 @@ describe('presetAssembly', () => {
   });
 
   test('JIT generate emits only requested utilities', async () => {
-    const { stdout } = await execFileAsync(process.execPath, [
-      path.join(__dirname, 'generate-jit.mjs')
-    ]);
-    expect(stdout).toContain('.px12');
-    expect(stdout).toContain('.flex');
-    expect(stdout).toContain('.bg-blue');
-    expect(stdout).toContain('.gap12');
-    expect(stdout).toContain('.gridbox');
-    expect(stdout).toContain('.gridbox--cols3');
-    expect(stdout).toContain('.rotate30');
-    expect(stdout).toContain('rotate:30deg');
-    expect(stdout).toContain('.translate-x48');
-    expect(stdout).toContain('translate:48px 0');
-    expect(stdout).toContain('.w-2\\/5');
-    expect(stdout).toContain('width:40%');
-    expect(stdout).not.toContain('.mt48');
-    expect(stdout).not.toContain('.mr-2\\/5');
-    expect(stdout).not.toContain('.px24');
-    expect(stdout).not.toContain('.flex-mm');
-    expect(stdout).not.toContain('.bg-red');
-    expect(stdout).not.toContain('.gap24');
-    expect(stdout).not.toContain('.gridbox--cols4');
+    const css = await generateJit(
+      'px12 flex bg-blue gap12 gridbox gridbox--cols3 rotate30 translate-x48 w-2/5 mt48 mr-2/5'
+    );
+    expect(css).toContain('.px12');
+    expect(css).toContain('.flex');
+    expect(css).toContain('.bg-blue');
+    expect(css).toContain('.gap12');
+    expect(css).toContain('.gridbox');
+    expect(css).toContain('.gridbox--cols3');
+    expect(css).toContain('.rotate30');
+    expect(css).toContain('rotate:30deg');
+    expect(css).toContain('.translate-x48');
+    expect(css).toContain('translate:48px 0');
+    expect(css).toContain('.w-2\\/5');
+    expect(css).toContain('width:40%');
+    expect(css).not.toContain('.mt48');
+    expect(css).not.toContain('.mr-2\\/5');
+    expect(css).not.toContain('.px24');
+    expect(css).not.toContain('.flex-mm');
+    expect(css).not.toContain('.bg-red');
+    expect(css).not.toContain('.gap24');
+    expect(css).not.toContain('.gridbox--cols4');
+  });
+
+  test('media variants wrap color utilities', async () => {
+    const css = await generateJit('bg-blue-mm btn--red-ml grid--gut12-mxl');
+    expect(css).toMatch(
+      /@media \(--m-screen\)\{\n\.bg-blue-mm\{background-color:var\(--blue\) !important;\}/
+    );
+    expect(css).toContain(
+      '.btn--stroke.btn--red-ml:hover, .btn--stroke.btn--red-ml.is-active'
+    );
+    expect(css).toContain('.grid--gut12-mxl > .col');
+    expect(css).not.toMatch(/\.bg-blue\{/);
+    expect(css).not.toMatch(/\.btn--red[{:.,\s]/);
   });
 });
