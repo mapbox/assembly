@@ -11,6 +11,7 @@ const {
 } = require('./color-utils');
 
 const important = value => `${value} !important`;
+const switchChecked = s => `.switch-container:has(> input:checked) ${s}`;
 
 function colorRules(config) {
   const resolved = resolveColorVariants(config);
@@ -122,12 +123,11 @@ function colorRules(config) {
   colorsFor(resolved, 'switch').forEach(color => {
     if (isNotAccessibleForForms(color)) return;
     append(`switch--${color}`, [
-      [s => s, { color: `var(--${color})` }],
-      [s => `input:checked + ${s}`, { 'background-color': `var(--${color})` }]
+      [switchChecked, { 'background-color': `var(--${color})` }]
     ]);
     append(`switch--dot-${color}`, [
       [
-        s => `input:checked + ${s}::after`,
+        s => `${switchChecked(s)}::after`,
         { 'background-color': `var(--${color})` }
       ]
     ]);
