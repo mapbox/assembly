@@ -204,6 +204,13 @@ legend{
   display:block;
   width:100%;
 }
+@media (prefers-reduced-motion: reduce){
+  *,
+  ::before,
+  ::after{
+    transition-duration:0.01ms !important;
+  }
+}
 [data-assembly-focus-control] *:focus{
   outline:0;
 }
@@ -213,14 +220,8 @@ legend{
 }
 [data-assembly-focus-control='visible'] input:focus + .checkbox,
 [data-assembly-focus-control='visible'] input:focus + .radio,
-[data-assembly-focus-control='visible'] input:focus + .switch,
+[data-assembly-focus-control='visible'] .switch-container:has(> input:focus) .switch,
 [data-assembly-focus-control='visible'] input:focus + .toggle{
-  box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
-}
-:is(
-    input:focus-visible + .switch,
-    .switch-container:has(> input:focus-visible) .switch
-  ){
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 [data-assembly-focus-control='visible'] .range input[type='range']{
@@ -735,20 +736,9 @@ legend{
   position:absolute;
   display:block;
   border-radius:50%;
-  top:3px;
-  left:3px;
-  width:18px;
-  height:18px;
+  inset:3px auto 3px 3px;
+  aspect-ratio:1;
   transition:translate 0.125s, background-color 0.125s;
-}
-.switch--l::after{
-  width:30px;
-  height:30px;
-}
-@media (prefers-reduced-motion: reduce){
-  .switch::after{
-    transition:background-color 0.125s;
-  }
 }
 .checkbox--s-label,
 .radio--s-label{
@@ -762,33 +752,20 @@ input:checked:disabled + :is(.checkbox, .radio){
   pointer-events:none;
   color:rgba(26, 34, 36, 0.25);
 }
-:is(
-    input:disabled + .switch,
-    .switch-container:has(> input:disabled) .switch
-  ){
+.switch-container:has(> input:disabled, > input:checked:disabled) .switch{
   pointer-events:none;
   background-color:rgba(158, 163, 167, 0.25);
+}
+.switch-container:has(> input:disabled, > input:checked:disabled)
+  .switch::after{
+  background-color:rgba(26, 34, 36, 0.25);
 }
 input:disabled + :is(.radio, .checkbox){
   background-color:rgba(158, 163, 167, 0.25);
   border-color:transparent;
 }
-input:checked:disabled + :is(.checkbox, .radio),
-:is(
-    input:checked:disabled + .switch,
-    .switch-container:has(> input:checked:disabled) .switch
-  ){
+input:checked:disabled + :is(.checkbox, .radio){
   background-color:rgba(158, 163, 167, 0.25);
-}
-:is(
-    input:disabled + .switch,
-    .switch-container:has(> input:disabled) .switch
-  )::after,
-:is(
-    input:checked:disabled + .switch,
-    .switch-container:has(> input:checked:disabled) .switch
-  )::after{
-  background-color:rgba(26, 34, 36, 0.25);
 }
 input:checked + .checkbox > .icon,
 input:checked + .radio::before{
@@ -801,23 +778,14 @@ input:checked + .checkbox{
   border:1px solid transparent;
   background-color:#757D82;
 }
-:is(
-    input:checked + .switch,
-    .switch-container:has(> input:checked) .switch
-  )::after{
+.switch-container:has(> input:checked) .switch{
+  background-color:#4D5255;
+}
+.switch-container:has(> input:checked) .switch::after{
   translate:12px;
 }
-:is(
-    input:checked + .switch--l,
-    .switch-container:has(> input:checked) .switch--l
-  )::after{
+.switch-container:has(> input:checked) .switch--l::after{
   translate:18px;
-}
-:is(
-    input:checked + .switch,
-    .switch-container:has(> input:checked) .switch
-  ){
-  background-color:#4D5255;
 }
 input:checked + .toggle{
   background:#757D82;
@@ -1207,6 +1175,7 @@ textarea{
 .radio{border-radius:50%;color:#757D82;border-color:currentColor;}
 .switch{cursor:pointer;flex-shrink:0;position:relative;width:36px;height:24px;border-radius:9999px;background-color:#C7CACC;transition:background-color 0.125s;}
 .switch--l{width:54px;height:36px;}
+.switch--s{width:30px;height:18px;}
 .toggle-group{display:inline-flex;text-align:center;border-radius:18px;}
 .toggle-container{max-width:100%;}
 .toggle{flex-shrink:0;cursor:pointer;color:#757D82;font-size:12px;padding:3px 18px;border-radius:15px;background-color:transparent;transition:color 0.125s, background-color 0.125s;}
@@ -3485,10 +3454,10 @@ textarea{
 .hmax-viewport-full-mxl{max-height:100vh !important;}
 }
 .btn.btn--stroke{ background-color:transparent; }
-:is(input:checked + .switch--dot-gray, .switch-container:has(> input:checked) .switch--dot-gray)::after,
-:is(input:checked + .switch--gray, .switch-container:has(> input:checked) .switch--gray),
 .btn--gray,
 .btn--gray-light:hover, .btn--gray-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-gray::after,
+.switch-container:has(> input:checked) .switch--gray,
 input:checked + .checkbox--gray{background-color:#757D82;}
 .btn--gray:hover, .btn--gray.is-active{background-color:#4D5255;}
 .btn--stroke.btn--gray,
@@ -3501,12 +3470,11 @@ input:checked + .toggle--active-gray{color:#757D82;}
 .link--gray:hover, .link--gray.is-active,
 .select--gray:focus,
 .select--gray:hover{color:#4D5255;}
-.btn--gray-light,
-.switch--gray{background-color:#C7CACC;}
-:is(input:checked + .switch--dot-pink, .switch-container:has(> input:checked) .switch--dot-pink)::after,
-:is(input:checked + .switch--pink, .switch-container:has(> input:checked) .switch--pink),
+.btn--gray-light{background-color:#C7CACC;}
 .btn--pink,
 .btn--pink-light:hover, .btn--pink-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-pink::after,
+.switch-container:has(> input:checked) .switch--pink,
 input:checked + .checkbox--pink{background-color:#FA428F;}
 .btn--pink:hover, .btn--pink.is-active{background-color:#BA1258;}
 .btn--stroke.btn--pink,
@@ -3519,12 +3487,11 @@ input:checked + .toggle--active-pink{color:#FA428F;}
 .link--pink:hover, .link--pink.is-active,
 .select--pink:focus,
 .select--pink:hover{color:#BA1258;}
-.btn--pink-light,
-.switch--pink{background-color:#FABDD6;}
-:is(input:checked + .switch--dot-red, .switch-container:has(> input:checked) .switch--dot-red)::after,
-:is(input:checked + .switch--red, .switch-container:has(> input:checked) .switch--red),
+.btn--pink-light{background-color:#FABDD6;}
 .btn--red,
 .btn--red-light:hover, .btn--red-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-red::after,
+.switch-container:has(> input:checked) .switch--red,
 input:checked + .checkbox--red{background-color:#EB3814;}
 .btn--red:hover, .btn--red.is-active{background-color:#B6290D;}
 .btn--stroke.btn--red,
@@ -3537,12 +3504,11 @@ input:checked + .toggle--active-red{color:#EB3814;}
 .link--red:hover, .link--red.is-active,
 .select--red:focus,
 .select--red:hover{color:#B6290D;}
-.btn--red-light,
-.switch--red{background-color:#F8C4B9;}
-:is(input:checked + .switch--dot-orange, .switch-container:has(> input:checked) .switch--dot-orange)::after,
-:is(input:checked + .switch--orange, .switch-container:has(> input:checked) .switch--orange),
+.btn--red-light{background-color:#F8C4B9;}
 .btn--orange,
 .btn--orange-light:hover, .btn--orange-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-orange::after,
+.switch-container:has(> input:checked) .switch--orange,
 input:checked + .checkbox--orange{background-color:#E46707;}
 .btn--orange:hover, .btn--orange.is-active{background-color:#AE4B04;}
 .btn--stroke.btn--orange,
@@ -3555,8 +3521,7 @@ input:checked + .toggle--active-orange{color:#E46707;}
 .link--orange:hover, .link--orange.is-active,
 .select--orange:focus,
 .select--orange:hover{color:#AE4B04;}
-.btn--orange-light,
-.switch--orange{background-color:#FCC295;}
+.btn--orange-light{background-color:#FCC295;}
 .btn--stroke.btn--yellow,
 .link--yellow,
 .radio--yellow, input:checked + .radio--yellow,
@@ -3567,18 +3532,17 @@ input:checked + .toggle--active-yellow{color:#F3E444;}
 .link--yellow:hover, .link--yellow.is-active,
 .select--yellow:focus,
 .select--yellow:hover{color:#8E740B;}
-:is(input:checked + .switch--dot-yellow, .switch-container:has(> input:checked) .switch--dot-yellow)::after,
-:is(input:checked + .switch--yellow, .switch-container:has(> input:checked) .switch--yellow),
 .btn--yellow,
 .btn--yellow-light:hover, .btn--yellow-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-yellow::after,
+.switch-container:has(> input:checked) .switch--yellow,
 input:checked + .checkbox--yellow{background-color:#F3E444;}
 .btn--yellow:hover, .btn--yellow.is-active{background-color:#8E740B;}
-.btn--yellow-light,
-.switch--yellow{background-color:#FAF29E;}
-:is(input:checked + .switch--dot-green, .switch-container:has(> input:checked) .switch--dot-green)::after,
-:is(input:checked + .switch--green, .switch-container:has(> input:checked) .switch--green),
+.btn--yellow-light{background-color:#FAF29E;}
 .btn--green,
 .btn--green-light:hover, .btn--green-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-green::after,
+.switch-container:has(> input:checked) .switch--green,
 input:checked + .checkbox--green{background-color:#2AA75C;}
 .btn--green:hover, .btn--green.is-active{background-color:#1F7A43;}
 .btn--stroke.btn--green,
@@ -3591,12 +3555,11 @@ input:checked + .toggle--active-green{color:#2AA75C;}
 .link--green:hover, .link--green.is-active,
 .select--green:focus,
 .select--green:hover{color:#1F7A43;}
-.btn--green-light,
-.switch--green{background-color:#AAE1C0;}
-:is(input:checked + .switch--blue, .switch-container:has(> input:checked) .switch--blue),
-:is(input:checked + .switch--dot-blue, .switch-container:has(> input:checked) .switch--dot-blue)::after,
+.btn--green-light{background-color:#AAE1C0;}
 .btn--blue,
 .btn--blue-light:hover, .btn--blue-light.is-active,
+.switch-container:has(> input:checked) .switch--blue,
+.switch-container:has(> input:checked) .switch--dot-blue::after,
 input:checked + .checkbox--blue{background-color:#3887BE;}
 .btn--blue:hover, .btn--blue.is-active{background-color:#0B428E;}
 .btn--stroke.btn--blue,
@@ -3609,12 +3572,11 @@ input:checked + .toggle--active-blue{color:#3887BE;}
 .link--blue:hover, .link--blue.is-active,
 .select--blue:focus,
 .select--blue:hover{color:#0B428E;}
-.btn--blue-light,
-.switch--blue{background-color:#52A1D8;}
-:is(input:checked + .switch--dot-purple, .switch-container:has(> input:checked) .switch--dot-purple)::after,
-:is(input:checked + .switch--purple, .switch-container:has(> input:checked) .switch--purple),
+.btn--blue-light{background-color:#52A1D8;}
 .btn--purple,
 .btn--purple-light:hover, .btn--purple-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-purple::after,
+.switch-container:has(> input:checked) .switch--purple,
 input:checked + .checkbox--purple{background-color:#9669D5;}
 .btn--purple:hover, .btn--purple.is-active{background-color:#6E2FC6;}
 .btn--stroke.btn--purple,
@@ -3627,19 +3589,18 @@ input:checked + .toggle--active-purple{color:#9669D5;}
 .link--purple:hover, .link--purple.is-active,
 .select--purple:focus,
 .select--purple:hover{color:#6E2FC6;}
-.btn--purple-light,
-.switch--purple{background-color:#DBCEED;}
+.btn--purple-light{background-color:#DBCEED;}
 .btn--darken10,
 .btn--transparent:hover, .btn--transparent.is-active{background-color:rgba(26, 34, 36, 0.1);}
-:is(input:checked + .switch--darken25, .switch-container:has(> input:checked) .switch--darken25),
-:is(input:checked + .switch--dot-darken25, .switch-container:has(> input:checked) .switch--dot-darken25)::after,
 .btn--darken10:hover, .btn--darken10.is-active,
 .btn--darken25,
+.switch-container:has(> input:checked) .switch--darken25,
+.switch-container:has(> input:checked) .switch--dot-darken25::after,
 input:checked + .checkbox--darken25{background-color:rgba(26, 34, 36, 0.25);}
-:is(input:checked + .switch--darken50, .switch-container:has(> input:checked) .switch--darken50),
-:is(input:checked + .switch--dot-darken50, .switch-container:has(> input:checked) .switch--dot-darken50)::after,
 .btn--darken25:hover, .btn--darken25.is-active,
 .btn--darken50,
+.switch-container:has(> input:checked) .switch--darken50,
+.switch-container:has(> input:checked) .switch--dot-darken50::after,
 input:checked + .checkbox--darken50{background-color:rgba(26, 34, 36, 0.5);}
 .btn--stroke.btn--darken25,
 .link--darken25,
@@ -3657,10 +3618,10 @@ input:checked + .toggle--active-darken25{color:rgba(26, 34, 36, 0.25);}
 .select--darken50,
 .toggle--darken50,
 input:checked + .toggle--active-darken50{color:rgba(26, 34, 36, 0.5);}
-:is(input:checked + .switch--darken75, .switch-container:has(> input:checked) .switch--darken75),
-:is(input:checked + .switch--dot-darken75, .switch-container:has(> input:checked) .switch--dot-darken75)::after,
 .btn--darken50:hover, .btn--darken50.is-active,
 .btn--darken75,
+.switch-container:has(> input:checked) .switch--darken75,
+.switch-container:has(> input:checked) .switch--dot-darken75::after,
 input:checked + .checkbox--darken75{background-color:rgba(26, 34, 36, 0.75);}
 .btn--stroke.btn--darken50:hover, .btn--stroke.btn--darken50.is-active,
 .btn--stroke.btn--darken75,
@@ -3678,15 +3639,15 @@ input:checked + .toggle--active-darken75{color:rgba(26, 34, 36, 0.75);}
 .select--darken75:focus,
 .select--darken75:hover{color:#000;}
 .btn--lighten10{background-color:rgba(255, 255, 255, 0.1);}
-:is(input:checked + .switch--dot-lighten25, .switch-container:has(> input:checked) .switch--dot-lighten25)::after,
-:is(input:checked + .switch--lighten25, .switch-container:has(> input:checked) .switch--lighten25),
 .btn--lighten10:hover, .btn--lighten10.is-active,
 .btn--lighten25,
+.switch-container:has(> input:checked) .switch--dot-lighten25::after,
+.switch-container:has(> input:checked) .switch--lighten25,
 input:checked + .checkbox--lighten25{background-color:rgba(255, 255, 255, 0.25);}
-:is(input:checked + .switch--dot-lighten50, .switch-container:has(> input:checked) .switch--dot-lighten50)::after,
-:is(input:checked + .switch--lighten50, .switch-container:has(> input:checked) .switch--lighten50),
 .btn--lighten25:hover, .btn--lighten25.is-active,
 .btn--lighten50,
+.switch-container:has(> input:checked) .switch--dot-lighten50::after,
+.switch-container:has(> input:checked) .switch--lighten50,
 input:checked + .checkbox--lighten50{background-color:rgba(255, 255, 255, 0.5);}
 .btn--stroke.btn--lighten25,
 .link--lighten25,
@@ -3704,11 +3665,11 @@ input:checked + .toggle--active-lighten25{color:rgba(255, 255, 255, 0.25);}
 .select--lighten50,
 .toggle--lighten50,
 input:checked + .toggle--active-lighten50{color:rgba(255, 255, 255, 0.5);}
-:is(input:checked + .switch--dot-lighten75, .switch-container:has(> input:checked) .switch--dot-lighten75)::after,
-:is(input:checked + .switch--lighten75, .switch-container:has(> input:checked) .switch--lighten75),
 .btn--lighten50:hover, .btn--lighten50.is-active,
 .btn--lighten75,
 .btn--white:hover, .btn--white.is-active,
+.switch-container:has(> input:checked) .switch--dot-lighten75::after,
+.switch-container:has(> input:checked) .switch--lighten75,
 input:checked + .checkbox--lighten75{background-color:rgba(255, 255, 255, 0.75);}
 .btn--stroke.btn--lighten50:hover, .btn--stroke.btn--lighten50.is-active,
 .btn--stroke.btn--lighten75,
@@ -3724,10 +3685,10 @@ input:checked + .checkbox--lighten75{background-color:rgba(255, 255, 255, 0.75);
 .select--white:hover,
 .toggle--lighten75,
 input:checked + .toggle--active-lighten75{color:rgba(255, 255, 255, 0.75);}
-:is(input:checked + .switch--dot-white, .switch-container:has(> input:checked) .switch--dot-white)::after,
-:is(input:checked + .switch--white, .switch-container:has(> input:checked) .switch--white),
 .btn--lighten75:hover, .btn--lighten75.is-active,
 .btn--white,
+.switch-container:has(> input:checked) .switch--dot-white::after,
+.switch-container:has(> input:checked) .switch--white,
 input:checked + .checkbox--white{background-color:#fff;}
 .btn--stroke.btn--lighten75:hover, .btn--stroke.btn--lighten75.is-active,
 .btn--stroke.btn--white,
@@ -3749,9 +3710,9 @@ input:checked + .toggle--active-transparent{color:transparent;}
 .link--transparent:hover, .link--transparent.is-active,
 .select--transparent:focus,
 .select--transparent:hover{color:rgba(26, 34, 36, 0.1);}
-:is(input:checked + .switch--dot-transparent, .switch-container:has(> input:checked) .switch--dot-transparent)::after,
-:is(input:checked + .switch--transparent, .switch-container:has(> input:checked) .switch--transparent),
 .btn--transparent,
+.switch-container:has(> input:checked) .switch--dot-transparent::after,
+.switch-container:has(> input:checked) .switch--transparent,
 input:checked + .checkbox--transparent{background-color:transparent;}
 .select--gray + .select-arrow{border-top-color:#757D82;}
 .select--gray:focus + .select-arrow{border-top-color:#4D5255;}
@@ -4718,6 +4679,13 @@ legend{
   display:block;
   width:100%;
 }
+@media (prefers-reduced-motion: reduce){
+  *,
+  ::before,
+  ::after{
+    transition-duration:0.01ms !important;
+  }
+}
 [data-assembly-focus-control] *:focus{
   outline:0;
 }
@@ -4727,14 +4695,8 @@ legend{
 }
 [data-assembly-focus-control='visible'] input:focus + .checkbox,
 [data-assembly-focus-control='visible'] input:focus + .radio,
-[data-assembly-focus-control='visible'] input:focus + .switch,
+[data-assembly-focus-control='visible'] .switch-container:has(> input:focus) .switch,
 [data-assembly-focus-control='visible'] input:focus + .toggle{
-  box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
-}
-:is(
-    input:focus-visible + .switch,
-    .switch-container:has(> input:focus-visible) .switch
-  ){
   box-shadow:0 0 0 3px rgba(137, 199, 216, 0.65);
 }
 [data-assembly-focus-control='visible'] .range input[type='range']{
@@ -5249,20 +5211,9 @@ legend{
   position:absolute;
   display:block;
   border-radius:50%;
-  top:3px;
-  left:3px;
-  width:18px;
-  height:18px;
+  inset:3px auto 3px 3px;
+  aspect-ratio:1;
   transition:translate 0.125s, background-color 0.125s;
-}
-.switch--l::after{
-  width:30px;
-  height:30px;
-}
-@media (prefers-reduced-motion: reduce){
-  .switch::after{
-    transition:background-color 0.125s;
-  }
 }
 .checkbox--s-label,
 .radio--s-label{
@@ -5276,33 +5227,20 @@ input:checked:disabled + :is(.checkbox, .radio){
   pointer-events:none;
   color:rgba(26, 34, 36, 0.25);
 }
-:is(
-    input:disabled + .switch,
-    .switch-container:has(> input:disabled) .switch
-  ){
+.switch-container:has(> input:disabled, > input:checked:disabled) .switch{
   pointer-events:none;
   background-color:rgba(158, 163, 167, 0.25);
+}
+.switch-container:has(> input:disabled, > input:checked:disabled)
+  .switch::after{
+  background-color:rgba(26, 34, 36, 0.25);
 }
 input:disabled + :is(.radio, .checkbox){
   background-color:rgba(158, 163, 167, 0.25);
   border-color:transparent;
 }
-input:checked:disabled + :is(.checkbox, .radio),
-:is(
-    input:checked:disabled + .switch,
-    .switch-container:has(> input:checked:disabled) .switch
-  ){
+input:checked:disabled + :is(.checkbox, .radio){
   background-color:rgba(158, 163, 167, 0.25);
-}
-:is(
-    input:disabled + .switch,
-    .switch-container:has(> input:disabled) .switch
-  )::after,
-:is(
-    input:checked:disabled + .switch,
-    .switch-container:has(> input:checked:disabled) .switch
-  )::after{
-  background-color:rgba(26, 34, 36, 0.25);
 }
 input:checked + .checkbox > .icon,
 input:checked + .radio::before{
@@ -5315,23 +5253,14 @@ input:checked + .checkbox{
   border:1px solid transparent;
   background-color:#757D82;
 }
-:is(
-    input:checked + .switch,
-    .switch-container:has(> input:checked) .switch
-  )::after{
+.switch-container:has(> input:checked) .switch{
+  background-color:#4D5255;
+}
+.switch-container:has(> input:checked) .switch::after{
   translate:12px;
 }
-:is(
-    input:checked + .switch--l,
-    .switch-container:has(> input:checked) .switch--l
-  )::after{
+.switch-container:has(> input:checked) .switch--l::after{
   translate:18px;
-}
-:is(
-    input:checked + .switch,
-    .switch-container:has(> input:checked) .switch
-  ){
-  background-color:#4D5255;
 }
 input:checked + .toggle{
   background:#757D82;
@@ -5721,6 +5650,7 @@ textarea{
 .radio{border-radius:50%;color:#757D82;border-color:currentColor;}
 .switch{cursor:pointer;flex-shrink:0;position:relative;width:36px;height:24px;border-radius:9999px;background-color:#C7CACC;transition:background-color 0.125s;}
 .switch--l{width:54px;height:36px;}
+.switch--s{width:30px;height:18px;}
 .toggle-group{display:inline-flex;text-align:center;border-radius:18px;}
 .toggle-container{max-width:100%;}
 .toggle{flex-shrink:0;cursor:pointer;color:#757D82;font-size:12px;padding:3px 18px;border-radius:15px;background-color:transparent;transition:color 0.125s, background-color 0.125s;}
@@ -7999,10 +7929,10 @@ textarea{
 .hmax-viewport-full-mxl{max-height:100vh !important;}
 }
 .btn.btn--stroke{ background-color:transparent; }
-:is(input:checked + .switch--dot-gray, .switch-container:has(> input:checked) .switch--dot-gray)::after,
-:is(input:checked + .switch--gray, .switch-container:has(> input:checked) .switch--gray),
 .btn--gray,
 .btn--gray-light:hover, .btn--gray-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-gray::after,
+.switch-container:has(> input:checked) .switch--gray,
 input:checked + .checkbox--gray{background-color:#757D82;}
 .btn--gray:hover, .btn--gray.is-active{background-color:#4D5255;}
 .btn--stroke.btn--gray,
@@ -8016,12 +7946,11 @@ input:checked + .toggle--active-gray{color:#757D82;}
 .link--gray:hover, .link--gray.is-active,
 .select--gray:focus,
 .select--gray:hover{color:#4D5255;}
-.btn--gray-light,
-.switch--gray{background-color:#C7CACC;}
-:is(input:checked + .switch--dot-pink, .switch-container:has(> input:checked) .switch--dot-pink)::after,
-:is(input:checked + .switch--pink, .switch-container:has(> input:checked) .switch--pink),
+.btn--gray-light{background-color:#C7CACC;}
 .btn--pink,
 .btn--pink-light:hover, .btn--pink-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-pink::after,
+.switch-container:has(> input:checked) .switch--pink,
 input:checked + .checkbox--pink{background-color:#FA428F;}
 .btn--pink:hover, .btn--pink.is-active{background-color:#BA1258;}
 .btn--stroke.btn--pink,
@@ -8035,12 +7964,11 @@ input:checked + .toggle--active-pink{color:#FA428F;}
 .link--pink:hover, .link--pink.is-active,
 .select--pink:focus,
 .select--pink:hover{color:#BA1258;}
-.btn--pink-light,
-.switch--pink{background-color:#FABDD6;}
-:is(input:checked + .switch--dot-red, .switch-container:has(> input:checked) .switch--dot-red)::after,
-:is(input:checked + .switch--red, .switch-container:has(> input:checked) .switch--red),
+.btn--pink-light{background-color:#FABDD6;}
 .btn--red,
 .btn--red-light:hover, .btn--red-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-red::after,
+.switch-container:has(> input:checked) .switch--red,
 input:checked + .checkbox--red{background-color:#EB3814;}
 .btn--red:hover, .btn--red.is-active{background-color:#B6290D;}
 .btn--stroke.btn--red,
@@ -8054,12 +7982,11 @@ input:checked + .toggle--active-red{color:#EB3814;}
 .link--red:hover, .link--red.is-active,
 .select--red:focus,
 .select--red:hover{color:#B6290D;}
-.btn--red-light,
-.switch--red{background-color:#F8C4B9;}
-:is(input:checked + .switch--dot-orange, .switch-container:has(> input:checked) .switch--dot-orange)::after,
-:is(input:checked + .switch--orange, .switch-container:has(> input:checked) .switch--orange),
+.btn--red-light{background-color:#F8C4B9;}
 .btn--orange,
 .btn--orange-light:hover, .btn--orange-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-orange::after,
+.switch-container:has(> input:checked) .switch--orange,
 input:checked + .checkbox--orange{background-color:#E46707;}
 .btn--orange:hover, .btn--orange.is-active{background-color:#AE4B04;}
 .btn--stroke.btn--orange,
@@ -8073,8 +8000,7 @@ input:checked + .toggle--active-orange{color:#E46707;}
 .link--orange:hover, .link--orange.is-active,
 .select--orange:focus,
 .select--orange:hover{color:#AE4B04;}
-.btn--orange-light,
-.switch--orange{background-color:#FCC295;}
+.btn--orange-light{background-color:#FCC295;}
 .btn--stroke.btn--yellow,
 .link--yellow,
 .radio--yellow, input:checked + .radio--yellow,
@@ -8086,18 +8012,17 @@ input:checked + .toggle--active-yellow{color:#F3E444;}
 .link--yellow:hover, .link--yellow.is-active,
 .select--yellow:focus,
 .select--yellow:hover{color:#8E740B;}
-:is(input:checked + .switch--dot-yellow, .switch-container:has(> input:checked) .switch--dot-yellow)::after,
-:is(input:checked + .switch--yellow, .switch-container:has(> input:checked) .switch--yellow),
 .btn--yellow,
 .btn--yellow-light:hover, .btn--yellow-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-yellow::after,
+.switch-container:has(> input:checked) .switch--yellow,
 input:checked + .checkbox--yellow{background-color:#F3E444;}
 .btn--yellow:hover, .btn--yellow.is-active{background-color:#8E740B;}
-.btn--yellow-light,
-.switch--yellow{background-color:#FAF29E;}
-:is(input:checked + .switch--dot-green, .switch-container:has(> input:checked) .switch--dot-green)::after,
-:is(input:checked + .switch--green, .switch-container:has(> input:checked) .switch--green),
+.btn--yellow-light{background-color:#FAF29E;}
 .btn--green,
 .btn--green-light:hover, .btn--green-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-green::after,
+.switch-container:has(> input:checked) .switch--green,
 input:checked + .checkbox--green{background-color:#2AA75C;}
 .btn--green:hover, .btn--green.is-active{background-color:#1F7A43;}
 .btn--stroke.btn--green,
@@ -8111,12 +8036,11 @@ input:checked + .toggle--active-green{color:#2AA75C;}
 .link--green:hover, .link--green.is-active,
 .select--green:focus,
 .select--green:hover{color:#1F7A43;}
-.btn--green-light,
-.switch--green{background-color:#AAE1C0;}
-:is(input:checked + .switch--blue, .switch-container:has(> input:checked) .switch--blue),
-:is(input:checked + .switch--dot-blue, .switch-container:has(> input:checked) .switch--dot-blue)::after,
+.btn--green-light{background-color:#AAE1C0;}
 .btn--blue,
 .btn--blue-light:hover, .btn--blue-light.is-active,
+.switch-container:has(> input:checked) .switch--blue,
+.switch-container:has(> input:checked) .switch--dot-blue::after,
 input:checked + .checkbox--blue{background-color:#0F71FA;}
 .btn--blue:hover, .btn--blue.is-active{background-color:#0B428E;}
 .btn--stroke.btn--blue,
@@ -8130,12 +8054,11 @@ input:checked + .toggle--active-blue{color:#0F71FA;}
 .link--blue:hover, .link--blue.is-active,
 .select--blue:focus,
 .select--blue:hover{color:#0B428E;}
-.btn--blue-light,
-.switch--blue{background-color:#91B7EE;}
-:is(input:checked + .switch--dot-purple, .switch-container:has(> input:checked) .switch--dot-purple)::after,
-:is(input:checked + .switch--purple, .switch-container:has(> input:checked) .switch--purple),
+.btn--blue-light{background-color:#91B7EE;}
 .btn--purple,
 .btn--purple-light:hover, .btn--purple-light.is-active,
+.switch-container:has(> input:checked) .switch--dot-purple::after,
+.switch-container:has(> input:checked) .switch--purple,
 input:checked + .checkbox--purple{background-color:#9669D5;}
 .btn--purple:hover, .btn--purple.is-active{background-color:#6E2FC6;}
 .btn--stroke.btn--purple,
@@ -8149,19 +8072,18 @@ input:checked + .toggle--active-purple{color:#9669D5;}
 .link--purple:hover, .link--purple.is-active,
 .select--purple:focus,
 .select--purple:hover{color:#6E2FC6;}
-.btn--purple-light,
-.switch--purple{background-color:#DBCEED;}
+.btn--purple-light{background-color:#DBCEED;}
 .btn--darken10,
 .btn--transparent:hover, .btn--transparent.is-active{background-color:rgba(26, 34, 36, 0.1);}
-:is(input:checked + .switch--darken25, .switch-container:has(> input:checked) .switch--darken25),
-:is(input:checked + .switch--dot-darken25, .switch-container:has(> input:checked) .switch--dot-darken25)::after,
 .btn--darken10:hover, .btn--darken10.is-active,
 .btn--darken25,
+.switch-container:has(> input:checked) .switch--darken25,
+.switch-container:has(> input:checked) .switch--dot-darken25::after,
 input:checked + .checkbox--darken25{background-color:rgba(26, 34, 36, 0.25);}
-:is(input:checked + .switch--darken50, .switch-container:has(> input:checked) .switch--darken50),
-:is(input:checked + .switch--dot-darken50, .switch-container:has(> input:checked) .switch--dot-darken50)::after,
 .btn--darken25:hover, .btn--darken25.is-active,
 .btn--darken50,
+.switch-container:has(> input:checked) .switch--darken50,
+.switch-container:has(> input:checked) .switch--dot-darken50::after,
 input:checked + .checkbox--darken50{background-color:rgba(26, 34, 36, 0.5);}
 .btn--stroke.btn--darken25,
 .link--darken25,
@@ -8181,10 +8103,10 @@ input:checked + .toggle--active-darken25{color:rgba(26, 34, 36, 0.25);}
 .select--darken50,
 .toggle--darken50,
 input:checked + .toggle--active-darken50{color:rgba(26, 34, 36, 0.5);}
-:is(input:checked + .switch--darken75, .switch-container:has(> input:checked) .switch--darken75),
-:is(input:checked + .switch--dot-darken75, .switch-container:has(> input:checked) .switch--dot-darken75)::after,
 .btn--darken50:hover, .btn--darken50.is-active,
 .btn--darken75,
+.switch-container:has(> input:checked) .switch--darken75,
+.switch-container:has(> input:checked) .switch--dot-darken75::after,
 input:checked + .checkbox--darken75{background-color:rgba(26, 34, 36, 0.75);}
 .btn--stroke.btn--darken50:hover, .btn--stroke.btn--darken50.is-active,
 .btn--stroke.btn--darken75,
@@ -8203,15 +8125,15 @@ input:checked + .toggle--active-darken75{color:rgba(26, 34, 36, 0.75);}
 .select--darken75:focus,
 .select--darken75:hover{color:#000;}
 .btn--lighten10{background-color:rgba(255, 255, 255, 0.1);}
-:is(input:checked + .switch--dot-lighten25, .switch-container:has(> input:checked) .switch--dot-lighten25)::after,
-:is(input:checked + .switch--lighten25, .switch-container:has(> input:checked) .switch--lighten25),
 .btn--lighten10:hover, .btn--lighten10.is-active,
 .btn--lighten25,
+.switch-container:has(> input:checked) .switch--dot-lighten25::after,
+.switch-container:has(> input:checked) .switch--lighten25,
 input:checked + .checkbox--lighten25{background-color:rgba(255, 255, 255, 0.25);}
-:is(input:checked + .switch--dot-lighten50, .switch-container:has(> input:checked) .switch--dot-lighten50)::after,
-:is(input:checked + .switch--lighten50, .switch-container:has(> input:checked) .switch--lighten50),
 .btn--lighten25:hover, .btn--lighten25.is-active,
 .btn--lighten50,
+.switch-container:has(> input:checked) .switch--dot-lighten50::after,
+.switch-container:has(> input:checked) .switch--lighten50,
 input:checked + .checkbox--lighten50{background-color:rgba(255, 255, 255, 0.5);}
 .btn--stroke.btn--lighten25,
 .link--lighten25,
@@ -8231,11 +8153,11 @@ input:checked + .toggle--active-lighten25{color:rgba(255, 255, 255, 0.25);}
 .select--lighten50,
 .toggle--lighten50,
 input:checked + .toggle--active-lighten50{color:rgba(255, 255, 255, 0.5);}
-:is(input:checked + .switch--dot-lighten75, .switch-container:has(> input:checked) .switch--dot-lighten75)::after,
-:is(input:checked + .switch--lighten75, .switch-container:has(> input:checked) .switch--lighten75),
 .btn--lighten50:hover, .btn--lighten50.is-active,
 .btn--lighten75,
 .btn--white:hover, .btn--white.is-active,
+.switch-container:has(> input:checked) .switch--dot-lighten75::after,
+.switch-container:has(> input:checked) .switch--lighten75,
 input:checked + .checkbox--lighten75{background-color:rgba(255, 255, 255, 0.75);}
 .btn--stroke.btn--lighten50:hover, .btn--stroke.btn--lighten50.is-active,
 .btn--stroke.btn--lighten75,
@@ -8252,10 +8174,10 @@ input:checked + .checkbox--lighten75{background-color:rgba(255, 255, 255, 0.75);
 .select--white:hover,
 .toggle--lighten75,
 input:checked + .toggle--active-lighten75{color:rgba(255, 255, 255, 0.75);}
-:is(input:checked + .switch--dot-white, .switch-container:has(> input:checked) .switch--dot-white)::after,
-:is(input:checked + .switch--white, .switch-container:has(> input:checked) .switch--white),
 .btn--lighten75:hover, .btn--lighten75.is-active,
 .btn--white,
+.switch-container:has(> input:checked) .switch--dot-white::after,
+.switch-container:has(> input:checked) .switch--white,
 input:checked + .checkbox--white{background-color:#fff;}
 .btn--stroke.btn--lighten75:hover, .btn--stroke.btn--lighten75.is-active,
 .btn--stroke.btn--white,
@@ -8279,9 +8201,9 @@ input:checked + .toggle--active-transparent{color:transparent;}
 .link--transparent:hover, .link--transparent.is-active,
 .select--transparent:focus,
 .select--transparent:hover{color:rgba(26, 34, 36, 0.1);}
-:is(input:checked + .switch--dot-transparent, .switch-container:has(> input:checked) .switch--dot-transparent)::after,
-:is(input:checked + .switch--transparent, .switch-container:has(> input:checked) .switch--transparent),
 .btn--transparent,
+.switch-container:has(> input:checked) .switch--dot-transparent::after,
+.switch-container:has(> input:checked) .switch--transparent,
 input:checked + .checkbox--transparent{background-color:transparent;}
 .select--gray + .select-arrow{border-top-color:#757D82;}
 .select--gray:focus + .select-arrow{border-top-color:#4D5255;}

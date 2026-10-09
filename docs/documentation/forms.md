@@ -333,7 +333,7 @@ The switch component styles the `<input type='checkbox' />` element. The markup 
 ```
 
 Style a switch. It is 24px tall to match small inputs like `input--s`.
-Change the track color with a `switch--{color}` modifier: its `-light` shade when inactive and the full color when active (`*-dark` colors are not available).
+Change the background when active with a `switch--{color}` modifier (`*-dark` colors are not available).
 Change the color of the dot when active with a `switch--dot-{color}` modifier.
 
 ```example
@@ -344,7 +344,7 @@ Change the color of the dot when active with a `switch--dot-{color}` modifier.
 <label class='switch-container'>
   <input type='checkbox' />
   <div class='switch switch--pink switch--dot-yellow mr6'></div>
-  Enabled
+  Enable
 </label>
 ```
 
@@ -358,7 +358,21 @@ Make a switch 36px tall to match the default `input` height.
 <label class='switch-container'>
   <input type='checkbox' />
   <div class='switch switch--l mr6'></div>
-  Really enabled
+  Really enable
+</label>
+```
+
+```selectors
+.switch--s
+```
+
+Make a switch 18px tall to sit alongside small text.
+
+```example
+<label class='switch-container txt-s'>
+  <input type='checkbox' />
+  <div class='switch switch--s mr6'></div>
+  Barely enable
 </label>
 ```
 

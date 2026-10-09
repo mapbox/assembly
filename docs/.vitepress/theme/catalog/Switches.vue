@@ -32,7 +32,7 @@ function switchClass(color, handleColor) {
             </label>
           </div>
         </div>
-        <div class="bg-gray-dark px6 py6">
+        <div class="bg-gray px6 py6">
           <div v-for="color in darkColors" :key="`k-${handle}-${color}`" class="mr6 inline-block">
             <label class="switch-container">
               <input :disabled="disabled" type="checkbox" value="magic" />

@@ -142,6 +142,7 @@ const UTILITY_RULES = [
     }
   ],
   ['switch--l', { width: '54px', height: '36px' }],
+  ['switch--s', { width: '30px', height: '18px' }],
   [
     'toggle-group',
     { display: 'inline-flex', 'text-align': 'center', 'border-radius': '18px' }

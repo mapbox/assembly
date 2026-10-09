@@ -200,6 +200,13 @@ legend {
   display: block;
   width: 100%;
 }
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    transition-duration: 0.01ms !important;
+  }
+}
 [data-assembly-focus-control] *:focus {
   outline: 0;
 }
@@ -209,14 +216,8 @@ legend {
 }
 [data-assembly-focus-control='visible'] input:focus + .checkbox,
 [data-assembly-focus-control='visible'] input:focus + .radio,
-[data-assembly-focus-control='visible'] input:focus + .switch,
+[data-assembly-focus-control='visible'] .switch-container:has(> input:focus) .switch,
 [data-assembly-focus-control='visible'] input:focus + .toggle {
-  box-shadow: var(--focus-shadow);
-}
-:is(
-    input:focus-visible + .switch,
-    .switch-container:has(> input:focus-visible) .switch
-  ) {
   box-shadow: var(--focus-shadow);
 }
 [data-assembly-focus-control='visible'] .range input[type='range'] {
@@ -743,20 +744,9 @@ legend {
   position: absolute;
   display: block;
   border-radius: 50%;
-  top: 3px;
-  left: 3px;
-  width: 18px;
-  height: 18px;
+  inset: 3px auto 3px 3px;
+  aspect-ratio: 1;
   transition: translate var(--transition), background-color var(--transition);
-}
-.switch--l::after {
-  width: 30px;
-  height: 30px;
-}
-@media (prefers-reduced-motion: reduce) {
-  .switch::after {
-    transition: background-color var(--transition);
-  }
 }
 .checkbox--s-label,
 .radio--s-label {
@@ -770,33 +760,21 @@ input:checked:disabled + :is(.checkbox, .radio) {
   pointer-events: none;
   color: var(--darken25);
 }
-:is(
-    input:disabled + .switch,
-    .switch-container:has(> input:disabled) .switch
-  ) {
+/* :checked:disabled outranks switch--{color} and switch--dot-{color} */
+.switch-container:has(> input:disabled, > input:checked:disabled) .switch {
   pointer-events: none;
   background-color: var(--disabled25);
+}
+.switch-container:has(> input:disabled, > input:checked:disabled)
+  .switch::after {
+  background-color: var(--darken25);
 }
 input:disabled + :is(.radio, .checkbox) {
   background-color: var(--disabled25);
   border-color: var(--transparent);
 }
-input:checked:disabled + :is(.checkbox, .radio),
-:is(
-    input:checked:disabled + .switch,
-    .switch-container:has(> input:checked:disabled) .switch
-  ) {
+input:checked:disabled + :is(.checkbox, .radio) {
   background-color: var(--disabled25);
-}
-:is(
-    input:disabled + .switch,
-    .switch-container:has(> input:disabled) .switch
-  )::after,
-:is(
-    input:checked:disabled + .switch,
-    .switch-container:has(> input:checked:disabled) .switch
-  )::after {
-  background-color: var(--darken25);
 }
 input:checked + .checkbox > .icon,
 input:checked + .radio::before {
@@ -809,23 +787,14 @@ input:checked + .checkbox {
   border: 1px solid var(--transparent);
   background-color: var(--gray);
 }
-:is(
-    input:checked + .switch,
-    .switch-container:has(> input:checked) .switch
-  )::after {
+.switch-container:has(> input:checked) .switch {
+  background-color: var(--gray-deep);
+}
+.switch-container:has(> input:checked) .switch::after {
   translate: 12px;
 }
-:is(
-    input:checked + .switch--l,
-    .switch-container:has(> input:checked) .switch--l
-  )::after {
+.switch-container:has(> input:checked) .switch--l::after {
   translate: 18px;
-}
-:is(
-    input:checked + .switch,
-    .switch-container:has(> input:checked) .switch
-  ) {
-  background-color: var(--gray-deep);
 }
 input:checked + .toggle {
   background: var(--gray);
