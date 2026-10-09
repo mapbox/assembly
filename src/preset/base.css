@@ -241,6 +241,24 @@ legend {
   input[type='range']:focus::-moz-range-thumb {
   box-shadow: var(--focus-shadow);
 }
+:root:not([data-assembly-focus-control])
+  input:focus-visible
+  + :is(.checkbox, .radio, .switch, .toggle) {
+  box-shadow: var(--focus-shadow);
+}
+:root:not([data-assembly-focus-control]) .range input[type='range'] {
+  outline: 0;
+}
+:root:not([data-assembly-focus-control])
+  .range
+  input[type='range']:focus-visible::-webkit-slider-thumb {
+  box-shadow: var(--focus-shadow);
+}
+:root:not([data-assembly-focus-control])
+  .range
+  input[type='range']:focus-visible::-moz-range-thumb {
+  box-shadow: var(--focus-shadow);
+}
 [data-assembly-focus-control] .range::-moz-focus-outer {
   border: 0;
 }
