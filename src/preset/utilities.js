@@ -157,14 +157,12 @@ const UTILITY_RULES = [
       'border-radius': 'var(--border-radius)'
     }
   ],
-  ['toggle-container', { display: 'flex', 'max-width': '100%' }],
   [
     'toggle',
     {
       display: 'flex',
       'align-items': 'center',
       'justify-content': 'center',
-      flex: '1',
       height: '24px',
       padding: '0 18px',
       cursor: 'pointer',

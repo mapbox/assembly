@@ -117,9 +117,10 @@ function colorRules(config) {
           { 'background-color': 'var(--lighten10)' }
         ],
         [s => `input:checked + ${s}`, { color: 'var(--gray-dark)' }],
+        // `.toggle` outranks the checked color above for checked + disabled.
         [s => `input:disabled + .toggle${s}`, { color: 'var(--lighten25)' }]
       ]);
-    } else if (isSemitransparent(color)) {
+    } else if (color.startsWith('darken')) {
       append(`toggle--${color}`, [
         [
           s => `.toggle-group:has(${s})`,
@@ -132,7 +133,7 @@ function colorRules(config) {
   colorsFor(resolved, 'toggleActive').forEach(color => {
     if (isNotAccessibleForForms(color)) return;
     append(`toggle--active-${color}`, [
-      [s => `input:checked + .toggle${s}`, { color: `var(--${color})` }]
+      [s => `input:checked:enabled + ${s}`, { color: `var(--${color})` }]
     ]);
   });
 
