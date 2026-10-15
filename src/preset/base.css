@@ -800,17 +800,15 @@ input:checked + .switch {
   background-color: var(--gray);
 }
 input:checked + .toggle {
-  background: var(--gray);
+  background: var(--gray-deep);
   color: var(--white);
 }
 input:disabled + .toggle {
   pointer-events: none;
   color: var(--darken25);
-  border-color: var(--transparent);
 }
 input:checked:disabled + .toggle {
   background-color: var(--disabled25);
-  color: var(--darken25);
 }
 body,
 input,

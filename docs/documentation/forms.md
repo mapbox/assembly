@@ -393,10 +393,9 @@ The toggle group component styles a set of `<input type=radio'>` elements. The m
 .toggle
 ```
 
-Style a toggle group.
+Style a toggle group. Toggles within a group share an equal width, set by the widest toggle.
 Change the inactive toggle text color and the active toggle background color with a `toggle--{color}` modifier (`*-dark` colors are not available).
 Change the active label color with a `toggle--active-{color}` modifier (`*-dark` colors are not available).
-Change the border radiuses of toggle groups inside small text with `toggle-group--s` on the `toggle-container` element.
 
 ```example
 <div class='toggle-group mr18'>
@@ -413,12 +412,13 @@ Change the border radiuses of toggle groups inside small text with `toggle-group
 
 ```selectors
 .toggle--s
+.toggle--l
 ```
 
-Make a toggle small.
+Change the toggle height. `toggle--s` is 18px tall, the default `toggle` is 24px to match `input--s`, and `toggle--l` is 36px to match `input`.
 
 ```example
-<div class='toggle-group'>
+<div class='toggle-group mr18'>
   <label class='toggle-container'>
     <input checked name='toggle-small' type='radio' />
     <div class='toggle toggle--s'>mouse</div>
@@ -426,6 +426,16 @@ Make a toggle small.
   <label class='toggle-container'>
     <input name='toggle-small' type='radio' />
     <div class='toggle toggle--s'>cricket</div>
+  </label>
+</div>
+<div class='toggle-group'>
+  <label class='toggle-container'>
+    <input checked name='toggle-large' type='radio' />
+    <div class='toggle toggle--l'>horse</div>
+  </label>
+  <label class='toggle-container'>
+    <input name='toggle-large' type='radio' />
+    <div class='toggle toggle--l'>ox</div>
   </label>
 </div>
 ```
