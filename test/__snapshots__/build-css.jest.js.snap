@@ -204,10 +204,7 @@ legend{
   display:block;
   width:100%;
 }
-:focus-visible{
-  outline:2px solid #3887BE;
-  outline-offset:2px;
-}
+:focus-visible,
 input:focus-visible + :is(.checkbox, .radio, .switch, .toggle){
   outline:2px solid #3887BE;
   outline-offset:2px;
@@ -217,11 +214,9 @@ input:focus-visible + :is(.checkbox, .radio, .switch, .toggle){
 }
 .range input[type='range']:focus-visible::-webkit-slider-thumb{
   outline:2px solid #3887BE;
-  outline-offset:0;
 }
 .range input[type='range']:focus-visible::-moz-range-thumb{
   outline:2px solid #3887BE;
-  outline-offset:0;
 }
 .range::-moz-focus-outer{
   border:0;
@@ -421,11 +416,8 @@ input:focus-visible + :is(.checkbox, .radio, .switch, .toggle){
 }
 .input:focus-visible,
 .textarea:focus-visible,
-.select:focus-visible{
+[data-assembly-focus-control='not-visible'] .select:focus-visible{
   outline:0;
-}
-[data-assembly-focus-control='visible'] .select:focus-visible{
-  outline:2px solid #3887BE;
 }
 .input::placeholder,
 .textarea::placeholder{
@@ -4682,10 +4674,7 @@ legend{
   display:block;
   width:100%;
 }
-:focus-visible{
-  outline:2px solid #0F71FA;
-  outline-offset:2px;
-}
+:focus-visible,
 input:focus-visible + :is(.checkbox, .radio, .switch, .toggle){
   outline:2px solid #0F71FA;
   outline-offset:2px;
@@ -4695,11 +4684,9 @@ input:focus-visible + :is(.checkbox, .radio, .switch, .toggle){
 }
 .range input[type='range']:focus-visible::-webkit-slider-thumb{
   outline:2px solid #0F71FA;
-  outline-offset:0;
 }
 .range input[type='range']:focus-visible::-moz-range-thumb{
   outline:2px solid #0F71FA;
-  outline-offset:0;
 }
 .range::-moz-focus-outer{
   border:0;
@@ -4899,11 +4886,8 @@ input:focus-visible + :is(.checkbox, .radio, .switch, .toggle){
 }
 .input:focus-visible,
 .textarea:focus-visible,
-.select:focus-visible{
+[data-assembly-focus-control='not-visible'] .select:focus-visible{
   outline:0;
-}
-[data-assembly-focus-control='visible'] .select:focus-visible{
-  outline:2px solid #0F71FA;
 }
 .input::placeholder,
 .textarea::placeholder{

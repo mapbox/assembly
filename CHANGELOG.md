@@ -5,7 +5,7 @@
 - [breaking] Rebuild Assembly's CSS pipeline on [UnoCSS](https://unocss.dev/). Class names and `buildUserAssets` stay compatible; the generated stylesheet's formatting, comments, and source maps may differ. Node.js 24+ is required.
 - [add] Export `presetAssembly()` for on-demand UnoCSS builds that keep Assembly class names. Pass `{ safelist: true }` only when you want the full prebuilt utility set.
 - [add] `examples/jit` — a sample app that generates only the utilities used in its markup (no reset or component preflight).
-- [breaking] Focus states use `:focus-visible` and a `--blue` outline. `assembly.js` focus control now only adds the outline to selects after the user presses Tab; text inputs and textareas keep their darker border on focus. The `--focus-shadow` variable is replaced by `--focus-outline`.
+- [breaking] Focus states use `:focus-visible` with a `--focus-outline` outline, replacing `--focus-shadow`. `assembly.js` focus control only affects selects.
 - [internal] Assembly utilities are UnoCSS rules in `src/preset/`. Reset and component CSS live in `src/preset/base.css`. The package build is `src/build-*.js`. The documentation site is VitePress under `docs/`.
 
 ## 1.16.0

@@ -200,10 +200,7 @@ legend {
   display: block;
   width: 100%;
 }
-:focus-visible {
-  outline: var(--focus-outline);
-  outline-offset: 2px;
-}
+:focus-visible,
 input:focus-visible + :is(.checkbox, .radio, .switch, .toggle) {
   outline: var(--focus-outline);
   outline-offset: 2px;
@@ -213,11 +210,9 @@ input:focus-visible + :is(.checkbox, .radio, .switch, .toggle) {
 }
 .range input[type='range']:focus-visible::-webkit-slider-thumb {
   outline: var(--focus-outline);
-  outline-offset: 0;
 }
 .range input[type='range']:focus-visible::-moz-range-thumb {
   outline: var(--focus-outline);
-  outline-offset: 0;
 }
 .range::-moz-focus-outer {
   border: 0;
@@ -432,11 +427,8 @@ input:focus-visible + :is(.checkbox, .radio, .switch, .toggle) {
 }
 .input:focus-visible,
 .textarea:focus-visible,
-.select:focus-visible {
+[data-assembly-focus-control='not-visible'] .select:focus-visible {
   outline: 0;
-}
-[data-assembly-focus-control='visible'] .select:focus-visible {
-  outline: var(--focus-outline);
 }
 .input::placeholder,
 .textarea::placeholder {
