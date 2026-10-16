@@ -5,6 +5,7 @@ on:
 
 jobs:
   test:
+    name: Basic Tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
