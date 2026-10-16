@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.17.0
+- [add] `building`, `clip`, `truck` icons
+
 ## 1.16.0
 - [add] `ai` icon
 
