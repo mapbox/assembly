@@ -6,6 +6,7 @@
 - [add] Export `presetAssembly()` for on-demand UnoCSS builds that keep Assembly class names. Pass `{ safelist: true }` only when you want the full prebuilt utility set.
 - [add] `examples/jit` — a sample app that generates only the utilities used in its markup (no reset or component preflight).
 - [internal] Assembly utilities are UnoCSS rules in `src/preset/`. Reset and component CSS live in `src/preset/base.css`. The package build is `src/build-*.js`. The documentation site is VitePress under `docs/`.
+- [add] `building`, `clip`, `truck` icons
 
 ## 1.16.0
 - [add] `ai` icon
