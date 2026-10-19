@@ -32,9 +32,6 @@ describe('presetAssembly', () => {
     expect(preset.safelist).toContain('gap12-mm');
     expect(preset.safelist).toContain('grid');
     expect(preset.safelist).toContain('grid-mm');
-    expect(preset.safelist.some(token => token.includes('gridbox'))).toBe(
-      false
-    );
     expect(preset.safelist).toContain('aspect-16/9');
     expect(preset.safelist).toContain('aspect-16/9-ml');
     expect(preset.safelist).toContain('object-cover');

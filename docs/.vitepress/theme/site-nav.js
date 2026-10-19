@@ -73,7 +73,6 @@ const nav = [
         'Gap',
         'Sizing',
         'Flexbox',
-        'Gridbox',
         'Aspect ratio',
         'Object fit',
         'Transforms',

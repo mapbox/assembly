@@ -28,16 +28,6 @@ const classSets = [
     scale: scales.gap
   },
   {
-    name: 'Gridbox tracks',
-    classPatterns: [
-      'gridbox--cols{n}',
-      'gridbox--rows{n}',
-      'gridbox-child-col{n}',
-      'gridbox-child-row{n}'
-    ],
-    scale: scales.gridTrack
-  },
-  {
     name: 'Aspect ratios',
     classPatterns: ['aspect-{ratio}'],
     scale: scales.aspectRatio

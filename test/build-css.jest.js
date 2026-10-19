@@ -99,8 +99,6 @@ describe('buildCss', () => {
       'margin-right': '0 !important'
     });
     expect(declsForSelector(stripped, '.col')).toEqual({ 'min-width': '0' });
-    expect(stripped).not.toContain('gridbox');
-    expect(stripped).not.toContain('col--auto');
     expect(declsForSelector(stripped, '.aspect-16\\/9')).toEqual({
       'aspect-ratio': '16/9 !important'
     });

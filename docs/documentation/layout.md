@@ -4,17 +4,16 @@ Define the size, shape, and content flow of your markup.
 
 ## Grid
 
-Assembly uses a 12-column flexible grid with optional gutters.
-`grid` is flexbox (`display: flex`). For CSS Grid, use [`gridbox`](#gridbox).
+Assembly uses a 12-column CSS Grid with optional gutters.
 
 ```selectors
 .grid
 .col
 ```
 
-Grids require at minimum two elements: A parent with the class `grid` and a child with the class `col`. To define the width of `col` in a grid, add a width class, `col--auto`, or both. The `grid` class includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+Grids require at minimum two elements: A parent with the class `grid` and a child with the class `col`. A `col` spans the full row unless you add a `w-1/12` to `w-11/12` fraction class, which sets how many of the 12 columns it spans. Offset a `col` that has a width class with an [`ml-1/12` to `ml-11/12`](#margins) fraction class; other left and right margins on `col` are ignored inside a grid. The `grid` class includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
-To avoid unexpected side-effects, do not add margin left or right to `grid` and do not add padding left or right to `col`.
+Align columns with the `flex--*-cross` [flexbox](#flexbox) classes.
 
 ```example
 <div class='grid'>
@@ -24,18 +23,10 @@ To avoid unexpected side-effects, do not add margin left or right to `grid` and 
 </div>
 ```
 
-```selectors
-.col--auto
-```
-
-Apply to a `col` element to override a `col--{size}` rule and take on default `col`, occupying equal space with other `col` siblings.
-This class is designed to be used with `*-mm`, `*-ml`, and `*-mxl` variations
-to target screen sizes.
-
 ```example
 <div class='grid'>
-  <div class='col w-1/4 col--auto-ml border border--darken10'>w-1/4 col--auto-ml</div>
-  <div class='col w-3/4 col--auto-ml border border--darken10'>w-3/4 col--auto-ml</div>
+  <div class='col w-1/4-ml border border--darken10'>w-1/4-ml</div>
+  <div class='col w-3/4-ml border border--darken10'>w-3/4-ml</div>
 </div>
 ```
 
@@ -52,19 +43,14 @@ to target screen sizes.
 .grid--gut120
 ```
 
-Apply column gutters to all columns in a grid by adding a `grid--gut{size}` modifier to the `grid` element. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+Apply column gutters to all columns in a grid by adding a `grid--gut{size}` modifier to the `grid` element. For space between rows, add a [`gapy{size}`](#gap) class. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
 ```example
-<div class='grid grid--gut12'>
-  <div class='col w-1/6'>
-    <div class='border border--darken10'>w-1/6</div>
-  </div>
-  <div class='col w-1/3'>
-    <div class='border border--darken10'>w-1/3</div>
-  </div>
-  <div class='col w-1/2'>
-    <div class='border border--darken10'>w-1/2</div>
-  </div>
+<div class='grid grid--gut12 gapy12'>
+  <div class='col w-1/6 border border--darken10'>w-1/6</div>
+  <div class='col w-1/3 border border--darken10'>w-1/3</div>
+  <div class='col w-1/2 border border--darken10'>w-1/2</div>
+  <div class='col border border--darken10'>col</div>
 </div>
 ```
 
@@ -224,11 +210,12 @@ Apply margin on the right.
 .mr-11/12
 ```
 
-Apply percentage-based margin on the right. When using with `col`, add a width class, `col--auto`, or both to define the size of the element.
+Apply percentage-based margin on the right.
 
 ```example
-<div class='grid'>
-  <div class='col w-1/2 mr-1/2 bg-darken10'>mr-1/2</div>
+<div class='flex'>
+  <div class='w-1/4 mr-1/2 bg-darken10'>mr-1/2</div>
+  <div class='w-1/4 bg-darken10'>w-1/4</div>
 </div>
 ```
 
@@ -268,7 +255,7 @@ Apply margin on the left.
 .ml-11/12
 ```
 
-Apply percentage-based margin on the left. When using with `col`, add a width class, `col--auto`, or both to define the size of the element.
+Apply percentage-based margin on the left. Inside a `grid`, these offset a `col` by the same fraction of the 12 columns; pair them with a `w-*` fraction class.
 
 ```example
 <div class='grid'>
@@ -345,7 +332,7 @@ Apply padding on the left.
 
 Gap utilities fit `gap{size}`, `gapx{size}`, and `gapy{size}` on the padding scale.
 Class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
-Use with `flex`, `inline-flex`, or `gridbox`. Do not combine with `grid--gut*` or percentage `w-*` columns on `grid`.
+Use with `flex`, `inline-flex`, or `grid`.
 
 ```selectors
 .gap{gap}
@@ -778,138 +765,6 @@ This class prevents that default shrinkage, forcing siblings to accommodate the 
  <div class='flex-child-no-shrink border w120'>child</div>
  <div class='border w120'>child</div>
  <div class='border w120'>child</div>
-</div>
-```
-
-## Gridbox
-
-CSS Grid utilities. All class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
-
-`gridbox` does not replace [`grid`](#grid). Keep using `grid` / `col` / `grid--gut*` for the 12-column flex system.
-
-Usage:
-- Put `gridbox` or `inline-gridbox` on the parent.
-- Set columns with `gridbox--cols{n}` (1–12). Use `gap{size}` for spacing.
-- Span children with `gridbox-child-col{n}` and `gridbox-child-row{n}`.
-
-```selectors
-.gridbox
-.inline-gridbox
-```
-
-Establish an element as a CSS Grid parent.
-
-```example
-<div class='gridbox gridbox--cols3 gap12'>
-  <div class='border border--darken10 px6'>1</div>
-  <div class='border border--darken10 px6'>2</div>
-  <div class='border border--darken10 px6'>3</div>
-</div>
-```
-
-```selectors
-.gridbox--row
-.gridbox--column
-.gridbox--dense
-.gridbox--column-dense
-```
-
-Set `grid-auto-flow`. `gridbox--row` is the CSS default; use it to override a column flow.
-
-```example
-<div class='gridbox gridbox--column gap6 h120'>
-  <div class='border border--darken10 px6'>1</div>
-  <div class='border border--darken10 px6'>2</div>
-  <div class='border border--darken10 px6'>3</div>
-</div>
-```
-
-```selectors
-.gridbox--center
-.gridbox--stretch
-.gridbox--start
-.gridbox--end
-```
-
-Align items inside their grid areas with `place-items`.
-
-```example
-<div class='gridbox gridbox--cols2 gridbox--center gap12 h120'>
-  <div class='border border--darken10 px6'>center</div>
-  <div class='border border--darken10 px6'>center</div>
-</div>
-```
-
-```selectors
-.gridbox--space-between
-.gridbox--space-around
-.gridbox--space-evenly
-```
-
-Distribute extra space between grid tracks.
-
-```example
-<div class='gridbox gridbox--cols3 gridbox--space-between'>
-  <div class='border border--darken10 px6'>1</div>
-  <div class='border border--darken10 px6'>2</div>
-  <div class='border border--darken10 px6'>3</div>
-</div>
-```
-
-```selectors
-.gridbox--cols{gridTrack}
-```
-
-Set the number of equal columns on a `gridbox`.
-
-```example
-<div class='gridbox gridbox--cols3 gap12'>
-  <div class='border border--darken10 px6'>1</div>
-  <div class='border border--darken10 px6'>2</div>
-  <div class='border border--darken10 px6'>3</div>
-</div>
-```
-
-```selectors
-.gridbox--rows{gridTrack}
-```
-
-Set the number of equal rows on a `gridbox`.
-
-```example
-<div class='gridbox gridbox--cols2 gridbox--rows2 gap12 h120'>
-  <div class='border border--darken10'>1</div>
-  <div class='border border--darken10'>2</div>
-  <div class='border border--darken10'>3</div>
-  <div class='border border--darken10'>4</div>
-</div>
-```
-
-```selectors
-.gridbox-child-col{gridTrack}
-```
-
-Span columns on a `gridbox` child.
-
-```example
-<div class='gridbox gridbox--cols4 gap12'>
-  <div class='gridbox-child-col2 border border--darken10 px6'>span 2</div>
-  <div class='border border--darken10 px6'>1</div>
-  <div class='border border--darken10 px6'>1</div>
-</div>
-```
-
-```selectors
-.gridbox-child-row{gridTrack}
-```
-
-Span rows on a `gridbox` child.
-
-```example
-<div class='gridbox gridbox--cols2 gridbox--rows2 gap12 h120'>
-  <div class='gridbox-child-row2 border border--darken10'>span 2 rows</div>
-  <div class='border border--darken10'>1</div>
-  <div class='border border--darken10'>1</div>
 </div>
 ```
 
