@@ -22,12 +22,6 @@ function fractionName(raw) {
   return raw.replace(/\\/g, '');
 }
 
-function fractionPercent(numer, denom) {
-  const d = Number(denom);
-  if (!d) return;
-  return (Number(numer) / d) * 100;
-}
-
 function rotateDeg(scale) {
   if (String(scale).indexOf('neg') !== -1) {
     return `-${String(scale).replace('-neg', '')}deg`;
@@ -207,31 +201,6 @@ function layoutScaleRules() {
   rules.push([
     /^scale(\d+)$/,
     ([, scale]) => ({ scale: important(String(Number(scale) / 100)) })
-  ]);
-
-  rules.push([
-    /^w-(\d+)\/(\d+)$/,
-    ([, numer, denom]) => {
-      const pct = fractionPercent(numer, denom);
-      if (pct == null) return;
-      const decls = { width: important(`${pct}%`) };
-      const span = (numer * 12) / denom;
-      if (Number.isInteger(span) && span > 0 && span <= 12) {
-        decls['grid-column-end'] = important(`span ${span}`);
-      }
-      return decls;
-    }
-  ]);
-
-  rules.push([
-    /^(h|hmax)-viewport-(\d+)\/(\d+)$/,
-    ([, prefix, numer, denom]) => {
-      const pct = fractionPercent(numer, denom);
-      if (pct == null) return;
-      const value = important(`${pct}vh`);
-      if (prefix === 'h') return { height: value };
-      return { 'max-height': value };
-    }
   ]);
 
   return { rules, safelist };

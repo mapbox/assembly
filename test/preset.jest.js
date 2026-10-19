@@ -50,7 +50,7 @@ describe('presetAssembly', () => {
 
   test('JIT generate emits only requested utilities', async () => {
     const css = await generateJit(
-      'px12 flex bg-blue gap12 grid rotate30 translate-x48 w-2/5 mt48 mr-2/5'
+      'px12 flex bg-blue gap12 grid rotate30 translate-x48 mt48 mr-2/5'
     );
     expect(css).toContain('.px12');
     expect(css).toContain('.flex');
@@ -64,8 +64,6 @@ describe('presetAssembly', () => {
     expect(css).toContain('rotate:30deg');
     expect(css).toContain('.translate-x48');
     expect(css).toContain('translate:48px 0');
-    expect(css).toContain('.w-2\\/5');
-    expect(css).toContain('width:40% !important;}');
     expect(css).not.toContain('.mt48');
     expect(css).not.toContain('.mr-2\\/5');
     expect(css).not.toContain('.px24');
