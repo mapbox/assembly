@@ -75,7 +75,11 @@ describe('presetAssembly', () => {
 
   test('media variants wrap color utilities', async () => {
     const css = await generateJit(
-      'bg-blue-mm btn--red-ml grid-ml grid--gut12-mxl'
+      'grid--gut12-mxl grid-ml px6-mm btn--red-ml bg-blue-mm'
+    );
+    expect(css.indexOf('.px6-mm')).toBeLessThan(css.indexOf('.grid-ml'));
+    expect(css.indexOf('.grid-ml')).toBeLessThan(
+      css.indexOf('.grid--gut12-mxl')
     );
     expect(css).toMatch(
       /@media \(--m-screen\)\{\n\.bg-blue-mm\{background-color:var\(--blue\) !important;\}/

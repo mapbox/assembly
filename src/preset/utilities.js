@@ -2,6 +2,15 @@
 
 const { withMediaClasses } = require('./media-classes');
 
+function canvasImage(color) {
+  return [
+    `linear-gradient(-45deg, transparent 75%, ${color} 75%)`,
+    `linear-gradient(45deg, transparent 75%, ${color} 75%)`,
+    `linear-gradient(45deg, ${color} 25%, transparent 25%)`,
+    `linear-gradient(-45deg, ${color} 25%, transparent 25%)`
+  ].join(', ');
+}
+
 const UTILITY_RULES = [
   ['table--fixed', { 'table-layout': 'fixed' }],
   [
@@ -255,7 +264,7 @@ const UTILITY_RULES = [
   ['txt-capitalize-first', { 'text-transform': 'lowercase !important' }],
   ['txt-underline', { 'text-decoration': 'underline !important' }],
   ['txt-nowrap', { 'white-space': 'nowrap !important' }],
-  ['txt-break-word', { 'word-break': 'break-all !important' }],
+  ['txt-break-word', { 'overflow-wrap': 'anywhere !important' }],
   [
     'txt-truncate',
     {
@@ -675,6 +684,15 @@ const UTILITY_RULES = [
     }
   ],
   ['loading--s', { height: '18px', width: '18px' }],
+  [
+    'bg-canvas',
+    {
+      'background-image': canvasImage('var(--gray-faint)'),
+      'background-size': '12px 12px',
+      'background-position': '0 0, 0 -6px, 6px 0, -6px -6px'
+    }
+  ],
+  ['bg-canvas--dark', { 'background-image': canvasImage('var(--lighten10)') }],
   [
     'events-none',
     { '-webkit-touch-callout': 'none', 'pointer-events': 'none' }

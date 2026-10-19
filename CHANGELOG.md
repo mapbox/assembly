@@ -8,6 +8,8 @@
 - [add] CSS Grid via `gridbox` / `inline-gridbox`, `gridbox--cols{n}` / `gridbox--rows{n}` (1–12), child spans, auto-flow, and alignment. The existing `grid` / `col` 12-column flex system is unchanged.
 - [add] `examples/jit` — a sample app that generates only the utilities used in its markup (no reset or component preflight). On-demand builds can also emit off-scale transforms (`rotate*`, `scale*`, `translate-*`); pixel utilities stay on the documented scale.
 - [add] `aspect-{ratio}` / `aspect-auto`, `object-{contain,cover,fill,none,scale-down}`, `flex--space-around-main` / `flex--space-evenly-main`, `gridbox--space-around` / `gridbox--space-evenly`, and transform utilities (`rotate{deg}`, `scale{percent}`, `translate-x{n}` / `translate-y{n}`).
+- [breaking] `txt-break-word` uses `overflow-wrap: anywhere`, so words break only when they would overflow, instead of `word-break: break-all`.
+- [add] `animation-shimmer`, `visible-on-parent-hover`, `bg-canvas`, and `bg-canvas--dark`.
 - [internal] Assembly utilities are UnoCSS rules in `src/preset/`. Reset and component CSS live in `src/preset/base.css`. The package build is `src/build-*.js`. The documentation site is VitePress under `docs/`.
 
 ## 1.16.0
