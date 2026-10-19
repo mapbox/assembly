@@ -71,24 +71,36 @@ describe('buildCss', () => {
       'background-color': '#0F71FA !important'
     });
     expect(declsForSelector(stripped, '.w-1\\/2')).toEqual({
-      width: '50% !important'
+      width: '50% !important',
+      'grid-column-end': 'span 6 !important'
+    });
+    expect(declsForSelector(stripped, '.w-1\\/3')).toEqual({
+      width: '33.3333% !important',
+      'grid-column-end': 'span 4 !important'
+    });
+    expect(declsForSelector(stripped, '.ml-1\\/2')).toEqual({
+      'margin-left': '50% !important',
+      'grid-column-start': '7 !important'
     });
     expect(declsForSelector(stripped, '.grid--gut12')).toEqual({
-      'margin-left': '-12px'
+      'column-gap': '12px'
     });
     expect(declsForSelector(stripped, '.gap12')).toEqual({
       gap: '12px !important'
     });
     expect(declsForSelector(stripped, '.grid')).toEqual({
-      display: 'flex !important',
-      'flex-wrap': 'wrap !important'
+      display: 'grid !important',
+      'grid-template-columns': 'repeat(12, minmax(0, 1fr)) !important'
     });
-    expect(declsForSelector(stripped, '.gridbox')).toEqual({
-      display: 'grid !important'
+    expect(declsForSelector(stripped, '.grid > .col')).toEqual({
+      'grid-column-end': 'span 12',
+      width: 'auto !important',
+      'margin-left': '0 !important',
+      'margin-right': '0 !important'
     });
-    expect(declsForSelector(stripped, '.gridbox--cols3')).toEqual({
-      'grid-template-columns': 'repeat(3, minmax(0, 1fr)) !important'
-    });
+    expect(declsForSelector(stripped, '.col')).toEqual({ 'min-width': '0' });
+    expect(stripped).not.toContain('gridbox');
+    expect(stripped).not.toContain('col--auto');
     expect(declsForSelector(stripped, '.aspect-16\\/9')).toEqual({
       'aspect-ratio': '16/9 !important'
     });

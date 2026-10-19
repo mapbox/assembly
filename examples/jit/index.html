@@ -24,23 +24,27 @@
         <a class="link" href="#cards">Skip to cards</a>
       </div>
 
-      <section id="cards" class="gridbox gridbox--cols1 gridbox--cols3-ml gap12">
-        <article class="bg-white round border border--gray-light px12 py18">
+      <section id="cards" class="grid gap12">
+        <article
+          class="col w-1/3-ml bg-white round border border--gray-light px12 py18"
+        >
           <h2 class="txt-s txt-bold mb6">Flex + gap</h2>
           <p class="txt-s color-gray">
             <code class="txt-mono">gap12</code> spaces the buttons above.
           </p>
         </article>
         <article
-          class="bg-white round border border--gray-light px12 py18 gridbox-child-col2-ml"
+          class="col w-2/3-ml bg-white round border border--gray-light px12 py18"
         >
           <h2 class="txt-s txt-bold mb6">CSS Grid</h2>
           <p class="txt-s color-gray">
-            <code class="txt-mono">gridbox</code> is real CSS Grid.
-            <code class="txt-mono">grid</code> stays the flex 12-column system.
+            <code class="txt-mono">grid</code> is a 12-column CSS Grid.
+            <code class="txt-mono">w-2/3-ml</code> spans 8 columns.
           </p>
         </article>
-        <article class="bg-white round border border--gray-light px12 py18">
+        <article
+          class="col w-1/3-ml bg-white round border border--gray-light px12 py18"
+        >
           <h2 class="txt-s txt-bold mb6">Tree-shaken</h2>
           <p class="txt-s color-gray">
             Unused utilities such as large padding or other colors are not in

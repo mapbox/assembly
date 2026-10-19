@@ -30,11 +30,11 @@ describe('presetAssembly', () => {
     expect(preset.safelist).toContain('grid--gut12-ml');
     expect(preset.safelist).toContain('gap12');
     expect(preset.safelist).toContain('gap12-mm');
-    expect(preset.safelist).toContain('gridbox');
-    expect(preset.safelist).toContain('gridbox-mm');
-    expect(preset.safelist).toContain('gridbox--cols3');
-    expect(preset.safelist).toContain('gridbox--cols3-ml');
-    expect(preset.safelist).toContain('gridbox-child-col2');
+    expect(preset.safelist).toContain('grid');
+    expect(preset.safelist).toContain('grid-mm');
+    expect(preset.safelist.some(token => token.includes('gridbox'))).toBe(
+      false
+    );
     expect(preset.safelist).toContain('aspect-16/9');
     expect(preset.safelist).toContain('aspect-16/9-ml');
     expect(preset.safelist).toContain('object-cover');
@@ -50,38 +50,47 @@ describe('presetAssembly', () => {
 
   test('JIT generate emits only requested utilities', async () => {
     const css = await generateJit(
-      'px12 flex bg-blue gap12 gridbox gridbox--cols3 rotate30 translate-x48 w-2/5 mt48 mr-2/5'
+      'px12 flex bg-blue gap12 grid rotate30 translate-x48 w-2/5 mt48 mr-2/5'
     );
     expect(css).toContain('.px12');
     expect(css).toContain('.flex');
     expect(css).toContain('.bg-blue');
     expect(css).toContain('.gap12');
-    expect(css).toContain('.gridbox');
-    expect(css).toContain('.gridbox--cols3');
+    expect(css).toContain(
+      '.grid{display:grid !important;grid-template-columns:repeat(12, minmax(0, 1fr)) !important;}'
+    );
+    expect(css).toContain('.grid > .col, .grid > .col-mm');
     expect(css).toContain('.rotate30');
     expect(css).toContain('rotate:30deg');
     expect(css).toContain('.translate-x48');
     expect(css).toContain('translate:48px 0');
     expect(css).toContain('.w-2\\/5');
-    expect(css).toContain('width:40%');
+    expect(css).toContain('width:40% !important;}');
     expect(css).not.toContain('.mt48');
     expect(css).not.toContain('.mr-2\\/5');
     expect(css).not.toContain('.px24');
     expect(css).not.toContain('.flex-mm');
     expect(css).not.toContain('.bg-red');
     expect(css).not.toContain('.gap24');
-    expect(css).not.toContain('.gridbox--cols4');
+    expect(css).not.toContain('.grid--gut');
   });
 
   test('media variants wrap color utilities', async () => {
-    const css = await generateJit('bg-blue-mm btn--red-ml grid--gut12-mxl');
+    const css = await generateJit(
+      'bg-blue-mm btn--red-ml grid-ml grid--gut12-mxl'
+    );
     expect(css).toMatch(
       /@media \(--m-screen\)\{\n\.bg-blue-mm\{background-color:var\(--blue\) !important;\}/
     );
     expect(css).toContain(
       '.btn--stroke.btn--red-ml:hover, .btn--stroke.btn--red-ml.is-active'
     );
-    expect(css).toContain('.grid--gut12-mxl > .col');
+    expect(css).toMatch(
+      /@media \(--l-screen\)\{\n\.grid-ml\{[^}]*\}\n\.grid-ml > \.col,/
+    );
+    expect(css).toMatch(
+      /@media \(--xl-screen\)\{\n\.grid--gut12-mxl\{column-gap:12px;\}/
+    );
     expect(css).not.toMatch(/\.bg-blue\{/);
     expect(css).not.toMatch(/\.btn--red[{:.,\s]/);
   });

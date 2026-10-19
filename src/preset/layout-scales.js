@@ -54,28 +54,10 @@ function layoutScaleRules() {
   const safelist = [];
 
   layoutScales.gutter.forEach(scale => {
-    withMediaClasses(`grid--gut${scale}`).forEach(token =>
-      safelist.push(token)
-    );
+    addStaticScale(rules, safelist, `grid--gut${scale}`, {
+      'column-gap': cssValue(scale)
+    });
   });
-  const gutterScale = new Set(layoutScales.gutter.map(String));
-  rules.push([
-    /^grid--gut(.+)$/,
-    ([, scale], { symbols }) => {
-      if (!gutterScale.has(scale)) return;
-      const val = cssValue(scale);
-      return [
-        { 'margin-left': `-${val}` },
-        {
-          [symbols.selector]: s =>
-            ['col', 'col-mm', 'col-ml', 'col-mxl']
-              .map(col => `${s} > .${col}`)
-              .join(', '),
-          'padding-left': val
-        }
-      ];
-    }
-  ]);
 
   layoutScales.margin.forEach(scale => {
     const value = important(cssValue(scale));
@@ -96,9 +78,16 @@ function layoutScaleRules() {
   layoutScales.fractions.forEach(scale => {
     const name = fractionName(scale[0]);
     const value = important(`${scale[1]}%`);
+    const span = Math.round((scale[1] * 12) / 100);
     addStaticScale(rules, safelist, `mr-${name}`, { 'margin-right': value });
-    addStaticScale(rules, safelist, `ml-${name}`, { 'margin-left': value });
-    addStaticScale(rules, safelist, `w-${name}`, { width: value });
+    addStaticScale(rules, safelist, `ml-${name}`, {
+      'margin-left': value,
+      'grid-column-start': important(String(span + 1))
+    });
+    addStaticScale(rules, safelist, `w-${name}`, {
+      width: value,
+      'grid-column-end': important(`span ${span}`)
+    });
     addStaticScale(rules, safelist, `h-viewport-${name}`, {
       height: important(`${scale[1]}vh`)
     });
@@ -112,21 +101,6 @@ function layoutScaleRules() {
     addStaticScale(rules, safelist, `gap${scale}`, { gap: value });
     addStaticScale(rules, safelist, `gapx${scale}`, { 'column-gap': value });
     addStaticScale(rules, safelist, `gapy${scale}`, { 'row-gap': value });
-  });
-
-  layoutScales.gridTrack.forEach(n => {
-    addStaticScale(rules, safelist, `gridbox--cols${n}`, {
-      'grid-template-columns': important(`repeat(${n}, minmax(0, 1fr))`)
-    });
-    addStaticScale(rules, safelist, `gridbox--rows${n}`, {
-      'grid-template-rows': important(`repeat(${n}, minmax(0, 1fr))`)
-    });
-    addStaticScale(rules, safelist, `gridbox-child-col${n}`, {
-      'grid-column': important(`span ${n}`)
-    });
-    addStaticScale(rules, safelist, `gridbox-child-row${n}`, {
-      'grid-row': important(`span ${n}`)
-    });
   });
 
   addStaticScale(rules, safelist, 'aspect-auto', {
@@ -240,7 +214,12 @@ function layoutScaleRules() {
     ([, numer, denom]) => {
       const pct = fractionPercent(numer, denom);
       if (pct == null) return;
-      return { width: important(`${pct}%`) };
+      const decls = { width: important(`${pct}%`) };
+      const span = (numer * 12) / denom;
+      if (Number.isInteger(span) && span > 0 && span <= 12) {
+        decls['grid-column-end'] = important(`span ${span}`);
+      }
+      return decls;
     }
   ]);
 
