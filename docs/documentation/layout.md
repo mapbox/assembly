@@ -808,14 +808,14 @@ Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes
 
 ## Transforms
 
-Transform utilities use the individual `rotate`, `scale`, and `translate` properties so they compose.
+Transform utilities use the individual `rotate` and `scale` properties so they compose.
 Class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
 ```selectors
 .rotate{rotate}
 ```
 
-Rotate an element. Combines with `scale*` and `translate-*`.
+Rotate an element. Combines with `scale*`.
 
 ```example
 <div class='rotate45 bg-blue w60 h60'></div>
@@ -825,30 +825,10 @@ Rotate an element. Combines with `scale*` and `translate-*`.
 .scale{scale}
 ```
 
-Scale an element. `scale100` is `1`. Combines with `rotate*` and `translate-*`.
+Scale an element. `scale100` is `1`. Combines with `rotate*`.
 
 ```example
 <div class='scale50 bg-blue w60 h60'></div>
-```
-
-```selectors
-.translate-x{margin}
-```
-
-Translate on the x axis. Uses the margin scale, including negatives.
-
-```example
-<div class='translate-x12 bg-blue w60 h60'></div>
-```
-
-```selectors
-.translate-y{margin}
-```
-
-Translate on the y axis. Uses the margin scale, including negatives.
-
-```example
-<div class='translate-y12 bg-blue w60 h60'></div>
 ```
 
 ## Layout utils

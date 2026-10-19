@@ -114,9 +114,6 @@ describe('buildCss', () => {
     expect(declsForSelector(stripped, '.scale50')).toEqual({
       scale: '0.5 !important'
     });
-    expect(declsForSelector(stripped, '.translate-x12')).toEqual({
-      translate: '12px 0 !important'
-    });
     expect(declsForSelector(stripped, '.btn')['background-color']).toBe(
       '#0F71FA'
     );

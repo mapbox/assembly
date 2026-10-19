@@ -47,7 +47,7 @@ The generated CSS still uses Assembly's CSS variables and custom media queries, 
 These are additive with 1.x class names:
 
 - `gap12` / `gapx12` / `gapy12` (padding scale) for `flex` and `grid` spacing.
-- `aspect-16/9`, `object-cover`, `flex--space-evenly-main`, `rotate90`, `scale50`, `translate-x12`.
+- `aspect-16/9`, `object-cover`, `flex--space-evenly-main`, `rotate90`, `scale50`.
 - `animation-shimmer`, `visible-on-parent-hover`, `bg-canvas`, `bg-canvas--dark`.
 
 ## 1.0.0+

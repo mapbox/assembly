@@ -43,11 +43,6 @@ const classSets = [
     scale: scales.scale
   },
   {
-    name: 'Translates',
-    classPatterns: ['translate-x{n}', 'translate-y{n}'],
-    scale: scales.margin
-  },
-  {
     name: 'Widths',
     classPatterns: ['w{n}'],
     scale: scales.width

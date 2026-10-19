@@ -6,8 +6,8 @@
 - [add] Export `presetAssembly()` for on-demand UnoCSS builds that keep Assembly class names. Pass `{ safelist: true }` only when you want the full prebuilt utility set.
 - [add] `gap{size}`, `gapx{size}`, and `gapy{size}` on the padding scale, with `*-mm` / `*-ml` / `*-mxl` variants. Use with `flex` or `grid`.
 - [breaking] `grid` is a 12-column CSS Grid. A `col` without a width class spans the full row, `w-1/12` to `w-11/12` set how many columns it spans, `ml-1/12` to `ml-11/12` set where it starts, and `grid--gut{size}` sets `column-gap`. `col--auto` is removed, and other left and right margins on a grid `col` are ignored.
-- [add] `examples/jit` — a sample app that generates only the utilities used in its markup (no reset or component preflight). On-demand builds can also emit off-scale transforms (`rotate*`, `scale*`, `translate-*`); pixel utilities stay on the documented scale.
-- [add] `aspect-{ratio}` / `aspect-auto`, `object-{contain,cover,fill,none,scale-down}`, `flex--space-around-main` / `flex--space-evenly-main`, and transform utilities (`rotate{deg}`, `scale{percent}`, `translate-x{n}` / `translate-y{n}`).
+- [add] `examples/jit` — a sample app that generates only the utilities used in its markup (no reset or component preflight). On-demand builds can also emit off-scale transforms (`rotate*`, `scale*`); pixel utilities stay on the documented scale.
+- [add] `aspect-{ratio}` / `aspect-auto`, `object-{contain,cover,fill,none,scale-down}`, `flex--space-around-main` / `flex--space-evenly-main`, and transform utilities (`rotate{deg}`, `scale{percent}`).
 - [breaking] `txt-break-word` uses `overflow-wrap: anywhere`, so words break only when they would overflow, instead of `word-break: break-all`.
 - [add] `animation-shimmer`, `visible-on-parent-hover`, `bg-canvas`, and `bg-canvas--dark`.
 - [internal] Assembly utilities are UnoCSS rules in `src/preset/`. Reset and component CSS live in `src/preset/base.css`. The package build is `src/build-*.js`. The documentation site is VitePress under `docs/`.

@@ -119,16 +119,6 @@ function layoutScaleRules() {
     });
   });
 
-  layoutScales.margin.forEach(scale => {
-    const value = cssValue(scale);
-    addStaticScale(rules, safelist, `translate-x${scale}`, {
-      translate: important(`${value} 0`)
-    });
-    addStaticScale(rules, safelist, `translate-y${scale}`, {
-      translate: important(`0 ${value}`)
-    });
-  });
-
   layoutScales.padding.forEach(scale => {
     const value = important(cssValue(scale));
     addStaticScale(rules, safelist, `py${scale}`, {
@@ -190,12 +180,6 @@ function layoutScaleRules() {
 
   addDynamicNumeric(rules, 'rotate', scale => ({
     rotate: important(rotateDeg(scale))
-  }));
-  addDynamicNumeric(rules, 'translate-x', scale => ({
-    translate: important(`${cssValue(scale)} 0`)
-  }));
-  addDynamicNumeric(rules, 'translate-y', scale => ({
-    translate: important(`0 ${cssValue(scale)}`)
   }));
 
   rules.push([

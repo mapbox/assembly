@@ -38,7 +38,6 @@ describe('presetAssembly', () => {
     expect(preset.safelist).toContain('flex--space-evenly-main');
     expect(preset.safelist).toContain('rotate90');
     expect(preset.safelist).toContain('scale50');
-    expect(preset.safelist).toContain('translate-x12-mm');
     expect(preset.safelist).toContain('bg-blue');
     MEDIA_VARIANT_CLASSES.forEach(className => {
       expect(preset.safelist).toContain(`${className}-mm`);
@@ -47,7 +46,7 @@ describe('presetAssembly', () => {
 
   test('JIT generate emits only requested utilities', async () => {
     const css = await generateJit(
-      'px12 flex bg-blue gap12 grid rotate30 translate-x48 mt48 mr-2/5'
+      'px12 flex bg-blue gap12 grid rotate30 mt48 mr-2/5'
     );
     expect(css).toContain('.px12');
     expect(css).toContain('.flex');
@@ -59,8 +58,6 @@ describe('presetAssembly', () => {
     expect(css).toContain('.grid > .col, .grid > .col-mm');
     expect(css).toContain('.rotate30');
     expect(css).toContain('rotate:30deg');
-    expect(css).toContain('.translate-x48');
-    expect(css).toContain('translate:48px 0');
     expect(css).not.toContain('.mt48');
     expect(css).not.toContain('.mr-2\\/5');
     expect(css).not.toContain('.px24');
