@@ -36,3 +36,12 @@
 .bg-blue{background-color:#0F71FA !important;}
 .bg-white{background-color:#fff !important;}
 .border--gray-light{border-color:#C7CACC !important;}
+@media (prefers-color-scheme: dark){
+.dark\:color-gray-light{color:#C7CACC !important;}
+.dark\:color-blue-light{color:#91B7EE !important;}
+.dark\:color-white{color:#fff !important;}
+.dark\:bg-gray-dark{background-color:#1a2224 !important;}
+.dark\:bg-gray-deep{background-color:#4D5255 !important;}
+.dark\:bg-blue-dark{background-color:#072E64 !important;}
+.dark\:border--gray-dark{border-color:#1a2224 !important;}
+}

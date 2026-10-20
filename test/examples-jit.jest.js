@@ -69,6 +69,10 @@ describe('examples/jit', () => {
       expect(emitted.has(name)).toBe(false);
     });
 
+    postcss.parse(stdout).walkRules(rule => {
+      if (!rule.selector.startsWith('.dark\\:')) return;
+      expect(rule.parent.params).toBe('(prefers-color-scheme: dark)');
+    });
     expect(stdout.length).toBeLessThan(3000);
     expect(stdout).not.toMatch(/html,\s*body/);
     expect(stdout).not.toMatch(/\.none-print/);
