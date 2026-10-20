@@ -132,21 +132,17 @@ const UTILITY_RULES = [
     'switch',
     {
       cursor: 'pointer',
-      top: '3px',
       'flex-shrink': '0',
       position: 'relative',
-      width: '30px',
-      height: '18px',
+      width: '36px',
+      height: '24px',
       'border-radius': '9999px',
-      'border-width': '1px',
-      'border-style': 'solid',
-      'border-color': 'currentColor',
-      color: 'var(--gray)',
-      transition:
-        'color var(--transition),\n    background-color var(--transition),\n    border-color var(--transition)'
+      'background-color': 'var(--gray-light)',
+      transition: 'background-color var(--transition)'
     }
   ],
-  ['switch--l', { width: '40px', height: '24px', top: '0' }],
+  ['switch--l', { width: '54px', height: '36px' }],
+  ['switch--s', { width: '30px', height: '18px' }],
   [
     'toggle-group',
     { display: 'inline-flex', 'text-align': 'center', 'border-radius': '18px' }
