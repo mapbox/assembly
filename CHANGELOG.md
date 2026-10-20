@@ -2,7 +2,7 @@
 
 ## 2.0.0
 
-- [breaking] Rebuild Assembly's CSS pipeline on [UnoCSS](https://unocss.dev/). Class names and `buildUserAssets` stay compatible; the generated stylesheet's formatting, comments, and source maps may differ. Node.js 24+ is required.
+- [breaking] Rebuild Assembly's CSS pipeline on [UnoCSS](https://unocss.dev/). Class names and `buildUserAssets` stay compatible; the generated stylesheet's formatting, comments, and source maps may differ.
 - [add] Export `presetAssembly()` for on-demand UnoCSS builds that keep Assembly class names. Pass `{ safelist: true }` only when you want the full prebuilt utility set.
 - [add] `gap{size}`, `gapx{size}`, and `gapy{size}` on the padding scale, with `*-mm` / `*-ml` / `*-mxl` variants. Use with `flex` or `grid`.
 - [breaking] `grid` is a 12-column CSS Grid. A `col` without a width class spans the full row, `w-1/12` to `w-11/12` set how many columns it spans, `ml-1/12` to `ml-11/12` set where it starts, and `grid--gut{size}` sets `column-gap`. `col--auto` is removed, and other left and right margins on a grid `col` are ignored.
@@ -10,7 +10,12 @@
 - [add] `aspect-{ratio}` / `aspect-auto`, `object-{contain,cover,fill,none,scale-down}`, `flex--space-around-main` / `flex--space-evenly-main`, and transform utilities (`rotate{deg}`, `scale{percent}`).
 - [breaking] `txt-break-word` uses `overflow-wrap: anywhere`, so words break only when they would overflow, instead of `word-break: break-all`.
 - [add] `animation-shimmer`, `visible-on-parent-hover`, `bg-canvas`, and `bg-canvas--dark`.
+- [breaking] Restyle `.switch` and `.switch--l` to match input heights, with a borderless track and a white thumb.
+- [add] `switch--s` for an 18px-tall switch.
+- [breaking] Remove `switch--s-label`. Switches now center on their label.
+- [add] Respect `prefers-reduced-motion: reduce` by making transitions instant.
 - [internal] Assembly utilities are UnoCSS rules in `src/preset/`. Reset and component CSS live in `src/preset/base.css`. The package build is `src/build-*.js`. The documentation site is VitePress under `docs/`.
+- [add] `building`, `clip`, `truck` icons
 
 ## 1.16.0
 - [add] `ai` icon
