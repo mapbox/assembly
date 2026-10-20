@@ -9,6 +9,7 @@
 - [add] `switch--s` for an 18px-tall switch.
 - [breaking] Remove `switch--s-label`. Switches now center on their label.
 - [add] Respect `prefers-reduced-motion: reduce` by making transitions instant.
+- [breaking] Focus states use `:focus-visible` with a `--focus-outline` outline, replacing `--focus-shadow`. `assembly.js` focus control only affects selects.
 - [internal] Assembly utilities are UnoCSS rules in `src/preset/`. Reset and component CSS live in `src/preset/base.css`. The package build is `src/build-*.js`. The documentation site is VitePress under `docs/`.
 - [add] `building`, `clip`, `truck` icons
 
