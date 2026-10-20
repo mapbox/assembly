@@ -6,7 +6,12 @@
   "rules": {
     "node/no-unsupported-features/es-syntax": [
       "error",
-      { "ignores": ["dynamicImport"] }
+      { "version": ">=18", "ignores": ["dynamicImport"] }
+    ],
+    "node/no-unsupported-features/es-builtins": ["error", { "version": ">=18" }],
+    "node/no-unsupported-features/node-builtins": [
+      "error",
+      { "version": ">=18" }
     ]
   },
   "overrides": [
