@@ -396,6 +396,7 @@ The toggle group component styles a set of `<input type=radio'>` elements. The m
 Style a toggle group. Toggles within a group share an equal width, set by the widest toggle.
 Change the inactive toggle text color and the active toggle background color with a `toggle--{color}` modifier (`*-dark` colors are not available).
 Change the active label color with a `toggle--active-{color}` modifier (`*-dark` colors are not available).
+Change the group background color by adding a `bg-{color}` class to the `toggle-group` element.
 
 ```example
 <div class='toggle-group mr18'>
@@ -406,6 +407,16 @@ Change the active label color with a `toggle--active-{color}` modifier (`*-dark`
   <label class='toggle-container'>
     <input name='toggle-1' type='radio' />
     <div class='toggle'>dog</div>
+  </label>
+</div>
+<div class='toggle-group bg-blue-faint'>
+  <label class='toggle-container'>
+    <input checked name='toggle-2' type='radio' />
+    <div class='toggle toggle--blue'>cat</div>
+  </label>
+  <label class='toggle-container'>
+    <input name='toggle-2' type='radio' />
+    <div class='toggle toggle--blue'>dog</div>
   </label>
 </div>
 ```
