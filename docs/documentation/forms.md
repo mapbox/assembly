@@ -335,6 +335,7 @@ The switch component styles the `<input type='checkbox' />` element. The markup 
 Style a switch. It is 24px tall to match small inputs like `input--s`.
 Change the background when active with a `switch--{color}` modifier (`*-dark` colors are not available).
 Change the color of the dot when active with a `switch--dot-{color}` modifier.
+To change the inactive track color, target your own class alongside `.switch` without `!important` so the active and disabled states still apply.
 
 ```example
 <label class='switch-container'>
@@ -345,6 +346,16 @@ Change the color of the dot when active with a `switch--dot-{color}` modifier.
   <input type='checkbox' />
   <div class='switch switch--pink switch--dot-yellow mr6'></div>
   Enable
+</label>
+<style>
+  .my-switch {
+    background-color: #f2c4a8;
+  }
+</style>
+<label class='switch-container'>
+  <input type='checkbox' />
+  <div class='switch my-switch mr6'></div>
+  Custom
 </label>
 ```
 
