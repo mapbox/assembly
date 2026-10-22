@@ -418,7 +418,7 @@ The toggle group component styles a set of `<input type=radio'>` elements. The m
 .toggle
 ```
 
-Style a toggle group. Toggles within a group share an equal width, set by the widest toggle.
+Style a toggle group.
 Change the inactive toggle text color and the active toggle background color with a `toggle--{color}` modifier (`*-dark` colors are not available).
 Change the active label color with a `toggle--active-{color}` modifier (`*-dark` colors are not available).
 Change the group background color by adding a `bg-{color}` class to the `toggle-group` element.
@@ -446,10 +446,10 @@ Change the group background color by adding a `bg-{color}` class to the `toggle-
 </div>
 ```
 
-Long labels widen the whole group. To fit a group to its container, add `wmax-full` to the `toggle-group` and `wmin0` to each `toggle-container`, then either:
+Toggle labels don't wrap. To fit a group with long labels to its container, add `wmax-full` to the `toggle-group`, then either:
 
-- **Truncate:** add `txt-truncate align-center py3` to each `toggle`.
-- **Wrap:** add `flex` to each `toggle-container` and `flex-child-grow txt-wrap align-center h-auto hmin24 py3` to each `toggle`. Use `hmin18` with `toggle--s` or `hmin36` with `toggle--l`.
+- **Truncate:** add `wmin0` to the long label's `toggle-container` and `txt-truncate align-center py3` to its `toggle`. Add `flex-child-no-shrink` to other `toggle-container` elements to keep them whole.
+- **Wrap:** add `flex` to each `toggle-container` and `txt-wrap align-center h-auto hmin24 py3` to each `toggle`. Use `hmin18` with `toggle--s` or `hmin36` with `toggle--l`.
 
 ```example
 <div class='w240 mb12'>
@@ -458,21 +458,21 @@ Long labels widen the whole group. To fit a group to its container, add `wmax-fu
       <input checked name='toggle-truncate' type='radio' />
       <div class='toggle txt-truncate align-center py3'>The quick brown fox jumped over the lazy dog</div>
     </label>
-    <label class='toggle-container wmin0'>
+    <label class='toggle-container flex-child-no-shrink'>
       <input name='toggle-truncate' type='radio' />
-      <div class='toggle txt-truncate align-center py3'>dog</div>
+      <div class='toggle'>dog</div>
     </label>
   </div>
 </div>
 <div class='w240'>
   <div class='toggle-group wmax-full'>
-    <label class='toggle-container flex wmin0'>
+    <label class='toggle-container flex'>
       <input checked name='toggle-wrap' type='radio' />
-      <div class='toggle flex-child-grow txt-wrap align-center h-auto hmin24 py3'>The quick brown fox jumped over the lazy dog</div>
+      <div class='toggle txt-wrap align-center h-auto hmin24 py3'>The quick brown fox jumped over the lazy dog</div>
     </label>
-    <label class='toggle-container flex wmin0'>
+    <label class='toggle-container flex'>
       <input name='toggle-wrap' type='radio' />
-      <div class='toggle flex-child-grow txt-wrap align-center h-auto hmin24 py3'>dog</div>
+      <div class='toggle txt-wrap align-center h-auto hmin24 py3'>dog</div>
     </label>
   </div>
 </div>

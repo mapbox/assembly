@@ -157,9 +157,7 @@ const UTILITY_RULES = [
   [
     'toggle-group',
     {
-      display: 'inline-grid',
-      'grid-auto-flow': 'column',
-      'grid-auto-columns': '1fr',
+      display: 'inline-flex',
       'background-color': 'var(--gray-faint)',
       'border-radius': 'var(--border-radius)'
     }
