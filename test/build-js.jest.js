@@ -1,19 +1,17 @@
 'use strict';
 
 const path = require('path');
-const del = require('del');
-const pify = require('pify');
 const fs = require('fs');
 const os = require('os');
 const crypto = require('crypto');
-const buildJs = require('../scripts/build-js');
+const buildJs = require('../src/build-js');
 
 function getTmp() {
   return path.join(os.tmpdir(), crypto.randomBytes(16).toString('hex'));
 }
 
 function cleanup(tmp) {
-  return del(tmp, { force: true });
+  return fs.promises.rm(tmp, { force: true });
 }
 
 describe('buildJs', () => {
@@ -24,7 +22,7 @@ describe('buildJs', () => {
       quiet: true,
       unminified: true
     })
-      .then(() => pify(fs.readFile)(tmp, 'utf8'))
+      .then(() => fs.promises.readFile(tmp, 'utf8'))
       .then(js => {
         expect(js).toMatchSnapshot();
       })
@@ -37,7 +35,7 @@ describe('buildJs', () => {
       outfile: tmp,
       icons: ['airplane', 'alert']
     })
-      .then(() => pify(fs.readFile)(tmp, 'utf8'))
+      .then(() => fs.promises.readFile(tmp, 'utf8'))
       .then(js => {
         expect(js).toMatchSnapshot();
       })

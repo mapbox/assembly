@@ -1,0 +1,67 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { defineConfig } from 'vitepress';
+
+import { documentationLayout } from './documentation-layout.js';
+import { htmlExampleMarkup } from './html-example-markup.js';
+import hljsGithub from './hljs-github-theme.js';
+
+const configDir = path.dirname(fileURLToPath(import.meta.url));
+const pkg = JSON.parse(
+  fs.readFileSync(path.resolve(configDir, '../../package.json'), 'utf8')
+);
+const base = '/assembly/';
+
+function packageVersion(md) {
+  md.core.ruler.push('package_version', state => {
+    state.tokens.forEach(token => {
+      if (token.type === 'fence' || token.type === 'html_block') {
+        token.content = token.content.replaceAll('%VERSION%', pkg.version);
+      }
+    });
+  });
+}
+
+function exampleFence(md) {
+  const defaultFence = md.renderer.rules.fence;
+  md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
+    const token = tokens[idx];
+    if (token.info.trim() === 'example') {
+      return `${htmlExampleMarkup(options.highlight, token.content)}\n`;
+    }
+    return `<div class="mt12 pre">${defaultFence(tokens, idx, options, env, slf)}</div>\n`;
+  };
+}
+
+export default defineConfig({
+  title: 'Assembly.css',
+  description:
+    'A CSS framework that makes the hard parts of building anything on the web easy.',
+  base,
+  head: [
+    ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico` }]
+  ],
+  outDir: '../_site',
+  srcExclude: ['documentation/!(index).md'],
+  cleanUrls: true,
+  appearance: false,
+  vite: {
+    server: {
+      fs: {
+        allow: ['..']
+      }
+    }
+  },
+  markdown: {
+    theme: hljsGithub,
+    anchor: {
+      permalink: false
+    },
+    config(md) {
+      packageVersion(md);
+      exampleFence(md);
+      documentationLayout(md);
+    }
+  }
+});
