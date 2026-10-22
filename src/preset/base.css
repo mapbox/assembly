@@ -1033,6 +1033,13 @@ textarea {
   display: block !important;
   clear: both !important;
 }
+.visible-on-parent-hover {
+  visibility: hidden;
+}
+:hover > .visible-on-parent-hover,
+:focus-within > .visible-on-parent-hover {
+  visibility: visible;
+}
 @keyframes pulse {
   0% {
     transform: scale(0.5);
@@ -1094,6 +1101,43 @@ textarea {
   60%,
   80% {
     transform: translate3d(12px, 0, 0);
+  }
+}
+.animation-shimmer {
+  position: relative;
+  overflow: hidden;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.animation-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation-name: shimmer;
+  animation-duration: inherit;
+  animation-delay: inherit;
+  animation-iteration-count: inherit;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  mix-blend-mode: soft-light;
+}
+@keyframes shimmer {
+  from {
+    background-position: -100%;
+  }
+  to {
+    background-position: 200%;
   }
 }
 .scroll-styled::-webkit-scrollbar {

@@ -1,5 +1,16 @@
 'use strict';
 
+const { withMediaClasses } = require('./media-classes');
+
+function canvasImage(color) {
+  return [
+    `linear-gradient(-45deg, transparent 75%, ${color} 75%)`,
+    `linear-gradient(45deg, transparent 75%, ${color} 75%)`,
+    `linear-gradient(45deg, ${color} 25%, transparent 25%)`,
+    `linear-gradient(-45deg, ${color} 25%, transparent 25%)`
+  ].join(', ');
+}
+
 const UTILITY_RULES = [
   ['table--fixed', { 'table-layout': 'fixed' }],
   [
@@ -249,7 +260,7 @@ const UTILITY_RULES = [
   ['txt-capitalize-first', { 'text-transform': 'lowercase !important' }],
   ['txt-underline', { 'text-decoration': 'underline !important' }],
   ['txt-nowrap', { 'white-space': 'nowrap !important' }],
-  ['txt-break-word', { 'word-break': 'break-all !important' }],
+  ['txt-break-word', { 'overflow-wrap': 'anywhere !important' }],
   [
     'txt-truncate',
     {
@@ -474,9 +485,27 @@ const UTILITY_RULES = [
     'icon',
     { display: 'block', fill: 'currentColor', height: '1em', width: '1em' }
   ],
-  ['grid', { display: 'flex !important', 'flex-wrap': 'wrap !important' }],
-  ['col', { display: 'block', 'max-width': '100%', 'flex-shrink': '1' }],
-  ['col--auto', { width: 'auto !important', flex: 'auto', 'flex-basis': '0' }],
+  [
+    /^grid$/,
+    (_, { symbols }) => [
+      {
+        display: 'grid !important',
+        'grid-template-columns': 'repeat(12, minmax(0, 1fr)) !important'
+      },
+      {
+        [symbols.selector]: s =>
+          withMediaClasses('col')
+            .map(col => `${s} > .${col}`)
+            .join(', '),
+        'grid-column-end': 'span 12',
+        width: 'auto !important',
+        'margin-left': '0 !important',
+        'margin-right': '0 !important'
+      }
+    ],
+    { autocomplete: 'grid' }
+  ],
+  ['col', { 'min-width': '0' }],
   ['inline', { display: 'inline !important' }],
   ['block', { display: 'block !important' }],
   ['inline-block', { display: 'inline-block !important' }],
@@ -521,8 +550,15 @@ const UTILITY_RULES = [
     'flex--space-between-main',
     { 'justify-content': 'space-between !important' }
   ],
+  ['flex--space-around-main', { 'justify-content': 'space-around !important' }],
+  ['flex--space-evenly-main', { 'justify-content': 'space-evenly !important' }],
   ['flex-child-grow', { 'flex-grow': '1 !important', 'min-width': '0' }],
   ['flex-child-no-shrink', { 'flex-shrink': '0 !important' }],
+  ['object-contain', { 'object-fit': 'contain !important' }],
+  ['object-cover', { 'object-fit': 'cover !important' }],
+  ['object-fill', { 'object-fit': 'fill !important' }],
+  ['object-none', { 'object-fit': 'none !important' }],
+  ['object-scale-down', { 'object-fit': 'scale-down !important' }],
   [
     'bleed',
     { 'margin-left': 'calc(50% - 50vw)', 'margin-right': 'calc(50% - 50vw)' }
@@ -645,6 +681,15 @@ const UTILITY_RULES = [
   ],
   ['loading--s', { height: '18px', width: '18px' }],
   [
+    'bg-canvas',
+    {
+      'background-image': canvasImage('var(--gray-faint)'),
+      'background-size': '12px 12px',
+      'background-position': '0 0, 0 -6px, 6px 0, -6px -6px'
+    }
+  ],
+  ['bg-canvas--dark', { 'background-image': canvasImage('var(--lighten10)') }],
+  [
     'events-none',
     { '-webkit-touch-callout': 'none', 'pointer-events': 'none' }
   ],
@@ -681,7 +726,9 @@ const UTILITY_RULES = [
 function utilityRules() {
   return {
     rules: UTILITY_RULES,
-    tokens: UTILITY_RULES.map(rule => rule[0])
+    tokens: UTILITY_RULES.map(
+      rule => (typeof rule[0] === 'string' ? rule[0] : rule[2].autocomplete)
+    )
   };
 }
 

@@ -23,6 +23,20 @@ Transition and reaction animations. By default, these run once for 1.5 seconds.
 ```
 
 ```selectors
+.animation-shimmer
+```
+
+Sweep a highlight across an element to show it is loading or updating. Works on any background color except white. Runs infinitely for 1.5 seconds per sweep; use the speed and delay modifiers below to change it.
+
+```example
+<div class="bg-gray-lighter round h36 mb12 animation-shimmer"></div>
+<div class="bg-green round h36 mb12 animation-shimmer"></div>
+<div class="bg-gray-dark round px12 py12">
+  <div class="bg-lighten10 round h36 animation-shimmer"></div>
+</div>
+```
+
+```selectors
 .animation--speed-025
 .animation--speed-05
 .animation--speed-1

@@ -4,14 +4,14 @@
 
 <div class="prose mb24">
 
-This effect is easy, of course, if you can fix the height of the columns. Often, though, that's not what you want. If you want columns to have equal heights *based on the column with the tallest content*, you need some flexbox powers.
+This effect is easy, of course, if you can fix the height of the columns. Often, though, that's not what you want. If you want columns to have equal heights *based on the column with the tallest content*, use a `grid`.
 
-The key here is to add `flex--stretch-cross` to the `grid`, and add `h-full` to the *child* of the `col` element, which is the one with the background color.
+Columns in a `grid` stretch to the height of the tallest column in their row, so add `h-full` to the *child* of the `col` element, which is the one with the background color.
 
 </div>
 
 ```example
-<div class='grid grid--gut12 flex--stretch-cross'>
+<div class='grid grid--gut12'>
   <div class='col w-1/3'>
     <div class='h-full bg-darken10 px12 py12'>
       <div class='bg-darken10 h60'></div>

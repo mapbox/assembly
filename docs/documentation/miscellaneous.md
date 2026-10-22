@@ -39,6 +39,32 @@ Use `color-*` classes to apply a custom color to the spinner handle.
 ```
 
 ```selectors
+.visible-on-parent-hover
+```
+
+Hide an element until its parent is hovered or contains keyboard focus.
+
+```example
+<div class='flex flex--center-cross border border--gray-light round px12 py12'>
+  <span class='flex-child-grow'>Hover this row</span>
+  <button class='btn btn--s visible-on-parent-hover'>Edit</button>
+</div>
+```
+
+```selectors
+.bg-canvas
+.bg-canvas--dark
+```
+
+Fill an element with a checkerboard, for previewing transparent images and colors.
+On dark backgrounds, add the `bg-canvas--dark` modifier.
+
+```example
+<div class='bg-canvas h60 mb12'></div>
+<div class='bg-canvas bg-canvas--dark bg-gray-dark h60'></div>
+```
+
+```selectors
 .events-none
 ```
 

@@ -23,6 +23,26 @@ const classSets = [
     scale: scales.padding
   },
   {
+    name: 'Gaps',
+    classPatterns: ['gap{n}', 'gapx{n}', 'gapy{n}'],
+    scale: scales.gap
+  },
+  {
+    name: 'Aspect ratios',
+    classPatterns: ['aspect-{ratio}'],
+    scale: scales.aspectRatio
+  },
+  {
+    name: 'Rotations',
+    classPatterns: ['rotate{n}'],
+    scale: scales.rotate
+  },
+  {
+    name: 'Scales',
+    classPatterns: ['scale{n}'],
+    scale: scales.scale
+  },
+  {
     name: 'Widths',
     classPatterns: ['w{n}'],
     scale: scales.width

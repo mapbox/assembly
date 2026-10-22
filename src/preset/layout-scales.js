@@ -22,9 +22,25 @@ function fractionName(raw) {
   return raw.replace(/\\/g, '');
 }
 
+function rotateDeg(scale) {
+  if (String(scale).indexOf('neg') !== -1) {
+    return `-${String(scale).replace('-neg', '')}deg`;
+  }
+  return `${scale}deg`;
+}
+
+const NUMERIC_SUFFIX = '(-neg\\d+|\\d+)';
+
 function addStaticScale(rules, safelist, className, decls) {
   rules.push([className, decls]);
   withMediaClasses(className).forEach(token => safelist.push(token));
+}
+
+function addDynamicNumeric(rules, prefix, declsFromScale) {
+  rules.push([
+    new RegExp(`^${prefix}${NUMERIC_SUFFIX}$`),
+    ([, scale]) => declsFromScale(scale)
+  ]);
 }
 
 function layoutScaleRules() {
@@ -32,28 +48,10 @@ function layoutScaleRules() {
   const safelist = [];
 
   layoutScales.gutter.forEach(scale => {
-    withMediaClasses(`grid--gut${scale}`).forEach(token =>
-      safelist.push(token)
-    );
+    addStaticScale(rules, safelist, `grid--gut${scale}`, {
+      'column-gap': cssValue(scale)
+    });
   });
-  const gutterScale = new Set(layoutScales.gutter.map(String));
-  rules.push([
-    /^grid--gut(.+)$/,
-    ([, scale], { symbols }) => {
-      if (!gutterScale.has(scale)) return;
-      const val = cssValue(scale);
-      return [
-        { 'margin-left': `-${val}` },
-        {
-          [symbols.selector]: s =>
-            ['col', 'col-mm', 'col-ml', 'col-mxl']
-              .map(col => `${s} > .${col}`)
-              .join(', '),
-          'padding-left': val
-        }
-      ];
-    }
-  ]);
 
   layoutScales.margin.forEach(scale => {
     const value = important(cssValue(scale));
@@ -74,14 +72,50 @@ function layoutScaleRules() {
   layoutScales.fractions.forEach(scale => {
     const name = fractionName(scale[0]);
     const value = important(`${scale[1]}%`);
+    const span = Math.round((scale[1] * 12) / 100);
     addStaticScale(rules, safelist, `mr-${name}`, { 'margin-right': value });
-    addStaticScale(rules, safelist, `ml-${name}`, { 'margin-left': value });
-    addStaticScale(rules, safelist, `w-${name}`, { width: value });
+    addStaticScale(rules, safelist, `ml-${name}`, {
+      'margin-left': value,
+      'grid-column-start': important(String(span + 1))
+    });
+    addStaticScale(rules, safelist, `w-${name}`, {
+      width: value,
+      'grid-column-end': important(`span ${span}`)
+    });
     addStaticScale(rules, safelist, `h-viewport-${name}`, {
       height: important(`${scale[1]}vh`)
     });
     addStaticScale(rules, safelist, `hmax-viewport-${name}`, {
       'max-height': important(`${scale[1]}vh`)
+    });
+  });
+
+  layoutScales.gap.forEach(scale => {
+    const value = important(cssValue(scale));
+    addStaticScale(rules, safelist, `gap${scale}`, { gap: value });
+    addStaticScale(rules, safelist, `gapx${scale}`, { 'column-gap': value });
+    addStaticScale(rules, safelist, `gapy${scale}`, { 'row-gap': value });
+  });
+
+  addStaticScale(rules, safelist, 'aspect-auto', {
+    'aspect-ratio': important('auto')
+  });
+  layoutScales.aspectRatio.forEach(scale => {
+    const name = fractionName(scale[0]);
+    addStaticScale(rules, safelist, `aspect-${name}`, {
+      'aspect-ratio': important(scale[1])
+    });
+  });
+
+  layoutScales.rotate.forEach(scale => {
+    addStaticScale(rules, safelist, `rotate${scale}`, {
+      rotate: important(rotateDeg(scale))
+    });
+  });
+
+  layoutScales.scale.forEach(scale => {
+    addStaticScale(rules, safelist, `scale${scale}`, {
+      scale: important(String(scale / 100))
     });
   });
 
@@ -143,6 +177,15 @@ function layoutScaleRules() {
   addStaticScale(rules, safelist, 'hmax-viewport-full', {
     'max-height': important('100vh')
   });
+
+  addDynamicNumeric(rules, 'rotate', scale => ({
+    rotate: important(rotateDeg(scale))
+  }));
+
+  rules.push([
+    /^scale(\d+)$/,
+    ([, scale]) => ({ scale: important(String(Number(scale) / 100)) })
+  ]);
 
   return { rules, safelist };
 }
