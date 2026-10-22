@@ -87,16 +87,6 @@ function nestedWrapClass(parent, level) {
   return parent.isDoc && level === 0 ? 'block mt6' : 'inline-block block-mm';
 }
 
-function useProse() {
-  const current = normalized(route.path);
-  return (
-    current !== '/' &&
-    current !== '/catalog' &&
-    !current.startsWith('/examples') &&
-    !current.startsWith('/documentation')
-  );
-}
-
 onMounted(() => {
   updateHash();
   window.addEventListener('hashchange', updateHash);
@@ -173,10 +163,7 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <div
-      class="ml180-mm mx-auto px24 w-auto wmax1200-mm px60-mm mb60 mt24"
-      :class="{ prose: useProse() }"
-    >
+    <div class="ml180-mm mx-auto px24 w-auto wmax1200-mm px60-mm mb60 mt24">
       <Content />
     </div>
   </div>

@@ -10,15 +10,13 @@ const DARK_PREFIX = 'dark:';
 const BASE_CLASS_PREFIX = '$base:';
 
 // Stacked variants narrow an earlier media query instead of replacing it.
-// A lone breakpoint leaves `parentOrder` unset so the prebuilt stylesheet
-// keeps UnoCSS's default media order.
-function mergeMediaQuery(query, order, { standaloneOrder }) {
+function mergeMediaQuery(query, order) {
   return (input, next) => {
     if (!input.parent) {
       return next(
         Object.assign({}, input, {
           parent: `@media ${query}`,
-          parentOrder: standaloneOrder ? order : input.parentOrder
+          parentOrder: order
         })
       );
     }
@@ -41,8 +39,7 @@ function mediaVariant() {
         matcher: found[1],
         handle: mergeMediaQuery(
           `(--${found[2]}-screen)`,
-          BREAKPOINT_ORDER[found[2]],
-          { standaloneOrder: false }
+          BREAKPOINT_ORDER[found[2]]
         )
       };
     }
@@ -51,9 +48,7 @@ function mediaVariant() {
 
 // The `$base:` matcher lets `darkBaseClassRule` handle classes from base.css.
 function darkVariant() {
-  const handle = mergeMediaQuery(DARK_QUERY, DARK_ORDER, {
-    standaloneOrder: true
-  });
+  const handle = mergeMediaQuery(DARK_QUERY, DARK_ORDER);
   return {
     name: 'assembly-dark',
     match(matcher) {

@@ -98,6 +98,22 @@ function wrapEntry(state, openIndex, md, usedIds) {
   const exampleAt = inner.findIndex(token => isFence(token, 'example'));
   const split = exampleAt === -1 ? inner.length : exampleAt;
   const render = list => md.renderer.render(list, md.options, state.env);
+  const renderProse = list =>
+    list.length ? `<div class="mb24 prose">${render(list)}</div>` : '';
+  // Text between examples gets the same prose styling as the description.
+  const renderRest = list => {
+    let html = '';
+    let prose = [];
+    list.forEach(token => {
+      if (isFence(token, 'example')) {
+        html += renderProse(prose) + render([token]);
+        prose = [];
+      } else {
+        prose.push(token);
+      }
+    });
+    return html + renderProse(prose);
+  };
   tokens.splice(
     openIndex,
     end - openIndex,
@@ -113,7 +129,7 @@ function wrapEntry(state, openIndex, md, usedIds) {
 </div>
 <div class="col w-2/3-mxl">
 <div class="mb24 prose">${render(inner.slice(0, split))}</div>
-${render(inner.slice(split))}
+${renderRest(inner.slice(split))}
 </div>
 </div>
 </div>\n`

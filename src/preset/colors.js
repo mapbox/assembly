@@ -11,6 +11,7 @@ const {
 } = require('./color-utils');
 
 const important = value => `${value} !important`;
+const switchChecked = s => `.switch-container:has(> input:checked) ${s}`;
 
 function colorRules(config) {
   const resolved = resolveColorVariants(config);
@@ -80,11 +81,8 @@ function colorRules(config) {
         { 'box-shadow': `inset 0 0 0 1px var(--${color})` }
       ],
       [
-        s =>
-          `[data-assembly-focus-control='visible'] .select--stroke${s}:focus`,
-        {
-          'box-shadow': `inset 0 0 0 1px var(--${darkerShade}), var(--focus-shadow)`
-        }
+        s => `.select--stroke${s}:focus`,
+        { 'box-shadow': `inset 0 0 0 1px var(--${darkerShade})` }
       ]
     ]);
   });
@@ -110,24 +108,41 @@ function colorRules(config) {
       [s => s, { color: `var(--${color})` }],
       [s => `input:checked + ${s}`, { background: `var(--${color})` }]
     ]);
+    if (color === 'white' || color.startsWith('lighten')) {
+      append(`toggle--${color}`, [
+        [
+          s => `.toggle-group:has(${s})`,
+          { 'background-color': 'var(--lighten10)' }
+        ],
+        [s => `input:checked + ${s}`, { color: 'var(--gray-dark)' }],
+        // `.toggle` outranks the checked color above for checked + disabled.
+        [s => `input:disabled + .toggle${s}`, { color: 'var(--lighten25)' }]
+      ]);
+    } else if (color.startsWith('darken')) {
+      append(`toggle--${color}`, [
+        [
+          s => `.toggle-group:has(${s})`,
+          { 'background-color': 'var(--darken5)' }
+        ]
+      ]);
+    }
   });
 
   colorsFor(resolved, 'toggleActive').forEach(color => {
     if (isNotAccessibleForForms(color)) return;
     append(`toggle--active-${color}`, [
-      [s => `input:checked + ${s}`, { color: `var(--${color})` }]
+      [s => `input:checked:enabled + ${s}`, { color: `var(--${color})` }]
     ]);
   });
 
   colorsFor(resolved, 'switch').forEach(color => {
     if (isNotAccessibleForForms(color)) return;
     append(`switch--${color}`, [
-      [s => s, { color: `var(--${color})` }],
-      [s => `input:checked + ${s}`, { 'background-color': `var(--${color})` }]
+      [switchChecked, { 'background-color': `var(--${color})` }]
     ]);
     append(`switch--dot-${color}`, [
       [
-        s => `input:checked + ${s}::after`,
+        s => `${switchChecked(s)}::after`,
         { 'background-color': `var(--${color})` }
       ]
     ]);

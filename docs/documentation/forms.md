@@ -323,18 +323,19 @@ When a radio button has the `disabled` attribute, it will be styled accordingly.
 
 The switch component styles the `<input type='checkbox' />` element. The markup must fit the following pattern:
 - A wrapping `<label>` with the class `switch-container`.
-- An `<input type='checkbox' />`. You may want to add a `mr*` margin-right
-  class to separate the radio from its label.
-- A `<div>` with the class `switch`.
+- An `<input type='checkbox' />` as a direct child of the container.
+- A `<div>` with the class `switch`. It can sit anywhere inside the container,
+  so a label can come before or after it. You may want to add a `mr*` or `ml*`
+  margin class to separate the switch from its label.
 
 ```selectors
 .switch
 ```
 
-Style a switch.
-Change the color of the dot when inactive, the border when inactive,
-and the background when active with a `switch--{color}` modifier (`*-dark` colors are not available).
-Change the color of the dot when active with a `switch--dot-{color}` modifier. Adjust the line height of the switch to match a label with small text with the `switch--s-label` modifier.
+Style a switch. It is 24px tall to match small inputs like `input--s`.
+Change the background when active with a `switch--{color}` modifier (`*-dark` colors are not available).
+Change the color of the dot when active with a `switch--dot-{color}` modifier.
+To change the inactive track color, target your own class alongside `.switch` without `!important` so the active and disabled states still apply.
 
 ```example
 <label class='switch-container'>
@@ -344,7 +345,17 @@ Change the color of the dot when active with a `switch--dot-{color}` modifier. A
 <label class='switch-container'>
   <input type='checkbox' />
   <div class='switch switch--pink switch--dot-yellow mr6'></div>
-  Enabled
+  Enable
+</label>
+<style>
+  .my-switch {
+    background-color: #f2c4a8;
+  }
+</style>
+<label class='switch-container'>
+  <input type='checkbox' />
+  <div class='switch my-switch mr6'></div>
+  Custom
 </label>
 ```
 
@@ -352,13 +363,27 @@ Change the color of the dot when active with a `switch--dot-{color}` modifier. A
 .switch--l
 ```
 
-Make a switch control large.
+Make a switch 36px tall to match the default `input` height.
 
 ```example
 <label class='switch-container'>
   <input type='checkbox' />
   <div class='switch switch--l mr6'></div>
-  Really enabled
+  Really enable
+</label>
+```
+
+```selectors
+.switch--s
+```
+
+Make a switch 18px tall to sit alongside small text.
+
+```example
+<label class='switch-container txt-s'>
+  <input type='checkbox' />
+  <div class='switch switch--s mr6'></div>
+  Barely enable
 </label>
 ```
 
@@ -396,7 +421,7 @@ The toggle group component styles a set of `<input type=radio'>` elements. The m
 Style a toggle group.
 Change the inactive toggle text color and the active toggle background color with a `toggle--{color}` modifier (`*-dark` colors are not available).
 Change the active label color with a `toggle--active-{color}` modifier (`*-dark` colors are not available).
-Change the border radiuses of toggle groups inside small text with `toggle-group--s` on the `toggle-container` element.
+Change the group background color by adding a `bg-{color}` class to the `toggle-group` element.
 
 ```example
 <div class='toggle-group mr18'>
@@ -409,16 +434,59 @@ Change the border radiuses of toggle groups inside small text with `toggle-group
     <div class='toggle'>dog</div>
   </label>
 </div>
+<div class='toggle-group bg-blue-faint'>
+  <label class='toggle-container'>
+    <input checked name='toggle-2' type='radio' />
+    <div class='toggle toggle--blue'>cat</div>
+  </label>
+  <label class='toggle-container'>
+    <input name='toggle-2' type='radio' />
+    <div class='toggle toggle--blue'>dog</div>
+  </label>
+</div>
+```
+
+Toggle labels don't wrap. To fit a group with long labels to its container, add `wmax-full` to the `toggle-group`, then either:
+
+- **Truncate:** add `wmin0` to the long label's `toggle-container` and `txt-truncate align-center py3` to its `toggle`. Add `flex-child-no-shrink` to other `toggle-container` elements to keep them whole.
+- **Wrap:** add `flex` to each `toggle-container` and `txt-wrap align-center h-auto hmin24 py3` to each `toggle`. Use `hmin18` with `toggle--s` or `hmin36` with `toggle--l`.
+
+```example
+<div class='w240 mb12'>
+  <div class='toggle-group wmax-full'>
+    <label class='toggle-container wmin0'>
+      <input checked name='toggle-truncate' type='radio' />
+      <div class='toggle txt-truncate align-center py3'>The quick brown fox jumped over the lazy dog</div>
+    </label>
+    <label class='toggle-container flex-child-no-shrink'>
+      <input name='toggle-truncate' type='radio' />
+      <div class='toggle'>dog</div>
+    </label>
+  </div>
+</div>
+<div class='w240'>
+  <div class='toggle-group wmax-full'>
+    <label class='toggle-container flex'>
+      <input checked name='toggle-wrap' type='radio' />
+      <div class='toggle txt-wrap align-center h-auto hmin24 py3'>The quick brown fox jumped over the lazy dog</div>
+    </label>
+    <label class='toggle-container flex'>
+      <input name='toggle-wrap' type='radio' />
+      <div class='toggle txt-wrap align-center h-auto hmin24 py3'>dog</div>
+    </label>
+  </div>
+</div>
 ```
 
 ```selectors
 .toggle--s
+.toggle--l
 ```
 
-Make a toggle small.
+Change the toggle height. `toggle--s` is 18px tall, the default `toggle` is 24px to match `input--s`, and `toggle--l` is 36px to match `input`.
 
 ```example
-<div class='toggle-group'>
+<div class='toggle-group mr18'>
   <label class='toggle-container'>
     <input checked name='toggle-small' type='radio' />
     <div class='toggle toggle--s'>mouse</div>
@@ -426,6 +494,16 @@ Make a toggle small.
   <label class='toggle-container'>
     <input name='toggle-small' type='radio' />
     <div class='toggle toggle--s'>cricket</div>
+  </label>
+</div>
+<div class='toggle-group'>
+  <label class='toggle-container'>
+    <input checked name='toggle-large' type='radio' />
+    <div class='toggle toggle--l'>horse</div>
+  </label>
+  <label class='toggle-container'>
+    <input name='toggle-large' type='radio' />
+    <div class='toggle toggle--l'>ox</div>
   </label>
 </div>
 ```

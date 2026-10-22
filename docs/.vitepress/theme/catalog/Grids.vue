@@ -12,6 +12,7 @@ const sizeCombos = [
   ['-1/6', '-1/6', '-2/3'],
   ['-1/12', '-1/6', '-3/4']
 ];
+const offsetCombos = sizeCombos.filter(combo => combo.length === 2);
 </script>
 
 <template>
@@ -47,32 +48,12 @@ const sizeCombos = [
       Grid with left offset
     </h3>
     <div
-      v-for="(combo, index) in sizeCombos"
+      v-for="([offset, width], index) in offsetCombos"
       :key="`ml-${index}`"
       class="txt-s grid mb18"
     >
-      <div
-        v-for="(cell, cellIndex) in combo"
-        :key="cellIndex"
-        :class="`col ${cellIndex === 1 ? 'ml' : 'w'}${cell}`"
-      >
-        <div v-if="cellIndex !== 1" class="border px3 py3">w{{ cell }}</div>
-      </div>
-    </div>
-    <h3 class="mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s">
-      Grid with right offset
-    </h3>
-    <div
-      v-for="(combo, index) in sizeCombos"
-      :key="`mr-${index}`"
-      class="txt-s grid mb18"
-    >
-      <div
-        v-for="(cell, cellIndex) in combo"
-        :key="cellIndex"
-        :class="`col ${cellIndex === 1 ? 'mr' : 'w'}${cell}`"
-      >
-        <div v-if="cellIndex !== 1" class="border px3 py3">w{{ cell }}</div>
+      <div :class="`col ml${offset} w${width}`">
+        <div class="border px3 py3">ml{{ offset }} w{{ width }}</div>
       </div>
     </div>
     <h3 class="mb12 mt60 txt-m txt-bold color-darken50 txt-uppercase txt-s">

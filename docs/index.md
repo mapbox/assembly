@@ -223,7 +223,7 @@ export default defineConfig({
   <div>
     <h3 class="txt-bold">Focus outlines as needed</h3>
     <p class="mt12">
-      Assembly turns off focus outlines when you mousedown and turns them back on, universally, when you hit <kbd class="txt-kbd">Tab</kbd>. This means that only the keyboard users who need them will see nice, prominent focus outlines, while mouse users won't have the design disturbed unnecessarily.
+      Assembly uses <code class="txt-code">:focus-visible</code> to draw a prominent focus outline when you navigate with <kbd class="txt-kbd">Tab</kbd>. Mouse users won't have the design disturbed unnecessarily, and text inputs and textareas show focus with a darker border instead.
     </p>
   </div>
 </div>
@@ -235,7 +235,7 @@ export default defineConfig({
 
 <h3 class="mt60 mb12 txt-bold">Focus state</h3>
 <p class="mb24">
-  <code class="txt-code">assembly.js</code> adds event listeners that show and hide focus states depending on whether the user is navigating with a keyboard or with a pointer device. If focus state is on, an outline appears around focused elements. If focus state is off, no outline appears. The Javascript API allows you to programmatically override this focus state.
+  Browsers show an outline on a select when it's clicked, as well as when it's reached with <kbd class="txt-kbd">Tab</kbd>. <code class="txt-code">assembly.js</code> adds event listeners that track whether the user is navigating with a keyboard or with a pointer device, and only outlines a focused select when focus state is on. The Javascript API allows you to programmatically override this focus state.
 </p>
 <h3 class="mb12 mt24 txt-bold">
   <code class="txt-code">Assembly.setFocusState(enable?: boolean): void</code>

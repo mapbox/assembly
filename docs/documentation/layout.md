@@ -4,16 +4,16 @@ Define the size, shape, and content flow of your markup.
 
 ## Grid
 
-Assembly uses a 12-column flexible grid with optional gutters.
+Assembly uses a 12-column CSS Grid with optional gutters.
 
 ```selectors
 .grid
 .col
 ```
 
-Grids require at minimum two elements: A parent with the class `grid` and a child with the class `col`. To define the width of `col` in a grid, add a width class, `col--auto`, or both. The `grid` class includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+Grids require at minimum two elements: A parent with the class `grid` and a child with the class `col`. A `col` spans the full row unless you add a `w-1/12` to `w-11/12` fraction class, which sets how many of the 12 columns it spans. Offset a `col` that has a width class with an [`ml-1/12` to `ml-11/12`](#margins) fraction class; other left and right margins on `col` are ignored inside a grid. The `grid` class includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
-To avoid unexpected side-effects, do not add margin left or right to `grid` and do not add padding left or right to `col`.
+Align columns with the `flex--*-cross` [flexbox](#flexbox) classes.
 
 ```example
 <div class='grid'>
@@ -23,18 +23,10 @@ To avoid unexpected side-effects, do not add margin left or right to `grid` and 
 </div>
 ```
 
-```selectors
-.col--auto
-```
-
-Apply to a `col` element to override a `col--{size}` rule and take on default `col`, occupying equal space with other `col` siblings.
-This class is designed to be used with `*-mm`, `*-ml`, and `*-mxl` variations
-to target screen sizes.
-
 ```example
 <div class='grid'>
-  <div class='col w-1/4 col--auto-ml border border--darken10'>w-1/4 col--auto-ml</div>
-  <div class='col w-3/4 col--auto-ml border border--darken10'>w-3/4 col--auto-ml</div>
+  <div class='col w-1/4-ml border border--darken10'>w-1/4-ml</div>
+  <div class='col w-3/4-ml border border--darken10'>w-3/4-ml</div>
 </div>
 ```
 
@@ -51,19 +43,14 @@ to target screen sizes.
 .grid--gut120
 ```
 
-Apply column gutters to all columns in a grid by adding a `grid--gut{size}` modifier to the `grid` element. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+Apply column gutters to all columns in a grid by adding a `grid--gut{size}` modifier to the `grid` element. For space between rows, add a [`gapy{size}`](#gap) class. Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
 
 ```example
-<div class='grid grid--gut12'>
-  <div class='col w-1/6'>
-    <div class='border border--darken10'>w-1/6</div>
-  </div>
-  <div class='col w-1/3'>
-    <div class='border border--darken10'>w-1/3</div>
-  </div>
-  <div class='col w-1/2'>
-    <div class='border border--darken10'>w-1/2</div>
-  </div>
+<div class='grid grid--gut12 gapy12'>
+  <div class='col w-1/6 border border--darken10'>w-1/6</div>
+  <div class='col w-1/3 border border--darken10'>w-1/3</div>
+  <div class='col w-1/2 border border--darken10'>w-1/2</div>
+  <div class='col border border--darken10'>col</div>
 </div>
 ```
 
@@ -223,11 +210,12 @@ Apply margin on the right.
 .mr-11/12
 ```
 
-Apply percentage-based margin on the right. When using with `col`, add a width class, `col--auto`, or both to define the size of the element.
+Apply percentage-based margin on the right.
 
 ```example
-<div class='grid'>
-  <div class='col w-1/2 mr-1/2 bg-darken10'>mr-1/2</div>
+<div class='flex'>
+  <div class='w-1/4 mr-1/2 bg-darken10'>mr-1/2</div>
+  <div class='w-1/4 bg-darken10'>w-1/4</div>
 </div>
 ```
 
@@ -267,7 +255,7 @@ Apply margin on the left.
 .ml-11/12
 ```
 
-Apply percentage-based margin on the left. When using with `col`, add a width class, `col--auto`, or both to define the size of the element.
+Apply percentage-based margin on the left. Inside a `grid`, these offset a `col` by the same fraction of the 12 columns; pair them with a `w-*` fraction class.
 
 ```example
 <div class='grid'>
@@ -338,6 +326,52 @@ Apply padding on the left.
 
 ```example
 <div class='pl24 bg-darken10'>pl24</div>
+```
+
+## Gap
+
+Gap utilities fit `gap{size}`, `gapx{size}`, and `gapy{size}` on the padding scale.
+Class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+Use with `flex`, `inline-flex`, or `grid`.
+
+```selectors
+.gap{gap}
+```
+
+Apply `gap` on both axes.
+
+```example
+<div class='flex flex--wrap gap12'>
+  <div class='bg-darken10 px6'>a</div>
+  <div class='bg-darken10 px6'>b</div>
+  <div class='bg-darken10 px6'>c</div>
+</div>
+```
+
+```selectors
+.gapx{gap}
+```
+
+Apply `column-gap` (horizontal gap).
+
+```example
+<div class='flex gapx12'>
+  <div class='bg-darken10 px6'>a</div>
+  <div class='bg-darken10 px6'>b</div>
+</div>
+```
+
+```selectors
+.gapy{gap}
+```
+
+Apply `row-gap` (vertical gap).
+
+```example
+<div class='flex flex--column gapy12'>
+  <div class='bg-darken10 px6'>a</div>
+  <div class='bg-darken10 px6'>b</div>
+</div>
 ```
 
 ## Sizing
@@ -675,6 +709,32 @@ and last child is at the end.
 ```
 
 ```selectors
+.flex--space-around-main
+```
+
+Distribute children with equal space around each item on the main axis.
+
+```example
+<div class='flex flex--space-around-main bg-darken10'>
+ <div class='bg-darken10'>child</div>
+ <div class='bg-darken10'>child</div>
+</div>
+```
+
+```selectors
+.flex--space-evenly-main
+```
+
+Distribute children with equal space between and around items on the main axis.
+
+```example
+<div class='flex flex--space-evenly-main bg-darken10'>
+ <div class='bg-darken10'>child</div>
+ <div class='bg-darken10'>child</div>
+</div>
+```
+
+```selectors
 .flex-child-grow
 ```
 
@@ -706,6 +766,69 @@ This class prevents that default shrinkage, forcing siblings to accommodate the 
  <div class='border w120'>child</div>
  <div class='border w120'>child</div>
 </div>
+```
+
+## Aspect ratio
+
+Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+
+```selectors
+.aspect-auto
+.aspect-1/1
+.aspect-4/3
+.aspect-3/2
+.aspect-16/9
+.aspect-21/9
+.aspect-3/4
+.aspect-9/16
+```
+
+Set `aspect-ratio`. `aspect-auto` resets it.
+
+```example
+<div class='aspect-16/9 w-full bg-darken10'>aspect-16/9</div>
+```
+
+## Object fit
+
+```selectors
+.object-contain
+.object-cover
+.object-fill
+.object-none
+.object-scale-down
+```
+
+Set `object-fit` on replaced elements such as `img` and `video`.
+Class set includes `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+
+```example
+<div class='w120 h60 bg-blue object-cover'>object-cover</div>
+```
+
+## Transforms
+
+Transform utilities use the individual `rotate` and `scale` properties so they compose.
+Class sets include `*-mm`, `*-ml`, and `*-mxl` variations to target screen sizes.
+
+```selectors
+.rotate{rotate}
+```
+
+Rotate an element. Combines with `scale*`.
+
+```example
+<div class='rotate45 bg-blue w60 h60'></div>
+```
+
+```selectors
+.scale{scale}
+```
+
+Scale an element. `scale100` is `1`. Combines with `rotate*`.
+
+```example
+<div class='scale50 bg-blue w60 h60'></div>
 ```
 
 ## Layout utils
