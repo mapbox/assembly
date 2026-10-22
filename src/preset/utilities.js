@@ -280,6 +280,7 @@ const UTILITY_RULES = [
   ['txt-capitalize-first', { 'text-transform': 'lowercase !important' }],
   ['txt-underline', { 'text-decoration': 'underline !important' }],
   ['txt-nowrap', { 'white-space': 'nowrap !important' }],
+  ['txt-wrap', { 'white-space': 'normal !important' }],
   ['txt-break-word', { 'overflow-wrap': 'anywhere !important' }],
   [
     'txt-truncate',

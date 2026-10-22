@@ -446,6 +446,38 @@ Change the group background color by adding a `bg-{color}` class to the `toggle-
 </div>
 ```
 
+Long labels widen the whole group. To fit a group to its container, add `wmax-full` to the `toggle-group` and `wmin0` to each `toggle-container`, then either:
+
+- **Truncate:** add `txt-truncate align-center py3` to each `toggle`.
+- **Wrap:** add `flex` to each `toggle-container` and `flex-child-grow txt-wrap align-center h-auto hmin24 py3` to each `toggle`. Use `hmin18` with `toggle--s` or `hmin36` with `toggle--l`.
+
+```example
+<div class='w240 mb12'>
+  <div class='toggle-group wmax-full'>
+    <label class='toggle-container wmin0'>
+      <input checked name='toggle-truncate' type='radio' />
+      <div class='toggle txt-truncate align-center py3'>The quick brown fox jumped over the lazy dog</div>
+    </label>
+    <label class='toggle-container wmin0'>
+      <input name='toggle-truncate' type='radio' />
+      <div class='toggle txt-truncate align-center py3'>dog</div>
+    </label>
+  </div>
+</div>
+<div class='w240'>
+  <div class='toggle-group wmax-full'>
+    <label class='toggle-container flex wmin0'>
+      <input checked name='toggle-wrap' type='radio' />
+      <div class='toggle flex-child-grow txt-wrap align-center h-auto hmin24 py3'>The quick brown fox jumped over the lazy dog</div>
+    </label>
+    <label class='toggle-container flex wmin0'>
+      <input name='toggle-wrap' type='radio' />
+      <div class='toggle flex-child-grow txt-wrap align-center h-auto hmin24 py3'>dog</div>
+    </label>
+  </div>
+</div>
+```
+
 ```selectors
 .toggle--s
 .toggle--l

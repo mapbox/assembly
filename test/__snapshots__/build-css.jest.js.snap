@@ -1224,6 +1224,7 @@ textarea{
 .txt-capitalize{text-transform:capitalize !important;}
 .txt-underline{text-decoration:underline !important;}
 .txt-nowrap{white-space:nowrap !important;}
+.txt-wrap{white-space:normal !important;}
 .txt-break-word{overflow-wrap:anywhere !important;}
 .txt-truncate{display:block;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
 .txt-spacing05{letter-spacing:0.05em !important;}
@@ -5986,6 +5987,7 @@ textarea{
 .txt-capitalize{text-transform:capitalize !important;}
 .txt-underline{text-decoration:underline !important;}
 .txt-nowrap{white-space:nowrap !important;}
+.txt-wrap{white-space:normal !important;}
 .txt-break-word{overflow-wrap:anywhere !important;}
 .txt-truncate{display:block;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
 .txt-spacing05{letter-spacing:0.05em !important;}

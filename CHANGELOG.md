@@ -10,6 +10,7 @@
 - [add] `aspect-{ratio}` / `aspect-auto`, `object-{contain,cover,fill,none,scale-down}`, `flex--space-around-main` / `flex--space-evenly-main`, and transform utilities (`rotate{deg}`, `scale{percent}`).
 - [breaking] `txt-break-word` uses `overflow-wrap: anywhere`, so words break only when they would overflow, instead of `word-break: break-all`.
 - [add] `animation-shimmer`, `visible-on-parent-hover`, `bg-canvas`, and `bg-canvas--dark`.
+- [add] `txt-wrap` to undo `white-space: nowrap`, such as on a `toggle`.
 - [breaking] Restyle `.switch` and `.switch--l` to match input heights, with a borderless track and a white thumb.
 - [add] `switch--s` for an 18px-tall switch.
 - [breaking] Remove `switch--s-label`. Switches now center on their label.
