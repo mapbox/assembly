@@ -299,6 +299,18 @@ Prevent text from wrapping.
 ```
 
 ```selectors
+.txt-wrap
+```
+
+Allow text to wrap, overriding `white-space: nowrap` set by a component or `txt-nowrap`.
+
+```example
+<div class='border border--gray w60 txt-nowrap'>
+  <span class='txt-wrap'>This text wraps inside its container</span>
+</div>
+```
+
+```selectors
 .txt-break-word
 ```
 

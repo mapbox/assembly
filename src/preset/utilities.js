@@ -156,18 +156,26 @@ const UTILITY_RULES = [
   ['switch--s', { width: '30px', height: '18px' }],
   [
     'toggle-group',
-    { display: 'inline-flex', 'text-align': 'center', 'border-radius': '18px' }
+    {
+      display: 'inline-flex',
+      'background-color': 'var(--gray-faint)',
+      'border-radius': 'var(--border-radius)'
+    }
   ],
-  ['toggle-container', { 'max-width': '100%' }],
   [
     'toggle',
     {
-      'flex-shrink': '0',
+      display: 'flex',
+      'align-items': 'center',
+      'justify-content': 'center',
+      height: '24px',
+      padding: '0 18px',
       cursor: 'pointer',
-      color: 'var(--gray)',
+      color: 'var(--gray-deep)',
       'font-size': 'var(--font-size-s)',
-      padding: '3px 18px',
-      'border-radius': '15px',
+      'line-height': 'var(--line-height-s)',
+      'white-space': 'nowrap',
+      'border-radius': 'var(--border-radius)',
       'background-color': 'var(--transparent)',
       transition:
         'color var(--transition),\n    background-color var(--transition)'
@@ -176,9 +184,19 @@ const UTILITY_RULES = [
   [
     'toggle--s',
     {
+      height: '18px',
+      padding: '0 12px',
       'font-size': 'var(--font-size-xs)',
-      'line-height': 'var(--line-height-s)',
-      padding: '0 12px'
+      'line-height': 'var(--line-height-xs)'
+    }
+  ],
+  [
+    'toggle--l',
+    {
+      height: '36px',
+      padding: '0 24px',
+      'font-size': 'var(--font-size-m)',
+      'line-height': 'var(--line-height-m)'
     }
   ],
   ['txt-mono', { 'font-family': 'var(--font-stack-mono)', 'font-size': '90%' }],
@@ -260,6 +278,7 @@ const UTILITY_RULES = [
   ['txt-capitalize-first', { 'text-transform': 'lowercase !important' }],
   ['txt-underline', { 'text-decoration': 'underline !important' }],
   ['txt-nowrap', { 'white-space': 'nowrap !important' }],
+  ['txt-wrap', { 'white-space': 'normal !important' }],
   ['txt-break-word', { 'overflow-wrap': 'anywhere !important' }],
   [
     'txt-truncate',

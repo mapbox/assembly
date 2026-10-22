@@ -10,10 +10,13 @@
 - [add] `aspect-{ratio}` / `aspect-auto`, `object-{contain,cover,fill,none,scale-down}`, `flex--space-around-main` / `flex--space-evenly-main`, and transform utilities (`rotate{deg}`, `scale{percent}`).
 - [breaking] `txt-break-word` uses `overflow-wrap: anywhere`, so words break only when they would overflow, instead of `word-break: break-all`.
 - [add] `animation-shimmer`, `visible-on-parent-hover`, `bg-canvas`, and `bg-canvas--dark`.
+- [add] `txt-wrap` to undo `white-space: nowrap`, such as on a `toggle`.
 - [breaking] Restyle `.switch` and `.switch--l` to match input heights, with a borderless track and a white thumb.
 - [add] `switch--s` for an 18px-tall switch.
 - [breaking] Remove `switch--s-label`. Switches now center on their label.
 - [add] Respect `prefers-reduced-motion: reduce` by making transitions instant.
+- [style change] Toggle groups are restyled as segmented controls. `toggle` is now 24px tall, and its label no longer wraps.
+- [add] `toggle--l` (36px).
 - [breaking] Focus states use `:focus-visible` with a `--focus-outline` outline, replacing `--focus-shadow`. `assembly.js` focus control only affects selects.
 - [internal] Assembly utilities are UnoCSS rules in `src/preset/`. Reset and component CSS live in `src/preset/base.css`. The package build is `src/build-*.js`. The documentation site is VitePress under `docs/`.
 - [add] `building`, `clip`, `truck` icons

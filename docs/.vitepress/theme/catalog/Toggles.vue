@@ -9,19 +9,18 @@ const colors = [null].concat(formColors.filter(color => !isLight(color)));
 const lightenColors = formColors.filter(isLight);
 const animals = ['cow', 'horse', 'pig'];
 
-function toggleClass(color, activeColor) {
+function toggleClass(color, activeColor, size) {
   return [
     'toggle',
     color ? `toggle--${color}` : '',
-    activeColor ? `toggle--active-${activeColor}` : ''
+    activeColor ? `toggle--active-${activeColor}` : '',
+    size ? `toggle--${size}` : ''
   ]
     .filter(Boolean)
     .join(' ');
 }
 
-function groupClass(small) {
-  return small ? 'mb12 mr12 toggle-group toggle-group--s txt-s' : 'mb12 mr12 toggle-group';
-}
+const groupClass = 'mb12 mr12 toggle-group';
 
 function groupName(prefix, color, extra) {
   return `${prefix}-${color || 'default'}-${extra || 'on'}`;
@@ -41,7 +40,7 @@ function groupName(prefix, color, extra) {
         <div
           v-for="color in colors"
           :key="`a-${active}-${color}`"
-          :class="groupClass(false)"
+          :class="groupClass"
         >
           <label v-for="(label, index) in animals" :key="label" class="toggle-container">
             <input
@@ -57,7 +56,7 @@ function groupName(prefix, color, extra) {
     </div>
     <div class="mb12 txt-bold color-darken50 txt-uppercase txt-s">Disabled</div>
     <div class="mb24">
-      <div v-for="color in colors" :key="`d-${color}`" :class="groupClass(false)">
+      <div v-for="color in colors" :key="`d-${color}`" :class="groupClass">
         <label v-for="(label, index) in animals" :key="label" class="toggle-container">
           <input
             disabled
@@ -69,10 +68,22 @@ function groupName(prefix, color, extra) {
           <div :class="toggleClass(color)">{{ label }}</div>
         </label>
       </div>
+      <div :class="groupClass">
+        <label v-for="(label, index) in animals" :key="label" class="toggle-container">
+          <input
+            disabled
+            :name="groupName('disabled', 'active', 'blue')"
+            :value="label"
+            :checked="index === 1"
+            type="radio"
+          />
+          <div :class="toggleClass(null, 'blue')">{{ label }}</div>
+        </label>
+      </div>
     </div>
     <div class="mb12 txt-bold color-darken50 txt-uppercase txt-s">Small</div>
     <div class="mb24">
-      <div v-for="color in colors" :key="`s-${color}`" :class="groupClass(true)">
+      <div v-for="color in colors" :key="`s-${color}`" :class="groupClass">
         <label v-for="(label, index) in animals" :key="label" class="toggle-container">
           <input
             :name="groupName('small', color)"
@@ -80,13 +91,27 @@ function groupName(prefix, color, extra) {
             :checked="index === 1"
             type="radio"
           />
-          <div :class="toggleClass(color)">{{ label }}</div>
+          <div :class="toggleClass(color, null, 's')">{{ label }}</div>
+        </label>
+      </div>
+    </div>
+    <div class="mb12 txt-bold color-darken50 txt-uppercase txt-s">Large</div>
+    <div class="mb24">
+      <div v-for="color in colors" :key="`lg-${color}`" :class="groupClass">
+        <label v-for="(label, index) in animals" :key="label" class="toggle-container">
+          <input
+            :name="groupName('large', color)"
+            :value="label"
+            :checked="index === 1"
+            type="radio"
+          />
+          <div :class="toggleClass(color, null, 'l')">{{ label }}</div>
         </label>
       </div>
     </div>
     <div class="mb12 txt-bold color-darken50 txt-uppercase txt-s">Light variations</div>
     <div class="bg-gray round px12 py12 mt12">
-      <div v-for="color in lightenColors" :key="`l-${color}`" :class="groupClass(false)">
+      <div v-for="color in lightenColors" :key="`l-${color}`" :class="groupClass">
         <label v-for="(label, index) in animals" :key="label" class="toggle-container">
           <input
             :name="groupName('light', color)"
@@ -102,7 +127,7 @@ function groupName(prefix, color, extra) {
       Disabled and light
     </div>
     <div class="bg-gray round px12 py12 mt12">
-      <div v-for="color in lightenColors" :key="`ld-${color}`" :class="groupClass(false)">
+      <div v-for="color in lightenColors" :key="`ld-${color}`" :class="groupClass">
         <label v-for="(label, index) in animals" :key="label" class="toggle-container">
           <input
             disabled
