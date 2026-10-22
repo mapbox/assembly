@@ -302,7 +302,7 @@ Prevent text from wrapping.
 .txt-break-word
 ```
 
-Allow words to break across lines.
+Break a word across lines only when it would overflow its container.
 
 ```example
 <div class='border border--gray w60 txt-break-word'>

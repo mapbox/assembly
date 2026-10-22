@@ -81,11 +81,8 @@ function colorRules(config) {
         { 'box-shadow': `inset 0 0 0 1px var(--${color})` }
       ],
       [
-        s =>
-          `[data-assembly-focus-control='visible'] .select--stroke${s}:focus`,
-        {
-          'box-shadow': `inset 0 0 0 1px var(--${darkerShade}), var(--focus-shadow)`
-        }
+        s => `.select--stroke${s}:focus`,
+        { 'box-shadow': `inset 0 0 0 1px var(--${darkerShade})` }
       ]
     ]);
   });

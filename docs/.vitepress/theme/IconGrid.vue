@@ -7,7 +7,7 @@ import { data as icons } from './icons.data.js';
     <div
       v-for="icon in icons"
       :key="icon"
-      class="w-1/4 w-1/6-ml w-1/12-mxl mb12 py12 px3 flex flex--column flex--center-cross"
+      class="col w-1/4 w-1/6-ml w-1/12-mxl mb12 py12 px3 flex flex--column flex--center-cross"
     >
       <svg class="icon h18 w18">
         <use :xlink:href="`#icon-${icon}`" />
