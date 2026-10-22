@@ -2,7 +2,11 @@
 
 const fs = require('fs');
 const path = require('path');
-const { mediaVariant } = require('./preset/variants');
+const {
+  mediaVariant,
+  darkVariant,
+  darkBaseClassRule
+} = require('./preset/variants');
 const { layoutScaleRules } = require('./preset/layout-scales');
 const { colorRules } = require('./preset/colors');
 const { utilityRules } = require('./preset/utilities');
@@ -45,6 +49,10 @@ function presetAssembly(options) {
   const colors = colorRules(opts.colorVariants);
   const extraFiles = opts.files || [];
   const includeSafelist = opts.safelist === true;
+  const baseCss = fs.readFileSync(
+    path.join(__dirname, 'preset/base.css'),
+    'utf8'
+  );
 
   const safelist = includeSafelist
     ? utilities.tokens
@@ -62,13 +70,15 @@ function presetAssembly(options) {
       colors: 10,
       user: 20
     },
-    variants: [mediaVariant()],
-    rules: utilities.rules.concat(scales.rules).concat(colors.rules),
+    variants: [mediaVariant(), darkVariant()],
+    rules: utilities.rules
+      .concat(scales.rules)
+      .concat(colors.rules)
+      .concat([darkBaseClassRule(baseCss)]),
     preflights: [
       {
         layer: 'preflights',
-        getCSS: () =>
-          fs.readFileSync(path.join(__dirname, 'preset/base.css'), 'utf8')
+        getCSS: () => baseCss
       },
       {
         layer: 'colors',

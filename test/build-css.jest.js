@@ -120,6 +120,7 @@ describe('buildCss', () => {
     expect(mediaParamsForSelector(stripped, '.flex-mm')).toEqual([
       'screen and (min-width: 640px)'
     ]);
+    expect(stripped).not.toContain('dark\\:');
     expect(stripped).toMatchSnapshot();
     await cleanup(tmp);
   });

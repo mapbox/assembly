@@ -1,6 +1,33 @@
 'use strict';
 
-const MEDIA_ORDER = { m: 1, l: 2, xl: 3 };
+const { indexBaseClasses, baseClassEntries } = require('./base-classes');
+
+const BREAKPOINT_ORDER = { m: 1, l: 2, xl: 3 };
+// Larger than any breakpoint sum so every dark block follows the light ones.
+const DARK_ORDER = 10;
+const DARK_QUERY = '(prefers-color-scheme: dark)';
+const DARK_PREFIX = 'dark:';
+const BASE_CLASS_PREFIX = '$base:';
+
+// Stacked variants narrow an earlier media query instead of replacing it.
+function mergeMediaQuery(query, order) {
+  return (input, next) => {
+    if (!input.parent) {
+      return next(
+        Object.assign({}, input, {
+          parent: `@media ${query}`,
+          parentOrder: order
+        })
+      );
+    }
+    return next(
+      Object.assign({}, input, {
+        parent: input.parent.replace(/^@media /, `@media ${query} and `),
+        parentOrder: (input.parentOrder || 0) + order
+      })
+    );
+  };
+}
 
 function mediaVariant() {
   return {
@@ -10,10 +37,41 @@ function mediaVariant() {
       if (!found) return;
       return {
         matcher: found[1],
-        parent: [`@media (--${found[2]}-screen)`, MEDIA_ORDER[found[2]]]
+        handle: mergeMediaQuery(
+          `(--${found[2]}-screen)`,
+          BREAKPOINT_ORDER[found[2]]
+        )
       };
     }
   };
 }
 
-module.exports = { mediaVariant };
+// The `$base:` matcher lets `darkBaseClassRule` handle classes from base.css.
+function darkVariant() {
+  const handle = mergeMediaQuery(DARK_QUERY, DARK_ORDER);
+  return {
+    name: 'assembly-dark',
+    match(matcher) {
+      if (!matcher.startsWith(DARK_PREFIX)) return;
+      const name = matcher.slice(DARK_PREFIX.length);
+      return [
+        { matcher: name, handle, dark: true },
+        { matcher: BASE_CLASS_PREFIX + name, handle, dark: true }
+      ];
+    }
+  };
+}
+
+function darkBaseClassRule(baseCss) {
+  const index = indexBaseClasses(baseCss);
+  return [
+    /^\$base:(.+)$/,
+    ([, name], { symbols, variantHandlers }) => {
+      if (!variantHandlers.some(handler => handler.dark)) return;
+      return baseClassEntries(index, name, symbols);
+    },
+    { layer: 'preflights' }
+  ];
+}
+
+module.exports = { mediaVariant, darkVariant, darkBaseClassRule };
