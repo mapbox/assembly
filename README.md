@@ -4,7 +4,7 @@
 
 A CSS framework that makes the hard parts of building anything on the web easy. We define the hard parts as: managing class specificity, designing cross-browser form components that work well with each other, creating a harmonious typographic scale, maintaining a baseline grid, and keeping responsive designs simple.
 
-For usage guidelines and documentation, check out https://labs.mapbox.com/assembly/.
+For usage guidelines and documentation, check out https://mapbox.github.io/assembly/.
 
 ## Browser support
 
@@ -12,7 +12,7 @@ Assembly targets modern versions of Chrome, Firefox, Safari, and Edge on desktop
 
 ## Usage
 
-See https://labs.mapbox.com/assembly/ for usage guidelines.
+See https://mapbox.github.io/assembly/ for usage guidelines.
 
 ## Migration
 
@@ -164,12 +164,12 @@ Examples:
 - `feat: add building, clip, and truck icons` -> minor
 - `feat!: rename color variables` (requires consumer changes; add a [migration guide](./MIGRATION_GUIDES.md)) -> major
 
-The workflow publishes via [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC), so no npm token is needed. The trusted publisher for `@mapbox/assembly` is configured on npm for workflow `npm-release.yml` and environment `npm-release`, and the `npm-release` GitHub Environment already exists in this repository; keep the workflow filename and environment name unchanged. After publishing, the workflow uploads the new version's assets to the CDN (`https://api.mapbox.com/mapbox-assembly/v{version}/`), creates a [GitHub Release](https://github.com/mapbox/assembly/releases) with generated notes, and comments the released version on the merged PRs.
+The workflow publishes via [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC), so no npm token is needed. The trusted publisher for `@mapbox/assembly` is configured on npm for workflow `npm-release.yml` and environment `npm-release`, and the `npm-release` GitHub Environment already exists in this repository; keep the workflow filename and environment name unchanged. After publishing, the workflow adds the new version's assets to the CDN (`https://mapbox.github.io/assembly/v{version}/`, served by GitHub Pages from the `gh-pages` branch; versions up to 1.17.0 remain at `https://api.mapbox.com/mapbox-assembly/v{version}/`), creates a [GitHub Release](https://github.com/mapbox/assembly/releases) with generated notes, and comments the released version on the merged PRs.
 
-Every push to `main` also deploys the docs site, including docs-only changes that don't release a new version: first to labs staging, then to https://labs.mapbox.com/assembly/.
+Each release also deploys the docs site to https://mapbox.github.io/assembly/ (the `gh-pages` branch), so it always matches the latest published version. Version folders on that branch are never replaced or removed.
 
 `package.json`'s `version` may be incremented manually if needed (for example, to skip a minor version), but you shouldn't normally need to touch it; the published npm version, not `package.json`, is the source of truth for what gets released next.
 
 #### Pre-release versions on other branches
 
-For testing in downstream projects or previewing the docs, you can manually trigger the "NPM release" workflow on a branch. It publishes a pre-release tagged with the short commit sha (e.g. `1.17.0-aa79c6a`) under the npm `prerelease` dist-tag, without affecting `latest`, uploads its assets to the CDN, and deploys the docs site to labs staging only. Check the workflow results for the published version. The next push to `main` deploys labs staging again.
+For testing in downstream projects or previewing the docs, you can manually trigger the "NPM release" workflow on a branch. It publishes a pre-release tagged with the short commit sha (e.g. `1.17.1-aa79c6a` when `1.17.0` is the latest release) under the npm `prerelease` dist-tag, without affecting `latest`, without adding its assets to the CDN or deploying the docs site. Check the workflow results for the published version.

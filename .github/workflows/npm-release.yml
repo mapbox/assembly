@@ -1,12 +1,9 @@
 name: NPM release
 
-# Every push to main:
-#   - publishes a new npm version when commits warrant one (Conventional Commits), uploads its
-#     assets to the CDN (api.mapbox.com/mapbox-assembly/v<version>/), and creates a GitHub release;
-#   - builds the docs site against the current version and deploys it to labs staging and
-#     production (https://labs.mapbox.com/assembly/), including docs-only changes.
-# A manual run on another branch publishes a `<version>-<sha>` prerelease and stages the docs
-# site on labs staging only.
+# Every push to main publishes a new npm version when commits warrant one (Conventional
+# Commits), adds its assets to the CDN (https://mapbox.github.io/assembly/v<version>/), deploys
+# the docs site built against it (https://mapbox.github.io/assembly/), and creates a GitHub
+# release. A manual run on another branch publishes a `<next patch>-<sha>` prerelease to npm only.
 on:
   push:
     branches: ['main']
@@ -18,7 +15,6 @@ concurrency:
 
 env:
   CI: true
-  bucket: '{ "staging": "labs.mapbox.com-staging/assembly", "production": "labs.mapbox.com/assembly" }'
 
 permissions:
   id-token: write
@@ -54,56 +50,56 @@ jobs:
 
       # Reads the current version from public npmjs and git history
       - id: version
-        uses: mapbox/gha@action-conventional-commit-version-v0
+        uses: mapbox/gha-public/action-conventional-commit-version@main
         with:
           before-sha: ${{ github.event.before }}
           after-sha: ${{ github.event.after }}
 
-      # The docs site links to the CDN assets by package.json's version, which CI never commits
-      # back, so set it to the version being released (or the latest published one) first.
-      - id: site-version
-        name: Set package version
-        env:
-          SKIP: ${{ steps.version.outputs.skip }}
-          VERSION: ${{ steps.version.outputs.version }}
-        run: |
-          if [ "$SKIP" = "true" ]; then
-            VERSION="$(npm view @mapbox/assembly version)"
-          fi
-          npm version "$VERSION" --no-git-tag-version --allow-same-version
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-
-      - name: Build docs site
-        run: npm run build:site
+      # Set before building the docs site, which links to the CDN assets by package.json's version
+      - name: Set package version
+        if: steps.version.outputs.skip != 'true'
+        run: npm version ${{ steps.version.outputs.version }} --no-git-tag-version --allow-same-version
 
       - name: Publish
         if: steps.version.outputs.skip != 'true'
         run: npm publish --tag ${{ steps.version.outputs.npm_publish_tag }}
 
-      - name: Configure AWS credentials
-        uses: mapbox/gha@action-configure-aws-credentials-v5
-        with:
-          target-account-id: ${{ vars.AWS_ACCOUNT_ID_DEFAULT }}
-          role-to-assume: assembly-s3
+      - name: Build docs site
+        if: steps.version.outputs.skip != 'true' && steps.version.outputs.npm_publish_tag == 'latest'
+        run: npm run build:site
 
-      - name: Upload assets to the CDN
-        if: steps.version.outputs.skip != 'true'
+      # GitHub Pages serves the gh-pages branch at https://mapbox.github.io/assembly/. Each release
+      # adds its assets in v<version>/, which are never replaced or removed, and replaces the docs
+      # site around them.
+      - name: Deploy docs site and CDN assets to GitHub Pages
+        if: steps.version.outputs.skip != 'true' && steps.version.outputs.npm_publish_tag == 'latest'
         env:
-          VERSION: ${{ steps.site-version.outputs.version }}
-        run: >-
-          aws s3 cp dist "s3://mapbox-assembly/v$VERSION" --recursive
-          --exclude "*" --include "assembly*" --acl public-read
-
-      - name: Deploy docs site to staging
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
         run: |
-          aws s3 sync _site "s3://${{ fromJson(env.bucket).staging }}" --exclude "*.html" --cache-control "max-age=120"
-          aws s3 sync _site "s3://${{ fromJson(env.bucket).staging }}" --exclude "*" --include "*.html" --cache-control "max-age=0"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy docs site to production
-        if: github.ref_name == 'main'
-        run: |
-          aws s3 sync _site "s3://${{ fromJson(env.bucket).production }}" --exclude "*.html" --cache-control "max-age=120"
-          aws s3 sync _site "s3://${{ fromJson(env.bucket).production }}" --exclude "*" --include "*.html" --cache-control "max-age=0"
+          worktree=$(mktemp -d)
+          if git fetch origin gh-pages --depth=1; then
+            git worktree add "$worktree" FETCH_HEAD
+          else
+            git worktree add --orphan -b gh-pages "$worktree"
+          fi
+
+          rsync -a --delete --exclude=.git --exclude='/v[0-9]*/' _site/ "$worktree/"
+          mkdir -p "$worktree/v$VERSION"
+          cp dist/assembly* "$worktree/v$VERSION/"
+          touch "$worktree/.nojekyll"
+
+          cd "$worktree"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to deploy."
+          else
+            git commit -m "Deploy docs site and assets for v$VERSION"
+            git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:gh-pages
+          fi
 
       - id: release
         name: Create GitHub Release
