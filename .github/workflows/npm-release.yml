@@ -1,64 +1,127 @@
 name: NPM release
 
+# Every push to main publishes a new npm version when commits warrant one (Conventional
+# Commits), adds its assets to the CDN (https://mapbox.github.io/assembly/v<version>/), deploys
+# the docs site built against it (https://mapbox.github.io/assembly/), and creates a GitHub
+# release. A manual run on another branch publishes a `<next patch>-<sha>` prerelease to npm only.
 on:
   push:
-    tags:
-      - '*'
+    branches: ['main']
+  workflow_dispatch: {}
+
+concurrency:
+  group: npm-release-${{ github.ref_name }}
+  cancel-in-progress: false
 
 env:
   CI: true
 
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+
 jobs:
   publish:
-    name: "Publish ${{ github.ref_name }}"
+    name: 'Publish ${{ github.ref_name }}'
     runs-on: ubuntu-latest
+    # npm's Trusted Publisher config for @mapbox/assembly is bound to this workflow file and environment.
     environment: npm-release
-    permissions:
-      id-token: write
-      contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
+          persist-credentials: false
 
-      - name: Extract package version from package.json
-        run: |
-          packageVersion=$(jq -r .version package.json)
-          echo "versionTag=v$packageVersion" >> "$GITHUB_ENV"
-
-      - name: Verify tag matches package.json version
-        if: ${{ github.ref_name != env.versionTag }}
-        run: |
-          echo "Tag ${{ github.ref_name }} does not match package.json version (expected ${{ env.versionTag }})."
-          exit 1
-
-      - name: Enforce publisher-production branch for production releases
-        # Dev releases (any prerelease version, e.g. 1.16.1-dev.0) can be cut
-        # from any branch; production releases are always cut from
-        # publisher-production.
-        if: ${{ !contains(github.ref_name, '-') }}
-        run: |
-          git fetch origin publisher-production --depth=1
-          if ! git merge-base --is-ancestor ${{ github.sha }} origin/publisher-production; then
-            echo "Production releases must be tagged from a commit on publisher-production."
-            exit 1
-          fi
-
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
           cache: npm
 
+      - name: Upgrade npm for OIDC trusted publishing support
+        run: npm install -g npm@^11.5.1
+
       - name: Install npm dependencies
         run: npm ci --no-fund --no-audit --prefer-offline
 
-      - name: Build
-        run: npm run build --if-present
+      # Runs stylelint, eslint, icon and jest tests, and builds dist/
+      - name: Lint, test, and build
+        run: npm test
 
-      - name: Release production
-        if: ${{ !contains(github.ref_name, '-') }}
-        run: npm publish
+      # Reads the current version from public npmjs and git history
+      - id: version
+        uses: mapbox/gha-public/action-conventional-commit-version@main
+        with:
+          before-sha: ${{ github.event.before }}
+          after-sha: ${{ github.event.after }}
 
-      - name: Release development
-        if: ${{ contains(github.ref_name, '-') }}
-        run: npm publish --tag dev
+      # Set before building the docs site, which links to the CDN assets by package.json's version
+      - name: Set package version
+        if: steps.version.outputs.skip != 'true'
+        run: npm version ${{ steps.version.outputs.version }} --no-git-tag-version --allow-same-version
+
+      - name: Publish
+        if: steps.version.outputs.skip != 'true'
+        run: npm publish --tag ${{ steps.version.outputs.npm_publish_tag }}
+
+      - name: Build docs site
+        if: steps.version.outputs.skip != 'true' && steps.version.outputs.npm_publish_tag == 'latest'
+        run: npm run build:site
+
+      # GitHub Pages serves the gh-pages branch at https://mapbox.github.io/assembly/. Each release
+      # adds its assets in v<version>/, which are never replaced or removed, and replaces the docs
+      # site around them.
+      - name: Deploy docs site and CDN assets to GitHub Pages
+        if: steps.version.outputs.skip != 'true' && steps.version.outputs.npm_publish_tag == 'latest'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          worktree=$(mktemp -d)
+          if git fetch origin gh-pages --depth=1; then
+            git worktree add "$worktree" FETCH_HEAD
+          else
+            git worktree add --orphan -b gh-pages "$worktree"
+          fi
+
+          rsync -a --delete --exclude=.git --exclude='/v[0-9]*/' _site/ "$worktree/"
+          mkdir -p "$worktree/v$VERSION"
+          cp dist/assembly* "$worktree/v$VERSION/"
+          touch "$worktree/.nojekyll"
+
+          cd "$worktree"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to deploy."
+          else
+            git commit -m "Deploy docs site and assets for v$VERSION"
+            git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:gh-pages
+          fi
+
+      - id: release
+        name: Create GitHub Release
+        continue-on-error: true
+        if: steps.version.outputs.skip != 'true' && steps.version.outputs.npm_publish_tag == 'latest'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: gh release create "v$VERSION" --target "$GITHUB_SHA" --title "v$VERSION" --generate-notes
+
+      - name: Comment released version on PRs
+        continue-on-error: true
+        if: steps.release.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          set -o pipefail
+          package_name="$(node -p 'require("./package.json").name')"
+          for sha in $(git rev-list "$BEFORE_SHA..$GITHUB_SHA"); do
+            gh api "repos/$GITHUB_REPOSITORY/commits/$sha/pulls" --jq '.[].number'
+          done | sort -u | while read -r pr; do
+            gh pr comment "$pr" --body "Released in \`$package_name@$VERSION\` (release [\`v$VERSION\`](https://github.com/$GITHUB_REPOSITORY/releases/tag/v$VERSION))."
+          done

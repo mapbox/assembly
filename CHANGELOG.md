@@ -1,5 +1,7 @@
 # Changelog
 
+Starting after 1.17.0, release notes are published as [GitHub Releases](https://github.com/mapbox/assembly/releases).
+
 ## 1.17.0
 - [add] `building`, `clip`, `truck` icons
 

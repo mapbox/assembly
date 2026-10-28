@@ -4,7 +4,7 @@
 
 A CSS framework that makes the hard parts of building anything on the web easy. We define the hard parts as: managing class specificity, designing cross-browser form components that work well with each other, creating a harmonious typographic scale, maintaining a baseline grid, and keeping responsive designs simple.
 
-For usage guidelines and documentation, check out https://labs.mapbox.com/assembly/.
+For usage guidelines and documentation, check out https://mapbox.github.io/assembly/.
 
 ## Browser support
 
@@ -12,11 +12,11 @@ Assembly targets modern versions of Chrome, Firefox, Safari, and Edge on desktop
 
 ## Usage
 
-See https://labs.mapbox.com/assembly/ for usage guidelines.
+See https://mapbox.github.io/assembly/ for usage guidelines.
 
 ## Migration
 
-See our [`Migration guides`](https://github.com/mapbox/assembly/blob/publisher-staging/MIGRATION_GUIDES.md) to understand what changes you might need to make when upgrading Assembly in your project.
+See our [`Migration guides`](https://github.com/mapbox/assembly/blob/main/MIGRATION_GUIDES.md) to understand what changes you might need to make when upgrading Assembly in your project.
 
 ## Custom Builds
 
@@ -157,16 +157,19 @@ For other scripts, look in `package.json`.
 
 ### Releasing
 
-Development is done in the `publisher-staging` branch, but releases are made from the `publisher-production` branch (these branches will go away once the old Publisher-triggered deploy is retired, in favor of a single `main` branch). Here's how you cut a release:
+Pull Requests merged to `main` with conventional commit prefixes are automatically published to npm by the `NPM release` GitHub Actions workflow, as new major/minor/patch versions (`feat!:`/`feat:`/`fix:` respectively). When using "Squash and merge", ensure your PR title includes the conventional commit prefix; a `BREAKING CHANGE:` footer only counts if it ends up in the squash commit's body. Other prefixes (`chore:`, `docs:`, etc.) or no prefix don't trigger a release.
 
-- From `publisher-staging`:
-  - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/publisher-staging/CHANGELOG.md).
-  - Increment the version key in `package.json` and `package-lock.json`.
-  - Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`.
-  - Merge these changes into the `publisher-production` branch. _Conduct the following steps from `publisher-production`_.
-- From `publisher-production`:
-  - Create a tag matching the version, prefixed with `v`. For example: `git tag v0.8.0`.
-  - Push the tag: `git push origin v0.8.0`.
-  - This triggers the `NPM release` GitHub Actions workflow, which publishes to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC) — no npm token needed.
-- Any prerelease tag (a version containing `-`, e.g. `v0.8.0-dev.0`) publishes under the npm `dev` dist-tag instead of `latest`, and can be cut from any branch for testing.
-- Non-dev tags must point to a commit on `publisher-production`, or the workflow fails fast.
+Examples:
+- `fix: horizon icon` -> patch
+- `feat: add building, clip, and truck icons` -> minor
+- `feat!: rename color variables` (requires consumer changes; add a [migration guide](./MIGRATION_GUIDES.md)) -> major
+
+The workflow publishes via [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC), so no npm token is needed. The trusted publisher for `@mapbox/assembly` is configured on npm for workflow `npm-release.yml` and environment `npm-release`, and the `npm-release` GitHub Environment already exists in this repository; keep the workflow filename and environment name unchanged. After publishing, the workflow adds the new version's assets to the CDN (`https://mapbox.github.io/assembly/v{version}/`, served by GitHub Pages from the `gh-pages` branch; versions up to 1.17.0 remain at `https://api.mapbox.com/mapbox-assembly/v{version}/`), creates a [GitHub Release](https://github.com/mapbox/assembly/releases) with generated notes, and comments the released version on the merged PRs.
+
+Each release also deploys the docs site to https://mapbox.github.io/assembly/ (the `gh-pages` branch), so it always matches the latest published version. Version folders on that branch are never replaced or removed.
+
+`package.json`'s `version` may be incremented manually if needed (for example, to skip a minor version), but you shouldn't normally need to touch it; the published npm version, not `package.json`, is the source of truth for what gets released next.
+
+#### Pre-release versions on other branches
+
+For testing in downstream projects or previewing the docs, you can manually trigger the "NPM release" workflow on a branch. It publishes a pre-release tagged with the short commit sha (e.g. `1.17.1-aa79c6a` when `1.17.0` is the latest release) under the npm `prerelease` dist-tag, without affecting `latest`, without adding its assets to the CDN or deploying the docs site. Check the workflow results for the published version.

@@ -43,7 +43,7 @@ export default class Home extends React.Component {
           <div className="mt12 pre">
             <Lowlight
               language="html"
-              value={`<link href="https://api.mapbox.com/mapbox-assembly/v${
+              value={`<link href="https://mapbox.github.io/assembly/v${
                 pkg.version
               }/assembly.min.css" rel="stylesheet">`}
             />
@@ -60,7 +60,7 @@ export default class Home extends React.Component {
           <div className="mt12 pre">
             <Lowlight
               language="html"
-              value={`<script async defer src="https://api.mapbox.com/mapbox-assembly/v${
+              value={`<script async defer src="https://mapbox.github.io/assembly/v${
                 pkg.version
               }/assembly.js"></script>`}
             />

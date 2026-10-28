@@ -7,10 +7,10 @@ const htmlTemplate = `<!DOCTYPE html>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='shortcut icon' href='Your favicon path goes here' type='image/x-icon'>
-  <link href='https://api.mapbox.com/mapbox-assembly/v${
+  <link href='https://mapbox.github.io/assembly/v${
     pkg.version
   }/assembly.min.css' rel='stylesheet'>
-  <script async defer src='https://api.mapbox.com/mapbox-assembly/v${
+  <script async defer src='https://mapbox.github.io/assembly/v${
     pkg.version
   }/assembly.js'></script>
 </head>
