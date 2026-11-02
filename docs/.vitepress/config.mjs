@@ -30,7 +30,7 @@ function exampleFence(md) {
     if (token.info.trim() === 'example') {
       return `${htmlExampleMarkup(options.highlight, token.content)}\n`;
     }
-    return `<div class="mt12 pre">${defaultFence(tokens, idx, options, env, slf)}</div>\n`;
+    return `<div class="my12 pre">${defaultFence(tokens, idx, options, env, slf)}</div>\n`;
   };
 }
 

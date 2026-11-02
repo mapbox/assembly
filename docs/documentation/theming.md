@@ -289,3 +289,15 @@ Apply an opacity on hover and active states.
 <div class='opacity25-on-active is-active'>opacity25-on-active (active)</div>
 <button class='opacity0 opacity100-on-focus'>opacity100-on-focus</button>
 ```
+
+## Dark mode
+
+Prefix any class with `dark:` to apply it only when the user prefers a dark color scheme. Pair it with the light class it replaces. `dark:` classes are only available in [on-demand builds](/#on-demand-builds); the CDN stylesheet doesn't include them.
+
+```html
+<div class='bg-white dark:bg-gray-dark color-gray-dark dark:color-white'>
+  <button class='btn btn--blue dark:btn--green'>Save</button>
+</div>
+```
+
+`dark:` works with component classes and their hover and active states, and combines with media query suffixes: `dark:block-mm` applies `block` on medium screens and up in dark mode.

@@ -52,6 +52,30 @@ title: Assembly.css
   Unsure what else you need in the <code class="txt-code">&lt;head&gt;</code>? Check out <a class="link" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">MDN's detailed guide</a>.
 </p>
 
+<h2 id="on-demand-builds" class="border-b border-b--2 border--gray-faint pb6 mt60 mb36 txt-l txt-bold">On-demand builds</h2>
+
+<p>
+  The CDN stylesheet ships every Assembly class. If your project has a build step, generate only the classes your markup uses with <code class="txt-code">presetAssembly()</code>, an <a class="link" href="https://unocss.dev/">UnoCSS</a> preset. On-demand builds also unlock the <a class="link" href="./documentation/#dark-mode"><code class="txt-code">dark:</code> prefix</a>.
+</p>
+
+```bash
+npm install @mapbox/assembly unocss
+```
+
+```js
+// uno.config.js
+import { defineConfig } from 'unocss';
+import { presetAssembly } from '@mapbox/assembly';
+
+export default defineConfig({
+  presets: [presetAssembly()]
+});
+```
+
+<p class="mt12">
+  The output uses Assembly's CSS variables and custom media queries, so run it through PostCSS. See <a class="link" href="https://github.com/mapbox/assembly#presetassemblyoptions">the README</a> for the full setup.
+</p>
+
 <h2 id="philosophy" class="border-b border-b--2 border--gray-faint pb6 mt60 txt-l txt-bold">Philosophy</h2>
 <div class="grid grid--gut24 grid--gut36-ml">
   <div class="col w-1/2-ml">

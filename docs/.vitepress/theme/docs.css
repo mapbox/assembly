@@ -9,7 +9,7 @@ div[class^='language-'] > span.lang {
   margin: 0;
 }
 
-.pre .shiki,
+.pre pre.shiki,
 .pre .shiki code {
   background: transparent;
   padding: 0;
