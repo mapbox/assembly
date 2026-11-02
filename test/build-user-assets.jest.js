@@ -1,12 +1,12 @@
 'use strict';
 
-jest.mock('../scripts/build-css');
-jest.mock('../scripts/build-js');
+jest.mock('../src/build-css');
+jest.mock('../src/build-js');
 
-const buildCss = require('../scripts/build-css');
-const buildJs = require('../scripts/build-js');
+const buildCss = require('../src/build-css');
+const buildJs = require('../src/build-js');
 const path = require('path');
-const buildUserAssets = require('../scripts/build-user-assets');
+const buildUserAssets = require('../src/build-user-assets');
 
 describe('buildUserAssets', () => {
   test('defaults', () => {
