@@ -38,7 +38,7 @@ jobs:
         # publisher-production.
         if: ${{ !contains(github.ref_name, '-') }}
         run: |
-          git fetch origin publisher-production --depth=1
+          git fetch origin publisher-production
           if ! git merge-base --is-ancestor ${{ github.sha }} origin/publisher-production; then
             echo "Production releases must be tagged from a commit on publisher-production."
             exit 1
