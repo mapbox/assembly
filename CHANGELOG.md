@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0
+## 2.0.1
 
 - [breaking] Rebuild Assembly's CSS pipeline on [UnoCSS](https://unocss.dev/). Class names and `buildUserAssets` stay compatible; the generated stylesheet's formatting, comments, and source maps may differ.
 - [add] Export `presetAssembly()` for on-demand UnoCSS builds that keep Assembly class names. Pass `{ safelist: true }` only when you want the full prebuilt utility set.
