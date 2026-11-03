@@ -70,6 +70,12 @@ describe('buildCss', () => {
     expect(declsForSelector(stripped, '.bg-blue')).toEqual({
       'background-color': '#0F71FA !important'
     });
+    expect(declsForSelector(stripped, '.btn.btn--stroke:hover')).toEqual({
+      'background-color': 'transparent'
+    });
+    expect(declsForSelector(stripped, '.btn.btn--stroke.is-active')).toEqual({
+      'background-color': 'transparent'
+    });
     expect(declsForSelector(stripped, '.w-1\\/2')).toEqual({
       width: '50% !important',
       'grid-column-end': 'span 6 !important'

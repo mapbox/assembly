@@ -16,7 +16,7 @@ See https://labs.mapbox.com/assembly/ for usage guidelines.
 
 ## Migration
 
-See our [`Migration guides`](https://github.com/mapbox/assembly/blob/publisher-staging/MIGRATION_GUIDES.md) to understand what changes you might need to make when upgrading Assembly in your project.
+See our [`Migration guides`](https://github.com/mapbox/assembly/blob/main/MIGRATION_GUIDES.md) to understand what changes you might need to make when upgrading Assembly in your project.
 
 ## Custom Builds
 
@@ -208,10 +208,10 @@ For other scripts, look in `package.json`.
 
 ### Releasing
 
-Development is done in the `publisher-staging` branch, but releases are made from the `publisher-production` branch (these branches will go away once the old Publisher-triggered deploy is retired, in favor of a single `main` branch). Here's how you cut a release:
+Development is done in the `main` branch, but releases are made from the `publisher-production` branch (it will go away once the old Publisher-triggered deploy is retired). Here's how you cut a release:
 
-- From `publisher-staging`:
-  - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/publisher-staging/CHANGELOG.md).
+- From `main`:
+  - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/main/CHANGELOG.md).
   - Increment the version key in `package.json` and `package-lock.json`.
   - Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`.
   - Merge these changes into the `publisher-production` branch. _Conduct the following steps from `publisher-production`_.

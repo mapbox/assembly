@@ -238,7 +238,8 @@ function colorRules(config) {
       { layer: 'colors' }
     ]),
     safelist: [...entriesByClass.keys()],
-    preflight: '.btn.btn--stroke { background-color: transparent; }'
+    preflight:
+      '.btn.btn--stroke, .btn.btn--stroke:hover, .btn.btn--stroke.is-active { background-color: transparent; }'
   };
 }
 
