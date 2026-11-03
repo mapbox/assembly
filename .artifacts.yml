@@ -7,3 +7,4 @@ publisher:
       node_version: 24.x
       site_build_dir: _site
       npm_build_script: build
+      npm_skip_optional: false
