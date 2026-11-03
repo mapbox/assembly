@@ -3726,7 +3726,7 @@ textarea{
 .h-viewport-full-mxl{height:100vh !important;}
 .hmax-viewport-full-mxl{max-height:100vh !important;}
 }
-.btn.btn--stroke{ background-color:transparent; }
+.btn.btn--stroke, .btn.btn--stroke:hover, .btn.btn--stroke.is-active{ background-color:transparent; }
 .btn--gray,
 .btn--gray-light:hover, .btn--gray-light.is-active,
 .switch-container:has(> input:checked) .switch--dot-gray::after,
@@ -8489,7 +8489,7 @@ textarea{
 .h-viewport-full-mxl{height:100vh !important;}
 .hmax-viewport-full-mxl{max-height:100vh !important;}
 }
-.btn.btn--stroke{ background-color:transparent; }
+.btn.btn--stroke, .btn.btn--stroke:hover, .btn.btn--stroke.is-active{ background-color:transparent; }
 .btn--gray,
 .btn--gray-light:hover, .btn--gray-light.is-active,
 .switch-container:has(> input:checked) .switch--dot-gray::after,
