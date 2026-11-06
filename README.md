@@ -157,18 +157,11 @@ For other scripts, look in `package.json`.
 
 ### Releasing
 
-Pull Requests merged to `main` with conventional commit prefixes are automatically published to npm by the `NPM release` GitHub Actions workflow, as new major/minor/patch versions (`feat!:`/`feat:`/`fix:` respectively). When using "Squash and merge", ensure your PR title includes the conventional commit prefix; a `BREAKING CHANGE:` footer only counts if it ends up in the squash commit's body. Other prefixes (`chore:`, `docs:`, etc.) or no prefix don't trigger a release.
+Pull Requests to `main` automatically publish a new version based on the PR's title prefix (`major:`, `minor:` or `patch:`) to the npmjs registry.
 
-Examples:
-- `fix: horizon icon` -> patch
-- `feat: add building, clip, and truck icons` -> minor
-- `feat!: rename color variables` (requires consumer changes; add a [migration guide](./MIGRATION_GUIDES.md)) -> major
+Each release also adds its assets to the CDN at `https://mapbox.github.io/assembly/v{version}/` and deploys the docs site to https://mapbox.github.io/assembly/, both from the `gh-pages` branch. Versions up to 1.17.0 remain at `https://api.mapbox.com/mapbox-assembly/v{version}/`.
 
-The workflow publishes via [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC), so no npm token is needed. The trusted publisher for `@mapbox/assembly` is configured on npm for workflow `npm-release.yml` and environment `npm-release`, and the `npm-release` GitHub Environment already exists in this repository; keep the workflow filename and environment name unchanged. After publishing, the workflow adds the new version's assets to the CDN (`https://mapbox.github.io/assembly/v{version}/`, served by GitHub Pages from the `gh-pages` branch; versions up to 1.17.0 remain at `https://api.mapbox.com/mapbox-assembly/v{version}/`), creates a [GitHub Release](https://github.com/mapbox/assembly/releases) with generated notes, and comments the released version on the merged PRs.
-
-Each release also deploys the docs site to https://mapbox.github.io/assembly/ (the `gh-pages` branch), so it always matches the latest published version. Version folders on that branch are never replaced or removed.
-
-`package.json`'s `version` may be incremented manually if needed (for example, to skip a minor version), but you shouldn't normally need to touch it; the published npm version, not `package.json`, is the source of truth for what gets released next.
+The published version in the registry is the source of truth for the package version, but you can manually increment the `package.json`'s `version`.
 
 #### Pre-release versions on other branches
 
