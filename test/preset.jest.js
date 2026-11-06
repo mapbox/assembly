@@ -71,9 +71,9 @@ describe('presetAssembly', () => {
 
   test('JIT generate emits only requested utilities', async () => {
     const css = await generateJit(
-      'px12 flex bg-blue gap12 grid rotate30 mt48 mr-2/5'
+      'pl6 px12 flex bg-blue gap12 grid rotate30 mt48 mr-2/5'
     );
-    expect(css).toContain('.px12');
+    expect(css.indexOf('.px12')).toBeLessThan(css.indexOf('.pl6'));
     expect(css).toContain('.flex');
     expect(css).toContain('.bg-blue');
     expect(css).toContain('.gap12');
