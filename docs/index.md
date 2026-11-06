@@ -17,7 +17,7 @@ title: Assembly.css
 <p>Include in the head of your HTML the Assembly stylesheet.</p>
 
 ```html
-<link href="https://api.mapbox.com/mapbox-assembly/v%VERSION%/assembly.min.css" rel="stylesheet">
+<link href="https://mapbox.github.io/assembly/v%VERSION%/assembly.min.css" rel="stylesheet">
 ```
 
 <p class="mt24">
@@ -25,7 +25,7 @@ title: Assembly.css
 </p>
 
 ```html
-<script async defer src="https://api.mapbox.com/mapbox-assembly/v%VERSION%/assembly.js"></script>
+<script async defer src="https://mapbox.github.io/assembly/v%VERSION%/assembly.js"></script>
 ```
 
 <h3 class="mt60 mb12 txt-bold">HTML Template</h3>
@@ -39,8 +39,8 @@ title: Assembly.css
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='shortcut icon' href='Your favicon path goes here' type='image/x-icon'>
-  <link href='https://api.mapbox.com/mapbox-assembly/v%VERSION%/assembly.min.css' rel='stylesheet'>
-  <script async defer src='https://api.mapbox.com/mapbox-assembly/v%VERSION%/assembly.js'></script>
+  <link href='https://mapbox.github.io/assembly/v%VERSION%/assembly.min.css' rel='stylesheet'>
+  <script async defer src='https://mapbox.github.io/assembly/v%VERSION%/assembly.js'></script>
 </head>
 <body>
   <!-- Your page... -->

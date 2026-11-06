@@ -1,5 +1,7 @@
 # Changelog
 
+Starting after 2.0.3, release notes are published as [GitHub Releases](https://github.com/mapbox/assembly/releases).
+
 ## 2.0.3
 
 - [fix] Single-side margin and padding classes override axis classes again, as in 1.x. Since 2.0.0 the larger value won instead, so `px12 pl6` gave 12px of left padding; it now gives 6px.

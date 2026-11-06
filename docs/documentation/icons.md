@@ -1,6 +1,6 @@
 # Icons
 
-Assembly uses an SVG icon sprite. To load the sprite, you must must include [`assembly.js`](https://labs.mapbox.com/assembly/) on your page.
+Assembly uses an SVG icon sprite. To load the sprite, you must must include [`assembly.js`](https://mapbox.github.io/assembly/) on your page.
 
 **Please read [the Icons page](/icons) to learn more about the available icons and the [Javascript API section of the home page](/#javascript-api) to learn how to use them.**
 

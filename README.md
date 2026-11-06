@@ -4,7 +4,7 @@
 
 A CSS framework that makes the hard parts of building anything on the web easy. We define the hard parts as: managing class specificity, designing cross-browser form components that work well with each other, creating a harmonious typographic scale, maintaining a baseline grid, and keeping responsive designs simple.
 
-For usage guidelines and documentation, check out https://labs.mapbox.com/assembly/.
+For usage guidelines and documentation, check out https://mapbox.github.io/assembly/.
 
 ## Browser support
 
@@ -12,7 +12,7 @@ Assembly targets modern versions of Chrome, Firefox, Safari, and Edge on desktop
 
 ## Usage
 
-See https://labs.mapbox.com/assembly/ for usage guidelines.
+See https://mapbox.github.io/assembly/ for usage guidelines.
 
 ## Migration
 
@@ -208,16 +208,12 @@ For other scripts, look in `package.json`.
 
 ### Releasing
 
-Development is done in the `main` branch, but releases are made from the `publisher-production` branch (it will go away once the old Publisher-triggered deploy is retired). Here's how you cut a release:
+Pull Requests to `main` automatically publish a new version based on the PR's title prefix (`major:`, `minor:` or `patch:`) to the npmjs registry.
 
-- From `main`:
-  - Document changes in the [`CHANGELOG`](https://github.com/mapbox/assembly/blob/main/CHANGELOG.md).
-  - Increment the version key in `package.json` and `package-lock.json`.
-  - Make sure all this is committed, typically with a commit message like `Prepare 0.8.0`.
-  - Merge these changes into the `publisher-production` branch. _Conduct the following steps from `publisher-production`_.
-- From `publisher-production`:
-  - Create a tag matching the version, prefixed with `v`. For example: `git tag v0.8.0`.
-  - Push the tag: `git push origin v0.8.0`.
-  - This triggers the `NPM release` GitHub Actions workflow, which publishes to npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC) — no npm token needed.
-- Any prerelease tag (a version containing `-`, e.g. `v0.8.0-dev.0`) publishes under the npm `dev` dist-tag instead of `latest`, and can be cut from any branch for testing.
-- Non-dev tags must point to a commit on `publisher-production`, or the workflow fails fast.
+Each release also adds its assets to the CDN at `https://mapbox.github.io/assembly/v{version}/` and deploys the docs site to https://mapbox.github.io/assembly/, both from the `gh-pages` branch. Earlier versions remain at `https://api.mapbox.com/mapbox-assembly/v{version}/`.
+
+The published version in the registry is the source of truth for the package version, but you can manually increment the `package.json`'s `version`.
+
+#### Pre-release versions on other branches
+
+For testing in downstream projects or previewing the docs, you can manually trigger the "NPM release" workflow on a branch. It publishes a pre-release tagged with the short commit sha (e.g. `2.0.4-aa79c6a` when `2.0.3` is the latest release) under the npm `prerelease` dist-tag, without affecting `latest`, without adding its assets to the CDN or deploying the docs site. Check the workflow results for the published version.
