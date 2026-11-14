@@ -168,7 +168,7 @@ Media query class variants (e.g. `block-mm` as a variant of `block`) are generat
 
 ### Dark mode
 
-With `presetAssembly()` on demand, prefix any Assembly class with `dark:` to apply it only inside `@media (prefers-color-scheme: dark)`. The prebuilt `assembly.css` doesn't include `dark:` classes. Assembly has no dark palette of its own, so pair the classes you already use:
+With `presetAssembly()` on demand, prefix any Assembly class with `dark:` to apply it only in dark mode. The prebuilt `assembly.css` doesn't include `dark:` classes. Assembly has no dark palette of its own, so pair the classes you already use:
 
 ```html
 <body class="bg-white dark:bg-gray-dark color-gray-dark dark:color-white">
@@ -180,6 +180,25 @@ With `presetAssembly()` on demand, prefix any Assembly class with `dark:` to app
 - `dark:` works with every class, including component classes such as `btn`, `loading`, `table--dark`, and `prose--dark`, along with their hover and active states.
 - It combines with media query suffixes: `dark:block-mm` applies `block` at the `--m-screen` breakpoint in dark mode.
 - A `dark:` class follows its light and breakpoint counterparts in the output, so with `block-mm dark:none` the element is hidden in dark mode at every width. Write `dark:block-mm` to keep it visible from that breakpoint up.
+
+Dark mode follows the system color scheme by default. To offer a light / dark / system choice, set `data-theme` on the root element:
+
+| Choice | `<html>`                     |
+| ------ | ---------------------------- |
+| System | no `data-theme` attribute    |
+| Light  | `data-theme="light"`         |
+| Dark   | `data-theme="dark"`          |
+
+```js
+function setTheme(theme) {
+  const root = document.documentElement;
+  if (theme === 'system') root.removeAttribute('data-theme');
+  else root.setAttribute('data-theme', theme);
+  root.style.colorScheme = theme === 'system' ? 'light dark' : theme;
+}
+```
+
+`color-scheme` keeps native controls and scrollbars in step with the choice. To avoid a flash of the wrong theme on load, set the attribute from an inline script in `<head>`.
 
 ## Development
 

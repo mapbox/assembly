@@ -33,7 +33,7 @@ function classSelectors(css) {
   const names = new Set();
   postcss.parse(css).walkRules(rule => {
     rule.selectors.forEach(selector => {
-      const found = selector.trim().match(/^\.(\S+)/);
+      const found = selector.trim().match(/^\.((?:\\.|[\w-])+)/);
       if (found) names.add(found[1].replace(/\\/g, ''));
     });
   });
@@ -73,9 +73,11 @@ describe('examples/jit', () => {
 
     postcss.parse(stdout).walkRules(rule => {
       if (!rule.selector.startsWith('.dark\\:')) return;
-      expect(rule.parent.params).toBe('(prefers-color-scheme: dark)');
+      expect(rule.parent.params).toMatch(
+        /^\(prefers-color-scheme: (dark|light)\)$/
+      );
     });
-    expect(stdout.length).toBeLessThan(3000);
+    expect(stdout.length).toBeLessThan(4500);
     expect(stdout).not.toMatch(/html,\s*body/);
     expect(stdout).not.toMatch(/\.none-print/);
     expect(stdout).not.toMatch(/\.unselectable-mm/);
