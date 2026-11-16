@@ -3,6 +3,7 @@
 ## 2.1.0
 
 - [add] `dark:` classes respond to `data-theme="dark"` and `data-theme="light"` on the root element, so a page can override the system color scheme. Without the attribute they follow `prefers-color-scheme` as before.
+- [add] `arc` icon.
 
 ## 2.0.3
 
