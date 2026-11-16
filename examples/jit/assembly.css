@@ -39,11 +39,20 @@
 .bg-white{background-color:#fff !important;}
 .border--gray-light{border-color:#C7CACC !important;}
 @media (prefers-color-scheme: dark){
-.dark\:color-gray-light{color:#C7CACC !important;}
-.dark\:color-blue-light{color:#91B7EE !important;}
-.dark\:color-white{color:#fff !important;}
-.dark\:bg-gray-dark{background-color:#1a2224 !important;}
-.dark\:bg-gray-deep{background-color:#4D5255 !important;}
-.dark\:bg-blue-dark{background-color:#072E64 !important;}
-.dark\:border--gray-dark{border-color:#1a2224 !important;}
+.dark\:color-gray-light:where(:root:not([data-theme='light']) *, :root:not([data-theme='light'])){color:#C7CACC !important;}
+.dark\:color-blue-light:where(:root:not([data-theme='light']) *, :root:not([data-theme='light'])){color:#91B7EE !important;}
+.dark\:color-white:where(:root:not([data-theme='light']) *, :root:not([data-theme='light'])){color:#fff !important;}
+.dark\:bg-gray-dark:where(:root:not([data-theme='light']) *, :root:not([data-theme='light'])){background-color:#1a2224 !important;}
+.dark\:bg-gray-deep:where(:root:not([data-theme='light']) *, :root:not([data-theme='light'])){background-color:#4D5255 !important;}
+.dark\:bg-blue-dark:where(:root:not([data-theme='light']) *, :root:not([data-theme='light'])){background-color:#072E64 !important;}
+.dark\:border--gray-dark:where(:root:not([data-theme='light']) *, :root:not([data-theme='light'])){border-color:#1a2224 !important;}
+}
+@media (prefers-color-scheme: light){
+.dark\:color-gray-light:where(:root[data-theme='dark'] *, :root[data-theme='dark']){color:#C7CACC !important;}
+.dark\:color-blue-light:where(:root[data-theme='dark'] *, :root[data-theme='dark']){color:#91B7EE !important;}
+.dark\:color-white:where(:root[data-theme='dark'] *, :root[data-theme='dark']){color:#fff !important;}
+.dark\:bg-gray-dark:where(:root[data-theme='dark'] *, :root[data-theme='dark']){background-color:#1a2224 !important;}
+.dark\:bg-gray-deep:where(:root[data-theme='dark'] *, :root[data-theme='dark']){background-color:#4D5255 !important;}
+.dark\:bg-blue-dark:where(:root[data-theme='dark'] *, :root[data-theme='dark']){background-color:#072E64 !important;}
+.dark\:border--gray-dark:where(:root[data-theme='dark'] *, :root[data-theme='dark']){border-color:#1a2224 !important;}
 }

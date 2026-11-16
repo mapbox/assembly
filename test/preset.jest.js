@@ -12,7 +12,14 @@ async function generateJit(markup) {
 }
 
 const DARK = '(prefers-color-scheme: dark)';
+const LIGHT = '(prefers-color-scheme: light)';
+const DARK_SCOPES = [DARK, LIGHT];
+const SYSTEM_SCOPE =
+  ":where(:root:not([data-theme='light']) *, :root:not([data-theme='light']))";
+const FORCED_SCOPE =
+  ":where(:root[data-theme='dark'] *, :root[data-theme='dark'])";
 
+// Strip the theme scope so assertions can name selectors as written.
 function rulesInOrder(css) {
   const rules = [];
   postcss.parse(css).walkRules(rule => {
@@ -20,7 +27,11 @@ function rulesInOrder(css) {
       rule.parent.type === 'atrule' && rule.parent.name === 'media'
         ? rule.parent.params
         : null;
-    rule.selectors.forEach(selector => rules.push({ selector, media }));
+    const scope = media && media.endsWith(LIGHT) ? FORCED_SCOPE : SYSTEM_SCOPE;
+    rule.selectors.forEach(selector => {
+      if (selector.includes('.dark\\:')) expect(selector).toContain(scope);
+      rules.push({ selector: selector.split(scope).join(''), media });
+    });
   });
   return rules;
 }
@@ -118,45 +129,45 @@ describe('presetAssembly', () => {
 });
 
 describe('dark: variant', () => {
-  test('wraps every state of a utility in the dark media query', async () => {
+  test('scopes every state of a utility to the system or forced dark theme', async () => {
     const css = await generateJit('dark:btn--green');
+    const selectors = [
+      '.btn--stroke.dark\\:btn--green',
+      '.btn--stroke.dark\\:btn--green:hover',
+      '.btn--stroke.dark\\:btn--green.is-active',
+      '.dark\\:btn--green',
+      '.dark\\:btn--green:hover',
+      '.dark\\:btn--green.is-active'
+    ];
     expect(rulesInOrder(css)).toEqual(
-      [
-        '.btn--stroke.dark\\:btn--green',
-        '.btn--stroke.dark\\:btn--green:hover',
-        '.btn--stroke.dark\\:btn--green.is-active',
-        '.dark\\:btn--green',
-        '.dark\\:btn--green:hover',
-        '.dark\\:btn--green.is-active'
-      ].map(selector => ({ selector, media: DARK }))
+      DARK_SCOPES.flatMap(media =>
+        selectors.map(selector => ({ selector, media }))
+      )
     );
   });
 
   test('reaches component classes defined in base.css', async () => {
     const css = await generateJit(
-      'dark:loading dark:scroll-styled--dark dark:table--dark dark:prose--dark'
+      'dark:loading dark:loading--dark dark:scroll-styled--dark dark:table--dark dark:prose--dark'
     );
-    expect(mediaFor(css, '.dark\\:loading')).toEqual([DARK]);
+    expect(mediaFor(css, '.dark\\:loading')).toEqual(DARK_SCOPES);
     expect(
       mediaFor(
         css,
         '.dark\\:scroll-styled--dark::-webkit-scrollbar-thumb:hover'
       )
-    ).toEqual([DARK]);
-    expect(mediaFor(css, '.dark\\:table--dark th + td')).toEqual([DARK]);
-    expect(mediaFor(css, '.dark\\:prose--dark a:not(.unprose)')).toEqual([
-      DARK
-    ]);
+    ).toEqual(DARK_SCOPES);
+    expect(mediaFor(css, '.dark\\:table--dark th + td')).toEqual(DARK_SCOPES);
+    expect(mediaFor(css, '.dark\\:prose--dark a:not(.unprose)')).toEqual(
+      DARK_SCOPES
+    );
     expect(css).toContain('animation:assembly-loading');
-  });
 
-  test('emits both halves of a class defined in base.css and as a rule', async () => {
-    const css = await generateJit('dark:loading--dark');
     const props = new Set();
     postcss.parse(css).walkRules(rule => {
-      if (!rule.selectors.includes('.dark\\:loading--dark')) return;
-      expect(rule.parent.params).toBe(DARK);
-      rule.walkDecls(decl => props.add(decl.prop));
+      if (rule.selector.startsWith(`.dark\\:loading--dark${SYSTEM_SCOPE}`)) {
+        rule.walkDecls(decl => props.add(decl.prop));
+      }
     });
     expect(props).toContain('border-radius');
     expect(props).toContain('border-left-color');
@@ -164,12 +175,12 @@ describe('dark: variant', () => {
 
   test('stacks with breakpoint suffixes', async () => {
     const css = await generateJit('dark:btn--green-mm dark:bg-gray-dark-ml');
-    expect(mediaFor(css, '.dark\\:btn--green-mm')).toEqual([
-      `(--m-screen) and ${DARK}`
-    ]);
-    expect(mediaFor(css, '.dark\\:bg-gray-dark-ml')).toEqual([
-      `(--l-screen) and ${DARK}`
-    ]);
+    expect(mediaFor(css, '.dark\\:btn--green-mm')).toEqual(
+      DARK_SCOPES.map(media => `(--m-screen) and ${media}`)
+    );
+    expect(mediaFor(css, '.dark\\:bg-gray-dark-ml')).toEqual(
+      DARK_SCOPES.map(media => `(--l-screen) and ${media}`)
+    );
   });
 
   test('follows light and breakpoint rules so it wins the cascade', async () => {
