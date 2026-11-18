@@ -83,7 +83,8 @@ const nav = [
         'Border radius',
         'Shadows',
         'Cursors',
-        'Opacity'
+        'Opacity',
+        'Dark mode'
       ]),
       docSection('Colors', ['Text colors', 'Background colors']),
       docSection('Icons'),

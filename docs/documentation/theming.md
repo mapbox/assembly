@@ -292,12 +292,29 @@ Apply an opacity on hover and active states.
 
 ## Dark mode
 
-Prefix any class with `dark:` to apply it only when the user prefers a dark color scheme. Pair it with the light class it replaces. `dark:` classes are only available in [on-demand builds](/#on-demand-builds); the CDN stylesheet doesn't include them.
+Prefix any class with `dark:` to apply it only in dark mode, which follows the user's system color scheme unless the page overrides it. Pair it with the light class it replaces. `dark:` classes are only available in [on-demand builds](/#on-demand-builds); the CDN stylesheet doesn't include them.
 
-```html
-<div class='bg-white dark:bg-gray-dark color-gray-dark dark:color-white'>
-  <button class='btn btn--blue dark:btn--green'>Save</button>
+Set `data-theme="dark"` or `data-theme="light"` on `<html>` to override the system setting. Remove the attribute to follow it again. Try it with this toggle, which sets `data-theme` on this page:
+
+<ThemeToggle />
+
+```example
+<div class='bg-gray-faint dark:bg-gray-dark color-gray-dark dark:color-white round px18 py18'>
+  <p class='txt-bold mb6'>Your styles</p>
+  <p class='color-gray dark:color-gray-light mb12'>Saved 2 minutes ago</p>
+  <button class='btn btn--blue dark:btn--green'>Publish</button>
 </div>
+```
+
+A toggle only needs to set the attribute. Set `color-scheme` too so native controls and scrollbars match:
+
+```js
+function setTheme(theme) {
+  const root = document.documentElement;
+  if (theme === 'system') root.removeAttribute('data-theme');
+  else root.setAttribute('data-theme', theme);
+  root.style.colorScheme = theme === 'system' ? 'light dark' : theme;
+}
 ```
 
 `dark:` works with component classes and their hover and active states, and combines with media query suffixes: `dark:block-mm` applies `block` on medium screens and up in dark mode.
